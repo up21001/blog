@@ -4,7 +4,8 @@ defaultContentLanguage = "ko"
 title = "기술 블로그 | 하드웨어·소프트웨어·AI 엔지니어링"
 theme = "blowfish"
 enableRobotsTXT = true
-paginate = 10
+[pagination]
+  pagerSize = 10
 
 [params]
   colorScheme = "ocean"
@@ -14,8 +15,10 @@ paginate = 10
   enableCodeCopy = true
   mainSections = ["posts"]
   description = "하드웨어/소프트웨어 엔지니어의 기술 블로그 - PCB 설계, 임베디드, AI, DevOps 실전 경험 공유"
-  author = "Engineer"
   keywords = ["하드웨어", "소프트웨어", "AI", "임베디드", "PCB 설계", "Python", "DevOps"]
+
+[params.author]
+  name = "Engineer"
 
 [params.homepage]
   layout = "profile"
