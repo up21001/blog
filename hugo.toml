@@ -32,6 +32,7 @@ enableRobotsTXT = true
   showReadingTime = true
   showWordCount = true
   showRelatedContent = true
+  relatedContentLimit = 3
   showEdit = false
   showHeadingAnchors = true
 
