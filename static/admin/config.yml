@@ -2,6 +2,7 @@ backend:
   name: github
   repo: up21001/blog
   branch: main
+  client_id: Ov23lieJkcrxPMfY0M3Z
 
 media_folder: static/images
 public_folder: /images
