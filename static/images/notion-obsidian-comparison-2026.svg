@@ -1,0 +1,70 @@
+<svg width="800" height="450" viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg" font-family="'Malgun Gothic', sans-serif">
+  <rect width="800" height="450" fill="#F9FAFB" rx="12"/>
+  <text x="400" y="35" text-anchor="middle" font-size="17" font-weight="bold" fill="#1F2937">Notion vs Obsidian — 엔지니어 지식 관리 도구 비교</text>
+
+  <!-- Left: Notion -->
+  <rect x="20" y="52" width="370" height="350" fill="white" stroke="#E5E7EB" stroke-width="1.5" rx="8"/>
+  <rect x="20" y="52" width="370" height="44" fill="#1F2937" rx="8"/>
+  <rect x="20" y="80" width="370" height="16" fill="#1F2937"/>
+  <text x="205" y="79" text-anchor="middle" font-size="15" font-weight="bold" fill="white">Notion</text>
+  <text x="205" y="91" text-anchor="middle" font-size="11" fill="#9CA3AF">클라우드 협업 올인원</text>
+
+  <rect x="35" y="105" width="340" height="28" fill="#DBEAFE" stroke="#3B82F6" rx="4"/>
+  <text x="55" y="123" font-size="12" fill="#1E40AF">✅ 팀 협업 · 실시간 편집 · 댓글</text>
+
+  <rect x="35" y="138" width="340" height="28" fill="#DBEAFE" stroke="#3B82F6" rx="4"/>
+  <text x="55" y="156" font-size="12" fill="#1E40AF">✅ 데이터베이스 · 칸반 · 갠트차트</text>
+
+  <rect x="35" y="171" width="340" height="28" fill="#DBEAFE" stroke="#3B82F6" rx="4"/>
+  <text x="55" y="189" font-size="12" fill="#1E40AF">✅ Notion AI 내장 (추가 $10/월)</text>
+
+  <rect x="35" y="204" width="340" height="28" fill="#DBEAFE" stroke="#3B82F6" rx="4"/>
+  <text x="55" y="222" font-size="12" fill="#1E40AF">✅ 모바일 앱 우수 (v2.45+)</text>
+
+  <rect x="35" y="237" width="340" height="28" fill="#FEE2E2" stroke="#EF4444" rx="4"/>
+  <text x="55" y="255" font-size="12" fill="#991B1B">❌ 오프라인 불안정</text>
+
+  <rect x="35" y="270" width="340" height="28" fill="#FEE2E2" stroke="#EF4444" rx="4"/>
+  <text x="55" y="288" font-size="12" fill="#991B1B">❌ 데이터 종속 (마크다운 내보내기 제한)</text>
+
+  <rect x="35" y="303" width="340" height="28" fill="#F3F4F6" stroke="#6B7280" rx="4"/>
+  <text x="55" y="321" font-size="12" fill="#374151">💰 무료 / Plus $8/월 / AI +$10</text>
+
+  <rect x="35" y="336" width="340" height="44" fill="#DBEAFE" stroke="#3B82F6" stroke-width="2" rx="6"/>
+  <text x="205" y="354" text-anchor="middle" font-size="12" font-weight="bold" fill="#1D4ED8">추천 대상</text>
+  <text x="205" y="370" text-anchor="middle" font-size="11" fill="#1E40AF">팀 프로젝트 · 스타트업 · 비개발직군</text>
+
+  <!-- Right: Obsidian -->
+  <rect x="410" y="52" width="370" height="350" fill="white" stroke="#E5E7EB" stroke-width="1.5" rx="8"/>
+  <rect x="410" y="52" width="370" height="44" fill="#4C1D95" rx="8"/>
+  <rect x="410" y="80" width="370" height="16" fill="#4C1D95"/>
+  <text x="595" y="79" text-anchor="middle" font-size="15" font-weight="bold" fill="white">Obsidian</text>
+  <text x="595" y="91" text-anchor="middle" font-size="11" fill="#C4B5FD">로컬 퍼스트 · 마크다운 기반</text>
+
+  <rect x="425" y="105" width="340" height="28" fill="#EDE9FE" stroke="#8B5CF6" rx="4"/>
+  <text x="445" y="123" font-size="12" fill="#5B21B6">✅ 완전 로컬 저장 · 개인정보 안전</text>
+
+  <rect x="425" y="138" width="340" height="28" fill="#EDE9FE" stroke="#8B5CF6" rx="4"/>
+  <text x="445" y="156" font-size="12" fill="#5B21B6">✅ 그래프 뷰 · 백링크 · Zettelkasten</text>
+
+  <rect x="425" y="171" width="340" height="28" fill="#EDE9FE" stroke="#8B5CF6" rx="4"/>
+  <text x="445" y="189" font-size="12" fill="#5B21B6">✅ 커뮤니티 플러그인 1,000개+</text>
+
+  <rect x="425" y="204" width="340" height="28" fill="#EDE9FE" stroke="#8B5CF6" rx="4"/>
+  <text x="445" y="222" font-size="12" fill="#5B21B6">✅ Bases (DB 기능, 2025.11~)</text>
+
+  <rect x="425" y="237" width="340" height="28" fill="#FEE2E2" stroke="#EF4444" rx="4"/>
+  <text x="445" y="255" font-size="12" fill="#991B1B">❌ 실시간 협업 불가</text>
+
+  <rect x="425" y="270" width="340" height="28" fill="#FEE2E2" stroke="#EF4444" rx="4"/>
+  <text x="445" y="288" font-size="12" fill="#991B1B">❌ 모바일 앱 불편</text>
+
+  <rect x="425" y="303" width="340" height="28" fill="#F3F4F6" stroke="#6B7280" rx="4"/>
+  <text x="445" y="321" font-size="12" fill="#374151">💰 무료 / Sync $4/월 / Publish $8/월</text>
+
+  <rect x="425" y="336" width="340" height="44" fill="#EDE9FE" stroke="#8B5CF6" stroke-width="2" rx="6"/>
+  <text x="595" y="354" text-anchor="middle" font-size="12" font-weight="bold" fill="#4C1D95">추천 대상</text>
+  <text x="595" y="370" text-anchor="middle" font-size="11" fill="#5B21B6">개발자 · 연구자 · 장기 지식 관리</text>
+
+  <text x="400" y="425" text-anchor="middle" font-size="10" fill="#9CA3AF">※ 2026년 3월 기준 | Notion v2.45 · Obsidian 1.8 기준</text>
+</svg>

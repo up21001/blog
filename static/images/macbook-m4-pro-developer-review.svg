@@ -1,0 +1,83 @@
+<svg width="800" height="450" viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg" font-family="'Malgun Gothic', sans-serif">
+  <rect width="800" height="450" fill="#F9FAFB" rx="12"/>
+  <text x="400" y="38" text-anchor="middle" font-size="18" font-weight="bold" fill="#1F2937">MacBook M4 Pro — 개발자 워크플로우 성능 분석</text>
+
+  <!-- Left column: Specs -->
+  <rect x="20" y="55" width="360" height="340" fill="white" stroke="#E5E7EB" stroke-width="1.5" rx="8"/>
+  <rect x="20" y="55" width="360" height="40" fill="#1F2937" rx="8"/>
+  <rect x="20" y="83" width="360" height="12" fill="#1F2937"/>
+  <text x="200" y="80" text-anchor="middle" font-size="14" font-weight="bold" fill="white">M4 Pro 핵심 스펙</text>
+
+  <!-- Spec items -->
+  <rect x="35" y="108" width="330" height="34" fill="#DBEAFE" stroke="#3B82F6" stroke-width="1" rx="4"/>
+  <text x="55" y="129" font-size="12" font-weight="bold" fill="#1D4ED8">CPU</text>
+  <text x="120" y="129" font-size="12" fill="#1E40AF">14코어 (10P + 4E) · ~25% M3 대비 향상</text>
+
+  <rect x="35" y="148" width="330" height="34" fill="#D1FAE5" stroke="#10B981" stroke-width="1" rx="4"/>
+  <text x="55" y="169" font-size="12" font-weight="bold" fill="#065F46">GPU</text>
+  <text x="120" y="169" font-size="12" fill="#065F46">20코어 · M4 대비 2배 성능</text>
+
+  <rect x="35" y="188" width="330" height="34" fill="#EDE9FE" stroke="#8B5CF6" stroke-width="1" rx="4"/>
+  <text x="55" y="209" font-size="12" font-weight="bold" fill="#5B21B6">RAM</text>
+  <text x="120" y="209" font-size="12" fill="#5B21B6">최대 64GB 통합 메모리</text>
+
+  <rect x="35" y="228" width="330" height="34" fill="#FEF3C7" stroke="#F59E0B" stroke-width="1" rx="4"/>
+  <text x="55" y="249" font-size="12" font-weight="bold" fill="#92400E">배터리</text>
+  <text x="120" y="249" font-size="12" fill="#92400E">최대 24시간 (코딩: 16-18h)</text>
+
+  <rect x="35" y="268" width="330" height="34" fill="#F3F4F6" stroke="#6B7280" stroke-width="1" rx="4"/>
+  <text x="55" y="289" font-size="12" font-weight="bold" fill="#374151">포트</text>
+  <text x="120" y="289" font-size="12" fill="#374151">Thunderbolt 5 × 3 · HDMI · SD</text>
+
+  <rect x="35" y="308" width="330" height="34" fill="#FEE2E2" stroke="#EF4444" stroke-width="1" rx="4"/>
+  <text x="55" y="329" font-size="12" font-weight="bold" fill="#991B1B">가격</text>
+  <text x="120" y="329" font-size="12" fill="#991B1B">₩2,799,000 (14" 기본) ~</text>
+
+  <rect x="35" y="348" width="330" height="34" fill="#DBEAFE" stroke="#3B82F6" stroke-width="1" rx="4"/>
+  <text x="55" y="369" font-size="12" font-weight="bold" fill="#1D4ED8">디스플레이</text>
+  <text x="120" y="369" font-size="12" fill="#1E40AF">Liquid Retina XDR · 1,000nit</text>
+
+  <!-- Right column: Performance bars -->
+  <rect x="400" y="55" width="380" height="340" fill="white" stroke="#E5E7EB" stroke-width="1.5" rx="8"/>
+  <rect x="400" y="55" width="380" height="40" fill="#1F2937" rx="8"/>
+  <rect x="400" y="83" width="380" height="12" fill="#1F2937"/>
+  <text x="590" y="80" text-anchor="middle" font-size="14" font-weight="bold" fill="white">개발 작업별 성능 체감 (10점)</text>
+
+  <!-- Bar chart items -->
+  <text x="415" y="118" font-size="11" fill="#374151">컴파일 속도</text>
+  <rect x="415" y="122" width="340" height="16" fill="#E5E7EB" rx="4"/>
+  <rect x="415" y="122" width="323" height="16" fill="#3B82F6" rx="4"/>
+  <text x="748" y="135" font-size="11" font-weight="bold" fill="#1D4ED8">9.5</text>
+
+  <text x="415" y="155" font-size="11" fill="#374151">Docker / 컨테이너</text>
+  <rect x="415" y="159" width="340" height="16" fill="#E5E7EB" rx="4"/>
+  <rect x="415" y="159" width="306" height="16" fill="#10B981" rx="4"/>
+  <text x="748" y="172" font-size="11" font-weight="bold" fill="#065F46">9.0</text>
+
+  <text x="415" y="192" font-size="11" fill="#374151">멀티탭 브라우저</text>
+  <rect x="415" y="196" width="340" height="16" fill="#E5E7EB" rx="4"/>
+  <rect x="415" y="196" width="323" height="16" fill="#8B5CF6" rx="4"/>
+  <text x="748" y="209" font-size="11" font-weight="bold" fill="#5B21B6">9.5</text>
+
+  <text x="415" y="229" font-size="11" fill="#374151">AI 모델 로컬 추론</text>
+  <rect x="415" y="233" width="340" height="16" fill="#E5E7EB" rx="4"/>
+  <rect x="415" y="233" width="289" height="16" fill="#F59E0B" rx="4"/>
+  <text x="748" y="246" font-size="11" font-weight="bold" fill="#92400E">8.5</text>
+
+  <text x="415" y="266" font-size="11" fill="#374151">Xcode iOS 빌드</text>
+  <rect x="415" y="270" width="340" height="16" fill="#E5E7EB" rx="4"/>
+  <rect x="415" y="270" width="340" height="16" fill="#3B82F6" rx="4"/>
+  <text x="748" y="283" font-size="11" font-weight="bold" fill="#1D4ED8">10</text>
+
+  <text x="415" y="303" font-size="11" fill="#374151">Python 데이터 처리</text>
+  <rect x="415" y="307" width="340" height="16" fill="#E5E7EB" rx="4"/>
+  <rect x="415" y="307" width="306" height="16" fill="#10B981" rx="4"/>
+  <text x="748" y="320" font-size="11" font-weight="bold" fill="#065F46">9.0</text>
+
+  <text x="415" y="340" font-size="11" fill="#374151">배터리 지속시간</text>
+  <rect x="415" y="344" width="340" height="16" fill="#E5E7EB" rx="4"/>
+  <rect x="415" y="344" width="323" height="16" fill="#EF4444" rx="4"/>
+  <text x="748" y="357" font-size="11" font-weight="bold" fill="#991B1B">9.5</text>
+
+  <text x="590" y="425" text-anchor="middle" font-size="10" fill="#9CA3AF">※ 13년 차 엔지니어 실사용 기준 | 2026년 3월</text>
+</svg>

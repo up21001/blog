@@ -1,0 +1,98 @@
+<svg width="800" height="450" viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg" font-family="'Malgun Gothic', sans-serif">
+  <!-- Background -->
+  <rect width="800" height="450" fill="#F9FAFB" rx="12"/>
+  <!-- Title -->
+  <text x="400" y="38" text-anchor="middle" font-size="18" font-weight="bold" fill="#1F2937">ChatGPT vs Claude vs Gemini — 2026년 AI 어시스턴트 비교</text>
+
+  <!-- Header Row -->
+  <rect x="20" y="55" width="220" height="40" fill="#E5E7EB" stroke="#9CA3AF" stroke-width="1" rx="4"/>
+  <rect x="248" y="55" width="165" height="40" fill="#DBEAFE" stroke="#3B82F6" stroke-width="2" rx="4"/>
+  <rect x="421" y="55" width="165" height="40" fill="#D1FAE5" stroke="#10B981" stroke-width="2" rx="4"/>
+  <rect x="594" y="55" width="185" height="40" fill="#FEF3C7" stroke="#F59E0B" stroke-width="2" rx="4"/>
+
+  <text x="130" y="80" text-anchor="middle" font-size="13" font-weight="bold" fill="#374151">항목</text>
+  <text x="330" y="80" text-anchor="middle" font-size="13" font-weight="bold" fill="#1D4ED8">ChatGPT (GPT-5.2)</text>
+  <text x="503" y="80" text-anchor="middle" font-size="13" font-weight="bold" fill="#065F46">Claude (Sonnet 4.6)</text>
+  <text x="686" y="80" text-anchor="middle" font-size="13" font-weight="bold" fill="#92400E">Gemini 2.5 Pro</text>
+
+  <!-- Rows -->
+  <!-- Row 1 -->
+  <rect x="20" y="100" width="220" height="38" fill="#F3F4F6" stroke="#D1D5DB" stroke-width="1" rx="2"/>
+  <rect x="248" y="100" width="165" height="38" fill="#EFF6FF" stroke="#BFDBFE" stroke-width="1" rx="2"/>
+  <rect x="421" y="100" width="165" height="38" fill="#ECFDF5" stroke="#A7F3D0" stroke-width="1" rx="2"/>
+  <rect x="594" y="100" width="185" height="38" fill="#FFFBEB" stroke="#FDE68A" stroke-width="1" rx="2"/>
+  <text x="130" y="123" text-anchor="middle" font-size="12" fill="#374151">코딩 능력</text>
+  <text x="330" y="118" text-anchor="middle" font-size="12" fill="#1E40AF">★★★★☆</text>
+  <text x="330" y="132" text-anchor="middle" font-size="10" fill="#6B7280">SWE-bench ~70%</text>
+  <text x="503" y="118" text-anchor="middle" font-size="12" fill="#065F46">★★★★★</text>
+  <text x="503" y="132" text-anchor="middle" font-size="10" fill="#6B7280">SWE-bench 80.9%</text>
+  <text x="686" y="118" text-anchor="middle" font-size="12" fill="#92400E">★★★★☆</text>
+  <text x="686" y="132" text-anchor="middle" font-size="10" fill="#6B7280">SWE-bench ~65%</text>
+
+  <!-- Row 2 -->
+  <rect x="20" y="142" width="220" height="38" fill="#F3F4F6" stroke="#D1D5DB" stroke-width="1" rx="2"/>
+  <rect x="248" y="142" width="165" height="38" fill="#EFF6FF" stroke="#BFDBFE" stroke-width="1" rx="2"/>
+  <rect x="421" y="142" width="165" height="38" fill="#ECFDF5" stroke="#A7F3D0" stroke-width="1" rx="2"/>
+  <rect x="594" y="142" width="185" height="38" fill="#FFFBEB" stroke="#FDE68A" stroke-width="1" rx="2"/>
+  <text x="130" y="165" text-anchor="middle" font-size="12" fill="#374151">컨텍스트 윈도우</text>
+  <text x="330" y="165" text-anchor="middle" font-size="12" fill="#1E40AF">128K 토큰</text>
+  <text x="503" y="165" text-anchor="middle" font-size="12" fill="#065F46">500K 토큰 (Enterprise)</text>
+  <text x="686" y="165" text-anchor="middle" font-size="12" fill="#92400E">1M 토큰</text>
+
+  <!-- Row 3 -->
+  <rect x="20" y="184" width="220" height="38" fill="#F3F4F6" stroke="#D1D5DB" stroke-width="1" rx="2"/>
+  <rect x="248" y="184" width="165" height="38" fill="#EFF6FF" stroke="#BFDBFE" stroke-width="1" rx="2"/>
+  <rect x="421" y="184" width="165" height="38" fill="#ECFDF5" stroke="#A7F3D0" stroke-width="1" rx="2"/>
+  <rect x="594" y="184" width="185" height="38" fill="#FFFBEB" stroke="#FDE68A" stroke-width="1" rx="2"/>
+  <text x="130" y="207" text-anchor="middle" font-size="12" fill="#374151">글쓰기 품질</text>
+  <text x="330" y="202" text-anchor="middle" font-size="12" fill="#1E40AF">★★★★☆</text>
+  <text x="330" y="216" text-anchor="middle" font-size="10" fill="#6B7280">자연스럽고 다채로움</text>
+  <text x="503" y="202" text-anchor="middle" font-size="12" fill="#065F46">★★★★★</text>
+  <text x="503" y="216" text-anchor="middle" font-size="10" fill="#6B7280">지시 따르기 최고</text>
+  <text x="686" y="202" text-anchor="middle" font-size="12" fill="#92400E">★★★☆☆</text>
+  <text x="686" y="216" text-anchor="middle" font-size="10" fill="#6B7280">정보 검색 강점</text>
+
+  <!-- Row 4 -->
+  <rect x="20" y="226" width="220" height="38" fill="#F3F4F6" stroke="#D1D5DB" stroke-width="1" rx="2"/>
+  <rect x="248" y="226" width="165" height="38" fill="#EFF6FF" stroke="#BFDBFE" stroke-width="1" rx="2"/>
+  <rect x="421" y="226" width="165" height="38" fill="#ECFDF5" stroke="#A7F3D0" stroke-width="1" rx="2"/>
+  <rect x="594" y="226" width="185" height="38" fill="#FFFBEB" stroke="#FDE68A" stroke-width="1" rx="2"/>
+  <text x="130" y="249" text-anchor="middle" font-size="12" fill="#374151">멀티모달 (영상/음성)</text>
+  <text x="330" y="249" text-anchor="middle" font-size="12" fill="#1E40AF">★★★★☆</text>
+  <text x="503" y="249" text-anchor="middle" font-size="12" fill="#065F46">★★★☆☆</text>
+  <text x="686" y="249" text-anchor="middle" font-size="12" fill="#92400E">★★★★★</text>
+
+  <!-- Row 5 -->
+  <rect x="20" y="268" width="220" height="38" fill="#F3F4F6" stroke="#D1D5DB" stroke-width="1" rx="2"/>
+  <rect x="248" y="268" width="165" height="38" fill="#EFF6FF" stroke="#BFDBFE" stroke-width="1" rx="2"/>
+  <rect x="421" y="268" width="165" height="38" fill="#ECFDF5" stroke="#A7F3D0" stroke-width="1" rx="2"/>
+  <rect x="594" y="268" width="185" height="38" fill="#FFFBEB" stroke="#FDE68A" stroke-width="1" rx="2"/>
+  <text x="130" y="291" text-anchor="middle" font-size="12" fill="#374151">월 구독료 (Pro)</text>
+  <text x="330" y="291" text-anchor="middle" font-size="12" fill="#1E40AF">$20/월</text>
+  <text x="503" y="291" text-anchor="middle" font-size="12" fill="#065F46">$20/월</text>
+  <text x="686" y="291" text-anchor="middle" font-size="12" fill="#92400E">$20/월</text>
+
+  <!-- Row 6 -->
+  <rect x="20" y="310" width="220" height="38" fill="#F3F4F6" stroke="#D1D5DB" stroke-width="1" rx="2"/>
+  <rect x="248" y="310" width="165" height="38" fill="#EFF6FF" stroke="#BFDBFE" stroke-width="1" rx="2"/>
+  <rect x="421" y="310" width="165" height="38" fill="#ECFDF5" stroke="#A7F3D0" stroke-width="1" rx="2"/>
+  <rect x="594" y="310" width="185" height="38" fill="#FFFBEB" stroke="#FDE68A" stroke-width="1" rx="2"/>
+  <text x="130" y="333" text-anchor="middle" font-size="12" fill="#374151">추천 사용 케이스</text>
+  <text x="330" y="328" text-anchor="middle" font-size="11" fill="#1E40AF">범용 · 브레인스토밍</text>
+  <text x="330" y="342" text-anchor="middle" font-size="11" fill="#1E40AF">생태계 최대</text>
+  <text x="503" y="328" text-anchor="middle" font-size="11" fill="#065F46">코딩 · 문서 작성</text>
+  <text x="503" y="342" text-anchor="middle" font-size="11" fill="#065F46">긴 문서 분석</text>
+  <text x="686" y="328" text-anchor="middle" font-size="11" fill="#92400E">리서치 · 영상 분석</text>
+  <text x="686" y="342" text-anchor="middle" font-size="11" fill="#92400E">Google 연동</text>
+
+  <!-- Best badge -->
+  <rect x="248" y="358" width="165" height="32" fill="#DBEAFE" stroke="#3B82F6" stroke-width="2" rx="6"/>
+  <rect x="421" y="358" width="165" height="32" fill="#D1FAE5" stroke="#10B981" stroke-width="2" rx="6"/>
+  <rect x="594" y="358" width="185" height="32" fill="#FEF3C7" stroke="#F59E0B" stroke-width="2" rx="6"/>
+  <text x="330" y="379" text-anchor="middle" font-size="12" font-weight="bold" fill="#1D4ED8">범용 추천 1위</text>
+  <text x="503" y="379" text-anchor="middle" font-size="12" font-weight="bold" fill="#065F46">개발자 추천 1위</text>
+  <text x="686" y="379" text-anchor="middle" font-size="12" font-weight="bold" fill="#92400E">Google 유저 추천</text>
+
+  <!-- Footer note -->
+  <text x="400" y="425" text-anchor="middle" font-size="10" fill="#9CA3AF">※ 2026년 3월 기준 | 벤치마크는 SWE-bench Verified 기준</text>
+</svg>

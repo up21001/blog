@@ -6,6 +6,7 @@ description: "OpenAI Responses API란 무엇인지, 왜 Chat Completions 대신 
 slug: "openai-responses-api-practical-guide"
 categories: ["ai-automation"]
 tags: ["OpenAI Responses API", "OpenAI API", "에이전트 앱", "File Search", "Web Search", "Remote MCP", "AI 자동화"]
+series: ["AI Agent Tooling 2026"]
 draft: false
 ---
 
@@ -14,6 +15,12 @@ draft: false
 OpenAI 공식 문서는 Responses API를 "가장 발전된 인터페이스"로 소개하고 있으며, `Chat Completions`는 계속 지원되지만 신규 프로젝트에는 `Responses`를 권장한다고 명시합니다. 이 방향은 2025년 5월 21일 공개된 제품 글과 현재 API 문서가 함께 뒷받침하고 있습니다.
 
 ![Responses API 아키텍처 다이어그램](/images/openai-responses-api-architecture-2026.svg)
+
+## 이런 분께 추천합니다
+
+- OpenAI 기반 앱을 새로 만들면서 API 계층 선택이 필요한 개발자
+- `Chat Completions`와 `Responses API` 차이를 실무 관점에서 파악하고 싶은 팀
+- 파일 검색, 웹 검색, 함수 호출, 원격 MCP까지 한 번에 설계하려는 독자
 
 ## Responses API란 무엇인가요?
 
@@ -156,3 +163,9 @@ Responses API가 강력하다고 해서 모든 앱이 자동으로 좋아지는 
 - File Search 가이드: https://platform.openai.com/docs/guides/tools-file-search/
 - 스트리밍 가이드: https://platform.openai.com/docs/guides/streaming-responses?api-mode=responses
 - OpenAI 제품 글: https://openai.com/index/new-tools-and-features-in-the-responses-api/
+
+## 함께 읽으면 좋은 글
+
+- [MCP 서버란 무엇인가: 2026 AI 에이전트 실무를 위한 Model Context Protocol 가이드](/posts/mcp-server-practical-guide-2026/)
+- [Claude Code란 무엇인가: 2026년 터미널 기반 AI 코딩 워크플로우 실무 가이드](/posts/claude-code-practical-guide-2026/)
+- [GitHub Copilot Coding Agent란 무엇인가: 2026년 PR 기반 에이전트 개발 워크플로우 가이드](/posts/github-copilot-coding-agent-practical-guide/)

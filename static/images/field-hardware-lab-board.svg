@@ -1,0 +1,12 @@
+<svg width="1200" height="675" viewBox="0 0 1200 675" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="675" fill="#0f172a"/>
+  <rect x="120" y="90" width="960" height="495" rx="24" fill="#14532d" stroke="#22c55e" stroke-width="4"/>
+  <rect x="210" y="160" width="280" height="190" rx="14" fill="#1f2937"/>
+  <rect x="520" y="160" width="180" height="90" rx="10" fill="#334155"/>
+  <rect x="730" y="160" width="250" height="190" rx="14" fill="#1f2937"/>
+  <rect x="210" y="380" width="770" height="135" rx="14" fill="#1e293b"/>
+  <circle cx="560" cy="205" r="22" fill="#22d3ee"/>
+  <circle cx="620" cy="205" r="22" fill="#22d3ee"/>
+  <text x="600" y="80" text-anchor="middle" fill="#bbf7d0" font-size="42" font-family="Segoe UI, Arial">Hardware Lab</text>
+  <text x="600" y="615" text-anchor="middle" fill="#86efac" font-size="24" font-family="Segoe UI, Arial">Signal Integrity - Thermal - Reliability</text>
+</svg>

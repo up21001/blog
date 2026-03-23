@@ -6,6 +6,7 @@ description: "uv란 무엇인지, 왜 2026년 파이썬 개발자들이 pip와 v
 slug: "uv-python-package-manager-practical-guide"
 categories: ["software-dev"]
 tags: ["uv", "Python 패키지 관리자", "pip 대체", "venv 대체", "Python 개발 환경", "Astral", "pyproject.toml"]
+series: ["Developer Tooling 2026"]
 draft: false
 ---
 
@@ -14,6 +15,12 @@ draft: false
 공식 문서를 보면 Astral은 `uv`를 "extremely fast Python package manager"로 소개합니다. 더 중요한 점은 단순 패키지 설치기가 아니라, Python 버전 설치와 프로젝트 의존성 관리, 스크립트 실행, 패키지 빌드와 배포까지 폭넓게 다룬다는 사실입니다. 즉, `uv란 무엇인가`라는 질문의 답은 "빠른 pip 대체재"보다 훨씬 넓습니다.
 
 ![uv 워크플로우 다이어그램](/images/uv-python-workflow-2026.svg)
+
+## 이런 분께 추천합니다
+
+- `pip`, `venv`, `pyenv` 조합이 번거롭다고 느끼는 파이썬 개발자
+- 신규 프로젝트를 더 짧은 온보딩 문서로 시작하고 싶은 팀
+- `uv란`, `uv 설치`, `uv add`, `uv run`을 실무 흐름으로 이해하고 싶은 독자
 
 ## 왜 지금 uv가 인기인가요?
 
@@ -179,3 +186,9 @@ uv run python main.py
 - uv 기능 개요: https://docs.astral.sh/uv/getting-started/features/
 - uv Python 설치 가이드: https://docs.astral.sh/uv/guides/install-python/
 - uv 패키지 빌드/배포 가이드: https://docs.astral.sh/uv/guides/package/
+
+## 함께 읽으면 좋은 글
+
+- [Gemini CLI란 무엇인가: 2026년 터미널 AI 에이전트 도구 실무 가이드](/posts/gemini-cli-practical-guide-2026/)
+- [Docker Compose로 Node.js + PostgreSQL 로컬 개발 환경 구성하기](/posts/docker-compose-nodejs-postgresql-local-development-environment/)
+- [Python Free-Threading 체크리스트: 2026년에 무엇을 점검해야 하나](/posts/python-free-threading-checklist/)

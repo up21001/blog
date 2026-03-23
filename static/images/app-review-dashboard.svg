@@ -1,0 +1,10 @@
+<svg width="1200" height="675" viewBox="0 0 1200 675" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="675" fill="#0f172a"/>
+  <text x="600" y="78" text-anchor="middle" fill="#e2e8f0" font-size="42" font-family="Segoe UI, Arial">App Review Dashboard</text>
+  <rect x="90" y="120" width="320" height="220" rx="16" fill="#1e293b"/><text x="250" y="180" text-anchor="middle" fill="#93c5fd" font-size="28" font-family="Segoe UI">Usability</text>
+  <rect x="440" y="120" width="320" height="220" rx="16" fill="#1e293b"/><text x="600" y="180" text-anchor="middle" fill="#93c5fd" font-size="28" font-family="Segoe UI">Price</text>
+  <rect x="790" y="120" width="320" height="220" rx="16" fill="#1e293b"/><text x="950" y="180" text-anchor="middle" fill="#93c5fd" font-size="28" font-family="Segoe UI">Integrations</text>
+  <rect x="90" y="370" width="1020" height="220" rx="16" fill="#111827" stroke="#334155"/>
+  <polyline points="130,530 260,500 390,520 520,470 650,440 780,420 910,410 1040,390" fill="none" stroke="#22d3ee" stroke-width="6"/>
+  <line x1="130" y1="540" x2="1040" y2="540" stroke="#334155" stroke-width="3"/>
+</svg>

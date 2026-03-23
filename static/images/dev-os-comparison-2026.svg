@@ -1,0 +1,106 @@
+<svg width="800" height="450" viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg" font-family="'Malgun Gothic', sans-serif">
+  <rect width="800" height="450" fill="#F9FAFB" rx="12"/>
+  <text x="400" y="35" text-anchor="middle" font-size="17" font-weight="bold" fill="#1F2937">Windows vs macOS vs Linux — 개발 환경 비교 2026</text>
+
+  <!-- Column headers -->
+  <rect x="15" y="52" width="155" height="36" fill="#374151" rx="4"/>
+  <rect x="178" y="52" width="185" height="36" fill="#0078D4" rx="4"/>
+  <rect x="371" y="52" width="185" height="36" fill="#1C1C1E" rx="4"/>
+  <rect x="564" y="52" width="221" height="36" fill="#E25C1C" rx="4"/>
+
+  <text x="92" y="75" text-anchor="middle" font-size="12" font-weight="bold" fill="white">항목</text>
+  <text x="270" y="75" text-anchor="middle" font-size="13" font-weight="bold" fill="white">Windows 11</text>
+  <text x="463" y="75" text-anchor="middle" font-size="13" font-weight="bold" fill="white">macOS Sequoia</text>
+  <text x="674" y="75" text-anchor="middle" font-size="13" font-weight="bold" fill="white">Linux (Ubuntu 24.04)</text>
+
+  <!-- Row: 도구 호환성 -->
+  <rect x="15" y="92" width="155" height="36" fill="#F3F4F6" stroke="#D1D5DB" rx="2"/>
+  <rect x="178" y="92" width="185" height="36" fill="#EFF6FF" stroke="#BFDBFE" rx="2"/>
+  <rect x="371" y="92" width="185" height="36" fill="#F5F3FF" stroke="#DDD6FE" rx="2"/>
+  <rect x="564" y="92" width="221" height="36" fill="#FEF3C7" stroke="#FDE68A" rx="2"/>
+  <text x="92" y="114" text-anchor="middle" font-size="11" fill="#374151">도구 호환성</text>
+  <text x="270" y="108" text-anchor="middle" font-size="11" fill="#1E40AF">★★★★☆</text>
+  <text x="270" y="122" text-anchor="middle" font-size="10" fill="#6B7280">WSL2로 Linux 지원</text>
+  <text x="463" y="108" text-anchor="middle" font-size="11" fill="#4C1D95">★★★★★</text>
+  <text x="463" y="122" text-anchor="middle" font-size="10" fill="#6B7280">Unix 기반 · brew</text>
+  <text x="674" y="108" text-anchor="middle" font-size="11" fill="#92400E">★★★★★</text>
+  <text x="674" y="122" text-anchor="middle" font-size="10" fill="#6B7280">서버 환경 동일</text>
+
+  <!-- Row: Docker -->
+  <rect x="15" y="132" width="155" height="36" fill="#F3F4F6" stroke="#D1D5DB" rx="2"/>
+  <rect x="178" y="132" width="185" height="36" fill="#EFF6FF" stroke="#BFDBFE" rx="2"/>
+  <rect x="371" y="132" width="185" height="36" fill="#F5F3FF" stroke="#DDD6FE" rx="2"/>
+  <rect x="564" y="132" width="221" height="36" fill="#FEF3C7" stroke="#FDE68A" rx="2"/>
+  <text x="92" y="154" text-anchor="middle" font-size="11" fill="#374151">Docker 성능</text>
+  <text x="270" y="148" text-anchor="middle" font-size="11" fill="#1E40AF">★★★☆☆</text>
+  <text x="270" y="162" text-anchor="middle" font-size="10" fill="#6B7280">WSL2 오버헤드 있음</text>
+  <text x="463" y="148" text-anchor="middle" font-size="11" fill="#4C1D95">★★★★☆</text>
+  <text x="463" y="162" text-anchor="middle" font-size="10" fill="#6B7280">Docker Desktop 안정</text>
+  <text x="674" y="148" text-anchor="middle" font-size="11" fill="#92400E">★★★★★</text>
+  <text x="674" y="162" text-anchor="middle" font-size="10" fill="#6B7280">네이티브 최고 성능</text>
+
+  <!-- Row: 게임 -->
+  <rect x="15" y="172" width="155" height="36" fill="#F3F4F6" stroke="#D1D5DB" rx="2"/>
+  <rect x="178" y="172" width="185" height="36" fill="#EFF6FF" stroke="#BFDBFE" rx="2"/>
+  <rect x="371" y="172" width="185" height="36" fill="#F5F3FF" stroke="#DDD6FE" rx="2"/>
+  <rect x="564" y="172" width="221" height="36" fill="#FEF3C7" stroke="#FDE68A" rx="2"/>
+  <text x="92" y="194" text-anchor="middle" font-size="11" fill="#374151">게임 / 엔터테인먼트</text>
+  <text x="270" y="188" text-anchor="middle" font-size="11" fill="#1E40AF">★★★★★</text>
+  <text x="270" y="202" text-anchor="middle" font-size="10" fill="#6B7280">DirectX · Steam 완벽</text>
+  <text x="463" y="188" text-anchor="middle" font-size="11" fill="#4C1D95">★★★☆☆</text>
+  <text x="463" y="202" text-anchor="middle" font-size="10" fill="#6B7280">타이틀 제한적</text>
+  <text x="674" y="188" text-anchor="middle" font-size="11" fill="#92400E">★★☆☆☆</text>
+  <text x="674" y="202" text-anchor="middle" font-size="10" fill="#6B7280">Proton · 제한적</text>
+
+  <!-- Row: 배터리/전력 -->
+  <rect x="15" y="212" width="155" height="36" fill="#F3F4F6" stroke="#D1D5DB" rx="2"/>
+  <rect x="178" y="212" width="185" height="36" fill="#EFF6FF" stroke="#BFDBFE" rx="2"/>
+  <rect x="371" y="212" width="185" height="36" fill="#F5F3FF" stroke="#DDD6FE" rx="2"/>
+  <rect x="564" y="212" width="221" height="36" fill="#FEF3C7" stroke="#FDE68A" rx="2"/>
+  <text x="92" y="234" text-anchor="middle" font-size="11" fill="#374151">배터리 효율 (노트북)</text>
+  <text x="270" y="228" text-anchor="middle" font-size="11" fill="#1E40AF">★★★☆☆</text>
+  <text x="270" y="242" text-anchor="middle" font-size="10" fill="#6B7280">OEM 드라이버 의존</text>
+  <text x="463" y="228" text-anchor="middle" font-size="11" fill="#4C1D95">★★★★★</text>
+  <text x="463" y="242" text-anchor="middle" font-size="10" fill="#6B7280">M-시리즈 24시간</text>
+  <text x="674" y="228" text-anchor="middle" font-size="11" fill="#92400E">★★★★☆</text>
+  <text x="674" y="242" text-anchor="middle" font-size="10" fill="#6B7280">TLP 튜닝 시 우수</text>
+
+  <!-- Row: 보안 -->
+  <rect x="15" y="252" width="155" height="36" fill="#F3F4F6" stroke="#D1D5DB" rx="2"/>
+  <rect x="178" y="252" width="185" height="36" fill="#EFF6FF" stroke="#BFDBFE" rx="2"/>
+  <rect x="371" y="252" width="185" height="36" fill="#F5F3FF" stroke="#DDD6FE" rx="2"/>
+  <rect x="564" y="252" width="221" height="36" fill="#FEF3C7" stroke="#FDE68A" rx="2"/>
+  <text x="92" y="274" text-anchor="middle" font-size="11" fill="#374151">보안</text>
+  <text x="270" y="268" text-anchor="middle" font-size="11" fill="#1E40AF">★★★☆☆</text>
+  <text x="270" y="282" text-anchor="middle" font-size="10" fill="#6B7280">악성코드 위험 높음</text>
+  <text x="463" y="268" text-anchor="middle" font-size="11" fill="#4C1D95">★★★★☆</text>
+  <text x="463" y="282" text-anchor="middle" font-size="10" fill="#6B7280">GateKeeper · 샌드박스</text>
+  <text x="674" y="268" text-anchor="middle" font-size="11" fill="#92400E">★★★★★</text>
+  <text x="674" y="282" text-anchor="middle" font-size="10" fill="#6B7280">권한 분리 · 오픈소스</text>
+
+  <!-- Row: 학습 곡선 -->
+  <rect x="15" y="292" width="155" height="36" fill="#F3F4F6" stroke="#D1D5DB" rx="2"/>
+  <rect x="178" y="292" width="185" height="36" fill="#EFF6FF" stroke="#BFDBFE" rx="2"/>
+  <rect x="371" y="292" width="185" height="36" fill="#F5F3FF" stroke="#DDD6FE" rx="2"/>
+  <rect x="564" y="292" width="221" height="36" fill="#FEF3C7" stroke="#FDE68A" rx="2"/>
+  <text x="92" y="314" text-anchor="middle" font-size="11" fill="#374151">입문 난이도</text>
+  <text x="270" y="308" text-anchor="middle" font-size="11" fill="#1E40AF">매우 쉬움</text>
+  <text x="270" y="322" text-anchor="middle" font-size="10" fill="#6B7280">가장 친숙한 UI</text>
+  <text x="463" y="308" text-anchor="middle" font-size="11" fill="#4C1D95">쉬움</text>
+  <text x="463" y="322" text-anchor="middle" font-size="10" fill="#6B7280">직관적 · 통합 생태계</text>
+  <text x="674" y="308" text-anchor="middle" font-size="11" fill="#92400E">어려움</text>
+  <text x="674" y="322" text-anchor="middle" font-size="10" fill="#6B7280">CLI 숙련도 필요</text>
+
+  <!-- Recommendation -->
+  <rect x="178" y="336" width="185" height="40" fill="#DBEAFE" stroke="#3B82F6" stroke-width="2" rx="6"/>
+  <rect x="371" y="336" width="185" height="40" fill="#EDE9FE" stroke="#8B5CF6" stroke-width="2" rx="6"/>
+  <rect x="564" y="336" width="221" height="40" fill="#FEF3C7" stroke="#F59E0B" stroke-width="2" rx="6"/>
+  <text x="270" y="352" text-anchor="middle" font-size="11" font-weight="bold" fill="#1D4ED8">풀스택 · 게임 겸용</text>
+  <text x="270" y="367" text-anchor="middle" font-size="11" fill="#1E40AF">Windows 11 + WSL2</text>
+  <text x="463" y="352" text-anchor="middle" font-size="11" font-weight="bold" fill="#4C1D95">iOS/macOS 앱 개발</text>
+  <text x="463" y="367" text-anchor="middle" font-size="11" fill="#5B21B6">배터리 · 생산성 최우선</text>
+  <text x="674" y="352" text-anchor="middle" font-size="11" font-weight="bold" fill="#92400E">백엔드 · DevOps · 보안</text>
+  <text x="674" y="367" text-anchor="middle" font-size="11" fill="#78350F">서버 환경 동일 · 무료</text>
+
+  <text x="400" y="425" text-anchor="middle" font-size="10" fill="#9CA3AF">※ 2026년 3월 기준 | Windows 11 24H2 · macOS 15 · Ubuntu 24.04 LTS</text>
+</svg>

@@ -1,0 +1,80 @@
+<svg width="800" height="450" viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg" font-family="'Malgun Gothic', sans-serif">
+  <rect width="800" height="450" fill="#F9FAFB" rx="12"/>
+  <text x="400" y="35" text-anchor="middle" font-size="17" font-weight="bold" fill="#1F2937">Galaxy S25 Ultra vs iPhone 16 Pro — 개발자 선택 기준</text>
+
+  <!-- Column headers -->
+  <rect x="20" y="52" width="200" height="36" fill="#374151" rx="4"/>
+  <rect x="228" y="52" width="260" height="36" fill="#1565C0" rx="4"/>
+  <rect x="496" y="52" width="284" height="36" fill="#1C1C1E" rx="4"/>
+
+  <text x="120" y="75" text-anchor="middle" font-size="13" font-weight="bold" fill="white">비교 항목</text>
+  <text x="358" y="75" text-anchor="middle" font-size="13" font-weight="bold" fill="white">Samsung Galaxy S25 Ultra</text>
+  <text x="638" y="75" text-anchor="middle" font-size="13" font-weight="bold" fill="white">Apple iPhone 16 Pro</text>
+
+  <!-- Rows -->
+  <!-- AP -->
+  <rect x="20" y="92" width="200" height="34" fill="#F3F4F6" stroke="#D1D5DB" rx="2"/>
+  <rect x="228" y="92" width="260" height="34" fill="#EFF6FF" stroke="#BFDBFE" rx="2"/>
+  <rect x="496" y="92" width="284" height="34" fill="#F5F3FF" stroke="#DDD6FE" rx="2"/>
+  <text x="120" y="113" text-anchor="middle" font-size="12" fill="#374151">AP / 성능</text>
+  <text x="358" y="113" text-anchor="middle" font-size="12" fill="#1E40AF">Snapdragon 8 Elite · 12GB RAM</text>
+  <text x="638" y="113" text-anchor="middle" font-size="12" fill="#4C1D95">A18 Pro · 8GB RAM (효율 최상)</text>
+
+  <!-- Display -->
+  <rect x="20" y="130" width="200" height="34" fill="#F3F4F6" stroke="#D1D5DB" rx="2"/>
+  <rect x="228" y="130" width="260" height="34" fill="#EFF6FF" stroke="#BFDBFE" rx="2"/>
+  <rect x="496" y="130" width="284" height="34" fill="#F5F3FF" stroke="#DDD6FE" rx="2"/>
+  <text x="120" y="151" text-anchor="middle" font-size="12" fill="#374151">디스플레이</text>
+  <text x="358" y="151" text-anchor="middle" font-size="12" fill="#1E40AF">6.9" AMOLED 2600nit · 120Hz</text>
+  <text x="638" y="151" text-anchor="middle" font-size="12" fill="#4C1D95">6.3" ProMotion OLED · 2000nit</text>
+
+  <!-- Camera -->
+  <rect x="20" y="168" width="200" height="34" fill="#F3F4F6" stroke="#D1D5DB" rx="2"/>
+  <rect x="228" y="168" width="260" height="34" fill="#EFF6FF" stroke="#BFDBFE" rx="2"/>
+  <rect x="496" y="168" width="284" height="34" fill="#F5F3FF" stroke="#DDD6FE" rx="2"/>
+  <text x="120" y="189" text-anchor="middle" font-size="12" fill="#374151">카메라</text>
+  <text x="358" y="189" text-anchor="middle" font-size="12" fill="#1E40AF">200MP · 10x 광학줌 · S-Pen</text>
+  <text x="638" y="189" text-anchor="middle" font-size="12" fill="#4C1D95">48MP · 5x 광학줌 · 영상 최강</text>
+
+  <!-- Battery -->
+  <rect x="20" y="206" width="200" height="34" fill="#F3F4F6" stroke="#D1D5DB" rx="2"/>
+  <rect x="228" y="206" width="260" height="34" fill="#EFF6FF" stroke="#BFDBFE" rx="2"/>
+  <rect x="496" y="206" width="284" height="34" fill="#F5F3FF" stroke="#DDD6FE" rx="2"/>
+  <text x="120" y="227" text-anchor="middle" font-size="12" fill="#374151">배터리</text>
+  <text x="358" y="227" text-anchor="middle" font-size="12" fill="#1E40AF">5000mAh · 45W 유선</text>
+  <text x="638" y="227" text-anchor="middle" font-size="12" fill="#4C1D95">4685mAh · MagSafe 25W</text>
+
+  <!-- OS/Dev -->
+  <rect x="20" y="244" width="200" height="34" fill="#F3F4F6" stroke="#D1D5DB" rx="2"/>
+  <rect x="228" y="244" width="260" height="34" fill="#EFF6FF" stroke="#BFDBFE" rx="2"/>
+  <rect x="496" y="244" width="284" height="34" fill="#F5F3FF" stroke="#DDD6FE" rx="2"/>
+  <text x="120" y="265" text-anchor="middle" font-size="12" fill="#374151">개발 환경</text>
+  <text x="358" y="265" text-anchor="middle" font-size="12" fill="#1E40AF">Android 15 · ADB 자유도 최고</text>
+  <text x="638" y="265" text-anchor="middle" font-size="12" fill="#4C1D95">iOS 18 · Xcode 개발 필수</text>
+
+  <!-- AI features -->
+  <rect x="20" y="282" width="200" height="34" fill="#F3F4F6" stroke="#D1D5DB" rx="2"/>
+  <rect x="228" y="282" width="260" height="34" fill="#EFF6FF" stroke="#BFDBFE" rx="2"/>
+  <rect x="496" y="282" width="284" height="34" fill="#F5F3FF" stroke="#DDD6FE" rx="2"/>
+  <text x="120" y="303" text-anchor="middle" font-size="12" fill="#374151">AI 기능</text>
+  <text x="358" y="303" text-anchor="middle" font-size="12" fill="#1E40AF">Galaxy AI · Circle to Search</text>
+  <text x="638" y="303" text-anchor="middle" font-size="12" fill="#4C1D95">Apple Intelligence · ChatGPT</text>
+
+  <!-- Price -->
+  <rect x="20" y="320" width="200" height="34" fill="#F3F4F6" stroke="#D1D5DB" rx="2"/>
+  <rect x="228" y="320" width="260" height="34" fill="#EFF6FF" stroke="#BFDBFE" rx="2"/>
+  <rect x="496" y="320" width="284" height="34" fill="#F5F3FF" stroke="#DDD6FE" rx="2"/>
+  <text x="120" y="341" text-anchor="middle" font-size="12" fill="#374151">출시가 (한국)</text>
+  <text x="358" y="341" text-anchor="middle" font-size="12" fill="#1E40AF">₩1,899,900 (256GB)</text>
+  <text x="638" y="341" text-anchor="middle" font-size="12" fill="#4C1D95">₩1,750,000 (128GB)</text>
+
+  <!-- Winner row -->
+  <rect x="228" y="360" width="260" height="40" fill="#DBEAFE" stroke="#3B82F6" stroke-width="2" rx="6"/>
+  <rect x="496" y="360" width="284" height="40" fill="#EDE9FE" stroke="#8B5CF6" stroke-width="2" rx="6"/>
+  <text x="358" y="376" text-anchor="middle" font-size="12" font-weight="bold" fill="#1D4ED8">Android 개발자 · 노트 활용자</text>
+  <text x="358" y="391" text-anchor="middle" font-size="11" fill="#1E40AF">S-Pen · 멀티태스킹 강자</text>
+  <text x="638" y="376" text-anchor="middle" font-size="12" font-weight="bold" fill="#4C1D95">iOS 개발자 · 생태계 통합</text>
+  <text x="638" y="391" text-anchor="middle" font-size="11" fill="#5B21B6">맥 연동 · 보안 프리미엄</text>
+
+  <text x="400" y="430" text-anchor="middle" font-size="10" fill="#9CA3AF">※ 2026년 3월 기준 | 출시가는 공식 홈페이지 기준</text>
+</svg>
