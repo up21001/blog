@@ -1,0 +1,19 @@
+# 환경변수 (API 키 등 민감 정보)
+.env
+
+# 임시/분석 스크립트
+analyze.py
+list_models.py
+analysis_result.txt
+
+# Hugo 빌드 결과물
+public/
+resources/_gen/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/

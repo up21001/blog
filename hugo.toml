@@ -1,0 +1,48 @@
+baseURL = "https://your-blog.pages.dev"
+languageCode = "ko"
+defaultContentLanguage = "ko"
+title = "기술 블로그 | 하드웨어·소프트웨어·AI 엔지니어링"
+theme = "blowfish"
+enableRobotsTXT = true
+paginate = 10
+
+[params]
+  colorScheme = "ocean"
+  defaultAppearance = "light"
+  autoSwitchAppearance = true
+  enableSearch = true
+  enableCodeCopy = true
+  mainSections = ["posts"]
+  description = "하드웨어/소프트웨어 엔지니어의 기술 블로그 - PCB 설계, 임베디드, AI, DevOps 실전 경험 공유"
+  author = "Engineer"
+  keywords = ["하드웨어", "소프트웨어", "AI", "임베디드", "PCB 설계", "Python", "DevOps"]
+
+[params.homepage]
+  layout = "profile"
+  showRecent = true
+  recentLimit = 5
+
+[params.article]
+  showDate = true
+  showAuthor = true
+  showTableOfContents = true
+  showReadingTime = true
+  showWordCount = true
+  showRelatedContent = true
+  showEdit = false
+  showHeadingAnchors = true
+
+[params.footer]
+  showCopyright = true
+  showThemeAttribution = false
+  showScrollToTop = true
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+
+[markup]
+  [markup.highlight]
+    style = "github"
+    lineNos = true
+    lineNumbersInTable = true
