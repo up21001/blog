@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#0c4a6e"/>
+  <text x="60" y="90" fill="#e0f2fe" font-size="36" font-family="Arial" font-weight="700">Data Engineering Pipeline</text>
+  <rect x="80" y="240" width="200" height="100" rx="12" fill="#0284c7"/>
+  <rect x="320" y="240" width="200" height="100" rx="12" fill="#0369a1"/>
+  <rect x="560" y="240" width="200" height="100" rx="12" fill="#0ea5e9"/>
+  <rect x="800" y="240" width="200" height="100" rx="12" fill="#38bdf8"/>
+  <text x="130" y="305" fill="#fff" font-size="22" font-family="Arial">Ingest</text>
+  <text x="355" y="305" fill="#fff" font-size="22" font-family="Arial">Transform</text>
+  <text x="615" y="305" fill="#fff" font-size="22" font-family="Arial">Serve</text>
+  <text x="865" y="305" fill="#0c4a6e" font-size="22" font-family="Arial">Observe</text>
+  <line x1="280" y1="290" x2="320" y2="290" stroke="#bae6fd" stroke-width="4"/>
+  <line x1="520" y1="290" x2="560" y2="290" stroke="#bae6fd" stroke-width="4"/>
+  <line x1="760" y1="290" x2="800" y2="290" stroke="#bae6fd" stroke-width="4"/>
+</svg>

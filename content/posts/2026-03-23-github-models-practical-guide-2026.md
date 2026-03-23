@@ -6,6 +6,7 @@ description: "GitHub Models란 무엇인지, 왜 2026년 프롬프트 실험과 
 slug: "github-models-practical-guide-2026"
 categories: ["ai-automation"]
 tags: ["GitHub Models", "프롬프트 관리", "모델 평가", "LLM 비교", "AI 개발", "GitHub AI", "프롬프트 엔지니어링"]
+featureimage: "/images/github-models-workflow-2026.svg"
 series: ["AI Agent Tooling 2026"]
 draft: false
 ---

@@ -6,6 +6,7 @@ description: "GitHub Copilot coding agent란 무엇인지, 기존 IDE 보조형 
 slug: "github-copilot-coding-agent-practical-guide"
 categories: ["tech-review"]
 tags: ["GitHub Copilot coding agent", "GitHub Copilot", "에이전트 코딩", "PR 자동화", "GitHub Actions", "개발 생산성", "AI 코딩 에이전트"]
+featureimage: "/images/copilot-coding-agent-workflow-2026.svg"
 series: ["AI Agent Tooling 2026"]
 draft: false
 ---

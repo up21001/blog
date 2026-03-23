@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#052e16"/>
+  <text x="60" y="85" fill="#ecfdf5" font-size="40" font-family="Arial" font-weight="700">Personal Knowledge Management System</text>
+
+  <rect x="120" y="240" width="260" height="140" rx="14" fill="#0ea5e9"/>
+  <rect x="470" y="240" width="260" height="140" rx="14" fill="#7c3aed"/>
+  <rect x="820" y="240" width="260" height="140" rx="14" fill="#f97316"/>
+
+  <text x="190" y="320" fill="#fff" font-size="34" font-family="Arial" font-weight="700">Input</text>
+  <text x="535" y="320" fill="#fff" font-size="34" font-family="Arial" font-weight="700">Distill</text>
+  <text x="895" y="320" fill="#fff" font-size="34" font-family="Arial" font-weight="700">Output</text>
+
+  <line x1="380" y1="310" x2="470" y2="310" stroke="#bbf7d0" stroke-width="6"/>
+  <line x1="730" y1="310" x2="820" y2="310" stroke="#bbf7d0" stroke-width="6"/>
+
+  <text x="160" y="500" fill="#d1fae5" font-size="24" font-family="Arial">Capture -> Working -> Evergreen -> Publish</text>
+</svg>

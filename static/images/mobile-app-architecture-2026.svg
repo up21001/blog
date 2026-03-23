@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#0f172a"/>
+  <text x="60" y="90" fill="#e2e8f0" font-size="38" font-family="Arial" font-weight="700">Mobile App Architecture</text>
+  <rect x="180" y="200" width="840" height="90" rx="10" fill="#334155"/>
+  <rect x="180" y="305" width="840" height="90" rx="10" fill="#1e293b"/>
+  <rect x="180" y="410" width="840" height="90" rx="10" fill="#0f766e"/>
+  <text x="220" y="257" fill="#fff" font-size="28" font-family="Arial">Presentation Layer</text>
+  <text x="220" y="362" fill="#fff" font-size="28" font-family="Arial">Domain Layer</text>
+  <text x="220" y="467" fill="#fff" font-size="28" font-family="Arial">Data Layer</text>
+</svg>

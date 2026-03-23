@@ -6,6 +6,7 @@ description: "llms.txt란 무엇인지, Cloudflare가 docs에 llms.txt, llms-ful
 slug: "cloudflare-llms-txt-practical-guide"
 categories: ["tech-review"]
 tags: ["llms.txt", "Cloudflare Docs", "AI 친화적 문서", "llms-full.txt", "문서 설계", "AI 검색", "개발자 문서"]
+featureimage: "/images/cloudflare-llms-txt-workflow-2026.svg"
 draft: false
 ---
 

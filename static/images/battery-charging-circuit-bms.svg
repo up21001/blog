@@ -1,0 +1,80 @@
+<svg width="800" height="450" viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg" font-family="'Malgun Gothic', sans-serif">
+  <rect width="800" height="450" fill="#F9FAFB" rx="12"/>
+  <text x="400" y="36" text-anchor="middle" font-size="18" font-weight="bold" fill="#1F2937">리튬이온 배터리 충전 회로 구조 — TP4056 ~ BMS</text>
+
+  <!-- 전원 입력 -->
+  <rect x="30" y="80" width="120" height="50" rx="8" fill="#DBEAFE" stroke="#3B82F6" stroke-width="2"/>
+  <text x="90" y="102" text-anchor="middle" font-size="12" font-weight="bold" fill="#1E40AF">USB 전원</text>
+  <text x="90" y="118" text-anchor="middle" font-size="11" fill="#3B82F6">5V / 2A</text>
+
+  <!-- 화살표 -->
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#6B7280"/>
+    </marker>
+  </defs>
+  <line x1="150" y1="105" x2="190" y2="105" stroke="#6B7280" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- TP4056 -->
+  <rect x="190" y="70" width="140" height="70" rx="8" fill="#D1FAE5" stroke="#10B981" stroke-width="2"/>
+  <text x="260" y="98" text-anchor="middle" font-size="13" font-weight="bold" fill="#065F46">TP4056</text>
+  <text x="260" y="114" text-anchor="middle" font-size="11" fill="#065F46">CC/CV 충전 IC</text>
+  <text x="260" y="130" text-anchor="middle" font-size="10" fill="#065F46">최대 1A · 4.2V 종지</text>
+
+  <!-- 화살표 -->
+  <line x1="330" y1="105" x2="370" y2="105" stroke="#6B7280" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- 배터리 셀 -->
+  <rect x="370" y="70" width="130" height="70" rx="8" fill="#FEF3C7" stroke="#F59E0B" stroke-width="2"/>
+  <text x="435" y="98" text-anchor="middle" font-size="13" font-weight="bold" fill="#92400E">Li-ion 셀</text>
+  <text x="435" y="114" text-anchor="middle" font-size="11" fill="#92400E">3.6V ~ 4.2V</text>
+  <text x="435" y="130" text-anchor="middle" font-size="10" fill="#92400E">18650 / 21700</text>
+
+  <!-- 화살표 -->
+  <line x1="500" y1="105" x2="540" y2="105" stroke="#6B7280" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- BMS -->
+  <rect x="540" y="60" width="160" height="90" rx="8" fill="#EDE9FE" stroke="#8B5CF6" stroke-width="2"/>
+  <text x="620" y="88" text-anchor="middle" font-size="13" font-weight="bold" fill="#5B21B6">BMS 보호 회로</text>
+  <text x="620" y="106" text-anchor="middle" font-size="11" fill="#5B21B6">과충전 차단 (4.25V+)</text>
+  <text x="620" y="122" text-anchor="middle" font-size="11" fill="#5B21B6">과방전 차단 (2.5V-)</text>
+  <text x="620" y="138" text-anchor="middle" font-size="11" fill="#5B21B6">과전류 / 단락 보호</text>
+
+  <!-- 화살표 -->
+  <line x1="700" y1="105" x2="740" y2="105" stroke="#6B7280" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- 부하 -->
+  <rect x="740" y="80" width="50" height="50" rx="8" fill="#FEE2E2" stroke="#EF4444" stroke-width="2"/>
+  <text x="765" y="107" text-anchor="middle" font-size="11" font-weight="bold" fill="#991B1B">부하</text>
+
+  <!-- 충전 단계 다이어그램 -->
+  <rect x="30" y="190" width="740" height="220" rx="10" fill="white" stroke="#E5E7EB" stroke-width="1.5"/>
+  <text x="400" y="215" text-anchor="middle" font-size="14" font-weight="bold" fill="#374151">충전 단계 (CC → CV → 충전 완료)</text>
+
+  <!-- 그래프 영역 -->
+  <line x1="60" y1="380" x2="750" y2="380" stroke="#9CA3AF" stroke-width="1.5"/>
+  <line x1="60" y1="230" x2="60" y2="380" stroke="#9CA3AF" stroke-width="1.5"/>
+
+  <!-- CC 구간 -->
+  <rect x="60" y="260" width="200" height="120" rx="0" fill="#DBEAFE" opacity="0.5"/>
+  <text x="160" y="253" text-anchor="middle" font-size="12" font-weight="bold" fill="#1E40AF">CC 구간 (정전류)</text>
+
+  <!-- CV 구간 -->
+  <rect x="260" y="260" width="200" height="120" rx="0" fill="#D1FAE5" opacity="0.5"/>
+  <text x="360" y="253" text-anchor="middle" font-size="12" font-weight="bold" fill="#065F46">CV 구간 (정전압)</text>
+
+  <!-- 완료 구간 -->
+  <rect x="460" y="260" width="290" height="120" rx="0" fill="#F3F4F6" opacity="0.5"/>
+  <text x="605" y="253" text-anchor="middle" font-size="12" font-weight="bold" fill="#6B7280">충전 완료</text>
+
+  <!-- 전압 곡선 -->
+  <polyline points="60,360 260,280 460,265 750,265" fill="none" stroke="#3B82F6" stroke-width="2.5"/>
+  <!-- 전류 곡선 -->
+  <polyline points="60,280 260,280 460,280 600,340 750,370" fill="none" stroke="#EF4444" stroke-width="2.5" stroke-dasharray="6,3"/>
+
+  <!-- 범례 -->
+  <line x1="300" y1="400" x2="340" y2="400" stroke="#3B82F6" stroke-width="2.5"/>
+  <text x="350" y="404" font-size="11" fill="#374151">전압</text>
+  <line x1="430" y1="400" x2="470" y2="400" stroke="#EF4444" stroke-width="2.5" stroke-dasharray="6,3"/>
+  <text x="480" y="404" font-size="11" fill="#374151">전류</text>
+</svg>

@@ -1,0 +1,60 @@
+<svg width="800" height="450" viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg" font-family="'Malgun Gothic', sans-serif">
+  <rect width="800" height="450" fill="#F9FAFB" rx="12"/>
+  <text x="400" y="36" text-anchor="middle" font-size="18" font-weight="bold" fill="#1F2937">Git 브랜치 전략 비교 — 팀 규모별 선택 가이드</text>
+
+  <!-- Git Flow -->
+  <rect x="30" y="60" width="220" height="330" rx="10" fill="#DBEAFE" stroke="#3B82F6" stroke-width="2"/>
+  <text x="140" y="88" text-anchor="middle" font-size="14" font-weight="bold" fill="#1E40AF">Git Flow</text>
+  <rect x="50" y="100" width="180" height="26" rx="5" fill="white" stroke="#3B82F6"/>
+  <text x="140" y="118" text-anchor="middle" font-size="11" fill="#1E40AF">main (배포)</text>
+  <rect x="50" y="135" width="180" height="26" rx="5" fill="white" stroke="#3B82F6"/>
+  <text x="140" y="153" text-anchor="middle" font-size="11" fill="#1E40AF">develop (통합)</text>
+  <rect x="50" y="170" width="180" height="26" rx="5" fill="white" stroke="#3B82F6"/>
+  <text x="140" y="188" text-anchor="middle" font-size="11" fill="#1E40AF">feature/* (기능)</text>
+  <rect x="50" y="205" width="180" height="26" rx="5" fill="white" stroke="#3B82F6"/>
+  <text x="140" y="223" text-anchor="middle" font-size="11" fill="#1E40AF">release/* (출시 준비)</text>
+  <rect x="50" y="240" width="180" height="26" rx="5" fill="white" stroke="#3B82F6"/>
+  <text x="140" y="258" text-anchor="middle" font-size="11" fill="#1E40AF">hotfix/* (긴급 패치)</text>
+  <text x="140" y="298" text-anchor="middle" font-size="11" fill="#374151">✅ 버전 릴리즈 명확</text>
+  <text x="140" y="316" text-anchor="middle" font-size="11" fill="#374151">✅ 대형 팀 / 앱 배포</text>
+  <text x="140" y="336" text-anchor="middle" font-size="11" fill="#EF4444">⚠️ 브랜치 복잡도 높음</text>
+  <text x="140" y="356" text-anchor="middle" font-size="11" fill="#EF4444">⚠️ CI/CD 도입 어려움</text>
+  <rect x="50" y="368" width="180" height="10" rx="4" fill="#93C5FD"/>
+
+  <!-- GitHub Flow -->
+  <rect x="290" y="60" width="220" height="330" rx="10" fill="#D1FAE5" stroke="#10B981" stroke-width="2"/>
+  <text x="400" y="88" text-anchor="middle" font-size="14" font-weight="bold" fill="#065F46">GitHub Flow</text>
+  <rect x="310" y="100" width="180" height="26" rx="5" fill="white" stroke="#10B981"/>
+  <text x="400" y="118" text-anchor="middle" font-size="11" fill="#065F46">main (항상 배포 가능)</text>
+  <rect x="310" y="135" width="180" height="26" rx="5" fill="white" stroke="#10B981"/>
+  <text x="400" y="153" text-anchor="middle" font-size="11" fill="#065F46">feature/* (기능 브랜치)</text>
+  <text x="400" y="195" text-anchor="middle" font-size="12" fill="#374151">PR → 리뷰 → Merge</text>
+  <text x="400" y="215" text-anchor="middle" font-size="12" fill="#374151">병합 즉시 배포</text>
+  <text x="400" y="260" text-anchor="middle" font-size="11" fill="#374151">✅ 단순하고 이해 쉬움</text>
+  <text x="400" y="280" text-anchor="middle" font-size="11" fill="#374151">✅ 소·중규모 팀 적합</text>
+  <text x="400" y="300" text-anchor="middle" font-size="11" fill="#374151">✅ 빠른 배포 사이클</text>
+  <text x="400" y="336" text-anchor="middle" font-size="11" fill="#EF4444">⚠️ 다버전 관리 어려움</text>
+  <text x="400" y="356" text-anchor="middle" font-size="11" fill="#EF4444">⚠️ QA 게이트 부재</text>
+  <rect x="310" y="368" width="180" height="10" rx="4" fill="#6EE7B7"/>
+
+  <!-- Trunk-based -->
+  <rect x="550" y="60" width="220" height="330" rx="10" fill="#EDE9FE" stroke="#8B5CF6" stroke-width="2"/>
+  <text x="660" y="88" text-anchor="middle" font-size="14" font-weight="bold" fill="#5B21B6">Trunk-Based Dev</text>
+  <rect x="570" y="100" width="180" height="26" rx="5" fill="white" stroke="#8B5CF6"/>
+  <text x="660" y="118" text-anchor="middle" font-size="11" fill="#5B21B6">main/trunk (단일 브랜치)</text>
+  <text x="660" y="160" text-anchor="middle" font-size="12" fill="#374151">직접 커밋 or</text>
+  <text x="660" y="178" text-anchor="middle" font-size="12" fill="#374151">단명 feature 브랜치</text>
+  <text x="660" y="198" text-anchor="middle" font-size="11" fill="#374151">(1~2일 이내 머지)</text>
+  <text x="660" y="240" text-anchor="middle" font-size="11" fill="#374151">Feature Flag 활용</text>
+  <text x="660" y="280" text-anchor="middle" font-size="11" fill="#374151">✅ CI/CD 최적화</text>
+  <text x="400" y="280" text-anchor="middle" font-size="11" fill="#374151"/>
+  <text x="660" y="298" text-anchor="middle" font-size="11" fill="#374151">✅ 대규모 팀 (Google)</text>
+  <text x="660" y="318" text-anchor="middle" font-size="11" fill="#374151">✅ 머지 충돌 최소화</text>
+  <text x="660" y="340" text-anchor="middle" font-size="11" fill="#EF4444">⚠️ 강력한 테스트 필요</text>
+  <text x="660" y="358" text-anchor="middle" font-size="11" fill="#EF4444">⚠️ 팀 성숙도 요구</text>
+  <rect x="570" y="368" width="180" height="10" rx="4" fill="#C4B5FD"/>
+
+  <!-- 선택 기준 -->
+  <rect x="30" y="410" width="740" height="28" rx="6" fill="#F3F4F6" stroke="#6B7280" stroke-width="1"/>
+  <text x="400" y="429" text-anchor="middle" font-size="11" fill="#374151">선택 기준: 팀 규모 · 배포 주기 · QA 프로세스 · CI/CD 성숙도를 종합 고려</text>
+</svg>

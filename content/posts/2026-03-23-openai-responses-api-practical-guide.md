@@ -6,6 +6,7 @@ description: "OpenAI Responses API란 무엇인지, 왜 Chat Completions 대신 
 slug: "openai-responses-api-practical-guide"
 categories: ["ai-automation"]
 tags: ["OpenAI Responses API", "OpenAI API", "에이전트 앱", "File Search", "Web Search", "Remote MCP", "AI 자동화"]
+featureimage: "/images/openai-responses-api-architecture-2026.svg"
 series: ["AI Agent Tooling 2026"]
 draft: false
 ---

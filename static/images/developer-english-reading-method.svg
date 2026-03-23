@@ -1,0 +1,53 @@
+<svg width="800" height="450" viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg" font-family="'Malgun Gothic', sans-serif">
+  <rect width="800" height="450" fill="#F9FAFB" rx="12"/>
+  <text x="400" y="36" text-anchor="middle" font-size="18" font-weight="bold" fill="#1F2937">개발자 기술 문서 영어 독해 3단계 전략</text>
+
+  <!-- 1단계 -->
+  <rect x="30" y="65" width="225" height="330" rx="12" fill="#DBEAFE" stroke="#3B82F6" stroke-width="2.5"/>
+  <circle cx="142" cy="110" r="28" fill="#3B82F6"/>
+  <text x="142" y="117" text-anchor="middle" font-size="20" font-weight="bold" fill="white">1</text>
+  <text x="142" y="155" text-anchor="middle" font-size="14" font-weight="bold" fill="#1E40AF">스캐닝</text>
+  <text x="142" y="173" text-anchor="middle" font-size="11" fill="#374151">(전체 훑기)</text>
+  <text x="142" y="205" text-anchor="middle" font-size="11" fill="#374151">제목 · 소제목</text>
+  <text x="142" y="222" text-anchor="middle" font-size="11" fill="#374151">코드 블록 위치</text>
+  <text x="142" y="239" text-anchor="middle" font-size="11" fill="#374151">그림 · 다이어그램</text>
+  <text x="142" y="270" text-anchor="middle" font-size="11" fill="#1E40AF">목적: "이 문서가</text>
+  <text x="142" y="287" text-anchor="middle" font-size="11" fill="#1E40AF">무엇을 다루는가?"</text>
+  <text x="142" y="320" text-anchor="middle" font-size="10" fill="#374151">소요 시간: 2~3분</text>
+  <rect x="60" y="348" width="165" height="28" rx="6" fill="#3B82F6"/>
+  <text x="142" y="366" text-anchor="middle" font-size="11" fill="white">모르는 단어 OK</text>
+
+  <!-- 2단계 -->
+  <rect x="287" y="65" width="225" height="330" rx="12" fill="#D1FAE5" stroke="#10B981" stroke-width="2.5"/>
+  <circle cx="400" cy="110" r="28" fill="#10B981"/>
+  <text x="400" y="117" text-anchor="middle" font-size="20" font-weight="bold" fill="white">2</text>
+  <text x="400" y="155" text-anchor="middle" font-size="14" font-weight="bold" fill="#065F46">스키밍</text>
+  <text x="400" y="173" text-anchor="middle" font-size="11" fill="#374151">(필요 부분 집중)</text>
+  <text x="400" y="205" text-anchor="middle" font-size="11" fill="#374151">필요한 섹션 선택</text>
+  <text x="400" y="222" text-anchor="middle" font-size="11" fill="#374151">첫 문장 · 끝 문장</text>
+  <text x="400" y="239" text-anchor="middle" font-size="11" fill="#374151">볼드/이탤릭 중심</text>
+  <text x="400" y="270" text-anchor="middle" font-size="11" fill="#065F46">목적: "어느 부분을</text>
+  <text x="400" y="287" text-anchor="middle" font-size="11" fill="#065F46">깊이 읽을 것인가?"</text>
+  <text x="400" y="320" text-anchor="middle" font-size="10" fill="#374151">소요 시간: 5~10분</text>
+  <rect x="317" y="348" width="165" height="28" rx="6" fill="#10B981"/>
+  <text x="400" y="366" text-anchor="middle" font-size="11" fill="white">번역 없이 읽기</text>
+
+  <!-- 3단계 -->
+  <rect x="544" y="65" width="225" height="330" rx="12" fill="#EDE9FE" stroke="#8B5CF6" stroke-width="2.5"/>
+  <circle cx="657" cy="110" r="28" fill="#8B5CF6"/>
+  <text x="657" y="117" text-anchor="middle" font-size="20" font-weight="bold" fill="white">3</text>
+  <text x="657" y="155" text-anchor="middle" font-size="14" font-weight="bold" fill="#5B21B6">딥 리딩</text>
+  <text x="657" y="173" text-anchor="middle" font-size="11" fill="#374151">(정밀 독해)</text>
+  <text x="657" y="205" text-anchor="middle" font-size="11" fill="#374151">선택 섹션 정독</text>
+  <text x="657" y="222" text-anchor="middle" font-size="11" fill="#374151">코드 직접 실행</text>
+  <text x="657" y="239" text-anchor="middle" font-size="11" fill="#374151">메모 · 번역 병행</text>
+  <text x="657" y="270" text-anchor="middle" font-size="11" fill="#5B21B6">목적: "실제로</text>
+  <text x="657" y="287" text-anchor="middle" font-size="11" fill="#5B21B6">구현할 수 있는가?"</text>
+  <text x="657" y="320" text-anchor="middle" font-size="10" fill="#374151">소요 시간: 20~60분</text>
+  <rect x="574" y="348" width="165" height="28" rx="6" fill="#8B5CF6"/>
+  <text x="657" y="366" text-anchor="middle" font-size="11" fill="white">노트 + 실습</text>
+
+  <!-- 하단 팁 -->
+  <rect x="30" y="410" width="740" height="30" rx="6" fill="#FEF3C7" stroke="#F59E0B" stroke-width="1.5"/>
+  <text x="400" y="430" text-anchor="middle" font-size="11" fill="#92400E">💡 핵심 패턴 단어: This guide explains / Note that / Warning / Deprecated / See also / Returns</text>
+</svg>

@@ -1,0 +1,75 @@
+<svg width="800" height="450" viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg" font-family="'Malgun Gothic', sans-serif">
+  <rect width="800" height="450" fill="#F9FAFB" rx="12"/>
+  <text x="400" y="36" text-anchor="middle" font-size="18" font-weight="bold" fill="#1F2937">2026 MCU 선택 가이드 — STM32 vs ESP32 vs Pi Pico</text>
+
+  <!-- 헤더 -->
+  <rect x="30" y="60" width="180" height="40" rx="6" fill="#F3F4F6" stroke="#6B7280" stroke-width="1.5"/>
+  <text x="120" y="85" text-anchor="middle" font-size="13" font-weight="bold" fill="#374151">항목</text>
+
+  <rect x="220" y="60" width="170" height="40" rx="6" fill="#DBEAFE" stroke="#3B82F6" stroke-width="2"/>
+  <text x="305" y="85" text-anchor="middle" font-size="13" font-weight="bold" fill="#1E40AF">STM32 (F4/H7)</text>
+
+  <rect x="400" y="60" width="170" height="40" rx="6" fill="#D1FAE5" stroke="#10B981" stroke-width="2"/>
+  <text x="485" y="85" text-anchor="middle" font-size="13" font-weight="bold" fill="#065F46">ESP32-S3</text>
+
+  <rect x="580" y="60" width="190" height="40" rx="6" fill="#FEF3C7" stroke="#F59E0B" stroke-width="2"/>
+  <text x="675" y="85" text-anchor="middle" font-size="13" font-weight="bold" fill="#92400E">Raspberry Pi Pico 2</text>
+
+  <!-- 행들 -->
+  <!-- 코어 -->
+  <rect x="30" y="110" width="180" height="44" rx="4" fill="#F9FAFB" stroke="#E5E7EB"/>
+  <text x="120" y="137" text-anchor="middle" font-size="12" fill="#374151">코어</text>
+  <rect x="220" y="110" width="170" height="44" rx="4" fill="#EFF6FF" stroke="#BFDBFE"/>
+  <text x="305" y="137" text-anchor="middle" font-size="12" fill="#1E40AF">Cortex-M4/M7</text>
+  <rect x="400" y="110" width="170" height="44" rx="4" fill="#ECFDF5" stroke="#A7F3D0"/>
+  <text x="485" y="137" text-anchor="middle" font-size="12" fill="#065F46">Xtensa LX7 듀얼코어</text>
+  <rect x="580" y="110" width="190" height="44" rx="4" fill="#FFFBEB" stroke="#FDE68A"/>
+  <text x="675" y="137" text-anchor="middle" font-size="12" fill="#92400E">Cortex-M33 듀얼코어</text>
+
+  <!-- 무선 -->
+  <rect x="30" y="164" width="180" height="44" rx="4" fill="#F9FAFB" stroke="#E5E7EB"/>
+  <text x="120" y="191" text-anchor="middle" font-size="12" fill="#374151">무선 통신</text>
+  <rect x="220" y="164" width="170" height="44" rx="4" fill="#EFF6FF" stroke="#BFDBFE"/>
+  <text x="305" y="191" text-anchor="middle" font-size="12" fill="#1E40AF">없음 (외장 모듈)</text>
+  <rect x="400" y="164" width="170" height="44" rx="4" fill="#ECFDF5" stroke="#A7F3D0"/>
+  <text x="485" y="191" text-anchor="middle" font-size="12" fill="#065F46">WiFi 6 + BLE 5.0</text>
+  <rect x="580" y="164" width="190" height="44" rx="4" fill="#FFFBEB" stroke="#FDE68A"/>
+  <text x="675" y="191" text-anchor="middle" font-size="12" fill="#92400E">WiFi + BLE (W 버전)</text>
+
+  <!-- 가격 -->
+  <rect x="30" y="218" width="180" height="44" rx="4" fill="#F9FAFB" stroke="#E5E7EB"/>
+  <text x="120" y="245" text-anchor="middle" font-size="12" fill="#374151">가격대</text>
+  <rect x="220" y="218" width="170" height="44" rx="4" fill="#EFF6FF" stroke="#BFDBFE"/>
+  <text x="305" y="245" text-anchor="middle" font-size="12" fill="#1E40AF">$5 ~ $20</text>
+  <rect x="400" y="218" width="170" height="44" rx="4" fill="#ECFDF5" stroke="#A7F3D0"/>
+  <text x="485" y="245" text-anchor="middle" font-size="12" fill="#065F46">$3 ~ $8</text>
+  <rect x="580" y="218" width="190" height="44" rx="4" fill="#FFFBEB" stroke="#FDE68A"/>
+  <text x="675" y="245" text-anchor="middle" font-size="12" fill="#92400E">$5 ~ $7</text>
+
+  <!-- 적합 용도 -->
+  <rect x="30" y="272" width="180" height="44" rx="4" fill="#F9FAFB" stroke="#E5E7EB"/>
+  <text x="120" y="299" text-anchor="middle" font-size="12" fill="#374151">적합 용도</text>
+  <rect x="220" y="272" width="170" height="44" rx="4" fill="#EFF6FF" stroke="#BFDBFE"/>
+  <text x="305" y="292" text-anchor="middle" font-size="11" fill="#1E40AF">산업용 / 모터 제어</text>
+  <text x="305" y="308" text-anchor="middle" font-size="11" fill="#1E40AF">실시간 제어</text>
+  <rect x="400" y="272" width="170" height="44" rx="4" fill="#ECFDF5" stroke="#A7F3D0"/>
+  <text x="485" y="292" text-anchor="middle" font-size="11" fill="#065F46">IoT / 스마트홈</text>
+  <text x="485" y="308" text-anchor="middle" font-size="11" fill="#065F46">프로토타이핑</text>
+  <rect x="580" y="272" width="190" height="44" rx="4" fill="#FFFBEB" stroke="#FDE68A"/>
+  <text x="675" y="292" text-anchor="middle" font-size="11" fill="#92400E">교육 / 취미</text>
+  <text x="675" y="308" text-anchor="middle" font-size="11" fill="#92400E">간단한 센서 프로젝트</text>
+
+  <!-- TinyML -->
+  <rect x="30" y="326" width="180" height="44" rx="4" fill="#F9FAFB" stroke="#E5E7EB"/>
+  <text x="120" y="353" text-anchor="middle" font-size="12" fill="#374151">TinyML / AI</text>
+  <rect x="220" y="326" width="170" height="44" rx="4" fill="#EFF6FF" stroke="#BFDBFE"/>
+  <text x="305" y="353" text-anchor="middle" font-size="12" fill="#1E40AF">ST Edge AI 지원</text>
+  <rect x="400" y="326" width="170" height="44" rx="4" fill="#ECFDF5" stroke="#A7F3D0"/>
+  <text x="485" y="353" text-anchor="middle" font-size="12" fill="#065F46">AI 확장 명령어</text>
+  <rect x="580" y="326" width="190" height="44" rx="4" fill="#FFFBEB" stroke="#FDE68A"/>
+  <text x="675" y="353" text-anchor="middle" font-size="12" fill="#92400E">TensorFlow Lite</text>
+
+  <!-- 추천 표시 -->
+  <rect x="400" y="380" width="170" height="36" rx="8" fill="#10B981" stroke="none"/>
+  <text x="485" y="403" text-anchor="middle" font-size="13" font-weight="bold" fill="white">★ 2026 입문 추천</text>
+</svg>

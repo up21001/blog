@@ -6,6 +6,7 @@ description: "uv란 무엇인지, 왜 2026년 파이썬 개발자들이 pip와 v
 slug: "uv-python-package-manager-practical-guide"
 categories: ["software-dev"]
 tags: ["uv", "Python 패키지 관리자", "pip 대체", "venv 대체", "Python 개발 환경", "Astral", "pyproject.toml"]
+featureimage: "/images/uv-python-workflow-2026.svg"
 series: ["Developer Tooling 2026"]
 draft: false
 ---

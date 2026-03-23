@@ -6,6 +6,7 @@ description: "GitHub Copilot custom instructions란 무엇인지, repository ins
 slug: "github-copilot-custom-instructions-practical-guide"
 categories: ["ai-automation"]
 tags: ["GitHub Copilot", "Custom Instructions", "Prompt Files", "Copilot Instructions", "AI 개발 워크플로우", "프롬프트 관리", "개발 생산성"]
+featureimage: "/images/copilot-custom-instructions-workflow-2026.svg"
 series: ["AI Agent Tooling 2026"]
 draft: false
 ---

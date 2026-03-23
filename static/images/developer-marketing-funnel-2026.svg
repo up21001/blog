@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#111827"/>
+  <text x="60" y="90" fill="#f9fafb" font-size="38" font-family="Arial" font-weight="700">Developer Marketing Funnel</text>
+  <polygon points="160,180 1040,180 900,520 300,520" fill="#1f2937" stroke="#374151" stroke-width="3"/>
+  <text x="520" y="250" fill="#93c5fd" font-size="28" font-family="Arial">Traffic</text>
+  <text x="520" y="330" fill="#86efac" font-size="28" font-family="Arial">Activation</text>
+  <text x="520" y="410" fill="#fde68a" font-size="28" font-family="Arial">Conversion</text>
+  <text x="520" y="490" fill="#fca5a5" font-size="28" font-family="Arial">Retention</text>
+</svg>

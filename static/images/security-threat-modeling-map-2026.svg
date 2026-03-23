@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#111827"/>
+  <text x="60" y="90" fill="#f9fafb" font-size="36" font-family="Arial" font-weight="700">Security Threat Modeling</text>
+  <rect x="80" y="210" width="160" height="80" rx="10" fill="#1d4ed8"/><text x="105" y="260" fill="#fff" font-size="22" font-family="Arial">S</text>
+  <rect x="260" y="210" width="160" height="80" rx="10" fill="#2563eb"/><text x="285" y="260" fill="#fff" font-size="22" font-family="Arial">T</text>
+  <rect x="440" y="210" width="160" height="80" rx="10" fill="#0ea5e9"/><text x="465" y="260" fill="#fff" font-size="22" font-family="Arial">R</text>
+  <rect x="620" y="210" width="160" height="80" rx="10" fill="#7c3aed"/><text x="645" y="260" fill="#fff" font-size="22" font-family="Arial">I</text>
+  <rect x="800" y="210" width="160" height="80" rx="10" fill="#9333ea"/><text x="825" y="260" fill="#fff" font-size="22" font-family="Arial">D</text>
+  <rect x="980" y="210" width="160" height="80" rx="10" fill="#c026d3"/><text x="1005" y="260" fill="#fff" font-size="22" font-family="Arial">E</text>
+</svg>

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#020617"/>
+  <text x="60" y="80" fill="#f8fafc" font-size="38" font-family="Arial" font-weight="700">Home Lab Security Architecture 2026</text>
+
+  <rect x="520" y="120" width="160" height="70" rx="12" fill="#2563eb"/>
+  <text x="565" y="165" fill="#fff" font-size="24" font-family="Arial">WAN</text>
+
+  <rect x="480" y="230" width="240" height="80" rx="12" fill="#334155"/>
+  <text x="520" y="280" fill="#e2e8f0" font-size="24" font-family="Arial">Firewall</text>
+
+  <rect x="130" y="370" width="260" height="170" rx="12" fill="#16a34a"/>
+  <rect x="470" y="370" width="260" height="170" rx="12" fill="#7c3aed"/>
+  <rect x="810" y="370" width="260" height="170" rx="12" fill="#ea580c"/>
+
+  <text x="180" y="430" fill="#fff" font-size="24" font-family="Arial">Admin VLAN</text>
+  <text x="180" y="470" fill="#fff" font-size="20" font-family="Arial">Bastion + MFA</text>
+
+  <text x="530" y="430" fill="#fff" font-size="24" font-family="Arial">Server VLAN</text>
+  <text x="530" y="470" fill="#fff" font-size="20" font-family="Arial">NAS + Apps</text>
+
+  <text x="885" y="430" fill="#fff" font-size="24" font-family="Arial">IoT VLAN</text>
+  <text x="860" y="470" fill="#fff" font-size="20" font-family="Arial">Restricted Access</text>
+
+  <line x1="600" y1="190" x2="600" y2="230" stroke="#94a3b8" stroke-width="4"/>
+  <line x1="600" y1="310" x2="260" y2="370" stroke="#94a3b8" stroke-width="4"/>
+  <line x1="600" y1="310" x2="600" y2="370" stroke="#94a3b8" stroke-width="4"/>
+  <line x1="600" y1="310" x2="940" y2="370" stroke="#94a3b8" stroke-width="4"/>
+</svg>

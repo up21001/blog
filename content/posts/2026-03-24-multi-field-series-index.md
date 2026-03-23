@@ -1,7 +1,7 @@
 ---
 title: "멀티 분야 기술 시리즈 인덱스: 하드웨어·소프트웨어·AI·리뷰·러닝 글 모아보기"
 date: 2026-03-24T10:35:00+09:00
-lastmod: 2026-03-24T10:35:00+09:00
+lastmod: 2026-03-25T15:05:00+09:00
 description: "최근 작성한 멀티 분야 기술 포스트를 카테고리별로 정리한 인덱스입니다. 필요한 주제를 빠르게 찾아볼 수 있습니다."
 slug: "multi-field-series-index"
 categories: ["ai-automation"]
@@ -19,6 +19,8 @@ draft: false
 
 | 카테고리 | 글 제목 | 링크 |
 |---|---|---|
+| New Mega Index | 메가 지식 시리즈 인덱스 2026 | [바로가기](/posts/mega-knowledge-series-index-2026/) |
+| Extended Series 4 | 확장 멀티 도메인 시리즈 4차 인덱스 | [바로가기](/posts/extended-multi-domain-series-index-4/) |
 | Hardware Lab | 하드웨어 열설계 실전 체크리스트 | [바로가기](/posts/hardware-thermal-design-checklist/) |
 | Software Dev | 소프트웨어 관측가능성 플레이북 | [바로가기](/posts/software-observability-playbook/) |
 | AI & Automation | AI 에이전트 평가 템플릿 | [바로가기](/posts/ai-agent-evaluation-template/) |

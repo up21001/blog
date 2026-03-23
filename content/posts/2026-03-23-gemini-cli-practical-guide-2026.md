@@ -6,6 +6,7 @@ description: "Gemini CLI란 무엇인지, 왜 2026년 터미널 기반 AI 도구
 slug: "gemini-cli-practical-guide-2026"
 categories: ["software-dev"]
 tags: ["Gemini CLI", "Google Gemini", "터미널 AI", "MCP", "개발 생산성", "CLI 도구", "AI 자동화"]
+featureimage: "/images/gemini-cli-workflow-2026.svg"
 series: ["Developer Tooling 2026"]
 draft: false
 ---

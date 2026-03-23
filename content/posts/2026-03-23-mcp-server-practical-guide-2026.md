@@ -6,6 +6,7 @@ description: "MCP 서버란 무엇인지, 왜 2026년 AI 에이전트 개발의 
 slug: "mcp-server-practical-guide-2026"
 categories: ["ai-automation"]
 tags: ["MCP 서버", "Model Context Protocol", "AI 에이전트", "Claude Code", "Remote MCP", "Cloudflare Agents", "AI 자동화"]
+featureimage: "/images/mcp-server-architecture-2026.svg"
 series: ["AI Agent Tooling 2026"]
 draft: false
 ---

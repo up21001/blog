@@ -1,7 +1,7 @@
 ---
 title: "앱 리뷰 시리즈 인덱스 2026: 생산성·협업·보안 앱 비교 문서 모음"
 date: 2026-03-24T12:20:00+09:00
-lastmod: 2026-03-24T12:20:00+09:00
+lastmod: 2026-03-24T14:30:00+09:00
 description: "Notion, Obsidian, Raycast, Figma, Slack, Todoist, 1Password 리뷰 글을 한 번에 보는 인덱스 페이지입니다."
 slug: "app-review-series-index-2026"
 categories: ["tech-review"]
@@ -26,6 +26,26 @@ draft: false
 | Slack | [Slack 앱 리뷰 2026](/posts/slack-review-guide-2026/) |
 | Todoist | [Todoist 앱 리뷰 2026](/posts/todoist-review-guide-2026/) |
 | 1Password | [1Password 앱 리뷰 2026](/posts/1password-review-guide-2026/) |
+
+## 비교 전용 문서 모음 (SEO 확장)
+
+| 비교 키워드 | 문서 링크 |
+|---|---|
+| Notion vs Obsidian | [Notion vs Obsidian 비교 2026](/posts/notion-vs-obsidian-which-is-better/) |
+| Slack vs Notion | [Slack vs Notion 협업 비교 2026](/posts/slack-vs-notion-for-team-collaboration/) |
+| Todoist vs Notion | [Todoist vs Notion 생산성 비교 2026](/posts/todoist-vs-notion-personal-productivity/) |
+| Figma vs Notion | [Figma vs Notion 비교 2026](/posts/figma-vs-notion-product-teams/) |
+| Raycast vs Todoist | [Raycast vs Todoist 비교 2026](/posts/raycast-vs-todoist-productivity/) |
+| Slack vs Discord | [Slack vs Discord 업무용 비교 2026](/posts/slack-vs-discord-for-work/) |
+
+## 요금제 비교 전용 문서 (가격·플랜)
+
+| 키워드 | 문서 링크 |
+|---|---|
+| 생산성 앱 요금제 허브 | [생산성 앱 요금제 허브 2026](/posts/productivity-apps-pricing-hub-2026/) |
+| Slack 요금제 | [Slack 요금제 비교 2026](/posts/slack-pricing-plans-compared-2026/) |
+| Notion 요금제 | [Notion 요금제 비교 2026](/posts/notion-pricing-plans-compared-2026/) |
+| Todoist 요금제 | [Todoist 요금제 비교 2026](/posts/todoist-pricing-plans-compared-2026/) |
 
 ## 추천 읽기 순서
 
@@ -63,6 +83,10 @@ draft: false
 ### 1Password는 개인 사용자도 써야 하나요?
 
 - 개인/가족/팀 플랜 판단 기준은 [1Password 리뷰](/posts/1password-review-guide-2026/)를 참고하세요.
+
+### Slack·Notion·Todoist 요금제만 빠르게 보고 싶어요
+
+- [생산성 앱 요금제 허브 2026](/posts/productivity-apps-pricing-hub-2026/)에서 한 번에 이동할 수 있습니다.
 
 ## 마무리
 

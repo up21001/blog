@@ -1,0 +1,75 @@
+<svg width="800" height="450" viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg" font-family="'Malgun Gothic', sans-serif">
+  <rect width="800" height="450" fill="#F9FAFB" rx="12"/>
+  <text x="400" y="36" text-anchor="middle" font-size="18" font-weight="bold" fill="#1F2937">재택근무 엔지니어의 하루 생산성 루틴</text>
+
+  <!-- 타임라인 축 -->
+  <line x1="60" y1="390" x2="750" y2="390" stroke="#D1D5DB" stroke-width="2"/>
+
+  <!-- 시간 블록들 -->
+  <!-- 기상/준비 -->
+  <rect x="60" y="310" width="80" height="80" rx="6" fill="#FEF3C7" stroke="#F59E0B" stroke-width="1.5"/>
+  <text x="100" y="340" text-anchor="middle" font-size="11" font-weight="bold" fill="#92400E">07:00</text>
+  <text x="100" y="358" text-anchor="middle" font-size="10" fill="#374151">기상 + 운동</text>
+  <text x="100" y="373" text-anchor="middle" font-size="10" fill="#374151">샤워 · 식사</text>
+
+  <!-- 딥워크 오전 -->
+  <rect x="150" y="250" width="180" height="140" rx="6" fill="#DBEAFE" stroke="#3B82F6" stroke-width="2"/>
+  <text x="240" y="278" text-anchor="middle" font-size="11" font-weight="bold" fill="#1E40AF">09:00 ~ 12:00</text>
+  <text x="240" y="298" text-anchor="middle" font-size="13" font-weight="bold" fill="#1E40AF">딥워크 블록 1</text>
+  <text x="240" y="318" text-anchor="middle" font-size="10" fill="#374151">핵심 개발 작업</text>
+  <text x="240" y="334" text-anchor="middle" font-size="10" fill="#374151">알림 전부 OFF</text>
+  <text x="240" y="350" text-anchor="middle" font-size="10" fill="#374151">포모도로 25+5</text>
+  <text x="240" y="366" text-anchor="middle" font-size="10" fill="#374151">Slack 응답 안 함</text>
+
+  <!-- 점심 -->
+  <rect x="340" y="320" width="80" height="70" rx="6" fill="#D1FAE5" stroke="#10B981" stroke-width="1.5"/>
+  <text x="380" y="345" text-anchor="middle" font-size="11" font-weight="bold" fill="#065F46">12:00</text>
+  <text x="380" y="363" text-anchor="middle" font-size="10" fill="#374151">점심 + 산책</text>
+  <text x="380" y="378" text-anchor="middle" font-size="10" fill="#374151">30분 낮잠</text>
+
+  <!-- 협업 시간 -->
+  <rect x="430" y="280" width="150" height="110" rx="6" fill="#EDE9FE" stroke="#8B5CF6" stroke-width="2"/>
+  <text x="505" y="305" text-anchor="middle" font-size="11" font-weight="bold" fill="#5B21B6">13:00 ~ 15:00</text>
+  <text x="505" y="323" text-anchor="middle" font-size="13" font-weight="bold" fill="#5B21B6">협업 블록</text>
+  <text x="505" y="341" text-anchor="middle" font-size="10" fill="#374151">미팅 · 코드리뷰</text>
+  <text x="505" y="357" text-anchor="middle" font-size="10" fill="#374151">Slack 응답</text>
+  <text x="505" y="373" text-anchor="middle" font-size="10" fill="#374151">PR 리뷰</text>
+
+  <!-- 딥워크 오후 -->
+  <rect x="590" y="250" width="160" height="140" rx="6" fill="#DBEAFE" stroke="#3B82F6" stroke-width="2"/>
+  <text x="670" y="278" text-anchor="middle" font-size="11" font-weight="bold" fill="#1E40AF">15:00 ~ 18:00</text>
+  <text x="670" y="298" text-anchor="middle" font-size="13" font-weight="bold" fill="#1E40AF">딥워크 블록 2</text>
+  <text x="670" y="318" text-anchor="middle" font-size="10" fill="#374151">문서 · 테스트</text>
+  <text x="670" y="334" text-anchor="middle" font-size="10" fill="#374151">기술 부채 처리</text>
+  <text x="670" y="350" text-anchor="middle" font-size="10" fill="#374151">다음날 계획</text>
+  <text x="670" y="366" text-anchor="middle" font-size="10" fill="#374151">마무리 커밋</text>
+
+  <!-- 시간 라벨 -->
+  <text x="100" y="405" text-anchor="middle" font-size="10" fill="#6B7280">07:00</text>
+  <text x="240" y="405" text-anchor="middle" font-size="10" fill="#6B7280">09:00</text>
+  <text x="380" y="405" text-anchor="middle" font-size="10" fill="#6B7280">12:00</text>
+  <text x="505" y="405" text-anchor="middle" font-size="10" fill="#6B7280">13:00</text>
+  <text x="670" y="405" text-anchor="middle" font-size="10" fill="#6B7280">15:00</text>
+
+  <!-- 핵심 원칙 박스 -->
+  <rect x="30" y="60" width="740" height="160" rx="10" fill="white" stroke="#E5E7EB" stroke-width="1.5"/>
+  <text x="400" y="90" text-anchor="middle" font-size="14" font-weight="bold" fill="#1F2937">재택 생산성 3대 원칙</text>
+
+  <rect x="50" y="105" width="210" height="100" rx="8" fill="#DBEAFE" stroke="#3B82F6" stroke-width="1.5"/>
+  <text x="155" y="128" text-anchor="middle" font-size="13" font-weight="bold" fill="#1E40AF">🏠 공간 분리</text>
+  <text x="155" y="148" text-anchor="middle" font-size="11" fill="#374151">업무 전용 공간 확보</text>
+  <text x="155" y="164" text-anchor="middle" font-size="11" fill="#374151">침대 금지, 의자 투자</text>
+  <text x="155" y="180" text-anchor="middle" font-size="11" fill="#374151">배경 / 조명 세팅</text>
+
+  <rect x="290" y="105" width="220" height="100" rx="8" fill="#D1FAE5" stroke="#10B981" stroke-width="1.5"/>
+  <text x="400" y="128" text-anchor="middle" font-size="13" font-weight="bold" fill="#065F46">⏰ 시간 경계</text>
+  <text x="400" y="148" text-anchor="middle" font-size="11" fill="#374151">퇴근 시간 지키기</text>
+  <text x="400" y="164" text-anchor="middle" font-size="11" fill="#374151">업무 종료 의식 (산책)</text>
+  <text x="400" y="180" text-anchor="middle" font-size="11" fill="#374151">주말 메신저 차단</text>
+
+  <rect x="540" y="105" width="210" height="100" rx="8" fill="#EDE9FE" stroke="#8B5CF6" stroke-width="1.5"/>
+  <text x="645" y="128" text-anchor="middle" font-size="13" font-weight="bold" fill="#5B21B6">🔋 에너지 관리</text>
+  <text x="645" y="148" text-anchor="middle" font-size="11" fill="#374151">하루 1회 야외 활동</text>
+  <text x="645" y="164" text-anchor="middle" font-size="11" fill="#374151">카페인 오후 2시 이전</text>
+  <text x="645" y="180" text-anchor="middle" font-size="11" fill="#374151">7시간 수면 사수</text>
+</svg>

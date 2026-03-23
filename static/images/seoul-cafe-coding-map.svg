@@ -1,0 +1,99 @@
+<svg width="800" height="450" viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg" font-family="'Malgun Gothic', sans-serif">
+  <rect width="800" height="450" fill="#F9FAFB" rx="12"/>
+  <text x="400" y="36" text-anchor="middle" font-size="18" font-weight="bold" fill="#1F2937">서울 개발자 카페 TOP 7 — 지역별 분포</text>
+
+  <!-- 지도 배경 -->
+  <rect x="30" y="55" width="460" height="370" rx="10" fill="#E0F2FE" stroke="#7DD3FC" stroke-width="1.5"/>
+  <text x="260" y="80" text-anchor="middle" font-size="13" font-weight="bold" fill="#0369A1">서울 지도 (개략)</text>
+
+  <!-- 강북 영역 -->
+  <ellipse cx="200" cy="170" rx="130" ry="60" fill="#BFDBFE" opacity="0.5"/>
+  <text x="200" y="148" text-anchor="middle" font-size="11" fill="#1E40AF">강북권</text>
+
+  <!-- 강남 영역 -->
+  <ellipse cx="280" cy="310" rx="130" ry="60" fill="#A7F3D0" opacity="0.5"/>
+  <text x="280" y="288" text-anchor="middle" font-size="11" fill="#065F46">강남·성수권</text>
+
+  <!-- 핀들 -->
+  <!-- 광화문 테라로사 -->
+  <circle cx="180" cy="165" r="10" fill="#3B82F6"/>
+  <text x="180" y="169" text-anchor="middle" font-size="9" font-weight="bold" fill="white">1</text>
+
+  <!-- 성수 피어커피 -->
+  <circle cx="320" cy="200" r="10" fill="#10B981"/>
+  <text x="320" y="204" text-anchor="middle" font-size="9" font-weight="bold" fill="white">2</text>
+
+  <!-- 성수 스타벅스 낙낙 -->
+  <circle cx="310" cy="230" r="10" fill="#10B981"/>
+  <text x="310" y="234" text-anchor="middle" font-size="9" font-weight="bold" fill="white">3</text>
+
+  <!-- 강남 오우드 -->
+  <circle cx="270" cy="310" r="10" fill="#F59E0B"/>
+  <text x="270" y="314" text-anchor="middle" font-size="9" font-weight="bold" fill="white">4</text>
+
+  <!-- 홍대 허밍버드 -->
+  <circle cx="130" cy="195" r="10" fill="#8B5CF6"/>
+  <text x="130" y="199" text-anchor="middle" font-size="9" font-weight="bold" fill="white">5</text>
+
+  <!-- 건대 카페온더플랜 -->
+  <circle cx="360" cy="185" r="10" fill="#EF4444"/>
+  <text x="360" y="189" text-anchor="middle" font-size="9" font-weight="bold" fill="white">6</text>
+
+  <!-- 선릉 블루제이 -->
+  <circle cx="300" cy="340" r="10" fill="#6B7280"/>
+  <text x="300" y="344" text-anchor="middle" font-size="9" font-weight="bold" fill="white">7</text>
+
+  <!-- 한강 표시 -->
+  <path d="M 50 260 Q 260 240 460 265" fill="none" stroke="#60A5FA" stroke-width="4" opacity="0.6"/>
+  <text x="240" y="255" text-anchor="middle" font-size="10" fill="#2563EB">한강</text>
+
+  <!-- 범례 -->
+  <rect x="510" y="55" width="260" height="370" rx="10" fill="white" stroke="#E5E7EB" stroke-width="1.5"/>
+  <text x="640" y="82" text-anchor="middle" font-size="13" font-weight="bold" fill="#1F2937">카페 상세 정보</text>
+
+  <!-- 카페 1 -->
+  <circle cx="530" cy="110" r="8" fill="#3B82F6"/>
+  <text x="530" y="114" text-anchor="middle" font-size="8" font-weight="bold" fill="white">1</text>
+  <text x="548" y="107" font-size="11" font-weight="bold" fill="#374151">테라로사 광화문</text>
+  <text x="548" y="122" font-size="10" fill="#6B7280">콘센트 ✅ · 조용 ✅ · 넓음</text>
+
+  <!-- 카페 2 -->
+  <circle cx="530" cy="155" r="8" fill="#10B981"/>
+  <text x="530" y="159" text-anchor="middle" font-size="8" font-weight="bold" fill="white">2</text>
+  <text x="548" y="152" font-size="11" font-weight="bold" fill="#374151">피어커피 성수</text>
+  <text x="548" y="167" font-size="10" fill="#6B7280">분위기 ✅ · 속도 빠름 ✅</text>
+
+  <!-- 카페 3 -->
+  <circle cx="530" cy="200" r="8" fill="#10B981"/>
+  <text x="530" y="204" text-anchor="middle" font-size="8" font-weight="bold" fill="white">3</text>
+  <text x="548" y="197" font-size="11" font-weight="bold" fill="#374151">스타벅스 성수낙낙</text>
+  <text x="548" y="212" font-size="10" fill="#6B7280">24시간 ✅ · 대형 ✅</text>
+
+  <!-- 카페 4 -->
+  <circle cx="530" cy="245" r="8" fill="#F59E0B"/>
+  <text x="530" y="249" text-anchor="middle" font-size="8" font-weight="bold" fill="white">4</text>
+  <text x="548" y="242" font-size="11" font-weight="bold" fill="#374151">오우드 강남</text>
+  <text x="548" y="257" font-size="10" fill="#6B7280">고급 ✅ · 조용 ✅ · 비쌈</text>
+
+  <!-- 카페 5 -->
+  <circle cx="530" cy="290" r="8" fill="#8B5CF6"/>
+  <text x="530" y="294" text-anchor="middle" font-size="8" font-weight="bold" fill="white">5</text>
+  <text x="548" y="287" font-size="11" font-weight="bold" fill="#374151">허밍버드 홍대</text>
+  <text x="548" y="302" font-size="10" fill="#6B7280">가성비 ✅ · 콘센트 ✅</text>
+
+  <!-- 카페 6 -->
+  <circle cx="530" cy="335" r="8" fill="#EF4444"/>
+  <text x="530" y="339" text-anchor="middle" font-size="8" font-weight="bold" fill="white">6</text>
+  <text x="548" y="332" font-size="11" font-weight="bold" fill="#374151">카페온더플랜 건대</text>
+  <text x="548" y="347" font-size="10" fill="#6B7280">스터디룸 ✅ · 개발자 多</text>
+
+  <!-- 카페 7 -->
+  <circle cx="530" cy="380" r="8" fill="#6B7280"/>
+  <text x="530" y="384" text-anchor="middle" font-size="8" font-weight="bold" fill="white">7</text>
+  <text x="548" y="377" font-size="11" font-weight="bold" fill="#374151">블루제이 선릉</text>
+  <text x="548" y="392" font-size="10" fill="#6B7280">IT 직장인 밀집 ✅ · 넓음</text>
+
+  <!-- 하단 팁 -->
+  <rect x="30" y="432" width="740" height="12" rx="4" fill="#FEF3C7" stroke="none"/>
+  <text x="400" y="442" text-anchor="middle" font-size="9" fill="#92400E">💡 평일 오전 9~11시, 오후 2~4시가 가장 조용한 골든타임입니다</text>
+</svg>

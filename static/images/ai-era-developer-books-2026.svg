@@ -1,0 +1,75 @@
+<svg width="800" height="450" viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg" font-family="'Malgun Gothic', sans-serif">
+  <rect width="800" height="450" fill="#F9FAFB" rx="12"/>
+  <text x="400" y="36" text-anchor="middle" font-size="18" font-weight="bold" fill="#1F2937">2026 AI 시대 개발자 필독서 5권</text>
+
+  <!-- 책 1 -->
+  <rect x="30" y="65" width="136" height="190" rx="6" fill="#DBEAFE" stroke="#3B82F6" stroke-width="2"/>
+  <rect x="30" y="65" width="14" height="190" rx="3" fill="#3B82F6"/>
+  <text x="106" y="140" text-anchor="middle" font-size="11" font-weight="bold" fill="#1E40AF">Clean Code</text>
+  <text x="106" y="158" text-anchor="middle" font-size="10" fill="#374151">로버트 마틴</text>
+  <text x="106" y="185" text-anchor="middle" font-size="10" fill="#374151">AI가 코드를</text>
+  <text x="106" y="200" text-anchor="middle" font-size="10" fill="#374151">짜는 시대에도</text>
+  <text x="106" y="215" text-anchor="middle" font-size="10" fill="#374151">좋은 코드란</text>
+  <text x="106" y="230" text-anchor="middle" font-size="10" fill="#374151">무엇인가</text>
+  <text x="106" y="270" text-anchor="middle" font-size="9" fill="#6B7280">★★★★★</text>
+
+  <!-- 책 2 -->
+  <rect x="182" y="65" width="136" height="190" rx="6" fill="#D1FAE5" stroke="#10B981" stroke-width="2"/>
+  <rect x="182" y="65" width="14" height="190" rx="3" fill="#10B981"/>
+  <text x="258" y="133" text-anchor="middle" font-size="11" font-weight="bold" fill="#065F46">Designing</text>
+  <text x="258" y="149" text-anchor="middle" font-size="11" font-weight="bold" fill="#065F46">Data-Intensive</text>
+  <text x="258" y="165" text-anchor="middle" font-size="11" font-weight="bold" fill="#065F46">Applications</text>
+  <text x="258" y="185" text-anchor="middle" font-size="10" fill="#374151">마틴 클레퍼만</text>
+  <text x="258" y="210" text-anchor="middle" font-size="10" fill="#374151">분산 시스템 +</text>
+  <text x="258" y="225" text-anchor="middle" font-size="10" fill="#374151">데이터 파이프라인</text>
+  <text x="258" y="270" text-anchor="middle" font-size="9" fill="#6B7280">★★★★★</text>
+
+  <!-- 책 3 -->
+  <rect x="334" y="65" width="136" height="190" rx="6" fill="#EDE9FE" stroke="#8B5CF6" stroke-width="2"/>
+  <rect x="334" y="65" width="14" height="190" rx="3" fill="#8B5CF6"/>
+  <text x="410" y="140" text-anchor="middle" font-size="11" font-weight="bold" fill="#5B21B6">공동 지능</text>
+  <text x="410" y="158" text-anchor="middle" font-size="10" fill="#374151">이선 몰릭</text>
+  <text x="410" y="185" text-anchor="middle" font-size="10" fill="#374151">AI와 함께</text>
+  <text x="410" y="200" text-anchor="middle" font-size="10" fill="#374151">살고 일하기</text>
+  <text x="410" y="215" text-anchor="middle" font-size="10" fill="#374151">협업 전략</text>
+  <text x="410" y="270" text-anchor="middle" font-size="9" fill="#6B7280">★★★★☆</text>
+
+  <!-- 책 4 -->
+  <rect x="486" y="65" width="136" height="190" rx="6" fill="#FEF3C7" stroke="#F59E0B" stroke-width="2"/>
+  <rect x="486" y="65" width="14" height="190" rx="3" fill="#F59E0B"/>
+  <text x="562" y="133" text-anchor="middle" font-size="11" font-weight="bold" fill="#92400E">The Pragmatic</text>
+  <text x="562" y="149" text-anchor="middle" font-size="11" font-weight="bold" fill="#92400E">Programmer</text>
+  <text x="562" y="185" text-anchor="middle" font-size="10" fill="#374151">헌트 · 토마스</text>
+  <text x="562" y="210" text-anchor="middle" font-size="10" fill="#374151">실용주의</text>
+  <text x="562" y="225" text-anchor="middle" font-size="10" fill="#374151">프로그래머의 자세</text>
+  <text x="562" y="270" text-anchor="middle" font-size="9" fill="#6B7280">★★★★★</text>
+
+  <!-- 책 5 -->
+  <rect x="638" y="65" width="132" height="190" rx="6" fill="#FEE2E2" stroke="#EF4444" stroke-width="2"/>
+  <rect x="638" y="65" width="14" height="190" rx="3" fill="#EF4444"/>
+  <text x="712" y="133" text-anchor="middle" font-size="11" font-weight="bold" fill="#991B1B">박태웅의</text>
+  <text x="712" y="149" text-anchor="middle" font-size="11" font-weight="bold" fill="#991B1B">AI 강의 2025</text>
+  <text x="712" y="185" text-anchor="middle" font-size="10" fill="#374151">박태웅 저</text>
+  <text x="712" y="210" text-anchor="middle" font-size="10" fill="#374151">한국어로 읽는</text>
+  <text x="712" y="225" text-anchor="middle" font-size="10" fill="#374151">AI 실무 가이드</text>
+  <text x="712" y="270" text-anchor="middle" font-size="9" fill="#6B7280">★★★★☆</text>
+
+  <!-- 독서 전략 -->
+  <rect x="30" y="300" width="740" height="130" rx="10" fill="white" stroke="#E5E7EB" stroke-width="1.5"/>
+  <text x="400" y="325" text-anchor="middle" font-size="14" font-weight="bold" fill="#1F2937">AI 시대 개발자 독서 전략</text>
+
+  <rect x="50" y="340" width="200" height="70" rx="8" fill="#DBEAFE" stroke="#3B82F6" stroke-width="1.5"/>
+  <text x="150" y="362" text-anchor="middle" font-size="12" font-weight="bold" fill="#1E40AF">📚 기초는 항상 유효</text>
+  <text x="150" y="380" text-anchor="middle" font-size="10" fill="#374151">알고리즘 · 자료구조 · OS</text>
+  <text x="150" y="396" text-anchor="middle" font-size="10" fill="#374151">AI가 대체 못 하는 영역</text>
+
+  <rect x="300" y="340" width="200" height="70" rx="8" fill="#D1FAE5" stroke="#10B981" stroke-width="1.5"/>
+  <text x="400" y="362" text-anchor="middle" font-size="12" font-weight="bold" fill="#065F46">🤖 AI 협업 이해</text>
+  <text x="400" y="380" text-anchor="middle" font-size="10" fill="#374151">LLM 원리 · 프롬프트</text>
+  <text x="400" y="396" text-anchor="middle" font-size="10" fill="#374151">AI 도구 활용 극대화</text>
+
+  <rect x="550" y="340" width="200" height="70" rx="8" fill="#EDE9FE" stroke="#8B5CF6" stroke-width="1.5"/>
+  <text x="650" y="362" text-anchor="middle" font-size="12" font-weight="bold" fill="#5B21B6">🧠 소프트 스킬</text>
+  <text x="650" y="380" text-anchor="middle" font-size="10" fill="#374151">커뮤니케이션 · 설계</text>
+  <text x="650" y="396" text-anchor="middle" font-size="10" fill="#374151">시스템 사고 · 리더십</text>
+</svg>

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#1e1b4b"/>
+  <text x="60" y="90" fill="#e0e7ff" font-size="36" font-family="Arial" font-weight="700">Indie Game Pipeline</text>
+  <rect x="80" y="220" width="200" height="90" rx="10" fill="#6366f1"/>
+  <rect x="320" y="220" width="200" height="90" rx="10" fill="#8b5cf6"/>
+  <rect x="560" y="220" width="200" height="90" rx="10" fill="#a855f7"/>
+  <rect x="800" y="220" width="200" height="90" rx="10" fill="#d946ef"/>
+  <text x="120" y="275" fill="#fff" font-size="22" font-family="Arial">Proto</text>
+  <text x="355" y="275" fill="#fff" font-size="22" font-family="Arial">Build</text>
+  <text x="600" y="275" fill="#fff" font-size="22" font-family="Arial">Ship</text>
+  <text x="850" y="275" fill="#fff" font-size="22" font-family="Arial">Live</text>
+  <line x1="280" y1="265" x2="320" y2="265" stroke="#c4b5fd" stroke-width="4"/>
+  <line x1="520" y1="265" x2="560" y2="265" stroke="#c4b5fd" stroke-width="4"/>
+  <line x1="760" y1="265" x2="800" y2="265" stroke="#c4b5fd" stroke-width="4"/>
+  <text x="80" y="420" fill="#a5b4fc" font-size="22" font-family="Arial">Vertical slice ’ CI ’ Store ’ Patch loop</text>
+</svg>

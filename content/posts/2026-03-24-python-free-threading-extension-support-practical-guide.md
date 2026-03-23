@@ -6,6 +6,7 @@ description: "Python free-threading이 3.13부터 어떻게 도입됐는지, C/C
 slug: "python-free-threading-extension-support-practical-guide"
 categories: ["software-dev"]
 tags: ["Python free-threading", "PEP 703", "C extension", "Py_GIL_DISABLED", "Python 3.13", "확장 모듈", "CPython"]
+featureimage: "/images/python-free-threading-extension-flow-2026.svg"
 series: ["Developer Tooling 2026"]
 draft: false
 ---

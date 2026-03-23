@@ -1,0 +1,85 @@
+<svg width="800" height="450" viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg" font-family="'Malgun Gothic', sans-serif">
+  <rect width="800" height="450" fill="#F9FAFB" rx="12"/>
+  <text x="400" y="36" text-anchor="middle" font-size="18" font-weight="bold" fill="#1F2937">시니어 엔지니어의 코드 리뷰 5단계 프레임워크</text>
+
+  <!-- 단계 1 -->
+  <rect x="30" y="65" width="140" height="90" rx="10" fill="#DBEAFE" stroke="#3B82F6" stroke-width="2"/>
+  <text x="100" y="95" text-anchor="middle" font-size="22" fill="#3B82F6">1</text>
+  <text x="100" y="116" text-anchor="middle" font-size="12" font-weight="bold" fill="#1E40AF">의도 파악</text>
+  <text x="100" y="133" text-anchor="middle" font-size="10" fill="#374151">PR 설명 먼저</text>
+  <text x="100" y="148" text-anchor="middle" font-size="10" fill="#374151">읽기</text>
+
+  <line x1="170" y1="110" x2="200" y2="110" stroke="#6B7280" stroke-width="2" marker-end="url(#a4)"/>
+
+  <!-- 단계 2 -->
+  <rect x="200" y="65" width="140" height="90" rx="10" fill="#D1FAE5" stroke="#10B981" stroke-width="2"/>
+  <text x="270" y="95" text-anchor="middle" font-size="22" fill="#10B981">2</text>
+  <text x="270" y="116" text-anchor="middle" font-size="12" font-weight="bold" fill="#065F46">전체 구조</text>
+  <text x="270" y="133" text-anchor="middle" font-size="10" fill="#374151">아키텍처 · 모듈</text>
+  <text x="270" y="148" text-anchor="middle" font-size="10" fill="#374151">분리 확인</text>
+
+  <line x1="340" y1="110" x2="370" y2="110" stroke="#6B7280" stroke-width="2" marker-end="url(#a4)"/>
+
+  <!-- 단계 3 -->
+  <rect x="370" y="65" width="140" height="90" rx="10" fill="#FEF3C7" stroke="#F59E0B" stroke-width="2"/>
+  <text x="440" y="95" text-anchor="middle" font-size="22" fill="#F59E0B">3</text>
+  <text x="440" y="116" text-anchor="middle" font-size="12" font-weight="bold" fill="#92400E">로직 검증</text>
+  <text x="440" y="133" text-anchor="middle" font-size="10" fill="#374151">엣지 케이스</text>
+  <text x="440" y="148" text-anchor="middle" font-size="10" fill="#374151">버그 탐지</text>
+
+  <line x1="510" y1="110" x2="540" y2="110" stroke="#6B7280" stroke-width="2" marker-end="url(#a4)"/>
+
+  <!-- 단계 4 -->
+  <rect x="540" y="65" width="140" height="90" rx="10" fill="#EDE9FE" stroke="#8B5CF6" stroke-width="2"/>
+  <text x="610" y="95" text-anchor="middle" font-size="22" fill="#8B5CF6">4</text>
+  <text x="610" y="116" text-anchor="middle" font-size="12" font-weight="bold" fill="#5B21B6">가독성 · 명명</text>
+  <text x="610" y="133" text-anchor="middle" font-size="10" fill="#374151">변수명 · 함수명</text>
+  <text x="610" y="148" text-anchor="middle" font-size="10" fill="#374151">주석 적절성</text>
+
+  <line x1="680" y1="110" x2="710" y2="110" stroke="#6B7280" stroke-width="2" marker-end="url(#a4)"/>
+
+  <!-- 단계 5 -->
+  <rect x="710" y="65" width="60" height="90" rx="10" fill="#FEE2E2" stroke="#EF4444" stroke-width="2"/>
+  <text x="740" y="95" text-anchor="middle" font-size="22" fill="#EF4444">5</text>
+  <text x="740" y="116" text-anchor="middle" font-size="11" font-weight="bold" fill="#991B1B">테스트</text>
+  <text x="740" y="133" text-anchor="middle" font-size="9" fill="#374151">커버리지</text>
+  <text x="740" y="148" text-anchor="middle" font-size="9" fill="#374151">확인</text>
+
+  <defs>
+    <marker id="a4" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#6B7280"/>
+    </marker>
+  </defs>
+
+  <!-- 코멘트 유형 -->
+  <text x="400" y="200" text-anchor="middle" font-size="14" font-weight="bold" fill="#1F2937">코멘트 레벨 분류 (Nit → Blocker)</text>
+
+  <rect x="30" y="215" width="170" height="56" rx="8" fill="#D1FAE5" stroke="#10B981" stroke-width="1.5"/>
+  <text x="115" y="238" text-anchor="middle" font-size="12" font-weight="bold" fill="#065F46">💬 Nit (사소함)</text>
+  <text x="115" y="256" text-anchor="middle" font-size="10" fill="#374151">머지 블로킹 아님</text>
+  <text x="115" y="270" text-anchor="middle" font-size="10" fill="#374151">스타일 · 취향 차이</text>
+
+  <rect x="215" y="215" width="170" height="56" rx="8" fill="#DBEAFE" stroke="#3B82F6" stroke-width="1.5"/>
+  <text x="300" y="238" text-anchor="middle" font-size="12" font-weight="bold" fill="#1E40AF">💡 Suggestion</text>
+  <text x="300" y="256" text-anchor="middle" font-size="10" fill="#374151">개선 제안 (선택)</text>
+  <text x="300" y="270" text-anchor="middle" font-size="10" fill="#374151">더 나은 방향 제시</text>
+
+  <rect x="400" y="215" width="170" height="56" rx="8" fill="#FEF3C7" stroke="#F59E0B" stroke-width="1.5"/>
+  <text x="485" y="238" text-anchor="middle" font-size="12" font-weight="bold" fill="#92400E">⚠️ Issue</text>
+  <text x="485" y="256" text-anchor="middle" font-size="10" fill="#374151">수정 권장</text>
+  <text x="485" y="270" text-anchor="middle" font-size="10" fill="#374151">성능 · 유지보수 문제</text>
+
+  <rect x="585" y="215" width="185" height="56" rx="8" fill="#FEE2E2" stroke="#EF4444" stroke-width="1.5"/>
+  <text x="677" y="238" text-anchor="middle" font-size="12" font-weight="bold" fill="#991B1B">🚫 Blocker</text>
+  <text x="677" y="256" text-anchor="middle" font-size="10" fill="#374151">머지 불가</text>
+  <text x="677" y="270" text-anchor="middle" font-size="10" fill="#374151">보안 · 버그 · 데이터 손실</text>
+
+  <!-- 황금률 -->
+  <rect x="30" y="295" width="740" height="130" rx="10" fill="white" stroke="#E5E7EB" stroke-width="1.5"/>
+  <text x="400" y="320" text-anchor="middle" font-size="14" font-weight="bold" fill="#1F2937">코드 리뷰 황금률</text>
+
+  <text x="60" y="348" font-size="12" fill="#374151">✅  코드를 비판하되 사람을 비판하지 않는다</text>
+  <text x="60" y="370" font-size="12" fill="#374151">✅  질문 형태로 코멘트 — "왜 이렇게 했나요?" vs "이건 틀렸습니다"</text>
+  <text x="60" y="392" font-size="12" fill="#374151">✅  칭찬도 코멘트한다 — "이 접근법 정말 깔끔하네요!"</text>
+  <text x="60" y="412" font-size="12" fill="#374151">✅  24시간 내 리뷰 완료 — 팀 속도를 내가 결정한다</text>
+</svg>

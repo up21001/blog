@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#1e1b4b"/>
+  <text x="60" y="85" fill="#eef2ff" font-size="40" font-family="Arial" font-weight="700">Developer Career Roadmap 2026</text>
+
+  <line x1="120" y1="360" x2="1080" y2="360" stroke="#818cf8" stroke-width="10"/>
+  <circle cx="220" cy="360" r="55" fill="#22c55e"/>
+  <circle cx="600" cy="360" r="55" fill="#eab308"/>
+  <circle cx="980" cy="360" r="55" fill="#ef4444"/>
+
+  <text x="150" y="460" fill="#e0e7ff" font-size="30" font-family="Arial">Junior</text>
+  <text x="545" y="460" fill="#e0e7ff" font-size="30" font-family="Arial">Middle</text>
+  <text x="900" y="460" fill="#e0e7ff" font-size="30" font-family="Arial">Senior/Lead</text>
+
+  <text x="75" y="540" fill="#c7d2fe" font-size="22" font-family="Arial">0  Jt + 8 t° + Å ¥% + DˆÈ¤ tt</text>
+</svg>

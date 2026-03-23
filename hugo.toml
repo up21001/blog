@@ -23,7 +23,19 @@ enableRobotsTXT = true
 [params.homepage]
   layout = "profile"
   showRecent = true
-  recentLimit = 5
+  recentLimit = 12
+
+[params.list]
+  showHero = true
+  heroStyle = "basic"
+
+[params.term]
+  showHero = true
+  heroStyle = "basic"
+
+[params.taxonomy]
+  showHero = true
+  heroStyle = "basic"
 
 [params.article]
   showDate = true
