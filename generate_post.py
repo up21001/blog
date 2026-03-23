@@ -107,16 +107,16 @@ def generate_post(topic: str, api_key: str = None, max_retries: int = 3) -> str:
             if str(finish_reason) == "FinishReason.MAX_TOKENS":
                 print(f"[!] 경고: 토큰 한도 초과로 응답이 잘렸습니다.")
             text = response.text.strip()
-    # 모델이 ```markdown ... ``` 로 감싸는 경우 제거
-    if text.startswith("```"):
-        text = re.sub(r'^```[^\n]*\n', '', text)
-        text = re.sub(r'\n```\s*$', '', text)
-    text = text.strip()
-    # 날짜를 실제 현재 시간으로 교체
-    now_str = datetime.now().strftime("%Y-%m-%dT%H:%M:%S+09:00")
-    text = re.sub(r'date:\s*\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}[^\n]*', f'date: {now_str}', text)
-    text = re.sub(r'lastmod:\s*\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}[^\n]*', f'lastmod: {now_str}', text)
-    return text
+            # 모델이 ```markdown ... ``` 로 감싸는 경우 제거
+            if text.startswith("```"):
+                text = re.sub(r'^```[^\n]*\n', '', text)
+                text = re.sub(r'\n```\s*$', '', text)
+            text = text.strip()
+            # 날짜를 실제 현재 시간으로 교체
+            now_str = datetime.now().strftime("%Y-%m-%dT%H:%M:%S+09:00")
+            text = re.sub(r'date:\s*\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}[^\n]*', f'date: {now_str}', text)
+            text = re.sub(r'lastmod:\s*\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}[^\n]*', f'lastmod: {now_str}', text)
+            return text
         except Exception as e:
             if attempt < max_retries:
                 wait = 2 ** attempt
