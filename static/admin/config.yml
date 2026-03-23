@@ -1,0 +1,30 @@
+backend:
+  name: github
+  repo: up21001/blog
+  branch: main
+
+media_folder: static/images
+public_folder: /images
+
+locale: ko
+
+collections:
+  - name: posts
+    label: 블로그 포스트
+    folder: content/posts
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: 제목, name: title, widget: string }
+      - { label: 발행일, name: date, widget: datetime, format: "YYYY-MM-DDTHH:mm:ssZ" }
+      - { label: 수정일, name: lastmod, widget: datetime, format: "YYYY-MM-DDTHH:mm:ssZ" }
+      - { label: 설명, name: description, widget: text }
+      - { label: URL Slug, name: slug, widget: string }
+      - label: 카테고리
+        name: categories
+        widget: select
+        multiple: true
+        options: [Hardware, Software, AI, Project]
+      - { label: 태그, name: tags, widget: list }
+      - { label: 초안, name: draft, widget: boolean, default: true }
+      - { label: 본문, name: body, widget: markdown }
