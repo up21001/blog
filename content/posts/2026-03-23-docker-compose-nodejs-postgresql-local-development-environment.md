@@ -4,7 +4,7 @@ date: 2026-03-23T16:32:11+09:00
 lastmod: 2026-03-23T16:32:11+09:00
 description: "Docker Compose를 활용하여 Node.js 애플리케이션과 PostgreSQL 데이터베이스를 포함하는 로컬 개발 환경을 효율적으로 구축하는 방법을 설명합니다. 개발 생산성 향상과 환경 일관성 유지에 초점을 맞춥니다."
 slug: "docker-compose-nodejs-postgresql-local-development-environment"
-categories: ["Software"]
+categories: ["software-dev"]
 tags: ["Docker Compose", "Node.js 개발 환경", "PostgreSQL Docker", "로컬 개발", "컨테이너화", "개발 생산성"]
 draft: false
 ---

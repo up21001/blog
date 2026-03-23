@@ -4,7 +4,7 @@ date: 2026-03-23T10:00:00+09:00
 lastmod: 2026-03-23T10:00:00+09:00
 description: "Gemini API를 사용하여 파이썬으로 텍스트 요약 도구를 만드는 방법을 상세히 설명합니다. 효율적인 정보 습득을 위한 AI 기반 요약 시스템 구축 가이드입니다."
 slug: "gemini-api-python-text-summarizer"
-categories: ["Software", "AI"]
+categories: ["ai-automation"]
 tags: ["Gemini API", "Python", "텍스트 요약", "자연어 처리", "AI 에이전트", "워크플로우 자동화"]
 draft: false
 ---
