@@ -1,0 +1,65 @@
+<svg width="800" height="450" xmlns="http://www.w3.org/2000/svg" font-family="'Malgun Gothic', sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#374151"/>
+    </marker>
+  </defs>
+  <rect width="800" height="450" fill="#F9FAFB" rx="12"/>
+  <text x="400" y="38" text-anchor="middle" font-size="20" font-weight="bold" fill="#1F2937">KiCad PCB 설계 워크플로우</text>
+
+  <!-- Step 1 -->
+  <rect x="40" y="80" width="140" height="90" rx="8" fill="#DBEAFE" stroke="#3B82F6" stroke-width="2"/>
+  <text x="110" y="105" text-anchor="middle" font-size="13" font-weight="bold" fill="#1D4ED8">① 회로도 설계</text>
+  <text x="110" y="124" text-anchor="middle" font-size="11" fill="#374151">Schematic Editor</text>
+  <text x="110" y="141" text-anchor="middle" font-size="11" fill="#374151">심볼 배치 + 배선</text>
+  <text x="110" y="158" text-anchor="middle" font-size="11" fill="#6B7280">ERC 오류 검사</text>
+
+  <!-- Step 2 -->
+  <rect x="230" y="80" width="140" height="90" rx="8" fill="#D1FAE5" stroke="#10B981" stroke-width="2"/>
+  <text x="300" y="105" text-anchor="middle" font-size="13" font-weight="bold" fill="#065F46">② 풋프린트 할당</text>
+  <text x="300" y="124" text-anchor="middle" font-size="11" fill="#374151">PCB Footprint</text>
+  <text x="300" y="141" text-anchor="middle" font-size="11" fill="#374151">패키지 선택</text>
+  <text x="300" y="158" text-anchor="middle" font-size="11" fill="#6B7280">SMD / THT 결정</text>
+
+  <!-- Step 3 -->
+  <rect x="420" y="80" width="140" height="90" rx="8" fill="#FEF3C7" stroke="#F59E0B" stroke-width="2"/>
+  <text x="490" y="105" text-anchor="middle" font-size="13" font-weight="bold" fill="#92400E">③ PCB 레이아웃</text>
+  <text x="490" y="124" text-anchor="middle" font-size="11" fill="#374151">부품 배치 최적화</text>
+  <text x="490" y="141" text-anchor="middle" font-size="11" fill="#374151">라우팅 (배선)</text>
+  <text x="490" y="158" text-anchor="middle" font-size="11" fill="#6B7280">그라운드 플레인</text>
+
+  <!-- Step 4 -->
+  <rect x="610" y="80" width="140" height="90" rx="8" fill="#EDE9FE" stroke="#8B5CF6" stroke-width="2"/>
+  <text x="680" y="105" text-anchor="middle" font-size="13" font-weight="bold" fill="#4C1D95">④ 검증 & 출력</text>
+  <text x="680" y="124" text-anchor="middle" font-size="11" fill="#374151">DRC 검사</text>
+  <text x="680" y="141" text-anchor="middle" font-size="11" fill="#374151">Gerber 파일 출력</text>
+  <text x="680" y="158" text-anchor="middle" font-size="11" fill="#6B7280">제조사 발주</text>
+
+  <!-- Tips section -->
+  <rect x="40" y="220" width="340" height="140" rx="8" fill="#F3F4F6" stroke="#6B7280" stroke-width="1.5"/>
+  <text x="210" y="244" text-anchor="middle" font-size="13" font-weight="bold" fill="#374151">초보자 핵심 팁</text>
+  <text x="55" y="265" font-size="11" fill="#374151">• 회로도 먼저, 레이아웃은 나중에 — 순서가 중요</text>
+  <text x="55" y="283" font-size="11" fill="#374151">• 전원/GND 핀 미연결(PWR_FLAG) 주의</text>
+  <text x="55" y="301" font-size="11" fill="#374151">• 패드 간격(Clearance) 최소 0.2mm 준수</text>
+  <text x="55" y="319" font-size="11" fill="#374151">• 고주파 신호는 짧고 직선으로 배선</text>
+  <text x="55" y="337" font-size="11" fill="#374151">• 3D 뷰어로 부품 충돌 미리 확인</text>
+
+  <!-- Layer stack -->
+  <rect x="420" y="220" width="340" height="140" rx="8" fill="#DBEAFE" stroke="#3B82F6" stroke-width="1.5"/>
+  <text x="590" y="244" text-anchor="middle" font-size="13" font-weight="bold" fill="#1D4ED8">2레이어 PCB 스택</text>
+  <rect x="440" y="256" width="300" height="20" rx="3" fill="#EF4444" opacity="0.7"/>
+  <text x="590" y="271" text-anchor="middle" font-size="11" fill="white" font-weight="bold">Top Copper (F.Cu) — 신호 배선</text>
+  <rect x="440" y="282" width="300" height="14" rx="2" fill="#D1D5DB"/>
+  <text x="590" y="293" text-anchor="middle" font-size="10" fill="#374151">FR4 기판 (1.6mm)</text>
+  <rect x="440" y="302" width="300" height="20" rx="3" fill="#3B82F6" opacity="0.7"/>
+  <text x="590" y="317" text-anchor="middle" font-size="11" fill="white" font-weight="bold">Bottom Copper (B.Cu) — GND 플레인</text>
+  <text x="590" y="345" text-anchor="middle" font-size="11" fill="#374151">JLCPCB 기준: 5장 $2 / 배송 2주</text>
+
+  <!-- Arrows -->
+  <line x1="180" y1="125" x2="228" y2="125" stroke="#374151" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="370" y1="125" x2="418" y2="125" stroke="#374151" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="560" y1="125" x2="608" y2="125" stroke="#374151" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Bottom note -->
+  <text x="400" y="415" text-anchor="middle" font-size="12" fill="#6B7280">KiCad 9.0 기준 — 오픈소스 무료, Windows/macOS/Linux 지원</text>
+</svg>

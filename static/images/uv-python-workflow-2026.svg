@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">uv Python Workflow 2026</title>
+  <desc id="desc">Workflow diagram showing uv managing Python install, dependencies, and execution</desc>
+  <defs>
+    <linearGradient id="uvbg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f7fbff"/>
+      <stop offset="100%" stop-color="#eef8f2"/>
+    </linearGradient>
+    <filter id="uvshadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#39576b" flood-opacity="0.18"/>
+    </filter>
+    <marker id="uvarrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 z" fill="#47657b"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="720" fill="url(#uvbg)"/>
+  <text x="70" y="88" font-family="Segoe UI, Arial, sans-serif" font-size="38" font-weight="700" fill="#20394d">uv 기반 Python 개발 워크플로우</text>
+  <text x="70" y="126" font-family="Segoe UI, Arial, sans-serif" font-size="20" fill="#5b7388">설치, 버전 관리, 의존성, 실행을 하나의 도구 흐름으로 통합</text>
+
+  <rect x="100" y="210" width="220" height="120" rx="24" fill="#0f4c81" filter="url(#uvshadow)"/>
+  <text x="160" y="275" font-family="Segoe UI, Arial, sans-serif" font-size="32" font-weight="700" fill="#fff">Python</text>
+  <text x="145" y="308" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#dcebff">uv python install</text>
+
+  <rect x="390" y="170" width="420" height="240" rx="32" fill="#1f8a70" filter="url(#uvshadow)"/>
+  <text x="555" y="235" font-family="Segoe UI, Arial, sans-serif" font-size="38" font-weight="700" fill="#fff">uv</text>
+  <text x="470" y="278" font-family="Segoe UI, Arial, sans-serif" font-size="20" fill="#e6fff7">프로젝트 중심으로 환경과 실행을 관리</text>
+  <text x="455" y="328" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#fff">uv init</text>
+  <text x="455" y="360" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#fff">uv add</text>
+  <text x="455" y="392" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#fff">uv sync</text>
+
+  <rect x="880" y="120" width="220" height="110" rx="22" fill="#cc6b2c" filter="url(#uvshadow)"/>
+  <text x="940" y="180" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="700" fill="#fff">패키지</text>
+  <text x="915" y="208" font-family="Segoe UI, Arial, sans-serif" font-size="16" fill="#fff5e8">의존성 잠금과 설치</text>
+
+  <rect x="880" y="280" width="220" height="110" rx="22" fill="#cc6b2c" filter="url(#uvshadow)"/>
+  <text x="940" y="340" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="700" fill="#fff">실행</text>
+  <text x="928" y="368" font-family="Segoe UI, Arial, sans-serif" font-size="16" fill="#fff5e8">uv run python main.py</text>
+
+  <rect x="880" y="440" width="220" height="110" rx="22" fill="#cc6b2c" filter="url(#uvshadow)"/>
+  <text x="930" y="500" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="700" fill="#fff">빌드/배포</text>
+  <text x="922" y="528" font-family="Segoe UI, Arial, sans-serif" font-size="16" fill="#fff5e8">uv build / uv publish</text>
+
+  <path d="M320 270 L390 270" stroke="#47657b" stroke-width="8" fill="none" marker-end="url(#uvarrow)"/>
+  <path d="M810 220 L880 175" stroke="#47657b" stroke-width="8" fill="none" marker-end="url(#uvarrow)"/>
+  <path d="M810 290 L880 335" stroke="#47657b" stroke-width="8" fill="none" marker-end="url(#uvarrow)"/>
+  <path d="M810 360 L880 495" stroke="#47657b" stroke-width="8" fill="none" marker-end="url(#uvarrow)"/>
+
+  <rect x="100" y="580" width="1000" height="76" rx="18" fill="#ffffff" opacity="0.82"/>
+  <text x="130" y="626" font-family="Segoe UI, Arial, sans-serif" font-size="20" fill="#284559">핵심: pip, venv, pyenv, 실행 명령을 분리해서 기억하는 대신 프로젝트 중심 명령 세트로 단순화합니다.</text>
+</svg>

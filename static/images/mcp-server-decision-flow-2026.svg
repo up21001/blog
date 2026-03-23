@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">MCP Decision Flow 2026</title>
+  <desc id="desc">Decision flowchart for choosing local MCP or remote MCP</desc>
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fffaf1"/>
+      <stop offset="100%" stop-color="#eef7ff"/>
+    </linearGradient>
+    <filter id="shadow2" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#4f6578" flood-opacity="0.16"/>
+    </filter>
+    <marker id="arrow2" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 z" fill="#4b6175"/>
+    </marker>
+  </defs>
+
+  <rect width="1200" height="720" fill="url(#bg2)"/>
+  <text x="80" y="90" font-family="Segoe UI, Arial, sans-serif" font-size="38" font-weight="700" fill="#20384c">로컬 MCP vs 원격 MCP 선택 흐름</text>
+  <text x="80" y="128" font-family="Segoe UI, Arial, sans-serif" font-size="20" fill="#557088">실험 단계인지, 팀 운영 단계인지부터 구분하면 판단이 쉬워집니다.</text>
+
+  <rect x="420" y="170" rx="26" ry="26" width="360" height="92" fill="#0f4c81" filter="url(#shadow2)"/>
+  <text x="488" y="225" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="700" fill="#ffffff">시작: 어떤 문제를 풀고 있나요?</text>
+
+  <polygon points="470,320 730,320 810,390 730,460 470,460 390,390" fill="#1f8a70" filter="url(#shadow2)"/>
+  <text x="445" y="386" font-family="Segoe UI, Arial, sans-serif" font-size="26" font-weight="700" fill="#ffffff">혼자 쓰는 로컬 도구 연결인가요?</text>
+  <text x="560" y="420" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#e9fff7">파일, Git, 로컬 DB 중심</text>
+
+  <rect x="110" y="530" rx="26" ry="26" width="320" height="110" fill="#2166a5" filter="url(#shadow2)"/>
+  <text x="185" y="585" font-family="Segoe UI, Arial, sans-serif" font-size="30" font-weight="700" fill="#ffffff">로컬 MCP</text>
+  <text x="145" y="620" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#deefff">빠른 실험, 쉬운 디버깅, 개인 생산성</text>
+
+  <rect x="770" y="530" rx="26" ry="26" width="320" height="110" fill="#cc6b2c" filter="url(#shadow2)"/>
+  <text x="835" y="585" font-family="Segoe UI, Arial, sans-serif" font-size="30" font-weight="700" fill="#ffffff">원격 MCP</text>
+  <text x="805" y="620" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#fff1e3">공유 운영, 중앙 인증, 로그와 배포 관리</text>
+
+  <path d="M600 262 L600 320" stroke="#4b6175" stroke-width="8" fill="none" marker-end="url(#arrow2)"/>
+  <path d="M390 390 L270 390 L270 530" stroke="#4b6175" stroke-width="8" fill="none" marker-end="url(#arrow2)"/>
+  <path d="M810 390 L930 390 L930 530" stroke="#4b6175" stroke-width="8" fill="none" marker-end="url(#arrow2)"/>
+
+  <text x="300" y="375" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" fill="#2166a5">예</text>
+  <text x="875" y="375" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" fill="#cc6b2c">아니오</text>
+
+  <rect x="360" y="510" rx="16" ry="16" width="480" height="150" fill="#ffffff" opacity="0.86"/>
+  <text x="392" y="556" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="700" fill="#223f55">판단 기준</text>
+  <text x="392" y="592" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#47637a">여러 사용자와 공유해야 하면 원격 MCP</text>
+  <text x="392" y="622" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#47637a">개인 장비와 로컬 파일 중심이면 로컬 MCP</text>
+</svg>

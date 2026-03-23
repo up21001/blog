@@ -1,0 +1,43 @@
+<svg width="1200" height="675" viewBox="0 0 1200 675" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b1020"/>
+      <stop offset="100%" stop-color="#1f2937"/>
+    </linearGradient>
+    <linearGradient id="accent2" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#22d3ee"/>
+      <stop offset="100%" stop-color="#3b82f6"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bg2)"/>
+  <text x="70" y="90" fill="#e5e7eb" font-size="42" font-family="Segoe UI, Arial, sans-serif">AI Performance Metrics Report</text>
+  <text x="70" y="126" fill="#93c5fd" font-size="20" font-family="Segoe UI, Arial, sans-serif">Quality - Latency - Throughput - Cost - Reliability</text>
+
+  <rect x="70" y="170" width="500" height="210" rx="16" fill="#111827" stroke="#374151"/>
+  <text x="95" y="208" fill="#d1d5db" font-size="22" font-family="Segoe UI, Arial, sans-serif">Model Quality Panel</text>
+  <rect x="95" y="230" width="450" height="16" rx="8" fill="#1f2937"/>
+  <rect x="95" y="230" width="350" height="16" rx="8" fill="url(#accent2)"/>
+  <text x="455" y="244" fill="#67e8f9" font-size="14" font-family="Consolas, monospace">MMLU 84.2</text>
+  <rect x="95" y="262" width="450" height="16" rx="8" fill="#1f2937"/>
+  <rect x="95" y="262" width="320" height="16" rx="8" fill="url(#accent2)"/>
+  <text x="455" y="276" fill="#67e8f9" font-size="14" font-family="Consolas, monospace">Reasoning 76.5</text>
+  <rect x="95" y="294" width="450" height="16" rx="8" fill="#1f2937"/>
+  <rect x="95" y="294" width="390" height="16" rx="8" fill="url(#accent2)"/>
+  <text x="455" y="308" fill="#67e8f9" font-size="14" font-family="Consolas, monospace">Code Eval 88.1</text>
+  <text x="95" y="345" fill="#9ca3af" font-size="14" font-family="Segoe UI, Arial, sans-serif">* Example report visualization</text>
+
+  <rect x="620" y="170" width="510" height="210" rx="16" fill="#111827" stroke="#374151"/>
+  <text x="645" y="208" fill="#d1d5db" font-size="22" font-family="Segoe UI, Arial, sans-serif">Inference Performance Panel</text>
+  <text x="645" y="244" fill="#93c5fd" font-size="17" font-family="Consolas, monospace">TTFT (P95): 1.21s</text>
+  <text x="645" y="274" fill="#93c5fd" font-size="17" font-family="Consolas, monospace">TPS (P95): 62.4 tok/s</text>
+  <text x="645" y="304" fill="#93c5fd" font-size="17" font-family="Consolas, monospace">Error Rate: 0.37%</text>
+  <text x="645" y="334" fill="#93c5fd" font-size="17" font-family="Consolas, monospace">Cost / 1K req: $4.82</text>
+
+  <rect x="70" y="420" width="1060" height="185" rx="16" fill="#111827" stroke="#374151"/>
+  <text x="95" y="458" fill="#d1d5db" font-size="22" font-family="Segoe UI, Arial, sans-serif">Operational KPI Timeline</text>
+  <polyline points="100,560 210,545 320,535 430,540 540,520 650,505 760,515 870,500 980,488 1090,470"
+            fill="none" stroke="#22d3ee" stroke-width="4"/>
+  <line x1="100" y1="560" x2="1090" y2="560" stroke="#374151" stroke-width="2"/>
+  <text x="95" y="590" fill="#9ca3af" font-size="14" font-family="Segoe UI, Arial, sans-serif">Week 1</text>
+  <text x="1030" y="590" fill="#9ca3af" font-size="14" font-family="Segoe UI, Arial, sans-serif">Week 10</text>
+</svg>

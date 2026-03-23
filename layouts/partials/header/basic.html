@@ -26,9 +26,9 @@
       {{ if .IsHome }}
         {{ .Site.Title | markdownify }}
       {{ else if .Description }}
-        기술 블로그 | {{ .Description }}
+        통합 블로그 | {{ .Description }}
       {{ else if and .Title (not .IsHome) }}
-        기술 블로그 | {{ .Title }}
+        통합 블로그 | {{ .Title }}
       {{ else }}
         {{ .Site.Title | markdownify }}
       {{ end }}

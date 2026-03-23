@@ -1,0 +1,59 @@
+<svg width="800" height="450" xmlns="http://www.w3.org/2000/svg" font-family="'Malgun Gothic', sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#374151"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="white"/>
+    </marker>
+  </defs>
+  <rect width="800" height="450" fill="#F9FAFB" rx="12"/>
+  <text x="400" y="36" text-anchor="middle" font-size="20" font-weight="bold" fill="#1F2937">AI 시대 엔지니어의 역할 변화</text>
+
+  <!-- Before (2020) -->
+  <rect x="20" y="60" width="240" height="280" rx="10" fill="#F3F4F6" stroke="#6B7280" stroke-width="2"/>
+  <text x="140" y="85" text-anchor="middle" font-size="14" font-weight="bold" fill="#374151">2020년 이전</text>
+  <text x="140" y="103" text-anchor="middle" font-size="11" fill="#6B7280">"코딩하는 사람"</text>
+  <rect x="40" y="115" width="200" height="32" rx="5" fill="#E5E7EB" stroke="#9CA3AF" stroke-width="1"/>
+  <text x="140" y="135" text-anchor="middle" font-size="11" fill="#374151">코드 직접 작성 (80%)</text>
+  <rect x="40" y="155" width="200" height="32" rx="5" fill="#E5E7EB" stroke="#9CA3AF" stroke-width="1"/>
+  <text x="140" y="175" text-anchor="middle" font-size="11" fill="#374151">버그 디버깅 (10%)</text>
+  <rect x="40" y="195" width="200" height="32" rx="5" fill="#E5E7EB" stroke="#9CA3AF" stroke-width="1"/>
+  <text x="140" y="215" text-anchor="middle" font-size="11" fill="#374151">문서화 (5%)</text>
+  <rect x="40" y="235" width="200" height="32" rx="5" fill="#E5E7EB" stroke="#9CA3AF" stroke-width="1"/>
+  <text x="140" y="255" text-anchor="middle" font-size="11" fill="#374151">설계 / 리뷰 (5%)</text>
+  <text x="140" y="315" text-anchor="middle" font-size="11" fill="#6B7280">단순 구현 능력 =</text>
+  <text x="140" y="330" text-anchor="middle" font-size="11" fill="#6B7280">주요 경쟁력</text>
+
+  <!-- After (2026) -->
+  <rect x="540" y="60" width="240" height="280" rx="10" fill="#374151" stroke="#1F2937" stroke-width="2"/>
+  <text x="660" y="85" text-anchor="middle" font-size="14" font-weight="bold" fill="white">2026년 이후</text>
+  <text x="660" y="103" text-anchor="middle" font-size="11" fill="#9CA3AF">"오케스트레이터"</text>
+  <rect x="560" y="115" width="200" height="32" rx="5" fill="#DBEAFE" stroke="#3B82F6" stroke-width="1.5"/>
+  <text x="660" y="135" text-anchor="middle" font-size="11" fill="#1D4ED8">문제 정의 + 설계 (40%)</text>
+  <rect x="560" y="155" width="200" height="32" rx="5" fill="#D1FAE5" stroke="#10B981" stroke-width="1.5"/>
+  <text x="660" y="175" text-anchor="middle" font-size="11" fill="#065F46">AI 결과물 검증 (25%)</text>
+  <rect x="560" y="195" width="200" height="32" rx="5" fill="#FEF3C7" stroke="#F59E0B" stroke-width="1.5"/>
+  <text x="660" y="215" text-anchor="middle" font-size="11" fill="#92400E">협업 + 커뮤니케이션 (20%)</text>
+  <rect x="560" y="235" width="200" height="32" rx="5" fill="#EDE9FE" stroke="#8B5CF6" stroke-width="1.5"/>
+  <text x="660" y="255" text-anchor="middle" font-size="11" fill="#4C1D95">직접 코딩 (15%)</text>
+  <text x="660" y="315" text-anchor="middle" font-size="11" fill="#9CA3AF">판단력 + 맥락 이해 =</text>
+  <text x="660" y="330" text-anchor="middle" font-size="11" fill="#9CA3AF">핵심 경쟁력</text>
+
+  <!-- Transition arrow -->
+  <rect x="285" y="155" width="230" height="100" rx="10" fill="#EDE9FE" stroke="#8B5CF6" stroke-width="2"/>
+  <text x="400" y="178" text-anchor="middle" font-size="12" font-weight="bold" fill="#4C1D95">생존하는 엔지니어의</text>
+  <text x="400" y="195" text-anchor="middle" font-size="12" font-weight="bold" fill="#4C1D95">불변의 역량</text>
+  <text x="400" y="215" text-anchor="middle" font-size="11" fill="#374151">도메인 깊이 (HW/SW/AI)</text>
+  <text x="400" y="232" text-anchor="middle" font-size="11" fill="#374151">시스템 사고 + 트레이드오프</text>
+  <text x="400" y="249" text-anchor="middle" font-size="11" fill="#374151">인간 맥락 이해 능력</text>
+
+  <line x1="260" y1="200" x2="283" y2="200" stroke="#374151" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="517" y1="200" x2="538" y2="200" stroke="#374151" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Bottom message -->
+  <rect x="20" y="360" width="760" height="70" rx="8" fill="#1F2937" stroke="#374151" stroke-width="1.5"/>
+  <text x="400" y="385" text-anchor="middle" font-size="13" font-weight="bold" fill="white">"AI는 코드를 쓰는 속도를 높여줬지만, 무엇을 만들어야 하는지는 여전히 엔지니어가 결정한다"</text>
+  <text x="400" y="410" text-anchor="middle" font-size="12" fill="#9CA3AF">13년 경험에서 나오는 도메인 지식 + 판단력은 AI가 대체할 수 없는 마지막 해자</text>
+  <text x="400" y="425" text-anchor="middle" font-size="11" fill="#6B7280">단, 그 판단력을 AI와 함께 10배 빠르게 실행할 수 있는 사람이 시장에서 살아남는다</text>
+</svg>

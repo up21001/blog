@@ -1,7 +1,7 @@
 baseURL = "https://blog-8ye.pages.dev"
 languageCode = "ko"
 defaultContentLanguage = "ko"
-title = "기술 블로그 | 하드웨어·소프트웨어·AI 엔지니어링"
+title = "통합 블로그 | 하드웨어·소프트웨어·AI 엔지니어링"
 theme = "blowfish"
 enableRobotsTXT = true
 [pagination]
@@ -41,9 +41,13 @@ enableRobotsTXT = true
   showThemeAttribution = false
   showScrollToTop = true
 
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
 [taxonomies]
   tag = "tags"
   category = "categories"
+  series = "series"
 
 [markup]
   [markup.highlight]

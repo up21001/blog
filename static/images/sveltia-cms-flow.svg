@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#374151"/>
+    </marker>
+  </defs>
+
+  <rect width="800" height="450" fill="white"/>
+
+  <text x="400" y="35" text-anchor="middle" font-family="'Malgun Gothic', sans-serif" font-size="18" font-weight="bold" fill="#1F2937">Sveltia CMS + GitHub OAuth 흐름</text>
+
+  <!-- Browser -->
+  <rect x="20" y="65" width="130" height="80" rx="8" fill="#EDE9FE" stroke="#8B5CF6" stroke-width="2"/>
+  <text x="85" y="92" text-anchor="middle" font-family="'Malgun Gothic', sans-serif" font-size="12" font-weight="bold" fill="#5B21B6">브라우저</text>
+  <text x="85" y="112" text-anchor="middle" font-family="'Malgun Gothic', sans-serif" font-size="11" fill="#6D28D9">/admin 접속</text>
+  <text x="85" y="130" text-anchor="middle" font-family="'Malgun Gothic', sans-serif" font-size="10" fill="#7C3AED">Sveltia CMS UI</text>
+
+  <!-- OAuth Flow -->
+  <rect x="210" y="65" width="150" height="80" rx="8" fill="#DBEAFE" stroke="#3B82F6" stroke-width="2"/>
+  <text x="285" y="92" text-anchor="middle" font-family="'Malgun Gothic', sans-serif" font-size="12" font-weight="bold" fill="#1D4ED8">GitHub OAuth</text>
+  <text x="285" y="112" text-anchor="middle" font-family="'Malgun Gothic', sans-serif" font-size="11" fill="#2563EB">로그인 인증</text>
+  <text x="285" y="130" text-anchor="middle" font-family="'Malgun Gothic', sans-serif" font-size="10" fill="#3B82F6">OAuth App 토큰</text>
+
+  <!-- CF Pages Functions -->
+  <rect x="420" y="65" width="160" height="80" rx="8" fill="#FEF3C7" stroke="#F59E0B" stroke-width="2"/>
+  <text x="500" y="88" text-anchor="middle" font-family="'Malgun Gothic', sans-serif" font-size="12" font-weight="bold" fill="#92400E">CF Pages Functions</text>
+  <text x="500" y="108" text-anchor="middle" font-family="'Malgun Gothic', sans-serif" font-size="11" fill="#B45309">/callback 엔드포인트</text>
+  <text x="500" y="126" text-anchor="middle" font-family="'Malgun Gothic', sans-serif" font-size="10" fill="#D97706">토큰 교환 처리</text>
+
+  <!-- GitHub API -->
+  <rect x="640" y="65" width="140" height="80" rx="8" fill="#F3F4F6" stroke="#6B7280" stroke-width="2"/>
+  <text x="710" y="92" text-anchor="middle" font-family="'Malgun Gothic', sans-serif" font-size="12" font-weight="bold" fill="#374151">GitHub API</text>
+  <text x="710" y="112" text-anchor="middle" font-family="'Malgun Gothic', sans-serif" font-size="11" fill="#4B5563">저장소 접근</text>
+  <text x="710" y="130" text-anchor="middle" font-family="'Malgun Gothic', sans-serif" font-size="10" fill="#6B7280">up21001/blog</text>
+
+  <!-- Arrows top -->
+  <line x1="150" y1="105" x2="208" y2="105" stroke="#374151" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="360" y1="105" x2="418" y2="105" stroke="#374151" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="580" y1="105" x2="638" y2="105" stroke="#374151" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Editor UI box -->
+  <rect x="20" y="210" width="240" height="120" rx="8" fill="#D1FAE5" stroke="#10B981" stroke-width="2"/>
+  <text x="140" y="233" text-anchor="middle" font-family="'Malgun Gothic', sans-serif" font-size="13" font-weight="bold" fill="#065F46">웹 에디터 UI</text>
+  <text x="35" y="255" font-family="'Malgun Gothic', sans-serif" font-size="11" fill="#047857">- 포스트 목록 관리</text>
+  <text x="35" y="273" font-family="'Malgun Gothic', sans-serif" font-size="11" fill="#047857">- 마크다운 에디터</text>
+  <text x="35" y="291" font-family="'Malgun Gothic', sans-serif" font-size="11" fill="#047857">- 미디어 파일 업로드</text>
+  <text x="35" y="309" font-family="'Malgun Gothic', sans-serif" font-size="11" fill="#047857">- front matter 폼 편집</text>
+
+  <!-- Config files box -->
+  <rect x="295" y="210" width="240" height="120" rx="8" fill="#DBEAFE" stroke="#3B82F6" stroke-width="2"/>
+  <text x="415" y="233" text-anchor="middle" font-family="'Malgun Gothic', sans-serif" font-size="13" font-weight="bold" fill="#1D4ED8">설정 파일</text>
+  <text x="310" y="255" font-family="'Malgun Gothic', sans-serif" font-size="11" fill="#2563EB">static/admin/index.html</text>
+  <text x="310" y="273" font-family="'Malgun Gothic', sans-serif" font-size="11" fill="#2563EB">static/admin/config.yml</text>
+  <text x="310" y="291" font-family="'Malgun Gothic', sans-serif" font-size="11" fill="#2563EB">functions/auth/[...auth].js</text>
+  <text x="310" y="309" font-family="'Malgun Gothic', sans-serif" font-size="11" fill="#2563EB">functions/callback/[...cb].js</text>
+
+  <!-- Commit box -->
+  <rect x="570" y="210" width="210" height="120" rx="8" fill="#F3F4F6" stroke="#6B7280" stroke-width="2"/>
+  <text x="675" y="233" text-anchor="middle" font-family="'Malgun Gothic', sans-serif" font-size="13" font-weight="bold" fill="#374151">저장 및 배포</text>
+  <text x="585" y="255" font-family="'Malgun Gothic', sans-serif" font-size="11" fill="#4B5563">Save → GitHub commit</text>
+  <text x="585" y="273" font-family="'Malgun Gothic', sans-serif" font-size="11" fill="#4B5563">Cloudflare 자동 빌드</text>
+  <text x="585" y="291" font-family="'Malgun Gothic', sans-serif" font-size="11" fill="#4B5563">Hugo 정적 사이트 생성</text>
+  <text x="585" y="309" font-family="'Malgun Gothic', sans-serif" font-size="11" fill="#10B981">라이브 자동 배포</text>
+
+  <!-- Vertical arrows -->
+  <line x1="85" y1="145" x2="85" y2="208" stroke="#374151" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrow)"/>
+  <line x1="710" y1="145" x2="675" y2="208" stroke="#374151" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrow)"/>
+
+  <!-- Bottom config detail -->
+  <rect x="20" y="360" width="760" height="70" rx="8" fill="#F9FAFB" stroke="#E5E7EB" stroke-width="1"/>
+  <text x="400" y="382" text-anchor="middle" font-family="'Malgun Gothic', sans-serif" font-size="12" font-weight="bold" fill="#374151">config.yml 핵심 설정</text>
+  <text x="100" y="403" text-anchor="middle" font-family="'Malgun Gothic', sans-serif" font-size="11" fill="#4B5563">backend: github</text>
+  <text x="270" y="403" text-anchor="middle" font-family="'Malgun Gothic', sans-serif" font-size="11" fill="#4B5563">repo: up21001/blog</text>
+  <text x="450" y="403" text-anchor="middle" font-family="'Malgun Gothic', sans-serif" font-size="11" fill="#4B5563">media_folder: static/images</text>
+  <text x="660" y="403" text-anchor="middle" font-family="'Malgun Gothic', sans-serif" font-size="11" fill="#4B5563">collections: posts</text>
+  <text x="400" y="422" text-anchor="middle" font-family="'Malgun Gothic', sans-serif" font-size="10" fill="#6B7280">base_url: https://blog-8ye.pages.dev  |  auth_endpoint: auth  |  site_id: blog-8ye.pages.dev</text>
+</svg>

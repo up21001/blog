@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#374151"/>
+    </marker>
+  </defs>
+
+  <rect width="800" height="450" fill="white"/>
+
+  <text x="400" y="35" text-anchor="middle" font-family="'Malgun Gothic', sans-serif" font-size="18" font-weight="bold" fill="#1F2937">Gemini API 포스트 자동 생성 흐름</text>
+
+  <!-- User Input -->
+  <rect x="20" y="65" width="140" height="70" rx="8" fill="#EDE9FE" stroke="#8B5CF6" stroke-width="2"/>
+  <text x="90" y="92" text-anchor="middle" font-family="'Malgun Gothic', sans-serif" font-size="12" font-weight="bold" fill="#5B21B6">사용자 입력</text>
+  <text x="90" y="112" text-anchor="middle" font-family="'Malgun Gothic', sans-serif" font-size="11" fill="#6D28D9">python generate_post.py</text>
+  <text x="90" y="128" text-anchor="middle" font-family="'Malgun Gothic', sans-serif" font-size="10" fill="#7C3AED">"주제 입력"</text>
+
+  <!-- System Prompt -->
+  <rect x="210" y="55" width="150" height="90" rx="8" fill="#DBEAFE" stroke="#3B82F6" stroke-width="2"/>
+  <text x="285" y="80" text-anchor="middle" font-family="'Malgun Gothic', sans-serif" font-size="12" font-weight="bold" fill="#1D4ED8">SYSTEM_PROMPT</text>
+  <text x="285" y="100" text-anchor="middle" font-family="'Malgun Gothic', sans-serif" font-size="11" fill="#2563EB">페르소나 설정</text>
+  <text x="285" y="118" text-anchor="middle" font-family="'Malgun Gothic', sans-serif" font-size="11" fill="#2563EB">SEO 지침</text>
+  <text x="285" y="136" text-anchor="middle" font-family="'Malgun Gothic', sans-serif" font-size="11" fill="#2563EB">구조 템플릿</text>
+
+  <!-- Gemini API -->
+  <rect x="420" y="55" width="150" height="90" rx="8" fill="#FEF3C7" stroke="#F59E0B" stroke-width="2"/>
+  <text x="495" y="80" text-anchor="middle" font-family="'Malgun Gothic', sans-serif" font-size="12" font-weight="bold" fill="#92400E">Gemini 2.5 Flash</text>
+  <text x="495" y="100" text-anchor="middle" font-family="'Malgun Gothic', sans-serif" font-size="11" fill="#B45309">API 호출</text>
+  <text x="495" y="118" text-anchor="middle" font-family="'Malgun Gothic', sans-serif" font-size="11" fill="#B45309">콘텐츠 생성</text>
+  <text x="495" y="136" text-anchor="middle" font-family="'Malgun Gothic', sans-serif" font-size="10" fill="#D97706">재시도 로직 포함</text>
+
+  <!-- Post Processing -->
+  <rect x="630" y="55" width="150" height="90" rx="8" fill="#D1FAE5" stroke="#10B981" stroke-width="2"/>
+  <text x="705" y="80" text-anchor="middle" font-family="'Malgun Gothic', sans-serif" font-size="12" font-weight="bold" fill="#065F46">후처리</text>
+  <text x="705" y="100" text-anchor="middle" font-family="'Malgun Gothic', sans-serif" font-size="11" fill="#047857">날짜 자동 교체</text>
+  <text x="705" y="118" text-anchor="middle" font-family="'Malgun Gothic', sans-serif" font-size="11" fill="#047857">slug 변환</text>
+  <text x="705" y="136" text-anchor="middle" font-family="'Malgun Gothic', sans-serif" font-size="11" fill="#047857">.md 파일 저장</text>
+
+  <!-- Arrows top row -->
+  <line x1="160" y1="100" x2="208" y2="100" stroke="#374151" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="360" y1="100" x2="418" y2="100" stroke="#374151" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="570" y1="100" x2="628" y2="100" stroke="#374151" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Front matter box -->
+  <rect x="20" y="205" width="360" height="130" rx="8" fill="#F3F4F6" stroke="#6B7280" stroke-width="2"/>
+  <text x="200" y="228" text-anchor="middle" font-family="'Malgun Gothic', sans-serif" font-size="13" font-weight="bold" fill="#374151">자동 생성 Front Matter</text>
+  <text x="35" y="250" font-family="'Malgun Gothic', sans-serif" font-size="11" fill="#4B5563">title: "AI가 작성한 포스트 제목"</text>
+  <text x="35" y="268" font-family="'Malgun Gothic', sans-serif" font-size="11" fill="#4B5563">date: 2026-03-23T10:00:00+09:00</text>
+  <text x="35" y="286" font-family="'Malgun Gothic', sans-serif" font-size="11" fill="#4B5563">slug: "auto-generated-slug"</text>
+  <text x="35" y="304" font-family="'Malgun Gothic', sans-serif" font-size="11" fill="#4B5563">categories: ["ai-automation"]</text>
+  <text x="35" y="322" font-family="'Malgun Gothic', sans-serif" font-size="11" fill="#4B5563">tags: ["태그1", "태그2", ...]</text>
+
+  <!-- Retry logic box -->
+  <rect x="420" y="205" width="360" height="130" rx="8" fill="#FEF3C7" stroke="#F59E0B" stroke-width="2"/>
+  <text x="600" y="228" text-anchor="middle" font-family="'Malgun Gothic', sans-serif" font-size="13" font-weight="bold" fill="#92400E">재시도 로직 (Exponential Backoff)</text>
+  <text x="435" y="250" font-family="'Malgun Gothic', sans-serif" font-size="11" fill="#B45309">1차 시도: 즉시 실행</text>
+  <text x="435" y="268" font-family="'Malgun Gothic', sans-serif" font-size="11" fill="#B45309">2차 시도: 2초 대기</text>
+  <text x="435" y="286" font-family="'Malgun Gothic', sans-serif" font-size="11" fill="#B45309">3차 시도: 4초 대기</text>
+  <text x="435" y="304" font-family="'Malgun Gothic', sans-serif" font-size="11" fill="#B45309">4차 시도: 8초 대기</text>
+  <text x="435" y="322" font-family="'Malgun Gothic', sans-serif" font-size="11" fill="#D97706">API 한도 초과 시 자동 재시도</text>
+
+  <!-- Arrow down -->
+  <line x1="705" y1="145" x2="705" y2="195" stroke="#374151" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="705" y1="195" x2="420" y2="210" stroke="#374151" stroke-width="1.5" stroke-dasharray="5,3"/>
+
+  <!-- Output file box -->
+  <rect x="20" y="370" width="760" height="60" rx="8" fill="#D1FAE5" stroke="#10B981" stroke-width="2"/>
+  <text x="400" y="393" text-anchor="middle" font-family="'Malgun Gothic', sans-serif" font-size="13" font-weight="bold" fill="#065F46">최종 출력: content/posts/YYYY-MM-DD-{slug}.md</text>
+  <text x="400" y="415" text-anchor="middle" font-family="'Malgun Gothic', sans-serif" font-size="11" fill="#047857">Hugo front matter + 마크다운 본문 (1500단어 이상) + 이미지 경로 + SEO 메타데이터</text>
+
+  <!-- Arrow to output -->
+  <line x1="200" y1="335" x2="200" y2="368" stroke="#374151" stroke-width="2" marker-end="url(#arrow)"/>
+</svg>

@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#374151"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="white"/>
+
+  <!-- Title -->
+  <text x="400" y="35" text-anchor="middle" font-family="'Malgun Gothic', sans-serif" font-size="18" font-weight="bold" fill="#1F2937">블로그 완전 자동화 전체 아키텍처</text>
+
+  <!-- Author Box -->
+  <rect x="30" y="70" width="120" height="60" rx="8" fill="#EDE9FE" stroke="#8B5CF6" stroke-width="2"/>
+  <text x="90" y="96" text-anchor="middle" font-family="'Malgun Gothic', sans-serif" font-size="13" font-weight="bold" fill="#5B21B6">작성자</text>
+  <text x="90" y="116" text-anchor="middle" font-family="'Malgun Gothic', sans-serif" font-size="11" fill="#6D28D9">아이디어 입력</text>
+
+  <!-- generate_post.py Box -->
+  <rect x="210" y="60" width="150" height="80" rx="8" fill="#DBEAFE" stroke="#3B82F6" stroke-width="2"/>
+  <text x="285" y="90" text-anchor="middle" font-family="'Malgun Gothic', sans-serif" font-size="13" font-weight="bold" fill="#1D4ED8">generate_post.py</text>
+  <text x="285" y="110" text-anchor="middle" font-family="'Malgun Gothic', sans-serif" font-size="11" fill="#2563EB">Python 스크립트</text>
+  <text x="285" y="128" text-anchor="middle" font-family="'Malgun Gothic', sans-serif" font-size="11" fill="#2563EB">포스트 자동 생성</text>
+
+  <!-- Gemini API Box -->
+  <rect x="210" y="190" width="150" height="70" rx="8" fill="#FEF3C7" stroke="#F59E0B" stroke-width="2"/>
+  <text x="285" y="218" text-anchor="middle" font-family="'Malgun Gothic', sans-serif" font-size="13" font-weight="bold" fill="#92400E">Gemini 2.5 Flash</text>
+  <text x="285" y="238" text-anchor="middle" font-family="'Malgun Gothic', sans-serif" font-size="11" fill="#B45309">Google AI API</text>
+  <text x="285" y="254" text-anchor="middle" font-family="'Malgun Gothic', sans-serif" font-size="11" fill="#B45309">콘텐츠 생성</text>
+
+  <!-- GitHub Box -->
+  <rect x="430" y="60" width="130" height="80" rx="8" fill="#F3F4F6" stroke="#6B7280" stroke-width="2"/>
+  <text x="495" y="90" text-anchor="middle" font-family="'Malgun Gothic', sans-serif" font-size="13" font-weight="bold" fill="#374151">GitHub</text>
+  <text x="495" y="110" text-anchor="middle" font-family="'Malgun Gothic', sans-serif" font-size="11" fill="#4B5563">up21001/blog</text>
+  <text x="495" y="128" text-anchor="middle" font-family="'Malgun Gothic', sans-serif" font-size="11" fill="#4B5563">git push</text>
+
+  <!-- Sveltia CMS Box -->
+  <rect x="430" y="190" width="130" height="70" rx="8" fill="#EDE9FE" stroke="#8B5CF6" stroke-width="2"/>
+  <text x="495" y="218" text-anchor="middle" font-family="'Malgun Gothic', sans-serif" font-size="13" font-weight="bold" fill="#5B21B6">Sveltia CMS</text>
+  <text x="495" y="238" text-anchor="middle" font-family="'Malgun Gothic', sans-serif" font-size="11" fill="#6D28D9">/admin 패널</text>
+  <text x="495" y="254" text-anchor="middle" font-family="'Malgun Gothic', sans-serif" font-size="11" fill="#6D28D9">웹 에디터</text>
+
+  <!-- Cloudflare Pages Box -->
+  <rect x="625" y="60" width="145" height="80" rx="8" fill="#FEF3C7" stroke="#F59E0B" stroke-width="2"/>
+  <text x="697" y="90" text-anchor="middle" font-family="'Malgun Gothic', sans-serif" font-size="13" font-weight="bold" fill="#92400E">Cloudflare Pages</text>
+  <text x="697" y="110" text-anchor="middle" font-family="'Malgun Gothic', sans-serif" font-size="11" fill="#B45309">자동 빌드</text>
+  <text x="697" y="128" text-anchor="middle" font-family="'Malgun Gothic', sans-serif" font-size="11" fill="#B45309">글로벌 CDN 배포</text>
+
+  <!-- Hugo Blog Box -->
+  <rect x="625" y="190" width="145" height="70" rx="8" fill="#D1FAE5" stroke="#10B981" stroke-width="2"/>
+  <text x="697" y="218" text-anchor="middle" font-family="'Malgun Gothic', sans-serif" font-size="13" font-weight="bold" fill="#065F46">Hugo Blog</text>
+  <text x="697" y="238" text-anchor="middle" font-family="'Malgun Gothic', sans-serif" font-size="11" fill="#047857">Blowfish 테마</text>
+  <text x="697" y="254" text-anchor="middle" font-family="'Malgun Gothic', sans-serif" font-size="11" fill="#047857">라이브 서비스</text>
+
+  <!-- Arrows -->
+  <!-- Author -> generate_post.py -->
+  <line x1="150" y1="100" x2="208" y2="100" stroke="#374151" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="179" y="90" text-anchor="middle" font-family="'Malgun Gothic', sans-serif" font-size="10" fill="#6B7280">주제</text>
+
+  <!-- generate_post.py -> Gemini -->
+  <line x1="285" y1="140" x2="285" y2="188" stroke="#374151" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="305" y="168" font-family="'Malgun Gothic', sans-serif" font-size="10" fill="#6B7280">API 호출</text>
+
+  <!-- Gemini -> generate_post.py (return) -->
+  <line x1="260" y1="190" x2="260" y2="142" stroke="#374151" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrow)"/>
+  <text x="220" y="168" font-family="'Malgun Gothic', sans-serif" font-size="10" fill="#6B7280">콘텐츠</text>
+
+  <!-- generate_post.py -> GitHub -->
+  <line x1="360" y1="100" x2="428" y2="100" stroke="#374151" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="394" y="90" text-anchor="middle" font-family="'Malgun Gothic', sans-serif" font-size="10" fill="#6B7280">.md 파일</text>
+
+  <!-- Sveltia CMS -> GitHub -->
+  <line x1="495" y1="190" x2="495" y2="142" stroke="#374151" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="510" y="170" font-family="'Malgun Gothic', sans-serif" font-size="10" fill="#6B7280">commit</text>
+
+  <!-- GitHub -> Cloudflare Pages -->
+  <line x1="560" y1="100" x2="623" y2="100" stroke="#374151" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="591" y="90" text-anchor="middle" font-family="'Malgun Gothic', sans-serif" font-size="10" fill="#6B7280">webhook</text>
+
+  <!-- Cloudflare Pages -> Hugo Blog -->
+  <line x1="697" y1="140" x2="697" y2="188" stroke="#374151" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="714" y="168" font-family="'Malgun Gothic', sans-serif" font-size="10" fill="#6B7280">hugo build</text>
+
+  <!-- Bottom labels -->
+  <rect x="30" y="330" width="740" height="90" rx="8" fill="#F9FAFB" stroke="#E5E7EB" stroke-width="1"/>
+  <text x="400" y="353" text-anchor="middle" font-family="'Malgun Gothic', sans-serif" font-size="13" font-weight="bold" fill="#374151">시스템 구성 요약</text>
+  <text x="100" y="375" text-anchor="middle" font-family="'Malgun Gothic', sans-serif" font-size="11" fill="#6B7280">정적 사이트 생성</text>
+  <text x="100" y="390" text-anchor="middle" font-family="'Malgun Gothic', sans-serif" font-size="12" font-weight="bold" fill="#1D4ED8">Hugo + Blowfish</text>
+  <text x="280" y="375" text-anchor="middle" font-family="'Malgun Gothic', sans-serif" font-size="11" fill="#6B7280">AI 콘텐츠 생성</text>
+  <text x="280" y="390" text-anchor="middle" font-family="'Malgun Gothic', sans-serif" font-size="12" font-weight="bold" fill="#D97706">Gemini 2.5 Flash</text>
+  <text x="460" y="375" text-anchor="middle" font-family="'Malgun Gothic', sans-serif" font-size="11" fill="#6B7280">무료 호스팅</text>
+  <text x="460" y="390" text-anchor="middle" font-family="'Malgun Gothic', sans-serif" font-size="12" font-weight="bold" fill="#D97706">Cloudflare Pages</text>
+  <text x="640" y="375" text-anchor="middle" font-family="'Malgun Gothic', sans-serif" font-size="11" fill="#6B7280">웹 CMS</text>
+  <text x="640" y="390" text-anchor="middle" font-family="'Malgun Gothic', sans-serif" font-size="12" font-weight="bold" fill="#7C3AED">Sveltia CMS</text>
+  <text x="400" y="412" text-anchor="middle" font-family="'Malgun Gothic', sans-serif" font-size="11" fill="#6B7280">월 운영 비용: Gemini API 소액 외 전부 무료</text>
+</svg>

@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">OpenAI Responses API Architecture 2026</title>
+  <desc id="desc">Architecture diagram for OpenAI Responses API with tools and remote MCP</desc>
+  <defs>
+    <linearGradient id="oabg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#eefaf4"/>
+      <stop offset="100%" stop-color="#eef5ff"/>
+    </linearGradient>
+    <filter id="oashadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#425868" flood-opacity="0.18"/>
+    </filter>
+    <marker id="oaarrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 z" fill="#4d6676"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="720" fill="url(#oabg)"/>
+  <text x="70" y="88" font-family="Segoe UI, Arial, sans-serif" font-size="38" font-weight="700" fill="#1f374a">OpenAI Responses API 구조</text>
+  <text x="70" y="126" font-family="Segoe UI, Arial, sans-serif" font-size="20" fill="#5b7388">모델 응답 생성과 도구 사용을 한 인터페이스 안에서 결합</text>
+
+  <rect x="90" y="220" width="240" height="140" rx="24" fill="#0f4c81" filter="url(#oashadow)"/>
+  <text x="145" y="285" font-family="Segoe UI, Arial, sans-serif" font-size="30" font-weight="700" fill="#fff">사용자 입력</text>
+  <text x="145" y="318" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#dcebff">텍스트 / 이미지 / 상태</text>
+
+  <rect x="430" y="170" width="330" height="260" rx="32" fill="#1f8a70" filter="url(#oashadow)"/>
+  <text x="495" y="235" font-family="Segoe UI, Arial, sans-serif" font-size="34" font-weight="700" fill="#fff">Responses API</text>
+  <text x="495" y="275" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#e8fff8">응답 생성 + 도구 호출 조정</text>
+  <text x="495" y="325" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#fff">conversation state</text>
+  <text x="495" y="358" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#fff">tool orchestration</text>
+  <text x="495" y="391" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#fff">multimodal input</text>
+
+  <rect x="860" y="110" width="240" height="100" rx="22" fill="#cc6b2c" filter="url(#oashadow)"/>
+  <text x="920" y="167" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="700" fill="#fff">Web Search</text>
+
+  <rect x="860" y="250" width="240" height="100" rx="22" fill="#cc6b2c" filter="url(#oashadow)"/>
+  <text x="925" y="307" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="700" fill="#fff">File Search</text>
+
+  <rect x="860" y="390" width="240" height="100" rx="22" fill="#cc6b2c" filter="url(#oashadow)"/>
+  <text x="915" y="447" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="700" fill="#fff">Functions</text>
+
+  <rect x="860" y="530" width="240" height="100" rx="22" fill="#cc6b2c" filter="url(#oashadow)"/>
+  <text x="905" y="587" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="700" fill="#fff">Remote MCP</text>
+
+  <path d="M330 290 L430 290" stroke="#4d6676" stroke-width="8" fill="none" marker-end="url(#oaarrow)"/>
+  <path d="M760 220 L860 160" stroke="#4d6676" stroke-width="8" fill="none" marker-end="url(#oaarrow)"/>
+  <path d="M760 300 L860 300" stroke="#4d6676" stroke-width="8" fill="none" marker-end="url(#oaarrow)"/>
+  <path d="M760 360 L860 440" stroke="#4d6676" stroke-width="8" fill="none" marker-end="url(#oaarrow)"/>
+  <path d="M740 410 L860 580" stroke="#4d6676" stroke-width="8" fill="none" marker-end="url(#oaarrow)"/>
+
+  <rect x="90" y="560" width="650" height="90" rx="18" fill="#ffffff" opacity="0.82"/>
+  <text x="120" y="614" font-family="Segoe UI, Arial, sans-serif" font-size="20" fill="#284559">핵심: 텍스트 생성 API에서 끝나지 않고 검색, 파일, 함수, MCP까지 연결하는 런타임 계층으로 이해하는 편이 정확합니다.</text>
+</svg>

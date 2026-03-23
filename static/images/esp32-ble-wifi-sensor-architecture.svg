@@ -1,0 +1,68 @@
+<svg width="800" height="450" xmlns="http://www.w3.org/2000/svg" font-family="'Malgun Gothic', sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#374151"/>
+    </marker>
+  </defs>
+  <rect width="800" height="450" fill="#F9FAFB" rx="12"/>
+  <text x="400" y="38" text-anchor="middle" font-size="20" font-weight="bold" fill="#1F2937">ESP32 BLE + WiFi 듀얼 모드 IoT 센서 아키텍처</text>
+
+  <!-- Sensor Node -->
+  <rect x="30" y="80" width="160" height="120" rx="8" fill="#DBEAFE" stroke="#3B82F6" stroke-width="2"/>
+  <text x="110" y="106" text-anchor="middle" font-size="13" font-weight="bold" fill="#1D4ED8">ESP32 센서 노드</text>
+  <text x="110" y="126" text-anchor="middle" font-size="11" fill="#374151">DHT22 (온습도)</text>
+  <text x="110" y="143" text-anchor="middle" font-size="11" fill="#374151">BMP280 (기압)</text>
+  <text x="110" y="160" text-anchor="middle" font-size="11" fill="#374151">MQ-135 (공기질)</text>
+  <text x="110" y="177" text-anchor="middle" font-size="11" fill="#374151">배터리 + 딥슬립</text>
+
+  <!-- BLE Gateway -->
+  <rect x="270" y="60" width="160" height="80" rx="8" fill="#D1FAE5" stroke="#10B981" stroke-width="2"/>
+  <text x="350" y="86" text-anchor="middle" font-size="13" font-weight="bold" fill="#065F46">BLE 게이트웨이</text>
+  <text x="350" y="106" text-anchor="middle" font-size="11" fill="#374151">ESP32 (BLE Central)</text>
+  <text x="350" y="123" text-anchor="middle" font-size="11" fill="#374151">다수 노드 수집</text>
+
+  <!-- WiFi Cloud -->
+  <rect x="270" y="190" width="160" height="80" rx="8" fill="#FEF3C7" stroke="#F59E0B" stroke-width="2"/>
+  <text x="350" y="216" text-anchor="middle" font-size="13" font-weight="bold" fill="#92400E">WiFi 직접 전송</text>
+  <text x="350" y="236" text-anchor="middle" font-size="11" fill="#374151">MQTT / HTTPS</text>
+  <text x="350" y="253" text-anchor="middle" font-size="11" fill="#374151">OTA 업데이트</text>
+
+  <!-- MQTT Broker -->
+  <rect x="510" y="80" width="140" height="70" rx="8" fill="#EDE9FE" stroke="#8B5CF6" stroke-width="2"/>
+  <text x="580" y="106" text-anchor="middle" font-size="13" font-weight="bold" fill="#4C1D95">MQTT 브로커</text>
+  <text x="580" y="126" text-anchor="middle" font-size="11" fill="#374151">Mosquitto / HiveMQ</text>
+  <text x="580" y="143" text-anchor="middle" font-size="11" fill="#374151">토픽 라우팅</text>
+
+  <!-- Cloud Dashboard -->
+  <rect x="510" y="200" width="140" height="70" rx="8" fill="#D1FAE5" stroke="#10B981" stroke-width="2"/>
+  <text x="580" y="226" text-anchor="middle" font-size="13" font-weight="bold" fill="#065F46">클라우드 대시보드</text>
+  <text x="580" y="246" text-anchor="middle" font-size="11" fill="#374151">Grafana + InfluxDB</text>
+  <text x="580" y="263" text-anchor="middle" font-size="11" fill="#374151">실시간 모니터링</text>
+
+  <!-- Deep Sleep Cycle -->
+  <rect x="30" y="260" width="160" height="80" rx="8" fill="#F3F4F6" stroke="#6B7280" stroke-width="2"/>
+  <text x="110" y="286" text-anchor="middle" font-size="12" font-weight="bold" fill="#374151">딥슬립 사이클</text>
+  <text x="110" y="305" text-anchor="middle" font-size="11" fill="#374151">측정: 2초</text>
+  <text x="110" y="322" text-anchor="middle" font-size="11" fill="#374151">슬립: 5분</text>
+  <text x="110" y="339" text-anchor="middle" font-size="11" fill="#6B7280">배터리 수명 ~6개월</text>
+
+  <!-- Legend -->
+  <rect x="30" y="380" width="15" height="15" fill="#DBEAFE" stroke="#3B82F6"/>
+  <text x="52" y="393" font-size="11" fill="#374151">센서 노드 (BLE Peripheral)</text>
+  <rect x="220" y="380" width="15" height="15" fill="#D1FAE5" stroke="#10B981"/>
+  <text x="242" y="393" font-size="11" fill="#374151">게이트웨이 / 클라우드</text>
+  <rect x="400" y="380" width="15" height="15" fill="#EDE9FE" stroke="#8B5CF6"/>
+  <text x="422" y="393" font-size="11" fill="#374151">메시지 브로커</text>
+  <rect x="560" y="380" width="15" height="15" fill="#FEF3C7" stroke="#F59E0B"/>
+  <text x="582" y="393" font-size="11" fill="#374151">직접 WiFi 모드</text>
+
+  <!-- Arrows -->
+  <line x1="190" y1="120" x2="268" y2="100" stroke="#374151" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="225" y="100" text-anchor="middle" font-size="10" fill="#6B7280">BLE</text>
+  <line x1="190" y1="140" x2="268" y2="230" stroke="#374151" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrow)"/>
+  <text x="220" y="200" text-anchor="middle" font-size="10" fill="#6B7280">WiFi</text>
+  <line x1="430" y1="100" x2="508" y2="108" stroke="#374151" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="430" y1="230" x2="508" y2="230" stroke="#374151" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="580" y1="150" x2="580" y2="198" stroke="#374151" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="110" y1="200" x2="110" y2="258" stroke="#374151" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrow)"/>
+</svg>

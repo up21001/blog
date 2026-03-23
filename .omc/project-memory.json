@@ -1,0 +1,397 @@
+{
+  "version": "1.0.0",
+  "lastScanned": 1774246833128,
+  "projectRoot": "C:\\My\\Claude\\Blog\\blog",
+  "techStack": {
+    "languages": [],
+    "frameworks": [],
+    "packageManager": null,
+    "runtime": null
+  },
+  "build": {
+    "buildCommand": null,
+    "testCommand": null,
+    "lintCommand": null,
+    "devCommand": null,
+    "scripts": {}
+  },
+  "conventions": {
+    "namingStyle": null,
+    "importStyle": null,
+    "testPattern": null,
+    "fileOrganization": null
+  },
+  "structure": {
+    "isMonorepo": false,
+    "workspaces": [],
+    "mainDirectories": [
+      "assets",
+      "static"
+    ],
+    "gitBranches": null
+  },
+  "customNotes": [],
+  "directoryMap": {
+    "archetypes": {
+      "path": "archetypes",
+      "purpose": null,
+      "fileCount": 1,
+      "lastAccessed": 1774246833104,
+      "keyFiles": [
+        "default.md"
+      ]
+    },
+    "assets": {
+      "path": "assets",
+      "purpose": "Static assets",
+      "fileCount": 0,
+      "lastAccessed": 1774246833104,
+      "keyFiles": []
+    },
+    "content": {
+      "path": "content",
+      "purpose": null,
+      "fileCount": 0,
+      "lastAccessed": 1774246833105,
+      "keyFiles": []
+    },
+    "data": {
+      "path": "data",
+      "purpose": "Data files",
+      "fileCount": 0,
+      "lastAccessed": 1774246833106,
+      "keyFiles": []
+    },
+    "i18n": {
+      "path": "i18n",
+      "purpose": null,
+      "fileCount": 0,
+      "lastAccessed": 1774246833106,
+      "keyFiles": []
+    },
+    "layouts": {
+      "path": "layouts",
+      "purpose": null,
+      "fileCount": 0,
+      "lastAccessed": 1774246833107,
+      "keyFiles": []
+    },
+    "static": {
+      "path": "static",
+      "purpose": "Static files",
+      "fileCount": 0,
+      "lastAccessed": 1774246833107,
+      "keyFiles": []
+    },
+    "themes": {
+      "path": "themes",
+      "purpose": null,
+      "fileCount": 0,
+      "lastAccessed": 1774246833108,
+      "keyFiles": []
+    }
+  },
+  "hotPaths": [
+    {
+      "path": "hugo.toml",
+      "accessCount": 14,
+      "lastAccessed": 1774269360319,
+      "type": "file"
+    },
+    {
+      "path": "analyze.py",
+      "accessCount": 10,
+      "lastAccessed": 1774247156090,
+      "type": "file"
+    },
+    {
+      "path": "generate_post.py",
+      "accessCount": 8,
+      "lastAccessed": 1774255104653,
+      "type": "file"
+    },
+    {
+      "path": "content\\posts\\2026-03-23-gemini-api-python-text-summarizer.md",
+      "accessCount": 7,
+      "lastAccessed": 1774253855636,
+      "type": "file"
+    },
+    {
+      "path": "content\\posts\\2026-03-23-docker-compose-nodejs-postgresql-local-development-environment.md",
+      "accessCount": 4,
+      "lastAccessed": 1774253855189,
+      "type": "file"
+    },
+    {
+      "path": "static\\admin\\config.yml",
+      "accessCount": 4,
+      "lastAccessed": 1774255105080,
+      "type": "file"
+    },
+    {
+      "path": "layouts\\partials\\header\\basic.html",
+      "accessCount": 3,
+      "lastAccessed": 1774254982942,
+      "type": "file"
+    },
+    {
+      "path": "content\\posts\\2026-03-23-blog-automation-series-1-architecture.md",
+      "accessCount": 3,
+      "lastAccessed": 1774256468917,
+      "type": "file"
+    },
+    {
+      "path": "content\\posts\\2026-03-23-blog-automation-series-2-hugo-cloudflare.md",
+      "accessCount": 3,
+      "lastAccessed": 1774256471028,
+      "type": "file"
+    },
+    {
+      "path": "content\\posts\\2026-03-23-blog-automation-series-3-gemini-post-generator.md",
+      "accessCount": 3,
+      "lastAccessed": 1774256473271,
+      "type": "file"
+    },
+    {
+      "path": "content\\posts\\2026-03-23-blog-automation-series-4-sveltia-cms.md",
+      "accessCount": 3,
+      "lastAccessed": 1774256475241,
+      "type": "file"
+    },
+    {
+      "path": "content\\posts\\2026-03-23-blog-automation-series-5-complete-pipeline.md",
+      "accessCount": 3,
+      "lastAccessed": 1774256476813,
+      "type": "file"
+    },
+    {
+      "path": "analysis_result.txt",
+      "accessCount": 2,
+      "lastAccessed": 1774247069524,
+      "type": "file"
+    },
+    {
+      "path": "static\\admin\\index.html",
+      "accessCount": 2,
+      "lastAccessed": 1774255105299,
+      "type": "file"
+    },
+    {
+      "path": "static\\images\\hugo-cloudflare-deploy-flow.svg",
+      "accessCount": 2,
+      "lastAccessed": 1774255304361,
+      "type": "file"
+    },
+    {
+      "path": "list_models.py",
+      "accessCount": 1,
+      "lastAccessed": 1774246964410,
+      "type": "file"
+    },
+    {
+      "path": ".env",
+      "accessCount": 1,
+      "lastAccessed": 1774247654073,
+      "type": "file"
+    },
+    {
+      "path": "static\\images\\docker-compose-architecture.svg",
+      "accessCount": 1,
+      "lastAccessed": 1774251068113,
+      "type": "file"
+    },
+    {
+      "path": "functions\\auth.js",
+      "accessCount": 1,
+      "lastAccessed": 1774252394672,
+      "type": "file"
+    },
+    {
+      "path": "functions\\callback.js",
+      "accessCount": 1,
+      "lastAccessed": 1774252397385,
+      "type": "file"
+    },
+    {
+      "path": "themes\\blowfish\\layouts\\partials\\header\\basic.html",
+      "accessCount": 1,
+      "lastAccessed": 1774254131695,
+      "type": "file"
+    },
+    {
+      "path": "content\\categories\\hardware-lab\\_index.md",
+      "accessCount": 1,
+      "lastAccessed": 1774254181062,
+      "type": "file"
+    },
+    {
+      "path": "content\\categories\\software-dev\\_index.md",
+      "accessCount": 1,
+      "lastAccessed": 1774254182209,
+      "type": "file"
+    },
+    {
+      "path": "content\\categories\\ai-automation\\_index.md",
+      "accessCount": 1,
+      "lastAccessed": 1774254183538,
+      "type": "file"
+    },
+    {
+      "path": "content\\categories\\tech-review\\_index.md",
+      "accessCount": 1,
+      "lastAccessed": 1774254184946,
+      "type": "file"
+    },
+    {
+      "path": "content\\categories\\engineering-life\\_index.md",
+      "accessCount": 1,
+      "lastAccessed": 1774254186144,
+      "type": "file"
+    },
+    {
+      "path": "content\\categories\\learning-log\\_index.md",
+      "accessCount": 1,
+      "lastAccessed": 1774254187327,
+      "type": "file"
+    },
+    {
+      "path": "content\\categories\\daily-log\\_index.md",
+      "accessCount": 1,
+      "lastAccessed": 1774254188573,
+      "type": "file"
+    },
+    {
+      "path": "content\\categories\\thinking\\_index.md",
+      "accessCount": 1,
+      "lastAccessed": 1774254189461,
+      "type": "file"
+    },
+    {
+      "path": "static\\images\\blog-automation-architecture.svg",
+      "accessCount": 1,
+      "lastAccessed": 1774255238948,
+      "type": "file"
+    },
+    {
+      "path": "static\\images\\gemini-post-generation-flow.svg",
+      "accessCount": 1,
+      "lastAccessed": 1774255329002,
+      "type": "file"
+    },
+    {
+      "path": "static\\images\\sveltia-cms-flow.svg",
+      "accessCount": 1,
+      "lastAccessed": 1774255354143,
+      "type": "file"
+    },
+    {
+      "path": "static\\images\\blog-automation-complete-pipeline.svg",
+      "accessCount": 1,
+      "lastAccessed": 1774255396934,
+      "type": "file"
+    },
+    {
+      "path": "static\\images\\esp32-ble-wifi-sensor-architecture.svg",
+      "accessCount": 1,
+      "lastAccessed": 1774268156319,
+      "type": "file"
+    },
+    {
+      "path": "static\\images\\kicad-pcb-design-workflow.svg",
+      "accessCount": 1,
+      "lastAccessed": 1774268178922,
+      "type": "file"
+    },
+    {
+      "path": "static\\images\\wpt-qi-charger-design.svg",
+      "accessCount": 1,
+      "lastAccessed": 1774268210704,
+      "type": "file"
+    },
+    {
+      "path": "static\\images\\cursor-vs-copilot-comparison.svg",
+      "accessCount": 1,
+      "lastAccessed": 1774268239291,
+      "type": "file"
+    },
+    {
+      "path": "static\\images\\obsidian-engineer-vault-structure.svg",
+      "accessCount": 1,
+      "lastAccessed": 1774268264212,
+      "type": "file"
+    },
+    {
+      "path": "static\\images\\code-review-culture-flow.svg",
+      "accessCount": 1,
+      "lastAccessed": 1774268293152,
+      "type": "file"
+    },
+    {
+      "path": "static\\images\\engineer-burnout-prevention-routine.svg",
+      "accessCount": 1,
+      "lastAccessed": 1774268317629,
+      "type": "file"
+    },
+    {
+      "path": "static\\images\\developer-english-learning-method.svg",
+      "accessCount": 1,
+      "lastAccessed": 1774268337897,
+      "type": "file"
+    },
+    {
+      "path": "static\\images\\tech-stack-2026-selection.svg",
+      "accessCount": 1,
+      "lastAccessed": 1774268360149,
+      "type": "file"
+    },
+    {
+      "path": "static\\images\\home-office-setup-engineer.svg",
+      "accessCount": 1,
+      "lastAccessed": 1774268391691,
+      "type": "file"
+    },
+    {
+      "path": "static\\images\\ai-era-engineer-role.svg",
+      "accessCount": 1,
+      "lastAccessed": 1774268414064,
+      "type": "file"
+    },
+    {
+      "path": "content\\posts\\2026-03-23-esp32-ble-wifi-iot-sensor.md",
+      "accessCount": 1,
+      "lastAccessed": 1774268494644,
+      "type": "file"
+    },
+    {
+      "path": "content\\posts\\2026-03-23-kicad-pcb-design-beginner.md",
+      "accessCount": 1,
+      "lastAccessed": 1774268578116,
+      "type": "file"
+    },
+    {
+      "path": "content\\posts\\2026-03-23-wpt-qi-charger-design.md",
+      "accessCount": 1,
+      "lastAccessed": 1774268669114,
+      "type": "file"
+    },
+    {
+      "path": "content\\posts\\2026-03-23-cursor-vs-github-copilot-review.md",
+      "accessCount": 1,
+      "lastAccessed": 1774268731655,
+      "type": "file"
+    },
+    {
+      "path": "content\\posts\\2026-03-23-obsidian-second-brain-engineer.md",
+      "accessCount": 1,
+      "lastAccessed": 1774268813812,
+      "type": "file"
+    },
+    {
+      "path": "content\\posts\\2026-03-23-code-review-culture.md",
+      "accessCount": 1,
+      "lastAccessed": 1774268888707,
+      "type": "file"
+    }
+  ],
+  "userDirectives": []
+}

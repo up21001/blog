@@ -1,0 +1,85 @@
+<svg width="800" height="450" xmlns="http://www.w3.org/2000/svg" font-family="'Malgun Gothic', sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#374151"/>
+    </marker>
+  </defs>
+  <rect width="800" height="450" fill="#F9FAFB" rx="12"/>
+  <text x="400" y="36" text-anchor="middle" font-size="20" font-weight="bold" fill="#1F2937">엔지니어의 Obsidian 볼트 구조</text>
+
+  <!-- Root vault -->
+  <rect x="330" y="55" width="140" height="48" rx="8" fill="#374151" stroke="#1F2937" stroke-width="2"/>
+  <text x="400" y="76" text-anchor="middle" font-size="13" font-weight="bold" fill="white">Engineer Vault</text>
+  <text x="400" y="94" text-anchor="middle" font-size="11" fill="#D1D5DB">로컬 Markdown 저장</text>
+
+  <!-- Branches -->
+  <!-- 00 Inbox -->
+  <rect x="20" y="155" width="130" height="60" rx="6" fill="#FEF3C7" stroke="#F59E0B" stroke-width="2"/>
+  <text x="85" y="178" text-anchor="middle" font-size="12" font-weight="bold" fill="#92400E">00 Inbox</text>
+  <text x="85" y="196" text-anchor="middle" font-size="10" fill="#374151">임시 캡처함</text>
+  <text x="85" y="209" text-anchor="middle" font-size="10" fill="#374151">일일 정리 필요</text>
+
+  <!-- 10 Projects -->
+  <rect x="175" y="155" width="130" height="60" rx="6" fill="#DBEAFE" stroke="#3B82F6" stroke-width="2"/>
+  <text x="240" y="178" text-anchor="middle" font-size="12" font-weight="bold" fill="#1D4ED8">10 Projects</text>
+  <text x="240" y="196" text-anchor="middle" font-size="10" fill="#374151">진행 중 프로젝트</text>
+  <text x="240" y="209" text-anchor="middle" font-size="10" fill="#374151">회의록 · 설계 노트</text>
+
+  <!-- 20 Areas -->
+  <rect x="335" y="155" width="130" height="60" rx="6" fill="#D1FAE5" stroke="#10B981" stroke-width="2"/>
+  <text x="400" y="178" text-anchor="middle" font-size="12" font-weight="bold" fill="#065F46">20 Areas</text>
+  <text x="400" y="196" text-anchor="middle" font-size="10" fill="#374151">책임 영역</text>
+  <text x="400" y="209" text-anchor="middle" font-size="10" fill="#374151">HW / SW / 팀 관리</text>
+
+  <!-- 30 Resources -->
+  <rect x="495" y="155" width="130" height="60" rx="6" fill="#EDE9FE" stroke="#8B5CF6" stroke-width="2"/>
+  <text x="560" y="178" text-anchor="middle" font-size="12" font-weight="bold" fill="#4C1D95">30 Resources</text>
+  <text x="560" y="196" text-anchor="middle" font-size="10" fill="#374151">기술 레퍼런스</text>
+  <text x="560" y="209" text-anchor="middle" font-size="10" fill="#374151">데이터시트 · 링크</text>
+
+  <!-- 40 Archive -->
+  <rect x="650" y="155" width="130" height="60" rx="6" fill="#F3F4F6" stroke="#6B7280" stroke-width="2"/>
+  <text x="715" y="178" text-anchor="middle" font-size="12" font-weight="bold" fill="#374151">40 Archive</text>
+  <text x="715" y="196" text-anchor="middle" font-size="10" fill="#374151">완료 프로젝트</text>
+  <text x="715" y="209" text-anchor="middle" font-size="10" fill="#374151">과거 기록 보관</text>
+
+  <!-- Sub-nodes under Projects -->
+  <rect x="155" y="270" width="110" height="48" rx="5" fill="#DBEAFE" stroke="#3B82F6" stroke-width="1.5" opacity="0.7"/>
+  <text x="210" y="291" text-anchor="middle" font-size="11" fill="#1D4ED8">IoT 센서 프로젝트</text>
+  <text x="210" y="307" text-anchor="middle" font-size="10" fill="#6B7280">ESP32 · PCB 설계</text>
+
+  <rect x="275" y="270" width="110" height="48" rx="5" fill="#DBEAFE" stroke="#3B82F6" stroke-width="1.5" opacity="0.7"/>
+  <text x="330" y="291" text-anchor="middle" font-size="11" fill="#1D4ED8">블로그 자동화</text>
+  <text x="330" y="307" text-anchor="middle" font-size="10" fill="#6B7280">Hugo · Cloudflare</text>
+
+  <!-- Sub-nodes under Areas -->
+  <rect x="335" y="270" width="110" height="48" rx="5" fill="#D1FAE5" stroke="#10B981" stroke-width="1.5" opacity="0.7"/>
+  <text x="390" y="291" text-anchor="middle" font-size="11" fill="#065F46">주간 리뷰 템플릿</text>
+  <text x="390" y="307" text-anchor="middle" font-size="10" fill="#6B7280">매주 일요일 실행</text>
+
+  <!-- Key plugins -->
+  <rect x="20" y="360" width="750" height="65" rx="8" fill="#374151" stroke="#1F2937" stroke-width="1.5"/>
+  <text x="400" y="381" text-anchor="middle" font-size="13" font-weight="bold" fill="white">핵심 플러그인 스택</text>
+  <text x="100" y="402" text-anchor="middle" font-size="11" fill="#D1FAE5">Dataview</text>
+  <text x="100" y="416" text-anchor="middle" font-size="10" fill="#9CA3AF">동적 쿼리</text>
+  <text x="230" y="402" text-anchor="middle" font-size="11" fill="#FEF3C7">Templater</text>
+  <text x="230" y="416" text-anchor="middle" font-size="10" fill="#9CA3AF">자동 템플릿</text>
+  <text x="360" y="402" text-anchor="middle" font-size="11" fill="#DBEAFE">Calendar</text>
+  <text x="360" y="416" text-anchor="middle" font-size="10" fill="#9CA3AF">일간 노트</text>
+  <text x="490" y="402" text-anchor="middle" font-size="11" fill="#EDE9FE">Excalidraw</text>
+  <text x="490" y="416" text-anchor="middle" font-size="10" fill="#9CA3AF">회로 스케치</text>
+  <text x="620" y="402" text-anchor="middle" font-size="11" fill="#D1FAE5">Git Backup</text>
+  <text x="620" y="416" text-anchor="middle" font-size="10" fill="#9CA3AF">자동 커밋</text>
+
+  <!-- Lines from vault to branches -->
+  <line x1="400" y1="103" x2="85" y2="153" stroke="#374151" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="400" y1="103" x2="240" y2="153" stroke="#374151" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="400" y1="103" x2="400" y2="153" stroke="#374151" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="400" y1="103" x2="560" y2="153" stroke="#374151" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="400" y1="103" x2="715" y2="153" stroke="#374151" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Lines from projects to sub-nodes -->
+  <line x1="240" y1="215" x2="210" y2="268" stroke="#3B82F6" stroke-width="1" stroke-dasharray="4,3" marker-end="url(#arrow)"/>
+  <line x1="240" y1="215" x2="330" y2="268" stroke="#3B82F6" stroke-width="1" stroke-dasharray="4,3" marker-end="url(#arrow)"/>
+  <line x1="400" y1="215" x2="390" y2="268" stroke="#10B981" stroke-width="1" stroke-dasharray="4,3" marker-end="url(#arrow)"/>
+</svg>

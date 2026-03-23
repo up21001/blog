@@ -1,0 +1,85 @@
+<svg width="800" height="450" xmlns="http://www.w3.org/2000/svg" font-family="'Malgun Gothic', sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#374151"/>
+    </marker>
+  </defs>
+  <rect width="800" height="450" fill="#F9FAFB" rx="12"/>
+  <text x="400" y="36" text-anchor="middle" font-size="20" font-weight="bold" fill="#1F2937">Cursor AI vs GitHub Copilot — 항목별 비교</text>
+
+  <!-- Header -->
+  <rect x="20" y="55" width="200" height="36" rx="4" fill="#F3F4F6" stroke="#6B7280" stroke-width="1"/>
+  <text x="120" y="78" text-anchor="middle" font-size="13" font-weight="bold" fill="#374151">비교 항목</text>
+  <rect x="225" y="55" width="260" height="36" rx="4" fill="#DBEAFE" stroke="#3B82F6" stroke-width="2"/>
+  <text x="355" y="78" text-anchor="middle" font-size="13" font-weight="bold" fill="#1D4ED8">Cursor AI</text>
+  <rect x="490" y="55" width="290" height="36" rx="4" fill="#D1FAE5" stroke="#10B981" stroke-width="2"/>
+  <text x="635" y="78" text-anchor="middle" font-size="13" font-weight="bold" fill="#065F46">GitHub Copilot</text>
+
+  <!-- Row 1 -->
+  <rect x="20" y="93" width="200" height="38" rx="0" fill="#F9FAFB" stroke="#E5E7EB" stroke-width="1"/>
+  <text x="120" y="117" text-anchor="middle" font-size="12" fill="#374151">가격 (월)</text>
+  <rect x="225" y="93" width="260" height="38" rx="0" fill="#DBEAFE" stroke="#E5E7EB" stroke-width="1" opacity="0.5"/>
+  <text x="355" y="117" text-anchor="middle" font-size="12" fill="#1D4ED8">$20/월 (Pro)</text>
+  <rect x="490" y="93" width="290" height="38" rx="0" fill="#D1FAE5" stroke="#E5E7EB" stroke-width="1" opacity="0.5"/>
+  <text x="635" y="117" text-anchor="middle" font-size="12" fill="#065F46">$10/월 (Pro)</text>
+
+  <!-- Row 2 -->
+  <rect x="20" y="132" width="200" height="38" rx="0" fill="#F9FAFB" stroke="#E5E7EB" stroke-width="1"/>
+  <text x="120" y="156" text-anchor="middle" font-size="12" fill="#374151">IDE 방식</text>
+  <rect x="225" y="132" width="260" height="38" rx="0" fill="#DBEAFE" stroke="#E5E7EB" stroke-width="1" opacity="0.5"/>
+  <text x="355" y="150" text-anchor="middle" font-size="11" fill="#1D4ED8">전용 IDE (VS Code 포크)</text>
+  <text x="355" y="165" text-anchor="middle" font-size="11" fill="#6B7280">설정/확장 자동 임포트</text>
+  <rect x="490" y="132" width="290" height="38" rx="0" fill="#D1FAE5" stroke="#E5E7EB" stroke-width="1" opacity="0.5"/>
+  <text x="635" y="150" text-anchor="middle" font-size="11" fill="#065F46">플러그인 방식</text>
+  <text x="635" y="165" text-anchor="middle" font-size="11" fill="#6B7280">VS Code, JetBrains, Vim 등</text>
+
+  <!-- Row 3 -->
+  <rect x="20" y="171" width="200" height="38" rx="0" fill="#F9FAFB" stroke="#E5E7EB" stroke-width="1"/>
+  <text x="120" y="195" text-anchor="middle" font-size="12" fill="#374151">멀티파일 편집</text>
+  <rect x="225" y="171" width="260" height="38" rx="0" fill="#DBEAFE" stroke="#E5E7EB" stroke-width="1" opacity="0.5"/>
+  <text x="355" y="189" text-anchor="middle" font-size="11" fill="#1D4ED8">Composer — 핵심 강점</text>
+  <text x="355" y="204" text-anchor="middle" font-size="11" fill="#6B7280">diff 미리보기 + 선택적 적용</text>
+  <rect x="490" y="171" width="290" height="38" rx="0" fill="#D1FAE5" stroke="#E5E7EB" stroke-width="1" opacity="0.5"/>
+  <text x="635" y="189" text-anchor="middle" font-size="11" fill="#065F46">Workspace Agent (제한적)</text>
+  <text x="635" y="204" text-anchor="middle" font-size="11" fill="#6B7280">파일 범위 좁을수록 정확</text>
+
+  <!-- Row 4 -->
+  <rect x="20" y="210" width="200" height="38" rx="0" fill="#F9FAFB" stroke="#E5E7EB" stroke-width="1"/>
+  <text x="120" y="234" text-anchor="middle" font-size="12" fill="#374151">지원 AI 모델</text>
+  <rect x="225" y="210" width="260" height="38" rx="0" fill="#DBEAFE" stroke="#E5E7EB" stroke-width="1" opacity="0.5"/>
+  <text x="355" y="228" text-anchor="middle" font-size="11" fill="#1D4ED8">GPT-4o, Claude Sonnet/Opus</text>
+  <text x="355" y="243" text-anchor="middle" font-size="11" fill="#6B7280">Gemini 3 Pro, Grok Code</text>
+  <rect x="490" y="210" width="290" height="38" rx="0" fill="#D1FAE5" stroke="#E5E7EB" stroke-width="1" opacity="0.5"/>
+  <text x="635" y="228" text-anchor="middle" font-size="11" fill="#065F46">GPT-4o (기본)</text>
+  <text x="635" y="243" text-anchor="middle" font-size="11" fill="#6B7280">Claude Sonnet, Gemini 2.5</text>
+
+  <!-- Row 5 -->
+  <rect x="20" y="249" width="200" height="38" rx="0" fill="#F9FAFB" stroke="#E5E7EB" stroke-width="1"/>
+  <text x="120" y="273" text-anchor="middle" font-size="12" fill="#374151">코드베이스 이해</text>
+  <rect x="225" y="249" width="260" height="38" rx="0" fill="#DBEAFE" stroke="#E5E7EB" stroke-width="1" opacity="0.5"/>
+  <text x="355" y="267" text-anchor="middle" font-size="11" fill="#1D4ED8">@codebase 전체 인덱싱</text>
+  <text x="355" y="282" text-anchor="middle" font-size="11" fill="#6B7280">대규모 모노레포에 강함</text>
+  <rect x="490" y="249" width="290" height="38" rx="0" fill="#D1FAE5" stroke="#E5E7EB" stroke-width="1" opacity="0.5"/>
+  <text x="635" y="267" text-anchor="middle" font-size="11" fill="#065F46">열린 파일 + 주변 컨텍스트</text>
+  <text x="635" y="282" text-anchor="middle" font-size="11" fill="#6B7280">빠른 인라인 완성에 최적</text>
+
+  <!-- Row 6 -->
+  <rect x="20" y="288" width="200" height="38" rx="0" fill="#F9FAFB" stroke="#E5E7EB" stroke-width="1"/>
+  <text x="120" y="312" text-anchor="middle" font-size="12" fill="#374151">GitHub 연동</text>
+  <rect x="225" y="288" width="260" height="38" rx="0" fill="#DBEAFE" stroke="#E5E7EB" stroke-width="1" opacity="0.5"/>
+  <text x="355" y="312" text-anchor="middle" font-size="11" fill="#374151">별도 설정 필요</text>
+  <rect x="490" y="288" width="290" height="38" rx="0" fill="#D1FAE5" stroke="#E5E7EB" stroke-width="1" opacity="0.5"/>
+  <text x="635" y="306" text-anchor="middle" font-size="11" fill="#065F46">PR 요약, Issue 연동 내장</text>
+  <text x="635" y="321" text-anchor="middle" font-size="11" fill="#6B7280">GitHub Actions 통합</text>
+
+  <!-- Verdict -->
+  <rect x="20" y="345" width="340" height="70" rx="8" fill="#DBEAFE" stroke="#3B82F6" stroke-width="2"/>
+  <text x="190" y="368" text-anchor="middle" font-size="12" font-weight="bold" fill="#1D4ED8">Cursor 추천 상황</text>
+  <text x="190" y="386" text-anchor="middle" font-size="11" fill="#374151">대규모 리팩토링 · 신규 기능 전체 구현</text>
+  <text x="190" y="403" text-anchor="middle" font-size="11" fill="#374151">아키텍처 이해가 필요한 작업</text>
+
+  <rect x="440" y="345" width="340" height="70" rx="8" fill="#D1FAE5" stroke="#10B981" stroke-width="2"/>
+  <text x="610" y="368" text-anchor="middle" font-size="12" font-weight="bold" fill="#065F46">Copilot 추천 상황</text>
+  <text x="610" y="386" text-anchor="middle" font-size="11" fill="#374151">JetBrains 사용자 · GitHub 중심 팀</text>
+  <text x="610" y="403" text-anchor="middle" font-size="11" fill="#374151">비용 절감 우선 · 빠른 인라인 완성</text>
+</svg>
