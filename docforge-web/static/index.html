@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DocForge — 주제만 넣으면 문서 생성</title>
+  <link rel="stylesheet" href="/static/style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
+</head>
+<body>
+  <div class="layout">
+    <header class="header">
+      <p class="nav-edit">
+        <a href="edit" data-app-edit="1">프롬프트 편집</a> — 문서 템플릿·주제 문구·<strong>삽화 영문 프롬프트</strong> (이미지 생성 시 사용)
+      </p>
+      <h1>DocForge</h1>
+      <p class="tagline">
+        주제만 입력하면 마크다운 문서를 만들고, 선택 시 삽화 이미지와 SVG까지 생성합니다.
+        <span class="tagline-models">텍스트: <code>gemini-2.5-flash</code> · 이미지: Imagen 4 → Imagen 4 Fast → Gemini 2.5 Flash Image (순차 폴백)</span>
+      </p>
+      <p id="healthLine" class="health"></p>
+      <p id="contentTargetLine" class="content-target meta" hidden></p>
+      <div id="modelsPanel" class="models-panel" hidden></div>
+    </header>
+
+    <main class="panel">
+      <form id="form" class="form">
+        <label for="topic">주제</label>
+        <textarea id="topic" name="topic" rows="4" placeholder="예: Docker Compose로 로컬 개발 환경 구축하기" required></textarea>
+
+        <div class="row row-3col">
+          <div class="field">
+            <label for="template">템플릿</label>
+            <select id="template" name="template">
+              <option value="blog">기술 블로그 (Hugo 프론트매터)</option>
+              <option value="tutorial">튜토리얼 (단계별 실습)</option>
+              <option value="review">도구·서비스 리뷰</option>
+              <option value="comparison">비교 분석 (표 중심)</option>
+              <option value="troubleshoot">트러블슈팅 가이드</option>
+              <option value="news">기술 뉴스·트렌드 분석</option>
+              <option value="prompt_eng">프롬프트 엔지니어링 가이드</option>
+              <option value="weekly">주간 개발 일지</option>
+              <option value="philosophy">철학 에세이 (토론형 구조)</option>
+              <option value="plain">일반 문서 (개요·상세·요약)</option>
+            </select>
+          </div>
+          <div class="field check">
+            <label>
+              <input type="checkbox" id="withImages" name="withImages" />
+              이미지 생성
+            </label>
+            <label for="maxImages">최대 장수</label>
+            <input type="number" id="maxImages" name="maxImages" min="0" max="4" value="2" />
+          </div>
+          <div class="field check">
+            <label>
+              <input type="checkbox" id="withSvg" name="withSvg" />
+              SVG 에셋 생성
+            </label>
+            <label for="maxSvg">최대 개수</label>
+            <input type="number" id="maxSvg" name="maxSvg" min="0" max="6" value="2" />
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="lengthTier">목표 분량</label>
+          <select id="lengthTier" name="lengthTier">
+            <option value="short">짧게 (핵심 위주)</option>
+            <option value="medium" selected>보통</option>
+            <option value="long">길게 (상세)</option>
+            <option value="very_long">매우 길게 (장문)</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="imageHints">이미지 힌트 (선택)</label>
+          <textarea id="imageHints" name="imageHints" rows="2" placeholder="예: 다이어그램보다 사진 느낌, 어두운 톤"></textarea>
+        </div>
+
+        <div class="field category-field">
+          <label for="publishSubfolder">저장할 카테고리 (<code>content/posts</code> 하위)</label>
+          <select id="publishSubfolder" name="publishSubfolder">
+            <option value="">(루트 — posts 바로 아래)</option>
+          </select>
+        </div>
+
+        <button type="submit" id="submitBtn" class="btn primary">생성</button>
+      </form>
+
+      <div class="divider-or"><span>또는</span></div>
+
+      <div class="alt-actions">
+        <form id="importForm" class="form import-form">
+          <label for="importUrl">URL 임포트 — 웹페이지를 가져와 글은 다듬고, 이미지는 그대로</label>
+          <div class="import-row">
+            <input type="url" id="importUrl" placeholder="https://example.com/article" required />
+            <button type="submit" id="importBtn" class="btn btn-import">가져오기</button>
+          </div>
+        </form>
+
+        <div class="divider-or"><span>또는</span></div>
+
+        <div class="open-post-section">
+          <label>기존 글 열기 — 저장된 포스트를 불러와 편집</label>
+          <div class="open-post-row">
+            <select id="openPostCategory">
+              <option value="">카테고리 선택</option>
+            </select>
+            <select id="openPostFile" disabled>
+              <option value="">파일 선택</option>
+            </select>
+            <button type="button" id="btnOpenPost" class="btn btn-open" disabled>열기</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="error" class="error" hidden></div>
+      <div id="loading" class="loading" hidden>
+        <span class="spinner"></span>
+        <span id="loadingText">생성 중… 잠시만 기다려 주세요.</span>
+      </div>
+    </main>
+
+    <!-- ── 결과 ── -->
+    <section id="result" class="result" hidden>
+      <div class="workflow-bar" role="status">
+        <span class="step done" data-wf="1">① 생성</span>
+        <span class="wf-arrow">→</span>
+        <span class="step active" data-wf="2">② 편집</span>
+        <span class="wf-arrow">→</span>
+        <span class="step" data-wf="3">③ 저장</span>
+      </div>
+
+      <div class="regen-bar">
+        <span class="regen-label">전체 재생성:</span>
+        <button type="button" class="btn btn-regen" id="btnRegenFull">🔄 전체</button>
+        <button type="button" class="btn btn-regen" id="btnRegenTextOnly">📝 텍스트만</button>
+        <select id="toneSelect" class="tone-select">
+          <option value="">톤 변경…</option>
+          <option value="formal">격식체</option>
+          <option value="casual">구어체</option>
+          <option value="academic">학술체</option>
+          <option value="simple">쉽게 설명</option>
+        </select>
+        <button type="button" class="btn btn-regen" id="btnRegenTone">✏️ 적용</button>
+      </div>
+
+      <!-- 에셋 카드 그리드 -->
+      <div id="assetSection" class="asset-section" hidden>
+        <div class="asset-section-header">
+          <h3>에셋 <span id="assetCount" class="muted"></span></h3>
+          <div class="asset-add-bar">
+            <button type="button" id="btnAddImage" class="btn btn-sm">+ 이미지</button>
+            <button type="button" id="btnAddSvg" class="btn btn-sm">+ SVG</button>
+          </div>
+        </div>
+        <div id="assetGrid" class="asset-grid"></div>
+
+        <!-- 이미지 추가 폼 -->
+        <div id="addImageForm" class="add-asset-form" hidden>
+          <label>이미지 프롬프트 (영문)</label>
+          <textarea id="addImagePrompt" rows="2" placeholder="e.g. A clean diagram showing microservice architecture"></textarea>
+          <div class="add-asset-actions">
+            <button type="button" id="btnAddImageSubmit" class="btn btn-sm primary">생성</button>
+            <button type="button" id="btnAddImageCancel" class="btn btn-sm">취소</button>
+          </div>
+        </div>
+
+        <!-- SVG 추가 폼 -->
+        <div id="addSvgForm" class="add-asset-form" hidden>
+          <label>SVG 설명</label>
+          <textarea id="addSvgDesc" rows="2" placeholder="예: 마이크로서비스 아키텍처 다이어그램"></textarea>
+          <div class="add-asset-row">
+            <select id="addSvgType">
+              <option value="architecture">아키텍처</option>
+              <option value="infographic">인포그래픽</option>
+              <option value="icon">아이콘</option>
+            </select>
+            <select id="addSvgStyle">
+              <option value="modern">모던</option>
+              <option value="minimal">미니멀</option>
+              <option value="colorful">컬러풀</option>
+              <option value="dark">다크</option>
+            </select>
+          </div>
+          <div class="add-asset-actions">
+            <button type="button" id="btnAddSvgSubmit" class="btn btn-sm primary">생성</button>
+            <button type="button" id="btnAddSvgCancel" class="btn btn-sm">취소</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 본문 -->
+      <div class="result-head">
+        <h2>본문</h2>
+        <div class="actions">
+          <button type="button" id="btnCopy" class="btn">마크다운 복사</button>
+          <button type="button" id="btnMd" class="btn">.md 다운로드</button>
+          <button type="button" id="btnZip" class="btn">ZIP (md + 에셋)</button>
+        </div>
+      </div>
+      <p id="meta" class="meta"></p>
+
+      <div class="tabs" role="tablist">
+        <button type="button" class="tab active" id="tabPreview" role="tab" data-tab="preview">미리보기</button>
+        <button type="button" class="tab" id="tabEditor" role="tab" data-tab="editor">마크다운 편집</button>
+      </div>
+      <div id="panelPreview" class="tab-panel" role="tabpanel">
+        <article id="preview" class="preview prose"></article>
+      </div>
+      <div id="panelEditor" class="tab-panel" hidden role="tabpanel">
+        <textarea id="mdEditor" class="md-editor" rows="22" spellcheck="false"></textarea>
+      </div>
+
+      <!-- 저장 -->
+      <div class="publish-block">
+        <p id="publishCategoryRecap" class="meta publish-category-recap" hidden></p>
+        <label for="publishFilename">파일명</label>
+        <div class="publish-filename-row">
+          <input type="text" id="publishFilename" name="publishFilename" autocomplete="off" placeholder="예: 2025-03-23-my-post.md" />
+        </div>
+        <div class="publish-row">
+          <button type="button" id="btnPublish" class="btn btn-publish primary">선택한 폴더에 저장</button>
+          <a href="edit" data-app-edit="1" target="_blank" rel="noopener" class="btn">프롬프트 편집</a>
+          <button type="button" id="btnRegenerate" class="btn">현재 조건으로 다시 생성</button>
+        </div>
+        <p id="publishStatus" class="meta publish-status"></p>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <span>서버에 <code>GEMINI_API_KEY</code> 필요 · 텍스트 <code>gemini-2.5-flash</code> · 이미지 <code>imagen-4.0-*</code> → <code>gemini-2.5-flash-image</code></span>
+    </footer>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js"></script>
+  <script src="/static/app.js?v=8"></script>
+</body>
+</html>
