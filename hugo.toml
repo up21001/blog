@@ -16,7 +16,7 @@ enableRobotsTXT = true
 
 [params.verification]
   google = "dUlA-mHlZxD1WkU1NXY2THAW5fT5Oa0Kmw6IM6jF1Bw"
-  bing = ""
+  bing = "2A34F9D8910EAE2FB3B6D41CCA337145"
   defaultAppearance = "light"
   autoSwitchAppearance = true
   enableSearch = true
