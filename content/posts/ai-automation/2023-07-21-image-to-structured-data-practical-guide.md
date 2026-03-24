@@ -8,7 +8,7 @@ categories: ["ai-automation"]
 tags: ["Image Extraction", "Structured Outputs", "Vision API", "OCR", "Document AI", "Metadata", "AI Automation"]
 series: ["AI Data Infrastructure 2026"]
 featureimage: "/images/image-to-structured-data-workflow-2026.svg"
-draft: true
+draft: false
 ---
 
 이미지를 구조화 데이터로 바꾸는 일은 실무에서 생각보다 자주 필요합니다. 영수증, 명함, 스크린샷, 제품 사진, 표 캡처 같은 입력을 그대로 저장하면 검색과 자동화에 쓸 수 없습니다. 결국 필요한 것은 `JSON`입니다.

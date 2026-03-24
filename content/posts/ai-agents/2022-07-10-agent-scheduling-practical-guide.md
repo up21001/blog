@@ -8,7 +8,7 @@ categories: ["ai-agents"]
 tags: ["Agent Scheduling", "AI Agent", "Scheduling", "Workflow", "Temporal", "Trigger.dev", "LangGraph"]
 series: ["AI Agent Operations 2026"]
 featureimage: "/images/agent-scheduling-workflow-2026.svg"
-draft: true
+draft: false
 ---
 
 `Agent Scheduling`은 에이전트가 언제 실행될지, 어떤 순서로 실행될지, 어떤 조건에서 지연 또는 예약될지를 정하는 방식입니다. 큐가 "들어온 일을 쌓아 두는 곳"이라면 스케줄링은 "언제 어떤 일을 꺼낼지"를 결정하는 계층입니다.

@@ -7,7 +7,7 @@ slug: "secret-management-for-agents-practical-guide"
 categories: ["ai-automation"]
 tags: ["Secret Management", "Secrets", "AI Agent", "API Keys", "Vault", "Security"]
 featureimage: "/images/secret-management-for-agents-workflow-2026.svg"
-draft: true
+draft: false
 ---
 
 ![Secret Management for Agents](/images/secret-management-for-agents-workflow-2026.svg)

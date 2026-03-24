@@ -8,7 +8,7 @@ categories: ["software-dev"]
 tags: ["Embeddings", "Vector Storage", "Metadata", "Qdrant", "RAG", "Schema Design", "Reindexing"]
 series: ["Vector Database 2026"]
 featureimage: "/images/embedding-storage-design-workflow-2026.svg"
-draft: true
+draft: false
 ---
 
 Embedding Storage Design은 "벡터를 어디에 넣을지"만의 문제가 아닙니다. 원문, chunk, metadata, embedding version, 재색인 시점까지 같이 설계해야 나중에 운영이 편합니다.

@@ -1,7 +1,7 @@
 ---
 title: "Retrieval A/B Testing이란 무엇인가: 검색 전략을 안전하게 비교하는 실무 가이드"
 date: 2024-04-05T08:00:00+09:00
-draft: true
+draft: false
 description: "RAG 검색 전략을 A/B 테스트로 비교하는 방법을 정리한 실무 가이드입니다."
 slug: "retrieval-ab-testing-practical-guide"
 categories: ["software-dev"]

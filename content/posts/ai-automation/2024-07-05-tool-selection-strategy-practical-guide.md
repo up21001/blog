@@ -8,7 +8,7 @@ categories: ["ai-automation"]
 tags: ["Tool Selection", "AI Agent", "MCP", "Tool Calling", "OpenAI Responses API", "Anthropic Tool Use", "Agent Orchestration"]
 featureimage: "/images/tool-selection-strategy-workflow-2026.svg"
 series: ["AI Agent Tooling 2026"]
-draft: true
+draft: false
 ---
 
 도구가 많아질수록 문제는 “무엇을 만들 것인가”보다 “무엇을 먼저 붙일 것인가”로 바뀝니다. Tool Selection Strategy는 에이전트의 비용, 속도, 안정성을 결정하는 우선순위 설계입니다.

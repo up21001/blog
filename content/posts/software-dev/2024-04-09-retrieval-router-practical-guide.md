@@ -8,7 +8,7 @@ categories: ["software-dev"]
 tags: ["Retrieval Router", "RAG", "Routing", "Hybrid Search", "Tavily", "Exa", "Vector Search"]
 series: ["RAG Routing 2026"]
 featureimage: "/images/retrieval-router-workflow-2026.svg"
-draft: true
+draft: false
 ---
 
 Retrieval Router는 질문에 맞는 검색 소스를 자동으로 고르는 계층입니다. 단순히 검색을 한번 더 하는 장치가 아니라, 어떤 데이터셋을 우선할지와 어떤 검색 전략이 더 적합한지를 결정하는 게 핵심입니다.

@@ -6,7 +6,7 @@ slug: "agent-event-schema-practical-guide"
 categories: ["ai-agents"]
 tags: ["Agent Event Schema", "Tracing", "Event Design", "Observability", "AI Audit Log", "OpenTelemetry", "Schema Design"]
 featureimage: "/images/agent-event-schema-workflow-2026.svg"
-draft: true
+draft: false
 ---
 
 Agent Event Schema는 에이전트가 무엇을 했는지, 왜 그렇게 했는지, 어디서 실패했는지를 일관된 필드로 남기는 규칙입니다. 스키마가 없으면 이벤트는 쌓여도 비교가 어렵고, 재현과 디버깅이 느려집니다.

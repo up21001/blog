@@ -8,7 +8,7 @@ categories: ["prompt-engineering"]
 tags: ["System Prompt", "Prompt Design", "LLM Safety", "Prompt Governance", "AI Agent", "Structured Outputs"]
 featureimage: "/images/system-prompt-design-workflow-2026.svg"
 series: ["Prompt Operations 2026"]
-draft: true
+draft: false
 ---
 
 ![System Prompt Design workflow](/images/system-prompt-design-workflow-2026.svg)

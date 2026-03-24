@@ -8,7 +8,7 @@ categories: ["software-dev"]
 tags: ["RAG", "Query Routing", "Hybrid Search", "Tavily", "Exa", "Retrieval", "Search"]
 series: ["RAG Routing 2026"]
 featureimage: "/images/rag-query-routing-workflow-2026.svg"
-draft: true
+draft: false
 ---
 
 RAG Query Routing은 질문을 받자마자 하나의 검색 경로만 고집하지 않고, 의도에 따라 다른 검색 경로를 고르는 방식입니다. 예를 들어 내부 문서 검색이 맞는 질문과 외부 웹 검색이 필요한 질문은 같은 파이프라인으로 처리하면 비용과 정확도 모두 손해를 봅니다.

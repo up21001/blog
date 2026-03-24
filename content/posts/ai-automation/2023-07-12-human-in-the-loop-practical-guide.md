@@ -8,7 +8,7 @@ categories: ["ai-automation"]
 tags: ["Human in the Loop", "AI Agent", "Review Gate", "Approval Flow", "LangGraph", "OpenAI Agents SDK"]
 series: ["AI Agent Tooling 2026"]
 featureimage: "/images/human-in-the-loop-workflow-2026.svg"
-draft: true
+draft: false
 ---
 
 `Human in the Loop`는 에이전트가 모든 결정을 자동으로 내리지 않고, 중요한 순간에 사람의 판단을 끼워 넣는 방식입니다. 실제 운영에서는 이 구조가 품질과 안전을 가장 빠르게 끌어올립니다.

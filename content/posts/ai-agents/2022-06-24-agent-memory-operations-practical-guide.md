@@ -8,7 +8,7 @@ categories: ["ai-agents"]
 tags: ["Agent Memory", "Memory Operations", "LLM Memory", "Mem0", "LangGraph", "Semantic Cache", "AI Agent"]
 series: ["AI Agent Tooling 2026"]
 featureimage: "/images/agent-memory-operations-workflow-2026.svg"
-draft: true
+draft: false
 ---
 
 `Agent Memory Operations`는 AI 에이전트가 기억을 저장하는 기능이 아니라, 기억을 언제 쓰고 언제 갱신하고 언제 지울지까지 운영하는 방식입니다. 검색으로는 [Agent Memory](./2026-03-24-agent-memory-practical-guide.md), [Memory Layer Architecture](./2026-03-24-memory-layer-architecture-practical-guide.md), [Mem0](./2026-03-24-mem0-practical-guide.md), [Semantic Cache](./2026-03-24-semantic-cache-practical-guide.md)를 함께 보면 연결이 빨라집니다.

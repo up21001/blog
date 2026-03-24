@@ -8,7 +8,7 @@ categories: ["ai-automation"]
 tags: ["Multimodal", "Document Understanding", "OCR", "Vision API", "Structured Outputs", "Document AI", "AI Automation"]
 series: ["AI Data Infrastructure 2026"]
 featureimage: "/images/multimodal-document-understanding-workflow-2026.svg"
-draft: true
+draft: false
 ---
 
 멀티모달 문서 이해는 PDF를 읽는 것이 아니라 문서의 구조를 읽는 작업입니다. 표, 도장, 체크박스, 캡처, 스캔 품질 저하 같은 변수를 함께 처리해야 해서 일반 OCR만으로는 한계가 있습니다.

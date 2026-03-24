@@ -8,7 +8,7 @@ categories: ["ai-automation"]
 tags: ["Web Session Isolation", "Browser Automation", "Session Management", "AI Agent", "Cookies", "Security", "Playwright"]
 series: ["AI Agent Tooling 2026"]
 featureimage: "/images/web-session-isolation-workflow-2026.svg"
-draft: true
+draft: false
 ---
 
 Web Session Isolation은 여러 작업이 동시에 돌 때 브라우저 세션이 섞이지 않도록 분리하는 방식입니다. 운영 관점에서는 로그인 상태, 쿠키, 로컬 스토리지, 캐시를 작업 경계로 나누는 것이 핵심입니다.

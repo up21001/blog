@@ -8,7 +8,7 @@ categories: ["ai-agents"]
 tags: ["Agent Workload Balancing", "AI Agent", "Load Balancing", "Workflow", "Multi Agent", "Queue", "Observability"]
 series: ["AI Agent Operations 2026"]
 featureimage: "/images/agent-workload-balancing-workflow-2026.svg"
-draft: true
+draft: false
 ---
 
 `Agent Workload Balancing`은 여러 에이전트에 작업을 고르게 나누고, 특정 에이전트가 과부하에 걸리지 않도록 조정하는 방식입니다. 멀티 에이전트 시스템이 커질수록 한쪽에 일이 몰리는 문제가 자주 생깁니다.

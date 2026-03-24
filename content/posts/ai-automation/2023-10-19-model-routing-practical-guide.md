@@ -8,7 +8,7 @@ categories: ["ai-automation"]
 tags: ["Model Routing", "AI Gateway", "Fallback Routing", "LiteLLM", "OpenRouter", "Portkey", "Helicone"]
 series: ["AI Gateway and Routing 2026"]
 featureimage: "/images/model-routing-workflow-2026.svg"
-draft: true
+draft: false
 ---
 
 `모델 라우팅`은 요청마다 적절한 LLM을 고르고, 실패 시 다른 모델로 넘기며, 비용과 품질을 함께 관리하는 운영 방식입니다. 여러 공급자를 쓰는 팀일수록 모델 라우팅은 선택이 아니라 기본 인프라에 가깝습니다.

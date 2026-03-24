@@ -8,7 +8,7 @@ categories: ["mcp"]
 tags: ["MCP", "Failover", "Fallback", "Remote MCP", "Latency Budget", "Reliability", "AI Agent"]
 series: ["AI Agent Tooling 2026"]
 featureimage: "/images/mcp-failover-strategy-workflow-2026.svg"
-draft: true
+draft: false
 ---
 
 MCP failover 전략은 "실패하면 다른 곳으로 넘긴다"보다 더 구체적이어야 합니다. 어떤 오류에서 전환할지, 어느 단계까지 자동화할지, 전환 뒤 품질을 어떻게 보장할지까지 정해야 운영이 됩니다.

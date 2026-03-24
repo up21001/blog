@@ -8,7 +8,7 @@ categories: ["ai-automation"]
 tags: ["Voice Bot", "Latency", "Realtime", "STT", "LLM", "TTS", "Optimization", "Voice AI"]
 series: ["AI Voice Stack 2026"]
 featureimage: "/images/voice-bot-latency-optimization-workflow-2026.svg"
-draft: true
+draft: false
 ---
 
 `Voice Bot Latency Optimization`은 음성 봇의 대화 응답 시간을 줄이는 작업입니다. 음성 시스템은 텍스트 시스템보다 지연에 훨씬 민감해서, 1초 차이만으로도 자연스러움이 크게 달라집니다.

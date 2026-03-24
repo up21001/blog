@@ -8,7 +8,7 @@ categories: ["ai-automation"]
 tags: ["Vision API", "Multimodal", "Image Understanding", "OCR", "Structured Outputs", "AI Automation", "Document AI"]
 series: ["AI Data Infrastructure 2026"]
 featureimage: "/images/vision-api-workflow-2026.svg"
-draft: true
+draft: false
 ---
 
 `Vision API`는 이미지를 단순히 "보는" 기능이 아니라, 이미지 안의 의미를 읽고 다음 자동화 단계로 넘기는 입구입니다. 스크린샷 분류, 현장 사진 판독, 표 캡처, 손글씨 보조 판독처럼 텍스트만으로는 부족한 업무에서 가치가 큽니다.

@@ -8,7 +8,7 @@ categories: ["ai-agents"]
 tags: ["Screen Understanding", "Computer Use", "Browser Automation", "Vision API", "OpenAI Computer Use", "OCR", "AI Agent"]
 series: ["Multimodal Agents 2026"]
 featureimage: "/images/screen-understanding-agent-workflow-2026.svg"
-draft: true
+draft: false
 ---
 
 `Screen Understanding Agent`는 화면을 캡처하고, 그 화면의 의미를 이해한 뒤, 다음 행동을 결정하는 에이전트입니다. 브라우저 자동화, 데스크톱 보조, QA, 업무 운영 자동화에서 가장 자주 등장하는 패턴 중 하나입니다.

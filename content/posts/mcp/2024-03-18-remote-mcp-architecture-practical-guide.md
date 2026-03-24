@@ -8,7 +8,7 @@ categories: ["mcp"]
 tags: ["Remote MCP", "MCP Architecture", "AI Agent", "Tool Calling", "Cloudflare", "FastMCP", "Durable Objects", "Gateway"]
 series: ["AI Agent Tooling 2026"]
 featureimage: "/images/remote-mcp-architecture-workflow-2026.svg"
-draft: true
+draft: false
 ---
 
 Remote MCP를 제대로 쓰려면 서버 하나만 띄우는 것으로는 부족합니다. 실무에서는 에이전트, MCP 서버, 게이트웨이, 상태 저장 계층, 관측성까지 함께 설계해야 합니다.

@@ -8,7 +8,7 @@ categories: ["software-dev"]
 tags: ["Qdrant", "Vector Database", "HNSW", "RAG", "Similarity Search", "Embeddings", "Open Source"]
 series: ["Vector Database 2026"]
 featureimage: "/images/qdrant-workflow-2026.svg"
-draft: true
+draft: false
 ---
 
 `Qdrant`는 2026년에도 가장 많이 언급되는 오픈소스 벡터 데이터베이스 중 하나입니다. 임베딩을 저장하고, 유사도 검색을 빠르게 수행하고, 필터 조건까지 함께 다루려는 팀에게 특히 잘 맞습니다. 단순히 "벡터를 넣는 DB"가 아니라, 검색 품질과 운영 편의성을 같이 잡으려는 실무 환경에서 선택지가 됩니다.

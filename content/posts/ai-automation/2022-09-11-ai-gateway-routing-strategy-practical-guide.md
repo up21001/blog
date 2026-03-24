@@ -8,7 +8,7 @@ categories: ["ai-automation"]
 tags: ["AI Gateway", "Routing Strategy", "LiteLLM", "Portkey", "Helicone", "OpenRouter", "Fallback Routing"]
 series: ["AI Gateway and Routing 2026"]
 featureimage: "/images/ai-gateway-routing-strategy-workflow-2026.svg"
-draft: true
+draft: false
 ---
 
 `AI 게이트웨이`는 여러 모델 공급자를 직접 연결하지 않고, 하나의 정책 계층을 사이에 두고 요청을 라우팅하는 방식입니다. 팀이 커질수록 이 방식이 유지보수와 통제 면에서 유리합니다.

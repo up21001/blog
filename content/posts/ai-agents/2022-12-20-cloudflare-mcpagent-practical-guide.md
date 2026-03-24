@@ -8,7 +8,7 @@ categories: ["ai-agents"]
 tags: ["Cloudflare Agents", "MCP", "Remote MCP", "Cloudflare MCPAgent", "Durable Objects", "Workers", "AI 에이전트", "Tool Calling"]
 series: ["AI Agent Tooling 2026"]
 featureimage: "/images/cloudflare-mcpagent-workflow-2026.svg"
-draft: true
+draft: false
 ---
 
 Cloudflare MCPAgent는 공식 제품명이라기보다, `Cloudflare Agents + Remote MCP + Durable Objects`를 묶어 생각할 때 유용한 실무 개념입니다. 핵심은 단순합니다. 에이전트의 상태는 Cloudflare에 두고, 외부 도구는 MCP 서버로 분리해서 연결하는 방식입니다.

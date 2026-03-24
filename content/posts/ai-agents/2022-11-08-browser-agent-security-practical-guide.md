@@ -8,7 +8,7 @@ categories: ["ai-agents"]
 tags: ["Browser Agent Security", "Browser Automation", "Session Isolation", "AI Agent", "Web Security", "OpenAI Computer Use", "Playwright"]
 series: ["AI Agent Tooling 2026"]
 featureimage: "/images/browser-agent-security-workflow-2026.svg"
-draft: true
+draft: false
 ---
 
 Browser Agent는 편리하지만, 보안 경계가 없으면 계정 탈취, 쿠키 유출, 잘못된 클릭 같은 문제가 바로 운영 사고로 이어집니다. 이 글은 브라우저 자동화에서 보안을 어떻게 분리하고, 어떤 기준으로 권한을 줄이며, 어디에 human-in-the-loop를 넣어야 하는지 정리합니다.

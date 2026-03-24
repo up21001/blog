@@ -8,7 +8,7 @@ categories: ["ai-automation"]
 tags: ["Function Calling", "JSON Schema", "Structured Outputs", "Tool Calling", "OpenAI API", "Anthropic Tool Use"]
 featureimage: "/images/function-calling-schema-design-workflow-2026.svg"
 series: ["AI Agent Tooling 2026"]
-draft: true
+draft: false
 ---
 
 Function Calling의 품질은 모델보다 스키마에서 먼저 결정됩니다. 입력 필드가 모호하면 모델은 자주 흔들리고, 느슨한 스키마는 결국 후처리 코드와 예외 처리만 늘립니다.

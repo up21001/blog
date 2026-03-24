@@ -8,7 +8,7 @@ categories: ["ai-agents"]
 tags: ["Agent Failure Patterns", "AI Agent", "Tool Calling", "Retry Strategy", "OpenAI Agent Evals", "Agent Debugging", "Human in the Loop"]
 featureimage: "/images/agent-failure-patterns-workflow-2026.svg"
 series: ["AI Agent Reliability 2026"]
-draft: true
+draft: false
 ---
 
 AI 에이전트는 한 번만 잘 동작하는 시스템이 아니라, 계속 실패를 분류하고 복구하는 시스템으로 봐야 합니다. 겉으로는 같은 요청처럼 보여도, 실제로는 도구 호출 실패, 상태 꼬임, 출력 형식 붕괴, 과도한 재시도 같은 문제가 자주 섞여 있습니다.

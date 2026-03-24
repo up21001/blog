@@ -8,7 +8,7 @@ categories: ["software-dev"]
 tags: ["Semantic Cache", "Cache Invalidation", "TTL", "Versioning", "RAG", "Operations", "Cost Optimization"]
 series: ["RAG Operations 2026"]
 featureimage: "/images/semantic-cache-invalidation-workflow-2026.svg"
-draft: true
+draft: false
 ---
 
 Semantic cache는 잘 맞으면 강력하지만, 무효화가 없으면 위험합니다. 오래된 답변이 계속 재사용되면 사용자는 "빨라졌지만 틀린 시스템"을 만나게 됩니다.

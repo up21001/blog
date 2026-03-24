@@ -8,7 +8,7 @@ categories: ["prompt-engineering"]
 tags: ["Prompt Ops", "Prompt Engineering", "Prompt Governance", "Prompt Versioning", "AI Operations", "LLM"]
 featureimage: "/images/prompt-ops-workflow-2026.svg"
 series: ["Prompt Operations 2026"]
-draft: true
+draft: false
 ---
 
 ![Prompt Ops workflow](/images/prompt-ops-workflow-2026.svg)

@@ -1,7 +1,7 @@
 ---
 title: "RAG 실험 설계란 무엇인가: 검색 품질을 체계적으로 개선하는 실무 가이드"
 date: 2024-02-04T10:17:00+09:00
-draft: true
+draft: false
 description: "RAG 실험을 어떻게 설계하고 어떤 지표로 판단할지 정리한 실무 가이드입니다."
 slug: "rag-experiment-design-practical-guide"
 categories: ["software-dev"]

@@ -8,7 +8,7 @@ categories: ["ai-automation"]
 tags: ["OpenAI Structured Outputs", "JSON Schema", "OpenAI API", "Tool Calling", "Data Extraction", "AI Automation"]
 featureimage: "/images/openai-structured-outputs-workflow-2026.svg"
 series: ["AI Agent Tooling 2026"]
-draft: true
+draft: false
 ---
 
 `OpenAI Structured Outputs`는 모델 응답을 사람이 읽는 텍스트가 아니라, 앱이 바로 소비할 수 있는 구조화된 데이터로 받고 싶을 때 유용합니다. 특히 폼 채우기, 정보 추출, 분류, 라우팅, 에이전트 상태 저장처럼 JSON이 중요한 작업에서 강합니다.

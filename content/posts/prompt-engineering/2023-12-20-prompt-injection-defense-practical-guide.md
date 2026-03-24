@@ -7,7 +7,7 @@ slug: "prompt-injection-defense-practical-guide"
 categories: ["prompt-engineering"]
 tags: ["Prompt Injection", "LLM Security", "Agent Safety", "Tool Use", "Prompt Defense", "MCP Security"]
 featureimage: "/images/prompt-injection-defense-workflow-2026.svg"
-draft: true
+draft: false
 ---
 
 ![프롬프트 인젝션 방어 실무 가이드](/images/prompt-injection-defense-workflow-2026.svg)

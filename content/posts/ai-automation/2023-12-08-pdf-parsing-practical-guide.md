@@ -8,7 +8,7 @@ categories: ["ai-automation"]
 tags: ["PDF Parsing", "Document ETL", "LlamaParse", "Unstructured", "OCR", "Chunking", "RAG"]
 series: ["AI Data Infrastructure 2026"]
 featureimage: "/images/pdf-parsing-workflow-2026.svg"
-draft: true
+draft: false
 ---
 
 PDF 파싱은 단순한 텍스트 추출이 아닙니다. 레이아웃, 표, 각주, 스캔 품질까지 함께 봐야 검색 가능한 데이터가 됩니다. 이 글은 [Unstructured란 무엇인가](/posts/unstructured-practical-guide/)와 [LlamaParse란 무엇인가](/posts/llamaparse-practical-guide/)를 PDF 파싱 관점에서 연결해 정리합니다.

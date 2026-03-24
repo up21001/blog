@@ -8,7 +8,7 @@ categories: ["ai-automation"]
 tags: ["Context Compression", "Context Window Management", "Agent Memory", "Summarization", "Token Budget", "Prompt Caching", "LLM Memory"]
 series: ["Context Engineering 2026"]
 featureimage: "/images/context-compression-workflow-2026.svg"
-draft: true
+draft: false
 ---
 
 Context Compression은 긴 입력을 무작정 버리는 것이 아니라, 다음 판단에 필요한 정보만 남기도록 압축하는 설계입니다. 대화 기록, 문서, 에이전트 상태, 툴 결과가 길어질수록 압축 전략이 없으면 토큰 비용과 품질이 동시에 흔들립니다.

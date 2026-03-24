@@ -8,7 +8,7 @@ categories: ["software-dev"]
 tags: ["AI Cost Dashboard", "LLM Cost", "Token Usage", "Cost Visibility", "Observability", "Helicone", "Portkey"]
 series: ["AI Cost Observability 2026"]
 featureimage: "/images/ai-cost-dashboard-workflow-2026.svg"
-draft: true
+draft: false
 ---
 
 AI Cost Dashboard는 LLM 운영비를 한 화면에서 보는 도구입니다. 요청 수, 토큰 사용량, 모델별 비용, 실패율, 사용자별 소비를 묶어서 보여줘야 실제로 쓸 수 있습니다.

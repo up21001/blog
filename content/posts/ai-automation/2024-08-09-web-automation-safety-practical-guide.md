@@ -8,7 +8,7 @@ categories: ["ai-automation"]
 tags: ["Web Automation", "Safety", "Browser Automation", "AI Agent", "CAPTCHA", "Stealth", "Risk Control"]
 series: ["AI Agent Tooling 2026"]
 featureimage: "/images/web-automation-safety-workflow-2026.svg"
-draft: true
+draft: false
 ---
 
 웹 자동화는 편하지만 위험합니다. 한 번의 잘못된 제출이나 반복 클릭으로 계정이 잠기고, 서비스 정책을 위반할 수도 있습니다. 그래서 실무에서는 "얼마나 많이 자동화할 수 있는가"보다 "어디까지 자동화해도 안전한가"를 먼저 정의해야 합니다.

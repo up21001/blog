@@ -8,7 +8,7 @@ categories: ["software-dev"]
 tags: ["RAG", "Cache Strategy", "Semantic Cache", "Prompt Caching", "Retrieval", "Cost Optimization", "RAG Ops"]
 series: ["RAG Operations 2026"]
 featureimage: "/images/rag-cache-strategy-workflow-2026.svg"
-draft: true
+draft: false
 ---
 
 RAG 캐시 전략은 같은 질문과 같은 검색을 반복하지 않도록 경로를 나누는 일입니다. 질문이 조금만 바뀌어도 매번 검색과 생성이 다시 돌면 비용이 빠르게 늘어납니다. 반대로 캐시를 너무 넓게 잡으면 오래된 답변이 남습니다.

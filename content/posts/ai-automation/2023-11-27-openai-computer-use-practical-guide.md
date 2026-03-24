@@ -8,7 +8,7 @@ categories: ["ai-automation"]
 tags: ["OpenAI Computer Use", "Browser Automation", "AI Agent", "OpenAI API", "Tool Use", "Workflow Automation"]
 featureimage: "/images/openai-computer-use-workflow-2026.svg"
 series: ["AI Agent Tooling 2026"]
-draft: true
+draft: false
 ---
 
 OpenAI Computer Use는 에이전트가 화면을 읽고 클릭, 입력, 전환 같은 브라우저 작업을 수행하도록 만드는 접근입니다. API만으로 끝나는 작업이 아니라 실제 웹 UI를 다뤄야 하는 자동화에서 특히 유용합니다.

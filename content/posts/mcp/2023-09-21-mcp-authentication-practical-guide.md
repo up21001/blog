@@ -8,7 +8,7 @@ categories: ["mcp"]
 tags: ["MCP Authentication", "Model Context Protocol", "MCP Security", "AuthN", "AuthZ", "Tool Calling", "AI Agent Security"]
 series: ["MCP Security 2026"]
 featureimage: "/images/mcp-authentication-workflow-2026.svg"
-draft: true
+draft: false
 ---
 
 MCP Authentication은 단순히 "누가 들어왔는가"를 확인하는 단계가 아닙니다. 실무에서는 서버 신원, 사용자 신원, 에이전트 신원, 그리고 도구 권한을 분리해서 다뤄야 합니다. 이 경계를 분리하지 않으면, 하나의 토큰이나 하나의 세션이 너무 많은 권한을 갖게 됩니다.

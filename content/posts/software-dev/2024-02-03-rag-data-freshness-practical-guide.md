@@ -8,7 +8,7 @@ categories: ["software-dev"]
 tags: ["RAG", "Data Freshness", "Ingestion", "Indexing", "Retrieval", "Operations", "Qdrant", "Hybrid Search"]
 series: ["RAG Operations 2026"]
 featureimage: "/images/rag-data-freshness-workflow-2026.svg"
-draft: true
+draft: false
 ---
 
 RAG의 품질은 최신 문서를 얼마나 빨리 반영하느냐에 크게 좌우됩니다. 오래된 문서가 검색되면 답변은 그럴듯해도 실제로는 틀릴 수 있습니다.

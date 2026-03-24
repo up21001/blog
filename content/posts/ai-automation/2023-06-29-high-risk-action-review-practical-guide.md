@@ -8,7 +8,7 @@ categories: ["ai-automation"]
 tags: ["High-Risk Action Review", "Risk Review", "Human in the Loop", "Approval Flow", "Audit Log", "Agent Safety"]
 series: ["AI Approval Flow 2026"]
 featureimage: "/images/high-risk-action-review-workflow-2026.svg"
-draft: true
+draft: false
 ---
 
 고위험 작업은 자동화의 편의보다 안전이 우선입니다. 삭제, 결제, 외부 발송, 권한 변경처럼 되돌리기 어려운 행동은 사전 검토가 필요합니다. High-Risk Action Review는 이런 작업을 사람이 확인할 수 있는 구조로 바꾸는 과정입니다.

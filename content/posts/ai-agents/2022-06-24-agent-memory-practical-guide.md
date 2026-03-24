@@ -8,7 +8,7 @@ categories: ["ai-agents"]
 tags: ["Agent Memory", "LLM Memory", "Memory Layer", "AI Agent", "Mem0", "LangGraph", "Personalization"]
 series: ["AI Agent Tooling 2026"]
 featureimage: "/images/agent-memory-workflow-2026.svg"
-draft: true
+draft: false
 ---
 
 `Agent memory`는 AI 에이전트가 대화와 작업의 맥락을 다음 상호작용까지 이어서 활용하는 방식입니다. 2026년 기준으로는 단순한 대화 기록 저장을 넘어, 사용자 선호, 작업 상태, 도메인 지식, 장기 관계 정보를 분리해서 다루는 설계가 핵심입니다. 검색어로는 `agent memory`, `LLM memory`, `memory layer`, `persistent memory for agents`, `Mem0`가 자주 함께 붙습니다.

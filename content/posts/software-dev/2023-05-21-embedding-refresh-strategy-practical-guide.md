@@ -8,7 +8,7 @@ categories: ["software-dev"]
 tags: ["RAG", "Embeddings", "Refresh Strategy", "Reindexing", "Qdrant", "Vector Database", "RAG Ops", "Data Freshness"]
 series: ["RAG Pipeline 2026"]
 featureimage: "/images/embedding-refresh-strategy-workflow-2026.svg"
-draft: true
+draft: false
 ---
 
 Embedding Refresh Strategy는 문서가 바뀌었을 때 벡터를 다시 만들고, 언제 다시 만들지 결정하는 운영 규칙입니다. 이 규칙이 없으면 검색 품질은 서서히 망가지고, 비용은 조용히 커집니다.

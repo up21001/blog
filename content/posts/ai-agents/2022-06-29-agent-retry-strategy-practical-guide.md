@@ -8,7 +8,7 @@ categories: ["ai-agents"]
 tags: ["Agent Retry Strategy", "Retry", "Backoff", "Circuit Breaker", "OpenAI Agent Evals", "Human in the Loop", "Tool Selection Strategy"]
 featureimage: "/images/agent-retry-strategy-workflow-2026.svg"
 series: ["AI Agent Reliability 2026"]
-draft: true
+draft: false
 ---
 
 재시도는 에이전트를 살리는 장치이지만, 무작정 늘리면 비용과 중복 실행이 커집니다. 그래서 retry는 횟수보다 정책이 중요합니다.

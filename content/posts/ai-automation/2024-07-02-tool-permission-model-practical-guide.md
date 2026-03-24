@@ -7,7 +7,7 @@ slug: "tool-permission-model-practical-guide"
 categories: ["ai-automation"]
 tags: ["Tool Permission Model", "Least Privilege", "AI Agent", "Tool Policy", "Access Control", "Security"]
 featureimage: "/images/tool-permission-model-workflow-2026.svg"
-draft: true
+draft: false
 ---
 
 ![Tool Permission Model](/images/tool-permission-model-workflow-2026.svg)

@@ -7,7 +7,7 @@ slug: "online-vs-offline-agent-evals-practical-guide"
 categories: ["ai-agents"]
 tags: ["Online Evaluation", "Offline Evaluation", "Agent Evals", "OpenAI Evals", "OpenAI Agent Evals", "LLM Observability", "Evaluation Strategy"]
 featureimage: "/images/online-vs-offline-agent-evals-workflow-2026.svg"
-draft: true
+draft: false
 ---
 
 Agent eval은 한 번에 다 돌리는 문제가 아닙니다. 빠르게 실패를 찾는 offline eval과, 실제 운영 환경에서 신호를 잡는 online eval은 목적이 다릅니다. 둘을 섞으면 비용이 커지고, 분리만 하면 품질 하락을 놓칩니다.

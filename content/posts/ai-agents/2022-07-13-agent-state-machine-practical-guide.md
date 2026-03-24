@@ -8,7 +8,7 @@ categories: ["ai-agents"]
 tags: ["State Machine", "Agent", "LangGraph", "Temporal", "Workflow", "Finite State Machine", "Approval Flow"]
 series: ["AI Agent Tooling 2026"]
 featureimage: "/images/agent-state-machine-workflow-2026.svg"
-draft: true
+draft: false
 ---
 
 Agent State Machine은 에이전트의 현재 상태와 다음 전이를 명시적으로 정의하는 방식입니다. 프롬프트 중심 설계보다 훨씬 예측 가능하고, 디버깅과 운영이 쉽습니다.

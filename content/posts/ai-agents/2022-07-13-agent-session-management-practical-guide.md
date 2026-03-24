@@ -7,7 +7,7 @@ slug: "agent-session-management-practical-guide"
 categories: ["ai-agents"]
 tags: ["Agent Session Management", "Session State", "AI Agent", "Conversation State", "Memory Layer", "Context", "Workflow"]
 featureimage: "/images/agent-session-management-workflow-2026.svg"
-draft: true
+draft: false
 ---
 
 `Agent Session Management`는 AI 에이전트가 대화, 도구 호출, 사용자 상태를 같은 흐름으로 유지하도록 세션을 설계하는 방식입니다. 단순 채팅이 아니라 긴 작업, 중간 재시도, 멀티스텝 워크플로우가 들어가면 세션 관리가 곧 품질 관리가 됩니다.

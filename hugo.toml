@@ -170,3 +170,24 @@ enableRobotsTXT = true
   pageRef = "/categories/thinking"
   parent = "Life"
   weight = 2
+
+# ── Info ──────────────────────────────────────────────
+[[menus.footer]]
+  name = "소개"
+  pageRef = "/about"
+  weight = 1
+
+[[menus.footer]]
+  name = "문의"
+  pageRef = "/contact"
+  weight = 2
+
+[[menus.footer]]
+  name = "개인정보처리방침"
+  pageRef = "/privacy"
+  weight = 3
+
+[[menus.footer]]
+  name = "면책 조항"
+  pageRef = "/disclaimer"
+  weight = 4

@@ -8,7 +8,7 @@ categories: ["mcp"]
 tags: ["MCP", "Latency Budget", "Performance", "SLO", "AI 에이전트", "Observability"]
 series: ["AI Agent Tooling 2026"]
 featureimage: "/images/mcp-latency-budget-workflow-2026.svg"
-draft: true
+draft: false
 ---
 
 MCP latency budget은 "응답이 빠르다"를 정성적으로 말하지 않고, 각 구간별 예산을 수치로 나누는 방식입니다. 이 예산이 없으면 느림의 원인을 agent, network, tool server, downstream 중 어디에 둘지 결정하기 어렵습니다.

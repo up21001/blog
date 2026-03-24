@@ -8,7 +8,7 @@ categories: ["ai-automation"]
 tags: ["Claude Code", "GitHub Actions", "AI 자동화", "PR 자동화", "리뷰 자동화", "MCP", "Anthropic API"]
 featureimage: "/images/claude-code-github-actions-workflow-2026.svg"
 series: ["AI Agent Tooling 2026"]
-draft: true
+draft: false
 ---
 
 Claude Code를 GitHub Actions와 붙이면 로컬에서만 쓰던 AI 코딩 도구를 CI 파이프라인으로 옮길 수 있습니다. PR이 열릴 때 요약을 만들고, 변경 파일을 점검하고, 반복 작업을 자동화하는 식으로 활용 범위가 넓습니다.

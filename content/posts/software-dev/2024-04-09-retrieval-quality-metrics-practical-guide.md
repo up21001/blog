@@ -8,7 +8,7 @@ categories: ["software-dev"]
 tags: ["Retrieval Quality", "RAG", "Hybrid Search", "Reranking", "Precision", "Recall", "MRR", "nDCG"]
 series: ["RAG Evaluation 2026"]
 featureimage: "/images/retrieval-quality-metrics-workflow-2026.svg"
-draft: true
+draft: false
 ---
 
 검색 품질은 "그럴듯해 보이는 결과"가 아니라, 실제로 필요한 문서를 얼마나 빨리, 얼마나 정확하게 찾는지로 판단해야 합니다.

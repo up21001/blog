@@ -8,7 +8,7 @@ categories: ["ai-automation"]
 tags: ["Memory Layer", "Architecture", "Agent Memory", "LLM Memory", "RAG", "Mem0", "LangGraph"]
 series: ["AI Agent Tooling 2026"]
 featureimage: "/images/memory-layer-architecture-workflow-2026.svg"
-draft: true
+draft: false
 ---
 
 `Memory layer architecture`는 AI 에이전트가 기억을 한곳에 쌓지 않고, 목적별로 나눠 저장하고 회수하는 구조입니다. 검색어로는 `memory layer`, `agent memory architecture`, `persistent memory`, `RAG memory`, `stateful agent`가 자주 함께 등장합니다.

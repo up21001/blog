@@ -214,7 +214,7 @@ draft: false
 hugo server -D
 ```
 
-`-D` 플래그는 draft: true인 포스트도 표시합니다. 브라우저에서 `http://localhost:1313`으로 접속하면 실시간으로 변경사항이 반영되는 미리보기를 볼 수 있습니다.
+`-D` 플래그는 draft: false인 포스트도 표시합니다. 브라우저에서 `http://localhost:1313`으로 접속하면 실시간으로 변경사항이 반영되는 미리보기를 볼 수 있습니다.
 
 ## GitHub 저장소 연결
 

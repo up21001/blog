@@ -7,7 +7,7 @@ slug: "tool-call-security-audit-practical-guide"
 categories: ["ai-automation"]
 tags: ["Tool Call Security Audit", "Security Audit", "Tool Calling", "AI Agent", "Prompt Injection", "Governance"]
 featureimage: "/images/tool-call-security-audit-workflow-2026.svg"
-draft: true
+draft: false
 ---
 
 ![Tool Call Security Audit](/images/tool-call-security-audit-workflow-2026.svg)

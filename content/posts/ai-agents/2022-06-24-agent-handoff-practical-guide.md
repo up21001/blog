@@ -8,7 +8,7 @@ categories: ["ai-agents"]
 tags: ["Agent Handoff", "AI Agent", "Context Handoff", "Workflow", "OpenAI Agents SDK", "Claude Code SDK"]
 series: ["AI Agent Tooling 2026"]
 featureimage: "/images/agent-handoff-workflow-2026.svg"
-draft: true
+draft: false
 ---
 
 `Agent Handoff`는 한 에이전트가 하던 일을 다른 에이전트나 사람에게 넘기는 설계입니다. 멀티 에이전트 시스템에서 가장 자주 깨지는 부분이 바로 이 전달 경계입니다.

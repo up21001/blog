@@ -8,7 +8,7 @@ categories: ["ai-agents"]
 tags: ["Browser Agent", "RPA", "Browser Automation", "AI Agent", "OpenAI Computer Use", "Stagehand", "Browserbase"]
 series: ["AI Agent Tooling 2026"]
 featureimage: "/images/browser-agent-vs-rpa-workflow-2026.svg"
-draft: true
+draft: false
 ---
 
 Browser Agent와 RPA는 비슷해 보이지만 문제를 푸는 방식이 다릅니다. RPA는 정해진 화면 흐름을 반복하는 데 강하고, Browser Agent는 화면이 바뀌어도 유연하게 대응하는 데 강합니다.

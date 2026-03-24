@@ -7,7 +7,7 @@ slug: "enterprise-ai-governance-practical-guide"
 categories: ["ai-automation"]
 tags: ["AI Governance", "Enterprise AI", "Policy Enforcement", "Safety Checks", "Agent Safety", "Audit Log"]
 featureimage: "/images/enterprise-ai-governance-workflow-2026.svg"
-draft: true
+draft: false
 ---
 
 ![Enterprise AI Governance](/images/enterprise-ai-governance-workflow-2026.svg)

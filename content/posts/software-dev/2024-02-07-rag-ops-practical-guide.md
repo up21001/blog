@@ -8,7 +8,7 @@ categories: ["software-dev"]
 tags: ["RAG", "RAG Ops", "Evaluation", "Retrieval", "Embeddings", "Observability", "Vector Database"]
 series: ["RAG Operations 2026"]
 featureimage: "/images/rag-ops-workflow-2026.svg"
-draft: true
+draft: false
 ---
 
 RAG는 데모를 만드는 것보다 운영하는 것이 훨씬 어렵습니다. 검색 결과가 가끔 맞는 수준이면 충분하지 않고, 문서가 늘어나도 품질이 유지되어야 하며, 답변 근거가 설명 가능해야 합니다. 그래서 실무에서는 "RAG 구현"보다 "RAG 운영"이 더 큰 문제입니다.

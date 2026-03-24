@@ -8,7 +8,7 @@ categories: ["software-dev"]
 tags: ["Embeddings", "Embedding Model", "Vector Search", "RAG", "Similarity Search", "Multilingual", "Cost Optimization"]
 series: ["Vector Search 2026"]
 featureimage: "/images/embedding-model-selection-workflow-2026.svg"
-draft: true
+draft: false
 ---
 
 임베딩 모델 선택은 검색 품질을 좌우하는 가장 기본적인 결정입니다. 같은 벡터 DB를 써도 임베딩 모델이 다르면 결과가 크게 달라집니다.

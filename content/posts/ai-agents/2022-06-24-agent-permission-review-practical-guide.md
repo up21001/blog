@@ -7,7 +7,7 @@ slug: "agent-permission-review-practical-guide"
 categories: ["ai-agents"]
 tags: ["Agent Permission Review", "Least Privilege", "Access Control", "AI Agent", "Security", "Governance"]
 featureimage: "/images/agent-permission-review-workflow-2026.svg"
-draft: true
+draft: false
 ---
 
 ![Agent Permission Review](/images/agent-permission-review-workflow-2026.svg)

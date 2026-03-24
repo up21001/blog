@@ -8,7 +8,7 @@ categories: ["prompt-engineering"]
 tags: ["Claude API Prompt Caching", "Anthropic API", "프롬프트 캐싱", "컨텍스트 비용", "Claude", "AI 자동화"]
 featureimage: "/images/claude-api-prompt-caching-workflow-2026.svg"
 series: ["AI Agent Tooling 2026"]
-draft: true
+draft: false
 ---
 
 `Claude API Prompt Caching`은 긴 프롬프트나 반복되는 컨텍스트를 여러 번 재사용할 때 비용과 지연시간을 줄이는 방법입니다. 실무에서는 긴 문서, 정책, 제품 스펙, 코드베이스 요약처럼 매 요청마다 다시 보내기 아까운 컨텍스트가 있을 때 특히 유용합니다.

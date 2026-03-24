@@ -8,7 +8,7 @@ categories: ["ai-automation"]
 tags: ["Conversation Design", "Turn Taking", "Voice AI", "Barge-in", "Latency", "Dialog", "Realtime", "UX"]
 series: ["AI Voice Stack 2026"]
 featureimage: "/images/conversation-turn-design-workflow-2026.svg"
-draft: true
+draft: false
 ---
 
 `Conversation Turn Design`은 음성 에이전트가 언제 듣고, 언제 말하고, 언제 멈춰야 하는지를 정의하는 설계입니다. 대화 턴이 어색하면 모델이 좋아도 UX는 나빠집니다.

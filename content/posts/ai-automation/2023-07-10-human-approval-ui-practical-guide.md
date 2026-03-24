@@ -8,7 +8,7 @@ categories: ["ai-automation"]
 tags: ["Human Approval UI", "Approval UI", "Human in the Loop", "AI Governance", "Audit Log", "Approval Flow"]
 series: ["AI Approval Flow 2026"]
 featureimage: "/images/human-approval-ui-workflow-2026.svg"
-draft: true
+draft: false
 ---
 
 Human Approval UI는 AI가 사람의 판단을 요청할 때 보여주는 화면입니다. 승인 자체보다 중요한 것은 "무엇을 승인하는지"를 짧고 정확하게 보여주는 일입니다. 설명이 부족하면 사용자는 승인하지 못하고, 설명이 과하면 검토 시간이 길어집니다.

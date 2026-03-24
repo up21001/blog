@@ -8,7 +8,7 @@ categories: ["ai-automation"]
 tags: ["Memory Retention", "Retention Policy", "LLM Memory", "Mem0", "LangGraph", "Memory Layer", "Agent Memory"]
 series: ["AI Agent Tooling 2026"]
 featureimage: "/images/memory-retention-policy-workflow-2026.svg"
-draft: true
+draft: false
 ---
 
 `Memory Retention Policy`는 어떤 기억을 얼마나 오래 남길지 정하는 규칙입니다. 관련 배경은 [Agent Memory](./2026-03-24-agent-memory-practical-guide.md)와 [Memory Layer Architecture](./2026-03-24-memory-layer-architecture-practical-guide.md)에서 이어서 보면 좋습니다.

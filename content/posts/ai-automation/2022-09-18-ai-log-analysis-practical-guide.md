@@ -6,7 +6,7 @@ slug: "ai-log-analysis-practical-guide"
 categories: ["ai-automation"]
 tags: ["AI Log Analysis", "Observability", "Tracing", "Agent Debugging", "AI Audit Log", "LLM Incident Response", "RAG Monitoring"]
 featureimage: "/images/ai-log-analysis-workflow-2026.svg"
-draft: true
+draft: false
 ---
 
 AI Log Analysis는 모델 호출, 에이전트 실행, 툴 호출, 사용자 입력, 시스템 경고를 한 화면에서 묶어서 보는 작업입니다. 로그가 쌓이기만 하면 문제를 찾지 못하므로, 분석 가능한 필드와 추적 가능한 키를 먼저 정해야 합니다.

@@ -7,7 +7,7 @@ slug: "ai-audit-log-practical-guide"
 categories: ["ai-automation"]
 tags: ["Audit Log", "Tracing", "Observability", "Compliance", "Agent Debugging", "AI Governance"]
 featureimage: "/images/ai-audit-log-workflow-2026.svg"
-draft: true
+draft: false
 ---
 
 ![AI Audit Log](/images/ai-audit-log-workflow-2026.svg)

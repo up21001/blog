@@ -6,7 +6,7 @@ slug: "llm-incident-response-practical-guide"
 categories: ["ai-automation"]
 tags: ["LLM Incident Response", "Incident Response", "Observability", "Alerts", "Runbook", "AI Governance", "Cost Monitoring"]
 featureimage: "/images/llm-incident-response-workflow-2026.svg"
-draft: true
+draft: false
 ---
 
 LLM Incident Response는 모델 오류나 품질 저하가 생겼을 때 감지, 분류, 우회, 복구, 사후 분석까지 이어지는 운영 절차입니다. 사람이 직접 확인하는 단계가 많을수록 대응이 느려지므로, 이벤트와 룰을 먼저 정해두는 것이 중요합니다.

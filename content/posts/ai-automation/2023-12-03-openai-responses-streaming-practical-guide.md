@@ -8,7 +8,7 @@ categories: ["ai-automation"]
 tags: ["OpenAI Responses API", "Streaming", "Realtime UX", "Tool Calling", "OpenAI SDK", "AI Agent"]
 featureimage: "/images/openai-responses-streaming-workflow-2026.svg"
 series: ["AI Agent Tooling 2026"]
-draft: true
+draft: false
 ---
 
 `OpenAI Responses`의 스트리밍은 응답을 한 번에 받지 않고, 생성 중인 결과를 조금씩 소비하는 방식입니다. 채팅 UI, 긴 생성 작업, 도구 호출 중간 상태 표시처럼 사용자에게 즉시 반응을 보여줘야 하는 화면에서 특히 유용합니다.

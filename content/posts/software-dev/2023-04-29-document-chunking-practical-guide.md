@@ -8,7 +8,7 @@ categories: ["software-dev"]
 tags: ["RAG", "Chunking", "Document Processing", "Embeddings", "Hybrid Search", "Qdrant", "RAG Ops"]
 series: ["RAG Pipeline 2026"]
 featureimage: "/images/document-chunking-workflow-2026.svg"
-draft: true
+draft: false
 ---
 
 Document Chunking은 RAG 품질을 좌우하는 가장 현실적인 설계 포인트 중 하나입니다. 같은 문서라도 어떻게 나누느냐에 따라 검색 결과와 응답 품질이 크게 달라집니다.

@@ -8,7 +8,7 @@ categories: ["mcp"]
 tags: ["MCP Multi-Tenant", "Tenant Isolation", "Remote MCP", "MCP Security", "AI Access Control", "Tool Calling", "Durable Objects"]
 series: ["MCP Security 2026"]
 featureimage: "/images/mcp-multi-tenant-workflow-2026.svg"
-draft: true
+draft: false
 ---
 
 MCP Multi-Tenant는 여러 조직이 같은 MCP 기반 서비스를 쓰더라도 데이터와 권한 경계를 유지하는 설계입니다. 에이전트가 강력해질수록 tenant isolation은 선택이 아니라 기본값이 되어야 합니다.

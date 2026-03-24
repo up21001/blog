@@ -8,7 +8,7 @@ categories: ["ai-automation"]
 tags: ["OpenAI Background Mode", "Responses API", "Batch API", "Async Jobs", "AI Automation", "OpenAI API"]
 featureimage: "/images/openai-background-mode-workflow-2026.svg"
 series: ["AI Agent Tooling 2026"]
-draft: true
+draft: false
 ---
 
 OpenAI Background Mode는 오래 걸리는 생성 작업을 사용자 화면에서 분리해 배경에서 처리하는 운영 패턴으로 보면 이해가 쉽습니다. 즉시 응답이 필요한 요청은 `Responses API`로 처리하고, 대량 분류나 장시간 처리처럼 결과가 급하지 않은 작업은 비동기 작업으로 넘기는 방식입니다.

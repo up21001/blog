@@ -8,7 +8,7 @@ categories: ["software-dev"]
 tags: ["RAG Monitoring", "Observability", "Tracing", "Metrics", "Alerts", "RAG Ops", "Evaluation", "Qdrant"]
 series: ["RAG Operations 2026"]
 featureimage: "/images/rag-monitoring-workflow-2026.svg"
-draft: true
+draft: false
 ---
 
 RAG는 화면에 답이 잘 나오는지만 보면 안 됩니다. 검색이 제대로 됐는지, 어떤 문서가 근거였는지, 답변이 실제로 grounded 되었는지까지 같이 봐야 합니다.

@@ -8,7 +8,7 @@ categories: ["software-dev"]
 tags: ["Hybrid Search", "Vector Search", "Keyword Search", "RAG", "pgvector", "Qdrant", "Embeddings"]
 series: ["Vector Search 2026"]
 featureimage: "/images/hybrid-search-workflow-2026.svg"
-draft: true
+draft: false
 ---
 
 Hybrid Search는 키워드 검색과 벡터 검색을 함께 써서 검색 품질을 끌어올리는 방식입니다. 하나만 쓰면 놓치는 결과가 생기고, 둘을 같이 쓰면 정밀도와 재현율을 함께 챙길 수 있습니다.

@@ -8,7 +8,7 @@ categories: ["mcp"]
 tags: ["MCP", "Error Budget", "Reliability", "SLO", "AI 에이전트", "Incident Response"]
 series: ["AI Agent Tooling 2026"]
 featureimage: "/images/mcp-error-budget-workflow-2026.svg"
-draft: true
+draft: false
 ---
 
 MCP error budget은 "실패가 없어야 한다"는 막연한 기대를 운영 가능한 규칙으로 바꾸는 장치입니다. 실제 서비스에서는 100% 가용성을 목표로 하기보다, 얼마만큼 실패를 허용하고 그 초과분을 어떻게 다룰지 정해야 합니다.

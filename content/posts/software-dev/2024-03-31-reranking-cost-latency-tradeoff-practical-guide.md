@@ -8,7 +8,7 @@ categories: ["software-dev"]
 tags: ["Reranking", "Latency", "Cost Optimization", "RAG", "Search Quality", "Performance"]
 series: ["RAG Routing 2026"]
 featureimage: "/images/reranking-cost-latency-tradeoff-workflow-2026.svg"
-draft: true
+draft: false
 ---
 
 Reranking은 품질을 높이지만 비용과 지연시간을 함께 올린다. 그래서 운영에서는 "얼마나 좋아졌는가"와 "얼마나 느려졌는가"를 동시에 봐야 한다.

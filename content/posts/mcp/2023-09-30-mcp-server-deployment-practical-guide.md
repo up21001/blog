@@ -8,7 +8,7 @@ categories: ["mcp"]
 tags: ["MCP", "Deployment", "Remote MCP", "FastMCP", "Cloudflare", "Gateway", "AI 에이전트"]
 series: ["AI Agent Tooling 2026"]
 featureimage: "/images/mcp-server-deployment-workflow-2026.svg"
-draft: true
+draft: false
 ---
 
 MCP 서버 배포는 코드 배포보다 넓은 문제입니다. 실행 환경, 인증, 네트워크 경계, 롤백, 버전 호환성이 같이 들어오기 때문입니다. local로 충분한지, remote로 분리해야 하는지, gateway를 둘지 먼저 결정해야 합니다.

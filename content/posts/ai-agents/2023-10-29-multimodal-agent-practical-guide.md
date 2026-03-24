@@ -8,7 +8,7 @@ categories: ["ai-agents"]
 tags: ["Multimodal Agent", "Vision API", "Voice Agent", "Screen Understanding", "OpenAI Computer Use", "AI Automation", "Document AI"]
 series: ["Multimodal Agents 2026"]
 featureimage: "/images/multimodal-agent-workflow-2026.svg"
-draft: true
+draft: false
 ---
 
 `멀티모달 에이전트`는 이미지, 음성, 화면, 문서를 한 번에 받아서 같은 작업 흐름으로 처리하는 에이전트입니다. 하나의 입력만 다루는 모델보다 설계 난이도는 높지만, 실제 업무 자동화에서는 가장 범용성이 큽니다.

@@ -7,7 +7,7 @@ slug: "llm-policy-enforcement-practical-guide"
 categories: ["ai-automation"]
 tags: ["LLM Policy", "Policy Enforcement", "AI Governance", "Safety Checks", "Tool Policy", "Agent Policy"]
 featureimage: "/images/llm-policy-enforcement-workflow-2026.svg"
-draft: true
+draft: false
 ---
 
 ![LLM 정책 강제 실무 가이드](/images/llm-policy-enforcement-workflow-2026.svg)

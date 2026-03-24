@@ -8,7 +8,7 @@ categories: ["mcp"]
 tags: ["MCP", "Degradation Mode", "Graceful Degradation", "Remote MCP", "SLO", "Error Budget", "AI Agent"]
 series: ["AI Agent Tooling 2026"]
 featureimage: "/images/mcp-degradation-mode-workflow-2026.svg"
-draft: true
+draft: false
 ---
 
 MCP degradation mode는 장애가 났을 때 서비스를 멈추지 않고, 핵심 기능만 남기는 운영 방식입니다. 완전 복구가 어렵더라도 안전한 최소 기능을 유지하면 사용자 영향과 incident 범위를 줄일 수 있습니다.

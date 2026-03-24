@@ -8,7 +8,7 @@ categories: ["ai-agents"]
 tags: ["Agent Workflow Engine", "AI Agent", "Workflow", "LangGraph", "Temporal", "Trigger.dev", "Human in the Loop"]
 series: ["AI Agent Tooling 2026"]
 featureimage: "/images/agent-workflow-engine-workflow-2026.svg"
-draft: true
+draft: false
 ---
 
 Agent Workflow Engine은 에이전트의 실행 순서, 분기, 재시도, 검토 지점을 표준화하는 층입니다. 프롬프트를 길게 이어 붙이는 방식보다, 작업을 명시적인 단계로 나누는 쪽이 운영하기 쉽고 실패 원인도 추적하기 좋습니다.

@@ -8,7 +8,7 @@ categories: ["ai-automation"]
 tags: ["RAG Evaluation", "Ragas", "OpenAI Evals", "OpenAI Agent Evals", "RAG Ops", "Evaluation"]
 series: ["RAG Evaluation 2026"]
 featureimage: "/images/rag-evaluation-workflow-2026.svg"
-draft: true
+draft: false
 ---
 
 RAG 평가는 단순히 정답 문자열이 맞는지 보는 일이 아닙니다. 검색이 제대로 됐는지, 근거가 충분한지, 최종 답변이 그 근거를 잘 반영했는지를 함께 봐야 합니다.

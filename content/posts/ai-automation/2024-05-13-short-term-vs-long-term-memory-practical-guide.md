@@ -8,7 +8,7 @@ categories: ["ai-automation"]
 tags: ["Short-term Memory", "Long-term Memory", "Agent Memory", "LLM Memory", "Memory Architecture", "Mem0", "LangGraph"]
 series: ["AI Agent Tooling 2026"]
 featureimage: "/images/short-term-vs-long-term-memory-workflow-2026.svg"
-draft: true
+draft: false
 ---
 
 AI 에이전트 메모리 설계에서 가장 먼저 정리해야 할 것은 `단기 메모리`와 `장기 메모리`의 역할 차이입니다. 둘을 구분하지 않으면 대화 로그는 쌓이지만 실제로 재사용되는 기억은 거의 남지 않습니다.

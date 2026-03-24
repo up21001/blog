@@ -7,7 +7,7 @@ slug: "ai-access-control-practical-guide"
 categories: ["ai-automation"]
 tags: ["Access Control", "RBAC", "ABAC", "Least Privilege", "Tool Policy", "AI Security"]
 featureimage: "/images/ai-access-control-workflow-2026.svg"
-draft: true
+draft: false
 ---
 
 ![AI Access Control](/images/ai-access-control-workflow-2026.svg)

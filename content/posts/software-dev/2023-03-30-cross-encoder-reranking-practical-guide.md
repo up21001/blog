@@ -8,7 +8,7 @@ categories: ["software-dev"]
 tags: ["Cross-Encoder", "Reranking", "Bi-Encoder", "RAG", "Search Quality", "Embedding"]
 series: ["RAG Routing 2026"]
 featureimage: "/images/cross-encoder-reranking-workflow-2026.svg"
-draft: true
+draft: false
 ---
 
 Cross-encoder reranking은 질문과 문서를 함께 넣어 직접 관련도를 계산하는 방식이다. bi-encoder보다 느리지만, 상위 후보의 순서를 더 정교하게 잡는다.

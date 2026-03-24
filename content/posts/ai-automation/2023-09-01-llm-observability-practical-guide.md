@@ -7,7 +7,7 @@ slug: "llm-observability-practical-guide"
 categories: ["ai-automation"]
 tags: ["LLM Observability", "Tracing", "Evaluation", "Cost Monitoring", "Latency", "LangSmith", "Helicone", "Portkey"]
 featureimage: "/images/llm-observability-workflow-2026.svg"
-draft: true
+draft: false
 ---
 
 LLM Observability는 단순한 모니터링이 아닙니다. 품질, 비용, 지연시간, 실패율, 사용자 반응을 한 화면에서 이어서 봐야 실제 운영 판단이 가능합니다. 모델 호출이 많아질수록 "잘 됐는지"보다 "어디서 망가졌는지"를 먼저 알아야 합니다.

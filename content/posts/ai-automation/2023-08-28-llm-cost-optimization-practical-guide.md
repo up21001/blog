@@ -8,7 +8,7 @@ categories: ["ai-automation"]
 tags: ["LLM Cost Optimization", "Token Budget", "Batch API", "Flex Processing", "Prompt Caching", "Model Routing", "Helicone"]
 series: ["AI Gateway and Routing 2026"]
 featureimage: "/images/llm-cost-optimization-workflow-2026.svg"
-draft: true
+draft: false
 ---
 
 `LLM 비용 최적화`는 단가를 낮추는 것만 의미하지 않습니다. 요청 수, 토큰 수, 재시도 수, 운영 인력 시간을 모두 포함해 총비용을 줄이는 작업입니다.

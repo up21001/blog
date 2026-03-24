@@ -8,7 +8,7 @@ categories: ["ai-automation"]
 tags: ["Synthetic Dataset", "RAG Evaluation", "Test Data", "Ragas", "OpenAI Evals", "Retrieval", "LLM Testing"]
 series: ["RAG Evaluation 2026"]
 featureimage: "/images/synthetic-dataset-generation-workflow-2026.svg"
-draft: true
+draft: false
 ---
 
 평가용 데이터셋이 없으면 RAG 품질은 감으로만 보게 됩니다. Synthetic dataset generation은 실제 운영 질문을 바탕으로 테스트용 질문과 정답, 근거를 빠르게 만드는 방법입니다.

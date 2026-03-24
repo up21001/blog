@@ -8,7 +8,7 @@ categories: ["software-dev"]
 tags: ["RAG", "Local RAG", "Qdrant", "Hybrid Search", "RAG Ops", "Ollama", "Embeddings"]
 series: ["Developer Tooling 2026"]
 featureimage: "/images/local-rag-stack-workflow-2026.svg"
-draft: true
+draft: false
 ---
 
 `Local RAG Stack`은 문서 검색, 임베딩, 벡터 저장소, 재순위화, 생성 모델을 한 덩어리로 묶은 로컬 우선 아키텍처입니다. 2026년에는 단순히 "문서를 넣고 답을 받는" 수준이 아니라, 비용과 보안을 통제하면서 검색 품질을 유지하는 운영 문제가 더 중요해졌습니다.

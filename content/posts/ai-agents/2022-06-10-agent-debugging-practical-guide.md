@@ -7,7 +7,7 @@ slug: "agent-debugging-practical-guide"
 categories: ["ai-agents"]
 tags: ["Agent Debugging", "LLM Observability", "Tracing", "Evaluation", "Prompt Versioning", "LangSmith", "Phoenix", "OpenAI Agent Evals"]
 featureimage: "/images/agent-debugging-workflow-2026.svg"
-draft: true
+draft: false
 ---
 
 Agent Debugging은 "응답이 이상하다"는 감상에서 끝나지 않고, 어느 단계의 입력과 출력이 문제였는지 재현하는 과정입니다. 에이전트는 분기, 메모리, 툴 호출, 재시도, 모델 교체가 섞이기 때문에 일반 디버깅 방식만으로는 부족합니다.

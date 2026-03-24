@@ -8,7 +8,7 @@ categories: ["ai-automation"]
 tags: ["Memory Pruning", "Pruning Strategy", "LLM Memory", "Agent Memory", "Memory Layer", "LangGraph", "Semantic Cache"]
 series: ["AI Agent Tooling 2026"]
 featureimage: "/images/memory-pruning-strategy-workflow-2026.svg"
-draft: true
+draft: false
 ---
 
 `Memory Pruning Strategy`는 메모리를 단순 삭제하는 작업이 아니라, 남길 가치가 있는 기억만 남기고 나머지를 압축하는 전략입니다. 기본 맥락은 [Agent Memory](./2026-03-24-agent-memory-practical-guide.md)와 [Memory Layer Architecture](./2026-03-24-memory-layer-architecture-practical-guide.md)에서 이어집니다.

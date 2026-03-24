@@ -8,7 +8,7 @@ categories: ["ai-agents"]
 tags: ["Multi Agent", "Orchestration", "AI Agent", "LangGraph", "CrewAI", "Deep Agents", "Workflow"]
 series: ["AI Agent Tooling 2026"]
 featureimage: "/images/multi-agent-orchestration-workflow-2026.svg"
-draft: true
+draft: false
 ---
 
 `Multi-Agent Orchestration`은 여러 에이전트를 역할별로 나누고, 작업 순서와 상태를 제어하는 설계 방식입니다. 한 에이전트가 모든 일을 다 하는 구조보다, 계획, 조사, 실행, 검증을 분리할 때 더 안정적입니다.

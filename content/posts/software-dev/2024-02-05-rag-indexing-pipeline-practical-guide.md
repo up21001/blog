@@ -8,7 +8,7 @@ categories: ["software-dev"]
 tags: ["RAG", "Indexing Pipeline", "Ingestion", "Chunking", "Embeddings", "Vector Database", "Qdrant", "RAG Ops"]
 series: ["RAG Pipeline 2026"]
 featureimage: "/images/rag-indexing-pipeline-workflow-2026.svg"
-draft: true
+draft: false
 ---
 
 RAG 인덱싱 파이프라인은 단순한 배치 작업이 아닙니다. 문서가 들어오고, 정제되고, 청크로 분해되고, 임베딩이 생성되고, 벡터 DB에 들어가고, 다시 갱신되는 전체 흐름입니다. 이 흐름이 흔들리면 검색 품질도 같이 흔들립니다.

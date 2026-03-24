@@ -8,7 +8,7 @@ categories: ["ai-automation"]
 tags: ["Claude API Messages", "Anthropic API", "프롬프트 설계", "Messages API", "Claude", "AI 자동화"]
 featureimage: "/images/claude-api-messages-workflow-2026.svg"
 series: ["AI Agent Tooling 2026"]
-draft: true
+draft: false
 ---
 
 Claude API를 쓸 때 가장 중요한 것은 모델 이름보다 `messages` 구조입니다. 같은 모델이라도 메시지를 어떻게 쌓고, 어떤 역할을 시스템에 고정하고, 출력 형식을 어떻게 제한하느냐에 따라 결과 품질이 크게 달라집니다.

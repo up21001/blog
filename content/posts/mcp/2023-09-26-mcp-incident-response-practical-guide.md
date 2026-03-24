@@ -8,7 +8,7 @@ categories: ["mcp"]
 tags: ["MCP", "Incident Response", "Observability", "SLO", "Error Budget", "Remote MCP", "AI Agent"]
 series: ["AI Agent Tooling 2026"]
 featureimage: "/images/mcp-incident-response-workflow-2026.svg"
-draft: true
+draft: false
 ---
 
 MCP 인시던트 대응은 단순한 장애 복구가 아닙니다. 요청 실패, 지연 증가, tool 호출 오류, 권한 실패, fallback 오작동이 함께 터질 수 있기 때문에, 감지와 복구를 분리해서 운영 기준으로 다뤄야 합니다.

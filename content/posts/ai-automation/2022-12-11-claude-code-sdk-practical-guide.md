@@ -8,7 +8,7 @@ categories: ["ai-automation"]
 tags: ["Claude Code", "SDK", "AI Agent", "Tool Calling", "Anthropic API", "Prompt Engineering", "MCP"]
 featureimage: "/images/claude-code-sdk-workflow-2026.svg"
 series: ["AI Agent Tooling 2026"]
-draft: true
+draft: false
 ---
 
 Claude Code를 SDK처럼 쓰면 단순한 CLI 도구를 넘어 자동화 에이전트의 실행 엔진으로 활용할 수 있습니다. 핵심은 “명령 실행”과 “프롬프트 설계”를 분리해서 관리하는 것입니다.

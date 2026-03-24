@@ -7,7 +7,7 @@ slug: "agent-regression-testing-practical-guide"
 categories: ["ai-agents"]
 tags: ["Agent Regression Testing", "OpenAI Agent Evals", "OpenAI Evals", "Tracing", "Evaluation", "Prompt Versioning", "Regression Gate"]
 featureimage: "/images/agent-regression-testing-workflow-2026.svg"
-draft: true
+draft: false
 ---
 
 Agent Regression Testing은 "바뀐 코드가 더 나아졌는가"를 보는 테스트입니다. 일반 API 테스트와 달리, 에이전트는 prompt, tool call, memory, branch, external dependency가 함께 흔들립니다. 그래서 regression 테스트는 텍스트 비교가 아니라 행동 비교에 가깝습니다.

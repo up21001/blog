@@ -8,7 +8,7 @@ categories: ["software-dev"]
 tags: ["RAG", "Cache Hit Rate", "Semantic Cache", "Metrics", "Cost Optimization", "Monitoring", "Operations"]
 series: ["RAG Operations 2026"]
 featureimage: "/images/cache-hit-rate-for-rag-workflow-2026.svg"
-draft: true
+draft: false
 ---
 
 RAG 캐시 적중률은 캐시가 얼마나 자주 쓰였는지를 보여주는 지표입니다. 그런데 hit rate만 높다고 좋은 것은 아닙니다. 잘못된 캐시 재사용이 늘면 오히려 품질이 떨어질 수 있습니다.

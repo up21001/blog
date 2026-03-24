@@ -8,7 +8,7 @@ categories: ["ai-agents"]
 tags: ["Voice Agent", "Evaluation", "Voice AI", "Latency", "STT", "LLM", "TTS", "Testing"]
 series: ["AI Voice Stack 2026"]
 featureimage: "/images/voice-agent-evaluation-workflow-2026.svg"
-draft: true
+draft: false
 ---
 
 `Voice Agent Evaluation`은 음성 에이전트가 실제 대화에서 얼마나 자연스럽고 안정적으로 동작하는지 검증하는 과정입니다. 단순히 정답률만 보는 방식으로는 부족합니다. 응답 지연, 끼어들기 처리, STT 품질, TTS 자연스러움, 대화 종료 조건까지 함께 봐야 운영 가능한 시스템이 됩니다.

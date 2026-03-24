@@ -7,7 +7,7 @@ slug: "ai-cache-strategy-practical-guide"
 categories: ["ai-automation"]
 tags: ["AI Cache Strategy", "Semantic Cache", "Prompt Caching", "Session Cache", "Latency Optimization", "Cost Optimization", "Cache Layer"]
 featureimage: "/images/ai-cache-strategy-workflow-2026.svg"
-draft: true
+draft: false
 ---
 
 `AI Cache Strategy`는 같은 계산을 반복하지 않도록 캐시 계층을 설계하는 일입니다. LLM 응답은 매번 비싸고 느릴 수 있기 때문에, 어느 지점을 캐시할지 정하는 것이 곧 비용과 성능을 결정합니다.

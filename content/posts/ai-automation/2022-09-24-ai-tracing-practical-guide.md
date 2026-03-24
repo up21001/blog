@@ -7,7 +7,7 @@ slug: "ai-tracing-practical-guide"
 categories: ["ai-automation"]
 tags: ["AI Tracing", "LLM Observability", "Tracing", "Agent Debugging", "LangSmith", "Phoenix", "OpenTelemetry"]
 featureimage: "/images/ai-tracing-workflow-2026.svg"
-draft: true
+draft: false
 ---
 
 AI Tracing은 LLM 호출을 단순 로그로 남기는 수준을 넘어, 프롬프트, 모델 응답, 툴 호출, 리트라이, 분기 흐름을 하나의 실행 경로로 묶어 보는 방식입니다. 에이전트가 복잡해질수록 "왜 이런 답이 나왔는가"를 바로 설명할 수 있어야 하고, 그 출발점이 추적입니다.

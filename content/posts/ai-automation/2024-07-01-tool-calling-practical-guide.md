@@ -8,7 +8,7 @@ categories: ["ai-automation"]
 tags: ["Tool Calling", "Function Calling", "AI Agent", "OpenAI Responses API", "Anthropic Tool Use", "MCP", "OpenAI Structured Outputs"]
 featureimage: "/images/tool-calling-workflow-2026.svg"
 series: ["AI Agent Tooling 2026"]
-draft: true
+draft: false
 ---
 
 `Tool Calling`은 모델이 답변만 생성하는 단계에서 끝나지 않고, 검색, 계산, 저장, 외부 API 호출까지 이어지게 만드는 핵심 연결층입니다. AI 에이전트를 실제 업무에 붙일 때 가장 먼저 부딪히는 문제가 바로 이 구간입니다.

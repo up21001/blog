@@ -8,7 +8,7 @@ categories: ["ai-automation"]
 tags: ["Risk-Based Automation", "AI Automation", "Human in the Loop", "Policy Enforcement", "Audit Log", "Approval Flow"]
 series: ["AI Approval Flow 2026"]
 featureimage: "/images/risk-based-automation-workflow-2026.svg"
-draft: true
+draft: false
 ---
 
 Risk-Based Automation은 모든 작업을 같은 방식으로 처리하지 않고, 위험도에 따라 자동화 수준을 조절하는 방식입니다. 간단한 조회는 자동 실행하고, 복구 비용이 큰 작업은 승인과 검증을 붙이는 것이 핵심입니다.

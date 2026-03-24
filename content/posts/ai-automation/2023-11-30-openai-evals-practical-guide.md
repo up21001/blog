@@ -8,7 +8,7 @@ categories: ["ai-automation"]
 tags: ["OpenAI Evals", "Evaluation", "LLM Testing", "Prompt Quality", "AI Automation", "OpenAI API"]
 featureimage: "/images/openai-evals-workflow-2026.svg"
 series: ["AI Agent Tooling 2026"]
-draft: true
+draft: false
 ---
 
 OpenAI Evals는 LLM 앱의 품질을 감으로 판단하지 않게 해주는 도구입니다. 프롬프트를 바꾸거나 모델을 교체할 때, 출력이 좋아졌는지 나빠졌는지를 정량적으로 확인할 수 있어야 운영이 흔들리지 않습니다.

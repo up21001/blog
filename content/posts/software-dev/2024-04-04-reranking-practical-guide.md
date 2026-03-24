@@ -8,7 +8,7 @@ categories: ["software-dev"]
 tags: ["Reranking", "Search Quality", "RAG", "Hybrid Search", "Cross Encoder", "Vector Search", "Retrieval"]
 series: ["Vector Search 2026"]
 featureimage: "/images/reranking-workflow-2026.svg"
-draft: true
+draft: false
 ---
 
 Reranking은 처음에 가져온 후보 문서를 다시 정렬하는 단계입니다. 검색 파이프라인에서 가장 많이 놓치는 부분이지만, 실제 품질 차이는 여기서 크게 납니다.

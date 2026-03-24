@@ -8,7 +8,7 @@ categories: ["software-dev"]
 tags: ["RAG", "Cost Optimization", "Retrieval", "Chunking", "Reranking", "Caching", "Embeddings"]
 series: ["RAG Operations 2026"]
 featureimage: "/images/rag-cost-optimization-workflow-2026.svg"
-draft: true
+draft: false
 ---
 
 RAG 비용 최적화는 단순히 API 호출 수를 줄이는 문제가 아닙니다. 검색 품질을 유지하면서 어떤 단계에서 토큰이 쓰이고, 어떤 단계에서 지연이 생기고, 어떤 단계에서 저장 비용이 커지는지 분해해서 봐야 합니다.

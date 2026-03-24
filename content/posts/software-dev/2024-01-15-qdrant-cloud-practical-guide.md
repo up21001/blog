@@ -8,7 +8,7 @@ categories: ["software-dev"]
 tags: ["Qdrant Cloud", "Vector Database", "Managed Service", "RAG", "Similarity Search", "Embeddings", "Operations"]
 series: ["Vector Database 2026"]
 featureimage: "/images/qdrant-cloud-workflow-2026.svg"
-draft: true
+draft: false
 ---
 
 `Qdrant Cloud`는 Qdrant를 직접 운영하지 않고 관리형 형태로 사용하는 옵션입니다. 벡터 검색 기능 자체보다, 운영 부담을 얼마나 줄일 수 있는지가 핵심 가치입니다. 작은 팀이든 빠르게 움직이는 제품팀이든, 검색 인프라를 직접 돌릴 여유가 없으면 관리형 선택이 현실적입니다.

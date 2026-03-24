@@ -8,7 +8,7 @@ categories: ["software-dev"]
 tags: ["Budget Alerting", "LLM Cost", "Threshold Alerts", "Observability", "Helicone", "Portkey", "Cost Control"]
 series: ["AI Cost Observability 2026"]
 featureimage: "/images/llm-budget-alerting-workflow-2026.svg"
-draft: true
+draft: false
 ---
 
 LLM Budget Alerting은 비용이 정해진 선을 넘기 전에 알려주는 장치입니다. 알림이 없으면 비용은 뒤늦게 발견됩니다.

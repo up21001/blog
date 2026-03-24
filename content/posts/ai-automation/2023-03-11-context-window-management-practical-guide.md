@@ -7,7 +7,7 @@ slug: "context-window-management-practical-guide"
 categories: ["ai-automation"]
 tags: ["Context Window Management", "Context Engineering", "Summarization", "Prompt Design", "LLM Memory", "Conversation State", "Token Budget"]
 featureimage: "/images/context-window-management-workflow-2026.svg"
-draft: true
+draft: false
 ---
 
 `Context Window Management`는 모델이 한 번에 볼 수 있는 입력 한도를 넘지 않도록 대화를 정리하는 기술입니다. 긴 작업에서는 단순히 토큰을 아끼는 문제가 아니라, 무엇을 남기고 무엇을 버릴지 결정하는 일이 됩니다.

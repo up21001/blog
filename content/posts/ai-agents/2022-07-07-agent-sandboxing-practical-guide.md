@@ -7,7 +7,7 @@ slug: "agent-sandboxing-practical-guide"
 categories: ["ai-agents"]
 tags: ["Agent Sandboxing", "Isolation", "AI Agent", "Container", "Security", "MCP Security"]
 featureimage: "/images/agent-sandboxing-workflow-2026.svg"
-draft: true
+draft: false
 ---
 
 ![Agent Sandboxing](/images/agent-sandboxing-workflow-2026.svg)

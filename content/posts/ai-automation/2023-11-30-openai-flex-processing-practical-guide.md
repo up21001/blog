@@ -8,7 +8,7 @@ categories: ["ai-automation"]
 tags: ["OpenAI Flex Processing", "OpenAI API", "Cost Optimization", "Async Workloads", "AI Automation", "Throughput"]
 featureimage: "/images/openai-flex-processing-workflow-2026.svg"
 series: ["AI Agent Tooling 2026"]
-draft: true
+draft: false
 ---
 
 OpenAI Flex Processing은 처리 지연을 조금 허용하는 대신 비용과 처리 효율을 조절하고 싶을 때 고려할 수 있는 선택지입니다. 실시간 응답보다 백그라운드 처리에 가까운 워크로드에 잘 맞습니다.

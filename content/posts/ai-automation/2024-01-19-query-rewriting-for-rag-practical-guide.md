@@ -8,7 +8,7 @@ categories: ["ai-automation"]
 tags: ["Query Rewriting", "RAG", "Retrieval", "Hybrid Search", "Prompting", "Reranking", "Search"]
 series: ["RAG Routing 2026"]
 featureimage: "/images/query-rewriting-for-rag-workflow-2026.svg"
-draft: true
+draft: false
 ---
 
 Query Rewriting for RAG는 사용자의 원문 질문을 그대로 검색하지 않고, 검색에 더 잘 맞는 형태로 바꾸는 단계입니다. 대화형 질문은 문맥이 짧고 생략이 많아서, 그대로 벡터 검색이나 키워드 검색에 넣으면 결과가 흔들립니다.

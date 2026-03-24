@@ -7,7 +7,7 @@ slug: "ai-safety-guardrails-practical-guide"
 categories: ["ai-automation"]
 tags: ["AI Safety", "Guardrails", "LLM Policy", "Validation", "Safety Checks", "Agent Safety"]
 featureimage: "/images/ai-safety-guardrails-workflow-2026.svg"
-draft: true
+draft: false
 ---
 
 ![AI 안전 가드레일 실무 가이드](/images/ai-safety-guardrails-workflow-2026.svg)

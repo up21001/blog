@@ -8,7 +8,7 @@ categories: ["ai-agents"]
 tags: ["Voice Agent", "Architecture", "STT", "LLM", "TTS", "Telephony", "Realtime", "Orchestration"]
 series: ["AI Voice Stack 2026"]
 featureimage: "/images/voice-agent-architecture-workflow-2026.svg"
-draft: true
+draft: false
 ---
 
 `Voice Agent Architecture`는 음성 입력, 전사, 추론, 응답 생성, 합성 음성, 통화 제어를 하나의 흐름으로 묶는 설계입니다. 2026년 기준으로는 단순한 TTS 데모가 아니라, `STT`, `LLM`, `TTS`, `telephony`, `barge-in`, `turn taking`을 함께 설계해야 운영 가능한 시스템이 됩니다.

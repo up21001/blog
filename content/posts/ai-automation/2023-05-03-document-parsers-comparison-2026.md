@@ -8,7 +8,7 @@ categories: ["ai-automation"]
 tags: ["Document Parsing", "Unstructured", "LlamaParse", "Vision API", "OCR", "Multimodal", "Comparison"]
 series: ["AI Data Infrastructure 2026"]
 featureimage: "/images/document-parsers-comparison-2026.svg"
-draft: true
+draft: false
 ---
 
 문서 파이프라인을 만들 때 가장 먼저 부딪히는 문제는 파싱입니다. PDF, 스캔본, 이미지, 레이아웃이 복잡한 문서를 LLM이 쓰기 좋은 구조로 바꾸려면 도구 선택이 중요합니다. 이 글은 [Unstructured란 무엇인가](/posts/unstructured-practical-guide/), [LlamaParse란 무엇인가](/posts/llamaparse-practical-guide/), [Vision API란 무엇인가](/posts/vision-api-practical-guide/)를 비교해 실무 기준으로 정리합니다.

@@ -8,7 +8,7 @@ categories: ["mcp"]
 tags: ["MCP", "SLO", "Latency", "Availability", "Error Budget", "Observability", "AI 에이전트"]
 series: ["AI Agent Tooling 2026"]
 featureimage: "/images/mcp-server-slo-workflow-2026.svg"
-draft: true
+draft: false
 ---
 
 MCP 서버는 "도구만 붙이면 끝"처럼 보이기 쉽지만, 실제 서비스에서는 응답 시간과 실패율이 곧 사용자 경험입니다. SLO가 없으면 문제가 생겨도 어디까지가 정상인지, 언제 배포를 멈춰야 하는지 판단하기 어렵습니다.

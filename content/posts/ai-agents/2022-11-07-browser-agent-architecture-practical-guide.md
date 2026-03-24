@@ -8,7 +8,7 @@ categories: ["ai-agents"]
 tags: ["Browser Agent", "Browser Automation", "AI Agent", "Playwright", "Stagehand", "Browserbase", "OpenAI Computer Use"]
 series: ["AI Agent Tooling 2026"]
 featureimage: "/images/browser-agent-architecture-workflow-2026.svg"
-draft: true
+draft: false
 ---
 
 브라우저 자동화는 단순히 클릭과 입력을 흉내 내는 작업처럼 보이지만, 실제로는 상태 관리와 실패 복구가 핵심입니다. `Browser Agent`는 이 작업을 에이전트 계층과 브라우저 실행 계층으로 분리해, 더 예측 가능하고 운영 가능한 구조로 만드는 접근입니다.

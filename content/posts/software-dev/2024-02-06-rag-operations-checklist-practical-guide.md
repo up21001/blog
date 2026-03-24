@@ -8,7 +8,7 @@ categories: ["software-dev"]
 tags: ["RAG Ops", "Checklist", "Operations", "Retrieval", "Evaluation", "Monitoring", "Qdrant", "Hybrid Search"]
 series: ["RAG Operations 2026"]
 featureimage: "/images/rag-operations-checklist-workflow-2026.svg"
-draft: true
+draft: false
 ---
 
 RAG는 모델만 붙인다고 끝나지 않습니다. 실제 운영에서는 ingestion, chunking, embedding, retrieval, reranking, evaluation, monitoring이 모두 연결돼 있어야 합니다.

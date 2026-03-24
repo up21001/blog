@@ -8,7 +8,7 @@ categories: ["ai-automation"]
 tags: ["Vision API", "Vision Regression", "Image Understanding", "Regression Testing", "Evaluation", "Multimodal", "Testing"]
 series: ["Multimodal Quality 2026"]
 featureimage: "/images/vision-regression-testing-workflow-2026.svg"
-draft: true
+draft: false
 ---
 
 Vision Regression Testing은 이미지 이해 경로가 바뀌었을 때 품질 저하를 초기에 잡는 방법입니다. OCR, 객체 인식, UI 스크린샷 이해, 문서 이미지 파싱은 작은 프롬프트 수정이나 모델 교체에도 민감합니다.

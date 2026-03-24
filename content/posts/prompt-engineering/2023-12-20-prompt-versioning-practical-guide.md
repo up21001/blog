@@ -8,7 +8,7 @@ categories: ["prompt-engineering"]
 tags: ["Prompt Versioning", "Prompt Ops", "Version Control", "Prompt Testing", "AI Governance", "LLM"]
 featureimage: "/images/prompt-versioning-workflow-2026.svg"
 series: ["Prompt Operations 2026"]
-draft: true
+draft: false
 ---
 
 ![Prompt Versioning workflow](/images/prompt-versioning-workflow-2026.svg)

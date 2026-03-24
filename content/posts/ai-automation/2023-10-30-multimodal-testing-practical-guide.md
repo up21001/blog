@@ -8,7 +8,7 @@ categories: ["ai-automation"]
 tags: ["Multimodal Testing", "Vision API", "Voice Agent", "Screen Understanding", "Evaluation", "Testing", "Regression"]
 series: ["Multimodal Quality 2026"]
 featureimage: "/images/multimodal-testing-workflow-2026.svg"
-draft: true
+draft: false
 ---
 
 Multimodal Testing은 텍스트만 보는 테스트가 놓치는 문제를 잡기 위한 접근입니다. 이미지 인식, 음성 이해, 화면 해석, 문서 추출이 섞이면 하나의 실패가 여러 단계로 번지기 때문에, 결과만 확인하는 방식으로는 품질을 안정적으로 유지하기 어렵습니다.

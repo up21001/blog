@@ -8,7 +8,7 @@ categories: ["ai-automation"]
 tags: ["Anthropic API", "Tool Use", "Claude", "AI Agent", "MCP", "OpenAI Responses API", "Function Calling"]
 featureimage: "/images/anthropic-tool-use-workflow-2026.svg"
 series: ["AI Agent Tooling 2026"]
-draft: true
+draft: false
 ---
 
 Anthropic Tool Use는 Claude가 외부 도구를 직접 호출하도록 연결하는 핵심 기능입니다. 검색, 파일 읽기, 데이터 조회, 작업 실행을 모델 바깥으로 분리할 수 있어서 에이전트 설계를 훨씬 깔끔하게 만들 수 있습니다.

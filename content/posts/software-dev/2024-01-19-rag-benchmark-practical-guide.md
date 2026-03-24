@@ -1,7 +1,7 @@
 ---
 title: "RAG 벤치마크란 무엇인가: 검색과 답변 품질을 반복 측정하는 실무 가이드"
 date: 2024-01-19T10:17:00+09:00
-draft: true
+draft: false
 description: "RAG 벤치마크를 어떻게 정의하고 운영할지 정리한 실무 가이드입니다."
 slug: "rag-benchmark-practical-guide"
 categories: ["software-dev"]

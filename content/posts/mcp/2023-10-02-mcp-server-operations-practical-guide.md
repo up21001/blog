@@ -8,7 +8,7 @@ categories: ["mcp"]
 tags: ["MCP", "MCP Server", "Operations", "Tool Calling", "Remote MCP", "FastMCP", "AI 에이전트"]
 series: ["AI Agent Tooling 2026"]
 featureimage: "/images/mcp-server-operations-workflow-2026.svg"
-draft: true
+draft: false
 ---
 
 `MCP 서버 운영`은 이제 "서버를 띄운다"보다 "도구를 안정적으로 제공한다"에 가깝습니다. 실무에서는 권한, 스키마, 장애 복구, 호출 추적이 같이 움직여야 하고, 하나만 빠져도 에이전트 전체 품질이 흔들립니다.

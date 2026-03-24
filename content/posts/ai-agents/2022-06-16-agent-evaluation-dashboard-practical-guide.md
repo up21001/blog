@@ -7,7 +7,7 @@ slug: "agent-evaluation-dashboard-practical-guide"
 categories: ["ai-agents"]
 tags: ["Agent Evaluation", "Dashboard", "Tracing", "Evaluation", "Regression Testing", "OpenAI Evals", "OpenAI Agent Evals", "LLM Observability"]
 featureimage: "/images/agent-evaluation-dashboard-workflow-2026.svg"
-draft: true
+draft: false
 ---
 
 Agent Evaluation Dashboard는 에이전트 품질을 추상적으로 말하지 않고, trace, eval, regression, cost, latency를 한 화면에서 같이 보는 운영 도구입니다. 에이전트가 잘 동작하는지 감으로 판단하면 배포 후에 문제를 늦게 발견합니다. 대시보드는 그 지연을 줄입니다.

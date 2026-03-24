@@ -8,7 +8,7 @@ categories: ["ai-automation"]
 tags: ["Anthropic API", "Claude API", "AI 자동화", "에이전트 개발", "LLM API", "Claude"]
 featureimage: "/images/anthropic-api-workflow-2026.svg"
 series: ["AI Agent Tooling 2026"]
-draft: true
+draft: false
 ---
 
 `Anthropic API`는 Claude 계열 모델을 앱, 자동화, 에이전트 워크플로우에 연결할 때 가장 먼저 검토하는 인터페이스입니다. 단순 채팅 API가 아니라 메시지 구조, 도구 사용, 긴 컨텍스트 처리, 안정적인 응답 흐름까지 함께 설계할 수 있다는 점이 강점입니다.

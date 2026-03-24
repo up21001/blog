@@ -8,7 +8,7 @@ categories: ["software-dev"]
 tags: ["Ollama", "Local LLM", "OpenAI Compatible", "Model Management", "LLM Ops", "Inference", "MCP"]
 series: ["Developer Tooling 2026"]
 featureimage: "/images/ollama-workflow-2026.svg"
-draft: true
+draft: false
 ---
 
 `Ollama`는 로컬에서 LLM을 빠르게 실행하고 관리하기 좋은 도구입니다. 2026년 기준으로는 단순히 모델을 내려받는 수준을 넘어, OpenAI 호환 API, 모델 버전 관리, 개발용 실험 환경 구성까지 함께 묶어서 이야기하는 경우가 많습니다. 그래서 `Ollama`, `local LLM`, `OpenAI-compatible API`, `model management` 같은 키워드로 찾는 사람이 꾸준합니다.

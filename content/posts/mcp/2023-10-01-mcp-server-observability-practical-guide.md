@@ -8,7 +8,7 @@ categories: ["mcp"]
 tags: ["MCP", "Observability", "Tracing", "Audit Log", "Failure Replay", "Remote MCP", "AI 에이전트"]
 series: ["AI Agent Tooling 2026"]
 featureimage: "/images/mcp-server-observability-workflow-2026.svg"
-draft: true
+draft: false
 ---
 
 MCP 서버 관측성은 장애가 났을 때만 쓰는 장식이 아닙니다. 호출 흐름, 도구 선택, 승인 여부, 실패 복구를 이어 붙여야 에이전트 품질을 유지할 수 있습니다. 로그가 있어도 연결이 안 되면 디버깅은 느립니다.

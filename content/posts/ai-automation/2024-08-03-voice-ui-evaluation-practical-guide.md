@@ -8,7 +8,7 @@ categories: ["ai-automation"]
 tags: ["Voice UI", "Voice Agent", "Evaluation", "Latency", "Turn-taking", "Speech Quality", "Testing"]
 series: ["Multimodal Quality 2026"]
 featureimage: "/images/voice-ui-evaluation-workflow-2026.svg"
-draft: true
+draft: false
 ---
 
 Voice UI Evaluation은 음성 인터페이스가 실제 사용자 경험을 얼마나 잘 지키는지 보는 과정입니다. STT 정확도만 높아도 대화가 자연스럽지 않으면 제품 품질은 낮게 느껴집니다.

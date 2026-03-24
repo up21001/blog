@@ -8,7 +8,7 @@ categories: ["mcp"]
 tags: ["Cloudflare", "Remote MCP", "MCP Security", "Approval Flow", "Tool Allowlist", "Zero Trust", "AI 에이전트", "Durable Objects"]
 series: ["AI Agent Tooling 2026"]
 featureimage: "/images/cloudflare-remote-mcp-security-workflow-2026.svg"
-draft: true
+draft: false
 ---
 
 Remote MCP는 편리하지만, 보안 설계가 없다면 위험합니다. 외부 도구를 에이전트가 직접 호출할 수 있게 만드는 순간, 권한 오남용, 프롬프트 인젝션, 과도한 데이터 조회, 무한 반복 호출 문제가 함께 따라옵니다.

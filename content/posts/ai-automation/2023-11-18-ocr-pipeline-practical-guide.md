@@ -8,7 +8,7 @@ categories: ["ai-automation"]
 tags: ["OCR", "Vision API", "Structured Outputs", "Multimodal", "Image to Structured Data", "Document AI", "Pipeline"]
 series: ["AI Data Infrastructure 2026"]
 featureimage: "/images/ocr-pipeline-workflow-2026.svg"
-draft: true
+draft: false
 ---
 
 OCR은 읽는 데서 끝나면 가치가 작습니다. 실제로는 읽은 결과를 정리하고, 검증하고, 검색과 업무 시스템에 연결해야 합니다. 이 글은 [Vision API란 무엇인가](/posts/vision-api-practical-guide/), [이미지에서 구조화 데이터 추출하기](/posts/image-to-structured-data-practical-guide/), [멀티모달 문서 이해란 무엇인가](/posts/multimodal-document-understanding-practical-guide/)를 OCR 파이프라인 관점에서 묶어 설명합니다.

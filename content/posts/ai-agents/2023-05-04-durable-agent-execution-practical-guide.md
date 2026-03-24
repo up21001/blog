@@ -8,7 +8,7 @@ categories: ["ai-agents"]
 tags: ["Durable Execution", "Agent", "Temporal", "LangGraph", "Trigger.dev", "Workflow", "Retry"]
 series: ["AI Agent Tooling 2026"]
 featureimage: "/images/durable-agent-execution-workflow-2026.svg"
-draft: true
+draft: false
 ---
 
 Durable Agent Execution은 에이전트가 중간에 멈춰도 상태를 복원하고 작업을 계속 이어가게 만드는 실행 방식입니다. 긴 작업, 외부 API 호출, 승인 대기, 네트워크 실패가 섞이면 이 방식이 사실상 필요합니다.

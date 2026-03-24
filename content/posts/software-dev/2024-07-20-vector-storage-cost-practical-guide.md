@@ -8,7 +8,7 @@ categories: ["software-dev"]
 tags: ["Vector Database", "Qdrant", "Qdrant Cloud", "pgvector", "Storage Cost", "RAG", "Embeddings"]
 series: ["Vector Database 2026"]
 featureimage: "/images/vector-storage-cost-workflow-2026.svg"
-draft: true
+draft: false
 ---
 
 벡터 저장 비용은 디스크 가격만 보지 않으면 잘못 판단하기 쉽습니다. 인덱스 구조, 복제, 메타데이터, 백업, 재색인, 그리고 검색 성능을 유지하기 위한 메모리 사용량까지 함께 봐야 합니다.

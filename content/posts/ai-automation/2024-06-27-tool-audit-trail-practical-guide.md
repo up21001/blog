@@ -7,7 +7,7 @@ slug: "tool-audit-trail-practical-guide"
 categories: ["ai-automation"]
 tags: ["Tool Audit Trail", "Audit Log", "Tool Calling", "AI Agent", "Observability", "Compliance"]
 featureimage: "/images/tool-audit-trail-workflow-2026.svg"
-draft: true
+draft: false
 ---
 
 ![Tool Audit Trail](/images/tool-audit-trail-workflow-2026.svg)

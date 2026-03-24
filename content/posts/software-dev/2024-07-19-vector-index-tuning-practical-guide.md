@@ -8,7 +8,7 @@ categories: ["software-dev"]
 tags: ["Vector Index", "HNSW", "Quantization", "Qdrant", "RAG", "Search Quality", "Latency"]
 series: ["Vector Database 2026"]
 featureimage: "/images/vector-index-tuning-workflow-2026.svg"
-draft: true
+draft: false
 ---
 
 Vector Index Tuning은 "빠르게"와 "정확하게"를 동시에 맞추는 작업입니다. 벡터 검색은 기본값만 써도 동작하지만, 실제 서비스에서는 쿼리 패턴에 맞춰 인덱스 파라미터를 조정해야 합니다.

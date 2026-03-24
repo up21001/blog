@@ -8,7 +8,7 @@ categories: ["ai-agents"]
 tags: ["Multi Agent Queue", "AI Agent", "Queue", "Workflow", "LangGraph", "Temporal", "Trigger.dev"]
 series: ["AI Agent Operations 2026"]
 featureimage: "/images/multi-agent-queue-workflow-2026.svg"
-draft: true
+draft: false
 ---
 
 `Multi-Agent Queue`는 여러 에이전트가 동시에 일을 받을 때 작업 순서, 우선순위, 재시도, 병렬 처리를 일관되게 다루는 방법입니다. 에이전트 수가 늘어날수록 "누가 먼저 처리할지"와 "어디서 병목이 생기는지"가 중요해집니다.

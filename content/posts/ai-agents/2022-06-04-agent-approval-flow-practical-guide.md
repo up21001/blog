@@ -8,7 +8,7 @@ categories: ["ai-agents"]
 tags: ["Agent Approval Flow", "Approval Flow", "Human in the Loop", "AI Governance", "Access Control", "Audit Log"]
 series: ["AI Approval Flow 2026"]
 featureimage: "/images/agent-approval-flow-workflow-2026.svg"
-draft: true
+draft: false
 ---
 
 Agent Approval Flow는 AI 에이전트가 모든 작업을 바로 실행하지 않고, 위험도에 따라 자동 승인, 조건부 승인, 사람 승인을 나누는 설계입니다. 승인 단계가 없으면 편리해 보이지만, 실제 운영에서는 잘못된 도구 호출과 과도한 권한 사용이 곧바로 사고로 이어집니다.

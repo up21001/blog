@@ -8,7 +8,7 @@ categories: ["software-dev"]
 tags: ["Token Usage", "LLM Metrics", "Prompt Tokens", "Completion Tokens", "Observability", "Batch API", "Model Routing"]
 series: ["AI Cost Observability 2026"]
 featureimage: "/images/token-usage-monitoring-workflow-2026.svg"
-draft: true
+draft: false
 ---
 
 Token Usage Monitoring은 LLM이 실제로 얼마나 많은 토큰을 쓰는지 추적하는 일입니다. 비용의 원인을 찾으려면 토큰을 먼저 봐야 합니다.

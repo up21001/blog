@@ -8,7 +8,7 @@ categories: ["ai-automation"]
 tags: ["Speech-to-Text", "Transcription", "Streaming", "Audio Pipeline", "Voice AI", "Realtime", "STT"]
 series: ["AI Voice Stack 2026"]
 featureimage: "/images/real-time-transcription-pipeline-workflow-2026.svg"
-draft: true
+draft: false
 ---
 
 `Real-Time Transcription Pipeline`은 오디오 스트림을 받아 `partial transcript`와 `final transcript`를 빠르게 반환하는 구조입니다. 음성 에이전트, 통화 기록, 회의 요약, 콜센터 분석 모두 이 파이프라인 위에서 동작합니다.

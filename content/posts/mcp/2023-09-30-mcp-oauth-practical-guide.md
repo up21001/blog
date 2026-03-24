@@ -8,7 +8,7 @@ categories: ["mcp"]
 tags: ["MCP OAuth", "OAuth 2.1", "Remote MCP", "Model Context Protocol", "User Consent", "Token Delegation", "AI Agent Security"]
 series: ["MCP Security 2026"]
 featureimage: "/images/mcp-oauth-workflow-2026.svg"
-draft: true
+draft: false
 ---
 
 MCP OAuth는 Remote MCP를 사용자 계정과 연결하는 핵심 수단입니다. 로컬 환경에서는 간단해 보이지만, 여러 사용자가 같은 MCP 서버를 쓰는 순간 동의 화면, 범위 제한, 토큰 교체, 취소 흐름이 모두 중요해집니다.

@@ -8,7 +8,7 @@ categories: ["ai-agents"]
 tags: ["Agent Approval UX", "Approval UX", "Human in the Loop", "AI Governance", "Audit Log", "Risk Review"]
 series: ["AI Approval Flow 2026"]
 featureimage: "/images/agent-approval-ux-workflow-2026.svg"
-draft: true
+draft: false
 ---
 
 AI 에이전트가 어떤 행동을 하려 할 때, 사용자는 "이걸 허용해도 되는가"를 빠르게 판단해야 합니다. 승인 UX는 그 판단을 돕는 화면과 정보 구조를 설계하는 일입니다. 단순히 확인 버튼을 하나 두는 문제가 아니라, 위험도, 실행 범위, 되돌릴 수 있는지 여부, 감사 로그까지 함께 보여줘야 합니다.

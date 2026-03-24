@@ -8,7 +8,7 @@ categories: ["ai-agents"]
 tags: ["OpenAI Agent Evals", "Agents SDK", "Evaluation", "Agent Workflow", "Trace", "AI Automation"]
 featureimage: "/images/openai-agent-evals-workflow-2026.svg"
 series: ["AI Agent Tooling 2026"]
-draft: true
+draft: false
 ---
 
 에이전트는 일반 LLM 요청보다 실패 지점이 많습니다. 도구를 잘못 고르거나, 중간 상태를 잃거나, 마지막 답변만 그럴듯하게 나오는 경우가 생깁니다. 그래서 에이전트는 결과만 보는 테스트가 아니라, 워크플로우 전체를 평가해야 합니다.

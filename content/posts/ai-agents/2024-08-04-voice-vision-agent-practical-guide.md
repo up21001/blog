@@ -8,7 +8,7 @@ categories: ["ai-agents"]
 tags: ["Voice Vision Agent", "Voice Agent", "Vision API", "Realtime", "WebRTC", "Multimodal", "AI Assistant"]
 series: ["Multimodal Agents 2026"]
 featureimage: "/images/voice-vision-agent-workflow-2026.svg"
-draft: true
+draft: false
 ---
 
 `Voice Vision Agent`는 음성으로 대화하면서 동시에 카메라나 화면 정보를 읽는 에이전트입니다. 사용자는 말하고, 시스템은 보고, 그 결과를 즉시 응답해야 하므로 지연 시간과 상태 관리가 핵심입니다.

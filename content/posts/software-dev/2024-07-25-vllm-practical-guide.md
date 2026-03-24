@@ -8,7 +8,7 @@ categories: ["software-dev"]
 tags: ["vLLM", "LLM Serving", "Inference", "Throughput", "PagedAttention", "OpenAI Compatible", "Model Hosting"]
 series: ["Developer Tooling 2026"]
 featureimage: "/images/vllm-workflow-2026.svg"
-draft: true
+draft: false
 ---
 
 `vLLM`은 LLM을 빠르게 서빙해야 할 때 자주 거론되는 오픈소스 엔진입니다. 로컬 실행 도구가 아니라, 더 넓게 보면 "모델 호스팅과 응답 처리량 최적화"에 강한 서빙 계층입니다. 그래서 `vLLM`, `LLM serving`, `throughput`, `OpenAI-compatible inference` 같은 검색어가 자주 연결됩니다.

@@ -8,7 +8,7 @@ categories: ["ai-automation"]
 tags: ["Speech Quality", "Voice AI", "Metrics", "STT", "TTS", "Latency", "Evaluation", "Conversation"]
 series: ["AI Voice Stack 2026"]
 featureimage: "/images/speech-quality-metrics-workflow-2026.svg"
-draft: true
+draft: false
 ---
 
 `Speech Quality Metrics`는 음성 인터랙션의 품질을 정량화하는 기준입니다. 음성 에이전트는 텍스트 응답과 다르게 발화 품질, 인식 정확도, 반응 속도, 끼어들기 대응을 동시에 봐야 합니다.

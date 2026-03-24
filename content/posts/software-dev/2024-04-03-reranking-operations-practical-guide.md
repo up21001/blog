@@ -8,7 +8,7 @@ categories: ["software-dev"]
 tags: ["Reranking", "Hybrid Search", "Retrieval Quality Metrics", "RAG", "Search Quality", "Cross-Encoder"]
 series: ["RAG Routing 2026"]
 featureimage: "/images/reranking-operations-workflow-2026.svg"
-draft: true
+draft: false
 ---
 
 Reranking은 검색 결과를 한 번 더 정렬해서 상위 결과의 정확도를 끌어올리는 단계다. 벡터 검색이나 하이브리드 검색만으로는 상위 5개가 충분히 안정적이지 않은 경우가 많고, 그때 reranking이 품질 차이를 만든다.

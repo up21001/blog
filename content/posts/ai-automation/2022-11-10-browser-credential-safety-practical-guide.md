@@ -8,7 +8,7 @@ categories: ["ai-automation"]
 tags: ["Browser Credential Safety", "Cookies", "Secrets", "OAuth", "AI Agent", "Session Security", "Browser Automation"]
 series: ["AI Agent Tooling 2026"]
 featureimage: "/images/browser-credential-safety-workflow-2026.svg"
-draft: true
+draft: false
 ---
 
 Browser Credential Safety는 에이전트가 로그인 자격 증명과 세션 토큰을 다룰 때 어떤 값을 어디까지 허용할지 정하는 규칙입니다. 브라우저 자동화는 인증이 붙는 순간부터 보안 문제가 아니라 운영 문제가 됩니다.

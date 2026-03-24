@@ -8,7 +8,7 @@ categories: ["ai-automation"]
 tags: ["Approval Policy Design", "Policy Enforcement", "Risk-Based Automation", "AI Governance", "Approval Flow", "Audit Log"]
 series: ["AI Approval Flow 2026"]
 featureimage: "/images/approval-policy-design-workflow-2026.svg"
-draft: true
+draft: false
 ---
 
 Approval Policy Design은 AI 에이전트의 승인 기준을 코드와 정책으로 분리해 관리하는 일입니다. 규칙이 문서에만 있으면 운영이 흔들리고, 화면에만 있으면 예외 처리와 감사가 어렵습니다. 정책은 재사용 가능해야 하고, 변경 이력도 남아야 합니다.

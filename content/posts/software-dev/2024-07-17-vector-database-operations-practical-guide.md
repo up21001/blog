@@ -8,7 +8,7 @@ categories: ["software-dev"]
 tags: ["Vector Database", "Qdrant", "Qdrant Cloud", "Operations", "RAG", "Monitoring", "Scaling"]
 series: ["Vector Database 2026"]
 featureimage: "/images/vector-database-operations-workflow-2026.svg"
-draft: true
+draft: false
 ---
 
 Vector Database Operations는 벡터 DB를 "돌아가게 만드는 것"이 아니라 "안정적으로 계속 운영하는 것"을 뜻합니다. 검색 품질, 지연 시간, 비용, 복구 가능성을 같이 봐야 실전에서 무너지지 않습니다.

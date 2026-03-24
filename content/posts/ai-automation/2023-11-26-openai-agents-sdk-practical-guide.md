@@ -8,7 +8,7 @@ categories: ["ai-automation"]
 tags: ["OpenAI Agents SDK", "AI Agent", "OpenAI API", "Tool Calling", "Agent Orchestration", "Claude Code", "MCP"]
 featureimage: "/images/openai-agents-sdk-workflow-2026.svg"
 series: ["AI Agent Tooling 2026"]
-draft: true
+draft: false
 ---
 
 `OpenAI Agents SDK`는 대화형 모델을 단순 호출하는 수준을 넘어, 도구 호출과 단계적 추론, 외부 시스템 연동을 하나의 실행 흐름으로 묶고 싶을 때 쓰기 좋은 선택지입니다. 특히 "사용자 입력 -> 판단 -> 도구 호출 -> 결과 반영 -> 다음 행동" 같은 패턴이 반복되는 에이전트형 앱에서 강점이 큽니다.

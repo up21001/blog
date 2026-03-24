@@ -8,7 +8,7 @@ categories: ["ai-automation"]
 tags: ["OpenAI Batch API", "OpenAI API", "Async Processing", "Bulk Inference", "AI Automation", "Cost Optimization"]
 featureimage: "/images/openai-batch-api-workflow-2026.svg"
 series: ["AI Agent Tooling 2026"]
-draft: true
+draft: false
 ---
 
 OpenAI Batch API는 많은 요청을 한 번에 넣고 비동기적으로 처리할 때 쓰기 좋습니다. 실시간 응답이 필요하지 않은 분류, 정제, 요약, 메타데이터 생성 업무에 특히 잘 맞습니다.

@@ -8,7 +8,7 @@ categories: ["ai-automation"]
 tags: ["Tool Calling", "Failure Recovery", "Function Calling", "Schema Validation", "OpenAI Structured Outputs", "MCP", "Agent Debugging"]
 featureimage: "/images/tool-calling-failure-recovery-workflow-2026.svg"
 series: ["AI Agent Reliability 2026"]
-draft: true
+draft: false
 ---
 
 Tool Calling은 에이전트가 외부 세계와 만나는 지점입니다. 따라서 가장 먼저 망가지는 곳도, 가장 먼저 복구 전략을 넣어야 하는 곳도 여기입니다.
