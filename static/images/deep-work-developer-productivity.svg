@@ -1,0 +1,96 @@
+<svg width="800" height="450" viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg" font-family="'Malgun Gothic', sans-serif">
+  <rect width="800" height="450" fill="#F8FAFC" rx="12"/>
+  <text x="400" y="38" text-anchor="middle" font-size="20" font-weight="bold" fill="#1E293B">딥 워크 vs 샬로우 워크 — 개발자의 하루</text>
+  <text x="400" y="58" text-anchor="middle" font-size="13" fill="#64748B">집중 시간 구조화로 생산성을 2배로 끌어올리는 방법</text>
+
+  <!-- 일반 개발자 타임라인 -->
+  <text x="50" y="95" font-size="13" font-weight="bold" fill="#EF4444">일반적인 하루 (집중 2시간)</text>
+  <rect x="50" y="105" width="700" height="50" rx="6" fill="#F3F4F6" stroke="#6B7280" stroke-width="1"/>
+
+  <!-- 슬랙/이메일 -->
+  <rect x="50" y="105" width="80" height="50" rx="0" fill="#FEE2E2" stroke="#EF4444" stroke-width="1"/>
+  <text x="90" y="132" text-anchor="middle" font-size="9" fill="#991B1B">슬랙/이메일</text>
+  <!-- 회의 -->
+  <rect x="130" y="105" width="60" height="50" fill="#FEF3C7" stroke="#F59E0B" stroke-width="1"/>
+  <text x="160" y="132" text-anchor="middle" font-size="9" fill="#92400E">회의</text>
+  <!-- 집중 -->
+  <rect x="190" y="105" width="90" height="50" fill="#D1FAE5" stroke="#10B981" stroke-width="1"/>
+  <text x="235" y="132" text-anchor="middle" font-size="9" fill="#065F46">집중 개발</text>
+  <!-- 슬랙 -->
+  <rect x="280" y="105" width="50" height="50" fill="#FEE2E2" stroke="#EF4444" stroke-width="1"/>
+  <text x="305" y="132" text-anchor="middle" font-size="9" fill="#991B1B">슬랙</text>
+  <!-- 회의 -->
+  <rect x="330" y="105" width="80" height="50" fill="#FEF3C7" stroke="#F59E0B" stroke-width="1"/>
+  <text x="370" y="132" text-anchor="middle" font-size="9" fill="#92400E">점심/회의</text>
+  <!-- 집중 -->
+  <rect x="410" y="105" width="70" height="50" fill="#D1FAE5" stroke="#10B981" stroke-width="1"/>
+  <text x="445" y="132" text-anchor="middle" font-size="9" fill="#065F46">집중 개발</text>
+  <!-- 슬랙/잡무 -->
+  <rect x="480" y="105" width="90" height="50" fill="#FEE2E2" stroke="#EF4444" stroke-width="1"/>
+  <text x="525" y="132" text-anchor="middle" font-size="9" fill="#991B1B">슬랙/잡무</text>
+  <!-- 회의 -->
+  <rect x="570" y="105" width="60" height="50" fill="#FEF3C7" stroke="#F59E0B" stroke-width="1"/>
+  <text x="600" y="132" text-anchor="middle" font-size="9" fill="#92400E">회의</text>
+  <!-- 마무리 -->
+  <rect x="630" y="105" width="120" height="50" fill="#FEE2E2" stroke="#EF4444" stroke-width="1"/>
+  <text x="690" y="132" text-anchor="middle" font-size="9" fill="#991B1B">이메일/정리</text>
+
+  <!-- 시간 축 -->
+  <text x="50" y="168" font-size="10" fill="#94A3B8">09:00</text>
+  <text x="700" y="168" font-size="10" fill="#94A3B8">18:00</text>
+
+  <!-- 딥 워크 개발자 타임라인 -->
+  <text x="50" y="200" font-size="13" font-weight="bold" fill="#3B82F6">딥 워크 하루 (집중 5시간)</text>
+  <rect x="50" y="210" width="700" height="50" rx="6" fill="#F3F4F6" stroke="#6B7280" stroke-width="1"/>
+
+  <!-- 모닝 루틴 -->
+  <rect x="50" y="210" width="60" height="50" rx="0" fill="#EDE9FE" stroke="#8B5CF6" stroke-width="1"/>
+  <text x="80" y="237" text-anchor="middle" font-size="9" fill="#5B21B6">루틴</text>
+  <!-- 딥 워크 블록 1 -->
+  <rect x="110" y="210" width="200" height="50" fill="#DBEAFE" stroke="#3B82F6" stroke-width="2"/>
+  <text x="210" y="232" text-anchor="middle" font-size="11" font-weight="bold" fill="#1D4ED8">딥 워크 블록 1</text>
+  <text x="210" y="249" text-anchor="middle" font-size="9" fill="#3B82F6">09:30 – 12:00 (2.5시간)</text>
+  <!-- 점심 -->
+  <rect x="310" y="210" width="70" height="50" fill="#F3F4F6" stroke="#6B7280" stroke-width="1"/>
+  <text x="345" y="237" text-anchor="middle" font-size="9" fill="#6B7280">점심 + 산책</text>
+  <!-- 배치 처리 -->
+  <rect x="380" y="210" width="70" height="50" fill="#FEF3C7" stroke="#F59E0B" stroke-width="1"/>
+  <text x="415" y="232" text-anchor="middle" font-size="9" fill="#92400E">슬랙·메일</text>
+  <text x="415" y="246" text-anchor="middle" font-size="9" fill="#92400E">배치 처리</text>
+  <!-- 딥 워크 블록 2 -->
+  <rect x="450" y="210" width="200" height="50" fill="#DBEAFE" stroke="#3B82F6" stroke-width="2"/>
+  <text x="550" y="232" text-anchor="middle" font-size="11" font-weight="bold" fill="#1D4ED8">딥 워크 블록 2</text>
+  <text x="550" y="249" text-anchor="middle" font-size="9" fill="#3B82F6">14:00 – 16:30 (2.5시간)</text>
+  <!-- 마무리 -->
+  <rect x="650" y="210" width="100" height="50" fill="#D1FAE5" stroke="#10B981" stroke-width="1"/>
+  <text x="700" y="232" text-anchor="middle" font-size="9" fill="#065F46">리뷰·정리</text>
+  <text x="700" y="246" text-anchor="middle" font-size="9" fill="#065F46">내일 계획</text>
+
+  <!-- 딥 워크 핵심 원칙 -->
+  <rect x="50" y="290" width="700" height="130" rx="10" fill="#F0FDF4" stroke="#10B981" stroke-width="1.5"/>
+  <text x="400" y="314" text-anchor="middle" font-size="14" font-weight="bold" fill="#065F46">딥 워크 4가지 핵심 원칙</text>
+
+  <rect x="70" y="326" width="148" height="80" rx="8" fill="white" stroke="#10B981" stroke-width="1"/>
+  <text x="144" y="348" text-anchor="middle" font-size="12" font-weight="bold" fill="#065F46">① 방해 제거</text>
+  <text x="144" y="366" text-anchor="middle" font-size="10" fill="#374151">알림 OFF, DND 모드</text>
+  <text x="144" y="382" text-anchor="middle" font-size="10" fill="#374151">전용 집중 환경</text>
+  <text x="144" y="398" text-anchor="middle" font-size="10" fill="#374151">헤드폰 착용 신호</text>
+
+  <rect x="232" y="326" width="148" height="80" rx="8" fill="white" stroke="#10B981" stroke-width="1"/>
+  <text x="306" y="348" text-anchor="middle" font-size="12" font-weight="bold" fill="#065F46">② 루틴화</text>
+  <text x="306" y="366" text-anchor="middle" font-size="10" fill="#374151">같은 시간대 딥 워크</text>
+  <text x="306" y="382" text-anchor="middle" font-size="10" fill="#374151">시작 의식(ritual)</text>
+  <text x="306" y="398" text-anchor="middle" font-size="10" fill="#374151">종료 선언</text>
+
+  <rect x="394" y="326" width="148" height="80" rx="8" fill="white" stroke="#10B981" stroke-width="1"/>
+  <text x="468" y="348" text-anchor="middle" font-size="12" font-weight="bold" fill="#065F46">③ 측정</text>
+  <text x="468" y="366" text-anchor="middle" font-size="10" fill="#374151">딥 워크 시간 기록</text>
+  <text x="468" y="382" text-anchor="middle" font-size="10" fill="#374151">주간 목표 설정</text>
+  <text x="468" y="398" text-anchor="middle" font-size="10" fill="#374151">점수판 가시화</text>
+
+  <rect x="556" y="326" width="175" height="80" rx="8" fill="white" stroke="#10B981" stroke-width="1"/>
+  <text x="643" y="348" text-anchor="middle" font-size="12" font-weight="bold" fill="#065F46">④ 여유 수용</text>
+  <text x="643" y="366" text-anchor="middle" font-size="10" fill="#374151">퇴근 후 완전한 휴식</text>
+  <text x="643" y="382" text-anchor="middle" font-size="10" fill="#374151">소셜 미디어 의도적 사용</text>
+  <text x="643" y="398" text-anchor="middle" font-size="10" fill="#374151">무료함 견디기 연습</text>
+</svg>

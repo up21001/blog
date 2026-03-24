@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#ffffff"/>
+  <style>
+    .h1 { font: 700 40px sans-serif; fill: #0f172a; }
+    .h2 { font: 400 20px sans-serif; fill: #475569; }
+    .b { font: 700 20px sans-serif; fill: #0f172a; }
+    .t { font: 400 18px sans-serif; fill: #334155; }
+    .box { rx: 18; ry: 18; stroke: #bae6fd; stroke-width: 2; }
+  </style>
+  <text x="70" y="76" class="h1">Freshness Architecture</text>
+  <text x="70" y="110" class="h2">갱신 감지, 증분 인덱싱, stale 제거를 묶는 구조</text>
+
+  <rect x="70" y="170" width="170" height="110" class="box" fill="#dbeafe"/>
+  <text x="155" y="212" text-anchor="middle" class="b">Monitor</text>
+  <text x="155" y="244" text-anchor="middle" class="t">원본 변경</text>
+
+  <rect x="280" y="170" width="170" height="110" class="box" fill="#ecfccb"/>
+  <text x="365" y="212" text-anchor="middle" class="b">Diff</text>
+  <text x="365" y="244" text-anchor="middle" class="t">변경분 추출</text>
+
+  <rect x="490" y="170" width="170" height="110" class="box" fill="#fef9c3"/>
+  <text x="575" y="212" text-anchor="middle" class="b">Index</text>
+  <text x="575" y="244" text-anchor="middle" class="t">증분 반영</text>
+
+  <rect x="700" y="170" width="170" height="110" class="box" fill="#e0f2fe"/>
+  <text x="785" y="212" text-anchor="middle" class="b">Metadata</text>
+  <text x="785" y="244" text-anchor="middle" class="t">freshness 기록</text>
+
+  <rect x="910" y="170" width="220" height="110" class="box" fill="#ffe4e6"/>
+  <text x="1020" y="212" text-anchor="middle" class="b">Retrieval</text>
+  <text x="1020" y="244" text-anchor="middle" class="t">최신 문서 우선</text>
+
+  <line x1="240" y1="225" x2="280" y2="225" stroke="#64748b" stroke-width="4"/>
+  <line x1="450" y1="225" x2="490" y2="225" stroke="#64748b" stroke-width="4"/>
+  <line x1="660" y1="225" x2="700" y2="225" stroke="#64748b" stroke-width="4"/>
+  <line x1="870" y1="225" x2="910" y2="225" stroke="#64748b" stroke-width="4"/>
+
+  <rect x="70" y="350" width="1060" height="160" class="box" fill="#f8fafc"/>
+  <text x="100" y="395" class="b">운영 지점</text>
+  <text x="100" y="435" class="t">source freshness, ingestion freshness, index freshness, retrieval freshness를 따로 저장합니다.</text>
+  <text x="100" y="470" class="t">Qdrant Cloud나 다른 벡터 DB를 써도 원리는 같습니다.</text>
+</svg>

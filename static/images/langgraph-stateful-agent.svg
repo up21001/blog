@@ -1,0 +1,86 @@
+<svg width="800" height="450" viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg" font-family="'Malgun Gothic', sans-serif">
+  <!-- Background -->
+  <rect width="800" height="450" fill="#F9FAFB" rx="12"/>
+  <text x="400" y="38" text-anchor="middle" font-size="18" font-weight="bold" fill="#1F2937">LangGraph 상태 그래프 — 노드 · 엣지 · 상태</text>
+
+  <!-- State box -->
+  <rect x="310" y="55" width="180" height="90" rx="10" fill="#EDE9FE" stroke="#8B5CF6" stroke-width="2"/>
+  <text x="400" y="78" text-anchor="middle" font-size="13" font-weight="bold" fill="#5B21B6">StateGraph (State)</text>
+  <text x="400" y="96" text-anchor="middle" font-size="11" fill="#5B21B6">messages: list</text>
+  <text x="400" y="112" text-anchor="middle" font-size="11" fill="#5B21B6">context: dict</text>
+  <text x="400" y="128" text-anchor="middle" font-size="11" fill="#5B21B6">next_action: str</text>
+
+  <!-- START node -->
+  <circle cx="100" cy="200" r="36" fill="#DBEAFE" stroke="#3B82F6" stroke-width="2"/>
+  <text x="100" y="196" text-anchor="middle" font-size="12" font-weight="bold" fill="#1E40AF">START</text>
+  <text x="100" y="212" text-anchor="middle" font-size="10" fill="#1E40AF">입력 수신</text>
+
+  <!-- Agent node -->
+  <rect x="220" y="168" width="140" height="64" rx="10" fill="#D1FAE5" stroke="#10B981" stroke-width="2"/>
+  <text x="290" y="195" text-anchor="middle" font-size="13" font-weight="bold" fill="#065F46">Agent Node</text>
+  <text x="290" y="213" text-anchor="middle" font-size="11" fill="#065F46">LLM 호출 · 판단</text>
+  <text x="290" y="228" text-anchor="middle" font-size="10" fill="#047857">상태 업데이트</text>
+
+  <!-- Tool node -->
+  <rect x="460" y="168" width="140" height="64" rx="10" fill="#FEF3C7" stroke="#F59E0B" stroke-width="2"/>
+  <text x="530" y="195" text-anchor="middle" font-size="13" font-weight="bold" fill="#92400E">Tool Node</text>
+  <text x="530" y="213" text-anchor="middle" font-size="11" fill="#92400E">도구 실행 결과</text>
+  <text x="530" y="228" text-anchor="middle" font-size="10" fill="#B45309">상태에 반영</text>
+
+  <!-- Human Review node -->
+  <rect x="340" y="300" width="160" height="60" rx="10" fill="#FEE2E2" stroke="#EF4444" stroke-width="2"/>
+  <text x="420" y="323" text-anchor="middle" font-size="12" font-weight="bold" fill="#991B1B">Human Review</text>
+  <text x="420" y="341" text-anchor="middle" font-size="11" fill="#991B1B">interrupt / 승인 대기</text>
+  <text x="420" y="356" text-anchor="middle" font-size="10" fill="#DC2626">breakpoint 설정</text>
+
+  <!-- END node -->
+  <circle cx="700" cy="200" r="36" fill="#F3F4F6" stroke="#6B7280" stroke-width="2"/>
+  <text x="700" y="196" text-anchor="middle" font-size="12" font-weight="bold" fill="#374151">END</text>
+  <text x="700" y="212" text-anchor="middle" font-size="10" fill="#374151">결과 반환</text>
+
+  <!-- Arrows -->
+  <!-- START → Agent -->
+  <line x1="136" y1="200" x2="218" y2="200" stroke="#3B82F6" stroke-width="2" marker-end="url(#b1)"/>
+
+  <!-- Agent → Tool (conditional) -->
+  <line x1="360" y1="200" x2="458" y2="200" stroke="#10B981" stroke-width="2" marker-end="url(#b2)"/>
+  <text x="409" y="192" text-anchor="middle" font-size="10" fill="#065F46">도구 필요</text>
+
+  <!-- Tool → Agent (loop) -->
+  <path d="M530 168 Q530 130 290 148 Q250 152 290 168" fill="none" stroke="#F59E0B" stroke-width="2" marker-end="url(#b3)" stroke-dasharray="5,3"/>
+  <text x="410" y="127" text-anchor="middle" font-size="10" fill="#92400E">결과 반환 후 재판단</text>
+
+  <!-- Agent → Human Review (conditional) -->
+  <line x1="290" y1="232" x2="380" y2="298" stroke="#EF4444" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#b4)"/>
+  <text x="305" y="270" text-anchor="middle" font-size="10" fill="#991B1B">검토 필요</text>
+
+  <!-- Agent → END -->
+  <line x1="600" y1="200" x2="662" y2="200" stroke="#6B7280" stroke-width="2" marker-end="url(#b5)"/>
+  <text x="631" y="192" text-anchor="middle" font-size="10" fill="#374151">완료</text>
+
+  <!-- Human Review → Agent -->
+  <path d="M500 330 Q680 330 680 232 Q680 200 738 200" fill="none" stroke="#EF4444" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#b4)"/>
+  <text x="660" y="310" text-anchor="middle" font-size="10" fill="#991B1B">승인 → 재개</text>
+
+  <!-- State annotation -->
+  <line x1="400" y1="145" x2="400" y2="166" stroke="#8B5CF6" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="400" y="162" text-anchor="middle" font-size="10" fill="#5B21B6">공유 상태</text>
+
+  <!-- Checkpointer -->
+  <rect x="30" y="370" width="160" height="50" rx="8" fill="#F3F4F6" stroke="#6B7280" stroke-width="1.5"/>
+  <text x="110" y="392" text-anchor="middle" font-size="12" font-weight="bold" fill="#374151">Checkpointer</text>
+  <text x="110" y="410" text-anchor="middle" font-size="11" fill="#374151">상태 영속화 / 재개</text>
+
+  <!-- Conditional router -->
+  <rect x="610" y="370" width="160" height="50" rx="8" fill="#EDE9FE" stroke="#8B5CF6" stroke-width="1.5"/>
+  <text x="690" y="392" text-anchor="middle" font-size="12" font-weight="bold" fill="#5B21B6">Conditional Edge</text>
+  <text x="690" y="410" text-anchor="middle" font-size="11" fill="#5B21B6">동적 라우팅 함수</text>
+
+  <defs>
+    <marker id="b1" markerWidth="7" markerHeight="7" refX="5" refY="3" orient="auto"><path d="M0,0 L0,6 L7,3 z" fill="#3B82F6"/></marker>
+    <marker id="b2" markerWidth="7" markerHeight="7" refX="5" refY="3" orient="auto"><path d="M0,0 L0,6 L7,3 z" fill="#10B981"/></marker>
+    <marker id="b3" markerWidth="7" markerHeight="7" refX="5" refY="3" orient="auto"><path d="M0,0 L0,6 L7,3 z" fill="#F59E0B"/></marker>
+    <marker id="b4" markerWidth="7" markerHeight="7" refX="5" refY="3" orient="auto"><path d="M0,0 L0,6 L7,3 z" fill="#EF4444"/></marker>
+    <marker id="b5" markerWidth="7" markerHeight="7" refX="5" refY="3" orient="auto"><path d="M0,0 L0,6 L7,3 z" fill="#6B7280"/></marker>
+  </defs>
+</svg>

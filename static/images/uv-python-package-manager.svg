@@ -1,0 +1,74 @@
+<svg width="800" height="450" viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg" font-family="'Malgun Gothic', sans-serif">
+  <rect width="800" height="450" fill="#FAFAFA" rx="12"/>
+  <text x="400" y="40" text-anchor="middle" font-size="20" font-weight="bold" fill="#1E293B">uv vs pip/Poetry/Conda — 패키지 설치 속도 비교</text>
+
+  <!-- Legend -->
+  <rect x="120" y="58" width="14" height="14" fill="#6B7280" rx="2"/>
+  <text x="140" y="70" font-size="12" fill="#374151">pip</text>
+  <rect x="190" y="58" width="14" height="14" fill="#8B5CF6" rx="2"/>
+  <text x="210" y="70" font-size="12" fill="#374151">Poetry</text>
+  <rect x="270" y="58" width="14" height="14" fill="#F59E0B" rx="2"/>
+  <text x="290" y="70" font-size="12" fill="#374151">Conda</text>
+  <rect x="360" y="58" width="14" height="14" fill="#10B981" rx="2"/>
+  <text x="380" y="70" font-size="12" fill="#374151">uv</text>
+
+  <!-- Chart area -->
+  <rect x="80" y="88" width="640" height="270" fill="#F9FAFB" rx="8" stroke="#E5E7EB"/>
+
+  <!-- Grid lines -->
+  <line x1="80" y1="338" x2="720" y2="338" stroke="#E5E7EB" stroke-width="1"/>
+  <line x1="80" y1="290" x2="720" y2="290" stroke="#E5E7EB" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="80" y1="242" x2="720" y2="242" stroke="#E5E7EB" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="80" y1="194" x2="720" y2="194" stroke="#E5E7EB" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="80" y1="146" x2="720" y2="146" stroke="#E5E7EB" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="80" y1="98" x2="720" y2="98" stroke="#E5E7EB" stroke-width="1" stroke-dasharray="4,3"/>
+
+  <!-- Y labels -->
+  <text x="72" y="342" text-anchor="end" font-size="10" fill="#9CA3AF">0s</text>
+  <text x="72" y="294" text-anchor="end" font-size="10" fill="#9CA3AF">10s</text>
+  <text x="72" y="246" text-anchor="end" font-size="10" fill="#9CA3AF">20s</text>
+  <text x="72" y="198" text-anchor="end" font-size="10" fill="#9CA3AF">30s</text>
+  <text x="72" y="150" text-anchor="end" font-size="10" fill="#9CA3AF">40s</text>
+  <text x="72" y="102" text-anchor="end" font-size="10" fill="#9CA3AF">50s</text>
+
+  <!-- Scenario 1: numpy+pandas+scikit-learn (cold) -->
+  <rect x="108" y="148" width="28" height="190" fill="#6B7280" rx="3" opacity="0.85"/>
+  <rect x="140" y="172" width="28" height="166" fill="#8B5CF6" rx="3" opacity="0.85"/>
+  <rect x="172" y="108" width="28" height="230" fill="#F59E0B" rx="3" opacity="0.85"/>
+  <rect x="204" y="326" width="28" height="12" fill="#10B981" rx="3" opacity="0.85"/>
+  <text x="174" y="360" text-anchor="middle" font-size="10" fill="#374151">데이터 스택</text>
+  <text x="174" y="373" text-anchor="middle" font-size="10" fill="#374151">(콜드)</text>
+  <text x="122" y="143" text-anchor="middle" font-size="9" fill="#4B5563">38s</text>
+  <text x="154" y="167" text-anchor="middle" font-size="9" fill="#5B21B6">33s</text>
+  <text x="186" y="103" text-anchor="middle" font-size="9" fill="#92400E">46s</text>
+  <text x="218" y="321" text-anchor="middle" font-size="9" fill="#065F46">2.4s</text>
+
+  <!-- Scenario 2: FastAPI stack (warm) -->
+  <rect x="298" y="218" width="28" height="120" fill="#6B7280" rx="3" opacity="0.85"/>
+  <rect x="330" y="230" width="28" height="108" fill="#8B5CF6" rx="3" opacity="0.85"/>
+  <rect x="362" y="200" width="28" height="138" fill="#F59E0B" rx="3" opacity="0.85"/>
+  <rect x="394" y="333" width="28" height="5" fill="#10B981" rx="3" opacity="0.85"/>
+  <text x="364" y="360" text-anchor="middle" font-size="10" fill="#374151">FastAPI 스택</text>
+  <text x="364" y="373" text-anchor="middle" font-size="10" fill="#374151">(캐시)</text>
+  <text x="312" y="213" text-anchor="middle" font-size="9" fill="#4B5563">24s</text>
+  <text x="344" y="225" text-anchor="middle" font-size="9" fill="#5B21B6">22s</text>
+  <text x="376" y="195" text-anchor="middle" font-size="9" fill="#92400E">28s</text>
+  <text x="408" y="328" text-anchor="middle" font-size="9" fill="#065F46">0.8s</text>
+
+  <!-- Scenario 3: requirements.txt 100 pkgs -->
+  <rect x="488" y="170" width="28" height="168" fill="#6B7280" rx="3" opacity="0.85"/>
+  <rect x="520" y="188" width="28" height="150" fill="#8B5CF6" rx="3" opacity="0.85"/>
+  <rect x="552" y="138" width="28" height="200" fill="#F59E0B" rx="3" opacity="0.85"/>
+  <rect x="584" y="324" width="28" height="14" fill="#10B981" rx="3" opacity="0.85"/>
+  <text x="554" y="360" text-anchor="middle" font-size="10" fill="#374151">100개 패키지</text>
+  <text x="554" y="373" text-anchor="middle" font-size="10" fill="#374151">(콜드)</text>
+  <text x="502" y="165" text-anchor="middle" font-size="9" fill="#4B5563">33s</text>
+  <text x="534" y="183" text-anchor="middle" font-size="9" fill="#5B21B6">30s</text>
+  <text x="566" y="133" text-anchor="middle" font-size="9" fill="#92400E">40s</text>
+  <text x="598" y="319" text-anchor="middle" font-size="9" fill="#065F46">2.8s</text>
+
+  <!-- Bottom summary -->
+  <rect x="80" y="390" width="640" height="44" fill="#D1FAE5" rx="8" stroke="#6EE7B7"/>
+  <text x="400" y="408" text-anchor="middle" font-size="12" font-weight="bold" fill="#065F46">uv는 Rust로 구현되어 병렬 다운로드 + 글로벌 캐시로 pip 대비 평균 10~100배 빠릅니다</text>
+  <text x="400" y="426" text-anchor="middle" font-size="11" fill="#047857">테스트 환경: Python 3.12, macOS ARM, 광랜 (1Gbps)</text>
+</svg>

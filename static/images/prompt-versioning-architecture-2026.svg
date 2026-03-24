@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#111827"/>
+  <text x="60" y="92" fill="#f8fafc" font-family="Arial, sans-serif" font-size="42" font-weight="700">Prompt Versioning Architecture</text>
+  <g font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#e2e8f0">
+    <rect x="72" y="160" width="180" height="88" rx="18" fill="#2563eb"/><text x="116" y="211">Git Repo</text>
+    <rect x="282" y="160" width="180" height="88" rx="18" fill="#0f766e"/><text x="312" y="211">Test Harness</text>
+    <rect x="492" y="160" width="180" height="88" rx="18" fill="#7c3aed"/><text x="540" y="211">Approval</text>
+    <rect x="702" y="160" width="180" height="88" rx="18" fill="#b45309"/><text x="738" y="211">Runtime</text>
+    <rect x="912" y="160" width="180" height="88" rx="18" fill="#be123c"/><text x="954" y="211">Rollback Store</text>
+    <rect x="280" y="320" width="640" height="120" rx="26" fill="#0b1020" stroke="#334155" stroke-width="2"/>
+    <text x="470" y="368" fill="#f8fafc">Versioned Prompt Release Pipeline</text>
+    <text x="390" y="401" fill="#cbd5e1">commit → eval → approve → release → observe → revert</text>
+  </g>
+  <g stroke="#cbd5e1" stroke-width="5" fill="none" stroke-linecap="round">
+    <path d="M252 204h30"/>
+    <path d="M462 204h30"/>
+    <path d="M672 204h30"/>
+    <path d="M882 204h30"/>
+    <path d="M600 248v72"/>
+  </g>
+</svg>

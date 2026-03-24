@@ -1,0 +1,89 @@
+<svg width="800" height="450" viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg" font-family="'Malgun Gothic', sans-serif">
+  <!-- Background -->
+  <rect width="800" height="450" fill="#F8FAFC" rx="12"/>
+
+  <!-- Title -->
+  <text x="400" y="36" text-anchor="middle" font-size="18" font-weight="bold" fill="#1E293B">Claude Code Hooks — 자동화 훅 실행 흐름</text>
+
+  <!-- Main flow: User Request → PreToolUse → Claude Action → PostToolUse → Result -->
+  <!-- User -->
+  <rect x="30" y="70" width="130" height="60" rx="8" fill="#DBEAFE" stroke="#3B82F6" stroke-width="2"/>
+  <text x="95" y="96" text-anchor="middle" font-size="13" font-weight="bold" fill="#1D4ED8">사용자 요청</text>
+  <text x="95" y="116" text-anchor="middle" font-size="11" fill="#1E40AF">"파일 수정해줘"</text>
+
+  <!-- Arrow -->
+  <line x1="162" y1="100" x2="198" y2="100" stroke="#6B7280" stroke-width="2" marker-end="url(#arr1)"/>
+
+  <!-- PreToolUse -->
+  <rect x="200" y="58" width="150" height="84" rx="8" fill="#FEF3C7" stroke="#F59E0B" stroke-width="2"/>
+  <text x="275" y="80" text-anchor="middle" font-size="12" font-weight="bold" fill="#92400E">PreToolUse Hook</text>
+  <text x="275" y="98" text-anchor="middle" font-size="10" fill="#78350F">실행 전 가로채기</text>
+  <text x="275" y="114" text-anchor="middle" font-size="10" fill="#78350F">• 검증 / 차단</text>
+  <text x="275" y="130" text-anchor="middle" font-size="10" fill="#78350F">• 로그 기록</text>
+
+  <!-- Arrow -->
+  <line x1="352" y1="100" x2="388" y2="100" stroke="#6B7280" stroke-width="2" marker-end="url(#arr1)"/>
+
+  <!-- Claude Action -->
+  <rect x="390" y="58" width="150" height="84" rx="8" fill="#D1FAE5" stroke="#10B981" stroke-width="2"/>
+  <text x="465" y="80" text-anchor="middle" font-size="12" font-weight="bold" fill="#065F46">Claude 도구 실행</text>
+  <text x="465" y="98" text-anchor="middle" font-size="10" fill="#064E3B">• 파일 읽기/쓰기</text>
+  <text x="465" y="114" text-anchor="middle" font-size="10" fill="#064E3B">• 명령 실행</text>
+  <text x="465" y="130" text-anchor="middle" font-size="10" fill="#064E3B">• 검색/탐색</text>
+
+  <!-- Arrow -->
+  <line x1="542" y1="100" x2="578" y2="100" stroke="#6B7280" stroke-width="2" marker-end="url(#arr1)"/>
+
+  <!-- PostToolUse -->
+  <rect x="580" y="58" width="150" height="84" rx="8" fill="#EDE9FE" stroke="#8B5CF6" stroke-width="2"/>
+  <text x="655" y="80" text-anchor="middle" font-size="12" font-weight="bold" fill="#5B21B6">PostToolUse Hook</text>
+  <text x="655" y="98" text-anchor="middle" font-size="10" fill="#4C1D95">실행 후 처리</text>
+  <text x="655" y="114" text-anchor="middle" font-size="10" fill="#4C1D95">• 알림 발송</text>
+  <text x="655" y="130" text-anchor="middle" font-size="10" fill="#4C1D95">• 포맷 적용</text>
+
+  <defs>
+    <marker id="arr1" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#6B7280"/>
+    </marker>
+  </defs>
+
+  <!-- settings.json example -->
+  <rect x="30" y="165" width="360" height="200" rx="10" fill="#1E293B"/>
+  <rect x="30" y="165" width="360" height="28" rx="10" fill="#374151"/>
+  <rect x="30" y="181" width="360" height="12" fill="#374151"/>
+  <text x="200" y="181" text-anchor="middle" font-size="11" fill="#9CA3AF">~/.claude/settings.json</text>
+  <text x="46" y="210" font-size="11" fill="#60A5FA" font-family="monospace">&#123;</text>
+  <text x="54" y="228" font-size="11" fill="#FDE68A" font-family="monospace">"hooks": &#123;</text>
+  <text x="62" y="246" font-size="11" fill="#D1FAE5" font-family="monospace">"PreToolUse": [&#123;</text>
+  <text x="70" y="262" font-size="11" fill="#94A3B8" font-family="monospace">"matcher": "Write",</text>
+  <text x="70" y="278" font-size="11" fill="#94A3B8" font-family="monospace">"hooks": [&#123;"type":"command",</text>
+  <text x="70" y="294" font-size="11" fill="#94A3B8" font-family="monospace">  "command": "lint-check"&#125;]</text>
+  <text x="62" y="310" font-size="11" fill="#D1FAE5" font-family="monospace">&#125;],</text>
+  <text x="62" y="326" font-size="11" fill="#D1FAE5" font-family="monospace">"PostToolUse": [...] &#125;</text>
+  <text x="46" y="344" font-size="11" fill="#60A5FA" font-family="monospace">&#125;</text>
+
+  <!-- Use cases -->
+  <rect x="410" y="165" width="360" height="200" rx="10" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1.5"/>
+  <text x="590" y="188" text-anchor="middle" font-size="13" font-weight="bold" fill="#1E293B">실전 활용 예시</text>
+
+  <rect x="424" y="198" width="332" height="36" rx="6" fill="#FEF3C7" stroke="#F59E0B" stroke-width="1"/>
+  <text x="440" y="214" font-size="11" font-weight="bold" fill="#92400E">PreToolUse: 파일 쓰기 전 린트 검사</text>
+  <text x="440" y="228" font-size="10" fill="#78350F">Write 도구 실행 전 eslint/prettier 자동 실행</text>
+
+  <rect x="424" y="241" width="332" height="36" rx="6" fill="#DBEAFE" stroke="#3B82F6" stroke-width="1"/>
+  <text x="440" y="257" font-size="11" font-weight="bold" fill="#1D4ED8">PreToolUse: 명령 실행 차단</text>
+  <text x="440" y="271" font-size="10" fill="#1E40AF">rm -rf 패턴 감지 시 차단 + Slack 알림</text>
+
+  <rect x="424" y="284" width="332" height="36" rx="6" fill="#D1FAE5" stroke="#10B981" stroke-width="1"/>
+  <text x="440" y="300" font-size="11" font-weight="bold" fill="#065F46">PostToolUse: 파일 저장 후 포맷</text>
+  <text x="440" y="314" font-size="10" fill="#064E3B">파일 수정 후 black/gofmt 자동 실행</text>
+
+  <rect x="424" y="327" width="332" height="32" rx="6" fill="#EDE9FE" stroke="#8B5CF6" stroke-width="1"/>
+  <text x="440" y="343" font-size="11" font-weight="bold" fill="#5B21B6">PostToolUse: 테스트 자동 실행</text>
+  <text x="440" y="357" font-size="10" fill="#4C1D95">변경 파일 관련 단위 테스트 즉시 실행</text>
+
+  <!-- Bottom -->
+  <rect x="30" y="382" width="740" height="50" rx="8" fill="#F0FDF4" stroke="#BBF7D0" stroke-width="1"/>
+  <text x="400" y="401" text-anchor="middle" font-size="12" font-weight="bold" fill="#065F46">핵심 포인트</text>
+  <text x="400" y="420" text-anchor="middle" font-size="11" fill="#047857">훅은 Claude의 행동을 감시하고 제어하는 자동화 레이어입니다 — 팀 컨벤션 강제, 보안 정책, 알림을 코드 없이 연결할 수 있습니다</text>
+</svg>

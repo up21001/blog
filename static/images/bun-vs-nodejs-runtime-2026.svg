@@ -1,0 +1,86 @@
+<svg width="800" height="450" viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg" font-family="'Malgun Gothic', sans-serif">
+  <!-- Background -->
+  <rect width="800" height="450" fill="#F8FAFC" rx="12"/>
+  <text x="400" y="38" text-anchor="middle" font-size="20" font-weight="bold" fill="#1E293B">JavaScript 런타임 비교 2026</text>
+
+  <!-- 헤더 행 -->
+  <rect x="30" y="55" width="160" height="40" rx="6" fill="#F3F4F6" stroke="#6B7280" stroke-width="1.5"/>
+  <text x="110" y="80" text-anchor="middle" font-size="12" font-weight="bold" fill="#374151">항목</text>
+
+  <rect x="200" y="55" width="170" height="40" rx="6" fill="#FEF3C7" stroke="#F59E0B" stroke-width="2"/>
+  <text x="285" y="80" text-anchor="middle" font-size="13" font-weight="bold" fill="#92400E">Bun</text>
+
+  <rect x="380" y="55" width="170" height="40" rx="6" fill="#D1FAE5" stroke="#10B981" stroke-width="2"/>
+  <text x="465" y="80" text-anchor="middle" font-size="13" font-weight="bold" fill="#065F46">Node.js</text>
+
+  <rect x="560" y="55" width="210" height="40" rx="6" fill="#EDE9FE" stroke="#8B5CF6" stroke-width="2"/>
+  <text x="665" y="80" text-anchor="middle" font-size="13" font-weight="bold" fill="#5B21B6">Deno</text>
+
+  <!-- 행 1: 엔진 -->
+  <rect x="30" y="103" width="160" height="38" rx="4" fill="#F9FAFB" stroke="#E5E7EB" stroke-width="1"/>
+  <text x="110" y="126" text-anchor="middle" font-size="11" font-weight="bold" fill="#374151">JS 엔진</text>
+  <rect x="200" y="103" width="170" height="38" rx="4" fill="#FFFBEB" stroke="#FDE68A" stroke-width="1"/>
+  <text x="285" y="126" text-anchor="middle" font-size="11" fill="#92400E">JavaScriptCore (WebKit)</text>
+  <rect x="380" y="103" width="170" height="38" rx="4" fill="#ECFDF5" stroke="#A7F3D0" stroke-width="1"/>
+  <text x="465" y="126" text-anchor="middle" font-size="11" fill="#065F46">V8 (Chrome)</text>
+  <rect x="560" y="103" width="210" height="38" rx="4" fill="#F5F3FF" stroke="#DDD6FE" stroke-width="1"/>
+  <text x="665" y="126" text-anchor="middle" font-size="11" fill="#5B21B6">V8 (Chrome)</text>
+
+  <!-- 행 2: 시작 속도 -->
+  <rect x="30" y="149" width="160" height="38" rx="4" fill="#F9FAFB" stroke="#E5E7EB" stroke-width="1"/>
+  <text x="110" y="172" text-anchor="middle" font-size="11" font-weight="bold" fill="#374151">시작 속도</text>
+  <rect x="200" y="149" width="170" height="38" rx="4" fill="#FFFBEB" stroke="#FDE68A" stroke-width="1"/>
+  <text x="285" y="172" text-anchor="middle" font-size="11" fill="#92400E">매우 빠름 (4x 이상)</text>
+  <rect x="380" y="149" width="170" height="38" rx="4" fill="#ECFDF5" stroke="#A7F3D0" stroke-width="1"/>
+  <text x="465" y="172" text-anchor="middle" font-size="11" fill="#065F46">보통</text>
+  <rect x="560" y="149" width="210" height="38" rx="4" fill="#F5F3FF" stroke="#DDD6FE" stroke-width="1"/>
+  <text x="665" y="172" text-anchor="middle" font-size="11" fill="#5B21B6">빠름</text>
+
+  <!-- 행 3: 패키지 매니저 -->
+  <rect x="30" y="195" width="160" height="38" rx="4" fill="#F9FAFB" stroke="#E5E7EB" stroke-width="1"/>
+  <text x="110" y="218" text-anchor="middle" font-size="11" font-weight="bold" fill="#374151">패키지 매니저</text>
+  <rect x="200" y="195" width="170" height="38" rx="4" fill="#FFFBEB" stroke="#FDE68A" stroke-width="1"/>
+  <text x="285" y="218" text-anchor="middle" font-size="11" fill="#92400E">내장 (npm 호환)</text>
+  <rect x="380" y="195" width="170" height="38" rx="4" fill="#ECFDF5" stroke="#A7F3D0" stroke-width="1"/>
+  <text x="465" y="218" text-anchor="middle" font-size="11" fill="#065F46">npm / yarn / pnpm</text>
+  <rect x="560" y="195" width="210" height="38" rx="4" fill="#F5F3FF" stroke="#DDD6FE" stroke-width="1"/>
+  <text x="665" y="218" text-anchor="middle" font-size="11" fill="#5B21B6">jsr / npm (호환)</text>
+
+  <!-- 행 4: TS 지원 -->
+  <rect x="30" y="241" width="160" height="38" rx="4" fill="#F9FAFB" stroke="#E5E7EB" stroke-width="1"/>
+  <text x="110" y="264" text-anchor="middle" font-size="11" font-weight="bold" fill="#374151">TypeScript</text>
+  <rect x="200" y="241" width="170" height="38" rx="4" fill="#FFFBEB" stroke="#FDE68A" stroke-width="1"/>
+  <text x="285" y="264" text-anchor="middle" font-size="11" fill="#92400E">네이티브 실행</text>
+  <rect x="380" y="241" width="170" height="38" rx="4" fill="#ECFDF5" stroke="#A7F3D0" stroke-width="1"/>
+  <text x="465" y="264" text-anchor="middle" font-size="11" fill="#065F46">tsx / ts-node 필요</text>
+  <rect x="560" y="241" width="210" height="38" rx="4" fill="#F5F3FF" stroke="#DDD6FE" stroke-width="1"/>
+  <text x="665" y="264" text-anchor="middle" font-size="11" fill="#5B21B6">네이티브 실행</text>
+
+  <!-- 행 5: npm 호환성 -->
+  <rect x="30" y="287" width="160" height="38" rx="4" fill="#F9FAFB" stroke="#E5E7EB" stroke-width="1"/>
+  <text x="110" y="310" text-anchor="middle" font-size="11" font-weight="bold" fill="#374151">npm 호환성</text>
+  <rect x="200" y="287" width="170" height="38" rx="4" fill="#FFFBEB" stroke="#FDE68A" stroke-width="1"/>
+  <text x="285" y="310" text-anchor="middle" font-size="11" fill="#92400E">대부분 호환</text>
+  <rect x="380" y="287" width="170" height="38" rx="4" fill="#ECFDF5" stroke="#A7F3D0" stroke-width="1"/>
+  <text x="465" y="310" text-anchor="middle" font-size="11" fill="#065F46">완전 호환</text>
+  <rect x="560" y="287" width="210" height="38" rx="4" fill="#F5F3FF" stroke="#DDD6FE" stroke-width="1"/>
+  <text x="665" y="310" text-anchor="middle" font-size="11" fill="#5B21B6">npm 호환 (2024~)</text>
+
+  <!-- 행 6: 추천 용도 -->
+  <rect x="30" y="333" width="160" height="50" rx="4" fill="#F9FAFB" stroke="#E5E7EB" stroke-width="1"/>
+  <text x="110" y="362" text-anchor="middle" font-size="11" font-weight="bold" fill="#374151">추천 용도</text>
+  <rect x="200" y="333" width="170" height="50" rx="4" fill="#FEF3C7" stroke="#F59E0B" stroke-width="1.5"/>
+  <text x="285" y="352" text-anchor="middle" font-size="10" fill="#92400E">스크립팅, 마이크로서비스</text>
+  <text x="285" y="368" text-anchor="middle" font-size="10" fill="#92400E">빠른 CLI 도구</text>
+  <rect x="380" y="333" width="170" height="50" rx="4" fill="#D1FAE5" stroke="#10B981" stroke-width="1.5"/>
+  <text x="465" y="352" text-anchor="middle" font-size="10" fill="#065F46">프로덕션 서버, 레거시</text>
+  <text x="465" y="368" text-anchor="middle" font-size="10" fill="#065F46">대규모 생태계 활용</text>
+  <rect x="560" y="333" width="210" height="50" rx="4" fill="#EDE9FE" stroke="#8B5CF6" stroke-width="1.5"/>
+  <text x="665" y="352" text-anchor="middle" font-size="10" fill="#5B21B6">보안 중시, 엣지 컴퓨팅</text>
+  <text x="665" y="368" text-anchor="middle" font-size="10" fill="#5B21B6">Cloudflare Workers 연동</text>
+
+  <!-- 결론 바 -->
+  <rect x="30" y="395" width="740" height="42" rx="8" fill="#DBEAFE" stroke="#3B82F6" stroke-width="1.5"/>
+  <text x="400" y="413" text-anchor="middle" font-size="11" font-weight="bold" fill="#1E40AF">2026 권장: 신규 프로젝트는 Bun 검토, 안정성 최우선은 Node.js, 엣지/보안은 Deno</text>
+  <text x="400" y="429" text-anchor="middle" font-size="10" fill="#1D4ED8">세 런타임 모두 WinterTC39 Web API 표준 준수 방향으로 수렴 중</text>
+</svg>

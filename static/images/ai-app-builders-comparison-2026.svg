@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675">
+  <rect width="1200" height="675" fill="#f8fafc"/>
+  <text x="70" y="90" font-size="38" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#0f172a">AI App Builders Comparison</text>
+  <rect x="70" y="150" width="320" height="390" rx="28" fill="#fff" stroke="#cbd5e1"/>
+  <rect x="440" y="150" width="320" height="390" rx="28" fill="#fff" stroke="#cbd5e1"/>
+  <rect x="810" y="150" width="320" height="390" rx="28" fill="#fff" stroke="#cbd5e1"/>
+  <text x="205" y="205" font-size="34" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#1e293b">v0</text>
+  <text x="560" y="205" font-size="34" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#1e293b">Lovable</text>
+  <text x="908" y="205" font-size="34" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#1e293b">Bolt.new</text>
+  <text x="110" y="270" font-size="22" font-family="Segoe UI, Arial, sans-serif" fill="#334155">Code-first product</text>
+  <text x="110" y="305" font-size="22" font-family="Segoe UI, Arial, sans-serif" fill="#334155">Vercel ecosystem</text>
+  <text x="110" y="340" font-size="22" font-family="Segoe UI, Arial, sans-serif" fill="#334155">PR / deployment</text>
+  <text x="480" y="270" font-size="22" font-family="Segoe UI, Arial, sans-serif" fill="#334155">Shared workspace</text>
+  <text x="480" y="305" font-size="22" font-family="Segoe UI, Arial, sans-serif" fill="#334155">GitHub sync</text>
+  <text x="480" y="340" font-size="22" font-family="Segoe UI, Arial, sans-serif" fill="#334155">Security / governance</text>
+  <text x="850" y="270" font-size="22" font-family="Segoe UI, Arial, sans-serif" fill="#334155">Token efficiency</text>
+  <text x="850" y="305" font-size="22" font-family="Segoe UI, Arial, sans-serif" fill="#334155">MCP connectors</text>
+  <text x="850" y="340" font-size="22" font-family="Segoe UI, Arial, sans-serif" fill="#334155">Bolt Cloud</text>
+  <text x="110" y="445" font-size="18" font-family="Segoe UI, Arial, sans-serif" fill="#64748b">Best for fast product generation with code output</text>
+  <text x="480" y="445" font-size="18" font-family="Segoe UI, Arial, sans-serif" fill="#64748b">Best for team collaboration and ownership</text>
+  <text x="850" y="445" font-size="18" font-family="Segoe UI, Arial, sans-serif" fill="#64748b">Best for hosted all-in-one AI building</text>
+</svg>

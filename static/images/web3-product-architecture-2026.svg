@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#111827"/>
+  <text x="60" y="90" fill="#f3f4f6" font-size="36" font-family="Arial" font-weight="700">Web3 Product Architecture</text>
+  <rect x="120" y="240" width="220" height="100" rx="12" fill="#7c3aed"/><text x="175" y="300" fill="#fff" font-size="24" font-family="Arial">Wallet</text>
+  <rect x="420" y="240" width="220" height="100" rx="12" fill="#9333ea"/><text x="480" y="300" fill="#fff" font-size="24" font-family="Arial">Sign</text>
+  <rect x="720" y="240" width="220" height="100" rx="12" fill="#a855f7"/><text x="755" y="300" fill="#fff" font-size="24" font-family="Arial">Broadcast</text>
+  <line x1="340" y1="290" x2="420" y2="290" stroke="#d8b4fe" stroke-width="4"/>
+  <line x1="640" y1="290" x2="720" y2="290" stroke="#d8b4fe" stroke-width="4"/>
+</svg>

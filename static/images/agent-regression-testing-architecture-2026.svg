@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#0f172a"/>
+  <rect x="50" y="50" width="1100" height="530" rx="30" fill="#111827" stroke="#334155" stroke-width="2"/>
+  <text x="88" y="110" fill="#f8fafc" font-family="Arial, sans-serif" font-size="40" font-weight="700">Regression Testing Architecture</text>
+  <g fill="#e2e8f0" font-family="Arial, sans-serif" font-size="20">
+    <rect x="84" y="160" width="220" height="88" rx="18" fill="#1d4ed8"/><text x="126" y="212">Golden Samples</text>
+    <rect x="344" y="160" width="220" height="88" rx="18" fill="#0f766e"/><text x="388" y="212">Replay Runner</text>
+    <rect x="604" y="160" width="220" height="88" rx="18" fill="#7c3aed"/><text x="650" y="212">Grader / Diff</text>
+    <rect x="864" y="160" width="220" height="88" rx="18" fill="#16a34a"/><text x="916" y="212">Gate</text>
+  </g>
+  <path d="M304 204 H334" stroke="#94a3b8" stroke-width="6" stroke-linecap="round"/>
+  <path d="M564 204 H594" stroke="#94a3b8" stroke-width="6" stroke-linecap="round"/>
+  <path d="M824 204 H854" stroke="#94a3b8" stroke-width="6" stroke-linecap="round"/>
+  <rect x="84" y="300" width="1032" height="194" rx="24" fill="#1e293b"/>
+  <text x="118" y="354" fill="#f8fafc" font-family="Arial, sans-serif" font-size="24" font-weight="700">Signals</text>
+  <text x="118" y="394" fill="#cbd5e1" font-family="Arial, sans-serif" font-size="18">score, diff, failure reason, rollback decision, review note</text>
+  <text x="118" y="430" fill="#cbd5e1" font-family="Arial, sans-serif" font-size="18">one pipeline for prompt, tool, memory, routing regressions</text>
+</svg>

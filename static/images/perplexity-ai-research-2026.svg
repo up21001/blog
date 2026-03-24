@@ -1,0 +1,79 @@
+<svg width="800" height="450" viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg" font-family="'Malgun Gothic', sans-serif">
+  <!-- Background -->
+  <rect width="800" height="450" fill="#F9FAFB" rx="12"/>
+  <text x="400" y="38" text-anchor="middle" font-size="20" font-weight="bold" fill="#1E293B">Perplexity AI 연구 워크플로우</text>
+
+  <!-- Center: Perplexity -->
+  <ellipse cx="400" cy="200" rx="90" ry="70" fill="#EDE9FE" stroke="#8B5CF6" stroke-width="3"/>
+  <text x="400" y="193" text-anchor="middle" font-size="14" font-weight="bold" fill="#5B21B6">Perplexity</text>
+  <text x="400" y="213" text-anchor="middle" font-size="12" fill="#6D28D9">AI</text>
+
+  <!-- Input sources (left) -->
+  <rect x="30" y="80" width="160" height="65" rx="10" fill="#DBEAFE" stroke="#3B82F6" stroke-width="2"/>
+  <text x="110" y="105" text-anchor="middle" font-size="13" font-weight="bold" fill="#1D4ED8">실시간 웹 검색</text>
+  <text x="110" y="125" text-anchor="middle" font-size="12" fill="#1E40AF">Bing · Google Index</text>
+  <text x="110" y="140" text-anchor="middle" font-size="11" fill="#93C5FD">최신 정보 반영</text>
+
+  <rect x="30" y="170" width="160" height="65" rx="10" fill="#DBEAFE" stroke="#3B82F6" stroke-width="2"/>
+  <text x="110" y="195" text-anchor="middle" font-size="13" font-weight="bold" fill="#1D4ED8">학술 논문</text>
+  <text x="110" y="215" text-anchor="middle" font-size="12" fill="#1E40AF">arXiv · PubMed</text>
+  <text x="110" y="230" text-anchor="middle" font-size="11" fill="#93C5FD">Academic 모드</text>
+
+  <rect x="30" y="260" width="160" height="65" rx="10" fill="#DBEAFE" stroke="#3B82F6" stroke-width="2"/>
+  <text x="110" y="285" text-anchor="middle" font-size="13" font-weight="bold" fill="#1D4ED8">유튜브 · Reddit</text>
+  <text x="110" y="305" text-anchor="middle" font-size="12" fill="#1E40AF">소셜 인사이트</text>
+  <text x="110" y="320" text-anchor="middle" font-size="11" fill="#93C5FD">커뮤니티 의견</text>
+
+  <!-- Arrows: sources -> center -->
+  <line x1="190" y1="112" x2="312" y2="175" stroke="#3B82F6" stroke-width="1.5" marker-end="url(#pa1)"/>
+  <line x1="190" y1="202" x2="310" y2="200" stroke="#3B82F6" stroke-width="1.5" marker-end="url(#pa1)"/>
+  <line x1="190" y1="292" x2="312" y2="225" stroke="#3B82F6" stroke-width="1.5" marker-end="url(#pa1)"/>
+
+  <!-- Output destinations (right) -->
+  <rect x="610" y="80" width="160" height="65" rx="10" fill="#D1FAE5" stroke="#10B981" stroke-width="2"/>
+  <text x="690" y="105" text-anchor="middle" font-size="13" font-weight="bold" fill="#065F46">출처 인용 답변</text>
+  <text x="690" y="125" text-anchor="middle" font-size="12" fill="#047857">각주 번호 명시</text>
+  <text x="690" y="140" text-anchor="middle" font-size="11" fill="#6EE7B7">신뢰도 검증 가능</text>
+
+  <rect x="610" y="170" width="160" height="65" rx="10" fill="#FEF3C7" stroke="#F59E0B" stroke-width="2"/>
+  <text x="690" y="195" text-anchor="middle" font-size="13" font-weight="bold" fill="#78350F">후속 질문 추천</text>
+  <text x="690" y="215" text-anchor="middle" font-size="12" fill="#92400E">연관 탐색 유도</text>
+  <text x="690" y="230" text-anchor="middle" font-size="11" fill="#FCD34D">Spaces 공유</text>
+
+  <rect x="610" y="260" width="160" height="65" rx="10" fill="#F3F4F6" stroke="#6B7280" stroke-width="2"/>
+  <text x="690" y="285" text-anchor="middle" font-size="13" font-weight="bold" fill="#374151">API 연동</text>
+  <text x="690" y="305" text-anchor="middle" font-size="12" fill="#6B7280">pplx-api 엔드포인트</text>
+  <text x="690" y="320" text-anchor="middle" font-size="11" fill="#9CA3AF">앱 내 검색 통합</text>
+
+  <!-- Arrows: center -> outputs -->
+  <line x1="488" y1="175" x2="610" y2="112" stroke="#10B981" stroke-width="1.5" marker-end="url(#pa2)"/>
+  <line x1="490" y1="200" x2="610" y2="202" stroke="#F59E0B" stroke-width="1.5" marker-end="url(#pa3)"/>
+  <line x1="488" y1="225" x2="610" y2="292" stroke="#6B7280" stroke-width="1.5" marker-end="url(#pa4)"/>
+
+  <!-- Comparison bar -->
+  <rect x="30" y="368" width="740" height="65" rx="8" fill="#1E293B" stroke="#475569" stroke-width="1"/>
+  <text x="400" y="390" text-anchor="middle" font-size="12" font-weight="bold" fill="#F1F5F9">Free vs Pro 비교</text>
+  <text x="130" y="410" text-anchor="middle" font-size="11" fill="#94A3B8">Free: 일 5회 Pro 검색</text>
+  <text x="320" y="410" text-anchor="middle" font-size="11" fill="#93C5FD">Pro $20/월: 무제한 + GPT-4o/Claude</text>
+  <text x="540" y="410" text-anchor="middle" font-size="11" fill="#86EFAC">Enterprise: API + 팀 Spaces</text>
+  <text x="720" y="410" text-anchor="middle" font-size="11" fill="#FCD34D">vs ChatGPT</text>
+  <text x="130" y="426" text-anchor="middle" font-size="11" fill="#94A3B8">이미지 생성 없음</text>
+  <text x="320" y="426" text-anchor="middle" font-size="11" fill="#93C5FD">파일 업로드 지원</text>
+  <text x="540" y="426" text-anchor="middle" font-size="11" fill="#86EFAC">커스텀 AI 프로필</text>
+  <text x="720" y="426" text-anchor="middle" font-size="11" fill="#FCD34D">실시간 정보 우위</text>
+
+  <defs>
+    <marker id="pa1" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#3B82F6"/>
+    </marker>
+    <marker id="pa2" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#10B981"/>
+    </marker>
+    <marker id="pa3" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#F59E0B"/>
+    </marker>
+    <marker id="pa4" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#6B7280"/>
+    </marker>
+  </defs>
+</svg>

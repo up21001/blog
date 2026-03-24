@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">OpenAI Batch API Workflow 2026</title>
+  <desc id="desc">Workflow diagram for OpenAI Batch API</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f1f7ff"/>
+      <stop offset="100%" stop-color="#f6fbf2"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#2f475a" flood-opacity="0.16"/>
+    </filter>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 z" fill="#456070"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <text x="70" y="86" font-family="Segoe UI, Arial, sans-serif" font-size="38" font-weight="700" fill="#173247">OpenAI Batch API Workflow</text>
+  <text x="70" y="122" font-family="Segoe UI, Arial, sans-serif" font-size="20" fill="#5b7080">대량 요청을 모아서 제출하고 나중에 결과를 회수하는 흐름</text>
+
+  <rect x="60" y="230" width="190" height="120" rx="22" fill="#0e5a8a" filter="url(#shadow)"/>
+  <rect x="270" y="230" width="190" height="120" rx="22" fill="#1f6b6b" filter="url(#shadow)"/>
+  <rect x="480" y="230" width="190" height="120" rx="22" fill="#2f7a4f" filter="url(#shadow)"/>
+  <rect x="690" y="230" width="190" height="120" rx="22" fill="#6b5ea7" filter="url(#shadow)"/>
+  <rect x="900" y="230" width="240" height="120" rx="22" fill="#ad4d4d" filter="url(#shadow)"/>
+  <line x1="250" y1="290" x2="270" y2="290" stroke="#456070" stroke-width="4" marker-end="url(#arrow)"/>
+  <line x1="460" y1="290" x2="480" y2="290" stroke="#456070" stroke-width="4" marker-end="url(#arrow)"/>
+  <line x1="670" y1="290" x2="690" y2="290" stroke="#456070" stroke-width="4" marker-end="url(#arrow)"/>
+  <line x1="880" y1="290" x2="900" y2="290" stroke="#456070" stroke-width="4" marker-end="url(#arrow)"/>
+
+  <text x="155" y="275" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" fill="#fff">Prepare</text>
+  <text x="155" y="307" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#d9ecfb">Split tasks</text>
+  <text x="365" y="275" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" fill="#fff">Upload</text>
+  <text x="365" y="307" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#def4f4">Queue file</text>
+  <text x="575" y="275" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" fill="#fff">Process</text>
+  <text x="575" y="307" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#e2f7e7">Async run</text>
+  <text x="785" y="275" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" fill="#fff">Collect</text>
+  <text x="785" y="307" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#f0e8fb">Read outputs</text>
+  <text x="1020" y="275" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" fill="#fff">Postprocess</text>
+  <text x="1020" y="307" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#ffe4e4">Merge results</text>
+</svg>

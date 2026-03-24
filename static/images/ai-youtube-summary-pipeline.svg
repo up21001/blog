@@ -1,0 +1,71 @@
+<svg width="800" height="450" viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg" font-family="'Malgun Gothic', sans-serif">
+  <rect width="800" height="450" fill="#F8FAFC" rx="12"/>
+  <text x="400" y="40" text-anchor="middle" font-size="20" font-weight="bold" fill="#1E293B">YouTube 영상 자동 요약 파이프라인</text>
+
+  <!-- Pipeline Steps -->
+  <rect x="20" y="80" width="130" height="90" rx="10" fill="#FEE2E2" stroke="#EF4444" stroke-width="2"/>
+  <text x="85" y="112" text-anchor="middle" font-size="13" font-weight="bold" fill="#991B1B">YouTube</text>
+  <text x="85" y="132" text-anchor="middle" font-size="11" fill="#DC2626">영상 URL</text>
+  <text x="85" y="152" text-anchor="middle" font-size="11" fill="#DC2626">입력</text>
+
+  <polygon points="155,125 175,115 175,135" fill="#6B7280"/>
+
+  <rect x="178" y="80" width="130" height="90" rx="10" fill="#DBEAFE" stroke="#3B82F6" stroke-width="2"/>
+  <text x="243" y="107" text-anchor="middle" font-size="13" font-weight="bold" fill="#1E40AF">yt-dlp</text>
+  <text x="243" y="127" text-anchor="middle" font-size="11" fill="#1D4ED8">자막 추출</text>
+  <text x="243" y="145" text-anchor="middle" font-size="11" fill="#1D4ED8">또는 오디오</text>
+  <text x="243" y="163" text-anchor="middle" font-size="11" fill="#1D4ED8">다운로드</text>
+
+  <polygon points="313,125 333,115 333,135" fill="#6B7280"/>
+
+  <rect x="336" y="80" width="130" height="90" rx="10" fill="#D1FAE5" stroke="#10B981" stroke-width="2"/>
+  <text x="401" y="107" text-anchor="middle" font-size="13" font-weight="bold" fill="#065F46">Whisper</text>
+  <text x="401" y="127" text-anchor="middle" font-size="11" fill="#047857">음성 인식</text>
+  <text x="401" y="145" text-anchor="middle" font-size="11" fill="#047857">(자막 없을 때)</text>
+  <text x="401" y="163" text-anchor="middle" font-size="11" fill="#047857">STT 변환</text>
+
+  <polygon points="471,125 491,115 491,135" fill="#6B7280"/>
+
+  <rect x="494" y="80" width="130" height="90" rx="10" fill="#FEF3C7" stroke="#F59E0B" stroke-width="2"/>
+  <text x="559" y="107" text-anchor="middle" font-size="13" font-weight="bold" fill="#92400E">LLM 요약</text>
+  <text x="559" y="127" text-anchor="middle" font-size="11" fill="#B45309">GPT-4o</text>
+  <text x="559" y="145" text-anchor="middle" font-size="11" fill="#B45309">Claude 3.5</text>
+  <text x="559" y="163" text-anchor="middle" font-size="11" fill="#B45309">핵심 추출</text>
+
+  <polygon points="629,125 649,115 649,135" fill="#6B7280"/>
+
+  <rect x="652" y="80" width="130" height="90" rx="10" fill="#EDE9FE" stroke="#8B5CF6" stroke-width="2"/>
+  <text x="717" y="107" text-anchor="middle" font-size="13" font-weight="bold" fill="#4C1D95">결과 저장</text>
+  <text x="717" y="127" text-anchor="middle" font-size="11" fill="#6D28D9">Markdown</text>
+  <text x="717" y="145" text-anchor="middle" font-size="11" fill="#6D28D9">Notion DB</text>
+  <text x="717" y="163" text-anchor="middle" font-size="11" fill="#6D28D9">로컬 파일</text>
+
+  <!-- Code Section -->
+  <rect x="20" y="195" width="380" height="235" rx="10" fill="#1E293B" stroke="#334155" stroke-width="1.5"/>
+  <text x="40" y="218" font-size="12" fill="#94A3B8"># YouTube 자막 추출 (yt-dlp)</text>
+  <text x="40" y="238" font-size="11" fill="#10B981">import yt_dlp, openai</text>
+  <text x="40" y="258" font-size="11" fill="#64748B">opts = {</text>
+  <text x="40" y="276" font-size="11" fill="#64748B">  <tspan fill="#FCD34D">'writeautomaticsub'</tspan>: True,</text>
+  <text x="40" y="294" font-size="11" fill="#64748B">  <tspan fill="#FCD34D">'subtitlesformat'</tspan>: <tspan fill="#FCD34D">'vtt'</tspan>,</text>
+  <text x="40" y="312" font-size="11" fill="#64748B">  <tspan fill="#FCD34D">'subtitleslangs'</tspan>: [<tspan fill="#FCD34D">'ko','en'</tspan>],</text>
+  <text x="40" y="330" font-size="11" fill="#64748B">  <tspan fill="#FCD34D">'skip_download'</tspan>: True</text>
+  <text x="40" y="348" font-size="11" fill="#64748B">}</text>
+  <text x="40" y="368" font-size="11" fill="#64748B">with yt_dlp.YoutubeDL(opts) as ydl:</text>
+  <text x="40" y="386" font-size="11" fill="#64748B">    ydl.download([url])</text>
+  <text x="40" y="406" font-size="11" fill="#94A3B8"># 이후 Whisper 또는 LLM으로 요약</text>
+
+  <!-- Output Example -->
+  <rect x="415" y="195" width="365" height="235" rx="10" fill="white" stroke="#E2E8F0" stroke-width="1.5"/>
+  <text x="597" y="220" text-anchor="middle" font-size="14" font-weight="bold" fill="#1E293B">요약 출력 예시</text>
+  <rect x="430" y="232" width="335" height="44" rx="6" fill="#DBEAFE" stroke="#3B82F6" stroke-width="1"/>
+  <text x="597" y="250" text-anchor="middle" font-size="12" font-weight="bold" fill="#1E40AF">영상 제목</text>
+  <text x="597" y="268" text-anchor="middle" font-size="11" fill="#1D4ED8">Claude로 추출한 원본 제목 표시</text>
+  <rect x="430" y="284" width="335" height="44" rx="6" fill="#D1FAE5" stroke="#10B981" stroke-width="1"/>
+  <text x="597" y="302" text-anchor="middle" font-size="12" font-weight="bold" fill="#065F46">3줄 핵심 요약</text>
+  <text x="597" y="320" text-anchor="middle" font-size="11" fill="#047857">영상의 핵심 메시지 간결하게</text>
+  <rect x="430" y="336" width="335" height="44" rx="6" fill="#FEF3C7" stroke="#F59E0B" stroke-width="1"/>
+  <text x="597" y="354" text-anchor="middle" font-size="12" font-weight="bold" fill="#92400E">주요 인사이트 목록</text>
+  <text x="597" y="372" text-anchor="middle" font-size="11" fill="#B45309">불릿 포인트로 핵심 내용 정리</text>
+  <rect x="430" y="388" width="335" height="32" rx="6" fill="#F3F4F6" stroke="#6B7280" stroke-width="1"/>
+  <text x="597" y="409" text-anchor="middle" font-size="11" fill="#374151">타임스탬프 + 챕터 구분</text>
+</svg>

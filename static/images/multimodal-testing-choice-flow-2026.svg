@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f7f3ee"/>
+      <stop offset="100%" stop-color="#eadfd1"/>
+    </linearGradient>
+    <style>
+      .title{font:700 42px Arial,sans-serif;fill:#1e1a16}
+      .box{fill:#fff7f0;stroke:#8c6f55;stroke-width:3;rx:18;ry:18}
+      .label{font:700 22px Arial,sans-serif;fill:#2c231d}
+      .small{font:400 18px Arial,sans-serif;fill:#53463c}
+      .arrow{stroke:#8c6f55;stroke-width:5;fill:none;marker-end:url(#m)}
+    </style>
+    <marker id="m" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 Z" fill="#8c6f55"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <text x="60" y="80" class="title">Multimodal Testing Choice Flow</text>
+  <rect class="box" x="70" y="170" width="200" height="100"/><text x="170" y="210" text-anchor="middle" class="label">Single input?</text><text x="170" y="240" text-anchor="middle" class="small">one image or one utterance</text>
+  <rect class="box" x="320" y="170" width="200" height="100"/><text x="420" y="210" text-anchor="middle" class="label">Mixed input?</text><text x="420" y="240" text-anchor="middle" class="small">image + audio + screen</text>
+  <rect class="box" x="570" y="170" width="200" height="100"/><text x="670" y="210" text-anchor="middle" class="label">Tool path?</text><text x="670" y="240" text-anchor="middle" class="small">planner and router</text>
+  <rect class="box" x="820" y="170" width="240" height="100"/><text x="940" y="210" text-anchor="middle" class="label">Regression gate</text><text x="940" y="240" text-anchor="middle" class="small">auto pass or fail</text>
+  <path class="arrow" d="M270 220 H315"/><path class="arrow" d="M520 220 H565"/><path class="arrow" d="M770 220 H815"/>
+  <rect class="box" x="110" y="360" width="260" height="120"/><text x="240" y="400" text-anchor="middle" class="label">Text eval</text><text x="240" y="430" text-anchor="middle" class="small">answer, schema, exact match</text>
+  <rect class="box" x="430" y="360" width="260" height="120"/><text x="560" y="400" text-anchor="middle" class="label">Multimodal eval</text><text x="560" y="430" text-anchor="middle" class="small">visual grounding, STT, OCR</text>
+  <rect class="box" x="750" y="360" width="320" height="120"/><text x="910" y="400" text-anchor="middle" class="label">Human review</text><text x="910" y="430" text-anchor="middle" class="small">edge cases and ambiguous failures</text>
+</svg>

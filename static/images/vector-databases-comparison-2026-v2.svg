@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Vector Databases Comparison 2026 v2</title>
+  <desc id="desc">Comparison diagram of Chroma, Qdrant, and Weaviate with their positioning.</desc>
+  <rect width="1200" height="675" fill="#f8fafc"/>
+  <text x="70" y="88" font-size="38" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#0f172a">Vector Databases Comparison</text>
+  <text x="70" y="124" font-size="20" font-family="Segoe UI, Arial, sans-serif" fill="#334155">Chroma vs Qdrant vs Weaviate</text>
+  <rect x="70" y="190" width="320" height="340" rx="24" fill="#fff" stroke="#cbd5e1"/>
+  <rect x="440" y="190" width="320" height="340" rx="24" fill="#fff" stroke="#cbd5e1"/>
+  <rect x="810" y="190" width="320" height="340" rx="24" fill="#fff" stroke="#cbd5e1"/>
+  <text x="185" y="240" font-size="28" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#0f172a">Chroma</text>
+  <text x="544" y="240" font-size="28" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#0f172a">Qdrant</text>
+  <text x="912" y="240" font-size="28" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#0f172a">Weaviate</text>
+  <text x="106" y="290" font-size="18" font-family="Segoe UI, Arial, sans-serif" fill="#334155">AI application DB</text>
+  <text x="106" y="322" font-size="18" font-family="Segoe UI, Arial, sans-serif" fill="#334155">local -> cloud</text>
+  <text x="106" y="354" font-size="18" font-family="Segoe UI, Arial, sans-serif" fill="#334155">fast prototyping</text>
+  <text x="476" y="290" font-size="18" font-family="Segoe UI, Arial, sans-serif" fill="#334155">AI-native vector DB</text>
+  <text x="476" y="322" font-size="18" font-family="Segoe UI, Arial, sans-serif" fill="#334155">filters + multitenancy</text>
+  <text x="476" y="354" font-size="18" font-family="Segoe UI, Arial, sans-serif" fill="#334155">distributed scale</text>
+  <text x="846" y="290" font-size="18" font-family="Segoe UI, Arial, sans-serif" fill="#334155">search engine feel</text>
+  <text x="846" y="322" font-size="18" font-family="Segoe UI, Arial, sans-serif" fill="#334155">hybrid search</text>
+  <text x="846" y="354" font-size="18" font-family="Segoe UI, Arial, sans-serif" fill="#334155">modules / agents</text>
+  <text x="106" y="430" font-size="18" font-family="Segoe UI, Arial, sans-serif" fill="#334155">best for PoC and small apps</text>
+  <text x="476" y="430" font-size="18" font-family="Segoe UI, Arial, sans-serif" fill="#334155">best for production controls</text>
+  <text x="846" y="430" font-size="18" font-family="Segoe UI, Arial, sans-serif" fill="#334155">best for search-heavy apps</text>
+</svg>

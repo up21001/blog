@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Fast Inference Platforms Decision Map</title>
+  <desc id="desc">Decision map for Groq, Together AI, Replicate, and fal</desc>
+  <defs>
+    <linearGradient id="bg4" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#eef2ff"/>
+    </linearGradient>
+    <style>
+      .h1 { font: 800 38px Inter, Arial, sans-serif; fill: #0f172a; }
+      .p { font: 500 18px Inter, Arial, sans-serif; fill: #334155; }
+      .box { fill: #ffffff; stroke: #cbd5e1; stroke-width: 2; }
+      .boxTitle { font: 800 22px Inter, Arial, sans-serif; fill: #0f172a; }
+      .small { font: 500 16px Inter, Arial, sans-serif; fill: #475569; }
+      .chip { font: 700 14px Inter, Arial, sans-serif; fill: #0f172a; letter-spacing: 0.05em; }
+    </style>
+    <marker id="arrow2" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#64748b"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="675" rx="32" fill="url(#bg4)"/>
+  <text x="60" y="72" class="h1">Fast Inference Platforms Decision Map</text>
+  <text x="60" y="106" class="p">Choose based on latency, model variety, or media generation workload.</text>
+
+  <rect x="476" y="150" width="248" height="86" rx="24" class="box"/>
+  <text x="600" y="185" text-anchor="middle" class="boxTitle">What matters most?</text>
+  <text x="600" y="212" text-anchor="middle" class="small">speed / breadth / media / workflow</text>
+
+  <line x1="600" y1="236" x2="600" y2="286" stroke="#64748b" stroke-width="4" marker-end="url(#arrow2)"/>
+
+  <rect x="64" y="286" width="256" height="116" rx="24" class="box"/>
+  <rect x="328" y="286" width="256" height="116" rx="24" class="box"/>
+  <rect x="592" y="286" width="256" height="116" rx="24" class="box"/>
+  <rect x="856" y="286" width="280" height="116" rx="24" class="box"/>
+
+  <rect x="90" y="302" width="86" height="28" rx="14" fill="#dbeafe"/>
+  <text x="133" y="321" text-anchor="middle" class="chip">CHAT / AGENT</text>
+  <text x="192" y="345" text-anchor="middle" class="boxTitle">Groq</text>
+  <text x="192" y="372" text-anchor="middle" class="small">lowest latency</text>
+  <text x="192" y="396" text-anchor="middle" class="small">best for realtime UX</text>
+
+  <rect x="352" y="302" width="96" height="28" rx="14" fill="#dcfce7"/>
+  <text x="400" y="321" text-anchor="middle" class="chip">OPEN MODELS</text>
+  <text x="456" y="345" text-anchor="middle" class="boxTitle">Together AI</text>
+  <text x="456" y="372" text-anchor="middle" class="small">balanced production API</text>
+  <text x="456" y="396" text-anchor="middle" class="small">fine-tuning and endpoints</text>
+
+  <rect x="616" y="302" width="78" height="28" rx="14" fill="#fef3c7"/>
+  <text x="655" y="321" text-anchor="middle" class="chip">MEDIA APPS</text>
+  <text x="720" y="345" text-anchor="middle" class="boxTitle">Replicate</text>
+  <text x="720" y="372" text-anchor="middle" class="small">model catalog + webhooks</text>
+  <text x="720" y="396" text-anchor="middle" class="small">broad generative workflows</text>
+
+  <rect x="888" y="302" width="74" height="28" rx="14" fill="#ede9fe"/>
+  <text x="925" y="321" text-anchor="middle" class="chip">CREATIVE</text>
+  <text x="1016" y="345" text-anchor="middle" class="boxTitle">fal</text>
+  <text x="1016" y="372" text-anchor="middle" class="small">fast image / video / audio</text>
+  <text x="1016" y="396" text-anchor="middle" class="small">serverless media inference</text>
+
+  <line x1="320" y1="344" x2="328" y2="344" stroke="#64748b" stroke-width="4" marker-end="url(#arrow2)"/>
+  <line x1="584" y1="344" x2="592" y2="344" stroke="#64748b" stroke-width="4" marker-end="url(#arrow2)"/>
+  <line x1="848" y1="344" x2="856" y2="344" stroke="#64748b" stroke-width="4" marker-end="url(#arrow2)"/>
+
+  <rect x="156" y="460" width="188" height="74" rx="20" fill="#dbeafe" stroke="#93c5fd" stroke-width="2"/>
+  <rect x="404" y="460" width="188" height="74" rx="20" fill="#dcfce7" stroke="#86efac" stroke-width="2"/>
+  <rect x="652" y="460" width="188" height="74" rx="20" fill="#fef3c7" stroke="#fcd34d" stroke-width="2"/>
+  <rect x="900" y="460" width="188" height="74" rx="20" fill="#ede9fe" stroke="#c4b5fd" stroke-width="2"/>
+  <text x="250" y="492" text-anchor="middle" class="boxTitle">Realtime</text>
+  <text x="250" y="516" text-anchor="middle" class="small">choose Groq</text>
+  <text x="498" y="492" text-anchor="middle" class="boxTitle">Production</text>
+  <text x="498" y="516" text-anchor="middle" class="small">choose Together AI</text>
+  <text x="746" y="492" text-anchor="middle" class="boxTitle">Catalog</text>
+  <text x="746" y="516" text-anchor="middle" class="small">choose Replicate</text>
+  <text x="994" y="492" text-anchor="middle" class="boxTitle">Media</text>
+  <text x="994" y="516" text-anchor="middle" class="small">choose fal</text>
+</svg>

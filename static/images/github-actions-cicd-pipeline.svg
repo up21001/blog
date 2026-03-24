@@ -1,0 +1,97 @@
+<svg width="800" height="450" viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg" font-family="'Malgun Gothic', sans-serif">
+  <!-- Background -->
+  <rect width="800" height="450" fill="#F8FAFC" rx="12"/>
+  <text x="400" y="36" text-anchor="middle" font-size="18" font-weight="bold" fill="#1E293B">GitHub Actions CI/CD 파이프라인 흐름</text>
+
+  <!-- Push Event -->
+  <rect x="30" y="70" width="120" height="60" rx="8" fill="#DBEAFE" stroke="#3B82F6" stroke-width="2"/>
+  <text x="90" y="96" text-anchor="middle" font-size="13" font-weight="bold" fill="#1D4ED8">코드 Push</text>
+  <text x="90" y="116" text-anchor="middle" font-size="11" fill="#3B82F6">git push origin</text>
+
+  <!-- Arrow -->
+  <line x1="150" y1="100" x2="188" y2="100" stroke="#6B7280" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Trigger -->
+  <rect x="188" y="70" width="120" height="60" rx="8" fill="#EDE9FE" stroke="#8B5CF6" stroke-width="2"/>
+  <text x="248" y="96" text-anchor="middle" font-size="13" font-weight="bold" fill="#6D28D9">Trigger</text>
+  <text x="248" y="116" text-anchor="middle" font-size="11" fill="#8B5CF6">on: push / PR</text>
+
+  <!-- Arrow -->
+  <line x1="308" y1="100" x2="346" y2="100" stroke="#6B7280" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Build -->
+  <rect x="346" y="70" width="120" height="60" rx="8" fill="#D1FAE5" stroke="#10B981" stroke-width="2"/>
+  <text x="406" y="96" text-anchor="middle" font-size="13" font-weight="bold" fill="#065F46">Build</text>
+  <text x="406" y="116" text-anchor="middle" font-size="11" fill="#10B981">npm install &amp; build</text>
+
+  <!-- Arrow -->
+  <line x1="466" y1="100" x2="504" y2="100" stroke="#6B7280" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Test -->
+  <rect x="504" y="70" width="120" height="60" rx="8" fill="#FEF3C7" stroke="#F59E0B" stroke-width="2"/>
+  <text x="564" y="96" text-anchor="middle" font-size="13" font-weight="bold" fill="#92400E">Test</text>
+  <text x="564" y="116" text-anchor="middle" font-size="11" fill="#F59E0B">npm test</text>
+
+  <!-- Arrow -->
+  <line x1="624" y1="100" x2="662" y2="100" stroke="#6B7280" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Deploy -->
+  <rect x="662" y="70" width="108" height="60" rx="8" fill="#DBEAFE" stroke="#3B82F6" stroke-width="2"/>
+  <text x="716" y="96" text-anchor="middle" font-size="13" font-weight="bold" fill="#1D4ED8">Deploy</text>
+  <text x="716" y="116" text-anchor="middle" font-size="11" fill="#3B82F6">Production</text>
+
+  <!-- Job Detail Section -->
+  <rect x="30" y="170" width="220" height="120" rx="8" fill="#F3F4F6" stroke="#6B7280" stroke-width="1.5"/>
+  <text x="140" y="193" text-anchor="middle" font-size="13" font-weight="bold" fill="#374151">jobs: build</text>
+  <text x="50" y="213" font-size="11" fill="#4B5563">runs-on: ubuntu-latest</text>
+  <text x="50" y="231" font-size="11" fill="#4B5563">steps:</text>
+  <text x="65" y="249" font-size="11" fill="#4B5563">- uses: actions/checkout@v4</text>
+  <text x="65" y="267" font-size="11" fill="#4B5563">- uses: actions/setup-node@v4</text>
+  <text x="65" y="285" font-size="11" fill="#4B5563">- run: npm ci &amp;&amp; npm test</text>
+
+  <!-- Secrets Section -->
+  <rect x="290" y="170" width="220" height="120" rx="8" fill="#FEE2E2" stroke="#EF4444" stroke-width="1.5"/>
+  <text x="400" y="193" text-anchor="middle" font-size="13" font-weight="bold" fill="#991B1B">Secrets 관리</text>
+  <text x="310" y="213" font-size="11" fill="#4B5563">Settings → Secrets</text>
+  <text x="310" y="231" font-size="11" fill="#4B5563">$\{\{ secrets.API_KEY \}\}</text>
+  <text x="310" y="249" font-size="11" fill="#4B5563">$\{\{ secrets.DEPLOY_TOKEN \}\}</text>
+  <text x="310" y="267" font-size="11" fill="#4B5563">Environment: production</text>
+  <text x="310" y="285" font-size="11" fill="#4B5563">Required reviewers 설정</text>
+
+  <!-- Environments Section -->
+  <rect x="550" y="170" width="220" height="120" rx="8" fill="#D1FAE5" stroke="#10B981" stroke-width="1.5"/>
+  <text x="660" y="193" text-anchor="middle" font-size="13" font-weight="bold" fill="#065F46">배포 환경 분리</text>
+  <text x="570" y="213" font-size="11" fill="#4B5563">develop → staging</text>
+  <text x="570" y="231" font-size="11" fill="#4B5563">main → production</text>
+  <text x="570" y="249" font-size="11" fill="#4B5563">needs: [build, test]</text>
+  <text x="570" y="267" font-size="11" fill="#4B5563">environment: production</text>
+  <text x="570" y="285" font-size="11" fill="#4B5563">concurrency: deploy-prod</text>
+
+  <!-- Bottom row: Matrix, Cache, Notify -->
+  <rect x="30" y="320" width="220" height="100" rx="8" fill="#EDE9FE" stroke="#8B5CF6" stroke-width="1.5"/>
+  <text x="140" y="343" text-anchor="middle" font-size="13" font-weight="bold" fill="#6D28D9">Matrix Strategy</text>
+  <text x="50" y="363" font-size="11" fill="#4B5563">node: [18, 20, 22]</text>
+  <text x="50" y="381" font-size="11" fill="#4B5563">os: [ubuntu, windows]</text>
+  <text x="50" y="399" font-size="11" fill="#4B5563">병렬 빌드로 속도 향상</text>
+
+  <rect x="290" y="320" width="220" height="100" rx="8" fill="#FEF3C7" stroke="#F59E0B" stroke-width="1.5"/>
+  <text x="400" y="343" text-anchor="middle" font-size="13" font-weight="bold" fill="#92400E">캐시 최적화</text>
+  <text x="310" y="363" font-size="11" fill="#4B5563">actions/cache@v4</text>
+  <text x="310" y="381" font-size="11" fill="#4B5563">key: node-$\{\{ hashFiles \}\}</text>
+  <text x="310" y="399" font-size="11" fill="#4B5563">빌드 시간 50~70% 단축</text>
+
+  <rect x="550" y="320" width="220" height="100" rx="8" fill="#DBEAFE" stroke="#3B82F6" stroke-width="1.5"/>
+  <text x="660" y="343" text-anchor="middle" font-size="13" font-weight="bold" fill="#1D4ED8">Slack 알림</text>
+  <text x="570" y="363" font-size="11" fill="#4B5563">on: workflow_run</text>
+  <text x="570" y="381" font-size="11" fill="#4B5563">slackapi/slack-github-action</text>
+  <text x="570" y="399" font-size="11" fill="#4B5563">성공/실패 실시간 알림</text>
+
+  <!-- Arrow marker -->
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#6B7280"/>
+    </marker>
+  </defs>
+
+  <text x="400" y="440" text-anchor="middle" font-size="11" fill="#9CA3AF">GitHub Actions — 코드 변경부터 프로덕션 배포까지 완전 자동화</text>
+</svg>

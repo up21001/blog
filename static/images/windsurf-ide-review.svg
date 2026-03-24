@@ -1,0 +1,91 @@
+<svg width="800" height="450" viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg" font-family="'Malgun Gothic', sans-serif">
+  <!-- 배경 -->
+  <rect width="800" height="450" fill="#F8FAFC" rx="12"/>
+  <text x="400" y="38" text-anchor="middle" font-size="18" font-weight="bold" fill="#1E293B">Windsurf vs Cursor — 기능 비교</text>
+
+  <!-- 헤더 -->
+  <rect x="30" y="55" width="200" height="45" rx="6" fill="#1E293B"/>
+  <text x="130" y="83" text-anchor="middle" font-size="13" font-weight="bold" fill="white">비교 항목</text>
+
+  <rect x="240" y="55" width="240" height="45" rx="6" fill="#DBEAFE" stroke="#3B82F6" stroke-width="2"/>
+  <text x="360" y="78" text-anchor="middle" font-size="14" font-weight="bold" fill="#1D4ED8">Windsurf</text>
+  <text x="360" y="93" text-anchor="middle" font-size="11" fill="#1D4ED8">by Codeium</text>
+
+  <rect x="490" y="55" width="280" height="45" rx="6" fill="#EDE9FE" stroke="#8B5CF6" stroke-width="2"/>
+  <text x="630" y="78" text-anchor="middle" font-size="14" font-weight="bold" fill="#4C1D95">Cursor</text>
+  <text x="630" y="93" text-anchor="middle" font-size="11" fill="#4C1D95">AI-First IDE</text>
+
+  <!-- 행: 가격 -->
+  <rect x="30" y="108" width="200" height="42" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+  <text x="130" y="134" text-anchor="middle" font-size="12" fill="#475569">가격</text>
+  <rect x="240" y="108" width="240" height="42" fill="#D1FAE5" stroke="#E2E8F0" stroke-width="1"/>
+  <text x="360" y="127" text-anchor="middle" font-size="12" fill="#065F46">Free / Pro $15/월</text>
+  <text x="360" y="143" text-anchor="middle" font-size="11" fill="#065F46">Teams $35/월/사용자</text>
+  <rect x="490" y="108" width="280" height="42" fill="#EDE9FE" stroke="#E2E8F0" stroke-width="1"/>
+  <text x="630" y="127" text-anchor="middle" font-size="12" fill="#4C1D95">Free / Pro $20/월</text>
+  <text x="630" y="143" text-anchor="middle" font-size="11" fill="#4C1D95">Business $40/월/사용자</text>
+
+  <!-- 행: 에이전트 -->
+  <rect x="30" y="150" width="200" height="42" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+  <text x="130" y="176" text-anchor="middle" font-size="12" fill="#475569">AI 에이전트</text>
+  <rect x="240" y="150" width="240" height="42" fill="#DBEAFE" stroke="#E2E8F0" stroke-width="1"/>
+  <text x="360" y="169" text-anchor="middle" font-size="12" fill="#1D4ED8">Cascade (자율 에이전트)</text>
+  <text x="360" y="185" text-anchor="middle" font-size="11" fill="#1D4ED8">Flow 기반 멀티스텝</text>
+  <rect x="490" y="150" width="280" height="42" fill="#EDE9FE" stroke="#E2E8F0" stroke-width="1"/>
+  <text x="630" y="169" text-anchor="middle" font-size="12" fill="#4C1D95">Composer Agent</text>
+  <text x="630" y="185" text-anchor="middle" font-size="11" fill="#4C1D95">에이전트 모드 (유료)</text>
+
+  <!-- 행: 모델 -->
+  <rect x="30" y="192" width="200" height="42" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+  <text x="130" y="218" text-anchor="middle" font-size="12" fill="#475569">지원 AI 모델</text>
+  <rect x="240" y="192" width="240" height="42" fill="#DBEAFE" stroke="#E2E8F0" stroke-width="1"/>
+  <text x="360" y="211" text-anchor="middle" font-size="12" fill="#1D4ED8">Claude, GPT-4o, Gemini</text>
+  <text x="360" y="227" text-anchor="middle" font-size="11" fill="#1D4ED8">자체 Codeium 모델</text>
+  <rect x="490" y="192" width="280" height="42" fill="#EDE9FE" stroke="#E2E8F0" stroke-width="1"/>
+  <text x="630" y="211" text-anchor="middle" font-size="12" fill="#4C1D95">Claude, GPT-4o, Gemini</text>
+  <text x="630" y="227" text-anchor="middle" font-size="11" fill="#4C1D95">o1, o3-mini 등 다수</text>
+
+  <!-- 행: 코드베이스 이해 -->
+  <rect x="30" y="234" width="200" height="42" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+  <text x="130" y="252" text-anchor="middle" font-size="12" fill="#475569">코드베이스</text>
+  <text x="130" y="268" text-anchor="middle" font-size="12" fill="#475569">컨텍스트 이해</text>
+  <rect x="240" y="234" width="240" height="42" fill="#D1FAE5" stroke="#E2E8F0" stroke-width="1"/>
+  <text x="360" y="253" text-anchor="middle" font-size="12" fill="#065F46">Cascade가 자동 탐색</text>
+  <text x="360" y="269" text-anchor="middle" font-size="11" fill="#065F46">전체 레포 인덱싱</text>
+  <rect x="490" y="234" width="280" height="42" fill="#D1FAE5" stroke="#E2E8F0" stroke-width="1"/>
+  <text x="630" y="253" text-anchor="middle" font-size="12" fill="#065F46">@Codebase 태그로 참조</text>
+  <text x="630" y="269" text-anchor="middle" font-size="11" fill="#065F46">임베딩 기반 검색</text>
+
+  <!-- 행: 인라인 완성 -->
+  <rect x="30" y="276" width="200" height="42" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+  <text x="130" y="302" text-anchor="middle" font-size="12" fill="#475569">인라인 완성 속도</text>
+  <rect x="240" y="276" width="240" height="42" fill="#FEF3C7" stroke="#E2E8F0" stroke-width="1"/>
+  <text x="360" y="295" text-anchor="middle" font-size="12" fill="#92400E">보통 (Codeium 엔진)</text>
+  <text x="360" y="311" text-anchor="middle" font-size="11" fill="#92400E">무료 플랜도 빠름</text>
+  <rect x="490" y="276" width="280" height="42" fill="#D1FAE5" stroke="#E2E8F0" stroke-width="1"/>
+  <text x="630" y="295" text-anchor="middle" font-size="12" fill="#065F46">빠름 (Tab AI)</text>
+  <text x="630" y="311" text-anchor="middle" font-size="11" fill="#065F46">예측 정확도 높음</text>
+
+  <!-- 행: VS Code 호환 -->
+  <rect x="30" y="318" width="200" height="42" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+  <text x="130" y="344" text-anchor="middle" font-size="12" fill="#475569">VS Code 확장 호환</text>
+  <rect x="240" y="318" width="240" height="42" fill="#D1FAE5" stroke="#E2E8F0" stroke-width="1"/>
+  <text x="360" y="337" text-anchor="middle" font-size="12" fill="#065F46">✓ 완전 호환</text>
+  <text x="360" y="353" text-anchor="middle" font-size="11" fill="#065F46">VS Code 포크 기반</text>
+  <rect x="490" y="318" width="280" height="42" fill="#D1FAE5" stroke="#E2E8F0" stroke-width="1"/>
+  <text x="630" y="337" text-anchor="middle" font-size="12" fill="#065F46">✓ 완전 호환</text>
+  <text x="630" y="353" text-anchor="middle" font-size="11" fill="#065F46">VS Code 포크 기반</text>
+
+  <!-- 추천 요약 -->
+  <rect x="30" y="375" width="350" height="60" rx="8" fill="#DBEAFE" stroke="#3B82F6" stroke-width="1.5"/>
+  <text x="205" y="397" text-anchor="middle" font-size="12" font-weight="bold" fill="#1D4ED8">Windsurf 추천 상황</text>
+  <text x="205" y="414" text-anchor="middle" font-size="11" fill="#1E40AF">• 비용 절감이 중요한 팀</text>
+  <text x="205" y="429" text-anchor="middle" font-size="11" fill="#1E40AF">• Cascade 자율 에이전트 선호</text>
+
+  <rect x="420" y="375" width="350" height="60" rx="8" fill="#EDE9FE" stroke="#8B5CF6" stroke-width="1.5"/>
+  <text x="595" y="397" text-anchor="middle" font-size="12" font-weight="bold" fill="#4C1D95">Cursor 추천 상황</text>
+  <text x="595" y="414" text-anchor="middle" font-size="11" fill="#4C1D95">• 정밀한 컨텍스트 제어 필요</text>
+  <text x="595" y="429" text-anchor="middle" font-size="11" fill="#4C1D95">• 다양한 최신 모델 사용 희망</text>
+
+  <text x="400" y="447" text-anchor="middle" font-size="10" fill="#94A3B8">* 2026년 3월 기준 | 각 공식 문서 참조</text>
+</svg>

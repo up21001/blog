@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Multi-Agent Queue Architecture</title>
+  <desc id="desc">Architecture diagram showing ingress, queue broker, scheduler, workers, and observability.</desc>
+  <defs>
+    <style>
+      text { font-family: Arial, Helvetica, sans-serif; fill: #e5e7eb; }
+      .title { font-size: 38px; font-weight: 700; }
+      .small { font-size: 18px; fill: #cbd5e1; }
+      .box { rx: 18; ry: 18; stroke: #34d399; stroke-width: 2.5; fill: rgba(15, 23, 42, 0.78); }
+      .dash { stroke-dasharray: 8 8; }
+      .line { stroke: #94a3b8; stroke-width: 4; marker-end: url(#arrow); }
+    </style>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="630" fill="#0b1120"/>
+  <circle cx="1100" cy="70" r="130" fill="#10b981" opacity="0.12"/>
+  <circle cx="120" cy="560" r="180" fill="#38bdf8" opacity="0.1"/>
+  <text x="60" y="82" class="title">Multi-Agent Queue Architecture</text>
+  <text x="60" y="120" class="small">Ingress, queue broker, scheduler, worker pool, observability</text>
+  <rect x="60" y="210" width="170" height="110" class="box"/>
+  <text x="145" y="252" text-anchor="middle" font-size="22" font-weight="700">API Gateway</text>
+  <text x="145" y="280" text-anchor="middle" class="small">Ingress</text>
+  <rect x="280" y="190" width="190" height="150" class="box"/>
+  <text x="375" y="235" text-anchor="middle" font-size="22" font-weight="700">Queue Broker</text>
+  <text x="375" y="263" text-anchor="middle" class="small">Priority lanes</text>
+  <text x="375" y="291" text-anchor="middle" class="small">Retry routing</text>
+  <rect x="525" y="190" width="170" height="150" class="box"/>
+  <text x="610" y="235" text-anchor="middle" font-size="22" font-weight="700">Scheduler</text>
+  <text x="610" y="263" text-anchor="middle" class="small">Timing policy</text>
+  <text x="610" y="291" text-anchor="middle" class="small">Delay queue</text>
+  <rect x="750" y="175" width="230" height="180" class="box"/>
+  <text x="865" y="218" text-anchor="middle" font-size="22" font-weight="700">Worker Pool</text>
+  <text x="865" y="246" text-anchor="middle" class="small">Agent A / B / C</text>
+  <text x="865" y="274" text-anchor="middle" class="small">Concurrency control</text>
+  <text x="865" y="302" text-anchor="middle" class="small">Handoff / review</text>
+  <rect x="1020" y="205" width="120" height="120" class="box"/>
+  <text x="1080" y="246" text-anchor="middle" font-size="22" font-weight="700">Trace</text>
+  <text x="1080" y="274" text-anchor="middle" class="small">Metrics</text>
+  <line x1="230" y1="265" x2="280" y2="265" class="line"/>
+  <line x1="470" y1="265" x2="525" y2="265" class="line"/>
+  <line x1="695" y1="265" x2="750" y2="265" class="line"/>
+  <line x1="980" y1="265" x2="1020" y2="265" class="line"/>
+  <rect x="315" y="410" width="570" height="78" rx="22" ry="22" fill="#0f172a" stroke="#34d399" stroke-width="2"/>
+  <text x="600" y="458" text-anchor="middle" class="small">The architecture is stable when routing, scheduling, and observability are separated.</text>
+</svg>

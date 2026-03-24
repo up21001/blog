@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#f8fafc"/>
+  <style>
+    .h1 { font: 700 40px sans-serif; fill: #0f172a; }
+    .h2 { font: 400 20px sans-serif; fill: #475569; }
+    .b { font: 700 20px sans-serif; fill: #0f172a; }
+    .t { font: 400 18px sans-serif; fill: #334155; }
+    .r { rx: 18; ry: 18; stroke: #cbd5e1; stroke-width: 2; }
+  </style>
+  <text x="70" y="76" class="h1">Monitoring Decision Flow</text>
+  <text x="70" y="110" class="h2">무엇을 먼저 볼지 정하는 운영 기준</text>
+
+  <rect x="90" y="170" width="230" height="110" class="r" fill="#dbeafe"/>
+  <text x="205" y="212" text-anchor="middle" class="b">검색이 틀렸는가</text>
+  <text x="205" y="244" text-anchor="middle" class="t">retrieval layer</text>
+
+  <rect x="410" y="170" width="230" height="110" class="r" fill="#dcfce7"/>
+  <text x="525" y="212" text-anchor="middle" class="b">답변이 비근거적인가</text>
+  <text x="525" y="244" text-anchor="middle" class="t">generation layer</text>
+
+  <rect x="730" y="170" width="230" height="110" class="r" fill="#fef9c3"/>
+  <text x="845" y="212" text-anchor="middle" class="b">비용이 급증하는가</text>
+  <text x="845" y="244" text-anchor="middle" class="t">system layer</text>
+
+  <line x1="320" y1="225" x2="410" y2="225" stroke="#64748b" stroke-width="4"/>
+  <line x1="640" y1="225" x2="730" y2="225" stroke="#64748b" stroke-width="4"/>
+
+  <rect x="150" y="340" width="900" height="150" class="r" fill="#ffffff"/>
+  <text x="185" y="390" class="b">운영 원칙</text>
+  <text x="185" y="428" class="t">trace를 먼저 보고, 그다음 metrics와 alerts를 붙입니다.</text>
+</svg>

@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Tool Call Security Audit choice flow">
+  <defs>
+    <linearGradient id="bg8" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b1020"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+    <style>
+      .t{font-family:Arial,Helvetica,sans-serif;fill:#e5e7eb}
+      .h{font-size:38px;font-weight:700}
+      .s{font-size:22px;fill:#cbd5e1}
+      .b{font-size:20px;font-weight:700}
+      .n{font-size:18px;fill:#cbd5e1}
+    </style>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg8)"/>
+  <text x="72" y="76" class="t h">Tool Call Security Audit Choice Flow</text>
+  <text x="72" y="114" class="t s">위험 신호를 보고 차단, 격리, 승인 중 선택</text>
+  <g transform="translate(72 170)">
+    <rect width="240" height="130" rx="20" fill="#172554" stroke="#60a5fa"/>
+    <text x="28" y="46" class="t b">정책 위반?</text>
+    <text x="28" y="80" class="t n">즉시 차단 판단</text>
+    <rect x="295" width="240" height="130" rx="20" fill="#172554" stroke="#60a5fa"/>
+    <text x="324" y="46" class="t b">민감 데이터?</text>
+    <text x="324" y="80" class="t n">마스킹 / 격리</text>
+    <rect x="590" width="240" height="130" rx="20" fill="#172554" stroke="#60a5fa"/>
+    <text x="618" y="46" class="t b">고위험 작업?</text>
+    <text x="618" y="80" class="t n">승인 단계 필요</text>
+    <rect x="885" width="240" height="130" rx="20" fill="#172554" stroke="#60a5fa"/>
+    <text x="918" y="46" class="t b">증거 저장</text>
+    <text x="918" y="80" class="t n">감사와 대응 연결</text>
+    <path d="M240 65H288" stroke="#38bdf8" stroke-width="5" marker-end="url(#c2)"/>
+    <path d="M535 65H583" stroke="#38bdf8" stroke-width="5" marker-end="url(#c2)"/>
+    <path d="M830 65H878" stroke="#38bdf8" stroke-width="5" marker-end="url(#c2)"/>
+  </g>
+  <g transform="translate(72 360)">
+    <rect width="1056" height="170" rx="22" fill="#0f172a" stroke="#075985"/>
+    <text x="34" y="48" class="t b">선택 기준</text>
+    <text x="34" y="86" class="t n">허용 여부만 보지 말고, 차단 후에도 복구와 대응이 가능한지 함께 봐야 합니다.</text>
+    <text x="34" y="120" class="t n">감사 증거가 남아야 재현과 인시던트 대응이 이어집니다.</text>
+  </g>
+  <defs>
+    <marker id="c2" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 Z" fill="#38bdf8"/>
+    </marker>
+  </defs>
+</svg>
+

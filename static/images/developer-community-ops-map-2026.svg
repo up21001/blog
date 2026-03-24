@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#0f172a"/>
+  <text x="60" y="90" fill="#e2e8f0" font-size="36" font-family="Arial" font-weight="700">Developer Community Operations</text>
+  <rect x="130" y="230" width="230" height="110" rx="12" fill="#0369a1"/><text x="185" y="295" fill="#fff" font-size="24" font-family="Arial">Onboarding</text>
+  <rect x="420" y="230" width="230" height="110" rx="12" fill="#0284c7"/><text x="485" y="295" fill="#fff" font-size="24" font-family="Arial">Engage</text>
+  <rect x="710" y="230" width="230" height="110" rx="12" fill="#0ea5e9"/><text x="770" y="295" fill="#0f172a" font-size="24" font-family="Arial">Contribute</text>
+</svg>

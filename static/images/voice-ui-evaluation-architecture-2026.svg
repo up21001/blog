@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f4eef6"/>
+      <stop offset="100%" stop-color="#e4d7ea"/>
+    </linearGradient>
+    <style>
+      .title{font:700 42px Arial,sans-serif;fill:#211a28}
+      .box{fill:#fff8ff;stroke:#8a6ba0;stroke-width:3;rx:18;ry:18}
+      .label{font:700 21px Arial,sans-serif;fill:#2a2130}
+      .small{font:400 17px Arial,sans-serif;fill:#5a4c67}
+      .arrow{stroke:#8a6ba0;stroke-width:5;fill:none;marker-end:url(#m)}
+    </style>
+    <marker id="m" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 Z" fill="#8a6ba0"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <text x="60" y="80" class="title">Voice UI Evaluation Architecture</text>
+  <rect class="box" x="70" y="170" width="220" height="120"/><text x="180" y="212" text-anchor="middle" class="label">Audio Capture</text><text x="180" y="242" text-anchor="middle" class="small">live / replay / synthetic</text>
+  <rect class="box" x="330" y="170" width="220" height="120"/><text x="440" y="212" text-anchor="middle" class="label">STT Layer</text><text x="440" y="242" text-anchor="middle" class="small">text + confidence</text>
+  <rect class="box" x="590" y="170" width="220" height="120"/><text x="700" y="212" text-anchor="middle" class="label">Dialog Layer</text><text x="700" y="242" text-anchor="middle" class="small">turns, state, tools</text>
+  <rect class="box" x="850" y="170" width="260" height="120"/><text x="980" y="212" text-anchor="middle" class="label">Scoring</text><text x="980" y="242" text-anchor="middle" class="small">latency, completion, recovery</text>
+  <path class="arrow" d="M290 230 H325"/><path class="arrow" d="M550 230 H585"/><path class="arrow" d="M810 230 H845"/>
+  <rect class="box" x="120" y="370" width="290" height="130"/><text x="265" y="412" text-anchor="middle" class="label">Trace Store</text><text x="265" y="442" text-anchor="middle" class="small">audio, transcript, event log</text><text x="265" y="468" text-anchor="middle" class="small">session id, prompt id</text>
+  <rect class="box" x="455" y="370" width="290" height="130"/><text x="600" y="412" text-anchor="middle" class="label">Metrics Store</text><text x="600" y="442" text-anchor="middle" class="small">turn score, latency, outcome</text><text x="600" y="468" text-anchor="middle" class="small">review labels</text>
+  <rect class="box" x="790" y="370" width="300" height="130"/><text x="940" y="412" text-anchor="middle" class="label">Dashboard</text><text x="940" y="442" text-anchor="middle" class="small">trend, regression, alerts</text><text x="940" y="468" text-anchor="middle" class="small">manual review queue</text>
+  <path class="arrow" d="M410 435 H450"/><path class="arrow" d="M745 435 H785"/>
+</svg>

@@ -1,0 +1,73 @@
+<svg width="800" height="450" viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg" font-family="'Malgun Gothic', sans-serif">
+  <rect width="800" height="450" fill="#F8FAFC" rx="12"/>
+
+  <!-- Title -->
+  <text x="400" y="42" text-anchor="middle" font-size="22" font-weight="bold" fill="#1E293B">Vercel vs Cloudflare Pages vs Netlify — 2026</text>
+
+  <!-- Column headers -->
+  <rect x="40" y="60" width="220" height="44" rx="6" fill="#DBEAFE" stroke="#3B82F6" stroke-width="2"/>
+  <text x="150" y="87" text-anchor="middle" font-size="16" font-weight="bold" fill="#1D4ED8">Vercel</text>
+
+  <rect x="290" y="60" width="220" height="44" rx="6" fill="#FEF3C7" stroke="#F59E0B" stroke-width="2"/>
+  <text x="400" y="87" text-anchor="middle" font-size="16" font-weight="bold" fill="#92400E">Cloudflare Pages</text>
+
+  <rect x="540" y="60" width="220" height="44" rx="6" fill="#D1FAE5" stroke="#10B981" stroke-width="2"/>
+  <text x="650" y="87" text-anchor="middle" font-size="16" font-weight="bold" fill="#065F46">Netlify</text>
+
+  <!-- Row labels column (implicit in cells) -->
+  <!-- Row 1: Free bandwidth -->
+  <rect x="40" y="118" width="720" height="36" rx="0" fill="#F1F5F9"/>
+  <text x="150" y="141" text-anchor="middle" font-size="12" fill="#475569">100GB / 월</text>
+  <text x="400" y="141" text-anchor="middle" font-size="12" fill="#10B981" font-weight="bold">무제한</text>
+  <text x="650" y="141" text-anchor="middle" font-size="12" fill="#475569">100GB / 월</text>
+  <text x="15" y="141" text-anchor="start" font-size="11" fill="#94A3B8">무료 대역폭</text>
+
+  <!-- Row 2: Edge network -->
+  <rect x="40" y="154" width="720" height="36" rx="0" fill="#FFFFFF"/>
+  <text x="150" y="177" text-anchor="middle" font-size="12" fill="#475569">글로벌 CDN</text>
+  <text x="400" y="177" text-anchor="middle" font-size="12" fill="#10B981" font-weight="bold">330+ PoP</text>
+  <text x="650" y="177" text-anchor="middle" font-size="12" fill="#475569">글로벌 CDN</text>
+  <text x="15" y="177" text-anchor="start" font-size="11" fill="#94A3B8">엣지 네트워크</text>
+
+  <!-- Row 3: Build time -->
+  <rect x="40" y="190" width="720" height="36" rx="0" fill="#F1F5F9"/>
+  <text x="150" y="213" text-anchor="middle" font-size="12" fill="#475569">6,000분 / 월</text>
+  <text x="400" y="213" text-anchor="middle" font-size="12" fill="#10B981" font-weight="bold">무제한</text>
+  <text x="650" y="213" text-anchor="middle" font-size="12" fill="#475569">300분 / 월</text>
+  <text x="15" y="213" text-anchor="start" font-size="11" fill="#94A3B8">빌드 시간(무료)</text>
+
+  <!-- Row 4: Serverless -->
+  <rect x="40" y="226" width="720" height="36" rx="0" fill="#FFFFFF"/>
+  <text x="150" y="249" text-anchor="middle" font-size="12" fill="#10B981">Edge / Node.js</text>
+  <text x="400" y="249" text-anchor="middle" font-size="12" fill="#10B981">Workers (V8)</text>
+  <text x="650" y="249" text-anchor="middle" font-size="12" fill="#10B981">Functions / Edge</text>
+  <text x="15" y="249" text-anchor="start" font-size="11" fill="#94A3B8">서버리스</text>
+
+  <!-- Row 5: Price Pro -->
+  <rect x="40" y="262" width="720" height="36" rx="0" fill="#F1F5F9"/>
+  <text x="150" y="285" text-anchor="middle" font-size="12" fill="#475569">$20 / 월</text>
+  <text x="400" y="285" text-anchor="middle" font-size="12" fill="#10B981" font-weight="bold">$20 / 월</text>
+  <text x="650" y="285" text-anchor="middle" font-size="12" fill="#475569">$19 / 월</text>
+  <text x="15" y="285" text-anchor="start" font-size="11" fill="#94A3B8">Pro 요금</text>
+
+  <!-- Recommendation boxes -->
+  <text x="400" y="330" text-anchor="middle" font-size="14" font-weight="bold" fill="#1E293B">용도별 추천</text>
+
+  <rect x="40" y="344" width="215" height="72" rx="8" fill="#DBEAFE" stroke="#3B82F6" stroke-width="1.5"/>
+  <text x="147" y="368" text-anchor="middle" font-size="13" font-weight="bold" fill="#1D4ED8">Vercel</text>
+  <text x="147" y="386" text-anchor="middle" font-size="11" fill="#1E40AF">Next.js / React 프로젝트</text>
+  <text x="147" y="403" text-anchor="middle" font-size="11" fill="#1E40AF">팀 협업 프리뷰 배포</text>
+
+  <rect x="292" y="344" width="215" height="72" rx="8" fill="#FEF3C7" stroke="#F59E0B" stroke-width="1.5"/>
+  <text x="399" y="368" text-anchor="middle" font-size="13" font-weight="bold" fill="#92400E">Cloudflare Pages</text>
+  <text x="399" y="386" text-anchor="middle" font-size="11" fill="#B45309">트래픽 많은 정적 사이트</text>
+  <text x="399" y="403" text-anchor="middle" font-size="11" fill="#B45309">엣지 성능 최우선</text>
+
+  <rect x="544" y="344" width="215" height="72" rx="8" fill="#D1FAE5" stroke="#10B981" stroke-width="1.5"/>
+  <text x="651" y="368" text-anchor="middle" font-size="13" font-weight="bold" fill="#065F46">Netlify</text>
+  <text x="651" y="386" text-anchor="middle" font-size="11" fill="#047857">Gatsby / 정적 사이트 생성</text>
+  <text x="651" y="403" text-anchor="middle" font-size="11" fill="#047857">Form / Identity 활용</text>
+
+  <!-- Footer -->
+  <text x="400" y="443" text-anchor="middle" font-size="11" fill="#94A3B8">2026년 3월 기준  |  무료 플랜 기준 비교</text>
+</svg>

@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#22c55e"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <text x="70" y="90" fill="#e2e8f0" font-size="34" font-family="Arial, sans-serif" font-weight="700">Agent Workflow Engine</text>
+  <text x="70" y="125" fill="#94a3b8" font-size="18" font-family="Arial, sans-serif">Input to action pipeline</text>
+  <g fill="#111827" stroke="#38bdf8" stroke-width="2">
+    <rect x="70" y="190" width="190" height="92" rx="18"/>
+    <rect x="300" y="190" width="190" height="92" rx="18"/>
+    <rect x="530" y="190" width="190" height="92" rx="18"/>
+    <rect x="760" y="190" width="190" height="92" rx="18"/>
+    <rect x="990" y="190" width="140" height="92" rx="18"/>
+  </g>
+  <g fill="#e2e8f0" font-family="Arial, sans-serif" font-size="18" font-weight="700">
+    <text x="108" y="228">Normalize</text>
+    <text x="342" y="228">Plan</text>
+    <text x="559" y="228">Execute</text>
+    <text x="792" y="228">Review</text>
+    <text x="1018" y="228">Ship</text>
+  </g>
+  <g stroke="url(#accent)" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M260 236H295"/>
+    <path d="M490 236H525"/>
+    <path d="M720 236H755"/>
+    <path d="M950 236H985"/>
+  </g>
+  <text x="80" y="350" fill="#cbd5e1" font-size="20" font-family="Arial, sans-serif">1. clean input  2. split steps  3. call tools  4. validate  5. handoff</text>
+  <text x="80" y="390" fill="#94a3b8" font-size="16" font-family="Arial, sans-serif">Engine value: predictable order, retry points, and human gates</text>
+</svg>

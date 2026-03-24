@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" role="img" aria-labelledby="title desc">
+  <title id="title">Guardrails AI Choice Flow 2026</title>
+  <desc id="desc">Decision flow for choosing Guardrails AI based on validation, structured output, and policy requirements.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f0f9ff"/>
+    </linearGradient>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 z" fill="#334155"/>
+    </marker>
+    <style>
+      text { font-family: Inter, Segoe UI, Arial, sans-serif; fill: #0f172a; }
+      .diamond { fill: #eff6ff; stroke: #2563eb; stroke-width: 2.5; }
+      .yes { fill: #ecfdf5; stroke: #10b981; stroke-width: 2; rx: 16; }
+      .no { fill: #fff7ed; stroke: #f97316; stroke-width: 2; rx: 16; }
+      .box { fill: white; stroke: #94a3b8; stroke-width: 2; rx: 18; }
+      .title { font-size: 34px; font-weight: 800; }
+      .label { font-size: 20px; font-weight: 700; }
+      .small { font-size: 16px; fill: #334155; }
+      .line { stroke: #334155; stroke-width: 3; fill: none; marker-end: url(#arrow); }
+    </style>
+  </defs>
+  <rect width="1200" height="700" fill="url(#bg)"/>
+  <rect x="40" y="36" width="1120" height="84" rx="24" fill="#0f766e"/>
+  <text x="70" y="88" class="title" fill="#ffffff">Guardrails AI Choice Flow 2026</text>
+
+  <rect x="90" y="190" width="210" height="88" class="box"/>
+  <text x="195" y="224" text-anchor="middle" class="label">Need schema?</text>
+  <text x="195" y="250" text-anchor="middle" class="small">typed output / JSON</text>
+
+  <path d="M300 234 L385 234" class="line"/>
+
+  <polygon points="490,180 590,234 490,288 390,234" class="diamond"/>
+  <text x="490" y="228" text-anchor="middle" class="label">Validation heavy?</text>
+  <text x="490" y="252" text-anchor="middle" class="small">format / policy / content</text>
+
+  <path d="M590 234 L680 234" class="line"/>
+
+  <rect x="700" y="186" width="210" height="96" class="yes"/>
+  <text x="805" y="220" text-anchor="middle" class="label">Use Guardrails AI</text>
+  <text x="805" y="246" text-anchor="middle" class="small">validators + checks</text>
+
+  <rect x="700" y="340" width="210" height="96" class="no"/>
+  <text x="805" y="374" text-anchor="middle" class="label">Use light checks</text>
+  <text x="805" y="400" text-anchor="middle" class="small">simple post-processing</text>
+
+  <path d="M490 288 C490 350, 600 360, 700 388" class="line"/>
+  <path d="M490 180 C490 130, 710 130, 805 186" class="line"/>
+
+  <rect x="960" y="206" width="170" height="56" rx="14" fill="#dbeafe"/>
+  <text x="1045" y="241" text-anchor="middle" class="small">Yes: schema + policy</text>
+
+  <rect x="960" y="360" width="170" height="56" rx="14" fill="#ffedd5"/>
+  <text x="1045" y="395" text-anchor="middle" class="small">No: keep it simple</text>
+
+  <rect x="120" y="520" width="960" height="92" rx="18" fill="#e2e8f0"/>
+  <text x="600" y="556" text-anchor="middle" class="label">Guardrails AI is best when correctness must be enforced before the user sees the answer</text>
+  <text x="600" y="584" text-anchor="middle" class="small">structured output, validators, retries, policy checks</text>
+</svg>

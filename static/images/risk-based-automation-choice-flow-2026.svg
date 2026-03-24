@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fff8f1"/>
+      <stop offset="100%" stop-color="#eef4ff"/>
+    </linearGradient>
+    <style>
+      .title{font:700 42px Arial,sans-serif;fill:#182033}
+      .sub{font:400 22px Arial,sans-serif;fill:#4b5563}
+      .box{fill:#fff;stroke:#182033;stroke-width:3;rx:18;ry:18}
+      .label{font:700 22px Arial,sans-serif;fill:#182033}
+      .small{font:400 18px Arial,sans-serif;fill:#4b5563}
+      .arrow{stroke:#182033;stroke-width:4;fill:none;marker-end:url(#m)}
+      .pill{fill:#182033;rx:999;ry:999}
+      .pillText{font:700 18px Arial,sans-serif;fill:#fff}
+    </style>
+    <marker id="m" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 z" fill="#182033"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <text x="60" y="70" class="title">Risk Classification Flow</text>
+  <text x="60" y="110" class="sub">Separate read, write, delete, and external side effects</text>
+  <rect x="60" y="140" width="180" height="40" class="pill"/>
+  <text x="85" y="167" class="pillText">choice flow</text>
+  <rect class="box" x="80" y="230" width="160" height="110"/>
+  <text x="110" y="275" class="label">Read</text>
+  <text x="95" y="305" class="small">Fast path</text>
+  <rect class="box" x="320" y="230" width="160" height="110"/>
+  <text x="352" y="275" class="label">Write</text>
+  <text x="336" y="305" class="small">Conditional</text>
+  <rect class="box" x="560" y="230" width="160" height="110"/>
+  <text x="592" y="275" class="label">Delete</text>
+  <text x="572" y="305" class="small">Approval</text>
+  <rect class="box" x="800" y="230" width="160" height="110"/>
+  <text x="825" y="275" class="label">External</text>
+  <text x="815" y="305" class="small">Approval</text>
+  <rect class="box" x="1020" y="230" width="120" height="110"/>
+  <text x="1040" y="275" class="label">Log</text>
+  <text x="1031" y="305" class="small">Audit</text>
+  <path class="arrow" d="M240 285 L320 285"/>
+  <path class="arrow" d="M480 285 L560 285"/>
+  <path class="arrow" d="M720 285 L800 285"/>
+  <path class="arrow" d="M960 285 L1020 285"/>
+</svg>

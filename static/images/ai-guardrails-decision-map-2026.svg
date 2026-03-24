@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720">
+  <rect width="1200" height="720" fill="#f3f7fb"/>
+  <text x="70" y="82" font-family="Segoe UI, Arial" font-size="40" font-weight="700" fill="#102030">AI Guardrails Decision Map</text>
+  <text x="70" y="120" font-family="Segoe UI, Arial" font-size="20" fill="#5d6d7e">A practical guide to choosing the right safety layer</text>
+
+  <rect x="80" y="190" width="240" height="110" rx="22" fill="#2d6cdf"/>
+  <text x="120" y="245" font-family="Segoe UI, Arial" font-size="26" font-weight="700" fill="#fff">Need structure?</text>
+  <text x="103" y="274" font-family="Segoe UI, Arial" font-size="16" fill="#e8f1ff">JSON / Pydantic / schema</text>
+
+  <rect x="80" y="360" width="240" height="110" rx="22" fill="#0f9d58"/>
+  <text x="120" y="415" font-family="Segoe UI, Arial" font-size="26" font-weight="700" fill="#fff">Need flow control?</text>
+  <text x="98" y="444" font-family="Segoe UI, Arial" font-size="16" fill="#eafff2">conversation routing / rails</text>
+
+  <rect x="80" y="530" width="240" height="110" rx="22" fill="#f59f00"/>
+  <text x="118" y="585" font-family="Segoe UI, Arial" font-size="26" font-weight="700" fill="#fff">Need low overhead?</text>
+  <text x="93" y="614" font-family="Segoe UI, Arial" font-size="16" fill="#fff4d8">prompt / policy only</text>
+
+  <rect x="430" y="180" width="250" height="420" rx="24" fill="#111827"/>
+  <text x="485" y="238" font-family="Segoe UI, Arial" font-size="34" font-weight="700" fill="#fff">Guardrails AI</text>
+  <text x="466" y="280" font-family="Segoe UI, Arial" font-size="17" fill="#d1d5db">validators, telemetry, structured output</text>
+  <text x="466" y="334" font-family="Segoe UI, Arial" font-size="20" fill="#f3f4f6">Choose when:</text>
+  <text x="466" y="370" font-family="Segoe UI, Arial" font-size="18" fill="#f3f4f6">- output quality matters</text>
+  <text x="466" y="402" font-family="Segoe UI, Arial" font-size="18" fill="#f3f4f6">- validation needs to be explicit</text>
+  <text x="466" y="434" font-family="Segoe UI, Arial" font-size="18" fill="#f3f4f6">- telemetry is part of the workflow</text>
+
+  <rect x="730" y="180" width="250" height="420" rx="24" fill="#0f62fe"/>
+  <text x="765" y="238" font-family="Segoe UI, Arial" font-size="34" font-weight="700" fill="#fff">NeMo</text>
+  <text x="744" y="272" font-family="Segoe UI, Arial" font-size="34" font-weight="700" fill="#fff">Guardrails</text>
+  <text x="744" y="314" font-family="Segoe UI, Arial" font-size="17" fill="#dce8ff">rails, config, flows, policy</text>
+  <text x="748" y="368" font-family="Segoe UI, Arial" font-size="20" fill="#eaf2ff">Choose when:</text>
+  <text x="748" y="404" font-family="Segoe UI, Arial" font-size="18" fill="#eaf2ff">- chat flow control matters</text>
+  <text x="748" y="436" font-family="Segoe UI, Arial" font-size="18" fill="#eaf2ff">- you need orchestration</text>
+  <text x="748" y="468" font-family="Segoe UI, Arial" font-size="18" fill="#eaf2ff">- policy branches are complex</text>
+
+  <rect x="1030" y="180" width="120" height="420" rx="24" fill="#e5e7eb"/>
+  <text x="1045" y="252" font-family="Segoe UI, Arial" font-size="22" font-weight="700" fill="#111827">Prompt</text>
+  <text x="1045" y="284" font-family="Segoe UI, Arial" font-size="22" font-weight="700" fill="#111827">/Policy</text>
+  <text x="1048" y="340" font-family="Segoe UI, Arial" font-size="16" fill="#374151">Best for</text>
+  <text x="1045" y="372" font-family="Segoe UI, Arial" font-size="16" fill="#374151">MVPs</text>
+  <text x="1045" y="404" font-family="Segoe UI, Arial" font-size="16" fill="#374151">simple rules</text>
+  <text x="1045" y="436" font-family="Segoe UI, Arial" font-size="16" fill="#374151">low overhead</text>
+
+  <path d="M320 245 L430 245" stroke="#263238" stroke-width="8" stroke-linecap="round"/>
+  <path d="M320 415 L430 415" stroke="#263238" stroke-width="8" stroke-linecap="round"/>
+  <path d="M320 585 L430 585" stroke="#263238" stroke-width="8" stroke-linecap="round"/>
+  <path d="M680 390 L730 390" stroke="#263238" stroke-width="8" stroke-linecap="round"/>
+  <path d="M980 390 L1030 390" stroke="#263238" stroke-width="8" stroke-linecap="round"/>
+</svg>
+

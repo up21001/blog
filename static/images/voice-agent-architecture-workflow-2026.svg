@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Voice Agent Architecture workflow">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b1020"/>
+      <stop offset="100%" stop-color="#132238"/>
+    </linearGradient>
+    <linearGradient id="box" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1b2a44"/>
+      <stop offset="100%" stop-color="#243a60"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#5eead4"/>
+      <stop offset="100%" stop-color="#38bdf8"/>
+    </linearGradient>
+    <style>
+      .title { font: 700 42px Arial, sans-serif; fill: #f8fafc; }
+      .sub { font: 400 20px Arial, sans-serif; fill: #cbd5e1; }
+      .label { font: 700 24px Arial, sans-serif; fill: #f8fafc; }
+      .small { font: 400 18px Arial, sans-serif; fill: #dbeafe; }
+    </style>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 Z" fill="#7dd3fc"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="630" rx="36" fill="url(#bg)"/>
+  <circle cx="110" cy="80" r="60" fill="#22c55e" opacity="0.18"/>
+  <circle cx="1080" cy="530" r="90" fill="#38bdf8" opacity="0.14"/>
+  <text x="70" y="86" class="title">Voice Agent Architecture</text>
+  <text x="70" y="120" class="sub">Audio input → STT → Orchestrator → LLM → TTS → Transport</text>
+
+  <rect x="70" y="180" width="150" height="86" rx="20" fill="url(#box)" stroke="url(#accent)" stroke-width="2"/>
+  <text x="95" y="230" class="label">Input</text>
+  <text x="95" y="252" class="small">Mic / Phone</text>
+
+  <rect x="250" y="180" width="150" height="86" rx="20" fill="url(#box)" stroke="url(#accent)" stroke-width="2"/>
+  <text x="287" y="230" class="label">STT</text>
+  <text x="274" y="252" class="small">Streaming</text>
+
+  <rect x="430" y="180" width="170" height="86" rx="20" fill="url(#box)" stroke="url(#accent)" stroke-width="2"/>
+  <text x="458" y="226" class="label">Orchestrator</text>
+  <text x="459" y="252" class="small">State / Tools</text>
+
+  <rect x="630" y="180" width="150" height="86" rx="20" fill="url(#box)" stroke="url(#accent)" stroke-width="2"/>
+  <text x="676" y="230" class="label">LLM</text>
+  <text x="655" y="252" class="small">Response</text>
+
+  <rect x="810" y="180" width="150" height="86" rx="20" fill="url(#box)" stroke="url(#accent)" stroke-width="2"/>
+  <text x="858" y="230" class="label">TTS</text>
+  <text x="842" y="252" class="small">Streaming</text>
+
+  <rect x="990" y="180" width="140" height="86" rx="20" fill="url(#box)" stroke="url(#accent)" stroke-width="2"/>
+  <text x="1018" y="230" class="label">Output</text>
+  <text x="1015" y="252" class="small">WebRTC / SIP</text>
+
+  <line x1="220" y1="223" x2="248" y2="223" stroke="#7dd3fc" stroke-width="4" marker-end="url(#arrow)"/>
+  <line x1="400" y1="223" x2="428" y2="223" stroke="#7dd3fc" stroke-width="4" marker-end="url(#arrow)"/>
+  <line x1="600" y1="223" x2="628" y2="223" stroke="#7dd3fc" stroke-width="4" marker-end="url(#arrow)"/>
+  <line x1="780" y1="223" x2="808" y2="223" stroke="#7dd3fc" stroke-width="4" marker-end="url(#arrow)"/>
+  <line x1="960" y1="223" x2="988" y2="223" stroke="#7dd3fc" stroke-width="4" marker-end="url(#arrow)"/>
+
+  <rect x="130" y="340" width="940" height="160" rx="28" fill="#0f172a" stroke="#334155" stroke-width="2"/>
+  <text x="170" y="392" class="label">핵심 운영 포인트</text>
+  <text x="170" y="430" class="small">• latency budget을 STT / LLM / TTS / network로 나누기</text>
+  <text x="170" y="460" class="small">• turn taking과 interruption을 별도 정책으로 관리하기</text>
+  <text x="170" y="490" class="small">• fallback, escalation, observability를 초기에 포함하기</text>
+</svg>
+

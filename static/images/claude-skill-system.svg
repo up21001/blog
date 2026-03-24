@@ -1,0 +1,83 @@
+<svg width="800" height="450" viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg" font-family="'Malgun Gothic', sans-serif">
+  <!-- Background -->
+  <rect width="800" height="450" fill="#F9FAFB" rx="12"/>
+  <text x="400" y="38" text-anchor="middle" font-size="18" font-weight="bold" fill="#1F2937">Claude Code 스킬 시스템 — 커스텀 워크플로우 구조</text>
+
+  <!-- User Command -->
+  <rect x="30" y="65" width="155" height="65" rx="10" fill="#DBEAFE" stroke="#3B82F6" stroke-width="2"/>
+  <text x="107" y="89" text-anchor="middle" font-size="13" font-weight="bold" fill="#1E40AF">사용자 명령</text>
+  <text x="107" y="107" text-anchor="middle" font-size="11" fill="#1E40AF">/commit, /review</text>
+  <text x="107" y="121" text-anchor="middle" font-size="11" fill="#1E40AF">슬래시 커맨드</text>
+
+  <!-- Skill Registry -->
+  <rect x="290" y="55" width="220" height="85" rx="10" fill="#D1FAE5" stroke="#10B981" stroke-width="2"/>
+  <text x="400" y="80" text-anchor="middle" font-size="13" font-weight="bold" fill="#065F46">Skill Registry</text>
+  <text x="400" y="98" text-anchor="middle" font-size="11" fill="#065F46">.claude/skills/ 디렉토리</text>
+  <text x="400" y="114" text-anchor="middle" font-size="11" fill="#065F46">스킬 정의 파일 로딩</text>
+  <text x="400" y="129" text-anchor="middle" font-size="11" fill="#065F46">매칭 · 파라미터 파싱</text>
+
+  <!-- Claude Engine -->
+  <rect x="620" y="65" width="150" height="65" rx="10" fill="#FEF3C7" stroke="#F59E0B" stroke-width="2"/>
+  <text x="695" y="89" text-anchor="middle" font-size="13" font-weight="bold" fill="#92400E">Claude Engine</text>
+  <text x="695" y="107" text-anchor="middle" font-size="11" fill="#92400E">프롬프트 + 도구</text>
+  <text x="695" y="121" text-anchor="middle" font-size="11" fill="#92400E">실행 컨텍스트</text>
+
+  <!-- Arrows top -->
+  <line x1="185" y1="97" x2="288" y2="97" stroke="#3B82F6" stroke-width="2" marker-end="url(#d1)"/>
+  <line x1="510" y1="97" x2="618" y2="97" stroke="#10B981" stroke-width="2" marker-end="url(#d2)"/>
+
+  <!-- Skill types -->
+  <rect x="30" y="185" width="165" height="80" rx="8" fill="#EDE9FE" stroke="#8B5CF6" stroke-width="1.5"/>
+  <text x="112" y="207" text-anchor="middle" font-size="12" font-weight="bold" fill="#5B21B6">Prompt Skill</text>
+  <text x="112" y="225" text-anchor="middle" font-size="11" fill="#5B21B6">시스템 프롬프트</text>
+  <text x="112" y="241" text-anchor="middle" font-size="11" fill="#5B21B6">역할 · 지시사항</text>
+  <text x="112" y="257" text-anchor="middle" font-size="10" fill="#7C3AED">skill.md 파일</text>
+
+  <rect x="220" y="185" width="165" height="80" rx="8" fill="#EDE9FE" stroke="#8B5CF6" stroke-width="1.5"/>
+  <text x="302" y="207" text-anchor="middle" font-size="12" font-weight="bold" fill="#5B21B6">Tool Skill</text>
+  <text x="302" y="225" text-anchor="middle" font-size="11" fill="#5B21B6">Bash / 파일 / Git</text>
+  <text x="302" y="241" text-anchor="middle" font-size="11" fill="#5B21B6">외부 명령 실행</text>
+  <text x="302" y="257" text-anchor="middle" font-size="10" fill="#7C3AED">허용 도구 선언</text>
+
+  <rect x="410" y="185" width="165" height="80" rx="8" fill="#EDE9FE" stroke="#8B5CF6" stroke-width="1.5"/>
+  <text x="492" y="207" text-anchor="middle" font-size="12" font-weight="bold" fill="#5B21B6">Workflow Skill</text>
+  <text x="492" y="225" text-anchor="middle" font-size="11" fill="#5B21B6">다단계 체인</text>
+  <text x="492" y="241" text-anchor="middle" font-size="11" fill="#5B21B6">조건 분기 지원</text>
+  <text x="492" y="257" text-anchor="middle" font-size="10" fill="#7C3AED">서브에이전트 생성</text>
+
+  <rect x="600" y="185" width="170" height="80" rx="8" fill="#EDE9FE" stroke="#8B5CF6" stroke-width="1.5"/>
+  <text x="685" y="207" text-anchor="middle" font-size="12" font-weight="bold" fill="#5B21B6">Plugin Skill</text>
+  <text x="685" y="225" text-anchor="middle" font-size="11" fill="#5B21B6">oh-my-claudecode</text>
+  <text x="685" y="241" text-anchor="middle" font-size="11" fill="#5B21B6">외부 패키지 확장</text>
+  <text x="685" y="257" text-anchor="middle" font-size="10" fill="#7C3AED">커뮤니티 스킬</text>
+
+  <!-- Arrow from registry to skill types -->
+  <line x1="400" y1="140" x2="112" y2="183" stroke="#10B981" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#d2)"/>
+  <line x1="400" y1="140" x2="302" y2="183" stroke="#10B981" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#d2)"/>
+  <line x1="400" y1="140" x2="492" y2="183" stroke="#10B981" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#d2)"/>
+  <line x1="400" y1="140" x2="685" y2="183" stroke="#10B981" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#d2)"/>
+
+  <!-- Execution layer -->
+  <rect x="100" y="305" width="600" height="60" rx="10" fill="#FEF3C7" stroke="#F59E0B" stroke-width="2"/>
+  <text x="400" y="328" text-anchor="middle" font-size="13" font-weight="bold" fill="#92400E">실행 레이어 (Execution Layer)</text>
+  <text x="400" y="348" text-anchor="middle" font-size="11" fill="#92400E">스킬 프롬프트 + 사용자 입력 + 컨텍스트 → Claude API 호출 → 도구 실행 → 결과 반환</text>
+
+  <line x1="112" y1="265" x2="200" y2="303" stroke="#8B5CF6" stroke-width="1.5" marker-end="url(#d3)"/>
+  <line x1="302" y1="265" x2="310" y2="303" stroke="#8B5CF6" stroke-width="1.5" marker-end="url(#d3)"/>
+  <line x1="492" y1="265" x2="470" y2="303" stroke="#8B5CF6" stroke-width="1.5" marker-end="url(#d3)"/>
+  <line x1="685" y1="265" x2="600" y2="303" stroke="#8B5CF6" stroke-width="1.5" marker-end="url(#d3)"/>
+
+  <!-- Output -->
+  <rect x="240" y="390" width="320" height="45" rx="8" fill="#DBEAFE" stroke="#3B82F6" stroke-width="2"/>
+  <text x="400" y="410" text-anchor="middle" font-size="12" font-weight="bold" fill="#1E40AF">실행 결과 / 파일 수정 / 커밋 생성</text>
+  <text x="400" y="428" text-anchor="middle" font-size="11" fill="#1E40AF">사용자에게 승인 요청 또는 자동 완료</text>
+
+  <line x1="400" y1="365" x2="400" y2="388" stroke="#F59E0B" stroke-width="2" marker-end="url(#d4)"/>
+
+  <defs>
+    <marker id="d1" markerWidth="7" markerHeight="7" refX="5" refY="3" orient="auto"><path d="M0,0 L0,6 L7,3 z" fill="#3B82F6"/></marker>
+    <marker id="d2" markerWidth="7" markerHeight="7" refX="5" refY="3" orient="auto"><path d="M0,0 L0,6 L7,3 z" fill="#10B981"/></marker>
+    <marker id="d3" markerWidth="7" markerHeight="7" refX="5" refY="3" orient="auto"><path d="M0,0 L0,6 L7,3 z" fill="#8B5CF6"/></marker>
+    <marker id="d4" markerWidth="7" markerHeight="7" refX="5" refY="3" orient="auto"><path d="M0,0 L0,6 L7,3 z" fill="#F59E0B"/></marker>
+  </defs>
+</svg>

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">MCP Server Observability Workflow</title>
+  <desc id="desc">Workflow for tracing, audit logging, replay, and alerting.</desc>
+  <rect width="1200" height="630" rx="36" fill="#06131c"/>
+  <text x="64" y="88" fill="#f4f8fb" font-family="Inter, Arial, sans-serif" font-size="40" font-weight="700">MCP Server Observability</text>
+  <text x="64" y="124" fill="#9ab1c7" font-family="Inter, Arial, sans-serif" font-size="20">Workflow: trace -> audit -> replay -> alert</text>
+  <g fill="#102536" stroke="#6ee7d8" stroke-width="2">
+    <rect x="70" y="210" width="220" height="120" rx="22"/>
+    <rect x="340" y="210" width="220" height="120" rx="22"/>
+    <rect x="610" y="210" width="220" height="120" rx="22"/>
+    <rect x="880" y="210" width="250" height="120" rx="22"/>
+  </g>
+  <g fill="#f4f8fb" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="600">
+    <text x="128" y="258">Trace</text>
+    <text x="394" y="258">Audit</text>
+    <text x="646" y="258">Replay</text>
+    <text x="940" y="258">Alert</text>
+  </g>
+  <g stroke="#6ee7d8" stroke-width="5" fill="none" stroke-linecap="round">
+    <path d="M290 270 H330"/>
+    <path d="M560 270 H600"/>
+    <path d="M830 270 H870"/>
+  </g>
+  <g fill="#9ab1c7" font-family="Inter, Arial, sans-serif" font-size="18">
+    <text x="92" y="304">Follow the call path</text>
+    <text x="362" y="304">Record who did what</text>
+    <text x="629" y="304">Rebuild the failure</text>
+    <text x="928" y="304">Notify on drift</text>
+  </g>
+</svg>

@@ -1,0 +1,56 @@
+<svg width="800" height="450" viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg" font-family="'Malgun Gothic', sans-serif">
+  <rect width="800" height="450" fill="#F8FAFC" rx="12"/>
+
+  <!-- Title -->
+  <text x="400" y="42" text-anchor="middle" font-size="22" font-weight="bold" fill="#1E293B">Supabase 아키텍처 — 핵심 서비스 구성</text>
+
+  <!-- Center: Supabase Core -->
+  <rect x="300" y="170" width="200" height="110" rx="10" fill="#D1FAE5" stroke="#10B981" stroke-width="2"/>
+  <text x="400" y="218" text-anchor="middle" font-size="16" font-weight="bold" fill="#065F46">Supabase</text>
+  <text x="400" y="238" text-anchor="middle" font-size="12" fill="#047857">PostgreSQL 기반</text>
+  <text x="400" y="256" text-anchor="middle" font-size="12" fill="#047857">오픈소스 BaaS</text>
+
+  <!-- Auth -->
+  <rect x="40" y="80" width="155" height="80" rx="8" fill="#DBEAFE" stroke="#3B82F6" stroke-width="1.5"/>
+  <text x="117" y="113" text-anchor="middle" font-size="14" font-weight="bold" fill="#1D4ED8">Auth</text>
+  <text x="117" y="132" text-anchor="middle" font-size="12" fill="#1E40AF">소셜 로그인</text>
+  <text x="117" y="149" text-anchor="middle" font-size="12" fill="#1E40AF">JWT / RLS 정책</text>
+  <line x1="195" y1="120" x2="300" y2="210" stroke="#3B82F6" stroke-width="1.5" stroke-dasharray="5,3"/>
+
+  <!-- Database -->
+  <rect x="40" y="220" width="155" height="80" rx="8" fill="#FEF3C7" stroke="#F59E0B" stroke-width="1.5"/>
+  <text x="117" y="253" text-anchor="middle" font-size="14" font-weight="bold" fill="#92400E">Database</text>
+  <text x="117" y="272" text-anchor="middle" font-size="12" fill="#B45309">PostgreSQL 15</text>
+  <text x="117" y="289" text-anchor="middle" font-size="12" fill="#B45309">마이그레이션 지원</text>
+  <line x1="195" y1="260" x2="300" y2="240" stroke="#F59E0B" stroke-width="1.5" stroke-dasharray="5,3"/>
+
+  <!-- Storage -->
+  <rect x="40" y="360" width="155" height="72" rx="8" fill="#EDE9FE" stroke="#8B5CF6" stroke-width="1.5"/>
+  <text x="117" y="390" text-anchor="middle" font-size="14" font-weight="bold" fill="#5B21B6">Storage</text>
+  <text x="117" y="410" text-anchor="middle" font-size="12" fill="#6D28D9">파일 업로드 / CDN</text>
+  <text x="117" y="427" text-anchor="middle" font-size="12" fill="#6D28D9">버킷 권한 제어</text>
+  <line x1="195" y1="390" x2="300" y2="270" stroke="#8B5CF6" stroke-width="1.5" stroke-dasharray="5,3"/>
+
+  <!-- Realtime -->
+  <rect x="605" y="80" width="155" height="80" rx="8" fill="#FEE2E2" stroke="#EF4444" stroke-width="1.5"/>
+  <text x="682" y="113" text-anchor="middle" font-size="14" font-weight="bold" fill="#991B1B">Realtime</text>
+  <text x="682" y="132" text-anchor="middle" font-size="12" fill="#B91C1C">WebSocket 구독</text>
+  <text x="682" y="149" text-anchor="middle" font-size="12" fill="#B91C1C">변경 이벤트 수신</text>
+  <line x1="605" y1="120" x2="500" y2="210" stroke="#EF4444" stroke-width="1.5" stroke-dasharray="5,3"/>
+
+  <!-- Edge Functions -->
+  <rect x="605" y="220" width="155" height="80" rx="8" fill="#D1FAE5" stroke="#10B981" stroke-width="1.5"/>
+  <text x="682" y="250" text-anchor="middle" font-size="14" font-weight="bold" fill="#065F46">Edge Functions</text>
+  <text x="682" y="269" text-anchor="middle" font-size="12" fill="#047857">Deno 런타임</text>
+  <text x="682" y="286" text-anchor="middle" font-size="12" fill="#047857">서버리스 로직</text>
+  <line x1="605" y1="260" x2="500" y2="240" stroke="#10B981" stroke-width="1.5" stroke-dasharray="5,3"/>
+
+  <!-- VS Firebase label -->
+  <rect x="605" y="355" width="155" height="77" rx="8" fill="#F3F4F6" stroke="#6B7280" stroke-width="1.5"/>
+  <text x="682" y="383" text-anchor="middle" font-size="13" font-weight="bold" fill="#374151">vs Firebase</text>
+  <text x="682" y="401" text-anchor="middle" font-size="12" fill="#6B7280">SQL 쿼리 가능</text>
+  <text x="682" y="418" text-anchor="middle" font-size="12" fill="#6B7280">오픈소스 / 자체 호스팅</text>
+
+  <!-- Footer -->
+  <text x="400" y="443" text-anchor="middle" font-size="11" fill="#94A3B8">supabase.com  |  2026년 3월 기준</text>
+</svg>

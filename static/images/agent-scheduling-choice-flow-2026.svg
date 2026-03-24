@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Agent Scheduling Choice Flow</title>
+  <desc id="desc">Choice flow for choosing immediate, delayed, or approval-based scheduling.</desc>
+  <defs>
+    <style>
+      text { font-family: Arial, Helvetica, sans-serif; fill: #e5e7eb; }
+      .title { font-size: 38px; font-weight: 700; }
+      .small { font-size: 18px; fill: #cbd5e1; }
+      .box { rx: 18; ry: 18; stroke: #a78bfa; stroke-width: 2.5; fill: rgba(17, 24, 39, 0.75); }
+      .line { stroke: #c4b5fd; stroke-width: 4; marker-end: url(#arrow); }
+    </style>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 z" fill="#c4b5fd"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="630" fill="#0f172a"/>
+  <text x="60" y="82" class="title">Agent Scheduling Choice Flow</text>
+  <text x="60" y="120" class="small">Choose by urgency, dependency, and review gate</text>
+  <rect x="70" y="200" width="210" height="100" class="box"/>
+  <text x="175" y="240" text-anchor="middle" font-size="22" font-weight="700">Need now?</text>
+  <text x="175" y="268" text-anchor="middle" class="small">Immediate path</text>
+  <rect x="360" y="175" width="230" height="150" class="box"/>
+  <text x="475" y="218" text-anchor="middle" font-size="22" font-weight="700">Can wait?</text>
+  <text x="475" y="246" text-anchor="middle" class="small">Delayed execution</text>
+  <text x="475" y="274" text-anchor="middle" class="small">Windowed schedule</text>
+  <rect x="665" y="170" width="240" height="160" class="box"/>
+  <text x="785" y="214" text-anchor="middle" font-size="22" font-weight="700">Needs approval?</text>
+  <text x="785" y="242" text-anchor="middle" class="small">Human gate</text>
+  <text x="785" y="270" text-anchor="middle" class="small">Continue later</text>
+  <rect x="980" y="195" width="150" height="110" class="box"/>
+  <text x="1055" y="235" text-anchor="middle" font-size="22" font-weight="700">Run</text>
+  <text x="1055" y="262" text-anchor="middle" class="small">Worker</text>
+  <line x1="280" y1="250" x2="360" y2="250" class="line"/>
+  <line x1="590" y1="250" x2="665" y2="250" class="line"/>
+  <line x1="905" y1="250" x2="980" y2="250" class="line"/>
+  <text x="310" y="225" fill="#f9a8d4">yes</text>
+  <text x="620" y="225" fill="#f9a8d4">no</text>
+  <text x="940" y="225" fill="#f9a8d4">yes</text>
+</svg>

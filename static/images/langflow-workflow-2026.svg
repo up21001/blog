@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Langflow Workflow 2026</title>
+  <desc id="desc">Langflow visual workflow builder with components, playground, agents, and deployment.</desc>
+  <defs>
+    <linearGradient id="bg3" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fff7ed"/>
+      <stop offset="100%" stop-color="#ffedd5"/>
+    </linearGradient>
+    <filter id="shadow3" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#7c2d12" flood-opacity="0.15"/>
+    </filter>
+    <marker id="arrow3" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#c2410c"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bg3)"/>
+  <text x="70" y="88" font-size="38" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#7c2d12">Langflow Workflow</text>
+  <text x="70" y="124" font-size="20" font-family="Segoe UI, Arial, sans-serif" fill="#9a3412">Visual editor, Playground, components, and deployable flows</text>
+
+  <rect x="70" y="220" rx="24" ry="24" width="220" height="110" fill="#fff" stroke="#fdba74" filter="url(#shadow3)"/>
+  <text x="126" y="276" font-size="28" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#7c2d12">Visual Editor</text>
+  <text x="118" y="304" font-size="18" font-family="Segoe UI, Arial, sans-serif" fill="#9a3412">drag and drop</text>
+
+  <rect x="360" y="150" rx="28" ry="28" width="480" height="360" fill="#fffaf5" stroke="#fb923c" stroke-width="2" filter="url(#shadow3)"/>
+  <text x="530" y="205" font-size="34" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#7c2d12">Langflow</text>
+  <rect x="415" y="250" rx="18" ry="18" width="160" height="82" fill="#fff7ed" stroke="#fdba74"/>
+  <text x="442" y="300" font-size="24" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#c2410c">Components</text>
+  <rect x="625" y="250" rx="18" ry="18" width="160" height="82" fill="#fff7ed" stroke="#fdba74"/>
+  <text x="653" y="300" font-size="24" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#c2410c">Playground</text>
+  <rect x="415" y="370" rx="18" ry="18" width="160" height="82" fill="#fff7ed" stroke="#fdba74"/>
+  <text x="469" y="410" font-size="22" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#c2410c">Agents</text>
+  <text x="448" y="436" font-size="18" font-family="Segoe UI, Arial, sans-serif" fill="#c2410c">MCP</text>
+  <rect x="625" y="370" rx="18" ry="18" width="160" height="82" fill="#fff7ed" stroke="#fdba74"/>
+  <text x="646" y="410" font-size="22" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#c2410c">Deployment</text>
+  <text x="651" y="436" font-size="18" font-family="Segoe UI, Arial, sans-serif" fill="#c2410c">self-hosted</text>
+
+  <rect x="910" y="220" rx="24" ry="24" width="220" height="110" fill="#fff" stroke="#fdba74" filter="url(#shadow3)"/>
+  <text x="965" y="276" font-size="28" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#7c2d12">API / App</text>
+  <text x="956" y="304" font-size="18" font-family="Segoe UI, Arial, sans-serif" fill="#9a3412">serve flows</text>
+
+  <path d="M290 275 C320 275, 330 275, 360 275" fill="none" stroke="#c2410c" stroke-width="4" marker-end="url(#arrow3)"/>
+  <path d="M840 275 C875 275, 885 275, 910 275" fill="none" stroke="#c2410c" stroke-width="4" marker-end="url(#arrow3)"/>
+  <path d="M575 332 C575 344, 575 356, 575 370" fill="none" stroke="#c2410c" stroke-width="3" marker-end="url(#arrow3)"/>
+  <path d="M705 332 C705 344, 705 356, 705 370" fill="none" stroke="#c2410c" stroke-width="3" marker-end="url(#arrow3)"/>
+</svg>

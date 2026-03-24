@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#0b1020"/>
+  <text x="70" y="100" fill="#fff" font-family="Arial, sans-serif" font-size="50" font-weight="700">Architecture</text>
+  <g fill="#e5e7eb" font-family="Arial, sans-serif" font-size="20">
+    <rect x="70" y="190" width="180" height="90" rx="16" fill="#334155"/><text x="118" y="242">Traffic</text>
+    <rect x="305" y="190" width="180" height="90" rx="16" fill="#0f766e"/><text x="350" y="242">Split</text>
+    <rect x="540" y="190" width="180" height="90" rx="16" fill="#7c3aed"/><text x="582" y="242">Baseline</text>
+    <rect x="775" y="190" width="180" height="90" rx="16" fill="#b45309"/><text x="806" y="242">Candidate</text>
+    <rect x="1010" y="190" width="120" height="90" rx="16" fill="#1d4ed8"/><text x="1040" y="242">Score</text>
+  </g>
+  <g stroke="#94a3b8" stroke-width="5" fill="none">
+    <path d="M250 235h55"/><path d="M485 235h55"/><path d="M720 235h55"/><path d="M955 235h55"/>
+  </g>
+</svg>

@@ -17,3 +17,14 @@ Thumbs.db
 # Editor
 .vscode/
 .idea/
+
+# OMC state files
+.omc/
+**/.omc/
+
+# Temp scripts
+generate_content.py
+gen_missing_svgs.py
+fix_dark_svgs.py
+fix_broken_svgs.py
+redistribute_dates.py

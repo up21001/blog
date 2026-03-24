@@ -1,0 +1,59 @@
+<svg width="1400" height="820" viewBox="0 0 1400 820" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Supabase AI &amp; Vectors choice flow</title>
+  <desc id="desc">Supabase AI &amp; Vectors를 선택할지, 전용 벡터 DB나 별도 검색 스택을 선택할지 판단하는 흐름</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#07111f"/>
+      <stop offset="100%" stop-color="#132e4d"/>
+    </linearGradient>
+    <style>
+      .title{font:700 42px Arial, sans-serif; fill:#edf4ff}
+      .sub{font:400 20px Arial, sans-serif; fill:#bfd0ea}
+      .box{fill:#0f1f33; stroke:#7ab8ff; stroke-width:2.5; rx:24; ry:24}
+      .boxA{fill:#0f2b26; stroke:#85e7b7; stroke-width:2.5; rx:24; ry:24}
+      .boxB{fill:#2a1f0f; stroke:#ffcf78; stroke-width:2.5; rx:24; ry:24}
+      .label{font:700 26px Arial, sans-serif; fill:#f5f9ff}
+      .small{font:400 18px Arial, sans-serif; fill:#d5e1f6}
+      .arrow{stroke:#9bb0d9; stroke-width:5; fill:none; marker-end:url(#m)}
+      .yes{font:700 18px Arial, sans-serif; fill:#8fe6bf}
+      .no{font:700 18px Arial, sans-serif; fill:#ffd17d}
+    </style>
+    <marker id="m" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 Z" fill="#9bb0d9"/>
+    </marker>
+  </defs>
+  <rect width="1400" height="820" fill="url(#bg)"/>
+  <text x="80" y="92" class="title">Supabase AI &amp; Vectors Choice Flow</text>
+  <text x="80" y="130" class="sub">언제 Supabase로 충분한지, 언제 전용 벡터 DB가 필요한지 빠르게 판단하는 흐름</text>
+
+  <rect x="520" y="190" width="360" height="130" class="box"/>
+  <text x="700" y="240" text-anchor="middle" class="label">지금 Postgres를 쓰고 있나?</text>
+  <text x="700" y="275" text-anchor="middle" class="small">데이터, 인증, 저장소를 한 곳에서 관리</text>
+
+  <path d="M700 320 L700 390" class="arrow"/>
+  <text x="720" y="360" class="yes">Yes</text>
+
+  <rect x="140" y="420" width="360" height="150" class="boxA"/>
+  <text x="320" y="470" text-anchor="middle" class="label">Supabase AI &amp; Vectors</text>
+  <text x="320" y="505" text-anchor="middle" class="small">pgvector + hybrid search</text>
+  <text x="320" y="532" text-anchor="middle" class="small">Edge Functions + 권한 제어</text>
+
+  <rect x="520" y="420" width="360" height="150" class="box"/>
+  <text x="700" y="470" text-anchor="middle" class="label">전용 벡터 DB 검토</text>
+  <text x="700" y="505" text-anchor="middle" class="small">대규모 검색 / 특화 기능 필요</text>
+  <text x="700" y="532" text-anchor="middle" class="small">검색 튜닝과 분리 운영 우선</text>
+
+  <rect x="900" y="420" width="360" height="150" class="boxB"/>
+  <text x="1080" y="470" text-anchor="middle" class="label">별도 검색 스택</text>
+  <text x="1080" y="505" text-anchor="middle" class="small">검색 엔진 / 파이프라인 중심</text>
+  <text x="1080" y="532" text-anchor="middle" class="small">복잡한 랭킹 / 인덱싱 중심</text>
+
+  <path d="M700 320 L320 390 L320 420" class="arrow"/>
+  <path d="M700 320 L700 390 L700 420" class="arrow"/>
+  <path d="M700 320 L1080 390 L1080 420" class="arrow"/>
+  <text x="250" y="388" class="yes">작고 빠른 도입</text>
+  <text x="645" y="388" class="no">검색 전용 확장</text>
+  <text x="1040" y="388" class="no">엔진 우선 설계</text>
+
+  <text x="700" y="690" text-anchor="middle" class="small">핵심 판단 기준: 데이터 스택 통합성, 검색 품질, 운영 복잡도, 확장성</text>
+</svg>

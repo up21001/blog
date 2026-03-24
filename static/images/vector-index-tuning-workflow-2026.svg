@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Vector Index Tuning Workflow</title>
+  <desc id="desc">Workflow for tuning HNSW and vector index parameters.</desc>
+  <rect width="1200" height="630" fill="#0f172a"/>
+  <text x="64" y="74" font-size="18" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#93c5fd">VECTOR INDEX TUNING</text>
+  <text x="64" y="118" font-size="40" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#f8fafc">Tune for both recall and latency</text>
+  <text x="64" y="154" font-size="18" font-family="Segoe UI, Arial, sans-serif" fill="#cbd5e1">HNSW, ef_search, quantization, and filters move together.</text>
+
+  <rect x="70" y="235" width="180" height="110" rx="18" fill="#1e293b" stroke="#334155"/>
+  <rect x="270" y="235" width="180" height="110" rx="18" fill="#1e293b" stroke="#334155"/>
+  <rect x="470" y="235" width="180" height="110" rx="18" fill="#1e293b" stroke="#334155"/>
+  <rect x="670" y="235" width="180" height="110" rx="18" fill="#1e293b" stroke="#334155"/>
+  <rect x="870" y="235" width="260" height="110" rx="18" fill="#1e293b" stroke="#334155"/>
+  <text x="104" y="274" font-size="20" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#e2e8f0">Baseline</text>
+  <text x="104" y="302" font-size="16" font-family="Segoe UI, Arial, sans-serif" fill="#cbd5e1">measure first</text>
+  <text x="304" y="274" font-size="20" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#e2e8f0">Adjust</text>
+  <text x="304" y="302" font-size="16" font-family="Segoe UI, Arial, sans-serif" fill="#cbd5e1">HNSW + ef_search</text>
+  <text x="504" y="274" font-size="20" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#e2e8f0">Compress</text>
+  <text x="504" y="302" font-size="16" font-family="Segoe UI, Arial, sans-serif" fill="#cbd5e1">quantization</text>
+  <text x="704" y="274" font-size="20" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#e2e8f0">Filter</text>
+  <text x="704" y="302" font-size="16" font-family="Segoe UI, Arial, sans-serif" fill="#cbd5e0">query selection</text>
+  <text x="900" y="274" font-size="20" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#e2e8f0">Validate</text>
+  <text x="900" y="302" font-size="16" font-family="Segoe UI, Arial, sans-serif" fill="#cbd5e1">production sample</text>
+  <path d="M250 290 L270 290" stroke="#38bdf8" stroke-width="4" fill="none" marker-end="url(#m)"/>
+  <path d="M450 290 L470 290" stroke="#38bdf8" stroke-width="4" fill="none" marker-end="url(#m)"/>
+  <path d="M650 290 L670 290" stroke="#38bdf8" stroke-width="4" fill="none" marker-end="url(#m)"/>
+  <path d="M850 290 L870 290" stroke="#38bdf8" stroke-width="4" fill="none" marker-end="url(#m)"/>
+  <defs>
+    <marker id="m" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#38bdf8"/>
+    </marker>
+  </defs>
+</svg>

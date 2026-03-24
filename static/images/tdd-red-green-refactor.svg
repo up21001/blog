@@ -1,0 +1,68 @@
+<svg width="800" height="450" viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg" font-family="'Malgun Gothic', sans-serif">
+  <rect width="800" height="450" fill="#F9FAFB" rx="12"/>
+  <text x="400" y="38" text-anchor="middle" font-size="18" font-weight="bold" fill="#1F2937">TDD Red-Green-Refactor 사이클</text>
+
+  <!-- Central circle background -->
+  <circle cx="400" cy="230" r="120" fill="#F3F4F6" stroke="#D1D5DB" stroke-width="2"/>
+  <text x="400" y="222" text-anchor="middle" font-size="14" font-weight="bold" fill="#374151">TDD</text>
+  <text x="400" y="242" text-anchor="middle" font-size="12" fill="#6B7280">핵심 사이클</text>
+
+  <!-- RED Phase -->
+  <circle cx="400" cy="100" r="60" fill="#FEE2E2" stroke="#EF4444" stroke-width="3"/>
+  <text x="400" y="94" text-anchor="middle" font-size="16" font-weight="bold" fill="#B91C1C">RED</text>
+  <text x="400" y="112" text-anchor="middle" font-size="11" fill="#991B1B">실패하는 테스트 작성</text>
+
+  <!-- GREEN Phase -->
+  <circle cx="580" cy="310" r="60" fill="#D1FAE5" stroke="#10B981" stroke-width="3"/>
+  <text x="580" y="304" text-anchor="middle" font-size="16" font-weight="bold" fill="#065F46">GREEN</text>
+  <text x="580" y="322" text-anchor="middle" font-size="11" fill="#065F46">통과하는 코드 작성</text>
+
+  <!-- REFACTOR Phase -->
+  <circle cx="220" cy="310" r="60" fill="#DBEAFE" stroke="#3B82F6" stroke-width="3"/>
+  <text x="220" y="304" text-anchor="middle" font-size="14" font-weight="bold" fill="#1E40AF">REFACTOR</text>
+  <text x="220" y="322" text-anchor="middle" font-size="11" fill="#1E40AF">코드 개선 및 정리</text>
+
+  <!-- Arrows between phases -->
+  <!-- RED -> GREEN -->
+  <path d="M445,145 Q520,200 535,255" stroke="#EF4444" stroke-width="2.5" fill="none" marker-end="url(#arrowRed)"/>
+  <text x="510" y="195" font-size="11" fill="#B91C1C" transform="rotate(55,510,195)">최소 구현</text>
+
+  <!-- GREEN -> REFACTOR -->
+  <path d="M525,355 Q400,400 275,355" stroke="#10B981" stroke-width="2.5" fill="none" marker-end="url(#arrowGreen)"/>
+  <text x="400" y="412" text-anchor="middle" font-size="11" fill="#065F46">중복 제거 / 설계 개선</text>
+
+  <!-- REFACTOR -> RED -->
+  <path d="M170,265 Q150,180 345,140" stroke="#3B82F6" stroke-width="2.5" fill="none" marker-end="url(#arrowBlue)"/>
+  <text x="155" y="210" font-size="11" fill="#1E40AF" transform="rotate(-55,155,210)">다음 기능</text>
+
+  <!-- AI Integration box -->
+  <rect x="30" y="60" width="155" height="80" rx="8" fill="#EDE9FE" stroke="#8B5CF6" stroke-width="1.5"/>
+  <text x="107" y="83" text-anchor="middle" font-size="12" font-weight="bold" fill="#5B21B6">AI 통합 포인트</text>
+  <text x="107" y="102" text-anchor="middle" font-size="10" fill="#5B21B6">• 테스트 케이스 제안</text>
+  <text x="107" y="118" text-anchor="middle" font-size="10" fill="#5B21B6">• 엣지 케이스 발굴</text>
+  <text x="107" y="134" text-anchor="middle" font-size="10" fill="#5B21B6">• 리팩토링 아이디어</text>
+
+  <!-- Metrics box -->
+  <rect x="615" y="60" width="155" height="80" rx="8" fill="#FEF3C7" stroke="#F59E0B" stroke-width="1.5"/>
+  <text x="692" y="83" text-anchor="middle" font-size="12" font-weight="bold" fill="#92400E">TDD 효과 지표</text>
+  <text x="692" y="102" text-anchor="middle" font-size="10" fill="#92400E">• 버그 40-80% 감소</text>
+  <text x="692" y="118" text-anchor="middle" font-size="10" fill="#92400E">• 설계 품질 향상</text>
+  <text x="692" y="134" text-anchor="middle" font-size="10" fill="#92400E">• 리팩토링 자신감</text>
+
+  <!-- Bottom tips -->
+  <rect x="30" y="390" width="740" height="46" rx="8" fill="#F3F4F6" stroke="#D1D5DB" stroke-width="1"/>
+  <text x="400" y="408" text-anchor="middle" font-size="11" font-weight="bold" fill="#374151">13년 차 현장 원칙</text>
+  <text x="400" y="426" text-anchor="middle" font-size="11" fill="#6B7280">테스트는 설계 도구다 — 테스트 작성이 어렵다면 코드 설계가 잘못된 신호</text>
+
+  <defs>
+    <marker id="arrowRed" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#EF4444"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#10B981"/>
+    </marker>
+    <marker id="arrowBlue" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#3B82F6"/>
+    </marker>
+  </defs>
+</svg>

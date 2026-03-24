@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Upstash Vector choice flow 2026</title>
+  <desc id="desc">Decision flow for choosing Upstash Vector based on serverless needs, dense sparse hybrid search, and pay-as-you-go usage.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#08131b"/>
+      <stop offset="100%" stop-color="#13324a"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#12324c"/>
+      <stop offset="100%" stop-color="#0f2134"/>
+    </linearGradient>
+    <style>
+      .title { font: 700 42px/1.2 'Segoe UI', Arial, sans-serif; fill: #f4fbff; }
+      .sub { font: 400 20px/1.5 'Segoe UI', Arial, sans-serif; fill: #bfd3e6; }
+      .box { fill: url(#card); stroke: #3f6a8c; stroke-width: 2; rx: 24; }
+      .label { font: 700 22px/1.2 'Segoe UI', Arial, sans-serif; fill: #ecfeff; }
+      .text { font: 400 18px/1.5 'Segoe UI', Arial, sans-serif; fill: #c9d8e6; }
+      .yes { fill: #7ef1ff; font: 700 18px/1.2 'Segoe UI', Arial, sans-serif; }
+      .no { fill: #ffd59f; font: 700 18px/1.2 'Segoe UI', Arial, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 z" fill="#7ef1ff"/>
+    </marker>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <text x="90" y="110" class="title">Upstash Vector decision flow</text>
+  <text x="90" y="150" class="sub">Use it when serverless simplicity and hybrid search matter more than managing a cluster</text>
+
+  <rect x="100" y="240" width="380" height="170" class="box"/>
+  <text x="135" y="292" class="label">Need a vector DB fast?</text>
+  <text x="135" y="332" class="text">If the goal is to ship AI search without</text>
+  <text x="135" y="362" class="text">running infrastructure, start here.</text>
+
+  <rect x="580" y="240" width="380" height="170" class="box"/>
+  <text x="615" y="292" class="label">Prefer REST over SDK lock-in?</text>
+  <text x="615" y="332" class="text">HTTP-first integration works well for</text>
+  <text x="615" y="362" class="text">serverless and edge applications.</text>
+
+  <rect x="1060" y="240" width="380" height="170" class="box"/>
+  <text x="1095" y="292" class="label">Need dense + sparse + hybrid?</text>
+  <text x="1095" y="332" class="text">Mix semantic and keyword signals</text>
+  <text x="1095" y="362" class="text">when search relevance matters.</text>
+
+  <rect x="300" y="520" width="1000" height="170" rx="26" fill="#102940" stroke="#7ef1ff" stroke-width="2"/>
+  <text x="345" y="575" class="label">Choose Upstash Vector</text>
+  <text x="345" y="616" class="text">Best fit for pay-as-you-go usage, low ops overhead, and quick AI product experiments.</text>
+  <text x="345" y="648" class="text">If you need a full cluster or deep enterprise control, compare with Qdrant or Weaviate.</text>
+
+  <line x1="480" y1="325" x2="580" y2="325" stroke="#7ef1ff" stroke-width="5" marker-end="url(#arrow)"/>
+  <line x1="960" y1="325" x2="1060" y2="325" stroke="#7ef1ff" stroke-width="5" marker-end="url(#arrow)"/>
+  <line x1="1250" y1="410" x2="1250" y2="520" stroke="#7ef1ff" stroke-width="5" marker-end="url(#arrow)"/>
+  <text x="500" y="305" class="yes">Yes</text>
+  <text x="980" y="305" class="yes">Yes</text>
+  <text x="1200" y="305" class="yes">Yes</text>
+  <text x="235" y="475" class="no">If no</text>
+  <text x="720" y="475" class="no">If no</text>
+  <text x="1180" y="475" class="no">If no</text>
+</svg>

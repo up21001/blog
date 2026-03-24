@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#0b1020"/>
+  <text x="70" y="88" fill="#f8fafc" font-size="40" font-family="sans-serif" font-weight="700">Pruning Strategy Architecture</text>
+  <text x="70" y="128" fill="#cbd5e1" font-size="18" font-family="sans-serif">정리 계층이 있어야 기억이 시스템으로 유지됩니다</text>
+  <rect x="70" y="200" width="170" height="108" rx="18" fill="#111827" stroke="#38bdf8" stroke-width="2"/>
+  <text x="104" y="242" fill="#e2e8f0" font-size="21" font-family="sans-serif" font-weight="700">Detect</text>
+  <text x="95" y="272" fill="#cbd5e1" font-size="16" font-family="sans-serif">duplicates / stale</text>
+  <rect x="275" y="200" width="170" height="108" rx="18" fill="#111827" stroke="#34d399" stroke-width="2"/>
+  <text x="316" y="242" fill="#e2e8f0" font-size="21" font-family="sans-serif" font-weight="700">Merge</text>
+  <text x="302" y="272" fill="#cbd5e1" font-size="16" font-family="sans-serif">summaries</text>
+  <rect x="480" y="200" width="170" height="108" rx="18" fill="#111827" stroke="#f59e0b" stroke-width="2"/>
+  <text x="521" y="242" fill="#e2e8f0" font-size="21" font-family="sans-serif" font-weight="700">Compress</text>
+  <text x="512" y="272" fill="#cbd5e1" font-size="16" font-family="sans-serif">state reduction</text>
+  <rect x="685" y="200" width="170" height="108" rx="18" fill="#111827" stroke="#a78bfa" stroke-width="2"/>
+  <text x="729" y="242" fill="#e2e8f0" font-size="21" font-family="sans-serif" font-weight="700">Archive</text>
+  <text x="716" y="272" fill="#cbd5e1" font-size="16" font-family="sans-serif">cold store</text>
+  <rect x="890" y="200" width="240" height="108" rx="18" fill="#111827" stroke="#fb7185" stroke-width="2"/>
+  <text x="965" y="242" fill="#e2e8f0" font-size="21" font-family="sans-serif" font-weight="700">Delete</text>
+  <text x="934" y="272" fill="#cbd5e1" font-size="16" font-family="sans-serif">compliance / TTL</text>
+  <path d="M240 254 L275 254" stroke="#f59e0b" stroke-width="5" fill="none"/>
+  <path d="M445 254 L480 254" stroke="#f59e0b" stroke-width="5" fill="none"/>
+  <path d="M650 254 L685 254" stroke="#f59e0b" stroke-width="5" fill="none"/>
+  <path d="M855 254 L890 254" stroke="#f59e0b" stroke-width="5" fill="none"/>
+  <rect x="70" y="360" width="1060" height="150" rx="18" fill="#111827" stroke="#334155" stroke-width="2"/>
+  <text x="100" y="408" fill="#f8fafc" font-size="22" font-family="sans-serif" font-weight="700">운영 순서</text>
+  <text x="100" y="445" fill="#cbd5e1" font-size="18" font-family="sans-serif">먼저 찾고, 묶고, 압축하고, 마지막에 지웁니다.</text>
+</svg>

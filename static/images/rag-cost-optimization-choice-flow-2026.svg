@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">RAG Cost Optimization Choice Flow</title>
+  <desc id="desc">Decision flow for choosing optimization levers in RAG systems.</desc>
+  <defs>
+    <style>
+      .bg{fill:#111827}
+      .box{fill:#1f2937; stroke:#334155; stroke-width:2}
+      .box2{fill:#0f172a; stroke:#475569; stroke-width:2}
+      .title{font:700 40px Arial,sans-serif; fill:#f8fafc}
+      .sub{font:400 20px Arial,sans-serif; fill:#cbd5e1}
+      .h{font:700 21px Arial,sans-serif; fill:#e2e8f0}
+      .t{font:400 17px Arial,sans-serif; fill:#cbd5e1}
+      .yes{font:700 15px Arial,sans-serif; fill:#86efac}
+      .no{font:700 15px Arial,sans-serif; fill:#fca5a5}
+      .arrow{stroke:#94a3b8; stroke-width:4; fill:none; marker-end:url(#m)}
+    </style>
+    <marker id="m" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="630" class="bg"/>
+  <text x="64" y="74" class="title">Which lever should you tune first?</text>
+  <text x="64" y="112" class="sub">Pick the cheapest fix that improves the largest stage.</text>
+
+  <rect x="70" y="180" rx="20" ry="20" width="220" height="110" class="box"/>
+  <text x="92" y="225" class="h">Too many tokens?</text>
+  <text x="92" y="255" class="t">Compress or shorten context</text>
+  <text x="92" y="277" class="t">before changing retrieval</text>
+
+  <rect x="320" y="180" rx="20" ry="20" width="220" height="110" class="box2"/>
+  <text x="342" y="225" class="h">Bad retrieval?</text>
+  <text x="342" y="255" class="t">Tune chunking, filters,</text>
+  <text x="342" y="277" class="t">and hybrid search</text>
+
+  <rect x="570" y="180" rx="20" ry="20" width="220" height="110" class="box"/>
+  <text x="592" y="225" class="h">Reranking needed?</text>
+  <text x="592" y="255" class="t">Use only for hard queries</text>
+  <text x="592" y="277" class="t">or ambiguous matches</text>
+
+  <rect x="820" y="180" rx="20" ry="20" width="220" height="110" class="box2"/>
+  <text x="842" y="225" class="h">Storage too high?</text>
+  <text x="842" y="255" class="t">Reduce vector count,</text>
+  <text x="842" y="277" class="t">dimensionality, retention</text>
+
+  <rect x="104" y="365" rx="20" ry="20" width="260" height="130" class="box"/>
+  <text x="128" y="410" class="h">Yes</text>
+  <text x="128" y="440" class="t">fix the bottleneck first</text>
+  <text x="128" y="468" class="t">and retest on a sample set</text>
+
+  <rect x="432" y="365" rx="20" ry="20" width="260" height="130" class="box2"/>
+  <text x="456" y="410" class="h">No</text>
+  <text x="456" y="440" class="t">move to the next stage</text>
+  <text x="456" y="468" class="t">without changing everything</text>
+
+  <rect x="760" y="365" rx="20" ry="20" width="340" height="130" class="box"/>
+  <text x="784" y="410" class="h">Always measure</text>
+  <text x="784" y="440" class="t">cost / query, latency, retry rate,</text>
+  <text x="784" y="468" class="t">and answer quality together</text>
+
+  <path class="arrow" d="M 180 290 L 180 355"/>
+  <path class="arrow" d="M 430 290 L 430 355"/>
+  <path class="arrow" d="M 680 290 L 680 355"/>
+  <path class="arrow" d="M 930 290 L 930 355"/>
+  <path class="arrow" d="M 364 430 L 430 430"/>
+  <path class="arrow" d="M 692 430 L 760 430"/>
+  <text x="282" y="336" class="yes">yes</text>
+  <text x="528" y="336" class="no">no</text>
+  <text x="780" y="336" class="yes">yes</text>
+</svg>
+

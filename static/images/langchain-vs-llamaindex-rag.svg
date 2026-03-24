@@ -1,0 +1,88 @@
+<svg width="800" height="450" xmlns="http://www.w3.org/2000/svg" font-family="'Malgun Gothic', sans-serif">
+  <!-- Background -->
+  <rect width="800" height="450" fill="#F8FAFC" rx="12"/>
+  <text x="400" y="35" text-anchor="middle" font-size="18" font-weight="bold" fill="#1E293B">LangChain vs LlamaIndex — RAG 파이프라인 비교</text>
+
+  <!-- RAG Pipeline header -->
+  <text x="400" y="62" text-anchor="middle" font-size="12" fill="#6B7280">공통 RAG 파이프라인: 문서 → 청킹 → 임베딩 → 벡터DB → 검색 → LLM → 응답</text>
+
+  <!-- Pipeline flow -->
+  <defs>
+    <marker id="arr3" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#6B7280"/>
+    </marker>
+  </defs>
+
+  <rect x="20" y="75" width="90" height="36" fill="#F3F4F6" stroke="#6B7280" stroke-width="1.5" rx="5"/>
+  <text x="65" y="98" text-anchor="middle" font-size="11" fill="#374151">문서 로드</text>
+  <line x1="110" y1="93" x2="130" y2="93" stroke="#6B7280" stroke-width="1.5" marker-end="url(#arr3)"/>
+
+  <rect x="130" y="75" width="90" height="36" fill="#F3F4F6" stroke="#6B7280" stroke-width="1.5" rx="5"/>
+  <text x="175" y="98" text-anchor="middle" font-size="11" fill="#374151">청킹</text>
+  <line x1="220" y1="93" x2="240" y2="93" stroke="#6B7280" stroke-width="1.5" marker-end="url(#arr3)"/>
+
+  <rect x="240" y="75" width="90" height="36" fill="#DBEAFE" stroke="#3B82F6" stroke-width="1.5" rx="5"/>
+  <text x="285" y="98" text-anchor="middle" font-size="11" fill="#1D4ED8">임베딩</text>
+  <line x1="330" y1="93" x2="350" y2="93" stroke="#6B7280" stroke-width="1.5" marker-end="url(#arr3)"/>
+
+  <rect x="350" y="75" width="100" height="36" fill="#DBEAFE" stroke="#3B82F6" stroke-width="1.5" rx="5"/>
+  <text x="400" y="98" text-anchor="middle" font-size="11" fill="#1D4ED8">벡터 DB 저장</text>
+  <line x1="450" y1="93" x2="470" y2="93" stroke="#6B7280" stroke-width="1.5" marker-end="url(#arr3)"/>
+
+  <rect x="470" y="75" width="90" height="36" fill="#D1FAE5" stroke="#10B981" stroke-width="1.5" rx="5"/>
+  <text x="515" y="98" text-anchor="middle" font-size="11" fill="#065F46">유사 검색</text>
+  <line x1="560" y1="93" x2="580" y2="93" stroke="#6B7280" stroke-width="1.5" marker-end="url(#arr3)"/>
+
+  <rect x="580" y="75" width="90" height="36" fill="#D1FAE5" stroke="#10B981" stroke-width="1.5" rx="5"/>
+  <text x="625" y="98" text-anchor="middle" font-size="11" fill="#065F46">LLM 생성</text>
+  <line x1="670" y1="93" x2="690" y2="93" stroke="#6B7280" stroke-width="1.5" marker-end="url(#arr3)"/>
+
+  <rect x="690" y="75" width="90" height="36" fill="#D1FAE5" stroke="#10B981" stroke-width="1.5" rx="5"/>
+  <text x="735" y="98" text-anchor="middle" font-size="11" fill="#065F46">최종 응답</text>
+
+  <!-- LangChain column -->
+  <rect x="20" y="130" width="370" height="230" fill="#DBEAFE" stroke="#3B82F6" stroke-width="2" rx="10"/>
+  <text x="205" y="155" text-anchor="middle" font-size="15" fill="#1D4ED8" font-weight="bold">LangChain</text>
+  <text x="205" y="173" text-anchor="middle" font-size="11" fill="#1E40AF">범용 LLM 오케스트레이션 프레임워크</text>
+
+  <rect x="35" y="182" width="340" height="28" fill="white" stroke="#3B82F6" stroke-width="1" rx="4"/>
+  <text x="205" y="200" text-anchor="middle" font-size="11" fill="#1E40AF">강점: 다양한 체인 구성, 에이전트, 메모리</text>
+
+  <rect x="35" y="216" width="340" height="28" fill="white" stroke="#3B82F6" stroke-width="1" rx="4"/>
+  <text x="205" y="234" text-anchor="middle" font-size="11" fill="#1E40AF">200+ 통합: OpenAI, Anthropic, Pinecone 등</text>
+
+  <rect x="35" y="250" width="340" height="28" fill="white" stroke="#3B82F6" stroke-width="1" rx="4"/>
+  <text x="205" y="268" text-anchor="middle" font-size="11" fill="#1E40AF">LCEL: 선언적 파이프라인 구성 문법</text>
+
+  <rect x="35" y="284" width="340" height="28" fill="white" stroke="#3B82F6" stroke-width="1" rx="4"/>
+  <text x="205" y="302" text-anchor="middle" font-size="11" fill="#1E40AF">LangSmith: 추적·디버깅·평가 플랫폼</text>
+
+  <rect x="35" y="318" width="340" height="28" fill="#FEE2E2" stroke="#EF4444" stroke-width="1" rx="4"/>
+  <text x="205" y="336" text-anchor="middle" font-size="11" fill="#991B1B">단점: 버전 변경 잦음, 학습 곡선 가파름</text>
+
+  <!-- LlamaIndex column -->
+  <rect x="410" y="130" width="370" height="230" fill="#EDE9FE" stroke="#8B5CF6" stroke-width="2" rx="10"/>
+  <text x="595" y="155" text-anchor="middle" font-size="15" fill="#6D28D9" font-weight="bold">LlamaIndex</text>
+  <text x="595" y="173" text-anchor="middle" font-size="11" fill="#5B21B6">데이터 인덱싱 특화 RAG 프레임워크</text>
+
+  <rect x="425" y="182" width="340" height="28" fill="white" stroke="#8B5CF6" stroke-width="1" rx="4"/>
+  <text x="595" y="200" text-anchor="middle" font-size="11" fill="#5B21B6">강점: RAG 파이프라인, 문서 인덱싱 최적화</text>
+
+  <rect x="425" y="216" width="340" height="28" fill="white" stroke="#8B5CF6" stroke-width="1" rx="4"/>
+  <text x="595" y="234" text-anchor="middle" font-size="11" fill="#5B21B6">VectorStoreIndex, SummaryIndex 등 다양</text>
+
+  <rect x="425" y="250" width="340" height="28" fill="white" stroke="#8B5CF6" stroke-width="1" rx="4"/>
+  <text x="595" y="268" text-anchor="middle" font-size="11" fill="#5B21B6">QueryEngine: 직관적 질의 인터페이스</text>
+
+  <rect x="425" y="284" width="340" height="28" fill="white" stroke="#8B5CF6" stroke-width="1" rx="4"/>
+  <text x="595" y="302" text-anchor="middle" font-size="11" fill="#5B21B6">LlamaParse: PDF/문서 파싱 강력 지원</text>
+
+  <rect x="425" y="318" width="340" height="28" fill="#FEE2E2" stroke="#EF4444" stroke-width="1" rx="4"/>
+  <text x="595" y="336" text-anchor="middle" font-size="11" fill="#991B1B">단점: 범용 체인/에이전트 구성은 LangChain이 우위</text>
+
+  <!-- Bottom decision -->
+  <rect x="20" y="375" width="760" height="55" fill="#FEF3C7" stroke="#F59E0B" stroke-width="1.5" rx="8"/>
+  <text x="400" y="396" text-anchor="middle" font-size="13" fill="#92400E" font-weight="bold">선택 기준</text>
+  <text x="205" y="416" text-anchor="middle" font-size="11" fill="#78350F">LangChain: 복합 에이전트 · 다양한 LLM 교체</text>
+  <text x="595" y="416" text-anchor="middle" font-size="11" fill="#78350F">LlamaIndex: 문서 Q&amp;A · 정밀 RAG 파이프라인</text>
+</svg>

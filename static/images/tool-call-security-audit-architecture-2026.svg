@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Tool Call Security Audit architecture">
+  <defs>
+    <linearGradient id="bg9" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#111827"/>
+      <stop offset="100%" stop-color="#1e1b4b"/>
+    </linearGradient>
+    <style>
+      .t{font-family:Arial,Helvetica,sans-serif;fill:#e5e7eb}
+      .h{font-size:38px;font-weight:700}
+      .s{font-size:22px;fill:#cbd5e1}
+      .b{font-size:19px;font-weight:700}
+      .n{font-size:17px;fill:#cbd5e1}
+    </style>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg9)"/>
+  <text x="72" y="76" class="t h">Tool Call Security Audit Architecture</text>
+  <text x="72" y="114" class="t s">정책, 샌드박스, 감사 로그를 연결한 보안 구조</text>
+  <g transform="translate(72 170)">
+    <rect width="250" height="130" rx="18" fill="#1e293b" stroke="#38bdf8"/>
+    <text x="28" y="44" class="t b">Policy Layer</text>
+    <text x="28" y="78" class="t n">권한과 규칙</text>
+    <rect x="275" width="250" height="130" rx="18" fill="#1e293b" stroke="#38bdf8"/>
+    <text x="300" y="44" class="t b">Sandbox Layer</text>
+    <text x="300" y="78" class="t n">격리 실행</text>
+    <rect x="550" width="250" height="130" rx="18" fill="#1e293b" stroke="#38bdf8"/>
+    <text x="574" y="44" class="t b">Audit Layer</text>
+    <text x="574" y="78" class="t n">증거 저장</text>
+    <rect x="825" width="303" height="130" rx="18" fill="#1e293b" stroke="#38bdf8"/>
+    <text x="860" y="44" class="t b">Incident Response</text>
+    <text x="860" y="78" class="t n">차단, 분석, 복구</text>
+    <path d="M322 65H267" stroke="#67e8f9" stroke-width="5" marker-end="url(#c3)"/>
+    <path d="M597 65H542" stroke="#67e8f9" stroke-width="5" marker-end="url(#c3)"/>
+    <path d="M872 65H817" stroke="#67e8f9" stroke-width="5" marker-end="url(#c3)"/>
+  </g>
+  <g transform="translate(72 360)">
+    <rect width="1056" height="170" rx="22" fill="#0f172a" stroke="#0f766e"/>
+    <text x="34" y="48" class="t b">설계 원칙</text>
+    <text x="34" y="86" class="t n">차단만으로 끝내지 말고, 샌드박스와 감사 로그를 함께 두어 복구 가능성을 확보합니다.</text>
+    <text x="34" y="120" class="t n">정책 위반 증거를 남겨야 이후 검토와 재발 방지가 가능합니다.</text>
+  </g>
+  <defs>
+    <marker id="c3" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 Z" fill="#67e8f9"/>
+    </marker>
+  </defs>
+</svg>
+

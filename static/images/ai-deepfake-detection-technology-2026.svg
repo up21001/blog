@@ -1,0 +1,82 @@
+<svg width="800" height="450" viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg" font-family="'Malgun Gothic', sans-serif">
+  <!-- Background -->
+  <rect width="800" height="450" fill="#F9FAFB" rx="12"/>
+  <text x="400" y="38" text-anchor="middle" font-size="18" font-weight="bold" fill="#1F2937">딥페이크 생성 vs 탐지 기술 현황 2026</text>
+
+  <!-- Generation side -->
+  <rect x="30" y="58" width="350" height="50" rx="8" fill="#FEE2E2" stroke="#EF4444" stroke-width="2"/>
+  <text x="205" y="89" text-anchor="middle" font-size="14" font-weight="bold" fill="#991B1B">딥페이크 생성 기술</text>
+
+  <rect x="35" y="120" width="160" height="70" rx="8" fill="#FEE2E2" stroke="#EF4444" stroke-width="1.5"/>
+  <text x="115" y="143" text-anchor="middle" font-size="11" font-weight="bold" fill="#991B1B">얼굴 교체</text>
+  <text x="115" y="160" text-anchor="middle" font-size="10" fill="#7F1D1D">GAN 기반 Face Swap</text>
+  <text x="115" y="176" text-anchor="middle" font-size="10" fill="#7F1D1D">DeepFaceLab, Roop</text>
+
+  <rect x="210" y="120" width="160" height="70" rx="8" fill="#FEE2E2" stroke="#EF4444" stroke-width="1.5"/>
+  <text x="290" y="143" text-anchor="middle" font-size="11" font-weight="bold" fill="#991B1B">음성 복제</text>
+  <text x="290" y="160" text-anchor="middle" font-size="10" fill="#7F1D1D">3초 샘플로 목소리 복제</text>
+  <text x="290" y="176" text-anchor="middle" font-size="10" fill="#7F1D1D">ElevenLabs, XTTS</text>
+
+  <rect x="35" y="205" width="160" height="70" rx="8" fill="#FEE2E2" stroke="#EF4444" stroke-width="1.5"/>
+  <text x="115" y="228" text-anchor="middle" font-size="11" font-weight="bold" fill="#991B1B">비디오 생성</text>
+  <text x="115" y="245" text-anchor="middle" font-size="10" fill="#7F1D1D">텍스트→영상 (Sora급)</text>
+  <text x="115" y="261" text-anchor="middle" font-size="10" fill="#7F1D1D">Kling, Runway Gen-3</text>
+
+  <rect x="210" y="205" width="160" height="70" rx="8" fill="#FEE2E2" stroke="#EF4444" stroke-width="1.5"/>
+  <text x="290" y="228" text-anchor="middle" font-size="11" font-weight="bold" fill="#991B1B">실시간 딥페이크</text>
+  <text x="290" y="245" text-anchor="middle" font-size="10" fill="#7F1D1D">영상통화 실시간 교체</text>
+  <text x="290" y="261" text-anchor="middle" font-size="10" fill="#7F1D1D">DeepFaceLive</text>
+
+  <!-- VS divider -->
+  <line x1="400" y1="58" x2="400" y2="420" stroke="#9CA3AF" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <rect x="373" y="215" width="54" height="30" rx="15" fill="#374151"/>
+  <text x="400" y="235" text-anchor="middle" font-size="13" font-weight="bold" fill="white">VS</text>
+
+  <!-- Detection side -->
+  <rect x="420" y="58" width="350" height="50" rx="8" fill="#D1FAE5" stroke="#10B981" stroke-width="2"/>
+  <text x="595" y="89" text-anchor="middle" font-size="14" font-weight="bold" fill="#065F46">딥페이크 탐지 기술</text>
+
+  <rect x="425" y="120" width="160" height="70" rx="8" fill="#D1FAE5" stroke="#10B981" stroke-width="1.5"/>
+  <text x="505" y="143" text-anchor="middle" font-size="11" font-weight="bold" fill="#065F46">시각적 분석</text>
+  <text x="505" y="160" text-anchor="middle" font-size="10" fill="#064E3B">눈 깜빡임 패턴 이상</text>
+  <text x="505" y="176" text-anchor="middle" font-size="10" fill="#064E3B">피부 텍스처·조명 불일치</text>
+
+  <rect x="600" y="120" width="165" height="70" rx="8" fill="#D1FAE5" stroke="#10B981" stroke-width="1.5"/>
+  <text x="683" y="143" text-anchor="middle" font-size="11" font-weight="bold" fill="#065F46">AI 탐지 모델</text>
+  <text x="683" y="160" text-anchor="middle" font-size="10" fill="#064E3B">FaceForensics++</text>
+  <text x="683" y="176" text-anchor="middle" font-size="10" fill="#064E3B">Microsoft DMFD</text>
+
+  <rect x="425" y="205" width="160" height="70" rx="8" fill="#D1FAE5" stroke="#10B981" stroke-width="1.5"/>
+  <text x="505" y="228" text-anchor="middle" font-size="11" font-weight="bold" fill="#065F46">C2PA 콘텐츠 인증</text>
+  <text x="505" y="245" text-anchor="middle" font-size="10" fill="#064E3B">출처 메타데이터 서명</text>
+  <text x="505" y="261" text-anchor="middle" font-size="10" fill="#064E3B">Adobe CAI 표준</text>
+
+  <rect x="600" y="205" width="165" height="70" rx="8" fill="#D1FAE5" stroke="#10B981" stroke-width="1.5"/>
+  <text x="683" y="228" text-anchor="middle" font-size="11" font-weight="bold" fill="#065F46">워터마킹</text>
+  <text x="683" y="245" text-anchor="middle" font-size="10" fill="#064E3B">생성 시 불가시 워터마크</text>
+  <text x="683" y="261" text-anchor="middle" font-size="10" fill="#064E3B">SynthID (Google)</text>
+
+  <!-- Status bar -->
+  <rect x="30" y="290" width="740" height="45" rx="8" fill="#FEF3C7" stroke="#F59E0B" stroke-width="1.5"/>
+  <text x="400" y="310" text-anchor="middle" font-size="12" font-weight="bold" fill="#92400E">현재 상황: 탐지 정확도 약 80~90% — 하지만 새 모델 등장 시마다 탐지율 급락 (군비 경쟁 구도)</text>
+  <text x="400" y="328" text-anchor="middle" font-size="10" fill="#78350F">탐지 기술만으로는 불완전 → C2PA 표준 + 미디어 리터러시 + 법적 규제의 다층 방어 필요</text>
+
+  <!-- Regulation row -->
+  <rect x="30" y="348" width="235" height="55" rx="8" fill="#EDE9FE" stroke="#8B5CF6" stroke-width="1.5"/>
+  <text x="148" y="368" text-anchor="middle" font-size="11" font-weight="bold" fill="#5B21B6">EU AI Act (2024)</text>
+  <text x="148" y="384" text-anchor="middle" font-size="10" fill="#4C1D95">딥페이크 고지 의무화</text>
+  <text x="148" y="398" text-anchor="middle" font-size="10" fill="#4C1D95">위반 시 최대 3% 과징금</text>
+
+  <rect x="283" y="348" width="234" height="55" rx="8" fill="#EDE9FE" stroke="#8B5CF6" stroke-width="1.5"/>
+  <text x="400" y="368" text-anchor="middle" font-size="11" font-weight="bold" fill="#5B21B6">미국 각 주 법률</text>
+  <text x="400" y="384" text-anchor="middle" font-size="10" fill="#4C1D95">선거·포르노 딥페이크 금지</text>
+  <text x="400" y="398" text-anchor="middle" font-size="10" fill="#4C1D95">NO FAKES Act 추진 중</text>
+
+  <rect x="535" y="348" width="235" height="55" rx="8" fill="#EDE9FE" stroke="#8B5CF6" stroke-width="1.5"/>
+  <text x="653" y="368" text-anchor="middle" font-size="11" font-weight="bold" fill="#5B21B6">한국 법률</text>
+  <text x="653" y="384" text-anchor="middle" font-size="10" fill="#4C1D95">성적 딥페이크 처벌 강화</text>
+  <text x="653" y="398" text-anchor="middle" font-size="10" fill="#4C1D95">선거 딥페이크 공직선거법</text>
+
+  <!-- Footer -->
+  <text x="400" y="435" text-anchor="middle" font-size="10" fill="#9CA3AF">기술 현황 기준: 2026년 3월 | 탐지 정확도는 모델·데이터셋에 따라 상이</text>
+</svg>

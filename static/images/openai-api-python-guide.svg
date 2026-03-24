@@ -1,0 +1,79 @@
+<svg width="800" height="450" xmlns="http://www.w3.org/2000/svg" font-family="'Malgun Gothic', sans-serif">
+  <!-- Background -->
+  <rect width="800" height="450" fill="#F8FAFC" rx="12"/>
+  <text x="400" y="38" text-anchor="middle" font-size="18" font-weight="bold" fill="#1E293B">OpenAI API Python 앱 개발 플로우</text>
+
+  <!-- Step 1 -->
+  <rect x="30" y="65" width="140" height="80" fill="#DBEAFE" stroke="#3B82F6" stroke-width="2" rx="8"/>
+  <text x="100" y="93" text-anchor="middle" font-size="13" fill="#1D4ED8" font-weight="bold">1. API 키 발급</text>
+  <text x="100" y="112" text-anchor="middle" font-size="11" fill="#1E40AF">platform.openai.com</text>
+  <text x="100" y="128" text-anchor="middle" font-size="11" fill="#1E40AF">환경변수 설정</text>
+
+  <!-- Arrow -->
+  <line x1="170" y1="105" x2="200" y2="105" stroke="#6B7280" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Step 2 -->
+  <rect x="200" y="65" width="140" height="80" fill="#D1FAE5" stroke="#10B981" stroke-width="2" rx="8"/>
+  <text x="270" y="93" text-anchor="middle" font-size="13" fill="#065F46" font-weight="bold">2. 기본 호출</text>
+  <text x="270" y="112" text-anchor="middle" font-size="11" fill="#064E3B">chat.completions</text>
+  <text x="270" y="128" text-anchor="middle" font-size="11" fill="#064E3B">.create()</text>
+
+  <!-- Arrow -->
+  <line x1="340" y1="105" x2="370" y2="105" stroke="#6B7280" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Step 3 -->
+  <rect x="370" y="65" width="140" height="80" fill="#FEF3C7" stroke="#F59E0B" stroke-width="2" rx="8"/>
+  <text x="440" y="93" text-anchor="middle" font-size="13" fill="#92400E" font-weight="bold">3. 스트리밍</text>
+  <text x="440" y="112" text-anchor="middle" font-size="11" fill="#78350F">stream=True</text>
+  <text x="440" y="128" text-anchor="middle" font-size="11" fill="#78350F">실시간 응답</text>
+
+  <!-- Arrow -->
+  <line x1="510" y1="105" x2="540" y2="105" stroke="#6B7280" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Step 4 -->
+  <rect x="540" y="65" width="140" height="80" fill="#EDE9FE" stroke="#8B5CF6" stroke-width="2" rx="8"/>
+  <text x="610" y="86" text-anchor="middle" font-size="13" fill="#6D28D9" font-weight="bold">4. Function</text>
+  <text x="610" y="104" text-anchor="middle" font-size="13" fill="#6D28D9" font-weight="bold">Calling</text>
+  <text x="610" y="122" text-anchor="middle" font-size="11" fill="#5B21B6">tools 파라미터</text>
+  <text x="610" y="138" text-anchor="middle" font-size="11" fill="#5B21B6">외부 API 연동</text>
+
+  <!-- Arrow marker -->
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#6B7280"/>
+    </marker>
+  </defs>
+
+  <!-- Code block area -->
+  <rect x="30" y="165" width="350" height="200" fill="#1E293B" rx="8"/>
+  <text x="50" y="190" font-size="11" fill="#94A3B8" font-family="Consolas, monospace"># 기본 API 호출 예시</text>
+  <text x="50" y="210" font-size="11" fill="#7DD3FC" font-family="Consolas, monospace">from openai import OpenAI</text>
+  <text x="50" y="228" font-size="11" fill="#94A3B8" font-family="Consolas, monospace"> </text>
+  <text x="50" y="246" font-size="11" fill="#7DD3FC" font-family="Consolas, monospace">client = OpenAI()</text>
+  <text x="50" y="264" font-size="11" fill="#94A3B8" font-family="Consolas, monospace">response = client.chat.completions.create(</text>
+  <text x="50" y="282" font-size="11" fill="#86EFAC" font-family="Consolas, monospace">    model="gpt-4o",</text>
+  <text x="50" y="300" font-size="11" fill="#FCA5A5" font-family="Consolas, monospace">    messages=[</text>
+  <text x="50" y="318" font-size="11" fill="#FDE68A" font-family="Consolas, monospace">        {"role": "user", "content": "..."}]</text>
+  <text x="50" y="336" font-size="11" fill="#94A3B8" font-family="Consolas, monospace">)</text>
+
+  <!-- Pricing box -->
+  <rect x="410" y="165" width="360" height="200" fill="#FEF3C7" stroke="#F59E0B" stroke-width="1.5" rx="8"/>
+  <text x="590" y="192" text-anchor="middle" font-size="14" fill="#92400E" font-weight="bold">비용 관리 핵심 포인트</text>
+
+  <rect x="425" y="205" width="330" height="32" fill="#FDE68A" rx="4"/>
+  <text x="590" y="226" text-anchor="middle" font-size="12" fill="#78350F">gpt-4o-mini: 입력 $0.15 / 출력 $0.60 (1M)</text>
+
+  <rect x="425" y="243" width="330" height="32" fill="#FDE68A" rx="4"/>
+  <text x="590" y="264" text-anchor="middle" font-size="12" fill="#78350F">gpt-4o: 입력 $2.50 / 출력 $10.00 (1M)</text>
+
+  <rect x="425" y="281" width="330" height="32" fill="#FDE68A" rx="4"/>
+  <text x="590" y="302" text-anchor="middle" font-size="12" fill="#78350F">max_tokens 설정으로 출력 비용 제어</text>
+
+  <rect x="425" y="319" width="330" height="32" fill="#FDE68A" rx="4"/>
+  <text x="590" y="340" text-anchor="middle" font-size="12" fill="#78350F">Usage Limits로 월 한도 설정 필수</text>
+
+  <!-- Bottom bar -->
+  <rect x="30" y="385" width="740" height="45" fill="#DBEAFE" stroke="#3B82F6" stroke-width="1" rx="8"/>
+  <text x="400" y="407" text-anchor="middle" font-size="12" fill="#1D4ED8" font-weight="bold">모델 선택 기준: 개발/테스트 → gpt-4o-mini | 프로덕션 → gpt-4o | 추론 → o3-mini</text>
+  <text x="400" y="423" text-anchor="middle" font-size="11" fill="#1E40AF">tiktoken 라이브러리로 사전 토큰 수 계산 후 비용 예측 권장</text>
+</svg>

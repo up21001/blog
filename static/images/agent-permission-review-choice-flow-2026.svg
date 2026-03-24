@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Agent Permission Review choice flow">
+  <defs>
+    <linearGradient id="bg5" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+    <style>
+      .t{font-family:Arial,Helvetica,sans-serif;fill:#e5e7eb}
+      .h{font-size:38px;font-weight:700}
+      .s{font-size:22px;fill:#cbd5e1}
+      .b{font-size:20px;font-weight:700}
+      .n{font-size:18px;fill:#cbd5e1}
+    </style>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg5)"/>
+  <text x="72" y="76" class="t h">Agent Permission Review Choice Flow</text>
+  <text x="72" y="114" class="t s">권한 유지, 축소, 회수, 승격을 고르는 흐름</text>
+  <g transform="translate(72 170)">
+    <rect width="240" height="130" rx="20" fill="#1f2937" stroke="#6b7280"/>
+    <text x="28" y="46" class="t b">실사용 있음?</text>
+    <text x="28" y="80" class="t n">로그와 비교</text>
+    <rect x="295" width="240" height="130" rx="20" fill="#1f2937" stroke="#6b7280"/>
+    <text x="322" y="46" class="t b">저위험?</text>
+    <text x="322" y="80" class="t n">자동 회수 가능</text>
+    <rect x="590" width="240" height="130" rx="20" fill="#1f2937" stroke="#6b7280"/>
+    <text x="618" y="46" class="t b">고위험?</text>
+    <text x="618" y="80" class="t n">승인 전용</text>
+    <rect x="885" width="240" height="130" rx="20" fill="#1f2937" stroke="#6b7280"/>
+    <text x="910" y="46" class="t b">정책 반영</text>
+    <text x="910" y="80" class="t n">권한 업데이트</text>
+    <path d="M240 65H288" stroke="#fbbf24" stroke-width="5" marker-end="url(#b2)"/>
+    <path d="M535 65H583" stroke="#fbbf24" stroke-width="5" marker-end="url(#b2)"/>
+    <path d="M830 65H878" stroke="#fbbf24" stroke-width="5" marker-end="url(#b2)"/>
+  </g>
+  <g transform="translate(72 360)">
+    <rect width="1056" height="170" rx="22" fill="#111827" stroke="#78350f"/>
+    <text x="34" y="48" class="t b">선택 기준</text>
+    <text x="34" y="86" class="t n">실사용이 없는 권한은 회수, 고위험 권한은 승인, 필요한 권한만 유지합니다.</text>
+    <text x="34" y="120" class="t n">정기 검토와 이벤트 검토를 함께 두면 권한 누적을 막기 쉽습니다.</text>
+  </g>
+  <defs>
+    <marker id="b2" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 Z" fill="#fbbf24"/>
+    </marker>
+  </defs>
+</svg>
+

@@ -1,0 +1,56 @@
+<svg width="800" height="450" viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg" font-family="'Malgun Gothic', sans-serif">
+  <rect width="800" height="450" fill="#FAFAFA" rx="12"/>
+  <text x="400" y="40" text-anchor="middle" font-size="20" font-weight="bold" fill="#1E293B">Pandas vs Polars — 2026 성능 비교</text>
+
+  <!-- Legend -->
+  <rect x="200" y="60" width="16" height="16" fill="#3B82F6" rx="3"/>
+  <text x="222" y="73" font-size="13" fill="#374151">Pandas</text>
+  <rect x="300" y="60" width="16" height="16" fill="#10B981" rx="3"/>
+  <text x="322" y="73" font-size="13" fill="#374151">Polars</text>
+
+  <!-- Bar chart background -->
+  <rect x="60" y="90" width="680" height="280" fill="#F9FAFB" rx="8" stroke="#E5E7EB"/>
+
+  <!-- Y axis labels -->
+  <text x="50" y="355" text-anchor="end" font-size="11" fill="#6B7280">0s</text>
+  <text x="50" y="285" text-anchor="end" font-size="11" fill="#6B7280">5s</text>
+  <text x="50" y="215" text-anchor="end" font-size="11" fill="#6B7280">10s</text>
+  <text x="50" y="145" text-anchor="end" font-size="11" fill="#6B7280">15s</text>
+  <line x1="60" y1="350" x2="740" y2="350" stroke="#E5E7EB" stroke-width="1"/>
+  <line x1="60" y1="280" x2="740" y2="280" stroke="#E5E7EB" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="60" y1="210" x2="740" y2="210" stroke="#E5E7EB" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="60" y1="140" x2="740" y2="140" stroke="#E5E7EB" stroke-width="1" stroke-dasharray="4,3"/>
+
+  <!-- Group 1: CSV Read 1GB -->
+  <rect x="100" y="210" width="50" height="140" fill="#3B82F6" rx="4" opacity="0.85"/>
+  <rect x="158" y="302" width="50" height="48" fill="#10B981" rx="4" opacity="0.85"/>
+  <text x="154" y="375" text-anchor="middle" font-size="11" fill="#374151">CSV 읽기</text>
+  <text x="125" y="205" text-anchor="middle" font-size="10" fill="#1E40AF">14.2s</text>
+  <text x="183" y="297" text-anchor="middle" font-size="10" fill="#065F46">3.4s</text>
+
+  <!-- Group 2: GroupBy -->
+  <rect x="260" y="238" width="50" height="112" fill="#3B82F6" rx="4" opacity="0.85"/>
+  <rect x="318" y="322" width="50" height="28" fill="#10B981" rx="4" opacity="0.85"/>
+  <text x="314" y="375" text-anchor="middle" font-size="11" fill="#374151">GroupBy</text>
+  <text x="285" y="233" text-anchor="middle" font-size="10" fill="#1E40AF">11.2s</text>
+  <text x="343" y="317" text-anchor="middle" font-size="10" fill="#065F46">2.1s</text>
+
+  <!-- Group 3: Join -->
+  <rect x="420" y="266" width="50" height="84" fill="#3B82F6" rx="4" opacity="0.85"/>
+  <rect x="478" y="330" width="50" height="20" fill="#10B981" rx="4" opacity="0.85"/>
+  <text x="474" y="375" text-anchor="middle" font-size="11" fill="#374151">조인</text>
+  <text x="445" y="261" text-anchor="middle" font-size="10" fill="#1E40AF">8.4s</text>
+  <text x="503" y="325" text-anchor="middle" font-size="10" fill="#065F46">1.6s</text>
+
+  <!-- Group 4: Filter -->
+  <rect x="580" y="294" width="50" height="56" fill="#3B82F6" rx="4" opacity="0.85"/>
+  <rect x="638" y="336" width="50" height="14" fill="#10B981" rx="4" opacity="0.85"/>
+  <text x="634" y="375" text-anchor="middle" font-size="11" fill="#374151">필터링</text>
+  <text x="605" y="289" text-anchor="middle" font-size="10" fill="#1E40AF">5.6s</text>
+  <text x="663" y="331" text-anchor="middle" font-size="10" fill="#065F46">0.9s</text>
+
+  <!-- Bottom info -->
+  <rect x="60" y="390" width="680" height="44" fill="#EFF6FF" rx="8" stroke="#BFDBFE"/>
+  <text x="400" y="408" text-anchor="middle" font-size="12" fill="#1D4ED8">테스트 환경: 1GB CSV, 1000만 행, Python 3.12, M2 MacBook Pro 16GB</text>
+  <text x="400" y="426" text-anchor="middle" font-size="12" fill="#1D4ED8">Polars는 병렬 처리 + Lazy 실행으로 평균 4~8배 빠른 성능 달성</text>
+</svg>

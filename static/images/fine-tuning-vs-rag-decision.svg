@@ -1,0 +1,76 @@
+<svg width="800" height="450" viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg" font-family="'Malgun Gothic', sans-serif">
+  <rect width="800" height="450" fill="#F9FAFB" rx="12"/>
+  <text x="400" y="36" text-anchor="middle" font-size="18" font-weight="bold" fill="#1E293B">Fine-tuning vs RAG — 선택 결정 트리</text>
+
+  <!-- Start Node -->
+  <rect x="310" y="55" width="180" height="50" rx="25" fill="#374151" stroke="#1F2937" stroke-width="2"/>
+  <text x="400" y="85" text-anchor="middle" font-size="13" font-weight="bold" fill="white">LLM 커스터마이징 필요</text>
+
+  <!-- Q1 -->
+  <line x1="400" y1="105" x2="400" y2="130" stroke="#6B7280" stroke-width="2" marker-end="url(#a)"/>
+  <rect x="260" y="130" width="280" height="50" rx="8" fill="#FEF3C7" stroke="#F59E0B" stroke-width="2"/>
+  <text x="400" y="152" text-anchor="middle" font-size="12" font-weight="bold" fill="#92400E">최신/자주 바뀌는 데이터가 필요한가?</text>
+  <text x="400" y="170" text-anchor="middle" font-size="11" fill="#92400E">(실시간 문서, DB, 사내 지식)</text>
+
+  <!-- Yes -> RAG -->
+  <line x1="400" y1="180" x2="400" y2="200" stroke="#10B981" stroke-width="2" marker-end="url(#a)"/>
+  <text x="413" y="195" font-size="11" fill="#10B981" font-weight="bold">YES</text>
+
+  <rect x="270" y="200" width="260" height="45" rx="8" fill="#D1FAE5" stroke="#10B981" stroke-width="2.5"/>
+  <text x="400" y="228" text-anchor="middle" font-size="14" font-weight="bold" fill="#065F46">RAG 선택</text>
+
+  <!-- No branch -->
+  <line x1="540" y1="155" x2="620" y2="155" stroke="#EF4444" stroke-width="2" marker-end="url(#a)"/>
+  <text x="555" y="148" font-size="11" fill="#EF4444" font-weight="bold">NO</text>
+
+  <!-- Q2 -->
+  <rect x="620" y="130" width="155" height="50" rx="8" fill="#FEF3C7" stroke="#F59E0B" stroke-width="2"/>
+  <text x="698" y="152" text-anchor="middle" font-size="11" font-weight="bold" fill="#92400E">특정 스타일/형식</text>
+  <text x="698" y="168" text-anchor="middle" font-size="11" fill="#92400E">학습이 필요한가?</text>
+
+  <!-- Yes Fine-tune -->
+  <line x1="698" y1="180" x2="698" y2="200" stroke="#3B82F6" stroke-width="2" marker-end="url(#a)"/>
+  <text x="711" y="195" font-size="11" fill="#3B82F6" font-weight="bold">YES</text>
+  <rect x="618" y="200" width="160" height="45" rx="8" fill="#DBEAFE" stroke="#3B82F6" stroke-width="2.5"/>
+  <text x="698" y="228" text-anchor="middle" font-size="14" font-weight="bold" fill="#1E40AF">Fine-tuning 선택</text>
+
+  <!-- Comparison Table -->
+  <text x="400" y="278" text-anchor="middle" font-size="14" font-weight="bold" fill="#374151">— 상세 비교 —</text>
+
+  <!-- Table Header -->
+  <rect x="30" y="290" width="200" height="35" rx="4" fill="#E5E7EB" stroke="#9CA3AF"/>
+  <text x="130" y="312" text-anchor="middle" font-size="12" font-weight="bold" fill="#374151">비교 항목</text>
+  <rect x="234" y="290" width="240" height="35" rx="4" fill="#DBEAFE" stroke="#3B82F6"/>
+  <text x="354" y="312" text-anchor="middle" font-size="13" font-weight="bold" fill="#1E40AF">Fine-tuning</text>
+  <rect x="478" y="290" width="292" height="35" rx="4" fill="#D1FAE5" stroke="#10B981"/>
+  <text x="624" y="312" text-anchor="middle" font-size="13" font-weight="bold" fill="#065F46">RAG</text>
+
+  <!-- Rows -->
+  <rect x="30" y="328" width="200" height="30" rx="4" fill="#F9FAFB" stroke="#E5E7EB"/>
+  <text x="130" y="348" text-anchor="middle" font-size="11" fill="#374151">데이터 최신성</text>
+  <rect x="234" y="328" width="240" height="30" rx="4" fill="#EFF6FF" stroke="#BFDBFE"/>
+  <text x="354" y="348" text-anchor="middle" font-size="11" fill="#1E40AF">정적 (재학습 필요)</text>
+  <rect x="478" y="328" width="292" height="30" rx="4" fill="#ECFDF5" stroke="#A7F3D0"/>
+  <text x="624" y="348" text-anchor="middle" font-size="11" fill="#065F46">실시간 업데이트 가능</text>
+
+  <rect x="30" y="361" width="200" height="30" rx="4" fill="#F9FAFB" stroke="#E5E7EB"/>
+  <text x="130" y="381" text-anchor="middle" font-size="11" fill="#374151">초기 비용</text>
+  <rect x="234" y="361" width="240" height="30" rx="4" fill="#EFF6FF" stroke="#BFDBFE"/>
+  <text x="354" y="381" text-anchor="middle" font-size="11" fill="#1E40AF">높음 (GPU 학습)</text>
+  <rect x="478" y="361" width="292" height="30" rx="4" fill="#ECFDF5" stroke="#A7F3D0"/>
+  <text x="624" y="381" text-anchor="middle" font-size="11" fill="#065F46">낮음 (인덱싱만)</text>
+
+  <rect x="30" y="394" width="200" height="30" rx="4" fill="#F9FAFB" stroke="#E5E7EB"/>
+  <text x="130" y="414" text-anchor="middle" font-size="11" fill="#374151">할루시네이션</text>
+  <rect x="234" y="394" width="240" height="30" rx="4" fill="#EFF6FF" stroke="#BFDBFE"/>
+  <text x="354" y="414" text-anchor="middle" font-size="11" fill="#1E40AF">여전히 발생 가능</text>
+  <rect x="478" y="394" width="292" height="30" rx="4" fill="#ECFDF5" stroke="#A7F3D0"/>
+  <text x="624" y="414" text-anchor="middle" font-size="11" fill="#065F46">출처 기반으로 낮음</text>
+
+  <defs>
+    <marker id="a" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#6B7280"/>
+    </marker>
+  </defs>
+  <text x="400" y="443" text-anchor="middle" font-size="10" fill="#9CA3AF">Fine-tuning은 스타일/도메인 지식 주입, RAG는 사실 기반 검색에 적합</text>
+</svg>

@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1d4ed8"/>
+      <stop offset="100%" stop-color="#0ea5e9"/>
+    </linearGradient>
+    <style>
+      .title { fill:#f8fafc; font:700 40px Arial, sans-serif; }
+      .subtitle { fill:#cbd5e1; font:400 18px Arial, sans-serif; }
+      .label { fill:#0f172a; font:700 20px Arial, sans-serif; }
+      .small { fill:#475569; font:400 15px Arial, sans-serif; }
+      .box { fill:#f8fafc; stroke:#cbd5e1; stroke-width:2; rx:18; }
+      .accent { fill:#dbeafe; stroke:#60a5fa; stroke-width:2; rx:18; }
+      .line { stroke:#93c5fd; stroke-width:4; fill:none; marker-end:url(#arrow); }
+    </style>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#93c5fd"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect x="58" y="54" width="1084" height="522" rx="28" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.08)"/>
+  <text x="86" y="120" class="title">Browser Agent Security Workflow</text>
+  <text x="86" y="154" class="subtitle">Separate sessions, restrict credentials, and require approval for risky actions</text>
+  <rect x="92" y="232" width="180" height="108" class="accent"/>
+  <text x="122" y="272" class="label">Agent Plan</text>
+  <text x="122" y="300" class="small">intent + risk level</text>
+  <rect x="334" y="232" width="180" height="108" class="box"/>
+  <text x="364" y="272" class="label">Isolate Session</text>
+  <text x="364" y="300" class="small">profile / cookie jar</text>
+  <rect x="576" y="232" width="180" height="108" class="box"/>
+  <text x="606" y="272" class="label">Check Secrets</text>
+  <text x="606" y="300" class="small">vault / masked logs</text>
+  <rect x="818" y="232" width="180" height="108" class="accent"/>
+  <text x="850" y="272" class="label">Approve Action</text>
+  <text x="850" y="300" class="small">write / pay / delete</text>
+  <path d="M272 286 L334 286" class="line"/>
+  <path d="M514 286 L576 286" class="line"/>
+  <path d="M756 286 L818 286" class="line"/>
+  <rect x="210" y="418" width="780" height="88" class="box"/>
+  <text x="246" y="456" class="label">Outcome: safer browser automation with auditable execution boundaries</text>
+  <text x="246" y="486" class="small">browser runtime + session store + approval UI + audit log</text>
+</svg>

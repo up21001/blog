@@ -1,0 +1,60 @@
+<svg width="1400" height="820" viewBox="0 0 1400 820" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Zapier AI workflow</title>
+  <desc id="desc">트리거에서 AI 판단을 거쳐 액션과 승인, 외부 앱 반영까지 이어지는 Zapier AI 흐름</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#160f26"/>
+      <stop offset="100%" stop-color="#2d1747"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#24143d"/>
+      <stop offset="100%" stop-color="#3d225f"/>
+    </linearGradient>
+    <style>
+      .title{font:700 42px Arial, sans-serif; fill:#fff0ff}
+      .sub{font:400 20px Arial, sans-serif; fill:#e0cdee}
+      .box{fill:url(#card); stroke:#ffb5ff; stroke-width:2.5; rx:24; ry:24}
+      .box2{fill:#211532; stroke:#91e6ff; stroke-width:2.5; rx:24; ry:24}
+      .box3{fill:#34204d; stroke:#ffd67b; stroke-width:2.5; rx:24; ry:24}
+      .label{font:700 28px Arial, sans-serif; fill:#fff7ff}
+      .small{font:400 18px Arial, sans-serif; fill:#ebdcf5}
+      .arrow{stroke:#d2b8f0; stroke-width:5; fill:none; marker-end:url(#m)}
+      .note{font:600 18px Arial, sans-serif; fill:#ffd7a1}
+    </style>
+    <marker id="m" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 Z" fill="#d2b8f0"/>
+    </marker>
+  </defs>
+  <rect width="1400" height="820" fill="url(#bg)"/>
+  <text x="80" y="92" class="title">Zapier AI Workflow</text>
+  <text x="80" y="130" class="sub">Trigger → AI 판단 → 액션 실행 → 승인/예외 처리 → 외부 앱 반영</text>
+
+  <rect x="80" y="220" width="250" height="150" class="box"/>
+  <text x="205" y="270" text-anchor="middle" class="label">Trigger</text>
+  <text x="205" y="305" text-anchor="middle" class="small">이메일, 폼, CRM, Slack</text>
+  <text x="205" y="332" text-anchor="middle" class="small">새 이벤트 발생</text>
+
+  <rect x="410" y="220" width="250" height="150" class="box2"/>
+  <text x="535" y="270" text-anchor="middle" class="label">AI 판단</text>
+  <text x="535" y="305" text-anchor="middle" class="small">분류, 요약, 추출</text>
+  <text x="535" y="332" text-anchor="middle" class="small">다음 액션 선택</text>
+
+  <rect x="740" y="220" width="250" height="150" class="box"/>
+  <text x="865" y="270" text-anchor="middle" class="label">AI Actions</text>
+  <text x="865" y="305" text-anchor="middle" class="small">앱 작업 실행</text>
+  <text x="865" y="332" text-anchor="middle" class="small">레코드 생성 / 업데이트</text>
+
+  <rect x="1070" y="220" width="250" height="150" class="box3"/>
+  <text x="1195" y="270" text-anchor="middle" class="label">승인 / 예외 처리</text>
+  <text x="1195" y="305" text-anchor="middle" class="small">사람 확인, 재시도</text>
+  <text x="1195" y="332" text-anchor="middle" class="small">실패 경로 분리</text>
+
+  <path d="M330 295 L410 295" class="arrow"/>
+  <path d="M660 295 L740 295" class="arrow"/>
+  <path d="M990 295 L1070 295" class="arrow"/>
+
+  <rect x="220" y="500" width="960" height="180" class="box2"/>
+  <text x="700" y="550" text-anchor="middle" class="label">결과 반영: CRM, Slack, Email, Docs, Task App</text>
+  <text x="700" y="590" text-anchor="middle" class="small">반복 업무를 자동화하고, 사람이 최종 판단해야 하는 구간만 남김</text>
+  <text x="700" y="625" text-anchor="middle" class="note">실무 포인트: AI는 판단, Zapier는 실행과 연결에 강함</text>
+</svg>

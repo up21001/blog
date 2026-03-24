@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Perplexity API Workflow 2026</title>
+  <desc id="desc">Workflow diagram for Perplexity API showing search, research, sonar, and embeddings.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#e2e8f0"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#0f172a" flood-opacity="0.15"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#0f172a"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bg)"/>
+  <text x="70" y="88" font-size="38" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#0f172a">Perplexity API Workflow</text>
+  <text x="70" y="124" font-size="20" font-family="Segoe UI, Arial, sans-serif" fill="#334155">Search, research, and citations for AI apps</text>
+  <rect x="70" y="190" rx="24" ry="24" width="220" height="120" fill="#fff" stroke="#94a3b8" filter="url(#shadow)"/>
+  <text x="130" y="244" font-size="30" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#0f172a">User Query</text>
+  <text x="110" y="278" font-size="18" font-family="Segoe UI, Arial, sans-serif" fill="#334155">question / research task</text>
+  <rect x="345" y="150" rx="28" ry="28" width="500" height="350" fill="#fff" stroke="#64748b" stroke-width="2" filter="url(#shadow)"/>
+  <text x="490" y="205" font-size="34" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#0f172a">Perplexity API</text>
+  <rect x="390" y="245" rx="18" ry="18" width="170" height="90" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="430" y="296" font-size="24" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#334155">Search</text>
+  <rect x="595" y="245" rx="18" ry="18" width="170" height="90" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="625" y="296" font-size="24" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#334155">Agentic</text>
+  <text x="626" y="322" font-size="16" font-family="Segoe UI, Arial, sans-serif" fill="#334155">Research</text>
+  <rect x="390" y="360" rx="18" ry="18" width="170" height="90" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="434" y="410" font-size="24" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#334155">Sonar</text>
+  <rect x="595" y="360" rx="18" ry="18" width="170" height="90" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="615" y="410" font-size="24" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#334155">Embeddings</text>
+  <rect x="900" y="190" rx="24" ry="24" width="220" height="120" fill="#fff" stroke="#94a3b8" filter="url(#shadow)"/>
+  <text x="964" y="244" font-size="28" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#0f172a">Citations</text>
+  <text x="935" y="278" font-size="18" font-family="Segoe UI, Arial, sans-serif" fill="#334155">ranked results + sources</text>
+  <path d="M290 250 C320 250, 330 250, 345 250" fill="none" stroke="#0f172a" stroke-width="4" marker-end="url(#arrow)"/>
+  <path d="M845 250 C870 250, 880 250, 900 250" fill="none" stroke="#0f172a" stroke-width="4" marker-end="url(#arrow)"/>
+  <path d="M560 290 C578 290, 584 290, 595 290" fill="none" stroke="#0f172a" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M475 335 C475 347, 475 352, 475 360" fill="none" stroke="#0f172a" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M680 335 C680 347, 680 352, 680 360" fill="none" stroke="#0f172a" stroke-width="3" marker-end="url(#arrow)"/>
+</svg>

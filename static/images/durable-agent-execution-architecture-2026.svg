@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#08111f"/>
+  <text x="70" y="82" fill="#f8fafc" font-size="32" font-family="Arial, sans-serif" font-weight="700">Durable Agent Execution Architecture</text>
+  <g fill="#111827" stroke="#34d399" stroke-width="2">
+    <rect x="70" y="150" width="230" height="90" rx="18"/>
+    <rect x="70" y="270" width="230" height="90" rx="18"/>
+    <rect x="70" y="390" width="230" height="90" rx="18"/>
+    <rect x="360" y="150" width="280" height="330" rx="18"/>
+    <rect x="700" y="150" width="430" height="330" rx="18"/>
+  </g>
+  <g fill="#e2e8f0" font-family="Arial, sans-serif" font-size="18" font-weight="700">
+    <text x="127" y="204">State Store</text>
+    <text x="126" y="324">Retry Policy</text>
+    <text x="113" y="444">Resume Point</text>
+    <text x="438" y="204">Workflow Core</text>
+    <text x="826" y="204">Monitoring Layer</text>
+  </g>
+  <g fill="#94a3b8" font-family="Arial, sans-serif" font-size="15">
+    <text x="400" y="262">durable state</text>
+    <text x="400" y="292">checkpointing</text>
+    <text x="400" y="322">idempotent steps</text>
+    <text x="400" y="352">human gate</text>
+    <text x="400" y="382">replay support</text>
+  </g>
+  <text x="730" y="276" fill="#cbd5e1" font-size="16" font-family="Arial, sans-serif">trace, logs, alerting, external actions</text>
+  <text x="730" y="314" fill="#cbd5e1" font-size="16" font-family="Arial, sans-serif">state is external to the process</text>
+</svg>

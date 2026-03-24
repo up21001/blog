@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#111827"/>
+  <text x="70" y="100" fill="#fff" font-family="Arial, sans-serif" font-size="50" font-weight="700">Choice Flow</text>
+  <g font-family="Arial, sans-serif" font-size="20" fill="#e2e8f0">
+    <rect x="70" y="190" width="250" height="90" rx="16" fill="#1d4ed8"/><text x="114" y="243">One variable changed?</text>
+    <rect x="400" y="190" width="250" height="90" rx="16" fill="#0f766e"/><text x="462" y="243">Offline metrics</text>
+    <rect x="730" y="190" width="250" height="90" rx="16" fill="#7c3aed"/><text x="793" y="243">Online sample</text>
+    <rect x="400" y="380" width="250" height="90" rx="16" fill="#b45309"/><text x="459" y="433">Rollout / rollback</text>
+  </g>
+  <g stroke="#cbd5e1" stroke-width="5" fill="none">
+    <path d="M320 235h80"/><path d="M650 235h80"/><path d="M850 280c0 90-130 100-200 100"/><path d="M525 280v100"/>
+  </g>
+</svg>

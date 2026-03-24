@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#111827"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <text x="80" y="92" fill="#e5e7eb" font-family="Arial, sans-serif" font-size="48" font-weight="700">Screen Understanding Choice Flow</text>
+  <text x="80" y="132" fill="#94a3b8" font-family="Arial, sans-serif" font-size="22">When to read the screen instead of using APIs</text>
+  <rect x="90" y="200" width="220" height="112" rx="22" fill="#1f2937" stroke="#334155"/>
+  <rect x="330" y="200" width="220" height="112" rx="22" fill="#1f2937" stroke="#334155"/>
+  <rect x="570" y="200" width="220" height="112" rx="22" fill="#1f2937" stroke="#334155"/>
+  <rect x="810" y="200" width="300" height="112" rx="22" fill="#1f2937" stroke="#334155"/>
+  <text x="200" y="238" fill="#f8fafc" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" font-weight="700">API available?</text>
+  <text x="200" y="266" fill="#94a3b8" text-anchor="middle" font-family="Arial, sans-serif" font-size="16">if yes, prefer API</text>
+  <text x="440" y="238" fill="#f8fafc" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" font-weight="700">GUI only?</text>
+  <text x="440" y="266" fill="#94a3b8" text-anchor="middle" font-family="Arial, sans-serif" font-size="16">use screen understanding</text>
+  <text x="680" y="238" fill="#f8fafc" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" font-weight="700">Need verification?</text>
+  <text x="680" y="266" fill="#94a3b8" text-anchor="middle" font-family="Arial, sans-serif" font-size="16">confirm after action</text>
+  <text x="960" y="238" fill="#f8fafc" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" font-weight="700">Then automate</text>
+  <line x1="310" y1="256" x2="330" y2="256" stroke="#38bdf8" stroke-width="6"/>
+  <line x1="550" y1="256" x2="570" y2="256" stroke="#38bdf8" stroke-width="6"/>
+  <line x1="790" y1="256" x2="810" y2="256" stroke="#38bdf8" stroke-width="6"/>
+  <rect x="150" y="400" width="900" height="120" rx="24" fill="#050816" stroke="#334155"/>
+  <text x="600" y="448" fill="#f8fafc" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="700">Use screen understanding when the UI is the product and the API is missing</text>
+  <text x="600" y="484" fill="#94a3b8" text-anchor="middle" font-family="Arial, sans-serif" font-size="18">The safest automation path is observe -> decide -> act -> verify</text>
+</svg>

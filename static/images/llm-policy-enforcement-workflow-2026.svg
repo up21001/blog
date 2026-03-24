@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+    <style>
+      .t1{font:700 52px Arial,sans-serif;fill:#f8fafc}
+      .t2{font:400 22px Arial,sans-serif;fill:#cbd5e1}
+      .box{fill:#111827;stroke:#475569;stroke-width:2;rx:18;ry:18}
+      .h{font:700 22px Arial,sans-serif;fill:#e2e8f0}
+      .p{font:400 17px Arial,sans-serif;fill:#cbd5e1}
+      .arr{stroke:#60a5fa;stroke-width:5;fill:none;marker-end:url(#m)}
+    </style>
+    <marker id="m" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 z" fill="#60a5fa"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg2)"/>
+  <text x="70" y="86" class="t1">LLM Policy Enforcement</text>
+  <text x="70" y="128" class="t2">Allow, block, or escalate before the model reaches users or tools.</text>
+  <rect x="70" y="190" width="230" height="110" class="box"/>
+  <rect x="355" y="190" width="230" height="110" class="box"/>
+  <rect x="640" y="190" width="230" height="110" class="box"/>
+  <rect x="925" y="190" width="205" height="110" class="box"/>
+  <text x="100" y="232" class="h">1. Classify</text>
+  <text x="100" y="262" class="p">intent, risk, scope</text>
+  <text x="385" y="232" class="h">2. Enforce</text>
+  <text x="385" y="262" class="p">policy, limits, filters</text>
+  <text x="670" y="232" class="h">3. Review</text>
+  <text x="670" y="262" class="p">approve risky actions</text>
+  <text x="955" y="232" class="h">4. Log</text>
+  <text x="955" y="262" class="p">audit and metrics</text>
+  <path d="M300 245 L355 245" class="arr"/>
+  <path d="M585 245 L640 245" class="arr"/>
+  <path d="M870 245 L925 245" class="arr"/>
+  <rect x="70" y="360" width="1030" height="170" class="box"/>
+  <text x="95" y="405" class="h">What this solves</text>
+  <text x="95" y="445" class="p">Prompt rules in the prompt are easy to ignore. Policy in code is testable, observable, and repeatable.</text>
+  <text x="95" y="480" class="p">That is the difference between a demo and a production system.</text>
+</svg>

@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="abg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#7f1d1d"/>
+    </linearGradient>
+    <marker id="am" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#f87171"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="630" fill="url(#abg)"/>
+  <text x="48" y="78" fill="#fecaca" font-size="32" font-family="Segoe UI, Malgun Gothic, sans-serif" font-weight="700">장애 알림 자동화</text>
+  <text x="48" y="120" fill="#fca5a5" font-size="19" font-family="Segoe UI, Malgun Gothic, sans-serif">디스크 · 온도 · 전력 상관분석</text>
+  <rect x="48" y="148" width="1104" height="454" rx="18" fill="#111827" stroke="#ef4444" stroke-opacity="0.45"/>
+  <rect x="88" y="200" width="220" height="100" rx="14" fill="#450a0a" stroke="#f87171"/>
+  <text x="120" y="240" fill="#fecaca" font-size="16" font-family="Segoe UI, Malgun Gothic, sans-serif" font-weight="600">디스크</text>
+  <text x="120" y="270" fill="#fca5a5" font-size="13" font-family="Segoe UI, Malgun Gothic, sans-serif">SMART · I/O wait</text>
+  <rect x="348" y="200" width="220" height="100" rx="14" fill="#450a0a" stroke="#f87171"/>
+  <text x="380" y="240" fill="#fecaca" font-size="16" font-family="Segoe UI, Malgun Gothic, sans-serif" font-weight="600">온도</text>
+  <text x="380" y="270" fill="#fca5a5" font-size="13" font-family="Segoe UI, Malgun Gothic, sans-serif">CPU · NAS · 실내</text>
+  <rect x="608" y="200" width="220" height="100" rx="14" fill="#450a0a" stroke="#f87171"/>
+  <text x="640" y="240" fill="#fecaca" font-size="16" font-family="Segoe UI, Malgun Gothic, sans-serif" font-weight="600">전력</text>
+  <text x="640" y="270" fill="#fca5a5" font-size="13" font-family="Segoe UI, Malgun Gothic, sans-serif">UPS 부하 · 배터리</text>
+  <line x1="308" y1="250" x2="348" y2="250" stroke="#64748b" stroke-width="2"/>
+  <line x1="568" y1="250" x2="608" y2="250" stroke="#64748b" stroke-width="2"/>
+  <line x1="828" y1="250" x2="880" y2="280" stroke="#f87171" stroke-width="2" marker-end="url(#am)"/>
+  <line x1="458" y1="250" x2="880" y2="280" stroke="#f87171" stroke-width="2" marker-end="url(#am)"/>
+  <line x1="718" y1="250" x2="880" y2="280" stroke="#f87171" stroke-width="2" marker-end="url(#am)"/>
+  <rect x="880" y="260" width="240" height="120" rx="14" fill="#1e1b4b" stroke="#a78bfa"/>
+  <text x="904" y="302" fill="#ede9fe" font-size="15" font-family="Segoe UI, Malgun Gothic, sans-serif" font-weight="600">상관 엔진</text>
+  <text x="904" y="332" fill="#ddd6fe" font-size="13" font-family="Segoe UI, Malgun Gothic, sans-serif">시간창 정렬</text>
+  <text x="904" y="358" fill="#c4b5fd" font-size="12" font-family="Segoe UI, Malgun Gothic, sans-serif">복합 시 단일 인시던트</text>
+  <rect x="88" y="360" width="1032" height="210" rx="14" fill="#0c1222" stroke="#334155"/>
+  <text x="112" y="404" fill="#f1f5f9" font-size="17" font-family="Segoe UI, Malgun Gothic, sans-serif" font-weight="600">라우팅</text>
+  <rect x="112" y="424" width="280" height="56" rx="10" fill="#334155" stroke="#94a3b8"/>
+  <text x="136" y="458" fill="#f8fafc" font-size="14" font-family="Segoe UI, Malgun Gothic, sans-serif">INFO → 대시보드</text>
+  <rect x="420" y="424" width="280" height="56" rx="10" fill="#422006" stroke="#fbbf24"/>
+  <text x="444" y="458" fill="#fef3c7" font-size="14" font-family="Segoe UI, Malgun Gothic, sans-serif">WARN → 비동기 채널</text>
+  <rect x="728" y="424" width="360" height="56" rx="10" fill="#7f1d1d" stroke="#f87171"/>
+  <text x="752" y="458" fill="#fecaca" font-size="14" font-family="Segoe UI, Malgun Gothic, sans-serif">CRIT → 즉시 알림 + 런북</text>
+  <text x="112" y="520" fill="#94a3b8" font-size="14" font-family="Segoe UI, Malgun Gothic, sans-serif">목표: 신호 품질(의미 있는 알람 비율) 상승</text>
+</svg>

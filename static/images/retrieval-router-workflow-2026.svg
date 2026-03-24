@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#0a1222"/>
+  <text x="70" y="88" fill="#fff" font-size="42" font-family="Arial, sans-serif" font-weight="700">Retrieval Router</text>
+  <text x="70" y="128" fill="#cbd5e1" font-size="22" font-family="Arial, sans-serif">choose source before retrieval</text>
+  <g font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#fff">
+    <rect x="70" y="190" width="200" height="84" rx="18" fill="#172033" stroke="#22c55e" stroke-width="2"/>
+    <rect x="310" y="190" width="200" height="84" rx="18" fill="#172033" stroke="#22c55e" stroke-width="2"/>
+    <rect x="550" y="190" width="200" height="84" rx="18" fill="#172033" stroke="#22c55e" stroke-width="2"/>
+    <rect x="790" y="190" width="200" height="84" rx="18" fill="#172033" stroke="#22c55e" stroke-width="2"/>
+    <text x="170" y="232" text-anchor="middle">Question</text>
+    <text x="410" y="232" text-anchor="middle">Route</text>
+    <text x="650" y="232" text-anchor="middle">Source</text>
+    <text x="890" y="232" text-anchor="middle">Retrieve</text>
+    <path d="M270 232 H306" stroke="#94a3b8" stroke-width="5" stroke-linecap="round"/>
+    <path d="M510 232 H546" stroke="#94a3b8" stroke-width="5" stroke-linecap="round"/>
+    <path d="M750 232 H786" stroke="#94a3b8" stroke-width="5" stroke-linecap="round"/>
+  </g>
+  <text x="95" y="370" fill="#93c5fd" font-size="22" font-family="Arial, sans-serif">Internal docs</text>
+  <text x="335" y="370" fill="#93c5fd" font-size="22" font-family="Arial, sans-serif">Hybrid Search</text>
+  <text x="575" y="370" fill="#93c5fd" font-size="22" font-family="Arial, sans-serif">Tavily</text>
+  <text x="800" y="370" fill="#93c5fd" font-size="22" font-family="Arial, sans-serif">Exa</text>
+  <text x="955" y="370" fill="#93c5fd" font-size="22" font-family="Arial, sans-serif">Rerank</text>
+</svg>

@@ -1,0 +1,85 @@
+<svg width="800" height="450" viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg" font-family="'Malgun Gothic', sans-serif">
+  <rect width="800" height="450" fill="#F8FAFC"/>
+  <text x="400" y="38" text-anchor="middle" font-size="20" font-weight="bold" fill="#1E293B">NVIDIA Jetson Orin — 엣지 AI 객체 인식 파이프라인</text>
+
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#6B7280"/>
+    </marker>
+  </defs>
+
+  <!-- Camera Input -->
+  <rect x="30" y="100" width="120" height="60" rx="10" fill="#DBEAFE" stroke="#3B82F6" stroke-width="2"/>
+  <text x="90" y="126" text-anchor="middle" font-size="13" font-weight="bold" fill="#1E40AF">CSI 카메라</text>
+  <text x="90" y="146" text-anchor="middle" font-size="11" fill="#1E40AF">1080p / 30fps</text>
+
+  <line x1="150" y1="130" x2="185" y2="130" stroke="#6B7280" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- ISP -->
+  <rect x="185" y="100" width="120" height="60" rx="10" fill="#D1FAE5" stroke="#10B981" stroke-width="2"/>
+  <text x="245" y="126" text-anchor="middle" font-size="13" font-weight="bold" fill="#065F46">ISP / VIC</text>
+  <text x="245" y="146" text-anchor="middle" font-size="11" fill="#065F46">전처리·리사이즈</text>
+
+  <line x1="305" y1="130" x2="340" y2="130" stroke="#6B7280" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- DLA/GPU -->
+  <rect x="340" y="80" width="160" height="100" rx="10" fill="#EDE9FE" stroke="#8B5CF6" stroke-width="2"/>
+  <text x="420" y="112" text-anchor="middle" font-size="13" font-weight="bold" fill="#4C1D95">GPU + DLA</text>
+  <text x="420" y="132" text-anchor="middle" font-size="11" fill="#4C1D95">YOLOv8 추론</text>
+  <text x="420" y="150" text-anchor="middle" font-size="11" fill="#4C1D95">TensorRT 최적화</text>
+  <text x="420" y="168" text-anchor="middle" font-size="11" fill="#4C1D95">INT8 / FP16</text>
+
+  <line x1="500" y1="130" x2="535" y2="130" stroke="#6B7280" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- Post Process -->
+  <rect x="535" y="100" width="120" height="60" rx="10" fill="#FEF3C7" stroke="#F59E0B" stroke-width="2"/>
+  <text x="595" y="126" text-anchor="middle" font-size="13" font-weight="bold" fill="#92400E">후처리</text>
+  <text x="595" y="146" text-anchor="middle" font-size="11" fill="#92400E">NMS · 바운딩박스</text>
+
+  <line x1="655" y1="130" x2="690" y2="130" stroke="#6B7280" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- Output -->
+  <rect x="690" y="100" width="90" height="60" rx="10" fill="#F3F4F6" stroke="#6B7280" stroke-width="2"/>
+  <text x="735" y="126" text-anchor="middle" font-size="13" font-weight="bold" fill="#374151">디스플레이</text>
+  <text x="735" y="146" text-anchor="middle" font-size="11" fill="#374151">HDMI 출력</text>
+
+  <!-- Specs Table -->
+  <rect x="30" y="210" width="340" height="210" rx="12" fill="#F3F4F6" stroke="#6B7280" stroke-width="2"/>
+  <text x="200" y="238" text-anchor="middle" font-size="14" font-weight="bold" fill="#374151">Jetson Orin NX 16GB 주요 사양</text>
+  <line x1="50" y1="248" x2="350" y2="248" stroke="#D1D5DB" stroke-width="1"/>
+  <text x="60" y="268" font-size="12" fill="#374151">CPU</text>
+  <text x="200" y="268" font-size="12" fill="#374151">ARM Cortex-A78AE 8-Core</text>
+  <text x="60" y="292" font-size="12" fill="#374151">GPU</text>
+  <text x="200" y="292" font-size="12" fill="#374151">1024-core Ampere + 32 Tensor</text>
+  <text x="60" y="316" font-size="12" fill="#374151">DLA</text>
+  <text x="200" y="316" font-size="12" fill="#374151">2x DLA (최대 40 TOPS)</text>
+  <text x="60" y="340" font-size="12" fill="#374151">메모리</text>
+  <text x="200" y="340" font-size="12" fill="#374151">16GB LPDDR5</text>
+  <text x="60" y="364" font-size="12" fill="#374151">AI 성능</text>
+  <text x="200" y="364" font-size="12" fill="#374151">100 TOPS (INT8)</text>
+  <text x="60" y="388" font-size="12" fill="#374151">소비 전력</text>
+  <text x="200" y="388" font-size="12" fill="#374151">10 ~ 25W</text>
+
+  <!-- Performance Chart -->
+  <rect x="410" y="210" width="360" height="210" rx="12" fill="#F3F4F6" stroke="#6B7280" stroke-width="2"/>
+  <text x="590" y="238" text-anchor="middle" font-size="14" font-weight="bold" fill="#374151">YOLOv8 추론 성능 (FPS)</text>
+  <line x1="430" y1="248" x2="750" y2="248" stroke="#D1D5DB" stroke-width="1"/>
+
+  <!-- Bars -->
+  <rect x="450" y="270" width="60" height="40" rx="4" fill="#DBEAFE" stroke="#3B82F6" stroke-width="1.5"/>
+  <text x="480" y="265" text-anchor="middle" font-size="11" fill="#374151">FP32</text>
+  <text x="480" y="296" text-anchor="middle" font-size="12" font-weight="bold" fill="#1E40AF">45</text>
+
+  <rect x="540" y="255" width="60" height="55" rx="4" fill="#D1FAE5" stroke="#10B981" stroke-width="1.5"/>
+  <text x="570" y="250" text-anchor="middle" font-size="11" fill="#374151">FP16</text>
+  <text x="570" y="289" text-anchor="middle" font-size="12" font-weight="bold" fill="#065F46">82</text>
+
+  <rect x="630" y="238" width="60" height="72" rx="4" fill="#EDE9FE" stroke="#8B5CF6" stroke-width="1.5"/>
+  <text x="660" y="233" text-anchor="middle" font-size="11" fill="#374151">INT8</text>
+  <text x="660" y="280" text-anchor="middle" font-size="12" font-weight="bold" fill="#4C1D95">156</text>
+
+  <line x1="430" y1="312" x2="750" y2="312" stroke="#D1D5DB" stroke-width="1"/>
+  <text x="590" y="360" text-anchor="middle" font-size="12" fill="#374151">TensorRT 최적화 적용 기준</text>
+  <text x="590" y="382" text-anchor="middle" font-size="12" fill="#374151">YOLOv8n 모델, 640×640 입력</text>
+  <text x="590" y="404" text-anchor="middle" font-size="11" fill="#6B7280">* 실측 환경에 따라 달라질 수 있음</text>
+</svg>

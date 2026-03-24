@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Firecrawl Workflow 2026</title>
+  <desc id="desc">Workflow showing scrape and crawl into markdown, browser sandbox, and MCP/CLI integration.</desc>
+  <defs>
+    <linearGradient id="bg3" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fff7ed"/>
+      <stop offset="100%" stop-color="#ffedd5"/>
+    </linearGradient>
+    <filter id="shadow3" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#9a3412" flood-opacity="0.12"/>
+    </filter>
+    <marker id="arrow3" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#c2410c"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bg3)"/>
+  <text x="70" y="88" font-size="38" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#7c2d12">Firecrawl Workflow</text>
+  <text x="70" y="124" font-size="20" font-family="Segoe UI, Arial, sans-serif" fill="#9a3412">Crawl websites into LLM-ready markdown and structured data</text>
+
+  <rect x="70" y="245" width="200" height="110" rx="24" fill="#fff" stroke="#fdba74" filter="url(#shadow3)"/>
+  <text x="126" y="295" font-size="28" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#7c2d12">URL</text>
+  <text x="112" y="325" font-size="18" font-family="Segoe UI, Arial, sans-serif" fill="#9a3412">start scrape/crawl</text>
+
+  <rect x="340" y="170" width="250" height="140" rx="24" fill="#fff" stroke="#fb923c" filter="url(#shadow3)"/>
+  <text x="402" y="223" font-size="28" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#7c2d12">Scrape</text>
+  <text x="376" y="255" font-size="18" font-family="Segoe UI, Arial, sans-serif" fill="#9a3412">markdown / html / json</text>
+  <text x="386" y="279" font-size="18" font-family="Segoe UI, Arial, sans-serif" fill="#9a3412">single page extract</text>
+
+  <rect x="340" y="355" width="250" height="140" rx="24" fill="#fff" stroke="#fb923c" filter="url(#shadow3)"/>
+  <text x="404" y="408" font-size="28" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#7c2d12">Crawl</text>
+  <text x="366" y="440" font-size="18" font-family="Segoe UI, Arial, sans-serif" fill="#9a3412">site map / subpages / jobs</text>
+  <text x="375" y="464" font-size="18" font-family="Segoe UI, Arial, sans-serif" fill="#9a3412">dynamic content aware</text>
+
+  <rect x="680" y="190" width="220" height="120" rx="24" fill="#fff" stroke="#fdba74" filter="url(#shadow3)"/>
+  <text x="713" y="238" font-size="28" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#7c2d12">Browser</text>
+  <text x="707" y="270" font-size="18" font-family="Segoe UI, Arial, sans-serif" fill="#9a3412">sandbox session</text>
+
+  <rect x="680" y="380" width="220" height="120" rx="24" fill="#fff" stroke="#fdba74" filter="url(#shadow3)"/>
+  <text x="724" y="428" font-size="28" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#7c2d12">CLI / MCP</text>
+  <text x="706" y="460" font-size="18" font-family="Segoe UI, Arial, sans-serif" fill="#9a3412">agents and skills</text>
+
+  <rect x="980" y="250" width="150" height="110" rx="24" fill="#7c2d12" filter="url(#shadow3)"/>
+  <text x="1008" y="295" font-size="28" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#fff7ed">Markdown</text>
+  <text x="1006" y="325" font-size="18" font-family="Segoe UI, Arial, sans-serif" fill="#fed7aa">LLM-ready</text>
+
+  <path d="M270 300 C300 300, 310 240, 340 240" fill="none" stroke="#c2410c" stroke-width="4" marker-end="url(#arrow3)"/>
+  <path d="M270 300 C300 300, 310 425, 340 425" fill="none" stroke="#c2410c" stroke-width="4" marker-end="url(#arrow3)"/>
+  <path d="M590 240 C635 240, 650 240, 680 240" fill="none" stroke="#c2410c" stroke-width="4" marker-end="url(#arrow3)"/>
+  <path d="M590 425 C635 425, 650 425, 680 425" fill="none" stroke="#c2410c" stroke-width="4" marker-end="url(#arrow3)"/>
+  <path d="M900 300 C930 300, 950 300, 980 300" fill="none" stroke="#c2410c" stroke-width="4" marker-end="url(#arrow3)"/>
+</svg>

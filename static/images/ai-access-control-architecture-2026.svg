@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">AI Access Control Architecture</title>
+  <desc id="desc">Layered architecture for identity, policy, runtime, and audit in AI access control.</desc>
+  <rect width="1200" height="630" fill="#102338"/>
+  <text x="70" y="88" fill="#f1f6ff" font-size="34" font-weight="700">Access Control Architecture</text>
+  <text x="70" y="124" fill="#a8bed4" font-size="18">Identity, policy, runtime enforcement, and audit trail</text>
+  <g fill="#12304c" stroke="#6d87a6" stroke-width="2">
+    <rect x="90" y="175" rx="16" width="1020" height="82"/>
+    <rect x="90" y="278" rx="16" width="1020" height="82"/>
+    <rect x="90" y="381" rx="16" width="1020" height="82"/>
+    <rect x="90" y="484" rx="16" width="1020" height="82"/>
+  </g>
+  <g fill="#f1f6ff" font-size="21" font-weight="700">
+    <text x="130" y="223">Identity</text>
+    <text x="320" y="223">Users, tenants, roles, tokens</text>
+    <text x="130" y="326">Policy</text>
+    <text x="320" y="326">RBAC, ABAC, tool scope, data class</text>
+    <text x="130" y="429">Runtime</text>
+    <text x="320" y="429">Checks, denies, approvals, session state</text>
+    <text x="130" y="532">Audit</text>
+    <text x="320" y="532">Logs, traces, evidence, replay</text>
+  </g>
+</svg>

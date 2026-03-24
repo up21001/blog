@@ -1,12 +1,47 @@
-<svg width="1200" height="675" viewBox="0 0 1200 675" xmlns="http://www.w3.org/2000/svg">
-  <rect width="1200" height="675" fill="#111827"/>
-  <text x="600" y="80" text-anchor="middle" fill="#e5e7eb" font-size="40" font-family="Segoe UI, Arial">App Comparison Matrix</text>
-  <rect x="90" y="120" width="1020" height="460" rx="14" fill="#0b1220" stroke="#334155"/>
-  <line x1="90" y1="200" x2="1110" y2="200" stroke="#334155"/><line x1="90" y1="280" x2="1110" y2="280" stroke="#334155"/>
-  <line x1="90" y1="360" x2="1110" y2="360" stroke="#334155"/><line x1="90" y1="440" x2="1110" y2="440" stroke="#334155"/>
-  <line x1="350" y1="120" x2="350" y2="580" stroke="#334155"/><line x1="600" y1="120" x2="600" y2="580" stroke="#334155"/><line x1="850" y1="120" x2="850" y2="580" stroke="#334155"/>
-  <text x="220" y="170" text-anchor="middle" fill="#93c5fd" font-size="22" font-family="Segoe UI">App</text>
-  <text x="475" y="170" text-anchor="middle" fill="#93c5fd" font-size="22" font-family="Segoe UI">Price</text>
-  <text x="725" y="170" text-anchor="middle" fill="#93c5fd" font-size="22" font-family="Segoe UI">Best For</text>
-  <text x="980" y="170" text-anchor="middle" fill="#93c5fd" font-size="22" font-family="Segoe UI">Score</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="0.6" y2="1">
+    <stop offset="0%" stop-color="#f8fafc"/>
+    <stop offset="100%" stop-color="#f1f5f9"/>
+  </linearGradient>
+  <linearGradient id="hdr" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0%" stop-color="#334155"/>
+    <stop offset="100%" stop-color="#334155cc"/>
+  </linearGradient>
+  <marker id="arr" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+    <path d="M0,0 L0,6 L9,3 z" fill="#334155"/>
+  </marker>
+  <filter id="sh" x="-5%" y="-5%" width="110%" height="120%">
+    <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#00000018"/>
+  </filter>
+</defs>
+<rect width="1200" height="630" fill="url(#bg)"/>
+<rect width="1200" height="8" fill="url(#hdr)"/>
+<text x="60" y="72" font-family="Arial,sans-serif" font-size="32" font-weight="700" fill="#0f172a">App Review Comparison Table</text>
+<line x1="60" y1="90" x2="1140" y2="90" stroke="#334155" stroke-width="2" opacity="0.3"/>
+<rect x="60" y="260" width="160" height="80" rx="12" fill="white" stroke="#334155" stroke-width="2.5" filter="url(#sh)"/>
+<text x="140" y="306" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" font-weight="600" fill="#334155">Input</text>
+<circle cx="76" cy="276" r="11" fill="#334155"/>
+<text x="76" y="281" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="white">1</text>
+<line x1="224" y1="300" x2="286" y2="300" stroke="#334155" stroke-width="2" marker-end="url(#arr)" opacity="0.7"/>
+<rect x="290" y="260" width="160" height="80" rx="12" fill="white" stroke="#334155" stroke-width="2.5" filter="url(#sh)"/>
+<text x="370" y="306" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" font-weight="600" fill="#334155">Process</text>
+<circle cx="306" cy="276" r="11" fill="#334155"/>
+<text x="306" y="281" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="white">2</text>
+<line x1="454" y1="300" x2="516" y2="300" stroke="#334155" stroke-width="2" marker-end="url(#arr)" opacity="0.7"/>
+<rect x="520" y="260" width="160" height="80" rx="12" fill="white" stroke="#334155" stroke-width="2.5" filter="url(#sh)"/>
+<text x="600" y="306" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" font-weight="600" fill="#334155">Analyze</text>
+<circle cx="536" cy="276" r="11" fill="#334155"/>
+<text x="536" y="281" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="white">3</text>
+<line x1="684" y1="300" x2="746" y2="300" stroke="#334155" stroke-width="2" marker-end="url(#arr)" opacity="0.7"/>
+<rect x="750" y="260" width="160" height="80" rx="12" fill="white" stroke="#334155" stroke-width="2.5" filter="url(#sh)"/>
+<text x="830" y="306" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" font-weight="600" fill="#334155">Output</text>
+<circle cx="766" cy="276" r="11" fill="#334155"/>
+<text x="766" y="281" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="white">4</text>
+<line x1="914" y1="300" x2="976" y2="300" stroke="#334155" stroke-width="2" marker-end="url(#arr)" opacity="0.7"/>
+<rect x="980" y="260" width="160" height="80" rx="12" fill="white" stroke="#334155" stroke-width="2.5" filter="url(#sh)"/>
+<text x="1060" y="306" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" font-weight="600" fill="#334155">Review</text>
+<circle cx="996" cy="276" r="11" fill="#334155"/>
+<text x="996" y="281" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="white">5</text>
+<text x="60" y="606" font-family="Arial,sans-serif" font-size="13" fill="#94a3b8">© Blog — App Review Comparison Table</text>
 </svg>

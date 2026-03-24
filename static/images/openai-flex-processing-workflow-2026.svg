@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">OpenAI Flex Processing Workflow 2026</title>
+  <desc id="desc">Workflow diagram for OpenAI Flex Processing</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f2f8ff"/>
+      <stop offset="100%" stop-color="#f5faf3"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#324b5a" flood-opacity="0.16"/>
+    </filter>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 z" fill="#456070"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <text x="70" y="86" font-family="Segoe UI, Arial, sans-serif" font-size="38" font-weight="700" fill="#173247">OpenAI Flex Processing Workflow</text>
+  <text x="70" y="122" font-family="Segoe UI, Arial, sans-serif" font-size="20" fill="#5b7080">지연을 조금 허용하면서 비용과 처리량을 조절하는 흐름</text>
+
+  <rect x="70" y="230" width="190" height="120" rx="22" fill="#0e5a8a" filter="url(#shadow)"/>
+  <rect x="290" y="230" width="190" height="120" rx="22" fill="#1f6b6b" filter="url(#shadow)"/>
+  <rect x="510" y="230" width="190" height="120" rx="22" fill="#2f7a4f" filter="url(#shadow)"/>
+  <rect x="730" y="230" width="190" height="120" rx="22" fill="#6b5ea7" filter="url(#shadow)"/>
+  <rect x="950" y="230" width="180" height="120" rx="22" fill="#ad4d4d" filter="url(#shadow)"/>
+  <line x1="260" y1="290" x2="290" y2="290" stroke="#456070" stroke-width="4" marker-end="url(#arrow)"/>
+  <line x1="480" y1="290" x2="510" y2="290" stroke="#456070" stroke-width="4" marker-end="url(#arrow)"/>
+  <line x1="700" y1="290" x2="730" y2="290" stroke="#456070" stroke-width="4" marker-end="url(#arrow)"/>
+  <line x1="920" y1="290" x2="950" y2="290" stroke="#456070" stroke-width="4" marker-end="url(#arrow)"/>
+
+  <text x="165" y="275" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" fill="#fff">Classify</text>
+  <text x="165" y="307" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#d9ecfb">Priority</text>
+  <text x="385" y="275" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" fill="#fff">Queue</text>
+  <text x="385" y="307" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#def4f4">Flexible delay</text>
+  <text x="605" y="275" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" fill="#fff">Process</text>
+  <text x="605" y="307" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#e2f7e7">Cost aware</text>
+  <text x="825" y="275" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" fill="#fff">Validate</text>
+  <text x="825" y="307" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#f0e8fb">Check result</text>
+  <text x="1038" y="275" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" fill="#fff">Deliver</text>
+  <text x="1038" y="307" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#ffe4e4">Store output</text>
+</svg>

@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">AI Gateway Visual Builder Comparison 2026</title>
+  <desc id="desc">Comparison of LiteLLM, Langflow, Flowise, and Exa as gateway, visual builder, and search infra.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#e0e7ff"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#312e81" flood-opacity="0.16"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bg)"/>
+  <text x="70" y="88" font-size="38" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#312e81">AI Gateway, Visual Builder, Search Infra</text>
+  <rect x="70" y="170" width="250" height="360" rx="24" fill="#fff" stroke="#c7d2fe" filter="url(#shadow)"/>
+  <text x="145" y="220" font-size="30" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#312e81">LiteLLM</text>
+  <text x="100" y="255" font-size="18" font-family="Segoe UI, Arial, sans-serif" fill="#4338ca">AI Gateway / Proxy</text>
+  <text x="95" y="292" font-size="16" font-family="Segoe UI, Arial, sans-serif" fill="#4338ca">routing</text>
+  <text x="95" y="320" font-size="16" font-family="Segoe UI, Arial, sans-serif" fill="#4338ca">budgets</text>
+  <text x="95" y="348" font-size="16" font-family="Segoe UI, Arial, sans-serif" fill="#4338ca">spend tracking</text>
+  <text x="95" y="376" font-size="16" font-family="Segoe UI, Arial, sans-serif" fill="#4338ca">auth / rate limits</text>
+
+  <rect x="350" y="170" width="220" height="360" rx="24" fill="#fff" stroke="#c7d2fe" filter="url(#shadow)"/>
+  <text x="405" y="220" font-size="30" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#312e81">Langflow</text>
+  <text x="382" y="255" font-size="18" font-family="Segoe UI, Arial, sans-serif" fill="#4338ca">Visual Builder</text>
+  <text x="392" y="292" font-size="16" font-family="Segoe UI, Arial, sans-serif" fill="#4338ca">components</text>
+  <text x="392" y="320" font-size="16" font-family="Segoe UI, Arial, sans-serif" fill="#4338ca">playground</text>
+  <text x="392" y="348" font-size="16" font-family="Segoe UI, Arial, sans-serif" fill="#4338ca">MCP</text>
+  <text x="392" y="376" font-size="16" font-family="Segoe UI, Arial, sans-serif" fill="#4338ca">deployment</text>
+  <text x="392" y="404" font-size="16" font-family="Segoe UI, Arial, sans-serif" fill="#4338ca">flows</text>
+
+  <rect x="600" y="170" width="220" height="360" rx="24" fill="#fff" stroke="#c7d2fe" filter="url(#shadow)"/>
+  <text x="664" y="220" font-size="30" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#312e81">Flowise</text>
+  <text x="635" y="255" font-size="18" font-family="Segoe UI, Arial, sans-serif" fill="#4338ca">Visual Builder</text>
+  <text x="641" y="292" font-size="16" font-family="Segoe UI, Arial, sans-serif" fill="#4338ca">agentflow</text>
+  <text x="641" y="320" font-size="16" font-family="Segoe UI, Arial, sans-serif" fill="#4338ca">monitoring</text>
+  <text x="641" y="348" font-size="16" font-family="Segoe UI, Arial, sans-serif" fill="#4338ca">evaluations</text>
+  <text x="641" y="376" font-size="16" font-family="Segoe UI, Arial, sans-serif" fill="#4338ca">RBAC / SSO</text>
+  <text x="641" y="404" font-size="16" font-family="Segoe UI, Arial, sans-serif" fill="#4338ca">MCP</text>
+
+  <rect x="850" y="170" width="280" height="360" rx="24" fill="#fff" stroke="#c7d2fe" filter="url(#shadow)"/>
+  <text x="954" y="220" font-size="30" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#312e81">Exa</text>
+  <text x="905" y="255" font-size="18" font-family="Segoe UI, Arial, sans-serif" fill="#4338ca">Search / Research Infra</text>
+  <text x="907" y="292" font-size="16" font-family="Segoe UI, Arial, sans-serif" fill="#4338ca">search</text>
+  <text x="907" y="320" font-size="16" font-family="Segoe UI, Arial, sans-serif" fill="#4338ca">answer</text>
+  <text x="907" y="348" font-size="16" font-family="Segoe UI, Arial, sans-serif" fill="#4338ca">research</text>
+  <text x="907" y="376" font-size="16" font-family="Segoe UI, Arial, sans-serif" fill="#4338ca">websets</text>
+  <text x="907" y="404" font-size="16" font-family="Segoe UI, Arial, sans-serif" fill="#4338ca">citations</text>
+</svg>

@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#0b1320"/>
+      <stop offset="100%" stop-color="#1a2840"/>
+    </linearGradient>
+    <style>
+      .t { fill: #f0f6ff; font-family: Arial, sans-serif; }
+      .s { fill: #aec0da; font-family: Arial, sans-serif; }
+      .b { fill: #1f2e46; stroke: #4b678b; stroke-width: 2; }
+      .l { stroke: #86b1e8; stroke-width: 4; fill: none; marker-end: url(#arrow); }
+    </style>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 Z" fill="#86b1e8"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect x="60" y="55" width="1080" height="520" rx="28" fill="#162235" stroke="#2c405f" stroke-width="2"/>
+  <text x="95" y="118" class="t" font-size="44" font-weight="700">OpenAI Evals Workflow</text>
+  <text x="95" y="156" class="s" font-size="22">Define criteria, run tests, iterate</text>
+  <rect x="95" y="230" width="230" height="110" rx="18" class="b"/>
+  <rect x="385" y="230" width="230" height="110" rx="18" class="b"/>
+  <rect x="675" y="230" width="230" height="110" rx="18" class="b"/>
+  <rect x="965" y="230" width="180" height="110" rx="18" class="b"/>
+  <text x="126" y="274" class="t" font-size="24" font-weight="700">Sample data</text>
+  <text x="126" y="304" class="s" font-size="18">real inputs</text>
+  <text x="414" y="274" class="t" font-size="24" font-weight="700">Grader rules</text>
+  <text x="414" y="304" class="s" font-size="18">schema / rubric</text>
+  <text x="706" y="274" class="t" font-size="24" font-weight="700">Run eval</text>
+  <text x="706" y="304" class="s" font-size="18">batch or dashboard</text>
+  <text x="995" y="274" class="t" font-size="24" font-weight="700">Iterate</text>
+  <text x="995" y="304" class="s" font-size="18">fix prompt</text>
+  <path d="M325 285 L385 285" class="l"/>
+  <path d="M615 285 L675 285" class="l"/>
+  <path d="M905 285 L965 285" class="l"/>
+  <circle cx="130" cy="430" r="10" fill="#6fd0ff"/>
+  <text x="155" y="437" class="s" font-size="21">Measure quality before and after prompt or model changes</text>
+  <circle cx="130" cy="475" r="10" fill="#6fd0ff"/>
+  <text x="155" y="482" class="s" font-size="21">Keep failures as regression cases</text>
+</svg>

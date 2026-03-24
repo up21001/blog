@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">MCP error budget architecture</title>
+  <desc id="desc">Architecture for collecting failures and connecting them to governance actions.</desc>
+  <defs>
+    <linearGradient id="bg9" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#7f1d1d"/>
+    </linearGradient>
+    <style>
+      .title { font: 700 34px Arial, sans-serif; fill: #fff; }
+      .sub { font: 400 18px Arial, sans-serif; fill: #fee2e2; }
+      .layer { fill: rgba(255,255,255,0.1); stroke: rgba(255,255,255,0.35); stroke-width: 2; rx: 18; }
+      .node { fill: #fee2e2; stroke: #f87171; stroke-width: 2; rx: 16; }
+      .text { font: 700 19px Arial, sans-serif; fill: #7f1d1d; }
+      .small { font: 400 14px Arial, sans-serif; fill: #7f1d1d; }
+      .arrow { stroke: #fff; stroke-width: 3.5; fill: none; marker-end: url(#arrow); }
+    </style>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 Z" fill="#fff"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg9)"/>
+  <text x="60" y="78" class="title">MCP Error Budget Architecture</text>
+  <text x="60" y="112" class="sub">Failures flow into policy, and policy controls release</text>
+  <rect x="80" y="155" width="1040" height="110" class="layer"/>
+  <rect x="110" y="180" width="190" height="60" class="node"/>
+  <rect x="330" y="180" width="190" height="60" class="node"/>
+  <rect x="550" y="180" width="190" height="60" class="node"/>
+  <rect x="770" y="180" width="330" height="60" class="node"/>
+  <text x="150" y="217" class="text">Tracing</text>
+  <text x="355" y="217" class="text">Audit Log</text>
+  <text x="585" y="217" class="text">Budget Engine</text>
+  <text x="815" y="217" class="text">Governance Action</text>
+  <path class="arrow" d="M300 210 L330 210"/>
+  <path class="arrow" d="M520 210 L550 210"/>
+  <path class="arrow" d="M740 210 L770 210"/>
+  <rect x="80" y="320" width="360" height="220" class="layer"/>
+  <rect x="480" y="320" width="280" height="220" class="layer"/>
+  <rect x="800" y="320" width="320" height="220" class="layer"/>
+  <text x="110" y="365" class="text" fill="#fff">Signals</text>
+  <text x="110" y="400" class="sub">failure count</text>
+  <text x="110" y="428" class="sub">retry count</text>
+  <text x="110" y="456" class="sub">timeout count</text>
+  <text x="510" y="365" class="text" fill="#fff">Policy</text>
+  <text x="510" y="400" class="sub">burn rate threshold</text>
+  <text x="510" y="428" class="sub">freeze deployment</text>
+  <text x="510" y="456" class="sub">escalate incident</text>
+  <text x="830" y="365" class="text" fill="#fff">Response</text>
+  <text x="830" y="400" class="sub">stop release</text>
+  <text x="830" y="428" class="sub">rollback version</text>
+  <text x="830" y="456" class="sub">open postmortem</text>
+</svg>
+

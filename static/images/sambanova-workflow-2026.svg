@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="820" viewBox="0 0 1400 820">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#07111f"/>
+      <stop offset="100%" stop-color="#102a43"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#12314f"/>
+      <stop offset="100%" stop-color="#1d4f7a"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#000000" flood-opacity="0.3"/>
+    </filter>
+    <style>
+      .title { font: 700 44px Arial, sans-serif; fill: #f7fafc; }
+      .subtitle { font: 400 18px Arial, sans-serif; fill: #bfd7ee; }
+      .box-title { font: 700 22px Arial, sans-serif; fill: #ffffff; }
+      .box-text { font: 400 17px Arial, sans-serif; fill: #dce9f7; }
+      .label { font: 700 16px Arial, sans-serif; fill: #0b1b2b; }
+      .small { font: 400 14px Arial, sans-serif; fill: #17324a; }
+    </style>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M 0 0 L 12 6 L 0 12 z" fill="#8ad4ff"/>
+    </marker>
+  </defs>
+  <rect width="1400" height="820" fill="url(#bg)"/>
+  <circle cx="1180" cy="110" r="160" fill="#1d5b84" opacity="0.25"/>
+  <circle cx="180" cy="700" r="220" fill="#2d7fbf" opacity="0.14"/>
+  <text x="70" y="92" class="title">SambaNova workflow</text>
+  <text x="70" y="128" class="subtitle">Enterprise model platform flow from API access to custom checkpoints</text>
+
+  <rect x="70" y="190" rx="28" ry="28" width="250" height="170" fill="url(#card)" filter="url(#shadow)"/>
+  <text x="102" y="235" class="box-title">1. Choose product</text>
+  <text x="102" y="270" class="box-text">SambaCloud for fast start</text>
+  <text x="102" y="300" class="box-text">SambaStack for tighter control</text>
+  <text x="102" y="330" class="box-text">Same tech, different packaging</text>
+
+  <rect x="365" y="190" rx="28" ry="28" width="250" height="170" fill="url(#card)" filter="url(#shadow)"/>
+  <text x="397" y="235" class="box-title">2. Connect API</text>
+  <text x="397" y="270" class="box-text">OpenAI compatible client</text>
+  <text x="397" y="300" class="box-text">Models, limits, URLs</text>
+  <text x="397" y="330" class="box-text">Text generation and JSON mode</text>
+
+  <rect x="660" y="190" rx="28" ry="28" width="250" height="170" fill="url(#card)" filter="url(#shadow)"/>
+  <text x="692" y="235" class="box-title">3. Build apps</text>
+  <text x="692" y="270" class="box-text">Agents and RAG</text>
+  <text x="692" y="300" class="box-text">Vision, audio, embeddings</text>
+  <text x="692" y="330" class="box-text">AI Starter Kits and integrations</text>
+
+  <rect x="955" y="190" rx="28" ry="28" width="375" height="170" fill="url(#card)" filter="url(#shadow)"/>
+  <text x="987" y="235" class="box-title">4. Extend with custom checkpoints</text>
+  <text x="987" y="270" class="box-text">Run finetuned checkpoints at SambaNova speed</text>
+  <text x="987" y="300" class="box-text">Add enterprise rules, routing, and model controls</text>
+  <text x="987" y="330" class="box-text">Deploy without reworking the whole app</text>
+
+  <path d="M 320 275 L 355 275" stroke="#8ad4ff" stroke-width="6" fill="none" marker-end="url(#arrow)"/>
+  <path d="M 615 275 L 650 275" stroke="#8ad4ff" stroke-width="6" fill="none" marker-end="url(#arrow)"/>
+  <path d="M 910 275 L 945 275" stroke="#8ad4ff" stroke-width="6" fill="none" marker-end="url(#arrow)"/>
+
+  <rect x="70" y="445" rx="26" ry="26" width="1160" height="265" fill="#e8f3fb" opacity="0.96"/>
+  <text x="100" y="492" class="label">What the docs emphasize</text>
+  <text x="100" y="530" class="small">OpenAI compatibility, AI Starter Kits, Integrations, Agents, RAG, Reasoning, and Custom Checkpoints</text>
+  <text x="100" y="570" class="small">Good fit when the decision is not only about model quality, but about enterprise deployment and operating model</text>
+  <text x="100" y="610" class="small">Useful as an API-first layer that can grow into a broader enterprise AI platform</text>
+  <text x="100" y="650" class="small">Best read as a platform story, not as a single-model story</text>
+
+  <rect x="1000" y="490" rx="18" ry="18" width="170" height="76" fill="#ffd166"/>
+  <text x="1032" y="528" class="label">OpenAI compatible</text>
+  <text x="1036" y="552" class="small">fast onboarding</text>
+  <rect x="1000" y="585" rx="18" ry="18" width="170" height="76" fill="#7bdff2"/>
+  <text x="1048" y="623" class="label">Enterprise fit</text>
+  <text x="1038" y="647" class="small">controls + scale</text>
+</svg>

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg5" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#111827"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <style>
+      .title{font:700 50px 'Segoe UI',Arial,sans-serif;fill:#f8fafc}
+      .sub{font:400 22px 'Segoe UI',Arial,sans-serif;fill:#cbd5e1}
+      .q{font:700 22px 'Segoe UI',Arial,sans-serif;fill:#0f172a}
+      .a{font:700 20px 'Segoe UI',Arial,sans-serif;fill:#e2e8f0}
+      .t{font:400 17px 'Segoe UI',Arial,sans-serif;fill:#cbd5e1}
+    </style>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg5)"/>
+  <text x="70" y="86" class="title">PDF Parsing Choice Flow</text>
+  <text x="70" y="122" class="sub">입력과 목표에 따라 파서를 나눈다</text>
+  <rect x="120" y="220" width="220" height="150" rx="20" fill="#22d3ee"/>
+  <rect x="490" y="220" width="220" height="150" rx="20" fill="#a78bfa"/>
+  <rect x="860" y="220" width="220" height="150" rx="20" fill="#fbbf24"/>
+  <text x="150" y="265" class="q">문서 ETL가 우선?</text>
+  <text x="150" y="300" class="a">Unstructured</text>
+  <text x="520" y="265" class="q">복잡한 PDF인가?</text>
+  <text x="520" y="300" class="a">LlamaParse</text>
+  <text x="885" y="265" class="q">이미지 비중이 큰가?</text>
+  <text x="885" y="300" class="a">Vision API</text>
+  <path d="M340 295h110" stroke="#94a3b8" stroke-width="4" marker-end="url(#ar5)"/>
+  <path d="M710 295h110" stroke="#94a3b8" stroke-width="4" marker-end="url(#ar5)"/>
+  <defs><marker id="ar5" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#94a3b8"/></marker></defs>
+  <text x="70" y="500" class="t">문서 성격이 불명확하면 먼저 샘플을 10건 정도로 분류해보는 편이 정확합니다.</text>
+</svg>

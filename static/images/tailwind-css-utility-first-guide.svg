@@ -1,0 +1,70 @@
+<svg width="800" height="450" viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg" font-family="'Malgun Gothic', sans-serif">
+  <!-- Background -->
+  <rect width="800" height="450" fill="#F8FAFC" rx="12"/>
+  <text x="400" y="38" text-anchor="middle" font-size="20" font-weight="bold" fill="#1E293B">Tailwind CSS 유틸리티 퍼스트 구조</text>
+
+  <!-- 핵심 카테고리 1: 레이아웃 -->
+  <rect x="30" y="60" width="220" height="170" rx="8" fill="#DBEAFE" stroke="#3B82F6" stroke-width="2"/>
+  <text x="140" y="85" text-anchor="middle" font-size="13" font-weight="bold" fill="#1E40AF">레이아웃</text>
+  <text x="48" y="108" font-size="11" fill="#1D4ED8">flex / grid / block</text>
+  <text x="48" y="126" font-size="11" fill="#1D4ED8">container / columns</text>
+  <text x="48" y="144" font-size="11" fill="#1D4ED8">gap-4 / space-x-2</text>
+  <text x="48" y="162" font-size="11" fill="#1D4ED8">justify-* / items-*</text>
+  <text x="48" y="180" font-size="11" fill="#1D4ED8">w-full / h-screen</text>
+  <text x="48" y="198" font-size="11" fill="#1D4ED8">overflow-hidden</text>
+  <text x="48" y="216" font-size="11" fill="#1D4ED8">aspect-video / ratio</text>
+
+  <!-- 핵심 카테고리 2: 타이포그래피 -->
+  <rect x="265" y="60" width="220" height="170" rx="8" fill="#D1FAE5" stroke="#10B981" stroke-width="2"/>
+  <text x="375" y="85" text-anchor="middle" font-size="13" font-weight="bold" fill="#065F46">타이포그래피</text>
+  <text x="283" y="108" font-size="11" fill="#047857">text-sm / text-xl</text>
+  <text x="283" y="126" font-size="11" fill="#047857">font-bold / font-medium</text>
+  <text x="283" y="144" font-size="11" fill="#047857">leading-relaxed</text>
+  <text x="283" y="162" font-size="11" fill="#047857">tracking-wide</text>
+  <text x="283" y="180" font-size="11" fill="#047857">text-gray-700</text>
+  <text x="283" y="198" font-size="11" fill="#047857">truncate / line-clamp</text>
+  <text x="283" y="216" font-size="11" fill="#047857">prose (Typography 플러그인)</text>
+
+  <!-- 핵심 카테고리 3: 색상/배경 -->
+  <rect x="500" y="60" width="270" height="170" rx="8" fill="#FEF3C7" stroke="#F59E0B" stroke-width="2"/>
+  <text x="635" y="85" text-anchor="middle" font-size="13" font-weight="bold" fill="#92400E">색상 / 배경</text>
+  <text x="518" y="108" font-size="11" fill="#B45309">bg-white / bg-gray-100</text>
+  <text x="518" y="126" font-size="11" fill="#B45309">text-blue-600</text>
+  <text x="518" y="144" font-size="11" fill="#B45309">dark:bg-gray-900 (다크모드)</text>
+  <text x="518" y="162" font-size="11" fill="#B45309">bg-gradient-to-r</text>
+  <text x="518" y="180" font-size="11" fill="#B45309">opacity-80 / backdrop-blur</text>
+  <text x="518" y="198" font-size="11" fill="#B45309">ring-2 ring-blue-500</text>
+  <text x="518" y="216" font-size="11" fill="#B45309">shadow-md / shadow-xl</text>
+
+  <!-- 핵심 카테고리 4: 반응형 -->
+  <rect x="30" y="245" width="220" height="140" rx="8" fill="#EDE9FE" stroke="#8B5CF6" stroke-width="2"/>
+  <text x="140" y="270" text-anchor="middle" font-size="13" font-weight="bold" fill="#5B21B6">반응형 브레이크포인트</text>
+  <text x="48" y="293" font-size="11" fill="#6D28D9">sm: 640px 이상</text>
+  <text x="48" y="311" font-size="11" fill="#6D28D9">md: 768px 이상</text>
+  <text x="48" y="329" font-size="11" fill="#6D28D9">lg: 1024px 이상</text>
+  <text x="48" y="347" font-size="11" fill="#6D28D9">xl: 1280px 이상</text>
+  <text x="48" y="365" font-size="11" fill="#6D28D9">2xl: 1536px 이상</text>
+
+  <!-- 핵심 카테고리 5: 커스텀 -->
+  <rect x="265" y="245" width="220" height="140" rx="8" fill="#F3F4F6" stroke="#6B7280" stroke-width="2"/>
+  <text x="375" y="270" text-anchor="middle" font-size="13" font-weight="bold" fill="#374151">커스텀 테마</text>
+  <text x="283" y="293" font-size="11" fill="#4B5563">tailwind.config.js 확장</text>
+  <text x="283" y="311" font-size="11" fill="#4B5563">colors / spacing 재정의</text>
+  <text x="283" y="329" font-size="11" fill="#4B5563">@layer components 패턴</text>
+  <text x="283" y="347" font-size="11" fill="#4B5563">CSS 변수 연동</text>
+  <text x="283" y="365" font-size="11" fill="#4B5563">arbitrary values: w-[320px]</text>
+
+  <!-- 핵심 카테고리 6: Shadcn -->
+  <rect x="500" y="245" width="270" height="140" rx="8" fill="#DBEAFE" stroke="#3B82F6" stroke-width="2"/>
+  <text x="635" y="270" text-anchor="middle" font-size="13" font-weight="bold" fill="#1E40AF">Shadcn/ui 연동</text>
+  <text x="518" y="293" font-size="11" fill="#1D4ED8">Radix UI 기반 접근성</text>
+  <text x="518" y="311" font-size="11" fill="#1D4ED8">컴포넌트 소스 직접 소유</text>
+  <text x="518" y="329" font-size="11" fill="#1D4ED8">cn() 유틸로 클래스 병합</text>
+  <text x="518" y="347" font-size="11" fill="#1D4ED8">Button / Dialog / Table</text>
+  <text x="518" y="365" font-size="11" fill="#1D4ED8">Next.js / Vite 완벽 지원</text>
+
+  <!-- 하단 -->
+  <rect x="30" y="398" width="740" height="40" rx="8" fill="#D1FAE5" stroke="#10B981" stroke-width="1.5"/>
+  <text x="400" y="417" text-anchor="middle" font-size="11" font-weight="bold" fill="#065F46">Tailwind CSS v4 (2025~): Oxide 엔진, CSS-first 설정, 빌드 속도 10배 향상, @import 기반 설정</text>
+  <text x="400" y="432" text-anchor="middle" font-size="10" fill="#047857">tailwind.config.js → @theme 블록으로 이전 권장</text>
+</svg>

@@ -1,0 +1,73 @@
+<svg width="800" height="450" viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg" font-family="'Malgun Gothic', sans-serif">
+  <!-- Background -->
+  <rect width="800" height="450" fill="#F8FAFC" rx="12"/>
+  <text x="400" y="36" text-anchor="middle" font-size="18" font-weight="bold" fill="#1E293B">Redis 활용 패턴 — 캐시 · 세션 · 메시지 큐</text>
+
+  <!-- Redis Core -->
+  <rect x="300" y="160" width="200" height="100" rx="10" fill="#FEE2E2" stroke="#EF4444" stroke-width="2.5"/>
+  <text x="400" y="198" text-anchor="middle" font-size="16" font-weight="bold" fill="#991B1B">Redis</text>
+  <text x="400" y="220" text-anchor="middle" font-size="12" fill="#DC2626">In-Memory Store</text>
+  <text x="400" y="240" text-anchor="middle" font-size="11" fill="#B91C1C">초당 100만+ ops</text>
+
+  <!-- Cache Pattern -->
+  <rect x="30" y="60" width="200" height="130" rx="8" fill="#DBEAFE" stroke="#3B82F6" stroke-width="2"/>
+  <text x="130" y="85" text-anchor="middle" font-size="14" font-weight="bold" fill="#1D4ED8">캐싱 패턴</text>
+  <text x="50" y="108" font-size="11" fill="#374151">Cache-Aside (Lazy)</text>
+  <text x="50" y="126" font-size="11" fill="#374151">Write-Through</text>
+  <text x="50" y="144" font-size="11" fill="#374151">TTL: EXPIRE key 3600</text>
+  <text x="50" y="162" font-size="11" fill="#374151">Hit율 모니터링 필수</text>
+  <text x="50" y="180" font-size="11" fill="#3B82F6">SET key value EX 300</text>
+
+  <!-- Session Pattern -->
+  <rect x="30" y="220" width="200" height="130" rx="8" fill="#D1FAE5" stroke="#10B981" stroke-width="2"/>
+  <text x="130" y="245" text-anchor="middle" font-size="14" font-weight="bold" fill="#065F46">세션 저장소</text>
+  <text x="50" y="268" font-size="11" fill="#374151">JWT 대비 서버 통제력↑</text>
+  <text x="50" y="286" font-size="11" fill="#374151">HSET session:id field val</text>
+  <text x="50" y="304" font-size="11" fill="#374151">다중 서버 세션 공유</text>
+  <text x="50" y="322" font-size="11" fill="#374151">자동 만료로 정리 용이</text>
+  <text x="50" y="340" font-size="11" fill="#10B981">Flask-Session 연동 가능</text>
+
+  <!-- Queue Pattern -->
+  <rect x="570" y="60" width="200" height="130" rx="8" fill="#EDE9FE" stroke="#8B5CF6" stroke-width="2"/>
+  <text x="670" y="85" text-anchor="middle" font-size="14" font-weight="bold" fill="#6D28D9">메시지 큐</text>
+  <text x="590" y="108" font-size="11" fill="#374151">List: LPUSH / BRPOP</text>
+  <text x="590" y="126" font-size="11" fill="#374151">Pub/Sub 실시간 채팅</text>
+  <text x="590" y="144" font-size="11" fill="#374151">Stream: 영속성 보장</text>
+  <text x="590" y="162" font-size="11" fill="#374151">Celery + Redis 조합</text>
+  <text x="590" y="180" font-size="11" fill="#8B5CF6">SUBSCRIBE / PUBLISH</text>
+
+  <!-- Data Structures -->
+  <rect x="570" y="220" width="200" height="130" rx="8" fill="#FEF3C7" stroke="#F59E0B" stroke-width="2"/>
+  <text x="670" y="245" text-anchor="middle" font-size="14" font-weight="bold" fill="#92400E">데이터 구조</text>
+  <text x="590" y="268" font-size="11" fill="#374151">String: 기본 캐시</text>
+  <text x="590" y="286" font-size="11" fill="#374151">Hash: 객체 저장</text>
+  <text x="590" y="304" font-size="11" fill="#374151">List: 큐/스택</text>
+  <text x="590" y="322" font-size="11" fill="#374151">Set: 유니크 집합</text>
+  <text x="590" y="340" font-size="11" fill="#F59E0B">ZSet: 랭킹/정렬</text>
+
+  <!-- Arrows from Cache to Redis -->
+  <line x1="230" y1="125" x2="298" y2="195" stroke="#3B82F6" stroke-width="2" marker-end="url(#redisarrow)"/>
+  <!-- Arrows from Session to Redis -->
+  <line x1="230" y1="285" x2="298" y2="225" stroke="#10B981" stroke-width="2" marker-end="url(#redisarrow)"/>
+  <!-- Arrows from Redis to Queue -->
+  <line x1="502" y1="195" x2="568" y2="125" stroke="#8B5CF6" stroke-width="2" marker-end="url(#redisarrow)"/>
+  <!-- Arrows from Redis to DataStruct -->
+  <line x1="502" y1="225" x2="568" y2="285" stroke="#F59E0B" stroke-width="2" marker-end="url(#redisarrow)"/>
+
+  <!-- Python Code snippet -->
+  <rect x="200" y="330" width="400" height="90" rx="8" fill="#1E293B" stroke="#475569" stroke-width="1.5"/>
+  <text x="400" y="352" text-anchor="middle" font-size="11" font-weight="bold" fill="#94A3B8">Python redis-py 예시</text>
+  <text x="220" y="372" font-size="10" fill="#7DD3FC">import redis</text>
+  <text x="220" y="388" font-size="10" fill="#94A3B8">r = redis.Redis(host='localhost', port=6379, db=0)</text>
+  <text x="220" y="404" font-size="10" fill="#86EFAC">r.set('user:1', 'Alice', ex=3600)  # TTL 1시간</text>
+  <text x="220" y="420" font-size="10" fill="#FCA5A5">value = r.get('user:1')  # b'Alice'</text>
+
+  <!-- Arrow marker -->
+  <defs>
+    <marker id="redisarrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#6B7280"/>
+    </marker>
+  </defs>
+
+  <text x="400" y="444" text-anchor="middle" font-size="11" fill="#9CA3AF">Redis — 캐시/세션/큐를 단일 인스턴스로 처리하는 초고속 인메모리 스토어</text>
+</svg>

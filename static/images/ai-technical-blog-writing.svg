@@ -1,0 +1,74 @@
+<svg width="800" height="450" viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg" font-family="'Malgun Gothic', sans-serif">
+  <rect width="800" height="450" fill="#F8FAFC" rx="12"/>
+  <text x="400" y="40" text-anchor="middle" font-size="20" font-weight="bold" fill="#1E293B">AI 기술 블로그 글쓰기 워크플로우</text>
+
+  <!-- Step 1 -->
+  <rect x="30" y="80" width="140" height="80" rx="10" fill="#DBEAFE" stroke="#3B82F6" stroke-width="2"/>
+  <text x="100" y="116" text-anchor="middle" font-size="13" font-weight="bold" fill="#1E40AF">1. 주제 선정</text>
+  <text x="100" y="135" text-anchor="middle" font-size="11" fill="#1D4ED8">키워드 리서치</text>
+  <text x="100" y="150" text-anchor="middle" font-size="11" fill="#1D4ED8">트렌드 분석</text>
+
+  <!-- Arrow -->
+  <line x1="170" y1="120" x2="200" y2="120" stroke="#6B7280" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Step 2 -->
+  <rect x="200" y="80" width="140" height="80" rx="10" fill="#D1FAE5" stroke="#10B981" stroke-width="2"/>
+  <text x="270" y="116" text-anchor="middle" font-size="13" font-weight="bold" fill="#065F46">2. 아웃라인</text>
+  <text x="270" y="135" text-anchor="middle" font-size="11" fill="#047857">AI 초안 구조화</text>
+  <text x="270" y="150" text-anchor="middle" font-size="11" fill="#047857">섹션 설계</text>
+
+  <!-- Arrow -->
+  <line x1="340" y1="120" x2="370" y2="120" stroke="#6B7280" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Step 3 -->
+  <rect x="370" y="80" width="140" height="80" rx="10" fill="#FEF3C7" stroke="#F59E0B" stroke-width="2"/>
+  <text x="440" y="116" text-anchor="middle" font-size="13" font-weight="bold" fill="#92400E">3. AI 초안 생성</text>
+  <text x="440" y="135" text-anchor="middle" font-size="11" fill="#B45309">ChatGPT/Claude</text>
+  <text x="440" y="150" text-anchor="middle" font-size="11" fill="#B45309">프롬프트 엔지니어링</text>
+
+  <!-- Arrow -->
+  <line x1="510" y1="120" x2="540" y2="120" stroke="#6B7280" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Step 4 -->
+  <rect x="540" y="80" width="140" height="80" rx="10" fill="#EDE9FE" stroke="#8B5CF6" stroke-width="2"/>
+  <text x="610" y="116" text-anchor="middle" font-size="13" font-weight="bold" fill="#4C1D95">4. 검토 / 수정</text>
+  <text x="610" y="135" text-anchor="middle" font-size="11" fill="#6D28D9">사실 확인</text>
+  <text x="610" y="150" text-anchor="middle" font-size="11" fill="#6D28D9">개인화 추가</text>
+
+  <!-- Arrow -->
+  <line x1="680" y1="120" x2="710" y2="120" stroke="#6B7280" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Step 5 -->
+  <rect x="710" y="80" width="70" height="80" rx="10" fill="#F3F4F6" stroke="#6B7280" stroke-width="2"/>
+  <text x="745" y="116" text-anchor="middle" font-size="13" font-weight="bold" fill="#374151">5. 발행</text>
+  <text x="745" y="135" text-anchor="middle" font-size="11" fill="#4B5563">SEO</text>
+  <text x="745" y="150" text-anchor="middle" font-size="11" fill="#4B5563">최적화</text>
+
+  <!-- Prompt Strategy Section -->
+  <rect x="30" y="200" width="360" height="220" rx="10" fill="white" stroke="#E2E8F0" stroke-width="1.5"/>
+  <text x="210" y="228" text-anchor="middle" font-size="15" font-weight="bold" fill="#1E293B">효과적인 프롬프트 전략</text>
+  <rect x="50" y="240" width="320" height="36" rx="6" fill="#DBEAFE" stroke="#3B82F6" stroke-width="1"/>
+  <text x="210" y="263" text-anchor="middle" font-size="12" fill="#1E40AF">역할 지정: "당신은 13년 경력의 시니어 엔지니어입니다"</text>
+  <rect x="50" y="284" width="320" height="36" rx="6" fill="#D1FAE5" stroke="#10B981" stroke-width="1"/>
+  <text x="210" y="307" text-anchor="middle" font-size="12" fill="#065F46">컨텍스트 제공: 독자 수준, 블로그 톤앤매너 명시</text>
+  <rect x="50" y="328" width="320" height="36" rx="6" fill="#FEF3C7" stroke="#F59E0B" stroke-width="1"/>
+  <text x="210" y="351" text-anchor="middle" font-size="12" fill="#92400E">구조 요청: 섹션 헤더, 코드 예제, 요약 포함</text>
+  <rect x="50" y="372" width="320" height="36" rx="6" fill="#EDE9FE" stroke="#8B5CF6" stroke-width="1"/>
+  <text x="210" y="395" text-anchor="middle" font-size="12" fill="#4C1D95">반복 개선: 피드백 루프로 품질 향상</text>
+
+  <!-- Quality Check Section -->
+  <rect x="410" y="200" width="360" height="220" rx="10" fill="white" stroke="#E2E8F0" stroke-width="1.5"/>
+  <text x="590" y="228" text-anchor="middle" font-size="15" font-weight="bold" fill="#1E293B">품질 체크리스트</text>
+  <text x="430" y="258" font-size="12" fill="#374151">✓  사실 정확성 — 공식 문서/출처 교차 검증</text>
+  <text x="430" y="284" font-size="12" fill="#374151">✓  개인 경험 — 실무 사례와 시행착오 추가</text>
+  <text x="430" y="310" font-size="12" fill="#374151">✓  코드 동작 — 예제 코드 직접 실행 확인</text>
+  <text x="430" y="336" font-size="12" fill="#374151">✓  SEO 최적화 — 핵심 키워드 자연스럽게 포함</text>
+  <text x="430" y="362" font-size="12" fill="#374151">✓  가독성 — 단락 길이, 소제목 간격 점검</text>
+  <text x="430" y="388" font-size="12" fill="#374151">✓  AI 흔적 제거 — 과도한 나열, 상투어 수정</text>
+
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#6B7280"/>
+    </marker>
+  </defs>
+</svg>

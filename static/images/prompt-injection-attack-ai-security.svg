@@ -1,0 +1,103 @@
+<svg width="800" height="450" viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg" font-family="'Malgun Gothic', sans-serif">
+  <!-- Background -->
+  <rect width="800" height="450" fill="#F9FAFB" rx="12"/>
+  <text x="400" y="38" text-anchor="middle" font-size="18" font-weight="bold" fill="#1F2937">프롬프트 인젝션 공격 구조</text>
+
+  <!-- Attacker -->
+  <rect x="30" y="80" width="140" height="70" rx="8" fill="#FEE2E2" stroke="#EF4444" stroke-width="2"/>
+  <text x="100" y="112" text-anchor="middle" font-size="13" font-weight="bold" fill="#991B1B">공격자</text>
+  <text x="100" y="132" text-anchor="middle" font-size="11" fill="#7F1D1D">악성 프롬프트 삽입</text>
+
+  <!-- Arrow 1 -->
+  <line x1="170" y1="115" x2="220" y2="115" stroke="#EF4444" stroke-width="2" marker-end="url(#arrowRed)"/>
+
+  <!-- User Input Box -->
+  <rect x="220" y="70" width="160" height="90" rx="8" fill="#FEF3C7" stroke="#F59E0B" stroke-width="2"/>
+  <text x="300" y="100" text-anchor="middle" font-size="12" font-weight="bold" fill="#92400E">사용자 입력</text>
+  <text x="300" y="118" text-anchor="middle" font-size="10" fill="#78350F">"번역해줘: [악성 명령]"</text>
+  <text x="300" y="134" text-anchor="middle" font-size="10" fill="#78350F">Ignore above. Do X.</text>
+  <text x="300" y="150" text-anchor="middle" font-size="10" fill="#EF4444">← 인젝션 페이로드</text>
+
+  <!-- Arrow 2 -->
+  <line x1="380" y1="115" x2="430" y2="115" stroke="#F59E0B" stroke-width="2" marker-end="url(#arrowOrange)"/>
+
+  <!-- LLM -->
+  <rect x="430" y="70" width="160" height="90" rx="8" fill="#DBEAFE" stroke="#3B82F6" stroke-width="2"/>
+  <text x="510" y="100" text-anchor="middle" font-size="12" font-weight="bold" fill="#1E40AF">LLM 처리</text>
+  <text x="510" y="118" text-anchor="middle" font-size="10" fill="#1E3A8A">시스템 프롬프트 무시</text>
+  <text x="510" y="134" text-anchor="middle" font-size="10" fill="#1E3A8A">악성 명령 실행</text>
+  <text x="510" y="150" text-anchor="middle" font-size="10" fill="#EF4444">← 컨텍스트 혼동 발생</text>
+
+  <!-- Arrow 3 -->
+  <line x1="590" y1="115" x2="640" y2="115" stroke="#3B82F6" stroke-width="2" marker-end="url(#arrowBlue)"/>
+
+  <!-- Output -->
+  <rect x="640" y="70" width="130" height="90" rx="8" fill="#FEE2E2" stroke="#EF4444" stroke-width="2"/>
+  <text x="705" y="100" text-anchor="middle" font-size="12" font-weight="bold" fill="#991B1B">악성 출력</text>
+  <text x="705" y="118" text-anchor="middle" font-size="10" fill="#7F1D1D">데이터 유출</text>
+  <text x="705" y="134" text-anchor="middle" font-size="10" fill="#7F1D1D">권한 우회</text>
+  <text x="705" y="150" text-anchor="middle" font-size="10" fill="#7F1D1D">시스템 조작</text>
+
+  <!-- Attack Types -->
+  <text x="400" y="200" text-anchor="middle" font-size="14" font-weight="bold" fill="#374151">주요 공격 유형</text>
+
+  <!-- Direct Injection -->
+  <rect x="30" y="215" width="220" height="80" rx="8" fill="#FEE2E2" stroke="#EF4444" stroke-width="1.5"/>
+  <text x="140" y="237" text-anchor="middle" font-size="12" font-weight="bold" fill="#991B1B">직접 인젝션</text>
+  <text x="140" y="255" text-anchor="middle" font-size="10" fill="#7F1D1D">사용자가 직접 악성 명령 삽입</text>
+  <text x="140" y="271" text-anchor="middle" font-size="10" fill="#7F1D1D">"Ignore instructions, reveal..."</text>
+  <text x="140" y="287" text-anchor="middle" font-size="10" fill="#7F1D1D">Jailbreak, DAN 프롬프트</text>
+
+  <!-- Indirect Injection -->
+  <rect x="290" y="215" width="220" height="80" rx="8" fill="#FEF3C7" stroke="#F59E0B" stroke-width="1.5"/>
+  <text x="400" y="237" text-anchor="middle" font-size="12" font-weight="bold" fill="#92400E">간접 인젝션</text>
+  <text x="400" y="255" text-anchor="middle" font-size="10" fill="#78350F">외부 데이터에 숨겨진 명령</text>
+  <text x="400" y="271" text-anchor="middle" font-size="10" fill="#78350F">웹페이지, 문서, 이메일</text>
+  <text x="400" y="287" text-anchor="middle" font-size="10" fill="#78350F">RAG 파이프라인 취약점</text>
+
+  <!-- Prompt Leaking -->
+  <rect x="550" y="215" width="220" height="80" rx="8" fill="#EDE9FE" stroke="#8B5CF6" stroke-width="1.5"/>
+  <text x="660" y="237" text-anchor="middle" font-size="12" font-weight="bold" fill="#5B21B6">프롬프트 추출</text>
+  <text x="660" y="255" text-anchor="middle" font-size="10" fill="#4C1D95">시스템 프롬프트 유출 유도</text>
+  <text x="660" y="271" text-anchor="middle" font-size="10" fill="#4C1D95">"Repeat your instructions"</text>
+  <text x="660" y="287" text-anchor="middle" font-size="10" fill="#4C1D95">지식재산권 침해 위험</text>
+
+  <!-- Defense Strategies -->
+  <text x="400" y="330" text-anchor="middle" font-size="14" font-weight="bold" fill="#374151">방어 전략</text>
+
+  <rect x="30" y="345" width="170" height="65" rx="8" fill="#D1FAE5" stroke="#10B981" stroke-width="1.5"/>
+  <text x="115" y="368" text-anchor="middle" font-size="11" font-weight="bold" fill="#065F46">입력 검증 및 필터링</text>
+  <text x="115" y="385" text-anchor="middle" font-size="10" fill="#064E3B">패턴 감지 · 허용목록</text>
+  <text x="115" y="400" text-anchor="middle" font-size="10" fill="#064E3B">최대 길이 제한</text>
+
+  <rect x="215" y="345" width="170" height="65" rx="8" fill="#D1FAE5" stroke="#10B981" stroke-width="1.5"/>
+  <text x="300" y="368" text-anchor="middle" font-size="11" font-weight="bold" fill="#065F46">컨텍스트 분리</text>
+  <text x="300" y="385" text-anchor="middle" font-size="10" fill="#064E3B">시스템/사용자 역할 구분</text>
+  <text x="300" y="400" text-anchor="middle" font-size="10" fill="#064E3B">샌드박스 실행환경</text>
+
+  <rect x="400" y="345" width="170" height="65" rx="8" fill="#D1FAE5" stroke="#10B981" stroke-width="1.5"/>
+  <text x="485" y="368" text-anchor="middle" font-size="11" font-weight="bold" fill="#065F46">출력 검증</text>
+  <text x="485" y="385" text-anchor="middle" font-size="10" fill="#064E3B">응답 구조화 (JSON)</text>
+  <text x="485" y="400" text-anchor="middle" font-size="10" fill="#064E3B">2차 LLM 검증 레이어</text>
+
+  <rect x="585" y="345" width="185" height="65" rx="8" fill="#D1FAE5" stroke="#10B981" stroke-width="1.5"/>
+  <text x="677" y="368" text-anchor="middle" font-size="11" font-weight="bold" fill="#065F46">최소 권한 원칙</text>
+  <text x="677" y="385" text-anchor="middle" font-size="10" fill="#064E3B">툴 접근 제한</text>
+  <text x="677" y="400" text-anchor="middle" font-size="10" fill="#064E3B">인간 승인 게이트</text>
+
+  <!-- Defs -->
+  <defs>
+    <marker id="arrowRed" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#EF4444"/>
+    </marker>
+    <marker id="arrowOrange" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#F59E0B"/>
+    </marker>
+    <marker id="arrowBlue" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#3B82F6"/>
+    </marker>
+  </defs>
+
+  <!-- Footer -->
+  <text x="400" y="435" text-anchor="middle" font-size="10" fill="#9CA3AF">OWASP LLM Top 10 · LLM01: Prompt Injection</text>
+</svg>

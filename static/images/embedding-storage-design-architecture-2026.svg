@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Embedding Storage Design Architecture</title>
+  <desc id="desc">Architecture diagram for document, chunk, embedding, and cold storage separation.</desc>
+  <rect width="1200" height="630" fill="#111827"/>
+  <text x="64" y="74" font-size="18" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#93c5fd">ARCHITECTURE</text>
+  <text x="64" y="118" font-size="40" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#f8fafc">Separate truth, cache, and vectors</text>
+  <text x="64" y="154" font-size="18" font-family="Segoe UI, Arial, sans-serif" fill="#cbd5e1">A clean storage boundary keeps reindexing and cost under control.</text>
+
+  <rect x="68" y="240" width="210" height="110" rx="18" fill="#1f2937" stroke="#334155"/>
+  <rect x="318" y="240" width="210" height="110" rx="18" fill="#1f2937" stroke="#334155"/>
+  <rect x="568" y="240" width="210" height="110" rx="18" fill="#1f2937" stroke="#334155"/>
+  <rect x="818" y="240" width="210" height="110" rx="18" fill="#1f2937" stroke="#334155"/>
+  <text x="106" y="280" font-size="22" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#e2e8f0">Source docs</text>
+  <text x="106" y="308" font-size="16" font-family="Segoe UI, Arial, sans-serif" fill="#cbd5e1">object store</text>
+  <text x="356" y="280" font-size="22" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#e2e8f0">Chunk store</text>
+  <text x="356" y="308" font-size="16" font-family="Segoe UI, Arial, sans-serif" fill="#cbd5e1">stable segments</text>
+  <text x="606" y="280" font-size="22" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#e2e8f0">Vector DB</text>
+  <text x="606" y="308" font-size="16" font-family="Segoe UI, Arial, sans-serif" fill="#cbd5e1">current embedding</text>
+  <text x="856" y="280" font-size="22" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#e2e8f0">Cold storage</text>
+  <text x="856" y="308" font-size="16" font-family="Segoe UI, Arial, sans-serif" fill="#cbd5e1">old versions</text>
+  <path d="M278 295 L318 295" stroke="#38bdf8" stroke-width="4" fill="none" marker-end="url(#m)"/>
+  <path d="M528 295 L568 295" stroke="#38bdf8" stroke-width="4" fill="none" marker-end="url(#m)"/>
+  <path d="M778 295 L818 295" stroke="#38bdf8" stroke-width="4" fill="none" marker-end="url(#m)"/>
+  <defs>
+    <marker id="m" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#38bdf8"/>
+    </marker>
+  </defs>
+</svg>

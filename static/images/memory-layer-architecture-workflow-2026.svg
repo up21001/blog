@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#f3f8ff"/>
+  <text x="70" y="84" font-family="Segoe UI, Arial, sans-serif" font-size="42" font-weight="700" fill="#0f172a">Memory Layer Architecture</text>
+  <text x="70" y="118" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#475569">session, profile, knowledge, policy, cache</text>
+
+  <rect x="70" y="210" width="170" height="120" rx="22" fill="#ffffff" stroke="#bfdbfe" stroke-width="2"/>
+  <text x="108" y="260" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="700" fill="#1d4ed8">Input</text>
+  <text x="95" y="290" font-family="Segoe UI, Arial, sans-serif" font-size="16" fill="#2563eb">user / agent task</text>
+
+  <rect x="295" y="165" width="230" height="210" rx="24" fill="#eef2ff" stroke="#93c5fd" stroke-width="2"/>
+  <text x="348" y="220" font-family="Segoe UI, Arial, sans-serif" font-size="30" font-weight="700" fill="#1e3a8a">Session Layer</text>
+  <text x="333" y="255" font-family="Segoe UI, Arial, sans-serif" font-size="16" fill="#334155">current conversation</text>
+  <text x="335" y="283" font-family="Segoe UI, Arial, sans-serif" font-size="16" fill="#334155">working state</text>
+  <text x="339" y="311" font-family="Segoe UI, Arial, sans-serif" font-size="16" fill="#334155">task memory</text>
+
+  <rect x="565" y="120" width="260" height="120" rx="24" fill="#dcfce7" stroke="#86efac" stroke-width="2"/>
+  <text x="629" y="171" font-family="Segoe UI, Arial, sans-serif" font-size="30" font-weight="700" fill="#166534">Profile Layer</text>
+  <text x="598" y="202" font-family="Segoe UI, Arial, sans-serif" font-size="16" fill="#166534">preferences / identity</text>
+
+  <rect x="565" y="265" width="260" height="120" rx="24" fill="#fef3c7" stroke="#fcd34d" stroke-width="2"/>
+  <text x="618" y="316" font-family="Segoe UI, Arial, sans-serif" font-size="30" font-weight="700" fill="#92400e">Knowledge Layer</text>
+  <text x="602" y="347" font-family="Segoe UI, Arial, sans-serif" font-size="16" fill="#92400e">RAG / facts / docs</text>
+
+  <rect x="565" y="410" width="260" height="120" rx="24" fill="#e0e7ff" stroke="#a5b4fc" stroke-width="2"/>
+  <text x="634" y="461" font-family="Segoe UI, Arial, sans-serif" font-size="30" font-weight="700" fill="#3730a3">Policy Layer</text>
+  <text x="611" y="492" font-family="Segoe UI, Arial, sans-serif" font-size="16" fill="#3730a3">rules / security / TTL</text>
+
+  <rect x="885" y="225" width="245" height="155" rx="24" fill="#111827"/>
+  <text x="944" y="278" font-family="Segoe UI, Arial, sans-serif" font-size="30" font-weight="700" fill="#ffffff">Cache / Recall</text>
+  <text x="916" y="314" font-family="Segoe UI, Arial, sans-serif" font-size="16" fill="#d1d5db">fast retrieval, summaries</text>
+  <text x="930" y="342" font-family="Segoe UI, Arial, sans-serif" font-size="16" fill="#d1d5db">Mem0 / LangGraph</text>
+
+  <path d="M240 270 L295 270" stroke="#334155" stroke-width="8" stroke-linecap="round"/>
+  <path d="M525 270 L565 180" stroke="#334155" stroke-width="8" stroke-linecap="round"/>
+  <path d="M525 270 L565 325" stroke="#334155" stroke-width="8" stroke-linecap="round"/>
+  <path d="M525 270 L565 470" stroke="#334155" stroke-width="8" stroke-linecap="round"/>
+  <path d="M825 180 L885 300" stroke="#334155" stroke-width="8" stroke-linecap="round"/>
+  <path d="M825 325 L885 300" stroke="#334155" stroke-width="8" stroke-linecap="round"/>
+  <path d="M825 470 L885 300" stroke="#334155" stroke-width="8" stroke-linecap="round"/>
+</svg>

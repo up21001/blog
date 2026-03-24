@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg4" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f0fdf4"/>
+      <stop offset="100%" stop-color="#dcfce7"/>
+    </linearGradient>
+    <style>
+      .title { font: 700 42px sans-serif; fill: #14532d; }
+      .sub { font: 400 20px sans-serif; fill: #166534; }
+      .boxTitle { font: 700 22px sans-serif; fill: #14532d; }
+      .boxText { font: 400 18px sans-serif; fill: #334155; }
+      .card { rx: 22; ry: 22; stroke: #86efac; stroke-width: 2; }
+    </style>
+    <marker id="arrow4" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#16a34a"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg4)"/>
+  <text x="70" y="78" class="title">Semantic Cache Invalidation</text>
+  <text x="70" y="114" class="sub">TTL, version, event-based invalidation</text>
+
+  <rect x="70" y="170" width="200" height="120" class="card" fill="#ffffff"/>
+  <text x="170" y="218" text-anchor="middle" class="boxTitle">Cache Entry</text>
+  <text x="170" y="250" text-anchor="middle" class="boxText">응답 저장</text>
+
+  <rect x="300" y="170" width="200" height="120" class="card" fill="#dcfce7"/>
+  <text x="400" y="218" text-anchor="middle" class="boxTitle">TTL Check</text>
+  <text x="400" y="250" text-anchor="middle" class="boxText">시간 만료</text>
+
+  <rect x="530" y="170" width="200" height="120" class="card" fill="#bbf7d0"/>
+  <text x="630" y="218" text-anchor="middle" class="boxTitle">Version Check</text>
+  <text x="630" y="250" text-anchor="middle" class="boxText">문서 / 프롬프트</text>
+
+  <rect x="760" y="170" width="200" height="120" class="card" fill="#86efac"/>
+  <text x="860" y="218" text-anchor="middle" class="boxTitle">Event Check</text>
+  <text x="860" y="250" text-anchor="middle" class="boxText">변경 이벤트</text>
+
+  <rect x="990" y="170" width="140" height="120" class="card" fill="#fef9c3"/>
+  <text x="1060" y="218" text-anchor="middle" class="boxTitle">RAG</text>
+  <text x="1060" y="250" text-anchor="middle" class="boxText">재생성</text>
+
+  <line x1="270" y1="230" x2="300" y2="230" stroke="#16a34a" stroke-width="4" marker-end="url(#arrow4)"/>
+  <line x1="500" y1="230" x2="530" y2="230" stroke="#16a34a" stroke-width="4" marker-end="url(#arrow4)"/>
+  <line x1="730" y1="230" x2="760" y2="230" stroke="#16a34a" stroke-width="4" marker-end="url(#arrow4)"/>
+  <line x1="960" y1="230" x2="990" y2="230" stroke="#16a34a" stroke-width="4" marker-end="url(#arrow4)"/>
+
+  <rect x="70" y="360" width="1060" height="170" class="card" fill="#ffffff"/>
+  <text x="100" y="402" class="boxTitle">무효화 원칙</text>
+  <text x="100" y="442" class="boxText">TTL만 쓰지 말고 version과 event를 함께 묶어 stale answer를 줄인다.</text>
+  <text x="100" y="482" class="boxText">권한 변화, 문서 변경, 정책 업데이트는 즉시 무효화 대상으로 두는 편이 안전하다.</text>
+</svg>

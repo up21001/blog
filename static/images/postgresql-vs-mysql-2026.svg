@@ -1,0 +1,65 @@
+<svg width="800" height="450" viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg" font-family="'Malgun Gothic', sans-serif">
+  <rect width="800" height="450" fill="#F9FAFB" rx="12"/>
+  <text x="400" y="40" text-anchor="middle" font-size="20" font-weight="bold" fill="#1F2937">PostgreSQL vs MySQL 2026 비교</text>
+
+  <!-- PostgreSQL 컬럼 -->
+  <rect x="40" y="60" width="340" height="50" fill="#DBEAFE" stroke="#3B82F6" stroke-width="2" rx="8"/>
+  <text x="210" y="91" text-anchor="middle" font-size="16" font-weight="bold" fill="#1D4ED8">PostgreSQL</text>
+
+  <!-- MySQL 컬럼 -->
+  <rect x="420" y="60" width="340" height="50" fill="#D1FAE5" stroke="#10B981" stroke-width="2" rx="8"/>
+  <text x="590" y="91" text-anchor="middle" font-size="16" font-weight="bold" fill="#065F46">MySQL</text>
+
+  <!-- 항목 행 -->
+  <!-- JSON 지원 -->
+  <rect x="40" y="125" width="340" height="44" fill="#EFF6FF" stroke="#BFDBFE" stroke-width="1" rx="6"/>
+  <text x="60" y="143" font-size="11" fill="#6B7280">JSON 지원</text>
+  <text x="60" y="160" font-size="13" fill="#1E40AF" font-weight="bold">JSONB 네이티브 인덱싱 + 연산</text>
+
+  <rect x="420" y="125" width="340" height="44" fill="#ECFDF5" stroke="#A7F3D0" stroke-width="1" rx="6"/>
+  <text x="440" y="143" font-size="11" fill="#6B7280">JSON 지원</text>
+  <text x="440" y="160" font-size="13" fill="#065F46">JSON 컬럼 (부분적 인덱싱)</text>
+
+  <!-- 복제 -->
+  <rect x="40" y="177" width="340" height="44" fill="#EFF6FF" stroke="#BFDBFE" stroke-width="1" rx="6"/>
+  <text x="60" y="195" font-size="11" fill="#6B7280">복제 / 고가용성</text>
+  <text x="60" y="212" font-size="13" fill="#1E40AF" font-weight="bold">논리 복제 + 스트리밍 복제</text>
+
+  <rect x="420" y="177" width="340" height="44" fill="#ECFDF5" stroke="#A7F3D0" stroke-width="1" rx="6"/>
+  <text x="440" y="195" font-size="11" fill="#6B7280">복제 / 고가용성</text>
+  <text x="440" y="212" font-size="13" fill="#065F46">그룹 복제 + InnoDB 클러스터</text>
+
+  <!-- 확장성 -->
+  <rect x="40" y="229" width="340" height="44" fill="#EFF6FF" stroke="#BFDBFE" stroke-width="1" rx="6"/>
+  <text x="60" y="247" font-size="11" fill="#6B7280">확장 기능</text>
+  <text x="60" y="264" font-size="13" fill="#1E40AF" font-weight="bold">PostGIS, pgvector, TimescaleDB</text>
+
+  <rect x="420" y="229" width="340" height="44" fill="#ECFDF5" stroke="#A7F3D0" stroke-width="1" rx="6"/>
+  <text x="440" y="247" font-size="11" fill="#6B7280">확장 기능</text>
+  <text x="440" y="264" font-size="13" fill="#065F46">제한적 (플러그인 중심)</text>
+
+  <!-- 읽기 성능 -->
+  <rect x="40" y="281" width="340" height="44" fill="#EFF6FF" stroke="#BFDBFE" stroke-width="1" rx="6"/>
+  <text x="60" y="299" font-size="11" fill="#6B7280">읽기 성능 (OLTP)</text>
+  <text x="60" y="316" font-size="13" fill="#1E40AF" font-weight="bold">우수 (복잡 쿼리에서 강점)</text>
+
+  <rect x="420" y="281" width="340" height="44" fill="#ECFDF5" stroke="#A7F3D0" stroke-width="1" rx="6"/>
+  <text x="440" y="299" font-size="11" fill="#6B7280">읽기 성능 (OLTP)</text>
+  <text x="440" y="316" font-size="13" fill="#065F46">우수 (단순 읽기에서 약간 빠름)</text>
+
+  <!-- 라이선스 -->
+  <rect x="40" y="333" width="340" height="44" fill="#EFF6FF" stroke="#BFDBFE" stroke-width="1" rx="6"/>
+  <text x="60" y="351" font-size="11" fill="#6B7280">라이선스 / 비용</text>
+  <text x="60" y="368" font-size="13" fill="#1E40AF" font-weight="bold">PostgreSQL License (완전 오픈소스)</text>
+
+  <rect x="420" y="333" width="340" height="44" fill="#ECFDF5" stroke="#A7F3D0" stroke-width="1" rx="6"/>
+  <text x="440" y="351" font-size="11" fill="#6B7280">라이선스 / 비용</text>
+  <text x="440" y="368" font-size="13" fill="#065F46">GPL / Oracle 상용 이중 라이선스</text>
+
+  <!-- 추천 태그 -->
+  <rect x="40" y="392" width="340" height="40" fill="#DBEAFE" stroke="#3B82F6" stroke-width="2" rx="8"/>
+  <text x="210" y="417" text-anchor="middle" font-size="13" fill="#1D4ED8">복잡한 쿼리 · AI/ML · 지리정보 · 분석</text>
+
+  <rect x="420" y="392" width="340" height="40" fill="#D1FAE5" stroke="#10B981" stroke-width="2" rx="8"/>
+  <text x="590" y="417" text-anchor="middle" font-size="13" fill="#065F46">단순 CRUD · WordPress · 레거시 호환</text>
+</svg>

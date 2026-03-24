@@ -1,0 +1,56 @@
+<svg width="800" height="450" viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg" font-family="'Malgun Gothic', sans-serif">
+  <rect width="800" height="450" fill="#F8FAFC" rx="12"/>
+  <text x="400" y="40" text-anchor="middle" font-size="20" font-weight="bold" fill="#1E293B">NotebookLM — 문서 기반 AI 연구 워크플로우</text>
+
+  <!-- Center NotebookLM -->
+  <ellipse cx="400" cy="225" rx="80" ry="55" fill="#DBEAFE" stroke="#3B82F6" stroke-width="2.5"/>
+  <text x="400" y="218" text-anchor="middle" font-size="14" font-weight="bold" fill="#1E40AF">NotebookLM</text>
+  <text x="400" y="238" text-anchor="middle" font-size="12" fill="#1D4ED8">Google AI</text>
+
+  <!-- Input Sources -->
+  <rect x="20" y="60" width="140" height="60" rx="8" fill="#D1FAE5" stroke="#10B981" stroke-width="2"/>
+  <text x="90" y="87" text-anchor="middle" font-size="12" font-weight="bold" fill="#065F46">PDF 문서</text>
+  <text x="90" y="107" text-anchor="middle" font-size="11" fill="#047857">논문 / 보고서</text>
+  <line x1="160" y1="90" x2="320" y2="195" stroke="#10B981" stroke-width="1.5" stroke-dasharray="5,3"/>
+
+  <rect x="20" y="155" width="140" height="60" rx="8" fill="#D1FAE5" stroke="#10B981" stroke-width="2"/>
+  <text x="90" y="182" text-anchor="middle" font-size="12" font-weight="bold" fill="#065F46">웹 URL</text>
+  <text x="90" y="202" text-anchor="middle" font-size="11" fill="#047857">블로그 / 뉴스</text>
+  <line x1="160" y1="185" x2="320" y2="215" stroke="#10B981" stroke-width="1.5" stroke-dasharray="5,3"/>
+
+  <rect x="20" y="250" width="140" height="60" rx="8" fill="#D1FAE5" stroke="#10B981" stroke-width="2"/>
+  <text x="90" y="277" text-anchor="middle" font-size="12" font-weight="bold" fill="#065F46">Google Docs</text>
+  <text x="90" y="297" text-anchor="middle" font-size="11" fill="#047857">YouTube / 텍스트</text>
+  <line x1="160" y1="280" x2="320" y2="245" stroke="#10B981" stroke-width="1.5" stroke-dasharray="5,3"/>
+
+  <rect x="20" y="345" width="140" height="60" rx="8" fill="#D1FAE5" stroke="#10B981" stroke-width="2"/>
+  <text x="90" y="372" text-anchor="middle" font-size="12" font-weight="bold" fill="#065F46">오디오 파일</text>
+  <text x="90" y="392" text-anchor="middle" font-size="11" fill="#047857">팟캐스트 / 강의</text>
+  <line x1="160" y1="375" x2="320" y2="260" stroke="#10B981" stroke-width="1.5" stroke-dasharray="5,3"/>
+
+  <!-- Output Features -->
+  <rect x="640" y="60" width="145" height="60" rx="8" fill="#FEF3C7" stroke="#F59E0B" stroke-width="2"/>
+  <text x="712" y="87" text-anchor="middle" font-size="12" font-weight="bold" fill="#92400E">Q&amp;A 챗봇</text>
+  <text x="712" y="107" text-anchor="middle" font-size="11" fill="#B45309">출처 인용 답변</text>
+  <line x1="640" y1="90" x2="480" y2="195" stroke="#F59E0B" stroke-width="1.5" stroke-dasharray="5,3"/>
+
+  <rect x="640" y="155" width="145" height="60" rx="8" fill="#FEF3C7" stroke="#F59E0B" stroke-width="2"/>
+  <text x="712" y="182" text-anchor="middle" font-size="12" font-weight="bold" fill="#92400E">핵심 요약</text>
+  <text x="712" y="202" text-anchor="middle" font-size="11" fill="#B45309">자동 노트 생성</text>
+  <line x1="640" y1="185" x2="480" y2="220" stroke="#F59E0B" stroke-width="1.5" stroke-dasharray="5,3"/>
+
+  <rect x="640" y="250" width="145" height="60" rx="8" fill="#EDE9FE" stroke="#8B5CF6" stroke-width="2"/>
+  <text x="712" y="277" text-anchor="middle" font-size="12" font-weight="bold" fill="#4C1D95">팟캐스트 생성</text>
+  <text x="712" y="297" text-anchor="middle" font-size="11" fill="#6D28D9">AI 대화 오디오</text>
+  <line x1="640" y1="280" x2="480" y2="245" stroke="#8B5CF6" stroke-width="1.5" stroke-dasharray="5,3"/>
+
+  <rect x="640" y="345" width="145" height="60" rx="8" fill="#EDE9FE" stroke="#8B5CF6" stroke-width="2"/>
+  <text x="712" y="372" text-anchor="middle" font-size="12" font-weight="bold" fill="#4C1D95">마인드맵</text>
+  <text x="712" y="392" text-anchor="middle" font-size="11" fill="#6D28D9">개념 연결 시각화</text>
+  <line x1="640" y1="375" x2="480" y2="255" stroke="#8B5CF6" stroke-width="1.5" stroke-dasharray="5,3"/>
+
+  <!-- Stats -->
+  <rect x="330" y="295" width="140" height="60" rx="8" fill="#F3F4F6" stroke="#6B7280" stroke-width="1.5"/>
+  <text x="400" y="320" text-anchor="middle" font-size="12" font-weight="bold" fill="#374151">소스 한도</text>
+  <text x="400" y="342" text-anchor="middle" font-size="11" fill="#4B5563">최대 50개 소스</text>
+</svg>

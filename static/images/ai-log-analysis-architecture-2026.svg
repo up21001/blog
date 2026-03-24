@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#04131f"/>
+      <stop offset="100%" stop-color="#0f2740"/>
+    </linearGradient>
+    <style>
+      .title{font:700 42px system-ui,Segoe UI,sans-serif;fill:#fff}
+      .sub{font:500 20px system-ui,Segoe UI,sans-serif;fill:#cbd5e1}
+      .box{fill:#111827;stroke:#38bdf8;stroke-width:2;rx:18}
+      .box2{fill:#0f172a;stroke:#22c55e;stroke-width:2;rx:18}
+      .text{font:600 18px system-ui,Segoe UI,sans-serif;fill:#e5e7eb}
+      .small{font:500 15px system-ui,Segoe UI,sans-serif;fill:#94a3b8}
+      .arrow{stroke:#38bdf8;stroke-width:4;fill:none;marker-end:url(#m)}
+    </style>
+    <marker id="m" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 z" fill="#38bdf8"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <text x="60" y="82" class="title">AI Log Analysis Architecture</text>
+  <text x="60" y="118" class="sub">수집, 정규화, 저장, 분석, 대응을 분리한다</text>
+  <rect x="70" y="185" width="190" height="115" class="box"/>
+  <text x="98" y="228" class="text">App / Agent</text>
+  <text x="98" y="255" class="small">logs + traces</text>
+  <rect x="305" y="185" width="190" height="115" class="box2"/>
+  <text x="332" y="228" class="text">Normalizer</text>
+  <text x="332" y="255" class="small">schema + redaction</text>
+  <rect x="540" y="185" width="190" height="115" class="box"/>
+  <text x="570" y="228" class="text">Store</text>
+  <text x="570" y="255" class="small">log / trace / audit</text>
+  <rect x="775" y="185" width="180" height="115" class="box2"/>
+  <text x="805" y="228" class="text">Analyze</text>
+  <text x="805" y="255" class="small">dashboard / alert</text>
+  <rect x="1005" y="185" width="125" height="115" class="box"/>
+  <text x="1023" y="228" class="text">Runbook</text>
+  <text x="1028" y="255" class="small">response</text>
+  <path d="M260 243 H305" class="arrow"/>
+  <path d="M495 243 H540" class="arrow"/>
+  <path d="M730 243 H775" class="arrow"/>
+  <path d="M955 243 H1005" class="arrow"/>
+  <rect x="135" y="350" width="930" height="165" class="box"/>
+  <text x="175" y="395" class="text">운영 원칙</text>
+  <text x="175" y="428" class="small">1. 분석용 데이터와 감사용 데이터를 분리한다.</text>
+  <text x="175" y="455" class="small">2. trace와 event schema를 함께 저장한다.</text>
+  <text x="175" y="482" class="small">3. incident response는 alert에서 runbook까지 연결한다.</text>
+</svg>

@@ -1,0 +1,105 @@
+<svg width="800" height="450" viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg" font-family="'Malgun Gothic', sans-serif">
+  <!-- Background -->
+  <rect width="800" height="450" fill="#F9FAFB" rx="12"/>
+  <text x="400" y="38" text-anchor="middle" font-size="18" font-weight="bold" fill="#1E293B">RAG 아키텍처 — Retrieval-Augmented Generation</text>
+
+  <!-- Step 1: User Query -->
+  <rect x="30" y="70" width="130" height="60" rx="8" fill="#DBEAFE" stroke="#3B82F6" stroke-width="2"/>
+  <text x="95" y="96" text-anchor="middle" font-size="13" font-weight="bold" fill="#1E40AF">사용자 질문</text>
+  <text x="95" y="114" text-anchor="middle" font-size="11" fill="#1E40AF">"오늘 회의 요약"</text>
+
+  <!-- Arrow 1 -->
+  <line x1="160" y1="100" x2="200" y2="100" stroke="#6B7280" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Step 2: Embedding -->
+  <rect x="200" y="70" width="130" height="60" rx="8" fill="#EDE9FE" stroke="#8B5CF6" stroke-width="2"/>
+  <text x="265" y="96" text-anchor="middle" font-size="13" font-weight="bold" fill="#5B21B6">임베딩 변환</text>
+  <text x="265" y="114" text-anchor="middle" font-size="11" fill="#5B21B6">텍스트 → 벡터</text>
+
+  <!-- Arrow 2 -->
+  <line x1="330" y1="100" x2="370" y2="100" stroke="#6B7280" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Step 3: Vector DB -->
+  <rect x="370" y="70" width="130" height="60" rx="8" fill="#D1FAE5" stroke="#10B981" stroke-width="2"/>
+  <text x="435" y="96" text-anchor="middle" font-size="13" font-weight="bold" fill="#065F46">벡터 DB 검색</text>
+  <text x="435" y="114" text-anchor="middle" font-size="11" fill="#065F46">유사 청크 TOP-K</text>
+
+  <!-- Arrow 3 -->
+  <line x1="500" y1="100" x2="540" y2="100" stroke="#6B7280" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Step 4: LLM -->
+  <rect x="540" y="70" width="130" height="60" rx="8" fill="#FEF3C7" stroke="#F59E0B" stroke-width="2"/>
+  <text x="605" y="96" text-anchor="middle" font-size="13" font-weight="bold" fill="#92400E">LLM 생성</text>
+  <text x="605" y="114" text-anchor="middle" font-size="11" fill="#92400E">컨텍스트 + 질문</text>
+
+  <!-- Arrow 4 -->
+  <line x1="670" y1="100" x2="710" y2="100" stroke="#6B7280" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Step 5: Answer -->
+  <rect x="710" y="70" width="70" height="60" rx="8" fill="#F3F4F6" stroke="#6B7280" stroke-width="2"/>
+  <text x="745" y="96" text-anchor="middle" font-size="13" font-weight="bold" fill="#374151">답변</text>
+  <text x="745" y="114" text-anchor="middle" font-size="11" fill="#374151">출력</text>
+
+  <!-- Indexing Pipeline -->
+  <text x="400" y="175" text-anchor="middle" font-size="15" font-weight="bold" fill="#374151">— 인덱싱 파이프라인 —</text>
+
+  <!-- Doc Load -->
+  <rect x="50" y="195" width="120" height="55" rx="8" fill="#DBEAFE" stroke="#3B82F6" stroke-width="2"/>
+  <text x="110" y="218" text-anchor="middle" font-size="12" font-weight="bold" fill="#1E40AF">문서 로드</text>
+  <text x="110" y="234" text-anchor="middle" font-size="10" fill="#1E40AF">PDF / MD / CSV</text>
+
+  <line x1="170" y1="222" x2="205" y2="222" stroke="#6B7280" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Chunking -->
+  <rect x="205" y="195" width="120" height="55" rx="8" fill="#EDE9FE" stroke="#8B5CF6" stroke-width="2"/>
+  <text x="265" y="218" text-anchor="middle" font-size="12" font-weight="bold" fill="#5B21B6">청킹</text>
+  <text x="265" y="234" text-anchor="middle" font-size="10" fill="#5B21B6">500~1000 토큰</text>
+
+  <line x1="325" y1="222" x2="360" y2="222" stroke="#6B7280" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Embed -->
+  <rect x="360" y="195" width="120" height="55" rx="8" fill="#D1FAE5" stroke="#10B981" stroke-width="2"/>
+  <text x="420" y="218" text-anchor="middle" font-size="12" font-weight="bold" fill="#065F46">임베딩 생성</text>
+  <text x="420" y="234" text-anchor="middle" font-size="10" fill="#065F46">text-embedding-3</text>
+
+  <line x1="480" y1="222" x2="515" y2="222" stroke="#6B7280" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Store -->
+  <rect x="515" y="195" width="120" height="55" rx="8" fill="#FEF3C7" stroke="#F59E0B" stroke-width="2"/>
+  <text x="575" y="218" text-anchor="middle" font-size="12" font-weight="bold" fill="#92400E">벡터 저장</text>
+  <text x="575" y="234" text-anchor="middle" font-size="10" fill="#92400E">Chroma / Pinecone</text>
+
+  <!-- Bottom: Component List -->
+  <rect x="30" y="280" width="220" height="140" rx="8" fill="#F3F4F6" stroke="#6B7280" stroke-width="1.5"/>
+  <text x="140" y="302" text-anchor="middle" font-size="13" font-weight="bold" fill="#374151">핵심 컴포넌트</text>
+  <text x="45" y="322" font-size="11" fill="#374151">• Document Loader</text>
+  <text x="45" y="340" font-size="11" fill="#374151">• Text Splitter (청크 분할)</text>
+  <text x="45" y="358" font-size="11" fill="#374151">• Embedding Model</text>
+  <text x="45" y="376" font-size="11" fill="#374151">• Vector Store</text>
+  <text x="45" y="394" font-size="11" fill="#374151">• Retriever + LLM Chain</text>
+
+  <rect x="280" y="280" width="220" height="140" rx="8" fill="#DBEAFE" stroke="#3B82F6" stroke-width="1.5"/>
+  <text x="390" y="302" text-anchor="middle" font-size="13" font-weight="bold" fill="#1E40AF">주요 벡터 DB</text>
+  <text x="295" y="322" font-size="11" fill="#1E40AF">• Chroma (로컬, 무료)</text>
+  <text x="295" y="340" font-size="11" fill="#1E40AF">• Pinecone (클라우드 관리형)</text>
+  <text x="295" y="358" font-size="11" fill="#1E40AF">• Weaviate (오픈소스)</text>
+  <text x="295" y="376" font-size="11" fill="#1E40AF">• FAISS (Meta, 로컬)</text>
+  <text x="295" y="394" font-size="11" fill="#1E40AF">• Qdrant (Rust 기반)</text>
+
+  <rect x="530" y="280" width="240" height="140" rx="8" fill="#D1FAE5" stroke="#10B981" stroke-width="1.5"/>
+  <text x="650" y="302" text-anchor="middle" font-size="13" font-weight="bold" fill="#065F46">RAG 활용 사례</text>
+  <text x="545" y="322" font-size="11" fill="#065F46">• 사내 문서 Q&amp;A 챗봇</text>
+  <text x="545" y="340" font-size="11" fill="#065F46">• 법률·의료 문서 검색</text>
+  <text x="545" y="358" font-size="11" fill="#065F46">• 코드베이스 질의응답</text>
+  <text x="545" y="376" font-size="11" fill="#065F46">• 고객 지원 자동화</text>
+  <text x="545" y="394" font-size="11" fill="#065F46">• 리서치 어시스턴트</text>
+
+  <!-- Arrow marker -->
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#6B7280"/>
+    </marker>
+  </defs>
+
+  <text x="400" y="440" text-anchor="middle" font-size="10" fill="#9CA3AF">RAG Pipeline — Query Time (상단) + Indexing Time (중단)</text>
+</svg>

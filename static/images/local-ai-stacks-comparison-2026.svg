@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">LM Studio vs LocalAI vs AnythingLLM</title>
+  <desc id="desc">Local AI stacks comparison diagram</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#eef2ff"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#2563eb"/>
+      <stop offset="100%" stop-color="#0f766e"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="18" flood-color="#0f172a" flood-opacity="0.12"/>
+    </filter>
+    <style>
+      .title { font: 700 44px Inter, Arial, sans-serif; fill: #0f172a; }
+      .subtitle { font: 400 20px Inter, Arial, sans-serif; fill: #334155; }
+      .cardTitle { font: 700 30px Inter, Arial, sans-serif; fill: #0f172a; }
+      .cardText { font: 400 18px Inter, Arial, sans-serif; fill: #334155; }
+      .tag { font: 600 14px Inter, Arial, sans-serif; fill: #0f172a; letter-spacing: 0.04em; }
+      .footer { font: 500 16px Inter, Arial, sans-serif; fill: #475569; }
+    </style>
+  </defs>
+  <rect width="1200" height="675" rx="32" fill="url(#bg)"/>
+  <rect x="56" y="48" width="1088" height="120" rx="28" fill="#ffffff" filter="url(#shadow)"/>
+  <rect x="56" y="48" width="1088" height="12" rx="6" fill="url(#accent)"/>
+  <text x="96" y="112" class="title">Local AI Stacks Comparison</text>
+  <text x="96" y="146" class="subtitle">LM Studio for local inference, LocalAI for self-hosted API, AnythingLLM for knowledge chat</text>
+
+  <g filter="url(#shadow)">
+    <rect x="64" y="210" width="336" height="320" rx="28" fill="#ffffff"/>
+    <rect x="432" y="210" width="336" height="320" rx="28" fill="#ffffff"/>
+    <rect x="800" y="210" width="336" height="320" rx="28" fill="#ffffff"/>
+  </g>
+
+  <rect x="92" y="238" width="92" height="34" rx="17" fill="#dbeafe"/>
+  <text x="138" y="261" text-anchor="middle" class="tag">DESKTOP</text>
+  <text x="120" y="318" class="cardTitle">LM Studio</text>
+  <text x="92" y="362" class="cardText">• local model download</text>
+  <text x="92" y="396" class="cardText">• quick chat / prompt test</text>
+  <text x="92" y="430" class="cardText">• OpenAI compatible server</text>
+  <text x="92" y="464" class="cardText">• best for personal experimentation</text>
+
+  <rect x="460" y="238" width="112" height="34" rx="17" fill="#dcfce7"/>
+  <text x="516" y="261" text-anchor="middle" class="tag">SELF-HOSTED</text>
+  <text x="488" y="318" class="cardTitle">LocalAI</text>
+  <text x="460" y="362" class="cardText">• OpenAI compatible API</text>
+  <text x="460" y="396" class="cardText">• server-first deployment</text>
+  <text x="460" y="430" class="cardText">• on-prem / team use</text>
+  <text x="460" y="464" class="cardText">• best for infra control</text>
+
+  <rect x="828" y="238" width="120" height="34" rx="17" fill="#fef3c7"/>
+  <text x="888" y="261" text-anchor="middle" class="tag">WORKSPACE</text>
+  <text x="856" y="318" class="cardTitle">AnythingLLM</text>
+  <text x="828" y="362" class="cardText">• document and URL ingestion</text>
+  <text x="828" y="396" class="cardText">• RAG / knowledge chat</text>
+  <text x="828" y="430" class="cardText">• team workspace support</text>
+  <text x="828" y="464" class="cardText">• best for knowledge apps</text>
+
+  <path d="M400 370 L426 370" stroke="#94a3b8" stroke-width="5" stroke-linecap="round"/>
+  <path d="M426 370 L416 364 L416 376 Z" fill="#94a3b8"/>
+  <path d="M768 370 L794 370" stroke="#94a3b8" stroke-width="5" stroke-linecap="round"/>
+  <path d="M794 370 L784 364 L784 376 Z" fill="#94a3b8"/>
+
+  <text x="600" y="600" text-anchor="middle" class="footer">Choose by intent: local experimentation, self-hosted API, or knowledge chat</text>
+</svg>

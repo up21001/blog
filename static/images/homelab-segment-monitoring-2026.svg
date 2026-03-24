@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="sbg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#134e4a"/>
+    </linearGradient>
+    <marker id="sm" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#2dd4bf"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="630" fill="url(#sbg)"/>
+  <text x="48" y="80" fill="#ccfbf1" font-size="32" font-family="Segoe UI, Malgun Gothic, sans-serif" font-weight="700">세그먼트별 모니터링</text>
+  <text x="48" y="122" fill="#5eead4" font-size="19" font-family="Segoe UI, Malgun Gothic, sans-serif">VLAN · 서비스 · 스토리지</text>
+  <rect x="48" y="152" width="1104" height="450" rx="18" fill="#111827" stroke="#14b8a6" stroke-opacity="0.5"/>
+  <rect x="80" y="200" width="300" height="200" rx="14" fill="#0c1222" stroke="#475569"/>
+  <text x="104" y="240" fill="#e2e8f0" font-size="17" font-family="Segoe UI, Malgun Gothic, sans-serif" font-weight="600">VLAN / 네트워크</text>
+  <text x="104" y="278" fill="#cbd5e1" font-size="14" font-family="Segoe UI, Malgun Gothic, sans-serif">지연 · 손실 · 재전송</text>
+  <text x="104" y="308" fill="#94a3b8" font-size="13" font-family="Segoe UI, Malgun Gothic, sans-serif">경로 이상 우선 탐지</text>
+  <rect x="420" y="200" width="300" height="200" rx="14" fill="#0c1222" stroke="#475569"/>
+  <text x="444" y="240" fill="#e2e8f0" font-size="17" font-family="Segoe UI, Malgun Gothic, sans-serif" font-weight="600">서비스</text>
+  <text x="444" y="278" fill="#cbd5e1" font-size="14" font-family="Segoe UI, Malgun Gothic, sans-serif">응답시간 · 5xx · 큐</text>
+  <text x="444" y="308" fill="#94a3b8" font-size="13" font-family="Segoe UI, Malgun Gothic, sans-serif">앱 병목 분리</text>
+  <rect x="760" y="200" width="300" height="200" rx="14" fill="#0c1222" stroke="#475569"/>
+  <text x="784" y="240" fill="#e2e8f0" font-size="17" font-family="Segoe UI, Malgun Gothic, sans-serif" font-weight="600">스토리지</text>
+  <text x="784" y="278" fill="#cbd5e1" font-size="14" font-family="Segoe UI, Malgun Gothic, sans-serif">IOPS · 대기 · SMART</text>
+  <text x="784" y="308" fill="#94a3b8" font-size="13" font-family="Segoe UI, Malgun Gothic, sans-serif">데이터 계층 분리</text>
+  <line x1="230" y1="300" x2="410" y2="300" stroke="#334155" stroke-width="2"/>
+  <line x1="570" y1="300" x2="750" y2="300" stroke="#334155" stroke-width="2"/>
+  <line x1="910" y1="300" x2="600" y2="400" stroke="#2dd4bf" stroke-width="2" marker-end="url(#sm)"/>
+  <line x1="230" y1="300" x2="600" y2="400" stroke="#2dd4bf" stroke-width="2" marker-end="url(#sm)"/>
+  <line x1="570" y1="300" x2="600" y2="400" stroke="#2dd4bf" stroke-width="2" marker-end="url(#sm)"/>
+  <rect x="440" y="400" width="320" height="120" rx="14" fill="#164e63" stroke="#22d3ee"/>
+  <text x="464" y="442" fill="#ecfeff" font-size="17" font-family="Segoe UI, Malgun Gothic, sans-serif" font-weight="600">상관분석</text>
+  <text x="464" y="476" fill="#cffafe" font-size="14" font-family="Segoe UI, Malgun Gothic, sans-serif">루트 세그먼트 식별</text>
+  <text x="464" y="504" fill="#a5f3fc" font-size="13" font-family="Segoe UI, Malgun Gothic, sans-serif">중복 알람 억제</text>
+</svg>

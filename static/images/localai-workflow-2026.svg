@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">LocalAI Workflow 2026</title>
+  <desc id="desc">LocalAI complete local AI stack with OpenAI-compatible API, MCP, multimodal features, and privacy-first operation.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fff7ed"/>
+      <stop offset="100%" stop-color="#ffedd5"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#9a3412" flood-opacity="0.15"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#c2410c"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bg)"/>
+  <text x="70" y="88" font-size="38" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#7c2d12">LocalAI Workflow</text>
+  <text x="70" y="124" font-size="20" font-family="Segoe UI, Arial, sans-serif" fill="#c2410c">OpenAI-compatible API, multimodal models, embeddings, MCP, and local privacy</text>
+
+  <rect x="70" y="210" width="220" height="120" rx="24" fill="#fff" stroke="#fdba74" filter="url(#shadow)"/>
+  <text x="138" y="260" font-size="28" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#7c2d12">Client</text>
+  <text x="109" y="292" font-size="18" font-family="Segoe UI, Arial, sans-serif" fill="#c2410c">App, tool, agent</text>
+
+  <rect x="360" y="150" width="480" height="370" rx="28" fill="#fff" stroke="#fb923c" stroke-width="2" filter="url(#shadow)"/>
+  <text x="545" y="204" font-size="34" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#7c2d12">LocalAI</text>
+  <rect x="405" y="250" width="160" height="82" rx="18" fill="#fff7ed" stroke="#fdba74"/>
+  <text x="446" y="300" font-size="24" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#c2410c">API</text>
+  <rect x="625" y="250" width="160" height="82" rx="18" fill="#fff7ed" stroke="#fdba74"/>
+  <text x="650" y="300" font-size="24" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#c2410c">Models</text>
+  <rect x="405" y="370" width="160" height="82" rx="18" fill="#fff7ed" stroke="#fdba74"/>
+  <text x="430" y="410" font-size="22" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#c2410c">MCP</text>
+  <text x="438" y="437" font-size="18" font-family="Segoe UI, Arial, sans-serif" fill="#c2410c">support</text>
+  <rect x="625" y="370" width="160" height="82" rx="18" fill="#fff7ed" stroke="#fdba74"/>
+  <text x="638" y="410" font-size="22" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#c2410c">Privacy</text>
+  <text x="648" y="437" font-size="18" font-family="Segoe UI, Arial, sans-serif" fill="#c2410c">local only</text>
+
+  <rect x="920" y="210" width="210" height="120" rx="24" fill="#fff" stroke="#fdba74" filter="url(#shadow)"/>
+  <text x="950" y="260" font-size="28" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#7c2d12">OpenAI</text>
+  <text x="942" y="292" font-size="18" font-family="Segoe UI, Arial, sans-serif" fill="#c2410c">compatible clients</text>
+
+  <path d="M290 270 C325 270, 330 270, 360 270" fill="none" stroke="#c2410c" stroke-width="4" marker-end="url(#arrow)"/>
+  <path d="M845 270 C885 270, 900 270, 920 270" fill="none" stroke="#c2410c" stroke-width="4" marker-end="url(#arrow)"/>
+  <path d="M505 332 C505 350, 505 360, 505 370" fill="none" stroke="#c2410c" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M705 332 C705 350, 705 360, 705 370" fill="none" stroke="#c2410c" stroke-width="3" marker-end="url(#arrow)"/>
+</svg>

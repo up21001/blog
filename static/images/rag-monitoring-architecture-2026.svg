@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#ffffff"/>
+  <style>
+    .h1 { font: 700 40px sans-serif; fill: #0f172a; }
+    .h2 { font: 400 20px sans-serif; fill: #475569; }
+    .b { font: 700 20px sans-serif; fill: #0f172a; }
+    .t { font: 400 18px sans-serif; fill: #334155; }
+    .box { rx: 18; ry: 18; stroke: #fdba74; stroke-width: 2; }
+  </style>
+  <text x="70" y="76" class="h1">RAG Monitoring Architecture</text>
+  <text x="70" y="110" class="h2">로그, trace, metrics, alerts를 연결하는 구조</text>
+
+  <rect x="70" y="170" width="170" height="110" class="box" fill="#fff7ed"/>
+  <text x="155" y="212" text-anchor="middle" class="b">Query</text>
+  <text x="155" y="244" text-anchor="middle" class="t">질의 로그</text>
+
+  <rect x="280" y="170" width="170" height="110" class="box" fill="#dbeafe"/>
+  <text x="365" y="212" text-anchor="middle" class="b">Retrieval</text>
+  <text x="365" y="244" text-anchor="middle" class="t">검색 trace</text>
+
+  <rect x="490" y="170" width="170" height="110" class="box" fill="#ecfccb"/>
+  <text x="575" y="212" text-anchor="middle" class="b">Generation</text>
+  <text x="575" y="244" text-anchor="middle" class="t">답변 trace</text>
+
+  <rect x="700" y="170" width="170" height="110" class="box" fill="#fef9c3"/>
+  <text x="785" y="212" text-anchor="middle" class="b">Metrics</text>
+  <text x="785" y="244" text-anchor="middle" class="t">품질 / 비용</text>
+
+  <rect x="910" y="170" width="220" height="110" class="box" fill="#ffe4e6"/>
+  <text x="1020" y="212" text-anchor="middle" class="b">Alerts</text>
+  <text x="1020" y="244" text-anchor="middle" class="t">이상 탐지</text>
+
+  <line x1="240" y1="225" x2="280" y2="225" stroke="#64748b" stroke-width="4"/>
+  <line x1="450" y1="225" x2="490" y2="225" stroke="#64748b" stroke-width="4"/>
+  <line x1="660" y1="225" x2="700" y2="225" stroke="#64748b" stroke-width="4"/>
+  <line x1="870" y1="225" x2="910" y2="225" stroke="#64748b" stroke-width="4"/>
+
+  <rect x="70" y="350" width="1060" height="160" class="box" fill="#f8fafc"/>
+  <text x="100" y="395" class="b">운영 지점</text>
+  <text x="100" y="435" class="t">retrieval hit rate, groundedness, hallucination rate, latency, cost, regression alert를 같이 봅니다.</text>
+  <text x="100" y="470" class="t">RAG Ops와 Evaluation이 모니터링과 연결돼야 원인을 찾을 수 있습니다.</text>
+</svg>

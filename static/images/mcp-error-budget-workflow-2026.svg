@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">MCP error budget workflow</title>
+  <desc id="desc">Flow that tracks failure allowance and turns it into release policy.</desc>
+  <defs>
+    <linearGradient id="bg7" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#111827"/>
+      <stop offset="100%" stop-color="#dc2626"/>
+    </linearGradient>
+    <style>
+      .title { font: 700 36px Arial, sans-serif; fill: #fff; }
+      .sub { font: 400 18px Arial, sans-serif; fill: #fee2e2; }
+      .box { fill: #fee2e2; stroke: #f87171; stroke-width: 2; rx: 18; }
+      .text { font: 700 20px Arial, sans-serif; fill: #7f1d1d; }
+      .small { font: 400 15px Arial, sans-serif; fill: #7f1d1d; }
+      .arrow { stroke: #fff; stroke-width: 4; fill: none; marker-end: url(#arrow); }
+    </style>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 Z" fill="#fff"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg7)"/>
+  <text x="60" y="78" class="title">MCP Error Budget Workflow</text>
+  <text x="60" y="112" class="sub">Allowance -> burn rate -> release decision</text>
+  <rect x="60" y="180" width="220" height="110" class="box"/>
+  <rect x="330" y="180" width="220" height="110" class="box"/>
+  <rect x="600" y="180" width="220" height="110" class="box"/>
+  <rect x="870" y="180" width="270" height="110" class="box"/>
+  <text x="100" y="225" class="text">Allowed failures</text>
+  <text x="100" y="252" class="small">monthly or weekly</text>
+  <text x="370" y="225" class="text">Burn rate</text>
+  <text x="370" y="252" class="small">how fast budget is used</text>
+  <text x="642" y="225" class="text">Threshold</text>
+  <text x="642" y="252" class="small">warn / freeze</text>
+  <text x="915" y="225" class="text">Release policy</text>
+  <text x="915" y="252" class="small">continue, stop, rollback</text>
+  <path class="arrow" d="M280 235 L330 235"/>
+  <path class="arrow" d="M550 235 L600 235"/>
+  <path class="arrow" d="M820 235 L870 235"/>
+  <rect x="120" y="355" width="960" height="170" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.35)" stroke-width="2" rx="24"/>
+  <text x="150" y="405" class="text" fill="#fff">Policy</text>
+  <text x="150" y="438" class="sub">When the budget is burned too fast, stop shipping features and fix reliability first.</text>
+  <text x="150" y="470" class="sub">Error budget is a governance rule, not just a monitoring graph.</text>
+</svg>
+

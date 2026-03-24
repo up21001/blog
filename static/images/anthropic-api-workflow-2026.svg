@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#f4f8fc"/>
+  <rect x="56" y="56" width="1088" height="518" rx="34" fill="#ffffff" stroke="#d7e3ee" stroke-width="2"/>
+  <text x="88" y="118" font-family="Segoe UI, Arial" font-size="40" font-weight="700" fill="#16354f">Anthropic API Workflow</text>
+  <text x="88" y="156" font-family="Segoe UI, Arial" font-size="20" fill="#5a7288">Claude apps, tools, and automation in one loop</text>
+  <rect x="96" y="236" width="170" height="110" rx="22" fill="#214e72"/>
+  <text x="126" y="281" font-family="Segoe UI, Arial" font-size="26" font-weight="700" fill="#ffffff">App Input</text>
+  <text x="116" y="312" font-family="Segoe UI, Arial" font-size="16" fill="#dbe9f6">user request</text>
+  <rect x="330" y="198" width="260" height="186" rx="26" fill="#1f8a70"/>
+  <text x="380" y="252" font-family="Segoe UI, Arial" font-size="30" font-weight="700" fill="#ffffff">Anthropic API</text>
+  <text x="358" y="290" font-family="Segoe UI, Arial" font-size="17" fill="#e7fff7">messages, tools, context</text>
+  <text x="372" y="320" font-family="Segoe UI, Arial" font-size="17" fill="#e7fff7">Claude model orchestration</text>
+  <rect x="682" y="146" width="250" height="88" rx="20" fill="#d46a2c"/>
+  <text x="734" y="198" font-family="Segoe UI, Arial" font-size="26" font-weight="700" fill="#ffffff">Long Context</text>
+  <rect x="682" y="262" width="250" height="88" rx="20" fill="#d46a2c"/>
+  <text x="742" y="314" font-family="Segoe UI, Arial" font-size="26" font-weight="700" fill="#ffffff">Tools</text>
+  <rect x="682" y="378" width="250" height="88" rx="20" fill="#d46a2c"/>
+  <text x="720" y="430" font-family="Segoe UI, Arial" font-size="26" font-weight="700" fill="#ffffff">Structured Output</text>
+  <rect x="966" y="236" width="170" height="110" rx="22" fill="#2f6fb0"/>
+  <text x="1007" y="281" font-family="Segoe UI, Arial" font-size="26" font-weight="700" fill="#ffffff">Result</text>
+  <text x="984" y="312" font-family="Segoe UI, Arial" font-size="16" fill="#e8f2fb">response / action</text>
+  <path d="M266 291 L330 291" stroke="#577086" stroke-width="8" stroke-linecap="round"/>
+  <path d="M590 244 L682 190" stroke="#577086" stroke-width="8" stroke-linecap="round"/>
+  <path d="M590 291 L682 306" stroke="#577086" stroke-width="8" stroke-linecap="round"/>
+  <path d="M590 338 L682 422" stroke="#577086" stroke-width="8" stroke-linecap="round"/>
+  <path d="M932 291 L966 291" stroke="#577086" stroke-width="8" stroke-linecap="round"/>
+</svg>

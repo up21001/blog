@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg6" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fff7ed"/>
+      <stop offset="100%" stop-color="#ffedd5"/>
+    </linearGradient>
+    <style>
+      .title { font: 700 42px sans-serif; fill: #7c2d12; }
+      .sub { font: 400 20px sans-serif; fill: #9a3412; }
+      .boxTitle { font: 700 22px sans-serif; fill: #7c2d12; }
+      .boxText { font: 400 18px sans-serif; fill: #334155; }
+      .card { rx: 22; ry: 22; stroke: #fdba74; stroke-width: 2; }
+    </style>
+    <marker id="arrow6" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#c2410c"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg6)"/>
+  <text x="70" y="78" class="title">Invalidation Architecture</text>
+  <text x="70" y="114" class="sub">TTL / version / event / monitoring</text>
+
+  <rect x="70" y="170" width="180" height="120" class="card" fill="#ffffff"/>
+  <text x="160" y="218" text-anchor="middle" class="boxTitle">Cache Store</text>
+  <text x="160" y="250" text-anchor="middle" class="boxText">semantic cache</text>
+
+  <rect x="290" y="170" width="180" height="120" class="card" fill="#dbeafe"/>
+  <text x="380" y="218" text-anchor="middle" class="boxTitle">TTL</text>
+  <text x="380" y="250" text-anchor="middle" class="boxText">시간 만료</text>
+
+  <rect x="510" y="170" width="180" height="120" class="card" fill="#dcfce7"/>
+  <text x="600" y="218" text-anchor="middle" class="boxTitle">Version</text>
+  <text x="600" y="250" text-anchor="middle" class="boxText">문서 버전</text>
+
+  <rect x="730" y="170" width="180" height="120" class="card" fill="#fef9c3"/>
+  <text x="820" y="218" text-anchor="middle" class="boxTitle">Event</text>
+  <text x="820" y="250" text-anchor="middle" class="boxText">변경 감지</text>
+
+  <rect x="950" y="170" width="180" height="120" class="card" fill="#ffe4e6"/>
+  <text x="1040" y="218" text-anchor="middle" class="boxTitle">RAG Run</text>
+  <text x="1040" y="250" text-anchor="middle" class="boxText">재생성</text>
+
+  <line x1="250" y1="230" x2="290" y2="230" stroke="#c2410c" stroke-width="4" marker-end="url(#arrow6)"/>
+  <line x1="470" y1="230" x2="510" y2="230" stroke="#c2410c" stroke-width="4" marker-end="url(#arrow6)"/>
+  <line x1="690" y1="230" x2="730" y2="230" stroke="#c2410c" stroke-width="4" marker-end="url(#arrow6)"/>
+  <line x1="910" y1="230" x2="950" y2="230" stroke="#c2410c" stroke-width="4" marker-end="url(#arrow6)"/>
+
+  <rect x="70" y="360" width="1060" height="170" class="card" fill="#ffffff"/>
+  <text x="100" y="402" class="boxTitle">운영 포인트</text>
+  <text x="100" y="442" class="boxText">무효화 규칙이 곧 stale answer 방지 규칙이다. 캐시와 원본 데이터 변경 경로를 함께 관리해야 한다.</text>
+  <text x="100" y="482" class="boxText">RAG Monitoring에서 invalidation count와 hit rate를 같이 보면 캐시 정책의 안정성을 읽을 수 있다.</text>
+</svg>

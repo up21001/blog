@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="g_agent_recovery_runbook_lab_68_2026" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/><stop offset="100%" stop-color="#1e3a5f"/>
+    </linearGradient>
+    <marker id="m_agent_recovery_runbook_lab_68_2026" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="630" fill="url(#g_agent_recovery_runbook_lab_68_2026)"/>
+  <rect x="40" y="40" width="1120" height="550" rx="20" fill="#111827" stroke="#334155"/>
+  <text x="72" y="110" fill="#e2e8f0" font-size="36" font-family="Segoe UI, Malgun Gothic, sans-serif" font-weight="700">에이전트 복구 런북 실험 68차</text>
+  <text x="72" y="168" fill="#93c5fd" font-size="22" font-family="Segoe UI, Malgun Gothic, sans-serif">MTTD · MTTR · 재발률</text>
+  <line x1="72" y1="200" x2="1128" y2="200" stroke="#334155" stroke-width="2"/>
+  <rect x="72" y="240" width="200" height="72" rx="12" fill="#1e3a8a" stroke="#60a5fa"/><text x="112" y="284" fill="#dbeafe" font-size="16" font-family="Segoe UI, sans-serif">Baseline</text>
+  <rect x="300" y="240" width="200" height="72" rx="12" fill="#1e3a8a" stroke="#60a5fa"/><text x="352" y="284" fill="#dbeafe" font-size="16" font-family="Segoe UI, sans-serif">Experiment</text>
+  <rect x="528" y="240" width="200" height="72" rx="12" fill="#1e3a8a" stroke="#60a5fa"/><text x="580" y="284" fill="#dbeafe" font-size="16" font-family="Segoe UI, sans-serif">Gate</text>
+  <rect x="756" y="240" width="200" height="72" rx="12" fill="#14532d" stroke="#22c55e"/><text x="810" y="284" fill="#dcfce7" font-size="16" font-family="Segoe UI, sans-serif">Ship</text>
+  <path d="M272 276 L300 276" stroke="#94a3b8" stroke-width="3" marker-end="url(#m_agent_recovery_runbook_lab_68_2026)"/>
+  <path d="M500 276 L528 276" stroke="#94a3b8" stroke-width="3" marker-end="url(#m_agent_recovery_runbook_lab_68_2026)"/>
+  <path d="M728 276 L756 276" stroke="#94a3b8" stroke-width="3" marker-end="url(#m_agent_recovery_runbook_lab_68_2026)"/>
+  <text x="72" y="380" fill="#cbd5e1" font-size="18" font-family="Segoe UI, Malgun Gothic, sans-serif">실험 → 게이트 → 배포 → 기록 루프</text>
+  <text x="72" y="430" fill="#64748b" font-size="15" font-family="Segoe UI, Malgun Gothic, sans-serif">차수별 지표는 본문 표준과 동일하게 추적</text>
+</svg>

@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="840" viewBox="0 0 1400 840">
+  <defs>
+    <linearGradient id="bg3" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#07111f"/>
+      <stop offset="100%" stop-color="#162d46"/>
+    </linearGradient>
+    <style>
+      .title { font: 700 42px Arial, sans-serif; fill: #ffffff; }
+      .sub { font: 400 18px Arial, sans-serif; fill: #bfd7ee; }
+      .head { font: 700 20px Arial, sans-serif; fill: #ffffff; }
+      .cell { font: 400 17px Arial, sans-serif; fill: #e7f0fb; }
+      .cellDark { font: 700 17px Arial, sans-serif; fill: #0f2236; }
+      .grid { fill: #18324d; stroke: #5fa8d3; stroke-width: 2; }
+      .grid2 { fill: #1f3d5e; stroke: #5fa8d3; stroke-width: 2; }
+      .pill { fill: #ffffff; opacity: 0.9; }
+    </style>
+  </defs>
+  <rect width="1400" height="840" fill="url(#bg3)"/>
+  <text x="70" y="86" class="title">Model platform comparison</text>
+  <text x="70" y="122" class="sub">Cohere, Mistral, Perplexity API, Cerebras, SambaNova at a glance</text>
+
+  <rect x="70" y="180" width="1260" height="86" rx="20" ry="20" class="grid2"/>
+  <text x="100" y="233" class="head">Platform</text>
+  <text x="380" y="233" class="head">Core positioning</text>
+  <text x="785" y="233" class="head">Best for</text>
+  <text x="1110" y="233" class="head">Keyword</text>
+
+  <rect x="70" y="286" width="1260" height="78" rx="18" ry="18" class="grid"/>
+  <text x="100" y="334" class="cell">Cohere</text>
+  <text x="380" y="334" class="cell">Enterprise NLP platform</text>
+  <text x="785" y="334" class="cell">chat, embed, rerank workflows</text>
+  <text x="1110" y="334" class="cell">search quality</text>
+
+  <rect x="70" y="374" width="1260" height="78" rx="18" ry="18" class="grid"/>
+  <text x="100" y="422" class="cell">Mistral</text>
+  <text x="380" y="422" class="cell">Broad model platform + deployment</text>
+  <text x="785" y="422" class="cell">reasoning, agents, self-hosting</text>
+  <text x="1110" y="422" class="cell">flexibility</text>
+
+  <rect x="70" y="462" width="1260" height="78" rx="18" ry="18" class="grid"/>
+  <text x="100" y="510" class="cell">Perplexity API</text>
+  <text x="380" y="510" class="cell">Real-time web research API</text>
+  <text x="785" y="510" class="cell">citation-based Q&A</text>
+  <text x="1110" y="510" class="cell">live search</text>
+
+  <rect x="70" y="550" width="1260" height="78" rx="18" ry="18" class="grid"/>
+  <text x="100" y="598" class="cell">Cerebras</text>
+  <text x="380" y="598" class="cell">Speed-first inference platform</text>
+  <text x="785" y="598" class="cell">low latency conversational apps</text>
+  <text x="1110" y="598" class="cell">fast inference</text>
+
+  <rect x="70" y="638" width="1260" height="78" rx="18" ry="18" class="grid"/>
+  <text x="100" y="686" class="cell">SambaNova</text>
+  <text x="380" y="686" class="cell">Enterprise model platform</text>
+  <text x="785" y="686" class="cell">OpenAI compatibility and custom checkpoints</text>
+  <text x="1110" y="686" class="cell">enterprise ops</text>
+
+  <rect x="70" y="748" width="1260" height="40" rx="18" ry="18" class="pill"/>
+  <text x="100" y="774" class="cellDark">This diagram is about platform fit, not model popularity.</text>
+</svg>

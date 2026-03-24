@@ -1,0 +1,93 @@
+<svg width="800" height="450" viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg" font-family="'Malgun Gothic', sans-serif">
+  <!-- Background -->
+  <rect width="800" height="450" fill="#F8FAFC" rx="12"/>
+  <text x="400" y="36" text-anchor="middle" font-size="18" font-weight="bold" fill="#1E293B">Terraform IaC 워크플로우</text>
+
+  <!-- Workflow Steps -->
+  <!-- Step 1: Write -->
+  <rect x="30" y="65" width="140" height="100" rx="8" fill="#EDE9FE" stroke="#8B5CF6" stroke-width="2"/>
+  <text x="100" y="92" text-anchor="middle" font-size="22">✍️</text>
+  <text x="100" y="115" text-anchor="middle" font-size="14" font-weight="bold" fill="#6D28D9">Write</text>
+  <text x="100" y="133" text-anchor="middle" font-size="11" fill="#7C3AED">HCL 코드 작성</text>
+  <text x="100" y="151" text-anchor="middle" font-size="11" fill="#7C3AED">main.tf</text>
+
+  <!-- Arrow -->
+  <line x1="170" y1="115" x2="208" y2="115" stroke="#6B7280" stroke-width="2" marker-end="url(#tfarrow)"/>
+
+  <!-- Step 2: Init -->
+  <rect x="208" y="65" width="140" height="100" rx="8" fill="#DBEAFE" stroke="#3B82F6" stroke-width="2"/>
+  <text x="278" y="92" text-anchor="middle" font-size="22">⚙️</text>
+  <text x="278" y="115" text-anchor="middle" font-size="14" font-weight="bold" fill="#1D4ED8">Init</text>
+  <text x="278" y="133" text-anchor="middle" font-size="11" fill="#3B82F6">terraform init</text>
+  <text x="278" y="151" text-anchor="middle" font-size="11" fill="#3B82F6">Provider 다운로드</text>
+
+  <!-- Arrow -->
+  <line x1="348" y1="115" x2="386" y2="115" stroke="#6B7280" stroke-width="2" marker-end="url(#tfarrow)"/>
+
+  <!-- Step 3: Plan -->
+  <rect x="386" y="65" width="140" height="100" rx="8" fill="#FEF3C7" stroke="#F59E0B" stroke-width="2"/>
+  <text x="456" y="92" text-anchor="middle" font-size="22">🔍</text>
+  <text x="456" y="115" text-anchor="middle" font-size="14" font-weight="bold" fill="#92400E">Plan</text>
+  <text x="456" y="133" text-anchor="middle" font-size="11" fill="#B45309">terraform plan</text>
+  <text x="456" y="151" text-anchor="middle" font-size="11" fill="#B45309">변경 사항 미리보기</text>
+
+  <!-- Arrow -->
+  <line x1="526" y1="115" x2="564" y2="115" stroke="#6B7280" stroke-width="2" marker-end="url(#tfarrow)"/>
+
+  <!-- Step 4: Apply -->
+  <rect x="564" y="65" width="140" height="100" rx="8" fill="#D1FAE5" stroke="#10B981" stroke-width="2"/>
+  <text x="634" y="92" text-anchor="middle" font-size="22">🚀</text>
+  <text x="634" y="115" text-anchor="middle" font-size="14" font-weight="bold" fill="#065F46">Apply</text>
+  <text x="634" y="133" text-anchor="middle" font-size="11" fill="#10B981">terraform apply</text>
+  <text x="634" y="151" text-anchor="middle" font-size="11" fill="#10B981">실제 인프라 생성</text>
+
+  <!-- HCL Code Example -->
+  <rect x="30" y="195" width="360" height="220" rx="8" fill="#1E293B" stroke="#475569" stroke-width="1.5"/>
+  <text x="50" y="220" font-size="13" font-weight="bold" fill="#94A3B8">main.tf 예시</text>
+  <text x="50" y="243" font-size="11" fill="#7DD3FC">terraform &#123;</text>
+  <text x="65" y="261" font-size="11" fill="#94A3B8">  required_providers &#123;</text>
+  <text x="80" y="279" font-size="11" fill="#86EFAC">    aws = &#123;</text>
+  <text x="95" y="297" font-size="11" fill="#FCA5A5">      source  = "hashicorp/aws"</text>
+  <text x="95" y="315" font-size="11" fill="#FCA5A5">      version = "~> 5.0"</text>
+  <text x="80" y="333" font-size="11" fill="#86EFAC">    &#125;</text>
+  <text x="65" y="351" font-size="11" fill="#94A3B8">  &#125;</text>
+  <text x="50" y="369" font-size="11" fill="#7DD3FC">&#125;</text>
+  <text x="50" y="387" font-size="11" fill="#7DD3FC">resource "aws_instance" "web" &#123;</text>
+  <text x="65" y="405" font-size="11" fill="#FCA5A5">  ami           = "ami-0abcdef"</text>
+
+  <!-- Resource Cards -->
+  <rect x="420" y="195" width="165" height="100" rx="8" fill="#DBEAFE" stroke="#3B82F6" stroke-width="1.5"/>
+  <text x="503" y="220" text-anchor="middle" font-size="13" font-weight="bold" fill="#1D4ED8">AWS 리소스</text>
+  <text x="440" y="242" font-size="11" fill="#374151">aws_instance (EC2)</text>
+  <text x="440" y="260" font-size="11" fill="#374151">aws_s3_bucket (S3)</text>
+  <text x="440" y="278" font-size="11" fill="#374151">aws_vpc (VPC)</text>
+  <text x="440" y="296" font-size="11" fill="#374151">aws_rds_cluster (RDS)</text>
+
+  <rect x="605" y="195" width="165" height="100" rx="8" fill="#FEF3C7" stroke="#F59E0B" stroke-width="1.5"/>
+  <text x="688" y="220" text-anchor="middle" font-size="13" font-weight="bold" fill="#92400E">Cloudflare 리소스</text>
+  <text x="625" y="242" font-size="11" fill="#374151">cloudflare_record</text>
+  <text x="625" y="260" font-size="11" fill="#374151">cloudflare_zone</text>
+  <text x="625" y="278" font-size="11" fill="#374151">cloudflare_worker</text>
+  <text x="625" y="296" font-size="11" fill="#374151">cloudflare_pages</text>
+
+  <rect x="420" y="310" width="165" height="100" rx="8" fill="#D1FAE5" stroke="#10B981" stroke-width="1.5"/>
+  <text x="503" y="335" text-anchor="middle" font-size="13" font-weight="bold" fill="#065F46">State 관리</text>
+  <text x="440" y="357" font-size="11" fill="#374151">terraform.tfstate</text>
+  <text x="440" y="375" font-size="11" fill="#374151">Remote: S3 + DynamoDB</text>
+  <text x="440" y="393" font-size="11" fill="#374151">협업 시 필수 원격 저장</text>
+
+  <rect x="605" y="310" width="165" height="100" rx="8" fill="#EDE9FE" stroke="#8B5CF6" stroke-width="1.5"/>
+  <text x="688" y="335" text-anchor="middle" font-size="13" font-weight="bold" fill="#6D28D9">모듈화</text>
+  <text x="625" y="357" font-size="11" fill="#374151">module "vpc" &#123;...&#125;</text>
+  <text x="625" y="375" font-size="11" fill="#374151">재사용 가능한 구조</text>
+  <text x="625" y="393" font-size="11" fill="#374151">Terraform Registry</text>
+
+  <!-- Arrow marker -->
+  <defs>
+    <marker id="tfarrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#6B7280"/>
+    </marker>
+  </defs>
+
+  <text x="400" y="440" text-anchor="middle" font-size="11" fill="#9CA3AF">Terraform — HCL 코드로 클라우드 인프라를 선언적으로 정의하고 관리</text>
+</svg>

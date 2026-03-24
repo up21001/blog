@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#f8fafc"/>
+  <rect x="48" y="42" width="1104" height="546" rx="34" fill="#fff" stroke="#ddd6fe" stroke-width="2"/>
+  <text x="82" y="106" font-size="40" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#7c3aed">Gateway Strategy Choice</text>
+  <rect x="88" y="230" width="180" height="116" rx="24" fill="#f5f3ff" stroke="#a78bfa"/>
+  <text x="136" y="277" font-size="28" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#5b21b6">App</text>
+  <text x="120" y="309" font-size="18" font-family="Segoe UI, Arial, sans-serif" fill="#7c3aed">integrations</text>
+  <rect x="340" y="180" width="232" height="226" rx="28" fill="#f5f3ff" stroke="#a78bfa"/>
+  <text x="390" y="232" font-size="30" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#5b21b6">Choose</text>
+  <text x="374" y="266" font-size="18" font-family="Segoe UI, Arial, sans-serif" fill="#7c3aed">routing policy</text>
+  <rect x="372" y="296" width="168" height="38" rx="12" fill="#fff" stroke="#a78bfa"/>
+  <text x="393" y="321" font-size="18" font-family="Segoe UI, Arial, sans-serif" fill="#7c3aed">simple proxy</text>
+  <rect x="624" y="154" width="178" height="116" rx="24" fill="#fff" stroke="#c4b5fd"/>
+  <text x="666" y="200" font-size="26" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#5b21b6">LiteLLM</text>
+  <text x="650" y="232" font-size="18" font-family="Segoe UI, Arial, sans-serif" fill="#7c3aed">open source</text>
+  <rect x="624" y="344" width="178" height="116" rx="24" fill="#fff" stroke="#c4b5fd"/>
+  <text x="664" y="390" font-size="26" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#5b21b6">Portkey</text>
+  <text x="648" y="422" font-size="18" font-family="Segoe UI, Arial, sans-serif" fill="#7c3aed">policy + guardrails</text>
+  <rect x="860" y="230" width="252" height="116" rx="24" fill="#f5f3ff" stroke="#a78bfa"/>
+  <text x="926" y="277" font-size="28" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#5b21b6">Operate</text>
+  <text x="892" y="309" font-size="18" font-family="Segoe UI, Arial, sans-serif" fill="#7c3aed">logs, costs, fallback</text>
+  <path d="M268 288 C305 288, 310 288, 340 288" fill="none" stroke="#7c3aed" stroke-width="4"/>
+  <path d="M572 250 C598 240, 604 228, 624 212" fill="none" stroke="#7c3aed" stroke-width="4"/>
+  <path d="M572 324 C598 338, 604 352, 624 402" fill="none" stroke="#7c3aed" stroke-width="4"/>
+  <path d="M802 212 C830 224, 842 236, 860 286" fill="none" stroke="#7c3aed" stroke-width="4"/>
+  <path d="M802 402 C830 378, 842 360, 860 286" fill="none" stroke="#7c3aed" stroke-width="4"/>
+</svg>

@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1b1020"/>
+      <stop offset="100%" stop-color="#2c1630"/>
+    </linearGradient>
+    <style>
+      .title { font: 700 40px Arial, sans-serif; fill: #fff7ed; }
+      .sub { font: 400 18px Arial, sans-serif; fill: #f5d0fe; }
+      .diamond { fill: #2f1b3b; stroke: #a855f7; stroke-width: 2; }
+      .box { fill: #24152f; stroke: #c084fc; stroke-width: 2; rx: 18; }
+      .txt { font: 700 20px Arial, sans-serif; fill: #fff7ed; }
+      .small { font: 400 15px Arial, sans-serif; fill: #f5d0fe; }
+      .arrow { stroke: #d8b4fe; stroke-width: 4; fill: none; marker-end: url(#m); }
+    </style>
+    <marker id="m" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 Z" fill="#d8b4fe"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <text x="80" y="95" class="title">Choice Flow for Failure Recovery</text>
+  <text x="80" y="130" class="sub">retry  fallback  human review  stop</text>
+  <rect x="80" y="210" width="200" height="120" class="box"/>
+  <text x="120" y="260" class="txt">Failure?</text>
+  <text x="120" y="290" class="small">observe signal</text>
+  <polygon points="470,210 560,270 470,330 380,270" class="diamond"/>
+  <text x="420" y="260" class="txt">Transient?</text>
+  <text x="405" y="288" class="small">timeout / limit</text>
+  <rect x="700" y="160" width="180" height="110" class="box"/>
+  <text x="745" y="207" class="txt">Retry</text>
+  <text x="730" y="235" class="small">backoff + jitter</text>
+  <rect x="700" y="310" width="180" height="110" class="box"/>
+  <text x="732" y="357" class="txt">Fallback</text>
+  <text x="725" y="385" class="small">alt tool / model</text>
+  <rect x="920" y="230" width="170" height="110" class="box"/>
+  <text x="950" y="277" class="txt">Review</text>
+  <text x="940" y="305" class="small">human gate</text>
+  <path d="M280 270 L370 270" class="arrow"/>
+  <path d="M560 250 L690 205" class="arrow"/>
+  <path d="M560 290 L690 345" class="arrow"/>
+  <path d="M880 215 L910 250" class="arrow"/>
+  <rect x="80" y="430" width="1030" height="110" rx="20" fill="#211126" stroke="#5b21b6"/>
+  <text x="115" y="470" class="txt">Decision rule</text>
+  <text x="115" y="503" class="small">Retry only for transient failures. Structural failures should be repaired once, then escalated.</text>
+</svg>

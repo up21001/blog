@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <text x="80" y="92" fill="#e5e7eb" font-family="Arial, sans-serif" font-size="48" font-weight="700">Voice Vision Agent Choice Flow</text>
+  <text x="80" y="132" fill="#94a3b8" font-family="Arial, sans-serif" font-size="22">When voice and camera should be combined</text>
+  <rect x="100" y="200" width="230" height="112" rx="22" fill="#1f2937" stroke="#334155"/>
+  <rect x="350" y="200" width="230" height="112" rx="22" fill="#1f2937" stroke="#334155"/>
+  <rect x="600" y="200" width="230" height="112" rx="22" fill="#1f2937" stroke="#334155"/>
+  <rect x="850" y="200" width="230" height="112" rx="22" fill="#1f2937" stroke="#334155"/>
+  <text x="215" y="238" fill="#f8fafc" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" font-weight="700">Need live guidance?</text>
+  <text x="215" y="266" fill="#94a3b8" text-anchor="middle" font-family="Arial, sans-serif" font-size="16">voice first</text>
+  <text x="465" y="238" fill="#f8fafc" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" font-weight="700">Need visual proof?</text>
+  <text x="465" y="266" fill="#94a3b8" text-anchor="middle" font-family="Arial, sans-serif" font-size="16">camera or screen</text>
+  <text x="715" y="238" fill="#f8fafc" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" font-weight="700">Need one session?</text>
+  <text x="715" y="266" fill="#94a3b8" text-anchor="middle" font-family="Arial, sans-serif" font-size="16">shared context</text>
+  <text x="965" y="238" fill="#f8fafc" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" font-weight="700">Yes -> combine</text>
+  <line x1="330" y1="256" x2="350" y2="256" stroke="#fb7185" stroke-width="6"/>
+  <line x1="580" y1="256" x2="600" y2="256" stroke="#fb7185" stroke-width="6"/>
+  <line x1="830" y1="256" x2="850" y2="256" stroke="#fb7185" stroke-width="6"/>
+  <rect x="170" y="400" width="860" height="120" rx="24" fill="#050816" stroke="#334155"/>
+  <text x="600" y="448" fill="#f8fafc" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="700">Choose voice+vision when the user needs guidance, not just answers</text>
+  <text x="600" y="484" fill="#94a3b8" text-anchor="middle" font-family="Arial, sans-serif" font-size="18">The design goal is low-latency context fusion, not raw modality count</text>
+</svg>

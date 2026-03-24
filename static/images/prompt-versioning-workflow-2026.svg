@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#0f172a"/>
+  <text x="60" y="92" fill="#f8fafc" font-family="Arial, sans-serif" font-size="42" font-weight="700">Prompt Versioning Workflow</text>
+  <g font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#0f172a">
+    <rect x="84" y="220" width="170" height="88" rx="18" fill="#bfdbfe"/><text x="122" y="272">Draft</text>
+    <rect x="290" y="220" width="170" height="88" rx="18" fill="#bbf7d0"/><text x="322" y="272">Review</text>
+    <rect x="496" y="220" width="170" height="88" rx="18" fill="#fde68a"/><text x="529" y="272">Test</text>
+    <rect x="702" y="220" width="170" height="88" rx="18" fill="#fbcfe8"/><text x="732" y="272">Release</text>
+    <rect x="908" y="220" width="170" height="88" rx="18" fill="#fecaca"/><text x="936" y="272">Rollback</text>
+  </g>
+  <g stroke="#e2e8f0" stroke-width="6" fill="none" stroke-linecap="round">
+    <path d="M254 264h36"/>
+    <path d="M460 264h36"/>
+    <path d="M666 264h36"/>
+    <path d="M872 264h36"/>
+  </g>
+</svg>

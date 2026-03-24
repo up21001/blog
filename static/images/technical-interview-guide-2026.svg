@@ -1,0 +1,68 @@
+<svg width="800" height="450" viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg" font-family="'Malgun Gothic', sans-serif">
+  <rect width="800" height="450" fill="#F8FAFC" rx="12"/>
+  <text x="400" y="38" text-anchor="middle" font-size="20" font-weight="bold" fill="#1E293B">기술 인터뷰 준비 로드맵 2026</text>
+  <text x="400" y="58" text-anchor="middle" font-size="13" fill="#64748B">코딩 테스트 → 기술 면접 → 시스템 설계 → 행동 면접</text>
+
+  <!-- 4단계 박스 -->
+  <!-- 1단계: 코딩 테스트 -->
+  <rect x="40" y="80" width="160" height="260" rx="10" fill="#DBEAFE" stroke="#3B82F6" stroke-width="2"/>
+  <text x="120" y="108" text-anchor="middle" font-size="14" font-weight="bold" fill="#1D4ED8">1단계</text>
+  <text x="120" y="126" text-anchor="middle" font-size="13" font-weight="bold" fill="#1E293B">코딩 테스트</text>
+  <line x1="56" y1="136" x2="184" y2="136" stroke="#93C5FD" stroke-width="1"/>
+  <text x="120" y="156" text-anchor="middle" font-size="11" fill="#1D4ED8">자료구조 기초</text>
+  <text x="120" y="175" text-anchor="middle" font-size="11" fill="#1D4ED8">알고리즘 패턴</text>
+  <text x="120" y="194" text-anchor="middle" font-size="11" fill="#1D4ED8">LeetCode 150선</text>
+  <text x="120" y="213" text-anchor="middle" font-size="11" fill="#1D4ED8">시간복잡도 분석</text>
+  <text x="120" y="232" text-anchor="middle" font-size="11" fill="#1D4ED8">언어별 내장 함수</text>
+  <rect x="60" y="298" width="120" height="26" rx="6" fill="#3B82F6"/>
+  <text x="120" y="316" text-anchor="middle" font-size="11" font-weight="bold" fill="white">6 – 8주</text>
+
+  <!-- 2단계: 기술 면접 -->
+  <rect x="220" y="80" width="160" height="260" rx="10" fill="#D1FAE5" stroke="#10B981" stroke-width="2"/>
+  <text x="300" y="108" text-anchor="middle" font-size="14" font-weight="bold" fill="#065F46">2단계</text>
+  <text x="300" y="126" text-anchor="middle" font-size="13" font-weight="bold" fill="#1E293B">기술 면접</text>
+  <line x1="236" y1="136" x2="364" y2="136" stroke="#6EE7B7" stroke-width="1"/>
+  <text x="300" y="156" text-anchor="middle" font-size="11" fill="#065F46">CS 기초 정리</text>
+  <text x="300" y="175" text-anchor="middle" font-size="11" fill="#065F46">프레임워크 심화</text>
+  <text x="300" y="194" text-anchor="middle" font-size="11" fill="#065F46">프로젝트 설명 연습</text>
+  <text x="300" y="213" text-anchor="middle" font-size="11" fill="#065F46">트레이드오프 토론</text>
+  <text x="300" y="232" text-anchor="middle" font-size="11" fill="#065F46">라이브 코딩 연습</text>
+  <rect x="240" y="298" width="120" height="26" rx="6" fill="#10B981"/>
+  <text x="300" y="316" text-anchor="middle" font-size="11" font-weight="bold" fill="white">4 – 6주</text>
+
+  <!-- 3단계: 시스템 설계 -->
+  <rect x="400" y="80" width="160" height="260" rx="10" fill="#FEF3C7" stroke="#F59E0B" stroke-width="2"/>
+  <text x="480" y="108" text-anchor="middle" font-size="14" font-weight="bold" fill="#92400E">3단계</text>
+  <text x="480" y="126" text-anchor="middle" font-size="13" font-weight="bold" fill="#1E293B">시스템 설계</text>
+  <line x1="416" y1="136" x2="544" y2="136" stroke="#FCD34D" stroke-width="1"/>
+  <text x="480" y="156" text-anchor="middle" font-size="11" fill="#92400E">확장성 패턴</text>
+  <text x="480" y="175" text-anchor="middle" font-size="11" fill="#92400E">DB 설계 원칙</text>
+  <text x="480" y="194" text-anchor="middle" font-size="11" fill="#92400E">캐싱 전략</text>
+  <text x="480" y="213" text-anchor="middle" font-size="11" fill="#92400E">메시지 큐/스트림</text>
+  <text x="480" y="232" text-anchor="middle" font-size="11" fill="#92400E">모의 설계 연습</text>
+  <rect x="420" y="298" width="120" height="26" rx="6" fill="#F59E0B"/>
+  <text x="480" y="316" text-anchor="middle" font-size="11" font-weight="bold" fill="white">4 – 6주</text>
+
+  <!-- 4단계: 행동 면접 -->
+  <rect x="580" y="80" width="180" height="260" rx="10" fill="#EDE9FE" stroke="#8B5CF6" stroke-width="2"/>
+  <text x="670" y="108" text-anchor="middle" font-size="14" font-weight="bold" fill="#5B21B6">4단계</text>
+  <text x="670" y="126" text-anchor="middle" font-size="13" font-weight="bold" fill="#1E293B">행동 면접</text>
+  <line x1="596" y1="136" x2="744" y2="136" stroke="#C4B5FD" stroke-width="1"/>
+  <text x="670" y="156" text-anchor="middle" font-size="11" fill="#5B21B6">STAR 기법 정리</text>
+  <text x="670" y="175" text-anchor="middle" font-size="11" fill="#5B21B6">리더십 경험 발굴</text>
+  <text x="670" y="194" text-anchor="middle" font-size="11" fill="#5B21B6">갈등 해결 사례</text>
+  <text x="670" y="213" text-anchor="middle" font-size="11" fill="#5B21B6">실패 경험 정리</text>
+  <text x="670" y="232" text-anchor="middle" font-size="11" fill="#5B21B6">회사별 가치관 연구</text>
+  <rect x="610" y="298" width="120" height="26" rx="6" fill="#8B5CF6"/>
+  <text x="670" y="316" text-anchor="middle" font-size="11" font-weight="bold" fill="white">2 – 3주</text>
+
+  <!-- 화살표 -->
+  <text x="206" y="218" text-anchor="middle" font-size="20" fill="#94A3B8">→</text>
+  <text x="386" y="218" text-anchor="middle" font-size="20" fill="#94A3B8">→</text>
+  <text x="566" y="218" text-anchor="middle" font-size="20" fill="#94A3B8">→</text>
+
+  <!-- 총 기간 -->
+  <rect x="200" y="360" width="400" height="68" rx="10" fill="#F3F4F6" stroke="#6B7280" stroke-width="1.5"/>
+  <text x="400" y="386" text-anchor="middle" font-size="13" font-weight="bold" fill="#374151">총 준비 기간 권장</text>
+  <text x="400" y="408" text-anchor="middle" font-size="20" font-weight="bold" fill="#1E293B">16 – 23주 (약 4 – 6개월)</text>
+</svg>

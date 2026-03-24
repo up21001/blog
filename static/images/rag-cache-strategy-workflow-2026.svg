@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#eff6ff"/>
+      <stop offset="100%" stop-color="#dbeafe"/>
+    </linearGradient>
+    <style>
+      .title { font: 700 42px sans-serif; fill: #1e3a8a; }
+      .sub { font: 400 20px sans-serif; fill: #1d4ed8; }
+      .boxTitle { font: 700 22px sans-serif; fill: #1e3a8a; }
+      .boxText { font: 400 18px sans-serif; fill: #334155; }
+      .card { rx: 22; ry: 22; stroke: #93c5fd; stroke-width: 2; }
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#2563eb"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <text x="70" y="78" class="title">RAG Cache Strategy</text>
+  <text x="70" y="114" class="sub">Exact, semantic, retrieval, response cache로 분리</text>
+
+  <rect x="60" y="170" width="200" height="120" class="card" fill="#ffffff"/>
+  <text x="160" y="215" text-anchor="middle" class="boxTitle">Request</text>
+  <text x="160" y="248" text-anchor="middle" class="boxText">질문 수신</text>
+
+  <rect x="300" y="170" width="200" height="120" class="card" fill="#dbeafe"/>
+  <text x="400" y="215" text-anchor="middle" class="boxTitle">Exact Cache</text>
+  <text x="400" y="248" text-anchor="middle" class="boxText">완전 일치</text>
+
+  <rect x="540" y="170" width="200" height="120" class="card" fill="#e0f2fe"/>
+  <text x="640" y="215" text-anchor="middle" class="boxTitle">Semantic Cache</text>
+  <text x="640" y="248" text-anchor="middle" class="boxText">의미 유사</text>
+
+  <rect x="780" y="170" width="200" height="120" class="card" fill="#dcfce7"/>
+  <text x="880" y="215" text-anchor="middle" class="boxTitle">Retrieval Cache</text>
+  <text x="880" y="248" text-anchor="middle" class="boxText">검색 결과 재사용</text>
+
+  <rect x="1020" y="170" width="120" height="120" class="card" fill="#fef9c3"/>
+  <text x="1080" y="215" text-anchor="middle" class="boxTitle">RAG</text>
+  <text x="1080" y="248" text-anchor="middle" class="boxText">미스 경로</text>
+
+  <line x1="260" y1="230" x2="300" y2="230" stroke="#2563eb" stroke-width="4" marker-end="url(#arrow)"/>
+  <line x1="500" y1="230" x2="540" y2="230" stroke="#2563eb" stroke-width="4" marker-end="url(#arrow)"/>
+  <line x1="740" y1="230" x2="780" y2="230" stroke="#2563eb" stroke-width="4" marker-end="url(#arrow)"/>
+  <line x1="980" y1="230" x2="1020" y2="230" stroke="#2563eb" stroke-width="4" marker-end="url(#arrow)"/>
+
+  <rect x="70" y="360" width="1060" height="170" class="card" fill="#ffffff"/>
+  <text x="100" y="402" class="boxTitle">운영 포인트</text>
+  <text x="100" y="442" class="boxText">계층별 TTL, 권한 범위, invalidation, hit rate, fallback ratio를 함께 본다.</text>
+  <text x="100" y="482" class="boxText">RAG Cost Optimization과 RAG Monitoring을 같이 연결해야 효과를 읽을 수 있다.</text>
+</svg>

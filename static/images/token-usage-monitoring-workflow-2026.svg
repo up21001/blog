@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#102a43"/>
+  <text x="60" y="78" fill="#f8fafc" font-family="Arial, sans-serif" font-size="38" font-weight="700">Token Usage Monitoring Workflow</text>
+  <g fill="#0ea5e9" stroke="#7dd3fc" stroke-width="2">
+    <rect x="70" y="210" width="170" height="88" rx="16"/><rect x="280" y="210" width="170" height="88" rx="16"/><rect x="490" y="210" width="170" height="88" rx="16"/><rect x="700" y="210" width="170" height="88" rx="16"/><rect x="910" y="210" width="220" height="88" rx="16"/>
+  </g>
+  <g fill="#e2e8f0" font-family="Arial, sans-serif" font-size="18" font-weight="700" text-anchor="middle">
+    <text x="155" y="258">Prompt</text><text x="365" y="258">Completion</text><text x="575" y="258">Total Tokens</text><text x="785" y="258">Cost Calc</text><text x="1020" y="258">Usage Table</text>
+  </g>
+  <g stroke="#94a3b8" stroke-width="5" fill="none" marker-end="url(#arr)"><path d="M240 254 L280 254"/><path d="M450 254 L490 254"/><path d="M660 254 L700 254"/><path d="M870 254 L910 254"/></g>
+  <defs><marker id="arr" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#94a3b8"/></marker></defs>
+  <rect x="70" y="370" width="1060" height="140" rx="20" fill="#17324d" stroke="#38bdf8"/>
+  <text x="110" y="422" fill="#f8fafc" font-family="Arial, sans-serif" font-size="22" font-weight="700">Watch both volume and shape</text>
+  <text x="110" y="458" fill="#cbd5e1" font-family="Arial, sans-serif" font-size="18">Token count, per request average, retry tokens, and model mix all matter</text>
+</svg>
+

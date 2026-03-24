@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#111827"/>
+  <text x="70" y="90" fill="#f8fafc" font-family="Arial, sans-serif" font-size="42" font-weight="700">Reranking Architecture</text>
+  <rect x="70" y="180" width="220" height="110" rx="18" fill="#1d4ed8"/>
+  <text x="180" y="225" fill="#fff" font-family="Arial, sans-serif" font-size="22" text-anchor="middle">Query</text>
+  <text x="180" y="255" fill="#dbeafe" font-family="Arial, sans-serif" font-size="16" text-anchor="middle">user request</text>
+  <rect x="330" y="180" width="220" height="110" rx="18" fill="#2563eb"/>
+  <text x="440" y="225" fill="#fff" font-family="Arial, sans-serif" font-size="22" text-anchor="middle">Retriever</text>
+  <text x="440" y="255" fill="#dbeafe" font-family="Arial, sans-serif" font-size="16" text-anchor="middle">hybrid search</text>
+  <rect x="590" y="180" width="220" height="110" rx="18" fill="#7c3aed"/>
+  <text x="700" y="225" fill="#fff" font-family="Arial, sans-serif" font-size="22" text-anchor="middle">Reranker</text>
+  <text x="700" y="255" fill="#ede9fe" font-family="Arial, sans-serif" font-size="16" text-anchor="middle">cross-encoder</text>
+  <rect x="850" y="180" width="280" height="110" rx="18" fill="#0ea5e9"/>
+  <text x="990" y="225" fill="#fff" font-family="Arial, sans-serif" font-size="22" text-anchor="middle">LLM Context</text>
+  <text x="990" y="255" fill="#e0f2fe" font-family="Arial, sans-serif" font-size="16" text-anchor="middle">top-k documents</text>
+  <line x1="290" y1="235" x2="330" y2="235" stroke="#e2e8f0" stroke-width="4"/>
+  <line x1="550" y1="235" x2="590" y2="235" stroke="#e2e8f0" stroke-width="4"/>
+  <line x1="810" y1="235" x2="850" y2="235" stroke="#e2e8f0" stroke-width="4"/>
+  <rect x="70" y="360" width="1060" height="160" rx="22" fill="#0f172a" stroke="#334155"/>
+  <text x="100" y="405" fill="#f8fafc" font-family="Arial, sans-serif" font-size="22" font-weight="700">Metrics to watch</text>
+  <text x="100" y="442" fill="#cbd5e1" font-family="Arial, sans-serif" font-size="18">MRR, nDCG, top-k hit rate, p95 latency, cost per query</text>
+  <text x="100" y="472" fill="#cbd5e1" font-family="Arial, sans-serif" font-size="18">track retrieval quality and system cost together</text>
+</svg>

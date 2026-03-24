@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#08121f"/>
+      <stop offset="1" stop-color="#102845"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="120" y1="170" x2="1080" y2="170" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#60a5fa"/>
+      <stop offset="1" stop-color="#34d399"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" rx="32" fill="url(#bg)"/>
+  <text x="70" y="96" fill="#e2e8f0" font-family="Arial" font-size="52" font-weight="700">Indexing Choice Flow</text>
+  <text x="70" y="138" fill="#93c5fd" font-family="Arial" font-size="22">real-time vs batch | full rebuild vs incremental upsert</text>
+  <rect x="70" y="200" width="170" height="100" rx="18" fill="#10263d" stroke="#60a5fa" stroke-width="2"/>
+  <text x="155" y="245" text-anchor="middle" fill="#fff" font-family="Arial" font-size="24" font-weight="700">Change?</text>
+  <text x="155" y="273" text-anchor="middle" fill="#cbd5e1" font-family="Arial" font-size="16">new or updated</text>
+  <polygon points="350,250 410,190 470,250 410,310" fill="#0f3b37" stroke="#34d399" stroke-width="2"/>
+  <text x="410" y="246" text-anchor="middle" fill="#fff" font-family="Arial" font-size="22" font-weight="700">Need</text>
+  <text x="410" y="272" text-anchor="middle" fill="#fff" font-family="Arial" font-size="22" font-weight="700">fresh now?</text>
+  <rect x="550" y="190" width="210" height="120" rx="18" fill="#10263d" stroke="#60a5fa" stroke-width="2"/>
+  <text x="655" y="240" text-anchor="middle" fill="#fff" font-family="Arial" font-size="24" font-weight="700">Streaming</text>
+  <text x="655" y="270" text-anchor="middle" fill="#cbd5e1" font-family="Arial" font-size="16">push ingest</text>
+  <rect x="550" y="360" width="210" height="120" rx="18" fill="#10263d" stroke="#60a5fa" stroke-width="2"/>
+  <text x="655" y="410" text-anchor="middle" fill="#fff" font-family="Arial" font-size="24" font-weight="700">Scheduled</text>
+  <text x="655" y="440" text-anchor="middle" fill="#cbd5e1" font-family="Arial" font-size="16">batch rebuild</text>
+  <rect x="820" y="200" width="300" height="100" rx="18" fill="#0f3b37" stroke="#34d399" stroke-width="2"/>
+  <text x="970" y="243" text-anchor="middle" fill="#fff" font-family="Arial" font-size="24" font-weight="700">Incremental Upsert</text>
+  <text x="970" y="271" text-anchor="middle" fill="#bbf7d0" font-family="Arial" font-size="16">small change set</text>
+  <rect x="820" y="360" width="300" height="100" rx="18" fill="#0f3b37" stroke="#34d399" stroke-width="2"/>
+  <text x="970" y="403" text-anchor="middle" fill="#fff" font-family="Arial" font-size="24" font-weight="700">Full Reindex</text>
+  <text x="970" y="431" text-anchor="middle" fill="#bbf7d0" font-family="Arial" font-size="16">model or schema changed</text>
+  <path d="M240 250 H340" stroke="url(#accent)" stroke-width="6" stroke-linecap="round"/>
+  <path d="M470 250 H540" stroke="url(#accent)" stroke-width="6" stroke-linecap="round"/>
+  <path d="M470 250 C540 250, 500 410, 540 420" stroke="url(#accent)" stroke-width="6" fill="none"/>
+  <path d="M760 240 H810" stroke="url(#accent)" stroke-width="6" stroke-linecap="round"/>
+  <path d="M760 420 H810" stroke="url(#accent)" stroke-width="6" stroke-linecap="round"/>
+  <text x="70" y="545" fill="#dbeafe" font-family="Arial" font-size="24" font-weight="700">Choose the smallest refresh scope that keeps retrieval quality stable.</text>
+</svg>
+

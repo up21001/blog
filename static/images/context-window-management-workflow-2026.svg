@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#f4fbf8"/>
+      <stop offset="100%" stop-color="#e7f7f0"/>
+    </linearGradient>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 Z" fill="#0f9d58"/>
+    </marker>
+    <style>
+      .title { font: 700 42px 'Segoe UI', Arial, sans-serif; fill: #123a2d; }
+      .sub { font: 400 18px 'Segoe UI', Arial, sans-serif; fill: #57746a; }
+      .card { fill: #ffffff; stroke: #bfead5; stroke-width: 2; }
+      .label { font: 700 24px 'Segoe UI', Arial, sans-serif; fill: #12503a; }
+      .small { font: 400 16px 'Segoe UI', Arial, sans-serif; fill: #4f6d61; }
+      .line { stroke: #0f9d58; stroke-width: 4; fill: none; marker-end: url(#arrow); }
+    </style>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <text x="70" y="80" class="title">Context Window Management</text>
+  <text x="70" y="114" class="sub">summarize, compress, re-inject, budget tokens</text>
+  <rect x="70" y="220" width="190" height="115" rx="22" class="card"/>
+  <text x="112" y="266" class="label">Long Context</text>
+  <text x="96" y="296" class="small">conversation / docs</text>
+  <rect x="320" y="190" width="220" height="170" rx="24" class="card"/>
+  <text x="377" y="238" class="label">Summarize</text>
+  <text x="344" y="270" class="small">facts / decisions</text>
+  <text x="348" y="296" class="small">remove duplicates</text>
+  <rect x="600" y="170" width="220" height="210" rx="26" fill="#effbf4" stroke="#9ee0bf" stroke-width="2"/>
+  <text x="644" y="224" class="label">Context Pack</text>
+  <text x="628" y="256" class="small">state + memory</text>
+  <text x="632" y="282" class="small">budget / priority</text>
+  <text x="636" y="308" class="small">re-injection</text>
+  <rect x="880" y="205" width="170" height="135" rx="22" class="card"/>
+  <text x="922" y="252" class="label">Model</text>
+  <text x="905" y="282" class="small">stable output</text>
+  <path d="M260 278 L320 278" class="line"/>
+  <path d="M540 278 L600 278" class="line"/>
+  <path d="M820 278 L880 278" class="line"/>
+</svg>

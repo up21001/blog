@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Tool Call Security Audit workflow">
+  <defs>
+    <linearGradient id="bg7" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#020617"/>
+      <stop offset="100%" stop-color="#1f2937"/>
+    </linearGradient>
+    <style>
+      .t{font-family:Arial,Helvetica,sans-serif;fill:#e5e7eb}
+      .h{font-size:38px;font-weight:700}
+      .s{font-size:22px;fill:#cbd5e1}
+      .b{font-size:20px;font-weight:700}
+      .n{font-size:18px;fill:#cbd5e1}
+    </style>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg7)"/>
+  <text x="72" y="76" class="t h">Tool Call Security Audit</text>
+  <text x="72" y="114" class="t s">호출 전 검사 -> 실행 중 감시 -> 결과 검증</text>
+  <g transform="translate(72 170)">
+    <rect width="220" height="130" rx="18" fill="#1e293b" stroke="#64748b"/>
+    <text x="26" y="44" class="t b">Pre-check</text>
+    <text x="26" y="78" class="t n">권한과 정책 확인</text>
+    <rect x="260" width="220" height="130" rx="18" fill="#1e293b" stroke="#64748b"/>
+    <text x="288" y="44" class="t b">Monitor</text>
+    <text x="288" y="78" class="t n">입력, 출력, 승인 감시</text>
+    <rect x="520" width="220" height="130" rx="18" fill="#1e293b" stroke="#64748b"/>
+    <text x="548" y="44" class="t b">Decision</text>
+    <text x="548" y="78" class="t n">허용 / 거절 / 격리</text>
+    <rect x="780" width="220" height="130" rx="18" fill="#1e293b" stroke="#64748b"/>
+    <text x="810" y="44" class="t b">Evidence</text>
+    <text x="810" y="78" class="t n">감사 증거 저장</text>
+    <rect x="1040" width="88" height="130" rx="18" fill="#1e293b" stroke="#64748b"/>
+    <text x="1050" y="44" class="t b">IR</text>
+    <text x="1048" y="78" class="t n">대응</text>
+    <path d="M242 65H252" stroke="#67e8f9" stroke-width="5" marker-end="url(#c1)"/>
+    <path d="M482 65H512" stroke="#67e8f9" stroke-width="5" marker-end="url(#c1)"/>
+    <path d="M742 65H772" stroke="#67e8f9" stroke-width="5" marker-end="url(#c1)"/>
+    <path d="M1000 65H1032" stroke="#67e8f9" stroke-width="5" marker-end="url(#c1)"/>
+  </g>
+  <g transform="translate(72 360)">
+    <rect width="1056" height="170" rx="22" fill="#0f172a" stroke="#155e75"/>
+    <text x="34" y="48" class="t b">핵심 포인트</text>
+    <text x="34" y="86" class="t n">사전 차단, 실행 감시, 사후 감사가 함께 있어야 보안 감사가 실제로 작동합니다.</text>
+    <text x="34" y="120" class="t n">정책 위반은 즉시 막되, 증거는 반드시 남겨야 운영과 대응이 가능합니다.</text>
+  </g>
+  <defs>
+    <marker id="c1" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 Z" fill="#67e8f9"/>
+    </marker>
+  </defs>
+</svg>
+

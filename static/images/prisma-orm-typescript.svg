@@ -1,0 +1,90 @@
+<svg width="800" height="450" viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg" font-family="'Malgun Gothic', sans-serif">
+  <rect width="800" height="450" fill="#F9FAFB" rx="12"/>
+  <text x="400" y="38" text-anchor="middle" font-size="20" font-weight="bold" fill="#1F2937">Prisma ORM 워크플로우</text>
+
+  <!-- 계층 1: schema.prisma -->
+  <rect x="30" y="55" width="220" height="75" fill="#DBEAFE" stroke="#3B82F6" stroke-width="2" rx="8"/>
+  <text x="140" y="78" text-anchor="middle" font-size="13" font-weight="bold" fill="#1D4ED8">schema.prisma</text>
+  <text x="140" y="96" text-anchor="middle" font-size="11" fill="#3B82F6">model User &#123;</text>
+  <text x="140" y="112" text-anchor="middle" font-size="11" fill="#3B82F6">  id  Int @id @default()</text>
+  <text x="140" y="123" text-anchor="middle" font-size="10" fill="#6B7280">모델 · 관계 · 타입 정의</text>
+
+  <!-- 화살표 -->
+  <defs>
+    <marker id="arr2" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#6B7280"/>
+    </marker>
+  </defs>
+  <line x1="250" y1="92" x2="295" y2="92" stroke="#6B7280" stroke-width="2" marker-end="url(#arr2)"/>
+  <text x="272" y="85" text-anchor="middle" font-size="9" fill="#9CA3AF">generate</text>
+
+  <!-- Prisma Client -->
+  <rect x="295" y="55" width="210" height="75" fill="#D1FAE5" stroke="#10B981" stroke-width="2" rx="8"/>
+  <text x="400" y="78" text-anchor="middle" font-size="13" font-weight="bold" fill="#065F46">Prisma Client</text>
+  <text x="400" y="96" text-anchor="middle" font-size="11" fill="#10B981">완전 타입 추론 자동 생성</text>
+  <text x="400" y="112" text-anchor="middle" font-size="11" fill="#10B981">prisma.user.findMany()</text>
+  <text x="400" y="123" text-anchor="middle" font-size="10" fill="#6B7280">IntelliSense 완전 지원</text>
+
+  <!-- 화살표 -->
+  <line x1="505" y1="92" x2="550" y2="92" stroke="#6B7280" stroke-width="2" marker-end="url(#arr2)"/>
+  <text x="527" y="85" text-anchor="middle" font-size="9" fill="#9CA3AF">SQL 변환</text>
+
+  <!-- DB -->
+  <rect x="550" y="55" width="220" height="75" fill="#FEF3C7" stroke="#F59E0B" stroke-width="2" rx="8"/>
+  <text x="660" y="78" text-anchor="middle" font-size="13" font-weight="bold" fill="#92400E">Database</text>
+  <text x="660" y="96" text-anchor="middle" font-size="11" fill="#B45309">PostgreSQL / MySQL</text>
+  <text x="660" y="112" text-anchor="middle" font-size="11" fill="#B45309">SQLite / MongoDB</text>
+  <text x="660" y="123" text-anchor="middle" font-size="10" fill="#6B7280">Prisma가 SQL 자동 생성</text>
+
+  <!-- 마이그레이션 흐름 -->
+  <rect x="30" y="152" width="740" height="80" fill="white" stroke="#E5E7EB" stroke-width="1" rx="10"/>
+  <text x="400" y="172" text-anchor="middle" font-size="13" font-weight="bold" fill="#374151">Prisma Migrate 워크플로우</text>
+
+  <rect x="50" y="180" width="140" height="38" fill="#EFF6FF" stroke="#BFDBFE" stroke-width="1" rx="6"/>
+  <text x="120" y="196" text-anchor="middle" font-size="11" font-weight="bold" fill="#1D4ED8">스키마 수정</text>
+  <text x="120" y="210" text-anchor="middle" font-size="10" fill="#3B82F6">schema.prisma 편집</text>
+  <line x1="190" y1="199" x2="215" y2="199" stroke="#9CA3AF" stroke-width="1.5" marker-end="url(#arr2)"/>
+
+  <rect x="215" y="180" width="155" height="38" fill="#ECFDF5" stroke="#A7F3D0" stroke-width="1" rx="6"/>
+  <text x="292" y="196" text-anchor="middle" font-size="11" font-weight="bold" fill="#065F46">migrate dev</text>
+  <text x="292" y="210" text-anchor="middle" font-size="10" fill="#10B981">SQL 마이그레이션 생성</text>
+  <line x1="370" y1="199" x2="395" y2="199" stroke="#9CA3AF" stroke-width="1.5" marker-end="url(#arr2)"/>
+
+  <rect x="395" y="180" width="155" height="38" fill="#FEF3C7" stroke="#FDE68A" stroke-width="1" rx="6"/>
+  <text x="472" y="196" text-anchor="middle" font-size="11" font-weight="bold" fill="#92400E">migrate deploy</text>
+  <text x="472" y="210" text-anchor="middle" font-size="10" fill="#B45309">프로덕션 적용</text>
+  <line x1="550" y1="199" x2="575" y2="199" stroke="#9CA3AF" stroke-width="1.5" marker-end="url(#arr2)"/>
+
+  <rect x="575" y="180" width="175" height="38" fill="#EDE9FE" stroke="#DDD6FE" stroke-width="1" rx="6"/>
+  <text x="662" y="196" text-anchor="middle" font-size="11" font-weight="bold" fill="#5B21B6">generate</text>
+  <text x="662" y="210" text-anchor="middle" font-size="10" fill="#7C3AED">클라이언트 재생성</text>
+
+  <!-- CRUD 예시 -->
+  <text x="400" y="258" text-anchor="middle" font-size="14" font-weight="bold" fill="#374151">타입 안전 CRUD 패턴</text>
+
+  <rect x="30" y="268" width="355" height="90" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1" rx="8"/>
+  <text x="50" y="288" font-size="11" font-weight="bold" fill="#374151">// 타입 추론 자동 적용</text>
+  <text x="50" y="306" font-size="11" fill="#1D4ED8">const user = await prisma.user.create(&#123;</text>
+  <text x="50" y="322" font-size="11" fill="#374151">  data: &#123; name: "홍길동", email: "..." &#125;</text>
+  <text x="50" y="338" font-size="11" fill="#1D4ED8">&#125;)</text>
+  <text x="50" y="351" font-size="10" fill="#10B981">// user: &#123; id: number, name: string, ... &#125; 자동 타입</text>
+
+  <rect x="415" y="268" width="355" height="90" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1" rx="8"/>
+  <text x="435" y="288" font-size="11" font-weight="bold" fill="#374151">// 관계형 데이터 include</text>
+  <text x="435" y="306" font-size="11" fill="#1D4ED8">const posts = await prisma.post.findMany(&#123;</text>
+  <text x="435" y="322" font-size="11" fill="#374151">  include: &#123; author: true &#125;,</text>
+  <text x="435" y="338" font-size="11" fill="#374151">  where: &#123; published: true &#125;</text>
+  <text x="435" y="351" font-size="10" fill="#10B981">// author 필드 타입 자동 포함</text>
+
+  <!-- Zod 연동 -->
+  <rect x="30" y="378" width="740" height="58" fill="white" stroke="#E5E7EB" stroke-width="1" rx="10"/>
+  <text x="400" y="398" text-anchor="middle" font-size="13" font-weight="bold" fill="#374151">생태계 연동</text>
+  <rect x="50" y="408" width="160" height="22" fill="#DBEAFE" stroke="#93C5FD" stroke-width="1" rx="4"/>
+  <text x="130" y="423" text-anchor="middle" font-size="11" fill="#1D4ED8">zod-prisma-types 검증</text>
+  <rect x="230" y="408" width="160" height="22" fill="#D1FAE5" stroke="#6EE7B7" stroke-width="1" rx="4"/>
+  <text x="310" y="423" text-anchor="middle" font-size="11" fill="#065F46">Next.js Server Actions</text>
+  <rect x="410" y="408" width="160" height="22" fill="#FEF3C7" stroke="#FDE68A" stroke-width="1" rx="4"/>
+  <text x="490" y="423" text-anchor="middle" font-size="11" fill="#92400E">Prisma Accelerate 캐싱</text>
+  <rect x="590" y="408" width="160" height="22" fill="#EDE9FE" stroke="#C4B5FD" stroke-width="1" rx="4"/>
+  <text x="670" y="423" text-anchor="middle" font-size="11" fill="#5B21B6">tRPC 통합</text>
+</svg>

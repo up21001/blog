@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#0c1624"/>
+  <text x="70" y="90" fill="#fff" font-size="44" font-family="Arial, sans-serif" font-weight="700">Speech Quality Metrics</text>
+  <text x="70" y="132" fill="#9ab6d6" font-size="22" font-family="Arial, sans-serif">architecture</text>
+  <g fill="#17263e" stroke="#607faa" stroke-width="2">
+    <rect x="90" y="225" width="150" height="100" rx="18"/><rect x="280" y="225" width="150" height="100" rx="18"/>
+    <rect x="470" y="225" width="150" height="100" rx="18"/><rect x="660" y="225" width="150" height="100" rx="18"/>
+    <rect x="850" y="225" width="150" height="100" rx="18"/><rect x="1040" y="225" width="110" height="100" rx="18"/>
+  </g>
+  <g fill="#f5f8fb" font-size="18" font-family="Arial, sans-serif" text-anchor="middle">
+    <text x="165" y="260">Audio In</text><text x="355" y="260">STT</text><text x="545" y="260">LLM</text><text x="735" y="260">TTS</text><text x="925" y="260">Logs</text><text x="1095" y="260">UI</text>
+  </g>
+  <g stroke="#9ab6d6" stroke-width="4" fill="none" marker-end="url(#s)">
+    <path d="M240 275 H280"/><path d="M430 275 H470"/><path d="M620 275 H660"/><path d="M810 275 H850"/><path d="M1000 275 H1040"/>
+  </g>
+  <defs><marker id="s" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#9ab6d6"/></marker></defs>
+  <text x="90" y="430" fill="#c8d5e5" font-size="20" font-family="Arial, sans-serif">Instrument every stage so dashboards can explain quality, not just report it.</text>
+</svg>
+

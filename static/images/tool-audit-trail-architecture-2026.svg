@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Tool Audit Trail architecture">
+  <defs>
+    <linearGradient id="bg3" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e1b4b"/>
+    </linearGradient>
+    <style>
+      .t{font-family:Arial,Helvetica,sans-serif;fill:#e5e7eb}
+      .h{font-size:38px;font-weight:700}
+      .s{font-size:22px;fill:#cbd5e1}
+      .b{font-size:19px;font-weight:700}
+      .n{font-size:17px;fill:#cbd5e1}
+    </style>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg3)"/>
+  <text x="72" y="76" class="t h">Tool Audit Trail Architecture</text>
+  <text x="72" y="114" class="t s">실행 경로와 감사 경로를 분리한 구조</text>
+  <g transform="translate(72 170)">
+    <rect width="260" height="130" rx="18" fill="#1e293b" stroke="#64748b"/>
+    <text x="28" y="44" class="t b">Agent Runtime</text>
+    <text x="28" y="78" class="t n">도구 호출 실행</text>
+    <rect x="290" width="260" height="130" rx="18" fill="#1e293b" stroke="#64748b"/>
+    <text x="316" y="44" class="t b">Policy Engine</text>
+    <text x="316" y="78" class="t n">허용 / 거절 / 승인</text>
+    <rect x="580" width="260" height="130" rx="18" fill="#1e293b" stroke="#64748b"/>
+    <text x="610" y="44" class="t b">Event Pipeline</text>
+    <text x="610" y="78" class="t n">구조화 이벤트 적재</text>
+    <rect x="870" width="260" height="130" rx="18" fill="#1e293b" stroke="#64748b"/>
+    <text x="904" y="44" class="t b">Audit Store</text>
+    <text x="904" y="78" class="t n">검색과 리포트</text>
+    <path d="M332 65H282" stroke="#a78bfa" stroke-width="5" marker-end="url(#a3)"/>
+    <path d="M622 65H572" stroke="#a78bfa" stroke-width="5" marker-end="url(#a3)"/>
+    <path d="M912 65H862" stroke="#a78bfa" stroke-width="5" marker-end="url(#a3)"/>
+  </g>
+  <g transform="translate(72 360)">
+    <rect width="1056" height="170" rx="22" fill="#111827" stroke="#4338ca"/>
+    <text x="34" y="48" class="t b">설계 원칙</text>
+    <text x="34" y="86" class="t n">런타임은 빠르게, 감사는 안전하게, 저장은 검색 가능하게 분리합니다.</text>
+    <text x="34" y="120" class="t n">정책 버전과 승인 상태를 함께 저장하면 나중에 사건 분석이 쉬워집니다.</text>
+  </g>
+  <defs>
+    <marker id="a3" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 Z" fill="#a78bfa"/>
+    </marker>
+  </defs>
+</svg>
+

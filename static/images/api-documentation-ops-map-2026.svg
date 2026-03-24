@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="gapi_documentation_operations_playbook_20" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/><stop offset="100%" stop-color="#312e81"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#gapi_documentation_operations_playbook_20)"/>
+  <rect x="48" y="48" width="1104" height="534" rx="18" fill="#111827" stroke="#6366f1" stroke-opacity="0.45"/>
+  <text x="88" y="120" fill="#e0e7ff" font-size="32" font-family="Segoe UI, Malgun Gothic, sans-serif" font-weight="700">API 문서화 운영 플레이북 2026: 변경에도 깨지지 않는 문서 시스템</text>
+  <text x="88" y="172" fill="#a5b4fc" font-size="20" font-family="Segoe UI, Malgun Gothic, sans-serif">운영 원칙 · 체크리스트 · 참고문헌</text>
+  <rect x="88" y="220" width="1000" height="100" rx="12" fill="#1e1b4b" stroke="#818cf8"/>
+  <text x="112" y="268" fill="#c7d2fe" font-size="17" font-family="Segoe UI, Malgun Gothic, sans-serif">목표 정의 → 실행 → 검증 → 회고</text>
+  <text x="112" y="300" fill="#a5b4fc" font-size="15" font-family="Segoe UI, Malgun Gothic, sans-serif">문서는 팀의 다음 행동으로 연결될 때만 가치가 있습니다.</text>
+  <rect x="88" y="360" width="320" height="180" rx="12" fill="#0c1222" stroke="#334155"/>
+  <text x="112" y="404" fill="#f1f5f9" font-size="16" font-family="Segoe UI, Malgun Gothic, sans-serif" font-weight="600">핵심 질문</text>
+  <text x="112" y="440" fill="#cbd5e1" font-size="14" font-family="Segoe UI, Malgun Gothic, sans-serif">· 기준선이 숫자인가</text>
+  <text x="112" y="468" fill="#cbd5e1" font-size="14" font-family="Segoe UI, Malgun Gothic, sans-serif">· 롤백이 10분 내 가능한가</text>
+  <text x="112" y="496" fill="#cbd5e1" font-size="14" font-family="Segoe UI, Malgun Gothic, sans-serif">· 회고가 백로그로 이어지는가</text>
+</svg>

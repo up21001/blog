@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#111826"/>
+      <stop offset="100%" stop-color="#1b2940"/>
+    </linearGradient>
+    <style>
+      .t { fill: #eef6ff; font-family: Arial, sans-serif; }
+      .s { fill: #adc0da; font-family: Arial, sans-serif; }
+      .b { fill: #22344f; stroke: #4d678f; stroke-width: 2; }
+      .l { stroke: #93b8e8; stroke-width: 4; fill: none; marker-end: url(#arrow); }
+    </style>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 Z" fill="#93b8e8"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <text x="70" y="95" class="t" font-size="42" font-weight="700">Background Mode Decision Flow</text>
+  <rect x="80" y="180" width="250" height="120" rx="18" class="b"/>
+  <rect x="435" y="180" width="250" height="120" rx="18" class="b"/>
+  <rect x="790" y="180" width="330" height="120" rx="18" class="b"/>
+  <text x="115" y="228" class="t" font-size="26" font-weight="700">Need answer now?</text>
+  <text x="115" y="263" class="s" font-size="20">UI path</text>
+  <text x="474" y="228" class="t" font-size="26" font-weight="700">Queue the job</text>
+  <text x="474" y="263" class="s" font-size="20">status + retries</text>
+  <text x="842" y="228" class="t" font-size="26" font-weight="700">Return result later</text>
+  <text x="842" y="263" class="s" font-size="20">poll, webhook, callback</text>
+  <path d="M330 240 L435 240" class="l"/>
+  <path d="M685 240 L790 240" class="l"/>
+  <text x="130" y="380" class="s" font-size="21">Immediate: Responses API, streaming, interactive UX</text>
+  <text x="130" y="430" class="s" font-size="21">Delayed: Batch API, long jobs, high-volume processing</text>
+  <text x="130" y="480" class="s" font-size="21">Track: job_id, state, result_url, trace_id</text>
+</svg>

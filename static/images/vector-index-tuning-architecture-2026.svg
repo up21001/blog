@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Vector Index Tuning Architecture</title>
+  <desc id="desc">Architecture diagram for index tuning loops in vector databases.</desc>
+  <rect width="1200" height="630" fill="#111827"/>
+  <text x="64" y="74" font-size="18" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#93c5fd">ARCHITECTURE</text>
+  <text x="64" y="118" font-size="40" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#f8fafc">Index tuning loop</text>
+  <text x="64" y="154" font-size="18" font-family="Segoe UI, Arial, sans-serif" fill="#cbd5e1">Build, test, validate, and ship only after the distribution matches.</text>
+
+  <rect x="72" y="240" width="180" height="110" rx="18" fill="#1f2937" stroke="#334155"/>
+  <rect x="282" y="240" width="180" height="110" rx="18" fill="#1f2937" stroke="#334155"/>
+  <rect x="492" y="240" width="180" height="110" rx="18" fill="#1f2937" stroke="#334155"/>
+  <rect x="702" y="240" width="180" height="110" rx="18" fill="#1f2937" stroke="#334155"/>
+  <rect x="912" y="240" width="180" height="110" rx="18" fill="#1f2937" stroke="#334155"/>
+  <text x="104" y="280" font-size="22" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#e2e8f0">Data set</text>
+  <text x="104" y="308" font-size="16" font-family="Segoe UI, Arial, sans-serif" fill="#cbd5e1">query sample</text>
+  <text x="314" y="280" font-size="22" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#e2e8f0">Tune</text>
+  <text x="314" y="308" font-size="16" font-family="Segoe UI, Arial, sans-serif" fill="#cbd5e1">HNSW params</text>
+  <text x="524" y="280" font-size="22" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#e2e8f0">Compress</text>
+  <text x="524" y="308" font-size="16" font-family="Segoe UI, Arial, sans-serif" fill="#cbd5e1">quantization</text>
+  <text x="734" y="280" font-size="22" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#e2e8f0">Bench</text>
+  <text x="734" y="308" font-size="16" font-family="Segoe UI, Arial, sans-serif" fill="#cbd5e1">recall / p95</text>
+  <text x="944" y="280" font-size="22" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#e2e8f0">Ship</text>
+  <text x="944" y="308" font-size="16" font-family="Segoe UI, Arial, sans-serif" fill="#cbd5e1">only if stable</text>
+  <path d="M252 295 L282 295" stroke="#38bdf8" stroke-width="4" fill="none" marker-end="url(#m)"/>
+  <path d="M462 295 L492 295" stroke="#38bdf8" stroke-width="4" fill="none" marker-end="url(#m)"/>
+  <path d="M672 295 L702 295" stroke="#38bdf8" stroke-width="4" fill="none" marker-end="url(#m)"/>
+  <path d="M882 295 L912 295" stroke="#38bdf8" stroke-width="4" fill="none" marker-end="url(#m)"/>
+  <defs>
+    <marker id="m" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#38bdf8"/>
+    </marker>
+  </defs>
+</svg>

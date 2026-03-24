@@ -1,0 +1,71 @@
+<svg width="800" height="450" viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg" font-family="'Malgun Gothic', sans-serif">
+  <rect width="800" height="450" fill="#F8FAFC"/>
+  <text x="400" y="38" text-anchor="middle" font-size="20" font-weight="bold" fill="#1E293B">Raspberry Pi AI Kit — Hailo-8L NPU 아키텍처</text>
+
+  <defs>
+    <marker id="arr2" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#6B7280"/>
+    </marker>
+  </defs>
+
+  <!-- Pi 5 Board -->
+  <rect x="30" y="65" width="220" height="320" rx="12" fill="#DBEAFE" stroke="#3B82F6" stroke-width="2"/>
+  <text x="140" y="93" text-anchor="middle" font-size="14" font-weight="bold" fill="#1E40AF">Raspberry Pi 5</text>
+  <rect x="50" y="105" width="180" height="45" rx="6" fill="#ffffff" stroke="#3B82F6" stroke-width="1"/>
+  <text x="140" y="124" text-anchor="middle" font-size="11" font-weight="bold" fill="#1E40AF">BCM2712 (ARM A76)</text>
+  <text x="140" y="142" text-anchor="middle" font-size="11" fill="#1E40AF">쿼드코어 2.4GHz</text>
+  <rect x="50" y="160" width="180" height="45" rx="6" fill="#ffffff" stroke="#3B82F6" stroke-width="1"/>
+  <text x="140" y="179" text-anchor="middle" font-size="11" font-weight="bold" fill="#1E40AF">메모리 8GB LPDDR4X</text>
+  <text x="140" y="197" text-anchor="middle" font-size="11" fill="#1E40AF">대역폭 17GB/s</text>
+  <rect x="50" y="215" width="180" height="45" rx="6" fill="#ffffff" stroke="#3B82F6" stroke-width="1"/>
+  <text x="140" y="234" text-anchor="middle" font-size="11" font-weight="bold" fill="#1E40AF">PCIe 2.0 x1</text>
+  <text x="140" y="252" text-anchor="middle" font-size="11" fill="#1E40AF">M.2 HAT+ 인터페이스</text>
+  <rect x="50" y="270" width="180" height="45" rx="6" fill="#ffffff" stroke="#3B82F6" stroke-width="1"/>
+  <text x="140" y="289" text-anchor="middle" font-size="11" font-weight="bold" fill="#1E40AF">카메라 / USB</text>
+  <text x="140" y="307" text-anchor="middle" font-size="11" fill="#1E40AF">CSI 2포트, USB 3.0</text>
+  <text x="140" y="362" text-anchor="middle" font-size="11" fill="#1E40AF">소비 전력: ~5W</text>
+
+  <!-- PCIe Arrow -->
+  <line x1="250" y1="237" x2="290" y2="237" stroke="#6B7280" stroke-width="2" marker-end="url(#arr2)"/>
+  <text x="270" y="228" text-anchor="middle" font-size="10" fill="#6B7280">PCIe</text>
+
+  <!-- Hailo-8L -->
+  <rect x="290" y="65" width="220" height="320" rx="12" fill="#D1FAE5" stroke="#10B981" stroke-width="2"/>
+  <text x="400" y="93" text-anchor="middle" font-size="14" font-weight="bold" fill="#065F46">Hailo-8L NPU</text>
+  <rect x="310" y="105" width="180" height="45" rx="6" fill="#ffffff" stroke="#10B981" stroke-width="1"/>
+  <text x="400" y="124" text-anchor="middle" font-size="11" font-weight="bold" fill="#065F46">13 TOPS 추론 성능</text>
+  <text x="400" y="142" text-anchor="middle" font-size="11" fill="#065F46">INT8 최적화</text>
+  <rect x="310" y="160" width="180" height="45" rx="6" fill="#ffffff" stroke="#10B981" stroke-width="1"/>
+  <text x="400" y="179" text-anchor="middle" font-size="11" font-weight="bold" fill="#065F46">Dataflow 아키텍처</text>
+  <text x="400" y="197" text-anchor="middle" font-size="11" fill="#065F46">병렬 MAC 연산</text>
+  <rect x="310" y="215" width="180" height="45" rx="6" fill="#ffffff" stroke="#10B981" stroke-width="1"/>
+  <text x="400" y="234" text-anchor="middle" font-size="11" font-weight="bold" fill="#065F46">Hailo RT 드라이버</text>
+  <text x="400" y="252" text-anchor="middle" font-size="11" fill="#065F46">HailoRT 라이브러리</text>
+  <rect x="310" y="270" width="180" height="45" rx="6" fill="#ffffff" stroke="#10B981" stroke-width="1"/>
+  <text x="400" y="289" text-anchor="middle" font-size="11" font-weight="bold" fill="#065F46">지원 모델</text>
+  <text x="400" y="307" text-anchor="middle" font-size="11" fill="#065F46">YOLO, MobileNet, ResNet</text>
+  <text x="400" y="362" text-anchor="middle" font-size="11" fill="#065F46">소비 전력: ~2.5W</text>
+
+  <!-- Right: Use Cases -->
+  <rect x="550" y="65" width="220" height="320" rx="12" fill="#FEF3C7" stroke="#F59E0B" stroke-width="2"/>
+  <text x="660" y="93" text-anchor="middle" font-size="14" font-weight="bold" fill="#92400E">활용 사례</text>
+  <rect x="570" y="105" width="180" height="55" rx="6" fill="#ffffff" stroke="#F59E0B" stroke-width="1"/>
+  <text x="660" y="126" text-anchor="middle" font-size="12" font-weight="bold" fill="#92400E">실시간 객체 탐지</text>
+  <text x="660" y="144" text-anchor="middle" font-size="11" fill="#92400E">YOLOv8 30fps+</text>
+  <text x="660" y="158" text-anchor="middle" font-size="10" fill="#92400E">홈 보안 · 재고 관리</text>
+  <rect x="570" y="170" width="180" height="55" rx="6" fill="#ffffff" stroke="#F59E0B" stroke-width="1"/>
+  <text x="660" y="191" text-anchor="middle" font-size="12" font-weight="bold" fill="#92400E">얼굴 인식</text>
+  <text x="660" y="209" text-anchor="middle" font-size="11" fill="#92400E">출입 통제 시스템</text>
+  <text x="660" y="223" text-anchor="middle" font-size="10" fill="#92400E">오프라인 동작</text>
+  <rect x="570" y="235" width="180" height="55" rx="6" fill="#ffffff" stroke="#F59E0B" stroke-width="1"/>
+  <text x="660" y="256" text-anchor="middle" font-size="12" font-weight="bold" fill="#92400E">포즈 추정</text>
+  <text x="660" y="274" text-anchor="middle" font-size="11" fill="#92400E">운동 분석 · 낙상 감지</text>
+  <text x="660" y="288" text-anchor="middle" font-size="10" fill="#92400E">실버케어 IoT</text>
+  <rect x="570" y="300" width="180" height="55" rx="6" fill="#ffffff" stroke="#F59E0B" stroke-width="1"/>
+  <text x="660" y="321" text-anchor="middle" font-size="12" font-weight="bold" fill="#92400E">이상 탐지</text>
+  <text x="660" y="339" text-anchor="middle" font-size="11" fill="#92400E">제조 품질 검사</text>
+  <text x="660" y="353" text-anchor="middle" font-size="10" fill="#92400E">불량품 자동 분류</text>
+
+  <!-- Bottom -->
+  <text x="400" y="420" text-anchor="middle" font-size="12" fill="#6B7280">총 소비 전력: ~7.5W  |  가격: 약 70달러 (Kit)  |  OS: Raspberry Pi OS Bookworm</text>
+</svg>

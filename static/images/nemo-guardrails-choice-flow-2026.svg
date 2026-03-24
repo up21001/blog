@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" role="img" aria-labelledby="title desc">
+  <title id="title">NeMo Guardrails Choice Flow 2026</title>
+  <desc id="desc">Decision flow showing when to choose NeMo Guardrails for conversational AI policy and safety.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f0fdf4"/>
+    </linearGradient>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 z" fill="#334155"/>
+    </marker>
+    <style>
+      text { font-family: Inter, Segoe UI, Arial, sans-serif; fill: #0f172a; }
+      .diamond { fill: #ecfdf5; stroke: #16a34a; stroke-width: 2.5; }
+      .yes { fill: #eff6ff; stroke: #2563eb; stroke-width: 2; rx: 16; }
+      .no { fill: #fff7ed; stroke: #f97316; stroke-width: 2; rx: 16; }
+      .box { fill: white; stroke: #94a3b8; stroke-width: 2; rx: 18; }
+      .title { font-size: 34px; font-weight: 800; }
+      .label { font-size: 20px; font-weight: 700; }
+      .small { font-size: 16px; fill: #334155; }
+      .line { stroke: #334155; stroke-width: 3; fill: none; marker-end: url(#arrow); }
+    </style>
+  </defs>
+  <rect width="1200" height="700" fill="url(#bg)"/>
+  <rect x="40" y="36" width="1120" height="84" rx="24" fill="#166534"/>
+  <text x="70" y="88" class="title" fill="#ffffff">NeMo Guardrails Choice Flow 2026</text>
+
+  <rect x="90" y="190" width="220" height="88" class="box"/>
+  <text x="200" y="224" text-anchor="middle" class="label">Need conversation policy?</text>
+  <text x="200" y="250" text-anchor="middle" class="small">chat flow / safety / handoff</text>
+
+  <path d="M310 234 L390 234" class="line"/>
+
+  <polygon points="500,180 600,234 500,288 400,234" class="diamond"/>
+  <text x="500" y="228" text-anchor="middle" class="label">Need rails & flows?</text>
+  <text x="500" y="252" text-anchor="middle" class="small">policy routing / guard rules</text>
+
+  <path d="M600 234 L690 234" class="line"/>
+
+  <rect x="710" y="186" width="220" height="96" class="yes"/>
+  <text x="820" y="220" text-anchor="middle" class="label">Use NeMo Guardrails</text>
+  <text x="820" y="246" text-anchor="middle" class="small">policy-first chat systems</text>
+
+  <rect x="710" y="340" width="220" height="96" class="no"/>
+  <text x="820" y="374" text-anchor="middle" class="label">Use lighter rules</text>
+  <text x="820" y="400" text-anchor="middle" class="small">simple formatting checks</text>
+
+  <path d="M500 288 C500 350, 620 360, 710 388" class="line"/>
+  <path d="M500 180 C500 130, 725 130, 820 186" class="line"/>
+
+  <rect x="960" y="206" width="170" height="56" rx="14" fill="#dbeafe"/>
+  <text x="1045" y="241" text-anchor="middle" class="small">Yes: policy-heavy</text>
+
+  <rect x="960" y="360" width="170" height="56" rx="14" fill="#ffedd5"/>
+  <text x="1045" y="395" text-anchor="middle" class="small">No: keep it minimal</text>
+
+  <rect x="120" y="520" width="960" height="92" rx="18" fill="#e2e8f0"/>
+  <text x="600" y="556" text-anchor="middle" class="label">NeMo Guardrails is the better fit when policy and dialogue routing matter more than raw generation</text>
+  <text x="600" y="584" text-anchor="middle" class="small">rails, config, flows, handoff, safety constraints</text>
+</svg>

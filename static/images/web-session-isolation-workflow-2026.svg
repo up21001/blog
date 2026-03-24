@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#06283d"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+    <style>
+      .title { fill:#fff; font:700 40px Arial, sans-serif; }
+      .sub { fill:#dbeafe; font:400 18px Arial, sans-serif; }
+      .box { fill:#f8fafc; stroke:#bfdbfe; stroke-width:2; rx:18; }
+      .accent { fill:#dbeafe; stroke:#60a5fa; stroke-width:2; rx:18; }
+      .label { fill:#0f172a; font:700 20px Arial, sans-serif; }
+      .small { fill:#475569; font:400 14px Arial, sans-serif; }
+      .line { stroke:#bfdbfe; stroke-width:4; fill:none; marker-end:url(#arrow); }
+    </style>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#bfdbfe"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <text x="84" y="112" class="title">Web Session Isolation Workflow</text>
+  <text x="84" y="148" class="sub">Separate sessions by task to prevent cookie bleed and account confusion</text>
+  <rect x="90" y="228" width="180" height="104" class="accent"/>
+  <text x="124" y="268" class="label">Task Queue</text>
+  <text x="124" y="296" class="small">one job, one session</text>
+  <rect x="332" y="228" width="180" height="104" class="box"/>
+  <text x="364" y="268" class="label">New Profile</text>
+  <text x="364" y="296" class="small">fresh cookies</text>
+  <rect x="574" y="228" width="180" height="104" class="box"/>
+  <text x="600" y="268" class="label">Login / Verify</text>
+  <text x="600" y="296" class="small">session binding</text>
+  <rect x="816" y="228" width="180" height="104" class="accent"/>
+  <text x="840" y="268" class="label">Run Action</text>
+  <text x="840" y="296" class="small">isolated context</text>
+  <path d="M270 280 L332 280" class="line"/>
+  <path d="M512 280 L574 280" class="line"/>
+  <path d="M754 280 L816 280" class="line"/>
+  <rect x="214" y="406" width="772" height="92" class="box"/>
+  <text x="250" y="444" class="label">Outcome: reproducible runs with separate login state per task</text>
+  <text x="250" y="474" class="small">profile / cookie jar / cache / storage are created and retired per job</text>
+</svg>

@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#f8fafc"/>
+  <style>
+    .h1 { font: 700 40px sans-serif; fill: #0f172a; }
+    .h2 { font: 400 20px sans-serif; fill: #475569; }
+    .b { font: 700 20px sans-serif; fill: #0f172a; }
+    .t { font: 400 18px sans-serif; fill: #334155; }
+    .r { rx: 18; ry: 18; stroke: #cbd5e1; stroke-width: 2; }
+  </style>
+  <text x="70" y="76" class="h1">Checklist Decision Flow</text>
+  <text x="70" y="110" class="h2">무엇부터 확인할지 빠르게 고르는 기준</text>
+
+  <rect x="80" y="160" width="250" height="110" class="r" fill="#dbeafe"/>
+  <text x="205" y="205" text-anchor="middle" class="b">문서가 최신인가</text>
+  <text x="205" y="238" text-anchor="middle" class="t">freshness</text>
+
+  <rect x="410" y="160" width="250" height="110" class="r" fill="#dcfce7"/>
+  <text x="535" y="205" text-anchor="middle" class="b">검색이 맞는가</text>
+  <text x="535" y="238" text-anchor="middle" class="t">retrieval / reranking</text>
+
+  <rect x="740" y="160" width="250" height="110" class="r" fill="#fef9c3"/>
+  <text x="865" y="205" text-anchor="middle" class="b">답변이 근거를 유지하는가</text>
+  <text x="865" y="238" text-anchor="middle" class="t">groundedness / citation</text>
+
+  <line x1="330" y1="215" x2="410" y2="215" stroke="#64748b" stroke-width="4"/>
+  <line x1="660" y1="215" x2="740" y2="215" stroke="#64748b" stroke-width="4"/>
+
+  <rect x="130" y="340" width="940" height="150" class="r" fill="#ffffff"/>
+  <text x="165" y="390" class="b">운영 순서</text>
+  <text x="165" y="428" class="t">1. freshness 2. retrieval 3. evaluation 4. monitoring</text>
+  <text x="165" y="460" class="t">문제가 보이면 trace와 log로 원인을 분리합니다.</text>
+</svg>

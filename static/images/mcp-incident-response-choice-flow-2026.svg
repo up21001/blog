@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#111827"/>
+  <text x="60" y="68" fill="#f9fafb" font-family="Arial" font-size="34" font-weight="700">MCP Incident Response Choice Flow</text>
+  <text x="60" y="104" fill="#cbd5e1" font-family="Arial" font-size="18">choose retry, fallback, isolation, or human review by failure type</text>
+  <g font-family="Arial" font-size="18" font-weight="600" fill="#ffffff">
+    <rect x="70" y="180" width="180" height="82" rx="18" fill="#2563eb"/><text x="160" y="228" text-anchor="middle">Auth / Permission</text>
+    <rect x="290" y="180" width="180" height="82" rx="18" fill="#7c3aed"/><text x="380" y="228" text-anchor="middle">Schema / Contract</text>
+    <rect x="510" y="180" width="180" height="82" rx="18" fill="#0f766e"/><text x="600" y="228" text-anchor="middle">Latency Spike</text>
+    <rect x="730" y="180" width="180" height="82" rx="18" fill="#b45309"/><text x="820" y="228" text-anchor="middle">Downstream Down</text>
+    <rect x="950" y="180" width="180" height="82" rx="18" fill="#dc2626"/><text x="1040" y="228" text-anchor="middle">Repeated Failure</text>
+  </g>
+  <path d="M160 262 L160 322 L380 322 L380 262" fill="none" stroke="#f9fafb" stroke-width="3"/>
+  <path d="M380 262 L380 322 L600 322 L600 262" fill="none" stroke="#f9fafb" stroke-width="3"/>
+  <path d="M600 262 L600 322 L820 322 L820 262" fill="none" stroke="#f9fafb" stroke-width="3"/>
+  <path d="M820 262 L820 322 L1040 322 L1040 262" fill="none" stroke="#f9fafb" stroke-width="3"/>
+  <rect x="120" y="390" width="240" height="108" rx="18" fill="#0f172a" stroke="#93c5fd" stroke-width="2"/>
+  <text x="240" y="435" text-anchor="middle" fill="#f9fafb" font-family="Arial" font-size="18" font-weight="600">Retry or deny</text>
+  <text x="240" y="462" text-anchor="middle" fill="#cbd5e1" font-family="Arial" font-size="15">short path only</text>
+  <rect x="400" y="390" width="240" height="108" rx="18" fill="#0f172a" stroke="#a78bfa" stroke-width="2"/>
+  <text x="520" y="435" text-anchor="middle" fill="#f9fafb" font-family="Arial" font-size="18" font-weight="600">Fix contract</text>
+  <text x="520" y="462" text-anchor="middle" fill="#cbd5e1" font-family="Arial" font-size="15">schema gate</text>
+  <rect x="680" y="390" width="240" height="108" rx="18" fill="#0f172a" stroke="#5eead4" stroke-width="2"/>
+  <text x="800" y="435" text-anchor="middle" fill="#f9fafb" font-family="Arial" font-size="18" font-weight="600">Fallback path</text>
+  <text x="800" y="462" text-anchor="middle" fill="#cbd5e1" font-family="Arial" font-size="15">degrade safely</text>
+  <rect x="960" y="390" width="150" height="108" rx="18" fill="#0f172a" stroke="#fca5a5" stroke-width="2"/>
+  <text x="1035" y="435" text-anchor="middle" fill="#f9fafb" font-family="Arial" font-size="18" font-weight="600">Human</text>
+  <text x="1035" y="462" text-anchor="middle" fill="#cbd5e1" font-family="Arial" font-size="15">escalate</text>
+</svg>

@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="840" viewBox="0 0 1400 840">
+  <defs>
+    <linearGradient id="bg4" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#06111d"/>
+      <stop offset="100%" stop-color="#1a3651"/>
+    </linearGradient>
+    <style>
+      .h1 { font: 700 42px Arial, sans-serif; fill: #ffffff; }
+      .h2 { font: 400 18px Arial, sans-serif; fill: #bfd7ee; }
+      .node { fill: #18324d; stroke: #74c0fc; stroke-width: 3; }
+      .node2 { fill: #124b57; stroke: #7bdff2; stroke-width: 3; }
+      .node3 { fill: #3c2f5c; stroke: #d0bfff; stroke-width: 3; }
+      .node4 { fill: #4f2e1f; stroke: #ffb703; stroke-width: 3; }
+      .text1 { font: 700 20px Arial, sans-serif; fill: #ffffff; }
+      .text2 { font: 400 15px Arial, sans-serif; fill: #dbeafe; }
+      .panel { fill: #e9f5ff; }
+      .panelText { font: 700 18px Arial, sans-serif; fill: #10304b; }
+      .small { font: 400 15px Arial, sans-serif; fill: #244966; }
+    </style>
+    <marker id="arrow2" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M 0 0 L 12 6 L 0 12 z" fill="#8ad4ff"/>
+    </marker>
+  </defs>
+  <rect width="1400" height="840" fill="url(#bg4)"/>
+  <text x="70" y="86" class="h1">Model platform decision map</text>
+  <text x="70" y="122" class="h2">Choose by the main job, not by the longest model list</text>
+
+  <rect x="70" y="180" rx="26" ry="26" width="280" height="150" class="node"/>
+  <text x="100" y="228" class="text1">Need citations + search?</text>
+  <text x="100" y="262" class="text2">Perplexity API</text>
+  <text x="100" y="292" class="text2">Best for live research</text>
+
+  <rect x="390" y="180" rx="26" ry="26" width="280" height="150" class="node2"/>
+  <text x="420" y="228" class="text1">Need enterprise NLP?</text>
+  <text x="420" y="262" class="text2">Cohere</text>
+  <text x="420" y="292" class="text2">chat, embed, rerank</text>
+
+  <rect x="710" y="180" rx="26" ry="26" width="280" height="150" class="node3"/>
+  <text x="740" y="228" class="text1">Need flexible deployment?</text>
+  <text x="740" y="262" class="text2">Mistral</text>
+  <text x="740" y="292" class="text2">agents, reasoning, self-deploy</text>
+
+  <rect x="1030" y="180" rx="26" ry="26" width="280" height="150" class="node4"/>
+  <text x="1060" y="228" class="text1">Need low latency?</text>
+  <text x="1060" y="262" class="text2">Cerebras</text>
+  <text x="1060" y="292" class="text2">speed-first inference</text>
+
+  <path d="M 350 255 L 380 255" stroke="#8ad4ff" stroke-width="6" fill="none" marker-end="url(#arrow2)"/>
+  <path d="M 670 255 L 700 255" stroke="#8ad4ff" stroke-width="6" fill="none" marker-end="url(#arrow2)"/>
+  <path d="M 990 255 L 1020 255" stroke="#8ad4ff" stroke-width="6" fill="none" marker-end="url(#arrow2)"/>
+
+  <rect x="300" y="420" rx="28" ry="28" width="800" height="230" class="panel"/>
+  <text x="340" y="474" class="panelText">Where SambaNova fits</text>
+  <text x="340" y="512" class="small">Use SambaNova when the product needs enterprise model platform behavior, OpenAI compatibility, and custom checkpoints.</text>
+  <text x="340" y="548" class="small">It is the strongest fit when deployment control, integrations, RAG, and operations matter more than raw model variety.</text>
+  <text x="340" y="584" class="small">If your decision starts with enterprise ops and ends with inference performance, SambaNova deserves a look.</text>
+  <text x="340" y="620" class="small">If your decision starts with research search or pure speed, one of the other four may be more direct.</text>
+
+  <rect x="80" y="460" rx="18" ry="18" width="180" height="72" fill="#ffd166"/>
+  <text x="110" y="500" class="panelText">Search-first</text>
+  <text x="110" y="524" class="small">Perplexity</text>
+  <rect x="80" y="545" rx="18" ry="18" width="180" height="72" fill="#7bdff2"/>
+  <text x="107" y="585" class="panelText">Platform-first</text>
+  <text x="100" y="609" class="small">SambaNova</text>
+</svg>

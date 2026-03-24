@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">AI Access Control Workflow</title>
+  <desc id="desc">Workflow showing identity, policy, permission, and execution for AI access control.</desc>
+  <rect width="1200" height="630" fill="#15283f"/>
+  <text x="70" y="88" fill="#f4f7ff" font-size="34" font-weight="700">AI Access Control Workflow</text>
+  <text x="70" y="124" fill="#a9bfd7" font-size="18">Identity -> policy -> permission -> execution</text>
+  <g fill="#1d3553" stroke="#89a7c8" stroke-width="2">
+    <rect x="80" y="210" rx="18" width="180" height="110"/>
+    <rect x="340" y="210" rx="18" width="180" height="110"/>
+    <rect x="600" y="210" rx="18" width="180" height="110"/>
+    <rect x="860" y="210" rx="18" width="260" height="110"/>
+  </g>
+  <g fill="#f4f7ff" font-size="22" font-weight="700">
+    <text x="126" y="252">Identity</text>
+    <text x="388" y="252">Policy</text>
+    <text x="635" y="252">Permission</text>
+    <text x="925" y="242">Execute</text>
+    <text x="925" y="272">or Deny</text>
+  </g>
+  <g stroke="#9fd3ff" stroke-width="4" fill="none">
+    <path d="M260 265 H330"/>
+    <path d="M520 265 H590"/>
+    <path d="M780 265 H850"/>
+  </g>
+  <g fill="#9fd3ff">
+    <polygon points="322,265 306,257 306,273"/>
+    <polygon points="582,265 566,257 566,273"/>
+    <polygon points="842,265 826,257 826,273"/>
+  </g>
+  <rect x="190" y="400" width="820" height="96" rx="18" fill="#102236" stroke="#4f6c8c" stroke-width="2"/>
+  <text x="230" y="438" fill="#f4f7ff" font-size="22" font-weight="700">Scope:</text>
+  <text x="230" y="470" fill="#a9bfd7" font-size="18">dataset, tools, session, tenant, environment, approval level</text>
+</svg>

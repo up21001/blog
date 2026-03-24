@@ -1,0 +1,55 @@
+<svg width="800" height="450" viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg" font-family="'Malgun Gothic', sans-serif">
+  <rect width="800" height="450" fill="#F8FAFC" rx="12"/>
+  <text x="400" y="40" text-anchor="middle" font-size="20" font-weight="bold" fill="#1E293B">시니어 엔지니어로 성장하는 경로</text>
+  <text x="400" y="62" text-anchor="middle" font-size="13" fill="#64748B">기술 역량 × 소프트 스킬 × 영향력의 교차점</text>
+
+  <!-- 연차 축 -->
+  <line x1="80" y1="380" x2="720" y2="380" stroke="#CBD5E1" stroke-width="2"/>
+  <text x="80" y="400" text-anchor="middle" font-size="12" fill="#64748B">0년</text>
+  <text x="240" y="400" text-anchor="middle" font-size="12" fill="#64748B">3년</text>
+  <text x="400" y="400" text-anchor="middle" font-size="12" fill="#64748B">5년</text>
+  <text x="560" y="400" text-anchor="middle" font-size="12" fill="#64748B">7년</text>
+  <text x="720" y="400" text-anchor="middle" font-size="12" fill="#64748B">10년+</text>
+
+  <!-- 기술 역량 곡선 (파란) -->
+  <polyline points="80,360 240,260 400,180 560,150 720,140" fill="none" stroke="#3B82F6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- 소프트스킬 곡선 (초록) -->
+  <polyline points="80,370 240,340 400,280 560,200 720,130" fill="none" stroke="#10B981" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="8,4"/>
+
+  <!-- 영향력 곡선 (보라) -->
+  <polyline points="80,375 240,370 400,340 560,260 720,120" fill="none" stroke="#8B5CF6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4,4"/>
+
+  <!-- 레벨 박스 -->
+  <!-- 주니어 -->
+  <rect x="88" y="90" width="120" height="56" rx="8" fill="#DBEAFE" stroke="#3B82F6" stroke-width="1.5"/>
+  <text x="148" y="113" text-anchor="middle" font-size="13" font-weight="bold" fill="#1D4ED8">주니어</text>
+  <text x="148" y="131" text-anchor="middle" font-size="11" fill="#3B82F6">구현에 집중</text>
+  <text x="148" y="145" text-anchor="middle" font-size="10" fill="#3B82F6">0 – 3년</text>
+
+  <!-- 미들 -->
+  <rect x="248" y="90" width="120" height="56" rx="8" fill="#D1FAE5" stroke="#10B981" stroke-width="1.5"/>
+  <text x="308" y="113" text-anchor="middle" font-size="13" font-weight="bold" fill="#065F46">미들</text>
+  <text x="308" y="131" text-anchor="middle" font-size="11" fill="#10B981">설계에 참여</text>
+  <text x="308" y="145" text-anchor="middle" font-size="10" fill="#10B981">3 – 6년</text>
+
+  <!-- 시니어 -->
+  <rect x="408" y="90" width="120" height="56" rx="8" fill="#FEF3C7" stroke="#F59E0B" stroke-width="1.5"/>
+  <text x="468" y="113" text-anchor="middle" font-size="13" font-weight="bold" fill="#92400E">시니어</text>
+  <text x="468" y="131" text-anchor="middle" font-size="11" fill="#F59E0B">팀에 영향력</text>
+  <text x="468" y="145" text-anchor="middle" font-size="10" fill="#F59E0B">6 – 10년</text>
+
+  <!-- 스태프/리드 -->
+  <rect x="568" y="90" width="130" height="56" rx="8" fill="#EDE9FE" stroke="#8B5CF6" stroke-width="1.5"/>
+  <text x="633" y="113" text-anchor="middle" font-size="13" font-weight="bold" fill="#5B21B6">스태프/리드</text>
+  <text x="633" y="131" text-anchor="middle" font-size="11" fill="#8B5CF6">조직에 영향력</text>
+  <text x="633" y="145" text-anchor="middle" font-size="10" fill="#8B5CF6">10년+</text>
+
+  <!-- 범례 -->
+  <line x1="120" y1="425" x2="150" y2="425" stroke="#3B82F6" stroke-width="3"/>
+  <text x="155" y="429" font-size="11" fill="#64748B">기술 역량</text>
+  <line x1="230" y1="425" x2="260" y2="425" stroke="#10B981" stroke-width="3" stroke-dasharray="8,4"/>
+  <text x="265" y="429" font-size="11" fill="#64748B">소프트 스킬</text>
+  <line x1="350" y1="425" x2="380" y2="425" stroke="#8B5CF6" stroke-width="3" stroke-dasharray="4,4"/>
+  <text x="385" y="429" font-size="11" fill="#64748B">영향력</text>
+</svg>

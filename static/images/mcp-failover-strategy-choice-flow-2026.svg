@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#111827"/>
+  <text x="60" y="68" fill="#f9fafb" font-family="Arial" font-size="34" font-weight="700">MCP Failover Strategy Choice Flow</text>
+  <text x="60" y="104" fill="#cbd5e1" font-family="Arial" font-size="18">choose the failover path by failure type and risk</text>
+  <g font-family="Arial" font-size="18" font-weight="600" fill="#fff">
+    <rect x="60" y="175" width="170" height="84" rx="18" fill="#1d4ed8"/><text x="145" y="225" text-anchor="middle">Timeout</text>
+    <rect x="255" y="175" width="170" height="84" rx="18" fill="#7c3aed"/><text x="340" y="225" text-anchor="middle">Rate Limit</text>
+    <rect x="450" y="175" width="170" height="84" rx="18" fill="#0f766e"/><text x="535" y="225" text-anchor="middle">Auth Error</text>
+    <rect x="645" y="175" width="170" height="84" rx="18" fill="#b45309"/><text x="730" y="225" text-anchor="middle">Downstream</text>
+    <rect x="840" y="175" width="170" height="84" rx="18" fill="#dc2626"/><text x="925" y="225" text-anchor="middle">Data Risk</text>
+    <rect x="1035" y="175" width="110" height="84" rx="18" fill="#1f2937"/><text x="1090" y="225" text-anchor="middle">Human</text>
+  </g>
+  <path d="M145 259 L145 315 L340 315 L340 259" fill="none" stroke="#f9fafb" stroke-width="3"/>
+  <path d="M340 259 L340 315 L535 315 L535 259" fill="none" stroke="#f9fafb" stroke-width="3"/>
+  <path d="M535 259 L535 315 L730 315 L730 259" fill="none" stroke="#f9fafb" stroke-width="3"/>
+  <path d="M730 259 L730 315 L925 315 L925 259" fill="none" stroke="#f9fafb" stroke-width="3"/>
+  <path d="M925 259 L925 315 L1090 315 L1090 259" fill="none" stroke="#f9fafb" stroke-width="3"/>
+  <rect x="120" y="385" width="240" height="110" rx="18" fill="#0f172a" stroke="#93c5fd" stroke-width="2"/>
+  <text x="240" y="432" text-anchor="middle" fill="#f9fafb" font-family="Arial" font-size="18" font-weight="600">Retry first</text>
+  <text x="240" y="460" text-anchor="middle" fill="#cbd5e1" font-family="Arial" font-size="15">short timeout only</text>
+  <rect x="395" y="385" width="240" height="110" rx="18" fill="#0f172a" stroke="#a78bfa" stroke-width="2"/>
+  <text x="515" y="432" text-anchor="middle" fill="#f9fafb" font-family="Arial" font-size="18" font-weight="600">Switch provider</text>
+  <text x="515" y="460" text-anchor="middle" fill="#cbd5e1" font-family="Arial" font-size="15">budget-aware fallback</text>
+  <rect x="670" y="385" width="240" height="110" rx="18" fill="#0f172a" stroke="#5eead4" stroke-width="2"/>
+  <text x="790" y="432" text-anchor="middle" fill="#f9fafb" font-family="Arial" font-size="18" font-weight="600">Block action</text>
+  <text x="790" y="460" text-anchor="middle" fill="#cbd5e1" font-family="Arial" font-size="15">safe mode or review</text>
+  <rect x="945" y="385" width="170" height="110" rx="18" fill="#0f172a" stroke="#fca5a5" stroke-width="2"/>
+  <text x="1030" y="432" text-anchor="middle" fill="#f9fafb" font-family="Arial" font-size="18" font-weight="600">Escalate</text>
+  <text x="1030" y="460" text-anchor="middle" fill="#cbd5e1" font-family="Arial" font-size="15">human approval</text>
+</svg>

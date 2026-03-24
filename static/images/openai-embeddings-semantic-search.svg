@@ -1,0 +1,81 @@
+<svg width="800" height="450" viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg" font-family="'Malgun Gothic', sans-serif">
+  <rect width="800" height="450" fill="#F9FAFB" rx="12"/>
+  <text x="400" y="36" text-anchor="middle" font-size="18" font-weight="bold" fill="#1E293B">OpenAI Embeddings — 시맨틱 검색 파이프라인</text>
+
+  <!-- Text Input -->
+  <rect x="30" y="65" width="140" height="70" rx="8" fill="#DBEAFE" stroke="#3B82F6" stroke-width="2"/>
+  <text x="100" y="90" text-anchor="middle" font-size="12" font-weight="bold" fill="#1E40AF">텍스트 입력</text>
+  <text x="100" y="108" text-anchor="middle" font-size="10" fill="#1E40AF">"머신러닝이란</text>
+  <text x="100" y="122" text-anchor="middle" font-size="10" fill="#1E40AF">무엇인가?"</text>
+
+  <!-- Arrow -->
+  <line x1="170" y1="100" x2="210" y2="100" stroke="#6B7280" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- Tokenization -->
+  <rect x="210" y="65" width="140" height="70" rx="8" fill="#EDE9FE" stroke="#8B5CF6" stroke-width="2"/>
+  <text x="280" y="90" text-anchor="middle" font-size="12" font-weight="bold" fill="#5B21B6">토큰화</text>
+  <text x="280" y="108" text-anchor="middle" font-size="10" fill="#5B21B6">[머신, ##러닝,</text>
+  <text x="280" y="122" text-anchor="middle" font-size="10" fill="#5B21B6">이란, 무엇, ...]</text>
+
+  <!-- Arrow -->
+  <line x1="350" y1="100" x2="390" y2="100" stroke="#6B7280" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- Embedding Model -->
+  <rect x="390" y="55" width="160" height="90" rx="8" fill="#D1FAE5" stroke="#10B981" stroke-width="2"/>
+  <text x="470" y="80" text-anchor="middle" font-size="12" font-weight="bold" fill="#065F46">OpenAI API</text>
+  <text x="470" y="98" text-anchor="middle" font-size="11" fill="#065F46">text-embedding-3-small</text>
+  <text x="470" y="114" text-anchor="middle" font-size="10" fill="#065F46">1536 차원 벡터</text>
+  <text x="470" y="130" text-anchor="middle" font-size="10" fill="#065F46">$0.02 / 1M 토큰</text>
+
+  <!-- Arrow -->
+  <line x1="550" y1="100" x2="590" y2="100" stroke="#6B7280" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- Vector Output -->
+  <rect x="590" y="65" width="180" height="70" rx="8" fill="#FEF3C7" stroke="#F59E0B" stroke-width="2"/>
+  <text x="680" y="90" text-anchor="middle" font-size="12" font-weight="bold" fill="#92400E">벡터 출력</text>
+  <text x="680" y="108" text-anchor="middle" font-size="10" fill="#92400E">[0.023, -0.156, 0.891,</text>
+  <text x="680" y="122" text-anchor="middle" font-size="10" fill="#92400E"> 0.004, ... (1536개)]</text>
+
+  <!-- Cosine Similarity Section -->
+  <text x="400" y="175" text-anchor="middle" font-size="15" font-weight="bold" fill="#374151">— 코사인 유사도 계산 —</text>
+
+  <!-- Query Vector -->
+  <rect x="50" y="195" width="150" height="55" rx="8" fill="#DBEAFE" stroke="#3B82F6" stroke-width="2"/>
+  <text x="125" y="218" text-anchor="middle" font-size="12" font-weight="bold" fill="#1E40AF">쿼리 벡터 Q</text>
+  <text x="125" y="238" text-anchor="middle" font-size="10" fill="#1E40AF">[0.023, -0.156, ...]</text>
+
+  <!-- Doc Vectors -->
+  <rect x="290" y="195" width="150" height="55" rx="8" fill="#D1FAE5" stroke="#10B981" stroke-width="2"/>
+  <text x="365" y="218" text-anchor="middle" font-size="12" font-weight="bold" fill="#065F46">문서 벡터 D1..N</text>
+  <text x="365" y="238" text-anchor="middle" font-size="10" fill="#065F46">FAISS 인덱스 검색</text>
+
+  <!-- Formula -->
+  <rect x="520" y="195" width="250" height="55" rx="8" fill="#FEF3C7" stroke="#F59E0B" stroke-width="2"/>
+  <text x="645" y="218" text-anchor="middle" font-size="12" font-weight="bold" fill="#92400E">유사도 공식</text>
+  <text x="645" y="238" text-anchor="middle" font-size="12" fill="#92400E">cos(θ) = Q·D / (|Q|×|D|)</text>
+
+  <!-- FAISS Section -->
+  <rect x="30" y="280" width="350" height="140" rx="8" fill="#F3F4F6" stroke="#6B7280" stroke-width="1.5"/>
+  <text x="205" y="302" text-anchor="middle" font-size="13" font-weight="bold" fill="#374151">FAISS 인덱스 유형</text>
+  <text x="45" y="322" font-size="11" fill="#374151">• IndexFlatL2 — 정확한 검색, 소규모</text>
+  <text x="45" y="340" font-size="11" fill="#374151">• IndexIVFFlat — ANN, 대규모 적합</text>
+  <text x="45" y="358" font-size="11" fill="#374151">• IndexHNSW — 그래프 기반, 빠른 쿼리</text>
+  <text x="45" y="376" font-size="11" fill="#374151">• IndexIVFPQ — 압축 + 빠른 검색</text>
+  <text x="45" y="394" font-size="11" fill="#374151">• GPU 버전: faiss-gpu (대규모 배치)</text>
+
+  <!-- Embedding Models -->
+  <rect x="420" y="280" width="350" height="140" rx="8" fill="#DBEAFE" stroke="#3B82F6" stroke-width="1.5"/>
+  <text x="595" y="302" text-anchor="middle" font-size="13" font-weight="bold" fill="#1E40AF">임베딩 모델 비교</text>
+  <text x="435" y="322" font-size="11" fill="#1E40AF">• text-embedding-3-small: 1536차원, 저렴</text>
+  <text x="435" y="340" font-size="11" fill="#1E40AF">• text-embedding-3-large: 3072차원, 고성능</text>
+  <text x="435" y="358" font-size="11" fill="#1E40AF">• sentence-transformers: 오픈소스, 로컬</text>
+  <text x="435" y="376" font-size="11" fill="#1E40AF">• BGE-M3: 다국어, 한국어 강점</text>
+  <text x="435" y="394" font-size="11" fill="#1E40AF">• Cohere embed-v3: 다국어 + 검색 특화</text>
+
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#6B7280"/>
+    </marker>
+  </defs>
+  <text x="400" y="440" text-anchor="middle" font-size="10" fill="#9CA3AF">OpenAI Embeddings API + FAISS 시맨틱 검색 파이프라인</text>
+</svg>

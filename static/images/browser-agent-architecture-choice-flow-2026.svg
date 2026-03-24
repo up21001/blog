@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#0b1120"/>
+  <text x="80" y="86" fill="#f8fafc" font-size="42" font-family="Arial, sans-serif" font-weight="700">Browser Agent Choice Flow</text>
+  <text x="80" y="126" fill="#94a3b8" font-size="20" font-family="Arial, sans-serif">When to split plan, execution, and safety</text>
+  <rect x="80" y="180" width="260" height="90" rx="18" fill="#1d4ed8"/>
+  <rect x="470" y="180" width="260" height="90" rx="18" fill="#059669"/>
+  <rect x="860" y="180" width="260" height="90" rx="18" fill="#7c3aed"/>
+  <text x="130" y="236" fill="#fff" font-size="26" font-family="Arial, sans-serif" font-weight="700">Simple Flow</text>
+  <text x="505" y="236" fill="#fff" font-size="26" font-family="Arial, sans-serif" font-weight="700">Mixed Flow</text>
+  <text x="900" y="236" fill="#fff" font-size="26" font-family="Arial, sans-serif" font-weight="700">Complex Flow</text>
+  <text x="80" y="330" fill="#cbd5e1" font-size="20" font-family="Arial, sans-serif">RPA for fixed steps</text>
+  <text x="470" y="330" fill="#cbd5e1" font-size="20" font-family="Arial, sans-serif">Agent + approval gates</text>
+  <text x="860" y="330" fill="#cbd5e1" font-size="20" font-family="Arial, sans-serif">Browser Agent with traces</text>
+  <line x1="210" y1="270" x2="210" y2="390" stroke="#475569" stroke-width="3"/>
+  <line x1="600" y1="270" x2="600" y2="390" stroke="#475569" stroke-width="3"/>
+  <line x1="990" y1="270" x2="990" y2="390" stroke="#475569" stroke-width="3"/>
+  <rect x="110" y="400" width="200" height="110" rx="18" fill="#111827" stroke="#334155"/>
+  <rect x="500" y="400" width="200" height="110" rx="18" fill="#111827" stroke="#334155"/>
+  <rect x="890" y="400" width="200" height="110" rx="18" fill="#111827" stroke="#334155"/>
+  <text x="138" y="448" fill="#f8fafc" font-size="24" font-family="Arial, sans-serif" font-weight="700">Stable UI</text>
+  <text x="522" y="448" fill="#f8fafc" font-size="24" font-family="Arial, sans-serif" font-weight="700">Many Exceptions</text>
+  <text x="913" y="448" fill="#f8fafc" font-size="24" font-family="Arial, sans-serif" font-weight="700">Need Replays</text>
+</svg>

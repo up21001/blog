@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#111827"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </linearGradient>
+    <style>
+      .title { font: 700 50px Arial, sans-serif; fill: #f8fafc; }
+      .sub { font: 400 22px Arial, sans-serif; fill: #cbd5e1; }
+      .box { fill: rgba(30, 41, 59, 0.94); stroke: #60a5fa; stroke-width: 2; rx: 16; }
+      .lbl { font: 700 22px Arial, sans-serif; fill: #e2e8f0; }
+      .txt { font: 400 17px Arial, sans-serif; fill: #cbd5e1; }
+      .arrow { stroke: #94a3b8; stroke-width: 4; fill: none; marker-end: url(#m); }
+      .yes { fill: #22c55e; }
+      .no { fill: #ef4444; }
+      .tag { font: 700 15px Arial, sans-serif; fill: white; }
+    </style>
+    <marker id="m" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <text x="80" y="120" class="title">Which metric answers your question?</text>
+  <text x="80" y="160" class="sub">Use the metric that matches the failure mode</text>
+
+  <rect x="80" y="250" width="220" height="120" class="box"/>
+  <text x="190" y="298" text-anchor="middle" class="lbl">Too many false hits?</text>
+  <text x="190" y="328" text-anchor="middle" class="txt">Use Precision@K</text>
+
+  <rect x="360" y="250" width="220" height="120" class="box"/>
+  <text x="470" y="298" text-anchor="middle" class="lbl">Missing relevant docs?</text>
+  <text x="470" y="328" text-anchor="middle" class="txt">Use Recall@K</text>
+
+  <rect x="640" y="250" width="220" height="120" class="box"/>
+  <text x="750" y="298" text-anchor="middle" class="lbl">Need first-hit ranking?</text>
+  <text x="750" y="328" text-anchor="middle" class="txt">Use MRR</text>
+
+  <rect x="920" y="250" width="200" height="120" class="box"/>
+  <text x="1020" y="298" text-anchor="middle" class="lbl">Need full ranking?</text>
+  <text x="1020" y="328" text-anchor="middle" class="txt">Use nDCG</text>
+
+  <path class="arrow" d="M 300 310 L 350 310"/>
+  <path class="arrow" d="M 580 310 L 630 310"/>
+  <path class="arrow" d="M 860 310 L 910 310"/>
+
+  <rect x="80" y="430" width="155" height="34" rx="17" class="yes"/>
+  <text x="157" y="452" text-anchor="middle" class="tag">Tune precision</text>
+  <rect x="260" y="430" width="155" height="34" rx="17" class="yes"/>
+  <text x="338" y="452" text-anchor="middle" class="tag">Tune recall</text>
+  <rect x="440" y="430" width="120" height="34" rx="17" class="yes"/>
+  <text x="500" y="452" text-anchor="middle" class="tag">Tune rank</text>
+</svg>
+

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#111827"/>
+  <text x="60" y="76" fill="#f8fafc" font-family="Arial, sans-serif" font-size="38" font-weight="700">LLM Budget Alerting Architecture</text>
+  <g fill="#16a34a" stroke="#86efac" stroke-width="2">
+    <rect x="70" y="180" width="220" height="100" rx="18"/><rect x="340" y="180" width="220" height="100" rx="18"/><rect x="610" y="180" width="220" height="100" rx="18"/><rect x="880" y="180" width="250" height="100" rx="18"/>
+  </g>
+  <g fill="#f8fafc" font-family="Arial, sans-serif" font-size="19" font-weight="700" text-anchor="middle">
+    <text x="180" y="224">Usage Stream</text><text x="450" y="224">Budget Engine</text><text x="720" y="224">Alert Router</text><text x="1005" y="224">Runbook / Action</text>
+  </g>
+  <g stroke="#d1fae5" stroke-width="5" fill="none" marker-end="url(#f)"><path d="M290 230 L340 230"/><path d="M560 230 L610 230"/><path d="M830 230 L880 230"/></g>
+  <defs><marker id="f" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#d1fae5"/></marker></defs>
+  <rect x="70" y="340" width="1060" height="160" rx="22" fill="#0f172a" stroke="#14532d"/>
+  <text x="110" y="390" fill="#f8fafc" font-family="Arial, sans-serif" font-size="20" font-weight="700">Budget buckets</text>
+  <text x="110" y="426" fill="#cbd5e1" font-family="Arial, sans-serif" font-size="18">daily, monthly, team, model, endpoint, batch, retry</text>
+  <text x="110" y="462" fill="#cbd5e1" font-family="Arial, sans-serif" font-size="18">alerts should lead to an action, not just a notification</text>
+</svg>

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#111827"/>
+  <text x="70" y="90" fill="#f8fafc" font-family="Arial, sans-serif" font-size="42" font-weight="700">Tradeoff Architecture</text>
+  <rect x="70" y="185" width="200" height="100" rx="18" fill="#1d4ed8"/>
+  <text x="170" y="227" text-anchor="middle" fill="#fff" font-family="Arial, sans-serif" font-size="20">Retriever</text>
+  <rect x="320" y="185" width="240" height="100" rx="18" fill="#7c3aed"/>
+  <text x="440" y="227" text-anchor="middle" fill="#fff" font-family="Arial, sans-serif" font-size="20">Reranker</text>
+  <rect x="610" y="185" width="240" height="100" rx="18" fill="#0ea5e9"/>
+  <text x="730" y="227" text-anchor="middle" fill="#fff" font-family="Arial, sans-serif" font-size="20">Routing / Cache</text>
+  <rect x="900" y="185" width="230" height="100" rx="18" fill="#22c55e"/>
+  <text x="1015" y="227" text-anchor="middle" fill="#111827" font-family="Arial, sans-serif" font-size="20">LLM output</text>
+  <line x1="270" y1="235" x2="320" y2="235" stroke="#e2e8f0" stroke-width="4"/>
+  <line x1="560" y1="235" x2="610" y2="235" stroke="#e2e8f0" stroke-width="4"/>
+  <line x1="850" y1="235" x2="900" y2="235" stroke="#e2e8f0" stroke-width="4"/>
+  <rect x="70" y="350" width="1060" height="165" rx="22" fill="#0f172a" stroke="#334155"/>
+  <text x="100" y="395" fill="#f8fafc" font-family="Arial, sans-serif" font-size="22" font-weight="700">What to optimize</text>
+  <text x="100" y="435" fill="#cbd5e1" font-family="Arial, sans-serif" font-size="18">reduce rerank calls with routing and caching</text>
+  <text x="100" y="465" fill="#cbd5e1" font-family="Arial, sans-serif" font-size="18">cap top-k to fit p95 latency and spend targets</text>
+</svg>

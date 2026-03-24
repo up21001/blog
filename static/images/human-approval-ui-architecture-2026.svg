@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fef7f2"/>
+      <stop offset="100%" stop-color="#eef7fb"/>
+    </linearGradient>
+    <style>
+      .title{font:700 42px Arial,sans-serif;fill:#172033}
+      .sub{font:400 22px Arial,sans-serif;fill:#4b5563}
+      .box{fill:#fff;stroke:#172033;stroke-width:3;rx:18;ry:18}
+      .label{font:700 22px Arial,sans-serif;fill:#172033}
+      .small{font:400 18px Arial,sans-serif;fill:#4b5563}
+      .arrow{stroke:#172033;stroke-width:4;fill:none;marker-end:url(#m)}
+      .pill{fill:#172033;rx:999;ry:999}
+      .pillText{font:700 18px Arial,sans-serif;fill:#fff}
+    </style>
+    <marker id="m" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 z" fill="#172033"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <text x="60" y="70" class="title">Approval UI Architecture</text>
+  <text x="60" y="110" class="sub">Separate agent execution from human review and audit</text>
+  <rect x="60" y="140" width="210" height="40" class="pill"/>
+  <text x="85" y="167" class="pillText">architecture</text>
+  <rect class="box" x="70" y="230" width="190" height="110"/>
+  <text x="116" y="275" class="label">Agent</text>
+  <text x="95" y="305" class="small">Creates request</text>
+  <rect class="box" x="320" y="230" width="190" height="110"/>
+  <text x="380" y="275" class="label">UI</text>
+  <text x="342" y="305" class="small">Shows context</text>
+  <rect class="box" x="570" y="230" width="190" height="110"/>
+  <text x="625" y="275" class="label">Approver</text>
+  <text x="607" y="305" class="small">Decides</text>
+  <rect class="box" x="820" y="230" width="190" height="110"/>
+  <text x="867" y="275" class="label">Audit</text>
+  <text x="850" y="305" class="small">Stores trace</text>
+  <rect class="box" x="320" y="400" width="440" height="110"/>
+  <text x="440" y="445" class="label">Execution Service</text>
+  <text x="392" y="475" class="small">Runs only after approval</text>
+  <path class="arrow" d="M260 285 L320 285"/>
+  <path class="arrow" d="M510 285 L570 285"/>
+  <path class="arrow" d="M760 285 L820 285"/>
+  <path class="arrow" d="M605 340 L605 400"/>
+  <path class="arrow" d="M430 400 L430 340"/>
+</svg>

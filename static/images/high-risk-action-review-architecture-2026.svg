@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f5f0ec"/>
+      <stop offset="100%" stop-color="#eef3f9"/>
+    </linearGradient>
+    <style>
+      .title{font:700 40px Arial,sans-serif;fill:#1a2233}
+      .sub{font:400 22px Arial,sans-serif;fill:#4b586f}
+      .panel{fill:#fff;stroke:#263449;stroke-width:3;rx:18;ry:18}
+      .label{font:700 20px Arial,sans-serif;fill:#1a2233}
+      .small{font:400 17px Arial,sans-serif;fill:#4b586f}
+      .arrow{stroke:#263449;stroke-width:4;fill:none;marker-end:url(#m)}
+      .pill{fill:#1a2233;rx:999;ry:999}
+      .pillText{font:700 18px Arial,sans-serif;fill:#fff}
+    </style>
+    <marker id="m" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 z" fill="#263449"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <text x="60" y="68" class="title">Review Architecture</text>
+  <text x="60" y="106" class="sub">Policy engine, UI, audit log, execution are separated</text>
+  <rect x="60" y="140" width="170" height="38" class="pill"/>
+  <text x="90" y="166" class="pillText">architecture</text>
+
+  <rect class="panel" x="60" y="240" width="200" height="130"/>
+  <text x="112" y="286" class="label">Agent</text>
+  <text x="94" y="316" class="small">Proposes action</text>
+  <rect class="panel" x="320" y="220" width="220" height="150"/>
+  <text x="355" y="265" class="label">Policy Engine</text>
+  <text x="348" y="296" class="small">Risk + rules</text>
+  <text x="350" y="324" class="small">Approval path</text>
+  <rect class="panel" x="625" y="190" width="210" height="150"/>
+  <text x="666" y="235" class="label">Review UI</text>
+  <text x="651" y="266" class="small">Explain impact</text>
+  <text x="653" y="294" class="small">Collect decision</text>
+  <rect class="panel" x="625" y="390" width="210" height="110"/>
+  <text x="665" y="435" class="label">Audit Log</text>
+  <text x="646" y="465" class="small">Immutable record</text>
+  <rect class="panel" x="915" y="240" width="190" height="130"/>
+  <text x="950" y="286" class="label">Execution</text>
+  <text x="943" y="316" class="small">Proceed or stop</text>
+  <path class="arrow" d="M260 305 L320 305"/>
+  <path class="arrow" d="M535 305 L625 265"/>
+  <path class="arrow" d="M835 265 L915 305"/>
+  <path class="arrow" d="M730 340 L730 390"/>
+  <path class="arrow" d="M835 445 L915 340"/>
+</svg>

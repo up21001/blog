@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">OpenAI Computer Use Choice Flow 2026</title>
+  <desc id="desc">Decision map for when to use OpenAI Computer Use</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fff6ee"/>
+      <stop offset="100%" stop-color="#f4f8ff"/>
+    </linearGradient>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 z" fill="#6a5a4d"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <text x="70" y="86" font-family="Segoe UI, Arial, sans-serif" font-size="38" font-weight="700" fill="#2b2b2b">When to use Computer Use</text>
+  <text x="70" y="122" font-family="Segoe UI, Arial, sans-serif" font-size="20" fill="#6b6b6b">API 가능 여부와 화면 안정성부터 먼저 확인</text>
+  <rect x="70" y="210" width="250" height="110" rx="20" fill="#1f4e79"/>
+  <rect x="365" y="210" width="250" height="110" rx="20" fill="#7b5ea7"/>
+  <rect x="660" y="210" width="250" height="110" rx="20" fill="#2f6f4e"/>
+  <rect x="955" y="210" width="175" height="110" rx="20" fill="#a54d4d"/>
+  <line x1="320" y1="265" x2="365" y2="265" stroke="#6a5a4d" stroke-width="4" marker-end="url(#arrow)"/>
+  <line x1="615" y1="265" x2="660" y2="265" stroke="#6a5a4d" stroke-width="4" marker-end="url(#arrow)"/>
+  <line x1="910" y1="265" x2="955" y2="265" stroke="#6a5a4d" stroke-width="4" marker-end="url(#arrow)"/>
+  <text x="195" y="252" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" fill="#fff">API exists?</text>
+  <text x="195" y="282" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#dcecf8">Use Responses</text>
+  <text x="490" y="252" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" fill="#fff">UI only</text>
+  <text x="490" y="282" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#f1e9fb">Use Computer Use</text>
+  <text x="785" y="252" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" fill="#fff">Needs review</text>
+  <text x="785" y="282" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#def3e8">Add human-in-loop</text>
+  <text x="1038" y="252" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="700" fill="#fff">Ship</text>
+  <text x="1038" y="282" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="16" fill="#ffe5e5">Monitor failures</text>
+</svg>

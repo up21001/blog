@@ -1,7 +1,9 @@
 baseURL = "https://blog-8ye.pages.dev"
 languageCode = "ko"
 defaultContentLanguage = "ko"
-title = "통합 블로그 | 하드웨어·소프트웨어·AI 엔지니어링"
+# 미래 날짜 글도 HTML/RSS/index.json에 포함 (예: 발행일이 오늘보다 뒤인 초안 공개 글)
+buildFuture = true
+title = "통합 블로그"
 theme = "blowfish"
 enableRobotsTXT = true
 [pagination]
@@ -43,8 +45,8 @@ enableRobotsTXT = true
   showTableOfContents = true
   showReadingTime = true
   showWordCount = true
-  showRelatedContent = true
-  relatedContentLimit = 3
+  showRelatedContent = false
+  relatedContentLimit = 0
   showEdit = false
   showHeadingAnchors = true
 
@@ -57,7 +59,6 @@ enableRobotsTXT = true
   home = ["HTML", "RSS", "JSON"]
 
 [taxonomies]
-  tag = "tags"
   category = "categories"
   series = "series"
 
@@ -90,6 +91,18 @@ enableRobotsTXT = true
   parent = "Core"
   weight = 3
 
+[[menus.main]]
+  name = "AI Agents"
+  pageRef = "/categories/ai-agents"
+  parent = "Core"
+  weight = 4
+
+[[menus.main]]
+  name = "MCP"
+  pageRef = "/categories/mcp"
+  parent = "Core"
+  weight = 5
+
 # ── Insight ───────────────────────────────────────────
 [[menus.main]]
   name = "Insight"
@@ -112,6 +125,24 @@ enableRobotsTXT = true
   pageRef = "/categories/learning-log"
   parent = "Insight"
   weight = 3
+
+[[menus.main]]
+  name = "AI Ops"
+  pageRef = "/categories/ai-ops"
+  parent = "Insight"
+  weight = 4
+
+[[menus.main]]
+  name = "Prompt Engineering"
+  pageRef = "/categories/prompt-engineering"
+  parent = "Insight"
+  weight = 5
+
+[[menus.main]]
+  name = "Series"
+  pageRef = "/categories/series"
+  parent = "Insight"
+  weight = 6
 
 # ── Life ──────────────────────────────────────────────
 [[menus.main]]

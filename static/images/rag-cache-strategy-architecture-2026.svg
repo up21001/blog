@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg3" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fff7ed"/>
+      <stop offset="100%" stop-color="#ffedd5"/>
+    </linearGradient>
+    <style>
+      .title { font: 700 42px sans-serif; fill: #7c2d12; }
+      .sub { font: 400 20px sans-serif; fill: #9a3412; }
+      .boxTitle { font: 700 22px sans-serif; fill: #7c2d12; }
+      .boxText { font: 400 18px sans-serif; fill: #334155; }
+      .card { rx: 22; ry: 22; stroke: #fdba74; stroke-width: 2; }
+    </style>
+    <marker id="arrow3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#c2410c"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg3)"/>
+  <text x="70" y="78" class="title">RAG Cache Architecture</text>
+  <text x="70" y="114" class="sub">cache layers, invalidation, monitoring</text>
+
+  <rect x="70" y="170" width="170" height="120" class="card" fill="#ffffff"/>
+  <text x="155" y="218" text-anchor="middle" class="boxTitle">Request</text>
+  <text x="155" y="250" text-anchor="middle" class="boxText">질문 입력</text>
+
+  <rect x="280" y="170" width="170" height="120" class="card" fill="#dbeafe"/>
+  <text x="365" y="218" text-anchor="middle" class="boxTitle">Exact</text>
+  <text x="365" y="250" text-anchor="middle" class="boxText">문자열 캐시</text>
+
+  <rect x="490" y="170" width="170" height="120" class="card" fill="#e0f2fe"/>
+  <text x="575" y="218" text-anchor="middle" class="boxTitle">Semantic</text>
+  <text x="575" y="250" text-anchor="middle" class="boxText">유사도 캐시</text>
+
+  <rect x="700" y="170" width="170" height="120" class="card" fill="#dcfce7"/>
+  <text x="785" y="218" text-anchor="middle" class="boxTitle">Retrieval</text>
+  <text x="785" y="250" text-anchor="middle" class="boxText">검색 재사용</text>
+
+  <rect x="910" y="170" width="220" height="120" class="card" fill="#fef9c3"/>
+  <text x="1020" y="218" text-anchor="middle" class="boxTitle">RAG + Metrics</text>
+  <text x="1020" y="250" text-anchor="middle" class="boxText">cost / latency / quality</text>
+
+  <line x1="240" y1="230" x2="280" y2="230" stroke="#c2410c" stroke-width="4" marker-end="url(#arrow3)"/>
+  <line x1="450" y1="230" x2="490" y2="230" stroke="#c2410c" stroke-width="4" marker-end="url(#arrow3)"/>
+  <line x1="660" y1="230" x2="700" y2="230" stroke="#c2410c" stroke-width="4" marker-end="url(#arrow3)"/>
+  <line x1="870" y1="230" x2="910" y2="230" stroke="#c2410c" stroke-width="4" marker-end="url(#arrow3)"/>
+
+  <rect x="70" y="360" width="1060" height="170" class="card" fill="#ffffff"/>
+  <text x="100" y="402" class="boxTitle">운영 포인트</text>
+  <text x="100" y="442" class="boxText">캐시 계층별 TTL과 invalidation을 분리하고, RAG Monitoring에서 hit rate와 answer quality를 함께 본다.</text>
+  <text x="100" y="482" class="boxText">캐시는 비용을 줄이기 위한 수단이고, 정확도와 최신성을 해치지 않는 선에서만 재사용해야 한다.</text>
+</svg>

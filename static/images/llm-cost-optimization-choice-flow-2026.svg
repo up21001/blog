@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#f8fafc"/>
+  <rect x="48" y="42" width="1104" height="546" rx="34" fill="#fff" stroke="#e2e8f0" stroke-width="2"/>
+  <text x="82" y="106" font-size="40" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#0f766e">Cost vs Quality</text>
+  <rect x="88" y="228" width="180" height="118" rx="24" fill="#f0fdfa" stroke="#2dd4bf"/>
+  <text x="132" y="275" font-size="28" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#115e59">Task</text>
+  <text x="112" y="307" font-size="18" font-family="Segoe UI, Arial, sans-serif" fill="#0f766e">token budget</text>
+  <rect x="342" y="186" width="220" height="228" rx="28" fill="#f0fdfa" stroke="#2dd4bf"/>
+  <text x="384" y="239" font-size="30" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#115e59">Decision</text>
+  <text x="368" y="272" font-size="18" font-family="Segoe UI, Arial, sans-serif" fill="#0f766e">cache? batch? route?</text>
+  <rect x="368" y="296" width="160" height="38" rx="12" fill="#fff" stroke="#2dd4bf"/>
+  <text x="391" y="321" font-size="18" font-family="Segoe UI, Arial, sans-serif" fill="#0f766e">reduce cost</text>
+  <rect x="622" y="156" width="178" height="112" rx="24" fill="#fff" stroke="#5eead4"/>
+  <text x="666" y="202" font-size="26" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#115e59">Lower</text>
+  <text x="650" y="234" font-size="18" font-family="Segoe UI, Arial, sans-serif" fill="#0f766e">smaller spend</text>
+  <rect x="622" y="344" width="178" height="112" rx="24" fill="#fff" stroke="#5eead4"/>
+  <text x="658" y="390" font-size="24" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#115e59">Higher</text>
+  <text x="646" y="422" font-size="18" font-family="Segoe UI, Arial, sans-serif" fill="#0f766e">better quality</text>
+  <rect x="860" y="228" width="252" height="118" rx="24" fill="#f0fdfa" stroke="#2dd4bf"/>
+  <text x="916" y="275" font-size="28" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#115e59">Result</text>
+  <text x="890" y="307" font-size="18" font-family="Segoe UI, Arial, sans-serif" fill="#0f766e">balanced operating cost</text>
+  <path d="M268 287 C305 287, 310 287, 342 287" fill="none" stroke="#0f766e" stroke-width="4"/>
+  <path d="M562 255 C590 245, 596 236, 622 212" fill="none" stroke="#0f766e" stroke-width="4"/>
+  <path d="M562 321 C590 337, 596 349, 622 400" fill="none" stroke="#0f766e" stroke-width="4"/>
+  <path d="M800 212 C828 226, 842 236, 860 286" fill="none" stroke="#0f766e" stroke-width="4"/>
+  <path d="M800 400 C828 378, 842 360, 860 286" fill="none" stroke="#0f766e" stroke-width="4"/>
+</svg>

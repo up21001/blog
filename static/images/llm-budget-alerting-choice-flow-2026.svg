@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#f8fafc"/>
+  <text x="60" y="76" fill="#0f172a" font-family="Arial, sans-serif" font-size="38" font-weight="700">LLM Budget Alerting Choice Flow</text>
+  <g fill="#fff" stroke="#0f172a" stroke-width="2">
+    <rect x="70" y="180" width="190" height="82" rx="18"/><rect x="310" y="180" width="190" height="82" rx="18"/><rect x="550" y="180" width="190" height="82" rx="18"/><rect x="790" y="180" width="190" height="82" rx="18"/>
+  </g>
+  <g fill="#0f172a" font-family="Arial, sans-serif" font-size="18" font-weight="700" text-anchor="middle">
+    <text x="165" y="228">Budget</text><text x="405" y="228">Track</text><text x="645" y="228">Threshold</text><text x="885" y="228">Action</text>
+  </g>
+  <g stroke="#64748b" stroke-width="4" fill="none" marker-end="url(#e)"><path d="M260 221 L310 221"/><path d="M500 221 L550 221"/><path d="M740 221 L790 221"/></g>
+  <defs><marker id="e" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#64748b"/></marker></defs>
+  <rect x="80" y="320" width="1040" height="190" rx="24" fill="#e2e8f0"/>
+  <text x="120" y="372" fill="#0f172a" font-family="Arial, sans-serif" font-size="22" font-weight="700">Response options</text>
+  <text x="120" y="410" fill="#334155" font-family="Arial, sans-serif" font-size="18">warn, slow down, reroute, disable noncritical jobs, require approval</text>
+  <text x="120" y="444" fill="#334155" font-family="Arial, sans-serif" font-size="18">pair alerting with a runbook so the team knows what to do next</text>
+</svg>
+

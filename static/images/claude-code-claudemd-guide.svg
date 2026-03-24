@@ -1,0 +1,81 @@
+<svg width="800" height="450" viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg" font-family="'Malgun Gothic', sans-serif">
+  <!-- Background -->
+  <rect width="800" height="450" fill="#F8FAFC" rx="12"/>
+
+  <!-- Title -->
+  <text x="400" y="36" text-anchor="middle" font-size="18" font-weight="bold" fill="#1E293B">CLAUDE.md 구조 — 프로젝트별 AI 맞춤 설정</text>
+
+  <!-- Left: file structure tree -->
+  <rect x="30" y="52" width="200" height="230" rx="10" fill="#1E293B"/>
+  <rect x="30" y="52" width="200" height="28" rx="10" fill="#374151"/>
+  <rect x="30" y="68" width="200" height="12" fill="#374151"/>
+  <text x="130" y="68" text-anchor="middle" font-size="11" fill="#9CA3AF">프로젝트 구조</text>
+  <text x="46" y="100" font-size="11" fill="#60A5FA" font-family="monospace">my-project/</text>
+  <text x="54" y="118" font-size="11" fill="#FDE68A" font-family="monospace">├── CLAUDE.md  ← 핵심</text>
+  <text x="54" y="136" font-size="11" fill="#94A3B8" font-family="monospace">├── src/</text>
+  <text x="54" y="154" font-size="11" fill="#94A3B8" font-family="monospace">├── tests/</text>
+  <text x="54" y="172" font-size="11" fill="#94A3B8" font-family="monospace">├── package.json</text>
+  <text x="54" y="190" font-size="11" fill="#94A3B8" font-family="monospace">└── .claude/</text>
+  <text x="62" y="208" font-size="11" fill="#D1FAE5" font-family="monospace">    └── settings.json</text>
+  <text x="46" y="234" font-size="10" fill="#6B7280" font-family="monospace">// 서브디렉터리도 가능</text>
+  <text x="46" y="250" font-size="10" fill="#6B7280" font-family="monospace">// src/CLAUDE.md</text>
+  <text x="46" y="266" font-size="10" fill="#6B7280" font-family="monospace">// tests/CLAUDE.md</text>
+
+  <!-- Middle: CLAUDE.md sections -->
+  <text x="270" y="68" font-size="13" font-weight="bold" fill="#1E293B">CLAUDE.md 핵심 섹션</text>
+
+  <rect x="250" y="78" width="290" height="48" rx="6" fill="#DBEAFE" stroke="#3B82F6" stroke-width="1.5"/>
+  <text x="266" y="97" font-size="12" font-weight="bold" fill="#1D4ED8">## 프로젝트 개요</text>
+  <text x="266" y="114" font-size="10" fill="#1E40AF">기술 스택, 목적, 아키텍처 요약</text>
+
+  <rect x="250" y="134" width="290" height="48" rx="6" fill="#D1FAE5" stroke="#10B981" stroke-width="1.5"/>
+  <text x="266" y="153" font-size="12" font-weight="bold" fill="#065F46">## 개발 명령어</text>
+  <text x="266" y="170" font-size="10" fill="#064E3B">빌드, 테스트, 린트, 배포 명령어 목록</text>
+
+  <rect x="250" y="190" width="290" height="48" rx="6" fill="#FEF3C7" stroke="#F59E0B" stroke-width="1.5"/>
+  <text x="266" y="209" font-size="12" font-weight="bold" fill="#92400E">## 코딩 컨벤션</text>
+  <text x="266" y="226" font-size="10" fill="#78350F">네이밍, 포맷, 에러 처리 규칙</text>
+
+  <rect x="250" y="246" width="290" height="48" rx="6" fill="#EDE9FE" stroke="#8B5CF6" stroke-width="1.5"/>
+  <text x="266" y="265" font-size="12" font-weight="bold" fill="#5B21B6">## 아키텍처 노트</text>
+  <text x="266" y="282" font-size="10" fill="#4C1D95">주요 모듈, 의존성, 주의사항</text>
+
+  <rect x="250" y="302" width="290" height="48" rx="6" fill="#F3F4F6" stroke="#6B7280" stroke-width="1.5"/>
+  <text x="266" y="321" font-size="12" font-weight="bold" fill="#374151">## 금지 사항</text>
+  <text x="266" y="338" font-size="10" fill="#1F2937">직접 수정 금지 파일, 배포 관련 제약</text>
+
+  <!-- Right: Before/After effect -->
+  <rect x="560" y="55" width="210" height="120" rx="8" fill="#FFF1F2" stroke="#FECDD3" stroke-width="1.5"/>
+  <text x="665" y="74" text-anchor="middle" font-size="12" font-weight="bold" fill="#9F1239">CLAUDE.md 없을 때</text>
+  <text x="576" y="94" font-size="10" fill="#BE123C">• 매번 스택 설명 반복</text>
+  <text x="576" y="110" font-size="10" fill="#BE123C">• 다른 컨벤션으로 코드 작성</text>
+  <text x="576" y="126" font-size="10" fill="#BE123C">• 금지 파일 수정 위험</text>
+  <text x="576" y="142" font-size="10" fill="#BE123C">• 명령어 매번 물어봐야 함</text>
+  <text x="576" y="158" font-size="10" fill="#BE123C">• 프로젝트 컨텍스트 부족</text>
+
+  <rect x="560" y="190" width="210" height="120" rx="8" fill="#F0FDF4" stroke="#BBF7D0" stroke-width="1.5"/>
+  <text x="665" y="209" text-anchor="middle" font-size="12" font-weight="bold" fill="#065F46">CLAUDE.md 있을 때</text>
+  <text x="576" y="229" font-size="10" fill="#047857">• 첫 세션부터 컨텍스트 파악</text>
+  <text x="576" y="245" font-size="10" fill="#047857">• 팀 컨벤션 자동 준수</text>
+  <text x="576" y="261" font-size="10" fill="#047857">• 금지 파일 자동 회피</text>
+  <text x="576" y="277" font-size="10" fill="#047857">• 명령어 즉시 실행 가능</text>
+  <text x="576" y="293" font-size="10" fill="#047857">• 일관된 코드 품질 유지</text>
+
+  <!-- Arrow between before/after -->
+  <text x="665" y="184" text-anchor="middle" font-size="18" fill="#10B981">↓</text>
+
+  <!-- Best practices at bottom -->
+  <rect x="30" y="300" width="210" height="130" rx="8" fill="#EFF6FF" stroke="#BFDBFE" stroke-width="1.5"/>
+  <text x="135" y="320" text-anchor="middle" font-size="12" font-weight="bold" fill="#1D4ED8">작성 팁</text>
+  <text x="46" y="340" font-size="10" fill="#1E40AF">• 500 단어 이내로 간결하게</text>
+  <text x="46" y="358" font-size="10" fill="#1E40AF">• 명령어는 코드블록으로 기재</text>
+  <text x="46" y="376" font-size="10" fill="#1E40AF">• 서브 디렉터리별 분리 관리</text>
+  <text x="46" y="394" font-size="10" fill="#1E40AF">• 금지사항은 명확히 명시</text>
+  <text x="46" y="412" font-size="10" fill="#1E40AF">• 팀원과 함께 유지보수</text>
+
+  <!-- Bottom bar -->
+  <rect x="250" y="366" width="510" height="64" rx="8" fill="#FFFBEB" stroke="#FDE68A" stroke-width="1"/>
+  <text x="505" y="386" text-anchor="middle" font-size="12" font-weight="bold" fill="#92400E">CLAUDE.md = AI를 위한 팀 온보딩 문서</text>
+  <text x="505" y="404" text-anchor="middle" font-size="11" fill="#78350F">새 팀원에게 주는 프로젝트 가이드처럼, Claude에게도 같은 문서를 주면 됩니다.</text>
+  <text x="505" y="420" text-anchor="middle" font-size="11" fill="#78350F">한 번 작성하면 모든 세션에서 일관된 품질을 얻을 수 있습니다.</text>
+</svg>

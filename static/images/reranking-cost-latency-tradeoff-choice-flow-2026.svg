@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#fff7ed"/>
+  <text x="70" y="90" fill="#9a3412" font-family="Arial, sans-serif" font-size="42" font-weight="700">Tradeoff Choice Flow</text>
+  <rect x="70" y="185" width="230" height="90" rx="16" fill="#ffedd5" stroke="#fb923c"/>
+  <text x="185" y="240" text-anchor="middle" fill="#7c2d12" font-family="Arial, sans-serif" font-size="20">Need better precision?</text>
+  <polygon points="410,185 540,230 410,275 280,230" fill="#fed7aa" stroke="#fb923c"/>
+  <text x="410" y="233" text-anchor="middle" fill="#7c2d12" font-family="Arial, sans-serif" font-size="20">Yes</text>
+  <rect x="600" y="160" width="230" height="120" rx="16" fill="#dbeafe" stroke="#60a5fa"/>
+  <text x="715" y="214" text-anchor="middle" fill="#111827" font-family="Arial, sans-serif" font-size="20">Rerank depth up</text>
+  <text x="715" y="244" text-anchor="middle" fill="#475569" font-family="Arial, sans-serif" font-size="16">quality vs latency</text>
+  <rect x="880" y="160" width="230" height="120" rx="16" fill="#dcfce7" stroke="#22c55e"/>
+  <text x="995" y="214" text-anchor="middle" fill="#111827" font-family="Arial, sans-serif" font-size="20">Budget stable</text>
+  <text x="995" y="244" text-anchor="middle" fill="#475569" font-family="Arial, sans-serif" font-size="16">ship the setting</text>
+  <line x1="300" y1="230" x2="280" y2="230" stroke="#9a3412" stroke-width="4"/>
+  <line x1="540" y1="230" x2="600" y2="230" stroke="#9a3412" stroke-width="4"/>
+  <line x1="830" y1="230" x2="880" y2="230" stroke="#9a3412" stroke-width="4"/>
+  <rect x="70" y="340" width="1060" height="190" rx="22" fill="#7c2d12"/>
+  <text x="100" y="385" fill="#fff7ed" font-family="Arial, sans-serif" font-size="22" font-weight="700">Decision points</text>
+  <text x="100" y="425" fill="#fed7aa" font-family="Arial, sans-serif" font-size="18">if latency budget is tight, reduce candidate count first</text>
+  <text x="100" y="455" fill="#fed7aa" font-family="Arial, sans-serif" font-size="18">if quality plateau is flat, stop increasing rerank depth</text>
+  <text x="100" y="485" fill="#fed7aa" font-family="Arial, sans-serif" font-size="18">if traffic grows, introduce routing and cache before scale-up</text>
+</svg>
+

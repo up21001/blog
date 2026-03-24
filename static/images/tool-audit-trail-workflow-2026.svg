@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Tool Audit Trail workflow">
+  <defs>
+    <linearGradient id="bg1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="card1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#334155"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <style>
+      .t{font-family:Arial,Helvetica,sans-serif;fill:#e2e8f0}
+      .h{font-size:40px;font-weight:700}
+      .s{font-size:22px;fill:#cbd5e1}
+      .b{font-size:20px;font-weight:700}
+      .n{font-size:18px;fill:#cbd5e1}
+    </style>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg1)"/>
+  <text x="72" y="78" class="t h">Tool Audit Trail</text>
+  <text x="72" y="116" class="t s">요청 -> 결정 -> 호출 -> 증거 저장</text>
+  <g transform="translate(72 170)">
+    <rect width="200" height="120" rx="18" fill="url(#card1)" stroke="#64748b"/>
+    <text x="32" y="46" class="t b">Request</text>
+    <text x="32" y="78" class="t n">입력과 컨텍스트</text>
+    <rect x="255" width="200" height="120" rx="18" fill="url(#card1)" stroke="#64748b"/>
+    <text x="285" y="46" class="t b">Decision</text>
+    <text x="285" y="78" class="t n">정책과 권한 판단</text>
+    <rect x="510" width="200" height="120" rx="18" fill="url(#card1)" stroke="#64748b"/>
+    <text x="548" y="46" class="t b">Tool Call</text>
+    <text x="548" y="78" class="t n">입력, 승인, 결과</text>
+    <rect x="765" width="200" height="120" rx="18" fill="url(#card1)" stroke="#64748b"/>
+    <text x="790" y="46" class="t b">Audit Store</text>
+    <text x="790" y="78" class="t n">검색 가능한 증거</text>
+    <path d="M205 60H248" stroke="#94a3b8" stroke-width="5" marker-end="url(#a1)"/>
+    <path d="M460 60H503" stroke="#94a3b8" stroke-width="5" marker-end="url(#a1)"/>
+    <path d="M715 60H758" stroke="#94a3b8" stroke-width="5" marker-end="url(#a1)"/>
+  </g>
+  <g transform="translate(72 360)">
+    <rect width="1056" height="170" rx="22" fill="#111827" stroke="#334155"/>
+    <text x="34" y="48" class="t b">핵심 포인트</text>
+    <text x="34" y="86" class="t n">호출 전 권한 확인, 호출 중 입력/승인 기록, 호출 후 결과 보관을 분리합니다.</text>
+    <text x="34" y="120" class="t n">비동기 적재와 구조화 이벤트를 쓰면 운영 속도와 추적성을 함께 얻습니다.</text>
+  </g>
+  <defs>
+    <marker id="a1" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 Z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+</svg>
+

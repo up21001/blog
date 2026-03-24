@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Enterprise AI Governance Workflow</title>
+  <desc id="desc">Policy, approval, execution, and audit workflow for enterprise AI governance.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#10233d"/>
+      <stop offset="100%" stop-color="#1f3f5b"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="1050" cy="110" r="130" fill="#2d6cdf" opacity="0.18"/>
+  <circle cx="160" cy="520" r="170" fill="#00c2a8" opacity="0.12"/>
+  <text x="70" y="92" fill="#eaf2ff" font-size="34" font-weight="700">Enterprise AI Governance Workflow</text>
+  <text x="70" y="128" fill="#b7c8dd" font-size="18">Policy first, approval when needed, full audit every time</text>
+  <g fill="#12304c" stroke="#89a7c8" stroke-width="2">
+    <rect x="70" y="210" rx="18" ry="18" width="200" height="120"/>
+    <rect x="340" y="210" rx="18" ry="18" width="200" height="120"/>
+    <rect x="610" y="210" rx="18" ry="18" width="200" height="120"/>
+    <rect x="880" y="210" rx="18" ry="18" width="240" height="120"/>
+  </g>
+  <g fill="#eaf2ff" font-size="22" font-weight="700">
+    <text x="110" y="260">Request</text>
+    <text x="376" y="250">Policy</text>
+    <text x="360" y="278">Enforcement</text>
+    <text x="650" y="260">Approval</text>
+    <text x="925" y="250">Execute</text>
+    <text x="925" y="278">+ Audit</text>
+  </g>
+  <g stroke="#9fd3ff" stroke-width="4" fill="none">
+    <path d="M270 270 H330"/>
+    <path d="M540 270 H600"/>
+    <path d="M810 270 H870"/>
+  </g>
+  <g fill="#9fd3ff">
+    <polygon points="322,270 306,262 306,278"/>
+    <polygon points="592,270 576,262 576,278"/>
+    <polygon points="862,270 846,262 846,278"/>
+  </g>
+  <rect x="210" y="420" width="780" height="98" rx="18" fill="#0f2740" stroke="#4f6c8c" stroke-width="2"/>
+  <text x="245" y="458" fill="#eaf2ff" font-size="22" font-weight="700">Governance layers:</text>
+  <text x="245" y="492" fill="#b7c8dd" font-size="18">Policy definitions | Access rules | Approval routing | Audit logging | Exception handling</text>
+</svg>

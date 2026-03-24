@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#0f172a"/>
+  <text x="60" y="90" fill="#e2e8f0" font-size="38" font-family="Arial" font-weight="700">Extended Series 6</text>
+  <text x="60" y="130" fill="#93c5fd" font-size="22" font-family="Arial">Cloud Native · Testing · ADR · UX · Hiring · Remote</text>
+  <rect x="60" y="190" width="330" height="120" rx="14" fill="#0ea5e9"/>
+  <rect x="435" y="190" width="330" height="120" rx="14" fill="#2563eb"/>
+  <rect x="810" y="190" width="330" height="120" rx="14" fill="#7c3aed"/>
+  <rect x="60" y="350" width="330" height="120" rx="14" fill="#16a34a"/>
+  <rect x="435" y="350" width="330" height="120" rx="14" fill="#f59e0b"/>
+  <rect x="810" y="350" width="330" height="120" rx="14" fill="#ef4444"/>
+</svg>

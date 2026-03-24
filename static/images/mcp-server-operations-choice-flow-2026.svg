@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">MCP Server Operations Choice Flow</title>
+  <desc id="desc">Choice flow for MCP server operations priorities.</desc>
+  <rect width="1200" height="630" rx="36" fill="#f2f7ff"/>
+  <text x="64" y="86" fill="#0f2340" font-family="Inter, Arial, sans-serif" font-size="40" font-weight="700">Operations Choice Flow</text>
+  <text x="64" y="122" fill="#49607f" font-family="Inter, Arial, sans-serif" font-size="20">Decide what to control before you scale</text>
+  <g fill="#ffffff" stroke="#244b7a" stroke-width="2">
+    <rect x="90" y="220" width="220" height="110" rx="22"/>
+    <rect x="350" y="220" width="220" height="110" rx="22"/>
+    <rect x="610" y="220" width="220" height="110" rx="22"/>
+    <rect x="870" y="220" width="220" height="110" rx="22"/>
+  </g>
+  <g fill="#0f2340" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="600">
+    <text x="130" y="262">Tool allowlist</text>
+    <text x="394" y="262">Schema version</text>
+    <text x="650" y="262">Failure policy</text>
+    <text x="914" y="262">Audit log</text>
+  </g>
+  <g stroke="#2e6fa7" stroke-width="5" fill="none" stroke-linecap="round">
+    <path d="M310 275 H340"/>
+    <path d="M570 275 H600"/>
+    <path d="M830 275 H860"/>
+  </g>
+  <g fill="#49607f" font-family="Inter, Arial, sans-serif" font-size="18">
+    <text x="105" y="302">Start small and explicit</text>
+    <text x="369" y="302">Pin contracts</text>
+    <text x="642" y="302">Define recovery</text>
+    <text x="916" y="302">Keep traceability</text>
+  </g>
+</svg>

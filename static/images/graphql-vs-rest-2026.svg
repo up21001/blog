@@ -1,0 +1,78 @@
+<svg width="800" height="450" viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg" font-family="'Malgun Gothic', sans-serif">
+  <rect width="800" height="450" fill="#F9FAFB" rx="12"/>
+  <text x="400" y="38" text-anchor="middle" font-size="20" font-weight="bold" fill="#1F2937">API 패러다임 비교 2026</text>
+
+  <!-- REST 헤더 -->
+  <rect x="30" y="55" width="220" height="42" fill="#DBEAFE" stroke="#3B82F6" stroke-width="2" rx="8"/>
+  <text x="140" y="82" text-anchor="middle" font-size="15" font-weight="bold" fill="#1D4ED8">REST API</text>
+
+  <!-- GraphQL 헤더 -->
+  <rect x="290" y="55" width="220" height="42" fill="#EDE9FE" stroke="#8B5CF6" stroke-width="2" rx="8"/>
+  <text x="400" y="82" text-anchor="middle" font-size="15" font-weight="bold" fill="#5B21B6">GraphQL</text>
+
+  <!-- tRPC 헤더 -->
+  <rect x="550" y="55" width="220" height="42" fill="#D1FAE5" stroke="#10B981" stroke-width="2" rx="8"/>
+  <text x="660" y="82" text-anchor="middle" font-size="15" font-weight="bold" fill="#065F46">tRPC</text>
+
+  <!-- 항목들 -->
+  <!-- 데이터 페칭 -->
+  <text x="15" y="125" font-size="11" fill="#9CA3AF">데이터 페칭</text>
+  <rect x="30" y="130" width="220" height="40" fill="#EFF6FF" stroke="#BFDBFE" stroke-width="1" rx="6"/>
+  <text x="140" y="155" text-anchor="middle" font-size="12" fill="#1D4ED8">엔드포인트별 고정 응답</text>
+
+  <rect x="290" y="130" width="220" height="40" fill="#F5F3FF" stroke="#DDD6FE" stroke-width="1" rx="6"/>
+  <text x="400" y="155" text-anchor="middle" font-size="12" fill="#5B21B6">클라이언트가 원하는 필드만</text>
+
+  <rect x="550" y="130" width="220" height="40" fill="#ECFDF5" stroke="#A7F3D0" stroke-width="1" rx="6"/>
+  <text x="660" y="155" text-anchor="middle" font-size="12" fill="#065F46">타입 추론된 함수 호출</text>
+
+  <!-- 타입 안전성 -->
+  <text x="15" y="190" font-size="11" fill="#9CA3AF">타입 안전성</text>
+  <rect x="30" y="195" width="220" height="40" fill="#EFF6FF" stroke="#BFDBFE" stroke-width="1" rx="6"/>
+  <text x="140" y="220" text-anchor="middle" font-size="12" fill="#1D4ED8">OpenAPI 스키마 별도 관리</text>
+
+  <rect x="290" y="195" width="220" height="40" fill="#F5F3FF" stroke="#DDD6FE" stroke-width="1" rx="6"/>
+  <text x="400" y="220" text-anchor="middle" font-size="12" fill="#5B21B6">스키마 자동 생성 (codegen)</text>
+
+  <rect x="550" y="195" width="220" height="40" fill="#ECFDF5" stroke="#A7F3D0" stroke-width="1" rx="6"/>
+  <text x="660" y="220" text-anchor="middle" font-size="12" fill="#065F46">TypeScript 완전 추론</text>
+
+  <!-- 캐싱 -->
+  <text x="15" y="255" font-size="11" fill="#9CA3AF">캐싱</text>
+  <rect x="30" y="260" width="220" height="40" fill="#EFF6FF" stroke="#BFDBFE" stroke-width="1" rx="6"/>
+  <text x="140" y="285" text-anchor="middle" font-size="12" fill="#1D4ED8">HTTP 캐시 완전 지원</text>
+
+  <rect x="290" y="260" width="220" height="40" fill="#F5F3FF" stroke="#DDD6FE" stroke-width="1" rx="6"/>
+  <text x="400" y="285" text-anchor="middle" font-size="12" fill="#5B21B6">POST 기반 → 별도 설정 필요</text>
+
+  <rect x="550" y="260" width="220" height="40" fill="#ECFDF5" stroke="#A7F3D0" stroke-width="1" rx="6"/>
+  <text x="660" y="285" text-anchor="middle" font-size="12" fill="#065F46">React Query 등 클라이언트 캐시</text>
+
+  <!-- 적합한 상황 -->
+  <text x="15" y="320" font-size="11" fill="#9CA3AF">최적 사용 사례</text>
+  <rect x="30" y="325" width="220" height="50" fill="#DBEAFE" stroke="#3B82F6" stroke-width="1.5" rx="6"/>
+  <text x="140" y="346" text-anchor="middle" font-size="11" fill="#1E40AF">공개 API · 마이크로서비스</text>
+  <text x="140" y="362" text-anchor="middle" font-size="11" fill="#1E40AF">서드파티 연동</text>
+
+  <rect x="290" y="325" width="220" height="50" fill="#EDE9FE" stroke="#8B5CF6" stroke-width="1.5" rx="6"/>
+  <text x="400" y="346" text-anchor="middle" font-size="11" fill="#5B21B6">복잡한 데이터 그래프</text>
+  <text x="400" y="362" text-anchor="middle" font-size="11" fill="#5B21B6">모바일 앱 · BFF 패턴</text>
+
+  <rect x="550" y="325" width="220" height="50" fill="#D1FAE5" stroke="#10B981" stroke-width="1.5" rx="6"/>
+  <text x="660" y="346" text-anchor="middle" font-size="11" fill="#065F46">풀스택 TypeScript 앱</text>
+  <text x="660" y="362" text-anchor="middle" font-size="11" fill="#065F46">Next.js · Remix 내부 API</text>
+
+  <!-- 난이도 바 -->
+  <text x="15" y="397" font-size="11" fill="#9CA3AF">학습 난이도</text>
+  <rect x="30" y="405" width="73" height="22" fill="#3B82F6" rx="4"/>
+  <rect x="103" y="405" width="147" height="22" fill="#E5E7EB" rx="4"/>
+  <text x="140" y="420" text-anchor="middle" font-size="11" fill="#6B7280">낮음</text>
+
+  <rect x="290" y="405" width="176" height="22" fill="#8B5CF6" rx="4"/>
+  <rect x="466" y="405" width="44" height="22" fill="#E5E7EB" rx="4"/>
+  <text x="400" y="420" text-anchor="middle" font-size="11" fill="white">높음</text>
+
+  <rect x="550" y="405" width="110" height="22" fill="#10B981" rx="4"/>
+  <rect x="660" y="405" width="110" height="22" fill="#E5E7EB" rx="4"/>
+  <text x="660" y="420" text-anchor="middle" font-size="11" fill="#6B7280">중간</text>
+</svg>

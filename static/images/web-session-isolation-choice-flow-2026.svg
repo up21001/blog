@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <style>
+      .bg { fill:#0f172a; }
+      .title { fill:#fff; font:700 38px Arial, sans-serif; }
+      .sub { fill:#cbd5e1; font:400 18px Arial, sans-serif; }
+      .box { fill:#f8fafc; stroke:#94a3b8; stroke-width:2; rx:18; }
+      .yes { fill:#dcfce7; stroke:#22c55e; stroke-width:2; rx:18; }
+      .warn { fill:#fef3c7; stroke:#f59e0b; stroke-width:2; rx:18; }
+      .label { fill:#0f172a; font:700 20px Arial, sans-serif; }
+      .small { fill:#475569; font:400 15px Arial, sans-serif; }
+      .line { stroke:#cbd5e1; stroke-width:4; fill:none; marker-end:url(#arrow); }
+    </style>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#cbd5e1"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="630" class="bg"/>
+  <text x="84" y="110" class="title">Web Session Isolation Choice Flow</text>
+  <text x="84" y="146" class="sub">Choose isolation depth based on the task risk and account sensitivity</text>
+  <rect x="78" y="220" width="214" height="112" class="box"/>
+  <text x="106" y="260" class="label">Shared account?</text>
+  <text x="106" y="292" class="small">treat as high-risk</text>
+  <rect x="332" y="220" width="214" height="112" class="warn"/>
+  <text x="360" y="260" class="label">Dedicated session</text>
+  <text x="360" y="292" class="small">fresh profile + vault</text>
+  <rect x="586" y="220" width="214" height="112" class="box"/>
+  <text x="614" y="260" class="label">Write operation?</text>
+  <text x="614" y="292" class="small">submit / delete / pay</text>
+  <rect x="840" y="220" width="214" height="112" class="yes"/>
+  <text x="868" y="260" class="label">Approve or block</text>
+  <text x="868" y="292" class="small">human gate required</text>
+  <path d="M292 276 L332 276" class="line"/>
+  <path d="M546 276 L586 276" class="line"/>
+  <path d="M800 276 L840 276" class="line"/>
+  <rect x="160" y="400" width="880" height="96" class="box"/>
+  <text x="198" y="440" class="label">Rule of thumb: if the session can affect money or identity, never reuse it blindly</text>
+  <text x="198" y="472" class="small">separate by task, account, and risk tier</text>
+</svg>

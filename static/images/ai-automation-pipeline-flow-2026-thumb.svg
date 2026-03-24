@@ -1,0 +1,55 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-labelledby="t d">
+  <title id="t">AI 자동화 수익화 운영 플로우 썸네일</title>
+  <desc id="d">요청에서 KPI 개선까지 이어지는 핵심 파이프라인 썸네일</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b1022"/>
+      <stop offset="100%" stop-color="#18284c"/>
+    </linearGradient>
+    <linearGradient id="line" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#7c3aed"/>
+      <stop offset="100%" stop-color="#22d3ee"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-opacity="0.28" flood-color="#020617"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <ellipse cx="220" cy="80" rx="220" ry="90" fill="#4f46e5" opacity="0.2"/>
+  <ellipse cx="980" cy="120" rx="260" ry="100" fill="#06b6d4" opacity="0.14"/>
+
+  <text x="64" y="78" fill="#ecf3ff" font-family="Segoe UI, Arial" font-size="48" font-weight="800">AI 자동화 운영 플로우</text>
+  <text x="64" y="114" fill="#9fb3d9" font-family="Segoe UI, Arial" font-size="22">요청 → 검증 → AI 처리 → HITL → 납품 → KPI 개선</text>
+  <rect x="64" y="132" width="540" height="10" rx="5" fill="url(#line)"/>
+
+  <g filter="url(#shadow)">
+    <rect x="64" y="180" width="1072" height="360" rx="24" fill="#0f172a" stroke="#334155"/>
+  </g>
+
+  <g font-family="Segoe UI, Arial" font-size="24" font-weight="700" fill="#e5edff" text-anchor="middle">
+    <rect x="110" y="240" width="170" height="90" rx="14" fill="#1f2f55"/><text x="195" y="294">고객 요청</text>
+    <rect x="320" y="240" width="170" height="90" rx="14" fill="#1f2f55"/><text x="405" y="294">입력 정제</text>
+    <rect x="530" y="240" width="170" height="90" rx="14" fill="#2f2f8f"/><text x="615" y="294">AI 처리</text>
+    <rect x="740" y="240" width="170" height="90" rx="14" fill="#17653a"/><text x="825" y="294">HITL 검수</text>
+    <rect x="950" y="240" width="140" height="90" rx="14" fill="#9a3412"/><text x="1020" y="294">납품</text>
+  </g>
+
+  <g stroke="#93a8c7" stroke-width="4" fill="none">
+    <path d="M 280 285 L 320 285"/>
+    <path d="M 490 285 L 530 285"/>
+    <path d="M 700 285 L 740 285"/>
+    <path d="M 910 285 L 950 285"/>
+  </g>
+  <g fill="#93a8c7">
+    <polygon points="316,279 328,285 316,291"/>
+    <polygon points="526,279 538,285 526,291"/>
+    <polygon points="736,279 748,285 736,291"/>
+    <polygon points="946,279 958,285 946,291"/>
+  </g>
+
+  <rect x="760" y="372" width="330" height="120" rx="16" fill="#0f3b59" stroke="#22d3ee" stroke-opacity="0.5"/>
+  <text x="925" y="418" text-anchor="middle" fill="#d8f8ff" font-family="Segoe UI, Arial" font-size="28" font-weight="700">재시도 &amp; KPI 루프</text>
+  <text x="925" y="450" text-anchor="middle" fill="#a5f3fc" font-family="Segoe UI, Arial" font-size="18">품질 미달 자동 보정 + 주간 개선</text>
+
+  <text x="64" y="592" fill="#94a3b8" font-family="Segoe UI, Arial" font-size="18">AI Automation Revenue Pipeline · 2026</text>
+</svg>

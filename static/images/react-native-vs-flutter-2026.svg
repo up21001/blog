@@ -1,0 +1,69 @@
+<svg width="800" height="450" viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg" font-family="'Malgun Gothic', sans-serif">
+  <!-- Background -->
+  <rect width="800" height="450" fill="#F8FAFC" rx="12"/>
+  <text x="400" y="40" text-anchor="middle" font-size="20" font-weight="bold" fill="#1E293B">React Native vs Flutter 2026 비교</text>
+
+  <!-- React Native Column -->
+  <rect x="30" y="60" width="350" height="360" rx="10" fill="#DBEAFE" stroke="#3B82F6" stroke-width="2"/>
+  <text x="205" y="90" text-anchor="middle" font-size="16" font-weight="bold" fill="#1E40AF">React Native</text>
+
+  <rect x="50" y="105" width="310" height="36" rx="6" fill="white" stroke="#3B82F6" stroke-width="1"/>
+  <text x="80" y="120" font-size="11" font-weight="bold" fill="#1E40AF">언어</text>
+  <text x="80" y="134" font-size="11" fill="#374151">JavaScript / TypeScript</text>
+
+  <rect x="50" y="148" width="310" height="36" rx="6" fill="white" stroke="#3B82F6" stroke-width="1"/>
+  <text x="80" y="163" font-size="11" font-weight="bold" fill="#1E40AF">렌더링</text>
+  <text x="80" y="177" font-size="11" fill="#374151">네이티브 컴포넌트 브리지</text>
+
+  <rect x="50" y="191" width="310" height="36" rx="6" fill="white" stroke="#3B82F6" stroke-width="1"/>
+  <text x="80" y="206" font-size="11" font-weight="bold" fill="#1E40AF">생태계</text>
+  <text x="80" y="220" font-size="11" fill="#374151">npm 패키지 100만+ 활용</text>
+
+  <rect x="50" y="234" width="310" height="36" rx="6" fill="white" stroke="#3B82F6" stroke-width="1"/>
+  <text x="80" y="249" font-size="11" font-weight="bold" fill="#1E40AF">성능 (2026)</text>
+  <text x="80" y="263" font-size="11" fill="#374151">New Architecture (JSI) 안정화</text>
+
+  <rect x="50" y="277" width="310" height="36" rx="6" fill="white" stroke="#3B82F6" stroke-width="1"/>
+  <text x="80" y="292" font-size="11" font-weight="bold" fill="#1E40AF">학습 곡선</text>
+  <text x="80" y="306" font-size="11" fill="#374151">JS 개발자 → 즉시 전환 가능</text>
+
+  <rect x="50" y="320" width="310" height="36" rx="6" fill="white" stroke="#3B82F6" stroke-width="1"/>
+  <text x="80" y="335" font-size="11" font-weight="bold" fill="#1E40AF">취업 시장</text>
+  <text x="80" y="349" font-size="11" fill="#374151">국내외 수요 높음, 웹 연계</text>
+
+  <rect x="50" y="363" width="310" height="42" rx="6" fill="#BFDBFE" stroke="#3B82F6" stroke-width="1"/>
+  <text x="205" y="381" text-anchor="middle" font-size="11" font-weight="bold" fill="#1E40AF">추천: 웹 개발자, 스타트업</text>
+  <text x="205" y="397" text-anchor="middle" font-size="10" fill="#1E40AF">기존 JS/TS 팀에 최적</text>
+
+  <!-- Flutter Column -->
+  <rect x="420" y="60" width="350" height="360" rx="10" fill="#D1FAE5" stroke="#10B981" stroke-width="2"/>
+  <text x="595" y="90" text-anchor="middle" font-size="16" font-weight="bold" fill="#065F46">Flutter</text>
+
+  <rect x="440" y="105" width="310" height="36" rx="6" fill="white" stroke="#10B981" stroke-width="1"/>
+  <text x="470" y="120" font-size="11" font-weight="bold" fill="#065F46">언어</text>
+  <text x="470" y="134" font-size="11" fill="#374151">Dart</text>
+
+  <rect x="440" y="148" width="310" height="36" rx="6" fill="white" stroke="#10B981" stroke-width="1"/>
+  <text x="470" y="163" font-size="11" font-weight="bold" fill="#065F46">렌더링</text>
+  <text x="470" y="177" font-size="11" fill="#374151">Skia / Impeller 직접 렌더링</text>
+
+  <rect x="440" y="191" width="310" height="36" rx="6" fill="white" stroke="#10B981" stroke-width="1"/>
+  <text x="470" y="206" font-size="11" font-weight="bold" fill="#065F46">생태계</text>
+  <text x="470" y="220" font-size="11" fill="#374151">pub.dev 패키지, 구글 지원</text>
+
+  <rect x="440" y="234" width="310" height="36" rx="6" fill="white" stroke="#10B981" stroke-width="1"/>
+  <text x="470" y="249" font-size="11" font-weight="bold" fill="#065F46">성능 (2026)</text>
+  <text x="470" y="263" font-size="11" fill="#374151">Impeller 엔진으로 일관된 60fps</text>
+
+  <rect x="440" y="277" width="310" height="36" rx="6" fill="white" stroke="#10B981" stroke-width="1"/>
+  <text x="470" y="292" font-size="11" font-weight="bold" fill="#065F46">학습 곡선</text>
+  <text x="470" y="306" font-size="11" fill="#374151">Dart 신규 학습 필요</text>
+
+  <rect x="440" y="320" width="310" height="36" rx="6" fill="white" stroke="#10B981" stroke-width="1"/>
+  <text x="470" y="335" font-size="11" font-weight="bold" fill="#065F46">취업 시장</text>
+  <text x="470" y="349" font-size="11" fill="#374151">대기업/핀테크 선호, 성장세</text>
+
+  <rect x="440" y="363" width="310" height="42" rx="6" fill="#A7F3D0" stroke="#10B981" stroke-width="1"/>
+  <text x="595" y="381" text-anchor="middle" font-size="11" font-weight="bold" fill="#065F46">추천: 고품질 UI, 엔터프라이즈</text>
+  <text x="595" y="397" text-anchor="middle" font-size="10" fill="#065F46">일관된 디자인 시스템 필요 시</text>
+</svg>

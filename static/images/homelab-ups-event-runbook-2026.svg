@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="ubg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1e1b4b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <marker id="um" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#f472b6"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="630" fill="url(#ubg)"/>
+  <text x="48" y="82" fill="#e0e7ff" font-size="32" font-family="Segoe UI, Malgun Gothic, sans-serif" font-weight="700">UPS 이벤트 런북</text>
+  <text x="48" y="124" fill="#a5b4fc" font-size="19" font-family="Segoe UI, Malgun Gothic, sans-serif">정전 · 배터리 · 그레이스풀 셧다운</text>
+  <rect x="48" y="156" width="1104" height="446" rx="18" fill="#111827" stroke="#818cf8" stroke-opacity="0.55"/>
+  <rect x="88" y="200" width="160" height="88" rx="12" fill="#312e81" stroke="#a5b4fc"/>
+  <text x="120" y="248" fill="#e0e7ff" font-size="15" font-family="Segoe UI, sans-serif">Utility</text>
+  <line x1="248" y1="244" x2="320" y2="244" stroke="#f472b6" stroke-width="3" marker-end="url(#um)"/>
+  <rect x="320" y="200" width="200" height="88" rx="12" fill="#4c1d95" stroke="#c084fc"/>
+  <text x="380" y="248" fill="#fae8ff" font-size="16" font-family="Segoe UI, sans-serif">UPS</text>
+  <line x1="520" y1="244" x2="592" y2="244" stroke="#f472b6" stroke-width="3" marker-end="url(#um)"/>
+  <rect x="592" y="188" width="140" height="56" rx="10" fill="#1e293b" stroke="#38bdf8"/>
+  <text x="628" y="222" fill="#e0f2fe" font-size="14" font-family="Segoe UI, sans-serif">NAS</text>
+  <rect x="592" y="256" width="140" height="56" rx="10" fill="#1e293b" stroke="#38bdf8"/>
+  <text x="624" y="290" fill="#e0f2fe" font-size="14" font-family="Segoe UI, sans-serif">Host</text>
+  <rect x="752" y="188" width="140" height="56" rx="10" fill="#1e293b" stroke="#38bdf8"/>
+  <text x="788" y="222" fill="#e0f2fe" font-size="14" font-family="Segoe UI, sans-serif">VM</text>
+  <rect x="752" y="256" width="140" height="56" rx="10" fill="#1e293b" stroke="#38bdf8"/>
+  <text x="776" y="290" fill="#e0f2fe" font-size="14" font-family="Segoe UI, sans-serif">Switch</text>
+  <line x1="662" y1="244" x2="752" y2="216" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="662" y1="284" x2="752" y2="216" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="662" y1="284" x2="752" y2="284" stroke="#94a3b8" stroke-width="2"/>
+  <rect x="920" y="200" width="200" height="200" rx="14" fill="#0c1222" stroke="#475569"/>
+  <text x="944" y="240" fill="#f1f5f9" font-size="15" font-family="Segoe UI, Malgun Gothic, sans-serif" font-weight="600">셧다운 순서</text>
+  <text x="944" y="276" fill="#cbd5e1" font-size="13" font-family="Segoe UI, Malgun Gothic, sans-serif">1 배치 중단</text>
+  <text x="944" y="302" fill="#cbd5e1" font-size="13" font-family="Segoe UI, Malgun Gothic, sans-serif">2 VM 정지</text>
+  <text x="944" y="328" fill="#cbd5e1" font-size="13" font-family="Segoe UI, Malgun Gothic, sans-serif">3 NAS 동기화</text>
+  <text x="944" y="354" fill="#cbd5e1" font-size="13" font-family="Segoe UI, Malgun Gothic, sans-serif">4 호스트 종료</text>
+  <text x="944" y="380" fill="#f472b6" font-size="12" font-family="Segoe UI, Malgun Gothic, sans-serif">네트워크 코어는 후순위</text>
+  <rect x="88" y="340" width="812" height="220" rx="14" fill="#0c1222" stroke="#334155"/>
+  <text x="112" y="384" fill="#f1f5f9" font-size="17" font-family="Segoe UI, Malgun Gothic, sans-serif" font-weight="600">이벤트 타임라인</text>
+  <rect x="112" y="408" width="140" height="40" rx="8" fill="#1e3a8a" stroke="#60a5fa"/>
+  <text x="132" y="434" fill="#dbeafe" font-size="13" font-family="Segoe UI, sans-serif">정전 감지</text>
+  <rect x="272" y="408" width="140" height="40" rx="8" fill="#1e3a8a" stroke="#60a5fa"/>
+  <text x="292" y="434" fill="#dbeafe" font-size="13" font-family="Segoe UI, sans-serif">잔여 시간</text>
+  <rect x="432" y="408" width="160" height="40" rx="8" fill="#713f12" stroke="#fbbf24"/>
+  <text x="448" y="434" fill="#fef3c7" font-size="13" font-family="Segoe UI, Malgun Gothic, sans-serif">임계 도달</text>
+  <rect x="612" y="408" width="140" height="40" rx="8" fill="#14532d" stroke="#22c55e"/>
+  <text x="624" y="434" fill="#dcfce7" font-size="13" font-family="Segoe UI, Malgun Gothic, sans-serif">그레이스풀 종료</text>
+  <rect x="772" y="408" width="120" height="40" rx="8" fill="#334155" stroke="#94a3b8"/>
+  <text x="790" y="434" fill="#f8fafc" font-size="13" font-family="Segoe UI, sans-serif">복전</text>
+  <line x1="252" y1="428" x2="272" y2="428" stroke="#94a3b8" stroke-width="2" marker-end="url(#um)"/>
+  <line x1="412" y1="428" x2="432" y2="428" stroke="#94a3b8" stroke-width="2" marker-end="url(#um)"/>
+  <line x1="592" y1="428" x2="612" y2="428" stroke="#94a3b8" stroke-width="2" marker-end="url(#um)"/>
+  <line x1="752" y1="428" x2="772" y2="428" stroke="#94a3b8" stroke-width="2" marker-end="url(#um)"/>
+  <text x="112" y="492" fill="#94a3b8" font-size="14" font-family="Segoe UI, Malgun Gothic, sans-serif">분기별 드릴로 실측 런타임·순서 검증</text>
+</svg>

@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Multi-Agent Queue Workflow</title>
+  <desc id="desc">Ingress, priority queue, worker pool, retry queue, and human review queue flow.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1d4ed8"/>
+      <stop offset="100%" stop-color="#0ea5e9"/>
+    </linearGradient>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 z" fill="#93c5fd"/>
+    </marker>
+    <style>
+      text { font-family: Arial, Helvetica, sans-serif; fill: #e2e8f0; }
+      .title { font-size: 38px; font-weight: 700; }
+      .label { font-size: 22px; font-weight: 700; }
+      .small { font-size: 18px; fill: #cbd5e1; }
+      .box { rx: 18; ry: 18; stroke: #60a5fa; stroke-width: 2.5; fill: rgba(15, 23, 42, 0.65); }
+      .pill { fill: url(#card); }
+    </style>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="1050" cy="110" r="120" fill="#2563eb" opacity="0.18"/>
+  <circle cx="165" cy="530" r="150" fill="#22c55e" opacity="0.12"/>
+  <text x="60" y="82" class="title">Multi-Agent Queue Workflow</text>
+  <text x="60" y="120" class="small">Queue-based routing for priority, retry, and review paths</text>
+  <rect x="60" y="220" width="180" height="90" class="box"/>
+  <text x="150" y="255" text-anchor="middle" class="label">Ingress</text>
+  <text x="150" y="282" text-anchor="middle" class="small">Requests</text>
+  <rect x="295" y="200" width="210" height="130" class="box"/>
+  <text x="400" y="240" text-anchor="middle" class="label">Priority Queue</text>
+  <text x="400" y="268" text-anchor="middle" class="small">High / Normal / Low</text>
+  <text x="400" y="294" text-anchor="middle" class="small">Routing policy</text>
+  <rect x="560" y="190" width="200" height="150" class="box"/>
+  <text x="660" y="232" text-anchor="middle" class="label">Worker Pool</text>
+  <text x="660" y="260" text-anchor="middle" class="small">Parallel execution</text>
+  <text x="660" y="286" text-anchor="middle" class="small">Agent pool</text>
+  <rect x="820" y="175" width="150" height="150" class="box"/>
+  <text x="895" y="220" text-anchor="middle" class="label">Retry</text>
+  <text x="895" y="248" text-anchor="middle" class="small">Failed tasks</text>
+  <text x="895" y="274" text-anchor="middle" class="small">Backoff</text>
+  <rect x="990" y="210" width="150" height="120" class="box"/>
+  <text x="1065" y="250" text-anchor="middle" class="label">Review</text>
+  <text x="1065" y="278" text-anchor="middle" class="small">Human gate</text>
+  <line x1="240" y1="265" x2="295" y2="265" stroke="#93c5fd" stroke-width="4" marker-end="url(#arrow)"/>
+  <line x1="505" y1="265" x2="560" y2="265" stroke="#93c5fd" stroke-width="4" marker-end="url(#arrow)"/>
+  <line x1="760" y1="265" x2="820" y2="265" stroke="#93c5fd" stroke-width="4" marker-end="url(#arrow)"/>
+  <line x1="970" y1="265" x2="990" y2="265" stroke="#93c5fd" stroke-width="4" marker-end="url(#arrow)"/>
+  <text x="600" y="430" class="label" text-anchor="middle">Queue first, then dispatch, then observe</text>
+  <rect x="360" y="470" width="480" height="66" class="pill" rx="33" ry="33"/>
+  <text x="600" y="511" class="small" text-anchor="middle">Stable routing keeps throughput predictable</text>
+</svg>

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="AI tracing choice flow">
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg2)"/>
+  <text x="80" y="90" fill="#f8fafc" font-size="42" font-family="Arial, sans-serif" font-weight="700">Should you trace this run?</text>
+  <text x="80" y="128" fill="#94a3b8" font-size="22" font-family="Arial, sans-serif">Decision map for debugging and observability</text>
+  <rect x="140" y="220" width="250" height="110" rx="20" fill="#111827" stroke="#38bdf8" stroke-width="2"/>
+  <text x="265" y="267" fill="#fff" font-size="24" font-family="Arial, sans-serif" text-anchor="middle" font-weight="700">Need replay?</text>
+  <text x="265" y="296" fill="#cbd5e1" font-size="17" font-family="Arial, sans-serif" text-anchor="middle">Yes - capture trace</text>
+  <polygon points="620,205 705,270 620,335 535,270" fill="#111827" stroke="#60a5fa" stroke-width="2"/>
+  <text x="620" y="266" fill="#fff" font-size="24" font-family="Arial, sans-serif" text-anchor="middle" font-weight="700">Trace</text>
+  <text x="620" y="292" fill="#cbd5e1" font-size="16" font-family="Arial, sans-serif" text-anchor="middle">spans, tools, prompt</text>
+  <rect x="860" y="220" width="250" height="110" rx="20" fill="#111827" stroke="#22c55e" stroke-width="2"/>
+  <text x="985" y="267" fill="#fff" font-size="24" font-family="Arial, sans-serif" text-anchor="middle" font-weight="700">No replay?</text>
+  <text x="985" y="296" fill="#cbd5e1" font-size="17" font-family="Arial, sans-serif" text-anchor="middle">Use metrics only</text>
+  <path d="M390 275 H530" stroke="#38bdf8" stroke-width="6" fill="none"/>
+  <polygon points="530,275 514,265 514,285" fill="#38bdf8"/>
+  <path d="M705 275 H845" stroke="#22c55e" stroke-width="6" fill="none"/>
+  <polygon points="845,275 829,265 829,285" fill="#22c55e"/>
+  <rect x="190" y="430" width="820" height="90" rx="18" fill="#0f172a" stroke="#334155" stroke-width="2"/>
+  <text x="600" y="468" fill="#fff" font-size="22" font-family="Arial, sans-serif" text-anchor="middle" font-weight="700">Trace first when you need root cause, compare runs, or debug agents</text>
+  <text x="600" y="496" fill="#94a3b8" font-size="16" font-family="Arial, sans-serif" text-anchor="middle">metrics alone are not enough for multi-step workflows</text>
+</svg>

@@ -1,0 +1,66 @@
+<svg width="800" height="450" viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg" font-family="'Malgun Gothic', sans-serif">
+  <rect width="800" height="450" fill="#F8FAFC"/>
+  <text x="400" y="38" text-anchor="middle" font-size="20" font-weight="bold" fill="#1E293B">Home Assistant + AI 스마트홈 아키텍처</text>
+
+  <defs>
+    <marker id="arr4" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#6B7280"/>
+    </marker>
+  </defs>
+
+  <!-- Center: HA Core -->
+  <rect x="290" y="155" width="220" height="130" rx="14" fill="#EDE9FE" stroke="#8B5CF6" stroke-width="3"/>
+  <text x="400" y="185" text-anchor="middle" font-size="15" font-weight="bold" fill="#4C1D95">Home Assistant Core</text>
+  <text x="400" y="207" text-anchor="middle" font-size="12" fill="#4C1D95">Raspberry Pi 5 / x86</text>
+  <text x="400" y="227" text-anchor="middle" font-size="12" fill="#4C1D95">State Machine + Automations</text>
+  <text x="400" y="247" text-anchor="middle" font-size="12" fill="#4C1D95">MQTT / Zigbee2MQTT</text>
+  <text x="400" y="267" text-anchor="middle" font-size="12" fill="#4C1D95">Add-on: ESPHome, Node-RED</text>
+
+  <!-- Left: Devices -->
+  <rect x="30" y="80" width="160" height="60" rx="10" fill="#DBEAFE" stroke="#3B82F6" stroke-width="2"/>
+  <text x="110" y="106" text-anchor="middle" font-size="12" font-weight="bold" fill="#1E40AF">Zigbee 기기</text>
+  <text x="110" y="126" text-anchor="middle" font-size="11" fill="#1E40AF">조명 · 도어센서 · 플러그</text>
+  <line x1="190" y1="110" x2="290" y2="200" stroke="#3B82F6" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arr4)"/>
+
+  <rect x="30" y="165" width="160" height="60" rx="10" fill="#DBEAFE" stroke="#3B82F6" stroke-width="2"/>
+  <text x="110" y="191" text-anchor="middle" font-size="12" font-weight="bold" fill="#1E40AF">Wi-Fi / Matter</text>
+  <text x="110" y="211" text-anchor="middle" font-size="11" fill="#1E40AF">스위치 · 온습도 · CCTV</text>
+  <line x1="190" y1="195" x2="290" y2="210" stroke="#3B82F6" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arr4)"/>
+
+  <rect x="30" y="250" width="160" height="60" rx="10" fill="#DBEAFE" stroke="#3B82F6" stroke-width="2"/>
+  <text x="110" y="276" text-anchor="middle" font-size="12" font-weight="bold" fill="#1E40AF">ESPHome DIY</text>
+  <text x="110" y="296" text-anchor="middle" font-size="11" fill="#1E40AF">ESP32 커스텀 센서</text>
+  <line x1="190" y1="280" x2="290" y2="240" stroke="#3B82F6" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arr4)"/>
+
+  <!-- Right: AI Layer -->
+  <rect x="610" y="80" width="160" height="60" rx="10" fill="#D1FAE5" stroke="#10B981" stroke-width="2"/>
+  <text x="690" y="106" text-anchor="middle" font-size="12" font-weight="bold" fill="#065F46">LLM 연동</text>
+  <text x="690" y="126" text-anchor="middle" font-size="11" fill="#065F46">Ollama / GPT-4o API</text>
+  <line x1="510" y1="200" x2="610" y2="110" stroke="#10B981" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arr4)"/>
+
+  <rect x="610" y="165" width="160" height="60" rx="10" fill="#D1FAE5" stroke="#10B981" stroke-width="2"/>
+  <text x="690" y="191" text-anchor="middle" font-size="12" font-weight="bold" fill="#065F46">AI 음성 비서</text>
+  <text x="690" y="211" text-anchor="middle" font-size="11" fill="#065F46">Assist + Whisper STT</text>
+  <line x1="510" y1="215" x2="610" y2="210" stroke="#10B981" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arr4)"/>
+
+  <rect x="610" y="250" width="160" height="60" rx="10" fill="#D1FAE5" stroke="#10B981" stroke-width="2"/>
+  <text x="690" y="276" text-anchor="middle" font-size="12" font-weight="bold" fill="#065F46">AI 에너지 분석</text>
+  <text x="690" y="296" text-anchor="middle" font-size="11" fill="#065F46">소비 패턴 예측·절감</text>
+  <line x1="510" y1="230" x2="610" y2="270" stroke="#10B981" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arr4)"/>
+
+  <!-- Bottom: Automation Examples -->
+  <rect x="30" y="345" width="740" height="85" rx="12" fill="#FEF3C7" stroke="#F59E0B" stroke-width="2"/>
+  <text x="400" y="368" text-anchor="middle" font-size="13" font-weight="bold" fill="#92400E">AI 자동화 레시피 예시</text>
+  <rect x="50" y="378" width="170" height="38" rx="6" fill="#ffffff" stroke="#F59E0B" stroke-width="1"/>
+  <text x="135" y="393" text-anchor="middle" font-size="11" font-weight="bold" fill="#92400E">귀가 감지 → 자동 점등</text>
+  <text x="135" y="408" text-anchor="middle" font-size="10" fill="#92400E">GPS + 현관 도어센서</text>
+  <rect x="235" y="378" width="170" height="38" rx="6" fill="#ffffff" stroke="#F59E0B" stroke-width="1"/>
+  <text x="320" y="393" text-anchor="middle" font-size="11" font-weight="bold" fill="#92400E">취침 모드 자동 실행</text>
+  <text x="320" y="408" text-anchor="middle" font-size="10" fill="#92400E">취침 패턴 학습 기반</text>
+  <rect x="420" y="378" width="170" height="38" rx="6" fill="#ffffff" stroke="#F59E0B" stroke-width="1"/>
+  <text x="505" y="393" text-anchor="middle" font-size="11" font-weight="bold" fill="#92400E">이상 소비 전력 알림</text>
+  <text x="505" y="408" text-anchor="middle" font-size="10" fill="#92400E">ML 이상치 탐지</text>
+  <rect x="605" y="378" width="150" height="38" rx="6" fill="#ffffff" stroke="#F59E0B" stroke-width="1"/>
+  <text x="680" y="393" text-anchor="middle" font-size="11" font-weight="bold" fill="#92400E">음성 자연어 제어</text>
+  <text x="680" y="408" text-anchor="middle" font-size="10" fill="#92400E">LLM 의도 파악</text>
+</svg>

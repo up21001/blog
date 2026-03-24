@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#fffaf4"/>
+      <stop offset="100%" stop-color="#fff0da"/>
+    </linearGradient>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 Z" fill="#d97706"/>
+    </marker>
+    <style>
+      .title { font: 700 40px 'Segoe UI', Arial, sans-serif; fill: #4b2a00; }
+      .sub { font: 400 18px 'Segoe UI', Arial, sans-serif; fill: #7a5b31; }
+      .box { fill: #fff; stroke: #ffd7a5; stroke-width: 2; }
+      .box2 { fill: #fff6e8; stroke: #ffbf66; stroke-width: 2; }
+      .label { font: 700 22px 'Segoe UI', Arial, sans-serif; fill: #5a3400; }
+      .small { font: 400 16px 'Segoe UI', Arial, sans-serif; fill: #805f34; }
+      .line { stroke: #d97706; stroke-width: 4; fill: none; marker-end: url(#arrow); }
+    </style>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <text x="70" y="78" class="title">Cache Strategy Choice Flow</text>
+  <text x="70" y="112" class="sub">exact hit, semantic hit, session state, tool result</text>
+  <rect x="70" y="225" width="190" height="110" rx="22" class="box"/>
+  <text x="109" y="270" class="label">Exact Match</text>
+  <text x="100" y="298" class="small">prompt cache</text>
+  <rect x="315" y="205" width="210" height="150" rx="24" class="box2"/>
+  <text x="356" y="250" class="label">Semantic Hit</text>
+  <text x="340" y="282" class="small">meaning cache</text>
+  <rect x="585" y="185" width="215" height="190" rx="24" class="box2"/>
+  <text x="634" y="232" class="label">Session Cache</text>
+  <text x="612" y="264" class="small">state / summary</text>
+  <text x="627" y="290" class="small">ttl / scope</text>
+  <rect x="860" y="205" width="210" height="150" rx="24" class="box"/>
+  <text x="909" y="250" class="label">Fallback</text>
+  <text x="900" y="282" class="small">LLM / tool call</text>
+  <path d="M260 280 L315 280" class="line"/>
+  <path d="M525 280 L585 280" class="line"/>
+  <path d="M800 280 L860 280" class="line"/>
+</svg>

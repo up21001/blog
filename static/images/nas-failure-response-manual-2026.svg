@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="nbg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#422006"/>
+    </linearGradient>
+    <marker id="na" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#fbbf24"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="630" fill="url(#nbg)"/>
+  <rect x="40" y="36" width="1120" height="120" rx="16" fill="#111827" stroke="#f59e0b" stroke-opacity="0.6"/>
+  <text x="72" y="92" fill="#fef3c7" font-size="34" font-family="Segoe UI, Malgun Gothic, sans-serif" font-weight="700">NAS 장애 대응 매뉴얼</text>
+  <text x="72" y="132" fill="#fcd34d" font-size="20" font-family="Segoe UI, Malgun Gothic, sans-serif">네트워크 · 볼륨 · RAID 분기</text>
+  <rect x="40" y="180" width="360" height="414" rx="14" fill="#0c1222" stroke="#475569"/>
+  <text x="64" y="224" fill="#e2e8f0" font-size="18" font-family="Segoe UI, Malgun Gothic, sans-serif" font-weight="600">1. 접속 경로</text>
+  <rect x="64" y="248" width="140" height="48" rx="8" fill="#1e293b" stroke="#64748b"/>
+  <text x="88" y="278" fill="#cbd5e1" font-size="14" font-family="Segoe UI, sans-serif">Client</text>
+  <rect x="220" y="248" width="140" height="48" rx="8" fill="#1e293b" stroke="#64748b"/>
+  <text x="248" y="278" fill="#cbd5e1" font-size="14" font-family="Segoe UI, sans-serif">LAN</text>
+  <line x1="204" y1="272" x2="218" y2="272" stroke="#fbbf24" stroke-width="2" marker-end="url(#na)"/>
+  <rect x="64" y="320" width="296" height="48" rx="8" fill="#422006" stroke="#f59e0b"/>
+  <text x="88" y="350" fill="#fef3c7" font-size="14" font-family="Segoe UI, sans-serif">NAS mgmt / SMB / NFS</text>
+  <text x="64" y="410" fill="#94a3b8" font-size="14" font-family="Segoe UI, Malgun Gothic, sans-serif">UI 접속 실패 시 전원·스위치·방화벽 우선</text>
+  <rect x="420" y="180" width="360" height="414" rx="14" fill="#0c1222" stroke="#475569"/>
+  <text x="444" y="224" fill="#e2e8f0" font-size="18" font-family="Segoe UI, Malgun Gothic, sans-serif" font-weight="600">2. 스토리지 내부</text>
+  <rect x="444" y="248" width="88" height="88" rx="10" fill="#334155" stroke="#94a3b8"/>
+  <text x="460" y="298" fill="#f8fafc" font-size="13" font-family="Segoe UI, sans-serif">Disk</text>
+  <rect x="556" y="248" width="88" height="88" rx="10" fill="#334155" stroke="#94a3b8"/>
+  <text x="574" y="298" fill="#f8fafc" font-size="13" font-family="Segoe UI, sans-serif">Disk</text>
+  <rect x="668" y="248" width="88" height="88" rx="10" fill="#334155" stroke="#94a3b8"/>
+  <text x="686" y="298" fill="#f8fafc" font-size="13" font-family="Segoe UI, sans-serif">Disk</text>
+  <text x="444" y="370" fill="#cbd5e1" font-size="14" font-family="Segoe UI, Malgun Gothic, sans-serif">RAID 경고 시 쓰기 억제·재구축</text>
+  <text x="444" y="402" fill="#94a3b8" font-size="14" font-family="Segoe UI, Malgun Gothic, sans-serif">스냅샷·쿼터·SSD 캐시 확인</text>
+  <rect x="800" y="180" width="360" height="414" rx="14" fill="#0c1222" stroke="#475569"/>
+  <text x="824" y="224" fill="#e2e8f0" font-size="18" font-family="Segoe UI, Malgun Gothic, sans-serif" font-weight="600">3. 에스컬레이션</text>
+  <rect x="824" y="260" width="312" height="56" rx="10" fill="#1e3a5f" stroke="#60a5fa"/>
+  <text x="844" y="294" fill="#dbeafe" font-size="15" font-family="Segoe UI, Malgun Gothic, sans-serif">로그·이벤트 코드 수집</text>
+  <rect x="824" y="336" width="312" height="56" rx="10" fill="#1e3a5f" stroke="#60a5fa"/>
+  <text x="844" y="370" fill="#dbeafe" font-size="15" font-family="Segoe UI, Malgun Gothic, sans-serif">벤더 티켓·RTO 공지</text>
+  <rect x="824" y="412" width="312" height="56" rx="10" fill="#14532d" stroke="#22c55e"/>
+  <text x="844" y="446" fill="#dcfce7" font-size="15" font-family="Segoe UI, Malgun Gothic, sans-serif">백업 경로로 복구 전환</text>
+  <text x="824" y="510" fill="#64748b" font-size="13" font-family="Segoe UI, Malgun Gothic, sans-serif">증상별 분기표를 런북 첫장에</text>
+</svg>

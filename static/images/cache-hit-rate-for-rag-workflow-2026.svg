@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg7" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#eff6ff"/>
+      <stop offset="100%" stop-color="#dbeafe"/>
+    </linearGradient>
+    <style>
+      .title { font: 700 42px sans-serif; fill: #1e3a8a; }
+      .sub { font: 400 20px sans-serif; fill: #1d4ed8; }
+      .boxTitle { font: 700 22px sans-serif; fill: #1e3a8a; }
+      .boxText { font: 400 18px sans-serif; fill: #334155; }
+      .card { rx: 22; ry: 22; stroke: #93c5fd; stroke-width: 2; }
+    </style>
+    <marker id="arrow7" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#2563eb"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg7)"/>
+  <text x="70" y="78" class="title">RAG Cache Hit Rate</text>
+  <text x="70" y="114" class="sub">hit rate, latency, cost, quality를 함께 본다</text>
+
+  <rect x="60" y="170" width="180" height="120" class="card" fill="#ffffff"/>
+  <text x="150" y="218" text-anchor="middle" class="boxTitle">Requests</text>
+  <text x="150" y="250" text-anchor="middle" class="boxText">전체 요청</text>
+
+  <rect x="280" y="170" width="180" height="120" class="card" fill="#dbeafe"/>
+  <text x="370" y="218" text-anchor="middle" class="boxTitle">Exact Hit</text>
+  <text x="370" y="250" text-anchor="middle" class="boxText">정확 일치</text>
+
+  <rect x="500" y="170" width="180" height="120" class="card" fill="#e0f2fe"/>
+  <text x="590" y="218" text-anchor="middle" class="boxTitle">Semantic Hit</text>
+  <text x="590" y="250" text-anchor="middle" class="boxText">의미 유사</text>
+
+  <rect x="720" y="170" width="180" height="120" class="card" fill="#dcfce7"/>
+  <text x="810" y="218" text-anchor="middle" class="boxTitle">Miss</text>
+  <text x="810" y="250" text-anchor="middle" class="boxText">RAG 실행</text>
+
+  <rect x="940" y="170" width="170" height="120" class="card" fill="#fef9c3"/>
+  <text x="1025" y="218" text-anchor="middle" class="boxTitle">Metrics</text>
+  <text x="1025" y="250" text-anchor="middle" class="boxText">비용 / 품질</text>
+
+  <line x1="240" y1="230" x2="280" y2="230" stroke="#2563eb" stroke-width="4" marker-end="url(#arrow7)"/>
+  <line x1="460" y1="230" x2="500" y2="230" stroke="#2563eb" stroke-width="4" marker-end="url(#arrow7)"/>
+  <line x1="680" y1="230" x2="720" y2="230" stroke="#2563eb" stroke-width="4" marker-end="url(#arrow7)"/>
+  <line x1="900" y1="230" x2="940" y2="230" stroke="#2563eb" stroke-width="4" marker-end="url(#arrow7)"/>
+
+  <rect x="70" y="360" width="1060" height="170" class="card" fill="#ffffff"/>
+  <text x="100" y="402" class="boxTitle">측정 포인트</text>
+  <text x="100" y="442" class="boxText">exact hit, semantic hit, miss를 분리하고 latency, token cost, answer quality를 함께 집계한다.</text>
+  <text x="100" y="482" class="boxText">적중률이 아니라 절감 효과와 품질 변화까지 같이 봐야 캐시 전략이 유효한지 판단할 수 있다.</text>
+</svg>

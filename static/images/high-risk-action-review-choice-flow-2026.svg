@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f5f0ec"/>
+      <stop offset="100%" stop-color="#f1f5fb"/>
+    </linearGradient>
+    <style>
+      .title{font:700 40px Arial,sans-serif;fill:#1a2233}
+      .sub{font:400 22px Arial,sans-serif;fill:#4b586f}
+      .box{fill:#fff;stroke:#2d4056;stroke-width:3;rx:18;ry:18}
+      .label{font:700 22px Arial,sans-serif;fill:#1a2233}
+      .small{font:400 18px Arial,sans-serif;fill:#4b586f}
+      .arrow{stroke:#2d4056;stroke-width:4;fill:none;marker-end:url(#m)}
+      .pill{fill:#1a2233;rx:999;ry:999}
+      .pillText{font:700 18px Arial,sans-serif;fill:#fff}
+      .yes{fill:#2e7d32;rx:999;ry:999}
+      .no{fill:#b23b3b;rx:999;ry:999}
+      .yesText{font:700 16px Arial,sans-serif;fill:#fff}
+      .noText{font:700 16px Arial,sans-serif;fill:#fff}
+    </style>
+    <marker id="m" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 z" fill="#2d4056"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <text x="60" y="68" class="title">Review Decision Flow</text>
+  <text x="60" y="106" class="sub">Show consequence first, action second</text>
+  <rect x="60" y="140" width="170" height="38" class="pill"/>
+  <text x="90" y="166" class="pillText">choice flow</text>
+
+  <rect class="box" x="70" y="230" width="180" height="110"/>
+  <text x="112" y="274" class="label">Action</text>
+  <text x="96" y="304" class="small">Delete, send, pay</text>
+  <rect class="box" x="320" y="230" width="220" height="110"/>
+  <text x="365" y="274" class="label">Risk Check</text>
+  <text x="346" y="304" class="small">Policy + context</text>
+  <rect class="box" x="620" y="180" width="200" height="110"/>
+  <text x="655" y="224" class="label">Low risk</text>
+  <text x="652" y="254" class="small">Proceed fast</text>
+  <rect class="box" x="620" y="330" width="200" height="110"/>
+  <text x="648" y="374" class="label">High risk</text>
+  <text x="640" y="404" class="small">Require review</text>
+  <rect class="box" x="915" y="255" width="180" height="110"/>
+  <text x="948" y="299" class="label">Log</text>
+  <text x="928" y="329" class="small">Persist decision</text>
+  <path class="arrow" d="M250 285 L320 285"/>
+  <path class="arrow" d="M540 285 L620 235"/>
+  <path class="arrow" d="M540 285 L620 385"/>
+  <rect x="520" y="190" width="72" height="30" class="yes"/>
+  <text x="538" y="210" class="yesText">yes</text>
+  <rect x="520" y="335" width="72" height="30" class="no"/>
+  <text x="541" y="355" class="noText">no</text>
+  <path class="arrow" d="M820 292 L915 310"/>
+</svg>

@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <style>
+      .bg { fill:#08111f; }
+      .title { fill:#fff; font:700 38px Arial, sans-serif; }
+      .sub { fill:#cbd5e1; font:400 18px Arial, sans-serif; }
+      .box { fill:#f8fafc; stroke:#94a3b8; stroke-width:2; rx:18; }
+      .accent { fill:#dbeafe; stroke:#60a5fa; stroke-width:2; rx:18; }
+      .label { fill:#0f172a; font:700 19px Arial, sans-serif; }
+      .small { fill:#475569; font:400 14px Arial, sans-serif; }
+      .line { stroke:#60a5fa; stroke-width:4; fill:none; marker-end:url(#arrow); }
+    </style>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#60a5fa"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="630" class="bg"/>
+  <text x="84" y="110" class="title">Web Session Isolation Architecture</text>
+  <text x="84" y="146" class="sub">Task scheduler, session store, browser profile, and audit log are split</text>
+  <rect x="84" y="222" width="190" height="110" class="accent"/>
+  <text x="112" y="264" class="label">Scheduler</text>
+  <text x="112" y="294" class="small">per task assignment</text>
+  <rect x="332" y="222" width="190" height="110" class="box"/>
+  <text x="360" y="264" class="label">Session Store</text>
+  <text x="360" y="294" class="small">cookie jar + cache</text>
+  <rect x="580" y="222" width="190" height="110" class="box"/>
+  <text x="608" y="264" class="label">Browser Profile</text>
+  <text x="608" y="294" class="small">isolated runtime</text>
+  <rect x="828" y="222" width="190" height="110" class="accent"/>
+  <text x="856" y="264" class="label">Audit Log</text>
+  <text x="856" y="294" class="small">who used which session</text>
+  <path d="M274 277 L332 277" class="line"/>
+  <path d="M522 277 L580 277" class="line"/>
+  <path d="M770 277 L828 277" class="line"/>
+  <rect x="220" y="404" width="760" height="92" class="box"/>
+  <text x="254" y="442" class="label">Each task owns its session lifecycle from creation to retirement</text>
+  <text x="254" y="472" class="small">no cross-task reuse, no shared cookies, no hidden state</text>
+</svg>

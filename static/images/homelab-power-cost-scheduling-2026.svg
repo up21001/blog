@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="pbg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#713f12"/>
+    </linearGradient>
+    <marker id="pm" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#fbbf24"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="630" fill="url(#pbg)"/>
+  <text x="48" y="78" fill="#fef3c7" font-size="32" font-family="Segoe UI, Malgun Gothic, sans-serif" font-weight="700">전력비 스케줄링</text>
+  <text x="48" y="118" fill="#fcd34d" font-size="19" font-family="Segoe UI, Malgun Gothic, sans-serif">요금 시간대 · 부하 · 온도 게이트</text>
+  <rect x="48" y="148" width="1104" height="454" rx="18" fill="#111827" stroke="#f59e0b" stroke-opacity="0.45"/>
+  <rect x="80" y="190" width="1040" height="64" rx="10" fill="#422006" stroke="#fbbf24"/>
+  <text x="104" y="218" fill="#fef3c7" font-size="15" font-family="Segoe UI, Malgun Gothic, sans-serif">시간대별 요금(피크/오프피크)</text>
+  <text x="104" y="240" fill="#fde68a" font-size="13" font-family="Segoe UI, Malgun Gothic, sans-serif">스케줄러가 단가 테이블을 참조</text>
+  <rect x="80" y="280" width="320" height="120" rx="12" fill="#1e293b" stroke="#64748b"/>
+  <text x="104" y="318" fill="#e2e8f0" font-size="16" font-family="Segoe UI, Malgun Gothic, sans-serif" font-weight="600">작업 큐</text>
+  <text x="104" y="348" fill="#cbd5e1" font-size="14" font-family="Segoe UI, Malgun Gothic, sans-serif">백업 / 인코딩 / 배치</text>
+  <text x="104" y="376" fill="#94a3b8" font-size="13" font-family="Segoe UI, Malgun Gothic, sans-serif">동시 실행 상한</text>
+  <line x1="400" y1="340" x2="480" y2="340" stroke="#fbbf24" stroke-width="3" marker-end="url(#pm)"/>
+  <rect x="480" y="280" width="320" height="120" rx="12" fill="#14532d" stroke="#22c55e"/>
+  <text x="504" y="318" fill="#dcfce7" font-size="16" font-family="Segoe UI, Malgun Gothic, sans-serif" font-weight="600">온도 게이트</text>
+  <text x="504" y="348" fill="#bbf7d0" font-size="14" font-family="Segoe UI, Malgun Gothic, sans-serif">임계 근접 시 지연</text>
+  <text x="504" y="376" fill="#86efac" font-size="13" font-family="Segoe UI, Malgun Gothic, sans-serif">팬·열 스로틀 회피</text>
+  <line x1="800" y1="340" x2="880" y2="340" stroke="#fbbf24" stroke-width="3" marker-end="url(#pm)"/>
+  <rect x="880" y="280" width="240" height="120" rx="12" fill="#1e3a5f" stroke="#60a5fa"/>
+  <text x="904" y="318" fill="#dbeafe" font-size="16" font-family="Segoe UI, Malgun Gothic, sans-serif" font-weight="600">실행</text>
+  <text x="904" y="348" fill="#bfdbfe" font-size="14" font-family="Segoe UI, Malgun Gothic, sans-serif">비피크 우선</text>
+  <text x="904" y="376" fill="#93c5fd" font-size="13" font-family="Segoe UI, Malgun Gothic, sans-serif">UPS 여유 유지</text>
+  <rect x="80" y="430" width="1040" height="140" rx="12" fill="#0c1222" stroke="#334155"/>
+  <text x="104" y="472" fill="#f1f5f9" font-size="17" font-family="Segoe UI, Malgun Gothic, sans-serif" font-weight="600">월간 리뷰</text>
+  <text x="104" y="506" fill="#cbd5e1" font-size="15" font-family="Segoe UI, Malgun Gothic, sans-serif">kWh 추이 · 피크 분산 · 사용자 체감 영향</text>
+  <text x="104" y="538" fill="#fcd34d" font-size="14" font-family="Segoe UI, Malgun Gothic, sans-serif">비용 절감은 성능·가용성과 같이 본다</text>
+</svg>

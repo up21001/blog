@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Local AI Stacks Decision Map</title>
+  <desc id="desc">Decision map for LM Studio, LocalAI, and AnythingLLM</desc>
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f1f5f9"/>
+    </linearGradient>
+    <style>
+      .h1 { font: 800 38px Inter, Arial, sans-serif; fill: #0f172a; }
+      .p { font: 500 18px Inter, Arial, sans-serif; fill: #334155; }
+      .box { fill: #ffffff; stroke: #cbd5e1; stroke-width: 2; }
+      .boxText { font: 700 22px Inter, Arial, sans-serif; fill: #0f172a; }
+      .small { font: 500 16px Inter, Arial, sans-serif; fill: #475569; }
+    </style>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#64748b"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="675" rx="32" fill="url(#bg2)"/>
+  <text x="60" y="72" class="h1">Local AI Stacks Decision Map</text>
+  <text x="60" y="106" class="p">Pick the tool based on whether you need personal inference, self-hosted API, or knowledge chat.</text>
+
+  <rect x="470" y="150" width="260" height="86" rx="24" class="box"/>
+  <text x="600" y="185" text-anchor="middle" class="boxText">What is your main goal?</text>
+  <text x="600" y="212" text-anchor="middle" class="small">local run / API / knowledge app</text>
+
+  <line x1="600" y1="236" x2="600" y2="286" stroke="#64748b" stroke-width="4" marker-end="url(#arrow)"/>
+
+  <rect x="84" y="286" width="292" height="112" rx="24" class="box"/>
+  <rect x="454" y="286" width="292" height="112" rx="24" class="box"/>
+  <rect x="824" y="286" width="292" height="112" rx="24" class="box"/>
+
+  <text x="230" y="323" text-anchor="middle" class="boxText">LM Studio</text>
+  <text x="230" y="350" text-anchor="middle" class="small">quick local inference</text>
+  <text x="230" y="374" text-anchor="middle" class="small">best for personal testing</text>
+
+  <text x="600" y="323" text-anchor="middle" class="boxText">LocalAI</text>
+  <text x="600" y="350" text-anchor="middle" class="small">self-hosted OpenAI API</text>
+  <text x="600" y="374" text-anchor="middle" class="small">best for team or infra control</text>
+
+  <text x="970" y="323" text-anchor="middle" class="boxText">AnythingLLM</text>
+  <text x="970" y="350" text-anchor="middle" class="small">document-based knowledge chat</text>
+  <text x="970" y="374" text-anchor="middle" class="small">best for RAG workspaces</text>
+
+  <line x1="600" y1="286" x2="230" y2="286" stroke="#64748b" stroke-width="4" marker-end="url(#arrow)"/>
+  <line x1="600" y1="286" x2="600" y2="286" stroke="#64748b" stroke-width="4"/>
+  <line x1="600" y1="286" x2="970" y2="286" stroke="#64748b" stroke-width="4" marker-end="url(#arrow)"/>
+
+  <rect x="180" y="458" width="220" height="86" rx="20" fill="#dbeafe" stroke="#93c5fd" stroke-width="2"/>
+  <rect x="490" y="458" width="220" height="86" rx="20" fill="#dcfce7" stroke="#86efac" stroke-width="2"/>
+  <rect x="800" y="458" width="220" height="86" rx="20" fill="#fef3c7" stroke="#fcd34d" stroke-width="2"/>
+  <text x="290" y="493" text-anchor="middle" class="boxText">Prototype</text>
+  <text x="290" y="520" text-anchor="middle" class="small">use LM Studio first</text>
+  <text x="600" y="493" text-anchor="middle" class="boxText">Standardize</text>
+  <text x="600" y="520" text-anchor="middle" class="small">use LocalAI first</text>
+  <text x="910" y="493" text-anchor="middle" class="boxText">Operationalize</text>
+  <text x="910" y="520" text-anchor="middle" class="small">use AnythingLLM first</text>
+</svg>

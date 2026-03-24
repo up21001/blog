@@ -1,0 +1,89 @@
+<svg width="800" height="450" viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg" font-family="'Malgun Gothic', sans-serif">
+  <!-- Background -->
+  <rect width="800" height="450" fill="#F9FAFB" rx="12"/>
+  <text x="400" y="38" text-anchor="middle" font-size="20" font-weight="bold" fill="#1E293B">MCP (Model Context Protocol) 아키텍처</text>
+
+  <!-- Claude / LLM Host -->
+  <rect x="30" y="70" width="180" height="100" rx="10" fill="#EDE9FE" stroke="#8B5CF6" stroke-width="2"/>
+  <text x="120" y="100" text-anchor="middle" font-size="14" font-weight="bold" fill="#5B21B6">Claude (LLM Host)</text>
+  <text x="120" y="122" text-anchor="middle" font-size="12" fill="#6D28D9">요청 분석</text>
+  <text x="120" y="140" text-anchor="middle" font-size="12" fill="#6D28D9">도구 선택</text>
+  <text x="120" y="158" text-anchor="middle" font-size="12" fill="#6D28D9">응답 생성</text>
+
+  <!-- MCP Client -->
+  <rect x="30" y="210" width="180" height="80" rx="10" fill="#DBEAFE" stroke="#3B82F6" stroke-width="2"/>
+  <text x="120" y="240" text-anchor="middle" font-size="14" font-weight="bold" fill="#1D4ED8">MCP Client</text>
+  <text x="120" y="260" text-anchor="middle" font-size="12" fill="#1E40AF">프로토콜 중계</text>
+  <text x="120" y="278" text-anchor="middle" font-size="12" fill="#1E40AF">JSON-RPC 2.0</text>
+
+  <!-- Arrows: Host <-> Client -->
+  <line x1="120" y1="170" x2="120" y2="210" stroke="#8B5CF6" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="110" y1="210" x2="110" y2="170" stroke="#3B82F6" stroke-width="2" marker-end="url(#arr2)"/>
+
+  <!-- MCP Server 1 -->
+  <rect x="310" y="70" width="160" height="90" rx="10" fill="#D1FAE5" stroke="#10B981" stroke-width="2"/>
+  <text x="390" y="100" text-anchor="middle" font-size="13" font-weight="bold" fill="#065F46">MCP Server</text>
+  <text x="390" y="118" text-anchor="middle" font-size="12" fill="#047857">파일시스템</text>
+  <text x="390" y="136" text-anchor="middle" font-size="12" fill="#047857">읽기 / 쓰기</text>
+  <text x="390" y="152" text-anchor="middle" font-size="11" fill="#6EE7B7">@modelcontextprotocol/server-fs</text>
+
+  <!-- MCP Server 2 -->
+  <rect x="310" y="185" width="160" height="90" rx="10" fill="#FEF3C7" stroke="#F59E0B" stroke-width="2"/>
+  <text x="390" y="215" text-anchor="middle" font-size="13" font-weight="bold" fill="#78350F">MCP Server</text>
+  <text x="390" y="233" text-anchor="middle" font-size="12" fill="#92400E">GitHub 연동</text>
+  <text x="390" y="251" text-anchor="middle" font-size="12" fill="#92400E">PR / Issue</text>
+  <text x="390" y="267" text-anchor="middle" font-size="11" fill="#FCD34D">@modelcontextprotocol/server-github</text>
+
+  <!-- MCP Server 3 -->
+  <rect x="310" y="300" width="160" height="90" rx="10" fill="#DBEAFE" stroke="#3B82F6" stroke-width="2"/>
+  <text x="390" y="330" text-anchor="middle" font-size="13" font-weight="bold" fill="#1D4ED8">MCP Server</text>
+  <text x="390" y="348" text-anchor="middle" font-size="12" fill="#1E40AF">웹 검색</text>
+  <text x="390" y="366" text-anchor="middle" font-size="12" fill="#1E40AF">Brave / Tavily</text>
+  <text x="390" y="382" text-anchor="middle" font-size="11" fill="#93C5FD">@modelcontextprotocol/server-brave</text>
+
+  <!-- Arrows: Client -> Servers -->
+  <line x1="210" y1="250" x2="310" y2="115" stroke="#6B7280" stroke-width="1.5" stroke-dasharray="6,3" marker-end="url(#arr3)"/>
+  <line x1="210" y1="260" x2="310" y2="230" stroke="#6B7280" stroke-width="1.5" stroke-dasharray="6,3" marker-end="url(#arr3)"/>
+  <line x1="210" y1="270" x2="310" y2="345" stroke="#6B7280" stroke-width="1.5" stroke-dasharray="6,3" marker-end="url(#arr3)"/>
+
+  <!-- External APIs -->
+  <rect x="540" y="70" width="220" height="80" rx="10" fill="#F3F4F6" stroke="#6B7280" stroke-width="2"/>
+  <text x="650" y="100" text-anchor="middle" font-size="13" font-weight="bold" fill="#374151">로컬 파일시스템</text>
+  <text x="650" y="120" text-anchor="middle" font-size="12" fill="#6B7280">/home, /projects, .env</text>
+  <text x="650" y="138" text-anchor="middle" font-size="11" fill="#9CA3AF">stdio 트랜스포트</text>
+
+  <rect x="540" y="185" width="220" height="80" rx="10" fill="#F3F4F6" stroke="#6B7280" stroke-width="2"/>
+  <text x="650" y="215" text-anchor="middle" font-size="13" font-weight="bold" fill="#374151">GitHub API</text>
+  <text x="650" y="235" text-anchor="middle" font-size="12" fill="#6B7280">REST / GraphQL</text>
+  <text x="650" y="253" text-anchor="middle" font-size="11" fill="#9CA3AF">HTTP SSE 트랜스포트</text>
+
+  <rect x="540" y="300" width="220" height="80" rx="10" fill="#F3F4F6" stroke="#6B7280" stroke-width="2"/>
+  <text x="650" y="330" text-anchor="middle" font-size="13" font-weight="bold" fill="#374151">외부 검색 엔진</text>
+  <text x="650" y="350" text-anchor="middle" font-size="12" fill="#6B7280">Brave Search API</text>
+  <text x="650" y="368" text-anchor="middle" font-size="11" fill="#9CA3AF">HTTP SSE 트랜스포트</text>
+
+  <!-- Server -> External arrows -->
+  <line x1="470" y1="115" x2="540" y2="110" stroke="#10B981" stroke-width="1.5" marker-end="url(#arr4)"/>
+  <line x1="470" y1="230" x2="540" y2="225" stroke="#F59E0B" stroke-width="1.5" marker-end="url(#arr4)"/>
+  <line x1="470" y1="345" x2="540" y2="340" stroke="#3B82F6" stroke-width="1.5" marker-end="url(#arr4)"/>
+
+  <!-- Protocol label -->
+  <rect x="30" y="395" width="740" height="40" rx="8" fill="#EDE9FE" stroke="#8B5CF6" stroke-width="1"/>
+  <text x="400" y="420" text-anchor="middle" font-size="13" fill="#5B21B6">통신 프로토콜: JSON-RPC 2.0 · 트랜스포트: stdio (로컬) / HTTP+SSE (원격) · 표준: Anthropic MCP Spec 2024-11</text>
+
+  <!-- Arrow markers -->
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#8B5CF6"/>
+    </marker>
+    <marker id="arr2" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#3B82F6"/>
+    </marker>
+    <marker id="arr3" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#6B7280"/>
+    </marker>
+    <marker id="arr4" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#6B7280"/>
+    </marker>
+  </defs>
+</svg>

@@ -1,0 +1,92 @@
+<svg width="800" height="450" xmlns="http://www.w3.org/2000/svg" font-family="'Malgun Gothic', sans-serif">
+  <!-- Background -->
+  <rect width="800" height="450" fill="#F8FAFC" rx="12"/>
+  <text x="400" y="38" text-anchor="middle" font-size="18" font-weight="bold" fill="#1E293B">2026년 LLM 성능 비교 — GPT-4o vs Claude 3.7 vs Gemini 2.5</text>
+
+  <!-- Header row -->
+  <rect x="20" y="55" width="175" height="38" fill="#1E293B" rx="4"/>
+  <rect x="200" y="55" width="175" height="38" fill="#3B82F6" rx="4"/>
+  <rect x="380" y="55" width="175" height="38" fill="#8B5CF6" rx="4"/>
+  <rect x="560" y="55" width="220" height="38" fill="#10B981" rx="4"/>
+
+  <text x="107" y="79" text-anchor="middle" font-size="13" fill="white" font-weight="bold">항목</text>
+  <text x="287" y="79" text-anchor="middle" font-size="13" fill="white" font-weight="bold">GPT-4o</text>
+  <text x="467" y="79" text-anchor="middle" font-size="13" fill="white" font-weight="bold">Claude 3.7 Sonnet</text>
+  <text x="670" y="79" text-anchor="middle" font-size="13" fill="white" font-weight="bold">Gemini 2.5 Pro</text>
+
+  <!-- Row 1 -->
+  <rect x="20" y="98" width="175" height="36" fill="#F3F4F6" stroke="#6B7280" stroke-width="0.5"/>
+  <rect x="200" y="98" width="175" height="36" fill="#DBEAFE" stroke="#3B82F6" stroke-width="0.5"/>
+  <rect x="380" y="98" width="175" height="36" fill="#EDE9FE" stroke="#8B5CF6" stroke-width="0.5"/>
+  <rect x="560" y="98" width="220" height="36" fill="#D1FAE5" stroke="#10B981" stroke-width="0.5"/>
+  <text x="107" y="121" text-anchor="middle" font-size="12" fill="#374151">컨텍스트 윈도우</text>
+  <text x="287" y="121" text-anchor="middle" font-size="12" fill="#1D4ED8" font-weight="bold">128K 토큰</text>
+  <text x="467" y="121" text-anchor="middle" font-size="12" fill="#6D28D9" font-weight="bold">200K 토큰</text>
+  <text x="670" y="121" text-anchor="middle" font-size="12" fill="#065F46" font-weight="bold">1M 토큰 ★</text>
+
+  <!-- Row 2 -->
+  <rect x="20" y="138" width="175" height="36" fill="#F3F4F6" stroke="#6B7280" stroke-width="0.5"/>
+  <rect x="200" y="138" width="175" height="36" fill="#DBEAFE" stroke="#3B82F6" stroke-width="0.5"/>
+  <rect x="380" y="138" width="175" height="36" fill="#EDE9FE" stroke="#8B5CF6" stroke-width="0.5"/>
+  <rect x="560" y="138" width="220" height="36" fill="#D1FAE5" stroke="#10B981" stroke-width="0.5"/>
+  <text x="107" y="161" text-anchor="middle" font-size="12" fill="#374151">API 가격 (입력/1M)</text>
+  <text x="287" y="161" text-anchor="middle" font-size="12" fill="#1D4ED8" font-weight="bold">$2.50</text>
+  <text x="467" y="161" text-anchor="middle" font-size="12" fill="#6D28D9" font-weight="bold">$3.00</text>
+  <text x="670" y="161" text-anchor="middle" font-size="12" fill="#065F46" font-weight="bold">$1.25 ★</text>
+
+  <!-- Row 3 -->
+  <rect x="20" y="178" width="175" height="36" fill="#F3F4F6" stroke="#6B7280" stroke-width="0.5"/>
+  <rect x="200" y="178" width="175" height="36" fill="#DBEAFE" stroke="#3B82F6" stroke-width="0.5"/>
+  <rect x="380" y="178" width="175" height="36" fill="#EDE9FE" stroke="#8B5CF6" stroke-width="0.5"/>
+  <rect x="560" y="178" width="220" height="36" fill="#D1FAE5" stroke="#10B981" stroke-width="0.5"/>
+  <text x="107" y="201" text-anchor="middle" font-size="12" fill="#374151">코딩 능력 (SWE-bench)</text>
+  <text x="287" y="201" text-anchor="middle" font-size="12" fill="#1D4ED8" font-weight="bold">~68%</text>
+  <text x="467" y="201" text-anchor="middle" font-size="12" fill="#6D28D9" font-weight="bold">80.9% ★</text>
+  <text x="670" y="201" text-anchor="middle" font-size="12" fill="#065F46" font-weight="bold">~65%</text>
+
+  <!-- Row 4 -->
+  <rect x="20" y="218" width="175" height="36" fill="#F3F4F6" stroke="#6B7280" stroke-width="0.5"/>
+  <rect x="200" y="218" width="175" height="36" fill="#DBEAFE" stroke="#3B82F6" stroke-width="0.5"/>
+  <rect x="380" y="218" width="175" height="36" fill="#EDE9FE" stroke="#8B5CF6" stroke-width="0.5"/>
+  <rect x="560" y="218" width="220" height="36" fill="#D1FAE5" stroke="#10B981" stroke-width="0.5"/>
+  <text x="107" y="241" text-anchor="middle" font-size="12" fill="#374151">멀티모달</text>
+  <text x="287" y="241" text-anchor="middle" font-size="12" fill="#1D4ED8" font-weight="bold">이미지·음성·영상</text>
+  <text x="467" y="241" text-anchor="middle" font-size="12" fill="#6D28D9" font-weight="bold">이미지 중심</text>
+  <text x="670" y="241" text-anchor="middle" font-size="12" fill="#065F46" font-weight="bold">이미지·음성·영상 ★</text>
+
+  <!-- Row 5 -->
+  <rect x="20" y="258" width="175" height="36" fill="#F3F4F6" stroke="#6B7280" stroke-width="0.5"/>
+  <rect x="200" y="258" width="175" height="36" fill="#DBEAFE" stroke="#3B82F6" stroke-width="0.5"/>
+  <rect x="380" y="258" width="175" height="36" fill="#EDE9FE" stroke="#8B5CF6" stroke-width="0.5"/>
+  <rect x="560" y="258" width="220" height="36" fill="#D1FAE5" stroke="#10B981" stroke-width="0.5"/>
+  <text x="107" y="281" text-anchor="middle" font-size="12" fill="#374151">한국어 품질</text>
+  <text x="287" y="281" text-anchor="middle" font-size="12" fill="#1D4ED8" font-weight="bold">우수</text>
+  <text x="467" y="281" text-anchor="middle" font-size="12" fill="#6D28D9" font-weight="bold">우수</text>
+  <text x="670" y="281" text-anchor="middle" font-size="12" fill="#065F46" font-weight="bold">우수</text>
+
+  <!-- Row 6 -->
+  <rect x="20" y="298" width="175" height="36" fill="#F3F4F6" stroke="#6B7280" stroke-width="0.5"/>
+  <rect x="200" y="298" width="175" height="36" fill="#DBEAFE" stroke="#3B82F6" stroke-width="0.5"/>
+  <rect x="380" y="298" width="175" height="36" fill="#EDE9FE" stroke="#8B5CF6" stroke-width="0.5"/>
+  <rect x="560" y="298" width="220" height="36" fill="#D1FAE5" stroke="#10B981" stroke-width="0.5"/>
+  <text x="107" y="321" text-anchor="middle" font-size="12" fill="#374151">추론 모드</text>
+  <text x="287" y="321" text-anchor="middle" font-size="12" fill="#1D4ED8" font-weight="bold">o1/o3 별도</text>
+  <text x="467" y="321" text-anchor="middle" font-size="12" fill="#6D28D9" font-weight="bold">Extended Thinking ★</text>
+  <text x="670" y="321" text-anchor="middle" font-size="12" fill="#065F46" font-weight="bold">Thinking Mode</text>
+
+  <!-- Summary boxes -->
+  <rect x="20" y="355" width="235" height="75" fill="#DBEAFE" stroke="#3B82F6" stroke-width="1.5" rx="8"/>
+  <text x="137" y="378" text-anchor="middle" font-size="12" fill="#1D4ED8" font-weight="bold">GPT-4o 추천 대상</text>
+  <text x="137" y="396" text-anchor="middle" font-size="11" fill="#1E40AF">범용 앱 / 대형 생태계 필요</text>
+  <text x="137" y="413" text-anchor="middle" font-size="11" fill="#1E40AF">Function Calling 중심 개발</text>
+
+  <rect x="280" y="355" width="235" height="75" fill="#EDE9FE" stroke="#8B5CF6" stroke-width="1.5" rx="8"/>
+  <text x="397" y="378" text-anchor="middle" font-size="12" fill="#6D28D9" font-weight="bold">Claude 3.7 추천 대상</text>
+  <text x="397" y="396" text-anchor="middle" font-size="11" fill="#5B21B6">코딩 / 긴 문서 분석</text>
+  <text x="397" y="413" text-anchor="middle" font-size="11" fill="#5B21B6">Extended Thinking 활용</text>
+
+  <rect x="540" y="355" width="240" height="75" fill="#D1FAE5" stroke="#10B981" stroke-width="1.5" rx="8"/>
+  <text x="660" y="378" text-anchor="middle" font-size="12" fill="#065F46" font-weight="bold">Gemini 2.5 추천 대상</text>
+  <text x="660" y="396" text-anchor="middle" font-size="11" fill="#064E3B">초장문 문서 / 멀티모달</text>
+  <text x="660" y="413" text-anchor="middle" font-size="11" fill="#064E3B">비용 효율 중심 프로젝트</text>
+</svg>

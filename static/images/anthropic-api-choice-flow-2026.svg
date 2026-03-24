@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#f6fbff"/>
+  <text x="70" y="92" font-family="Segoe UI, Arial" font-size="38" font-weight="700" fill="#18344d">Anthropic API Choice Flow</text>
+  <text x="70" y="130" font-family="Segoe UI, Arial" font-size="20" fill="#5b7488">When to choose Claude-based API design</text>
+  <rect x="82" y="226" width="210" height="116" rx="22" fill="#214e72"/>
+  <text x="119" y="274" font-family="Segoe UI, Arial" font-size="26" font-weight="700" fill="#fff">Need Claude?</text>
+  <text x="111" y="306" font-family="Segoe UI, Arial" font-size="16" fill="#d9e7f4">quality, long context</text>
+  <rect x="354" y="178" width="254" height="210" rx="28" fill="#1f8a70"/>
+  <text x="414" y="244" font-family="Segoe UI, Arial" font-size="32" font-weight="700" fill="#fff">Anthropic API</text>
+  <text x="388" y="284" font-family="Segoe UI, Arial" font-size="17" fill="#eafff7">messages, tools, cache</text>
+  <text x="382" y="314" font-family="Segoe UI, Arial" font-size="17" fill="#eafff7">automation, agents</text>
+  <rect x="694" y="140" width="238" height="88" rx="20" fill="#d46a2c"/>
+  <text x="732" y="193" font-family="Segoe UI, Arial" font-size="26" font-weight="700" fill="#fff">Messages</text>
+  <rect x="694" y="262" width="238" height="88" rx="20" fill="#d46a2c"/>
+  <text x="732" y="315" font-family="Segoe UI, Arial" font-size="26" font-weight="700" fill="#fff">Prompt Cache</text>
+  <rect x="694" y="384" width="238" height="88" rx="20" fill="#d46a2c"/>
+  <text x="736" y="437" font-family="Segoe UI, Arial" font-size="26" font-weight="700" fill="#fff">Tool Use</text>
+  <rect x="978" y="226" width="150" height="116" rx="22" fill="#2f6fb0"/>
+  <text x="1005" y="274" font-family="Segoe UI, Arial" font-size="26" font-weight="700" fill="#fff">Ship</text>
+  <text x="995" y="306" font-family="Segoe UI, Arial" font-size="16" fill="#eaf2fb">safer automation</text>
+  <path d="M292 284 L354 284" stroke="#567084" stroke-width="8" stroke-linecap="round"/>
+  <path d="M608 226 L694 184" stroke="#567084" stroke-width="8" stroke-linecap="round"/>
+  <path d="M608 284 L694 306" stroke="#567084" stroke-width="8" stroke-linecap="round"/>
+  <path d="M608 342 L694 428" stroke="#567084" stroke-width="8" stroke-linecap="round"/>
+  <path d="M932 284 L978 284" stroke="#567084" stroke-width="8" stroke-linecap="round"/>
+</svg>

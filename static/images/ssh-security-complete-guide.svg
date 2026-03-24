@@ -1,0 +1,37 @@
+<svg width="800" height="450" viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg" font-family="'Malgun Gothic', sans-serif">
+  <!-- Background -->
+  <rect width="800" height="450" fill="#F9FAFB" rx="12"/>
+  <text x="400" y="38" text-anchor="middle" font-size="18" font-weight="bold" fill="#1F2937">SSH 보안 강화 레이어 구조</text>
+
+  <!-- Layer 1 - Network -->
+  <rect x="30" y="60" width="740" height="70" rx="10" fill="#FEE2E2" stroke="#EF4444" stroke-width="2"/>
+  <text x="60" y="87" font-size="13" font-weight="bold" fill="#991B1B">1단계: 네트워크 레이어</text>
+  <text x="60" y="107" font-size="11" fill="#7F1D1D">포트 변경 (22 → 49152~65535)  |  방화벽 특정 IP만 허용  |  VPN 경유 접속 강제</text>
+  <text x="60" y="123" font-size="11" fill="#7F1D1D">UFW: ufw allow from 192.168.1.0/24 to any port 2222</text>
+
+  <!-- Layer 2 - Authentication -->
+  <rect x="50" y="145" width="700" height="70" rx="10" fill="#FEF3C7" stroke="#F59E0B" stroke-width="2"/>
+  <text x="80" y="172" font-size="13" font-weight="bold" fill="#92400E">2단계: 인증 레이어</text>
+  <text x="80" y="192" font-size="11" fill="#78350F">공개키 인증 필수 (PasswordAuthentication no)  |  Ed25519 키 권장  |  2FA (Google Authenticator)</text>
+  <text x="80" y="208" font-size="11" fill="#78350F">ssh-keygen -t ed25519 -C "서버명" -f ~/.ssh/id_ed25519</text>
+
+  <!-- Layer 3 - Access Control -->
+  <rect x="70" y="228" width="660" height="70" rx="10" fill="#D1FAE5" stroke="#10B981" stroke-width="2"/>
+  <text x="100" y="255" font-size="13" font-weight="bold" fill="#065F46">3단계: 접근 제어 레이어</text>
+  <text x="100" y="275" font-size="11" fill="#064E3B">AllowUsers 특정 계정만 허용  |  Root 로그인 차단  |  MaxAuthTries 3  |  LoginGraceTime 30</text>
+  <text x="100" y="291" font-size="11" fill="#064E3B">PermitRootLogin no  |  AllowUsers deployer  |  ClientAliveInterval 300</text>
+
+  <!-- Layer 4 - Intrusion Detection -->
+  <rect x="90" y="311" width="620" height="70" rx="10" fill="#DBEAFE" stroke="#3B82F6" stroke-width="2"/>
+  <text x="120" y="338" font-size="13" font-weight="bold" fill="#1E40AF">4단계: 침입 탐지 레이어 (fail2ban)</text>
+  <text x="120" y="358" font-size="11" fill="#1E3A8A">5회 실패 시 자동 IP 차단  |  밴 시간 설정  |  이메일 알림  |  로그 모니터링</text>
+  <text x="120" y="374" font-size="11" fill="#1E3A8A">bantime = 3600  |  maxretry = 5  |  findtime = 600</text>
+
+  <!-- Layer 5 - Audit -->
+  <rect x="110" y="394" width="580" height="42" rx="10" fill="#EDE9FE" stroke="#8B5CF6" stroke-width="2"/>
+  <text x="140" y="414" font-size="12" font-weight="bold" fill="#5B21B6">5단계: 감사 레이어 — 접속 로그 기록 · 이상 접근 알림 · 정기 키 교체</text>
+  <text x="140" y="430" font-size="10" fill="#4C1D95">journalctl -u ssh --since "1 hour ago" | grep "Failed\|Accepted"</text>
+
+  <!-- Shield icon area -->
+  <text x="750" y="240" text-anchor="middle" font-size="40" fill="#D1FAE5">🛡</text>
+</svg>

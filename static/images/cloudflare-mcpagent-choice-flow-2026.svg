@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#07121d"/>
+      <stop offset="100%" stop-color="#163a52"/>
+    </linearGradient>
+    <marker id="arrow2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#9ae6ff"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg2)"/>
+  <text x="70" y="88" fill="#e7f8ff" font-size="38" font-weight="700" font-family="Inter, Arial, sans-serif">Cloudflare MCPAgent: choose the path</text>
+  <text x="70" y="122" fill="#94b9cf" font-size="20" font-family="Inter, Arial, sans-serif">state, tools, approval, and execution split</text>
+  <rect x="70" y="190" width="240" height="120" rx="24" fill="#0f2234" stroke="#2f5f7f"/>
+  <text x="190" y="236" text-anchor="middle" fill="#ffffff" font-size="26" font-weight="700" font-family="Inter, Arial, sans-serif">Need state?</text>
+  <text x="190" y="270" text-anchor="middle" fill="#9cc7de" font-size="18" font-family="Inter, Arial, sans-serif">session, memory, approval</text>
+  <rect x="380" y="150" width="240" height="120" rx="24" fill="#123049" stroke="#2f5f7f"/>
+  <text x="500" y="196" text-anchor="middle" fill="#ffffff" font-size="24" font-weight="700" font-family="Inter, Arial, sans-serif">Yes</text>
+  <text x="500" y="230" text-anchor="middle" fill="#9cc7de" font-size="18" font-family="Inter, Arial, sans-serif">Durable Objects</text>
+  <text x="500" y="256" text-anchor="middle" fill="#9cc7de" font-size="18" font-family="Inter, Arial, sans-serif">Cloudflare Agents</text>
+  <rect x="380" y="320" width="240" height="120" rx="24" fill="#123049" stroke="#2f5f7f"/>
+  <text x="500" y="366" text-anchor="middle" fill="#ffffff" font-size="24" font-weight="700" font-family="Inter, Arial, sans-serif">No</text>
+  <text x="500" y="400" text-anchor="middle" fill="#9cc7de" font-size="18" font-family="Inter, Arial, sans-serif">stateless worker</text>
+  <text x="500" y="426" text-anchor="middle" fill="#9cc7de" font-size="18" font-family="Inter, Arial, sans-serif">simple routing</text>
+  <rect x="700" y="190" width="260" height="120" rx="24" fill="#102738" stroke="#2f5f7f"/>
+  <text x="830" y="236" text-anchor="middle" fill="#ffffff" font-size="24" font-weight="700" font-family="Inter, Arial, sans-serif">Need external tools?</text>
+  <text x="830" y="270" text-anchor="middle" fill="#9cc7de" font-size="18" font-family="Inter, Arial, sans-serif">search, docs, CRM, ticket</text>
+  <rect x="1020" y="150" width="110" height="120" rx="22" fill="#17324c" stroke="#2f5f7f"/>
+  <text x="1075" y="195" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="700" font-family="Inter, Arial, sans-serif">MCP</text>
+  <text x="1075" y="226" text-anchor="middle" fill="#9cc7de" font-size="16" font-family="Inter, Arial, sans-serif">remote</text>
+  <rect x="1020" y="320" width="110" height="120" rx="22" fill="#17324c" stroke="#2f5f7f"/>
+  <text x="1075" y="365" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="700" font-family="Inter, Arial, sans-serif">Local</text>
+  <text x="1075" y="396" text-anchor="middle" fill="#9cc7de" font-size="16" font-family="Inter, Arial, sans-serif">tool</text>
+  <line x1="310" y1="250" x2="380" y2="210" stroke="#9ae6ff" stroke-width="5" marker-end="url(#arrow2)"/>
+  <line x1="310" y1="250" x2="380" y2="380" stroke="#9ae6ff" stroke-width="5" marker-end="url(#arrow2)"/>
+  <line x1="620" y1="210" x2="700" y2="240" stroke="#9ae6ff" stroke-width="5" marker-end="url(#arrow2)"/>
+  <line x1="620" y1="380" x2="1020" y2="380" stroke="#9ae6ff" stroke-width="5" marker-end="url(#arrow2)"/>
+  <line x1="960" y1="240" x2="1020" y2="210" stroke="#9ae6ff" stroke-width="5" marker-end="url(#arrow2)"/>
+  <line x1="960" y1="260" x2="1020" y2="380" stroke="#9ae6ff" stroke-width="5" marker-end="url(#arrow2)"/>
+  <rect x="70" y="500" width="1060" height="80" rx="20" fill="#0f2234" stroke="#2f5f7f"/>
+  <text x="600" y="548" text-anchor="middle" fill="#dff7ff" font-size="20" font-family="Inter, Arial, sans-serif">Rule of thumb: state in Durable Objects, tools in MCP, sensitive actions behind approval</text>
+</svg>

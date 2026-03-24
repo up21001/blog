@@ -1,0 +1,65 @@
+<svg width="800" height="450" viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg" font-family="'Malgun Gothic', sans-serif">
+  <!-- Background -->
+  <rect width="800" height="450" fill="#F8FAFC" rx="12"/>
+  <text x="400" y="36" text-anchor="middle" font-size="18" font-weight="bold" fill="#1E293B">AI 코드 생성 보안 위험 & 대응 체계</text>
+
+  <!-- Left: Risk Types -->
+  <rect x="20" y="55" width="360" height="360" rx="8" fill="#FEE2E2" stroke="#EF4444" stroke-width="2"/>
+  <text x="200" y="82" text-anchor="middle" font-size="14" font-weight="bold" fill="#991B1B">주요 보안 취약점 유형</text>
+
+  <!-- Risk 1 -->
+  <rect x="35" y="95" width="330" height="55" rx="6" fill="#FFFFFF" stroke="#EF4444" stroke-width="1"/>
+  <text x="55" y="116" font-size="12" font-weight="bold" fill="#DC2626">OWASP A03: Injection</text>
+  <text x="55" y="136" font-size="11" fill="#4B5563">SQL/Command Injection — 입력값 미검증 코드 생성</text>
+
+  <!-- Risk 2 -->
+  <rect x="35" y="160" width="330" height="55" rx="6" fill="#FFFFFF" stroke="#EF4444" stroke-width="1"/>
+  <text x="55" y="181" font-size="12" font-weight="bold" fill="#DC2626">OWASP A02: Cryptographic Failure</text>
+  <text x="55" y="201" font-size="11" fill="#4B5563">MD5/SHA1 등 취약 암호화 알고리즘 추천</text>
+
+  <!-- Risk 3 -->
+  <rect x="35" y="225" width="330" height="55" rx="6" fill="#FFFFFF" stroke="#EF4444" stroke-width="1"/>
+  <text x="55" y="246" font-size="12" font-weight="bold" fill="#DC2626">OWASP A01: Broken Access Control</text>
+  <text x="55" y="266" font-size="11" fill="#4B5563">인증/권한 확인 로직 누락 — 예제 기반 코드 오용</text>
+
+  <!-- Risk 4 -->
+  <rect x="35" y="290" width="330" height="55" rx="6" fill="#FFFFFF" stroke="#EF4444" stroke-width="1"/>
+  <text x="55" y="311" font-size="12" font-weight="bold" fill="#DC2626">하드코딩 Secrets</text>
+  <text x="55" y="331" font-size="11" fill="#4B5563">API Key / Password 소스코드 직접 삽입</text>
+
+  <!-- Risk 5 -->
+  <rect x="35" y="355" width="330" height="48" rx="6" fill="#FFFFFF" stroke="#EF4444" stroke-width="1"/>
+  <text x="55" y="376" font-size="12" font-weight="bold" fill="#DC2626">구버전 패턴 / 취약 라이브러리 추천</text>
+  <text x="55" y="396" font-size="11" fill="#4B5563">훈련 데이터 기반 — 최신 CVE 반영 불가</text>
+
+  <!-- Right: Defense -->
+  <rect x="420" y="55" width="360" height="360" rx="8" fill="#D1FAE5" stroke="#10B981" stroke-width="2"/>
+  <text x="600" y="82" text-anchor="middle" font-size="14" font-weight="bold" fill="#065F46">안전한 사용법 & 검토 체크리스트</text>
+
+  <!-- Defense 1 -->
+  <rect x="435" y="95" width="330" height="55" rx="6" fill="#FFFFFF" stroke="#10B981" stroke-width="1"/>
+  <text x="455" y="116" font-size="12" font-weight="bold" fill="#065F46">SAST 도구 병행</text>
+  <text x="455" y="136" font-size="11" fill="#4B5563">Semgrep / Snyk / CodeQL — AI 생성 코드 자동 스캔</text>
+
+  <!-- Defense 2 -->
+  <rect x="435" y="160" width="330" height="55" rx="6" fill="#FFFFFF" stroke="#10B981" stroke-width="1"/>
+  <text x="455" y="181" font-size="12" font-weight="bold" fill="#065F46">Secrets 스캐너</text>
+  <text x="455" y="201" font-size="11" fill="#4B5563">git-secrets / truffleHog — 커밋 전 자동 검사</text>
+
+  <!-- Defense 3 -->
+  <rect x="435" y="225" width="330" height="55" rx="6" fill="#FFFFFF" stroke="#10B981" stroke-width="1"/>
+  <text x="455" y="246" font-size="12" font-weight="bold" fill="#065F46">보안 프롬프트 작성</text>
+  <text x="455" y="266" font-size="11" fill="#4B5563">"OWASP Top10 고려, 입력값 검증 포함" 명시 요청</text>
+
+  <!-- Defense 4 -->
+  <rect x="435" y="290" width="330" height="55" rx="6" fill="#FFFFFF" stroke="#10B981" stroke-width="1"/>
+  <text x="455" y="311" font-size="12" font-weight="bold" fill="#065F46">의존성 감사</text>
+  <text x="455" y="331" font-size="11" fill="#4B5563">npm audit / pip-audit — 추천 라이브러리 CVE 확인</text>
+
+  <!-- Defense 5 -->
+  <rect x="435" y="355" width="330" height="48" rx="6" fill="#FFFFFF" stroke="#10B981" stroke-width="1"/>
+  <text x="455" y="376" font-size="12" font-weight="bold" fill="#065F46">코드 리뷰 필수 유지</text>
+  <text x="455" y="396" font-size="11" fill="#4B5563">AI 코드 = 초안 — 보안 담당자 검토 프로세스 유지</text>
+
+  <text x="400" y="440" text-anchor="middle" font-size="11" fill="#9CA3AF">AI 코드 생성 도구는 보조 수단 — 보안 검토는 사람이 최종 책임</text>
+</svg>

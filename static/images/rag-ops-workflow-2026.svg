@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">RAG ops workflow 2026</title>
+  <desc id="desc">Workflow diagram for RAG operations from ingestion to evaluation and observability.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#07111d"/>
+      <stop offset="100%" stop-color="#23304f"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#22c55e"/>
+      <stop offset="100%" stop-color="#38bdf8"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="18" flood-color="#000" flood-opacity="0.3"/>
+    </filter>
+    <style>
+      .title { font: 700 40px/1.2 'Segoe UI', Arial, sans-serif; fill: #fff; }
+      .sub { font: 400 18px/1.5 'Segoe UI', Arial, sans-serif; fill: #c9d7e8; }
+      .box { font: 700 19px/1.2 'Segoe UI', Arial, sans-serif; fill: #fff; }
+      .small { font: 400 15px/1.4 'Segoe UI', Arial, sans-serif; fill: #e6edf8; }
+    </style>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="1010" cy="110" r="100" fill="#38bdf8" opacity="0.12"/>
+  <circle cx="165" cy="500" r="140" fill="#22c55e" opacity="0.12"/>
+  <text x="70" y="84" class="title">RAG ops workflow</text>
+  <text x="70" y="118" class="sub">Ingestion, chunking, retrieval, generation, evaluation, and observability</text>
+
+  <rect x="60" y="200" width="150" height="92" rx="20" fill="#0f4c81" filter="url(#shadow)"/>
+  <text x="89" y="240" class="box">Ingest</text>
+  <text x="79" y="268" class="small">docs / web</text>
+
+  <rect x="240" y="200" width="150" height="92" rx="20" fill="#1f8a70" filter="url(#shadow)"/>
+  <text x="268" y="240" class="box">Chunk</text>
+  <text x="258" y="268" class="small">clean splits</text>
+
+  <rect x="420" y="200" width="150" height="92" rx="20" fill="#1d4ed8" filter="url(#shadow)"/>
+  <text x="449" y="240" class="box">Embed</text>
+  <text x="439" y="268" class="small">vectors</text>
+
+  <rect x="600" y="200" width="150" height="92" rx="20" fill="#cc6b2c" filter="url(#shadow)"/>
+  <text x="622" y="240" class="box">Retrieve</text>
+  <text x="616" y="268" class="small">top-k + filter</text>
+
+  <rect x="780" y="200" width="150" height="92" rx="20" fill="#7c3aed" filter="url(#shadow)"/>
+  <text x="806" y="240" class="box">Generate</text>
+  <text x="798" y="268" class="small">grounded answer</text>
+
+  <rect x="960" y="200" width="180" height="92" rx="20" fill="#ef4444" filter="url(#shadow)"/>
+  <text x="999" y="240" class="box">Evaluate</text>
+  <text x="985" y="268" class="small">trace / metrics</text>
+
+  <path d="M210 246 L240 246" stroke="#9fb2c8" stroke-width="7" stroke-linecap="round"/>
+  <path d="M390 246 L420 246" stroke="#9fb2c8" stroke-width="7" stroke-linecap="round"/>
+  <path d="M570 246 L600 246" stroke="#9fb2c8" stroke-width="7" stroke-linecap="round"/>
+  <path d="M750 246 L780 246" stroke="#9fb2c8" stroke-width="7" stroke-linecap="round"/>
+  <path d="M930 246 L960 246" stroke="#9fb2c8" stroke-width="7" stroke-linecap="round"/>
+
+  <rect x="70" y="382" width="1050" height="10" rx="5" fill="url(#accent)" opacity="0.88"/>
+  <text x="70" y="460" class="sub">RAG ops is not just retrieval. It is the full chain from data ingestion to answer quality and feedback loops.</text>
+</svg>

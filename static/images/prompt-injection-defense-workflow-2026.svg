@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#111827"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <style>
+      .t1{font:700 52px Arial,sans-serif;fill:#f8fafc}
+      .t2{font:400 22px Arial,sans-serif;fill:#cbd5e1}
+      .box{fill:#0f172a;stroke:#475569;stroke-width:2;rx:18;ry:18}
+      .h{font:700 22px Arial,sans-serif;fill:#e2e8f0}
+      .p{font:400 17px Arial,sans-serif;fill:#cbd5e1}
+      .arr{stroke:#f59e0b;stroke-width:5;fill:none;marker-end:url(#m)}
+    </style>
+    <marker id="m" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 z" fill="#f59e0b"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="630" fill="url(#g)"/>
+  <text x="70" y="86" class="t1">Prompt Injection Defense</text>
+  <text x="70" y="128" class="t2">Separate data from instructions, then keep high-risk tools behind approval.</text>
+  <rect x="70" y="190" width="220" height="110" class="box"/>
+  <rect x="340" y="190" width="220" height="110" class="box"/>
+  <rect x="610" y="190" width="220" height="110" class="box"/>
+  <rect x="880" y="190" width="250" height="110" class="box"/>
+  <text x="95" y="232" class="h">1. Ingest</text>
+  <text x="95" y="262" class="p">web, docs, email, MCP</text>
+  <text x="365" y="232" class="h">2. Inspect</text>
+  <text x="365" y="262" class="p">detect hidden instructions</text>
+  <text x="635" y="232" class="h">3. Isolate</text>
+  <text x="635" y="262" class="p">label content as data</text>
+  <text x="905" y="232" class="h">4. Execute</text>
+  <text x="905" y="262" class="p">only allowed actions</text>
+  <path d="M290 245 L340 245" class="arr"/>
+  <path d="M560 245 L610 245" class="arr"/>
+  <path d="M830 245 L880 245" class="arr"/>
+  <rect x="70" y="360" width="1030" height="170" class="box"/>
+  <text x="95" y="405" class="h">Practical rule</text>
+  <text x="95" y="445" class="p">Never merge untrusted text into system instructions. Keep a source tag, a trust level, and a tool boundary.</text>
+  <text x="95" y="480" class="p">For remote tools, pair this with explicit security review like Remote MCP Security.</text>
+</svg>

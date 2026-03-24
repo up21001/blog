@@ -1,0 +1,63 @@
+<svg width="800" height="450" viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg" font-family="'Malgun Gothic', sans-serif">
+  <!-- Background -->
+  <rect width="800" height="450" fill="#F9FAFB" rx="12"/>
+  <text x="400" y="38" text-anchor="middle" font-size="18" font-weight="bold" fill="#1F2937">로컬 LLM vs 클라우드 LLM — 프라이버시 비교</text>
+
+  <!-- Local LLM Column -->
+  <rect x="30" y="60" width="350" height="50" rx="8" fill="#D1FAE5" stroke="#10B981" stroke-width="2"/>
+  <text x="205" y="91" text-anchor="middle" font-size="15" font-weight="bold" fill="#065F46">로컬 LLM (On-Premise)</text>
+
+  <!-- Cloud LLM Column -->
+  <rect x="420" y="60" width="350" height="50" rx="8" fill="#DBEAFE" stroke="#3B82F6" stroke-width="2"/>
+  <text x="595" y="91" text-anchor="middle" font-size="15" font-weight="bold" fill="#1E40AF">클라우드 LLM (API)</text>
+
+  <!-- Divider -->
+  <line x1="400" y1="60" x2="400" y2="420" stroke="#D1D5DB" stroke-width="1.5" stroke-dasharray="6,3"/>
+
+  <!-- Local rows -->
+  <rect x="35" y="125" width="340" height="45" rx="6" fill="#D1FAE5" stroke="#10B981" stroke-width="1"/>
+  <text x="55" y="145" font-size="11" font-weight="bold" fill="#065F46">데이터 주권</text>
+  <text x="55" y="161" font-size="10" fill="#064E3B">모든 데이터가 내부 인프라에만 저장됨</text>
+
+  <rect x="35" y="178" width="340" height="45" rx="6" fill="#D1FAE5" stroke="#10B981" stroke-width="1"/>
+  <text x="55" y="198" font-size="11" font-weight="bold" fill="#065F46">외부 전송 없음</text>
+  <text x="55" y="214" font-size="10" fill="#064E3B">인터넷 미연결 환경 운영 가능 (에어갭)</text>
+
+  <rect x="35" y="231" width="340" height="45" rx="6" fill="#D1FAE5" stroke="#10B981" stroke-width="1"/>
+  <text x="55" y="251" font-size="11" font-weight="bold" fill="#065F46">규정 준수 용이</text>
+  <text x="55" y="267" font-size="10" fill="#064E3B">GDPR, HIPAA, 금융 규제 적용 단순화</text>
+
+  <rect x="35" y="284" width="340" height="45" rx="6" fill="#FEE2E2" stroke="#EF4444" stroke-width="1"/>
+  <text x="55" y="304" font-size="11" font-weight="bold" fill="#991B1B">초기 비용 높음</text>
+  <text x="55" y="320" font-size="10" fill="#7F1D1D">GPU 서버, 설치/운영 비용 필요</text>
+
+  <rect x="35" y="337" width="340" height="45" rx="6" fill="#FEE2E2" stroke="#EF4444" stroke-width="1"/>
+  <text x="55" y="357" font-size="11" font-weight="bold" fill="#991B1B">모델 성능 제한</text>
+  <text x="55" y="373" font-size="10" fill="#7F1D1D">GPT-4급 대비 소형 모델 (7B~70B)</text>
+
+  <!-- Cloud rows -->
+  <rect x="425" y="125" width="340" height="45" rx="6" fill="#DBEAFE" stroke="#3B82F6" stroke-width="1"/>
+  <text x="445" y="145" font-size="11" font-weight="bold" fill="#1E40AF">최고 수준 성능</text>
+  <text x="445" y="161" font-size="10" fill="#1E3A8A">GPT-4o, Claude 3.5, Gemini Ultra 등</text>
+
+  <rect x="425" y="178" width="340" height="45" rx="6" fill="#DBEAFE" stroke="#3B82F6" stroke-width="1"/>
+  <text x="445" y="198" font-size="11" font-weight="bold" fill="#1E40AF">즉시 사용 가능</text>
+  <text x="445" y="214" font-size="10" fill="#1E3A8A">API 키 발급 후 수분 내 서비스 운영</text>
+
+  <rect x="425" y="231" width="340" height="45" rx="6" fill="#DBEAFE" stroke="#3B82F6" stroke-width="1"/>
+  <text x="445" y="251" font-size="11" font-weight="bold" fill="#1E40AF">운영 부담 없음</text>
+  <text x="445" y="267" font-size="10" fill="#1E3A8A">인프라 관리 없이 사용량 기반 과금</text>
+
+  <rect x="425" y="284" width="340" height="45" rx="6" fill="#FEE2E2" stroke="#EF4444" stroke-width="1"/>
+  <text x="445" y="304" font-size="11" font-weight="bold" fill="#991B1B">데이터 외부 전송</text>
+  <text x="445" y="320" font-size="10" fill="#7F1D1D">입력 데이터가 외부 서버로 전송됨</text>
+
+  <rect x="425" y="337" width="340" height="45" rx="6" fill="#FEE2E2" stroke="#EF4444" stroke-width="1"/>
+  <text x="445" y="357" font-size="11" font-weight="bold" fill="#991B1B">학습 데이터 활용 가능성</text>
+  <text x="445" y="373" font-size="10" fill="#7F1D1D">옵트아웃 설정 없으면 학습에 사용될 수 있음</text>
+
+  <!-- Bottom recommendation -->
+  <rect x="30" y="392" width="740" height="42" rx="8" fill="#EDE9FE" stroke="#8B5CF6" stroke-width="1.5"/>
+  <text x="400" y="409" text-anchor="middle" font-size="11" font-weight="bold" fill="#5B21B6">선택 기준</text>
+  <text x="400" y="425" text-anchor="middle" font-size="10" fill="#4C1D95">민감 데이터(의료·법무·금융) → 로컬 LLM | 일반 업무·프로토타이핑 → 클라우드 LLM | 하이브리드 전략 권장</text>
+</svg>

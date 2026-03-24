@@ -1,0 +1,76 @@
+<svg width="800" height="450" viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg" font-family="'Malgun Gothic', sans-serif">
+  <!-- Background -->
+  <rect width="800" height="450" fill="#F8FAFC"/>
+  <text x="400" y="38" text-anchor="middle" font-size="20" font-weight="bold" fill="#1E293B">TinyML 파이프라인 — 클라우드 → 마이크로컨트롤러</text>
+
+  <!-- Stage 1: Data Collection -->
+  <rect x="30" y="80" width="140" height="80" rx="10" fill="#DBEAFE" stroke="#3B82F6" stroke-width="2"/>
+  <text x="100" y="112" text-anchor="middle" font-size="13" font-weight="bold" fill="#1E40AF">데이터 수집</text>
+  <text x="100" y="130" text-anchor="middle" font-size="11" fill="#1E40AF">센서 / 카메라</text>
+  <text x="100" y="146" text-anchor="middle" font-size="11" fill="#1E40AF">Edge Impulse</text>
+
+  <!-- Arrow -->
+  <line x1="170" y1="120" x2="200" y2="120" stroke="#6B7280" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Stage 2: Model Training -->
+  <rect x="200" y="80" width="140" height="80" rx="10" fill="#D1FAE5" stroke="#10B981" stroke-width="2"/>
+  <text x="270" y="112" text-anchor="middle" font-size="13" font-weight="bold" fill="#065F46">모델 학습</text>
+  <text x="270" y="130" text-anchor="middle" font-size="11" fill="#065F46">TensorFlow / Keras</text>
+  <text x="270" y="146" text-anchor="middle" font-size="11" fill="#065F46">클라우드 GPU</text>
+
+  <!-- Arrow -->
+  <line x1="340" y1="120" x2="370" y2="120" stroke="#6B7280" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Stage 3: Conversion -->
+  <rect x="370" y="80" width="140" height="80" rx="10" fill="#FEF3C7" stroke="#F59E0B" stroke-width="2"/>
+  <text x="440" y="112" text-anchor="middle" font-size="13" font-weight="bold" fill="#92400E">모델 변환</text>
+  <text x="440" y="130" text-anchor="middle" font-size="11" fill="#92400E">TFLite 변환</text>
+  <text x="440" y="146" text-anchor="middle" font-size="11" fill="#92400E">양자화 (INT8)</text>
+
+  <!-- Arrow -->
+  <line x1="510" y1="120" x2="540" y2="120" stroke="#6B7280" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Stage 4: Deployment -->
+  <rect x="540" y="80" width="140" height="80" rx="10" fill="#EDE9FE" stroke="#8B5CF6" stroke-width="2"/>
+  <text x="610" y="112" text-anchor="middle" font-size="13" font-weight="bold" fill="#4C1D95">MCU 배포</text>
+  <text x="610" y="130" text-anchor="middle" font-size="11" fill="#4C1D95">ESP32 / Arduino</text>
+  <text x="610" y="146" text-anchor="middle" font-size="11" fill="#4C1D95">추론 실행</text>
+
+  <!-- Arrow marker -->
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#6B7280"/>
+    </marker>
+  </defs>
+
+  <!-- ESP32 Box -->
+  <rect x="200" y="210" width="400" height="190" rx="12" fill="#F3F4F6" stroke="#6B7280" stroke-width="2"/>
+  <text x="400" y="238" text-anchor="middle" font-size="14" font-weight="bold" fill="#374151">ESP32 TinyML 런타임 구조</text>
+
+  <!-- Interpreter -->
+  <rect x="220" y="250" width="160" height="55" rx="8" fill="#DBEAFE" stroke="#3B82F6" stroke-width="1.5"/>
+  <text x="300" y="274" text-anchor="middle" font-size="12" font-weight="bold" fill="#1E40AF">TFLite Interpreter</text>
+  <text x="300" y="292" text-anchor="middle" font-size="11" fill="#1E40AF">model.tflite 로드</text>
+
+  <!-- Tensor Arena -->
+  <rect x="420" y="250" width="160" height="55" rx="8" fill="#D1FAE5" stroke="#10B981" stroke-width="1.5"/>
+  <text x="500" y="274" text-anchor="middle" font-size="12" font-weight="bold" fill="#065F46">Tensor Arena</text>
+  <text x="500" y="292" text-anchor="middle" font-size="11" fill="#065F46">SRAM 할당 (KB)</text>
+
+  <!-- Input/Output -->
+  <rect x="220" y="320" width="160" height="55" rx="8" fill="#FEF3C7" stroke="#F59E0B" stroke-width="1.5"/>
+  <text x="300" y="344" text-anchor="middle" font-size="12" font-weight="bold" fill="#92400E">입력 텐서</text>
+  <text x="300" y="362" text-anchor="middle" font-size="11" fill="#92400E">마이크 / 가속도계</text>
+
+  <rect x="420" y="320" width="160" height="55" rx="8" fill="#EDE9FE" stroke="#8B5CF6" stroke-width="1.5"/>
+  <text x="500" y="344" text-anchor="middle" font-size="12" font-weight="bold" fill="#4C1D95">출력 텐서</text>
+  <text x="500" y="362" text-anchor="middle" font-size="11" fill="#4C1D95">분류 결과 확률</text>
+
+  <!-- Connect lines inside box -->
+  <line x1="380" y1="277" x2="420" y2="277" stroke="#6B7280" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="300" y1="305" x2="300" y2="320" stroke="#6B7280" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="500" y1="305" x2="500" y2="320" stroke="#6B7280" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Bottom label -->
+  <text x="400" y="430" text-anchor="middle" font-size="12" fill="#6B7280">모델 크기: ~50KB  |  추론 시간: ~10ms  |  소비 전력: ~100mW</text>
+</svg>

@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720">
+  <rect width="1200" height="720" fill="#f7fafc"/>
+  <text x="70" y="82" font-family="Segoe UI, Arial" font-size="40" font-weight="700" fill="#1f2937">AI Guardrails Comparison</text>
+  <text x="70" y="120" font-family="Segoe UI, Arial" font-size="20" fill="#4b5563">Guardrails AI vs NeMo Guardrails vs Prompt/Policy guardrails</text>
+
+  <rect x="70" y="180" width="330" height="420" rx="26" fill="#0f62fe"/>
+  <text x="130" y="238" font-family="Segoe UI, Arial" font-size="34" font-weight="700" fill="#fff">Guardrails AI</text>
+  <text x="106" y="276" font-family="Segoe UI, Arial" font-size="17" fill="#dce8ff">Python framework for reliability</text>
+  <text x="102" y="314" font-family="Segoe UI, Arial" font-size="18" fill="#eaf2ff">• validators</text>
+  <text x="102" y="346" font-family="Segoe UI, Arial" font-size="18" fill="#eaf2ff">• structured output</text>
+  <text x="102" y="378" font-family="Segoe UI, Arial" font-size="18" fill="#eaf2ff">• telemetry</text>
+  <text x="102" y="410" font-family="Segoe UI, Arial" font-size="18" fill="#eaf2ff">• Hub measures</text>
+  <text x="102" y="460" font-family="Segoe UI, Arial" font-size="18" fill="#eaf2ff">Best for:</text>
+  <text x="102" y="492" font-family="Segoe UI, Arial" font-size="18" fill="#eaf2ff">output validation</text>
+  <text x="102" y="524" font-family="Segoe UI, Arial" font-size="18" fill="#eaf2ff">and structured data</text>
+
+  <rect x="435" y="180" width="330" height="420" rx="26" fill="#111827"/>
+  <text x="495" y="238" font-family="Segoe UI, Arial" font-size="34" font-weight="700" fill="#fff">NeMo Guardrails</text>
+  <text x="466" y="276" font-family="Segoe UI, Arial" font-size="17" fill="#d1d5db">Conversation orchestration layer</text>
+  <text x="462" y="314" font-family="Segoe UI, Arial" font-size="18" fill="#f3f4f6">• rails</text>
+  <text x="462" y="346" font-family="Segoe UI, Arial" font-size="18" fill="#f3f4f6">• config / flows</text>
+  <text x="462" y="378" font-family="Segoe UI, Arial" font-size="18" fill="#f3f4f6">• dialogue policy</text>
+  <text x="462" y="410" font-family="Segoe UI, Arial" font-size="18" fill="#f3f4f6">• request interception</text>
+  <text x="462" y="460" font-family="Segoe UI, Arial" font-size="18" fill="#f3f4f6">Best for:</text>
+  <text x="462" y="492" font-family="Segoe UI, Arial" font-size="18" fill="#f3f4f6">chatbots and</text>
+  <text x="462" y="524" font-family="Segoe UI, Arial" font-size="18" fill="#f3f4f6">policy-driven flows</text>
+
+  <rect x="800" y="180" width="330" height="420" rx="26" fill="#f59f00"/>
+  <text x="842" y="238" font-family="Segoe UI, Arial" font-size="32" font-weight="700" fill="#fff">Prompt / Policy</text>
+  <text x="850" y="272" font-family="Segoe UI, Arial" font-size="32" font-weight="700" fill="#fff">Guardrails</text>
+  <text x="838" y="312" font-family="Segoe UI, Arial" font-size="17" fill="#fff4d6">Lightweight, app-managed rules</text>
+  <text x="836" y="350" font-family="Segoe UI, Arial" font-size="18" fill="#fff9e7">• system prompts</text>
+  <text x="836" y="382" font-family="Segoe UI, Arial" font-size="18" fill="#fff9e7">• moderation</text>
+  <text x="836" y="414" font-family="Segoe UI, Arial" font-size="18" fill="#fff9e7">• schema checks</text>
+  <text x="836" y="446" font-family="Segoe UI, Arial" font-size="18" fill="#fff9e7">• allow/deny policies</text>
+  <text x="836" y="496" font-family="Segoe UI, Arial" font-size="18" fill="#fff9e7">Best for:</text>
+  <text x="836" y="528" font-family="Segoe UI, Arial" font-size="18" fill="#fff9e7">fast MVPs and</text>
+  <text x="836" y="560" font-family="Segoe UI, Arial" font-size="18" fill="#fff9e7">simple policies</text>
+
+  <path d="M400 390 L435 390" stroke="#1f2937" stroke-width="8" stroke-linecap="round"/>
+  <path d="M765 390 L800 390" stroke="#1f2937" stroke-width="8" stroke-linecap="round"/>
+</svg>
+

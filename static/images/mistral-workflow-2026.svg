@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Mistral Workflow 2026</title>
+  <desc id="desc">Mistral architecture showing models, agents, document AI, and audio capabilities.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#faf5ff"/>
+      <stop offset="100%" stop-color="#ede9fe"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#312e81" flood-opacity="0.12"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#6d28d9"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bg)"/>
+  <text x="70" y="88" font-size="38" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#312e81">Mistral Workflow</text>
+  <text x="70" y="124" font-size="20" font-family="Segoe UI, Arial, sans-serif" fill="#6d28d9">Models, Agents, Document AI, and Audio make a broad platform for production apps</text>
+
+  <rect x="70" y="210" rx="24" ry="24" width="210" height="120" fill="#fff" stroke="#c4b5fd" filter="url(#shadow)"/>
+  <text x="115" y="262" font-size="28" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#312e81">App Input</text>
+  <text x="108" y="295" font-size="18" font-family="Segoe UI, Arial, sans-serif" fill="#6d28d9">chat, files, audio</text>
+
+  <rect x="350" y="150" rx="28" ry="28" width="500" height="360" fill="#fff" stroke="#a78bfa" stroke-width="2" filter="url(#shadow)"/>
+  <text x="540" y="206" font-size="34" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#312e81">Mistral AI</text>
+
+  <rect x="390" y="245" rx="18" ry="18" width="160" height="86" fill="#faf5ff" stroke="#c4b5fd"/>
+  <text x="438" y="296" font-size="24" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#6d28d9">Models</text>
+  <rect x="600" y="245" rx="18" ry="18" width="160" height="86" fill="#faf5ff" stroke="#c4b5fd"/>
+  <text x="650" y="296" font-size="24" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#6d28d9">Agents</text>
+
+  <rect x="390" y="360" rx="18" ry="18" width="160" height="86" fill="#faf5ff" stroke="#c4b5fd"/>
+  <text x="413" y="410" font-size="22" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#6d28d9">Document AI</text>
+  <rect x="600" y="360" rx="18" ry="18" width="160" height="86" fill="#faf5ff" stroke="#c4b5fd"/>
+  <text x="655" y="410" font-size="22" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#6d28d9">Audio</text>
+
+  <rect x="930" y="210" rx="24" ry="24" width="200" height="120" fill="#fff" stroke="#c4b5fd" filter="url(#shadow)"/>
+  <text x="984" y="262" font-size="28" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#312e81">Apps</text>
+  <text x="950" y="295" font-size="18" font-family="Segoe UI, Arial, sans-serif" fill="#6d28d9">chat, RAG, code</text>
+
+  <path d="M280 270 C320 270, 330 270, 350 270" fill="none" stroke="#7c3aed" stroke-width="4" marker-end="url(#arrow)"/>
+  <path d="M560 288 C585 288, 595 288, 600 288" fill="none" stroke="#7c3aed" stroke-width="4" marker-end="url(#arrow)"/>
+  <path d="M760 288 C835 288, 870 288, 930 288" fill="none" stroke="#7c3aed" stroke-width="4" marker-end="url(#arrow)"/>
+  <path d="M480 446 C480 468, 480 480, 480 494" fill="none" stroke="#7c3aed" stroke-width="3" marker-end="url(#arrow)"/>
+</svg>

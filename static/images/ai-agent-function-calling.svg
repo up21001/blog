@@ -1,0 +1,79 @@
+<svg width="800" height="450" viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg" font-family="'Malgun Gothic', sans-serif">
+  <!-- Background -->
+  <rect width="800" height="450" fill="#F9FAFB" rx="12"/>
+  <text x="400" y="38" text-anchor="middle" font-size="18" font-weight="bold" fill="#1F2937">Function Calling 동작 원리 — AI 에이전트 도구 연결</text>
+
+  <!-- User -->
+  <rect x="30" y="65" width="120" height="60" rx="10" fill="#DBEAFE" stroke="#3B82F6" stroke-width="2"/>
+  <text x="90" y="91" text-anchor="middle" font-size="13" font-weight="bold" fill="#1E40AF">사용자</text>
+  <text x="90" y="109" text-anchor="middle" font-size="11" fill="#1E40AF">자연어 질문</text>
+
+  <!-- LLM -->
+  <rect x="280" y="55" width="240" height="80" rx="10" fill="#D1FAE5" stroke="#10B981" stroke-width="2"/>
+  <text x="400" y="82" text-anchor="middle" font-size="13" font-weight="bold" fill="#065F46">LLM (GPT-4o / Claude)</text>
+  <text x="400" y="100" text-anchor="middle" font-size="11" fill="#065F46">함수 스키마 분석 → 호출 결정</text>
+  <text x="400" y="116" text-anchor="middle" font-size="11" fill="#065F46">function_call JSON 생성</text>
+
+  <!-- Tool Dispatcher -->
+  <rect x="590" y="65" width="160" height="60" rx="10" fill="#FEF3C7" stroke="#F59E0B" stroke-width="2"/>
+  <text x="670" y="88" text-anchor="middle" font-size="13" font-weight="bold" fill="#92400E">Tool Dispatcher</text>
+  <text x="670" y="106" text-anchor="middle" font-size="11" fill="#92400E">함수 실행 라우터</text>
+
+  <!-- Arrows row 1 -->
+  <line x1="150" y1="95" x2="278" y2="95" stroke="#3B82F6" stroke-width="2" marker-end="url(#c1)"/>
+  <text x="214" y="88" text-anchor="middle" font-size="10" fill="#1E40AF">질문 전달</text>
+  <line x1="520" y1="95" x2="588" y2="95" stroke="#10B981" stroke-width="2" marker-end="url(#c2)"/>
+  <text x="554" y="88" text-anchor="middle" font-size="10" fill="#065F46">함수 호출</text>
+
+  <!-- Tools row -->
+  <rect x="40" y="200" width="140" height="70" rx="8" fill="#EDE9FE" stroke="#8B5CF6" stroke-width="1.5"/>
+  <text x="110" y="224" text-anchor="middle" font-size="12" font-weight="bold" fill="#5B21B6">웹 검색</text>
+  <text x="110" y="242" text-anchor="middle" font-size="10" fill="#5B21B6">search(query)</text>
+  <text x="110" y="258" text-anchor="middle" font-size="10" fill="#5B21B6">→ 검색 결과 반환</text>
+
+  <rect x="200" y="200" width="140" height="70" rx="8" fill="#EDE9FE" stroke="#8B5CF6" stroke-width="1.5"/>
+  <text x="270" y="224" text-anchor="middle" font-size="12" font-weight="bold" fill="#5B21B6">DB 조회</text>
+  <text x="270" y="242" text-anchor="middle" font-size="10" fill="#5B21B6">query_db(sql)</text>
+  <text x="270" y="258" text-anchor="middle" font-size="10" fill="#5B21B6">→ 레코드 반환</text>
+
+  <rect x="360" y="200" width="140" height="70" rx="8" fill="#EDE9FE" stroke="#8B5CF6" stroke-width="1.5"/>
+  <text x="430" y="224" text-anchor="middle" font-size="12" font-weight="bold" fill="#5B21B6">날씨 API</text>
+  <text x="430" y="242" text-anchor="middle" font-size="10" fill="#5B21B6">get_weather(city)</text>
+  <text x="430" y="258" text-anchor="middle" font-size="10" fill="#5B21B6">→ 날씨 데이터</text>
+
+  <rect x="520" y="200" width="140" height="70" rx="8" fill="#EDE9FE" stroke="#8B5CF6" stroke-width="1.5"/>
+  <text x="590" y="224" text-anchor="middle" font-size="12" font-weight="bold" fill="#5B21B6">코드 실행</text>
+  <text x="590" y="242" text-anchor="middle" font-size="10" fill="#5B21B6">execute(code)</text>
+  <text x="590" y="258" text-anchor="middle" font-size="10" fill="#5B21B6">→ 실행 결과</text>
+
+  <rect x="680" y="200" width="90" height="70" rx="8" fill="#F3F4F6" stroke="#6B7280" stroke-width="1.5"/>
+  <text x="725" y="232" text-anchor="middle" font-size="12" font-weight="bold" fill="#374151">기타</text>
+  <text x="725" y="252" text-anchor="middle" font-size="10" fill="#374151">커스텀</text>
+  <text x="725" y="266" text-anchor="middle" font-size="10" fill="#374151">함수들</text>
+
+  <!-- Arrow dispatcher → tools -->
+  <line x1="670" y1="125" x2="590" y2="198" stroke="#F59E0B" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#c3)"/>
+  <line x1="670" y1="125" x2="430" y2="198" stroke="#F59E0B" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#c3)"/>
+  <line x1="670" y1="125" x2="270" y2="198" stroke="#F59E0B" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#c3)"/>
+  <line x1="670" y1="125" x2="110" y2="198" stroke="#F59E0B" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#c3)"/>
+
+  <!-- Result flow -->
+  <rect x="220" y="310" width="360" height="55" rx="10" fill="#D1FAE5" stroke="#10B981" stroke-width="2"/>
+  <text x="400" y="334" text-anchor="middle" font-size="13" font-weight="bold" fill="#065F46">tool_result → LLM 컨텍스트에 추가</text>
+  <text x="400" y="352" text-anchor="middle" font-size="11" fill="#065F46">LLM이 결과를 해석하여 최종 자연어 응답 생성</text>
+
+  <line x1="400" y1="270" x2="400" y2="308" stroke="#10B981" stroke-width="1.5" marker-end="url(#c2)"/>
+
+  <!-- Final response -->
+  <rect x="275" y="390" width="250" height="45" rx="8" fill="#DBEAFE" stroke="#3B82F6" stroke-width="2"/>
+  <text x="400" y="410" text-anchor="middle" font-size="12" font-weight="bold" fill="#1E40AF">최종 자연어 응답</text>
+  <text x="400" y="427" text-anchor="middle" font-size="11" fill="#1E40AF">사용자에게 전달</text>
+
+  <line x1="400" y1="365" x2="400" y2="388" stroke="#3B82F6" stroke-width="1.5" marker-end="url(#c1)"/>
+
+  <defs>
+    <marker id="c1" markerWidth="7" markerHeight="7" refX="5" refY="3" orient="auto"><path d="M0,0 L0,6 L7,3 z" fill="#3B82F6"/></marker>
+    <marker id="c2" markerWidth="7" markerHeight="7" refX="5" refY="3" orient="auto"><path d="M0,0 L0,6 L7,3 z" fill="#10B981"/></marker>
+    <marker id="c3" markerWidth="7" markerHeight="7" refX="5" refY="3" orient="auto"><path d="M0,0 L0,6 L7,3 z" fill="#F59E0B"/></marker>
+  </defs>
+</svg>

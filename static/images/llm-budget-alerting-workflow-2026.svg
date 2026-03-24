@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#1b4332"/>
+  <text x="60" y="78" fill="#f8fafc" font-family="Arial, sans-serif" font-size="38" font-weight="700">LLM Budget Alerting Workflow</text>
+  <g fill="#22c55e" stroke="#86efac" stroke-width="2">
+    <rect x="70" y="210" width="170" height="88" rx="16"/><rect x="280" y="210" width="170" height="88" rx="16"/><rect x="490" y="210" width="170" height="88" rx="16"/><rect x="700" y="210" width="170" height="88" rx="16"/><rect x="910" y="210" width="220" height="88" rx="16"/>
+  </g>
+  <g fill="#f8fafc" font-family="Arial, sans-serif" font-size="18" font-weight="700" text-anchor="middle">
+    <text x="155" y="258">Usage Event</text><text x="365" y="258">Budget Rule</text><text x="575" y="258">Threshold Check</text><text x="785" y="258">Alert / Action</text><text x="1020" y="258">Freeze / Fallback</text>
+  </g>
+  <g stroke="#d1fae5" stroke-width="5" fill="none" marker-end="url(#d)"><path d="M240 254 L280 254"/><path d="M450 254 L490 254"/><path d="M660 254 L700 254"/><path d="M870 254 L910 254"/></g>
+  <defs><marker id="d" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#d1fae5"/></marker></defs>
+  <rect x="70" y="370" width="1060" height="150" rx="20" fill="#0f172a" stroke="#14532d"/>
+  <text x="110" y="422" fill="#f8fafc" font-family="Arial, sans-serif" font-size="22" font-weight="700">Trigger examples</text>
+  <text x="110" y="458" fill="#cbd5e1" font-family="Arial, sans-serif" font-size="18">daily spend, monthly spend, per-team spend, retry spike, token spike</text>
+</svg>
+

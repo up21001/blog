@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720">
+  <rect width="1200" height="720" fill="#f5fbff"/>
+  <text x="70" y="82" font-family="Segoe UI, Arial" font-size="40" font-weight="700" fill="#18324a">Semantic Cache Workflow</text>
+  <text x="70" y="120" font-family="Segoe UI, Arial" font-size="20" fill="#5f758a">Query similarity, cache hit, LLM fallback, and re-store path</text>
+
+  <rect x="70" y="230" width="180" height="110" rx="20" fill="#1f6feb"/>
+  <text x="112" y="278" font-family="Segoe UI, Arial" font-size="26" font-weight="700" fill="#fff">User Query</text>
+  <text x="108" y="308" font-family="Segoe UI, Arial" font-size="16" fill="#e8f2ff">question / intent</text>
+
+  <rect x="300" y="205" width="220" height="160" rx="22" fill="#0f9d58"/>
+  <text x="348" y="256" font-family="Segoe UI, Arial" font-size="28" font-weight="700" fill="#fff">Embedding</text>
+  <text x="338" y="290" font-family="Segoe UI, Arial" font-size="16" fill="#eafff2">normalize, vectorize</text>
+  <text x="340" y="316" font-family="Segoe UI, Arial" font-size="16" fill="#eafff2">query representation</text>
+
+  <rect x="585" y="180" width="250" height="210" rx="24" fill="#f59f00"/>
+  <text x="650" y="230" font-family="Segoe UI, Arial" font-size="28" font-weight="700" fill="#fff">Vector Cache</text>
+  <text x="626" y="264" font-family="Segoe UI, Arial" font-size="16" fill="#fff4db">similarity lookup</text>
+  <text x="632" y="290" font-family="Segoe UI, Arial" font-size="16" fill="#fff4db">threshold / metadata</text>
+  <text x="632" y="316" font-family="Segoe UI, Arial" font-size="16" fill="#fff4db">Redis / Valkey / Upstash</text>
+
+  <rect x="905" y="150" width="230" height="120" rx="22" fill="#18a999"/>
+  <text x="960" y="202" font-family="Segoe UI, Arial" font-size="28" font-weight="700" fill="#fff">Cache Hit</text>
+  <text x="944" y="234" font-family="Segoe UI, Arial" font-size="16" fill="#eafffb">reuse previous answer</text>
+
+  <rect x="905" y="320" width="230" height="140" rx="22" fill="#d1495b"/>
+  <text x="958" y="376" font-family="Segoe UI, Arial" font-size="28" font-weight="700" fill="#fff">Cache Miss</text>
+  <text x="936" y="408" font-family="Segoe UI, Arial" font-size="16" fill="#ffe8ec">call LLM / RAG pipeline</text>
+
+  <rect x="585" y="470" width="250" height="120" rx="24" fill="#4f6df5"/>
+  <text x="642" y="524" font-family="Segoe UI, Arial" font-size="28" font-weight="700" fill="#fff">Store Result</text>
+  <text x="624" y="556" font-family="Segoe UI, Arial" font-size="16" fill="#e7ecff">question, answer, vector</text>
+
+  <path d="M250 285 L300 285" stroke="#355266" stroke-width="8" stroke-linecap="round"/>
+  <path d="M520 285 L585 285" stroke="#355266" stroke-width="8" stroke-linecap="round"/>
+  <path d="M835 225 L905 210" stroke="#355266" stroke-width="8" stroke-linecap="round"/>
+  <path d="M835 325 L905 380" stroke="#355266" stroke-width="8" stroke-linecap="round"/>
+  <path d="M1010 270 L960 470" stroke="#355266" stroke-width="8" stroke-linecap="round"/>
+  <path d="M710 390 L710 470" stroke="#355266" stroke-width="8" stroke-linecap="round"/>
+  <path d="M585 530 L520 530 L520 320" stroke="#355266" stroke-width="8" fill="none" stroke-linecap="round"/>
+
+  <text x="840" y="145" font-family="Segoe UI, Arial" font-size="16" fill="#355266">hit</text>
+  <text x="838" y="350" font-family="Segoe UI, Arial" font-size="16" fill="#355266">miss</text>
+  <text x="540" y="508" font-family="Segoe UI, Arial" font-size="16" fill="#355266">restore</text>
+</svg>
+

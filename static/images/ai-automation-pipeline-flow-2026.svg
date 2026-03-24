@@ -1,0 +1,161 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" width="1200" height="760" role="img" aria-labelledby="title desc">
+  <title id="title">AI 자동화 수익화 운영 플로우</title>
+  <desc id="desc">고객 요청부터 KPI 개선까지 이어지는 AI 자동화 파이프라인 인포그래픽</desc>
+
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a1022"/>
+      <stop offset="45%" stop-color="#111b35"/>
+      <stop offset="100%" stop-color="#18284c"/>
+    </linearGradient>
+    <radialGradient id="glowA" cx="22%" cy="8%" r="38%">
+      <stop offset="0%" stop-color="#6366f1" stop-opacity="0.34"/>
+      <stop offset="100%" stop-color="#6366f1" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowB" cx="88%" cy="16%" r="44%">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.24"/>
+      <stop offset="100%" stop-color="#06b6d4" stop-opacity="0"/>
+    </radialGradient>
+
+    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1f2f55"/>
+      <stop offset="100%" stop-color="#162340"/>
+    </linearGradient>
+    <linearGradient id="aiCard" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2f2f8f"/>
+      <stop offset="100%" stop-color="#22327d"/>
+    </linearGradient>
+    <linearGradient id="hitlCard" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#17653a"/>
+      <stop offset="100%" stop-color="#14532d"/>
+    </linearGradient>
+    <linearGradient id="deliveryCard" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#9a3412"/>
+      <stop offset="100%" stop-color="#7c2d12"/>
+    </linearGradient>
+    <linearGradient id="warnCard" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#7f1d1d"/>
+      <stop offset="100%" stop-color="#dc2626"/>
+    </linearGradient>
+    <linearGradient id="loopCard" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0c4a6e"/>
+      <stop offset="100%" stop-color="#0e7490"/>
+    </linearGradient>
+
+    <filter id="shadow" x="-25%" y="-25%" width="150%" height="150%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-opacity="0.30" flood-color="#020617"/>
+    </filter>
+
+    <marker id="arrowMain" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 Z" fill="#a3b4cc"/>
+    </marker>
+    <marker id="arrowWarn" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 Z" fill="#f87171"/>
+    </marker>
+    <marker id="arrowLoop" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 Z" fill="#22d3ee"/>
+    </marker>
+
+    <pattern id="grid" width="22" height="22" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#334155" opacity="0.26"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="760" fill="url(#bg)"/>
+  <rect width="1200" height="760" fill="url(#grid)"/>
+  <rect width="1200" height="760" fill="url(#glowA)"/>
+  <rect width="1200" height="760" fill="url(#glowB)"/>
+
+  <text x="70" y="62" fill="#ecf3ff" font-family="Segoe UI, Arial" font-size="42" font-weight="800">AI 자동화 수익화 운영 플로우</text>
+  <text x="70" y="92" fill="#9fb3d9" font-family="Segoe UI, Arial" font-size="16">요청 처리 · 품질 게이트 · 납품 · KPI 루프를 한 장으로 정리한 운영 인포그래픽</text>
+  <rect x="70" y="112" width="460" height="8" rx="4" fill="#22d3ee"/>
+
+  <!-- Cards -->
+  <g filter="url(#shadow)">
+    <rect x="330" y="150" width="500" height="74" rx="18" fill="url(#card)" stroke="#3b4e76"/>
+    <circle cx="370" cy="187" r="16" fill="#324766"/><text x="370" y="192" text-anchor="middle" fill="#c7d5f5" font-family="Segoe UI, Arial" font-size="13" font-weight="700">1</text>
+    <text x="402" y="181" fill="#e6eeff" font-size="30" font-family="Segoe UI Symbol, Segoe UI Emoji">📥</text>
+    <text x="438" y="183" fill="#f1f5ff" font-size="28" font-family="Segoe UI, Arial" font-weight="700">고객 요청 수집</text>
+    <text x="438" y="206" fill="#9db1d5" font-size="14" font-family="Segoe UI, Arial">요구사항, 채널, 우선순위를 구조화</text>
+  </g>
+
+  <line x1="580" y1="224" x2="580" y2="246" stroke="#a3b4cc" stroke-width="3" marker-end="url(#arrowMain)"/>
+
+  <g filter="url(#shadow)">
+    <rect x="330" y="246" width="500" height="74" rx="18" fill="url(#card)" stroke="#3b4e76"/>
+    <circle cx="370" cy="283" r="16" fill="#324766"/><text x="370" y="288" text-anchor="middle" fill="#c7d5f5" font-family="Segoe UI, Arial" font-size="13" font-weight="700">2</text>
+    <text x="402" y="277" fill="#e6eeff" font-size="30" font-family="Segoe UI Symbol, Segoe UI Emoji">🧹</text>
+    <text x="438" y="279" fill="#f1f5ff" font-size="28" font-family="Segoe UI, Arial" font-weight="700">입력 정제 &amp; 검증</text>
+    <text x="438" y="302" fill="#9db1d5" font-size="14" font-family="Segoe UI, Arial">누락/형식 오류를 사전 차단</text>
+  </g>
+
+  <!-- warning branch -->
+  <path d="M 830 282 L 955 282 L 955 336" fill="none" stroke="#f87171" stroke-width="3" marker-end="url(#arrowWarn)"/>
+  <text x="968" y="278" fill="#fca5a5" font-size="12" font-family="Segoe UI, Arial" font-weight="700">검증 실패</text>
+  <g filter="url(#shadow)">
+    <rect x="870" y="336" width="280" height="64" rx="14" fill="url(#warnCard)" stroke="#fecaca" stroke-opacity="0.35"/>
+    <text x="1010" y="365" text-anchor="middle" fill="#ffe5e5" font-size="19" font-family="Segoe UI, Arial" font-weight="700">수동 검토 큐</text>
+    <text x="1010" y="385" text-anchor="middle" fill="#fecaca" font-size="12" font-family="Segoe UI, Arial">담당자 확인 후 재투입</text>
+  </g>
+
+  <line x1="580" y1="320" x2="580" y2="342" stroke="#a3b4cc" stroke-width="3" marker-end="url(#arrowMain)"/>
+
+  <g filter="url(#shadow)">
+    <rect x="305" y="342" width="560" height="86" rx="20" fill="url(#aiCard)" stroke="#7c8dff" stroke-opacity="0.45"/>
+    <circle cx="350" cy="385" r="18" fill="#3a3b92"/><text x="350" y="391" text-anchor="middle" fill="#d1d8ff" font-size="14" font-family="Segoe UI, Arial" font-weight="700">3</text>
+    <text x="386" y="376" fill="#e8eaff" font-size="30" font-family="Segoe UI Symbol, Segoe UI Emoji">⚙️</text>
+    <text x="426" y="378" fill="#f1f4ff" font-size="32" font-family="Segoe UI, Arial" font-weight="700">AI 처리 엔진</text>
+    <text x="426" y="402" fill="#bdc8ff" font-size="14" font-family="Segoe UI, Arial">프롬프트 · 도구 호출 · 생성 · 점수화</text>
+  </g>
+
+  <!-- loop branch no overlap -->
+  <path d="M 865 385 L 1090 385 L 1090 468" fill="none" stroke="#22d3ee" stroke-width="3" marker-end="url(#arrowLoop)"/>
+  <text x="1100" y="380" fill="#67e8f9" font-size="12" font-family="Segoe UI, Arial" font-weight="700">품질 점수 &lt; 기준</text>
+
+  <g filter="url(#shadow)">
+    <rect x="925" y="468" width="230" height="64" rx="14" fill="url(#loopCard)" stroke="#67e8f9" stroke-opacity="0.45"/>
+    <text x="1040" y="496" text-anchor="middle" fill="#d7f9ff" font-size="19" font-family="Segoe UI, Arial" font-weight="700">재프롬프트/재시도</text>
+    <text x="1040" y="516" text-anchor="middle" fill="#a5f3fc" font-size="12" font-family="Segoe UI, Arial">자동 보정 루프</text>
+  </g>
+
+  <path d="M 1040 468 L 1040 434 L 910 434 L 910 405 L 875 405" fill="none" stroke="#22d3ee" stroke-width="3" stroke-dasharray="8 6" marker-end="url(#arrowLoop)"/>
+
+  <line x1="580" y1="428" x2="580" y2="452" stroke="#a3b4cc" stroke-width="3" marker-end="url(#arrowMain)"/>
+
+  <g filter="url(#shadow)">
+    <rect x="330" y="452" width="500" height="74" rx="18" fill="url(#hitlCard)" stroke="#5be28d" stroke-opacity="0.45"/>
+    <circle cx="370" cy="489" r="16" fill="#1f7a47"/><text x="370" y="495" text-anchor="middle" fill="#b9f6cf" font-size="13" font-family="Segoe UI, Arial" font-weight="700">4</text>
+    <text x="402" y="483" fill="#e6fff0" font-size="30" font-family="Segoe UI Symbol, Segoe UI Emoji">✅</text>
+    <text x="438" y="485" fill="#f0fff5" font-size="28" font-family="Segoe UI, Arial" font-weight="700">사람 검수 (HITL)</text>
+    <text x="438" y="508" fill="#c6f7da" font-size="14" font-family="Segoe UI, Arial">정책/브랜드/법무 기준 최종 확인</text>
+  </g>
+
+  <line x1="580" y1="526" x2="580" y2="548" stroke="#a3b4cc" stroke-width="3" marker-end="url(#arrowMain)"/>
+
+  <g filter="url(#shadow)">
+    <rect x="330" y="548" width="500" height="74" rx="18" fill="url(#deliveryCard)" stroke="#fdba74" stroke-opacity="0.45"/>
+    <circle cx="370" cy="585" r="16" fill="#b45309"/><text x="370" y="591" text-anchor="middle" fill="#fde8c7" font-size="13" font-family="Segoe UI, Arial" font-weight="700">5</text>
+    <text x="402" y="579" fill="#fff0dd" font-size="30" font-family="Segoe UI Symbol, Segoe UI Emoji">🚀</text>
+    <text x="438" y="581" fill="#fff6ea" font-size="28" font-family="Segoe UI, Arial" font-weight="700">납품 · 게시 · 전송</text>
+    <text x="438" y="604" fill="#fed7aa" font-size="14" font-family="Segoe UI, Arial">콘텐츠 배포 및 고객 전달 자동화</text>
+  </g>
+
+  <line x1="580" y1="622" x2="580" y2="644" stroke="#a3b4cc" stroke-width="3" marker-end="url(#arrowMain)"/>
+
+  <g filter="url(#shadow)">
+    <rect x="250" y="644" width="680" height="86" rx="20" fill="#0f172a" stroke="#4b5e83" stroke-width="1.4"/>
+    <text x="590" y="680" text-anchor="middle" fill="#f3f8ff" font-size="34" font-family="Segoe UI, Arial" font-weight="800">성과 로그 저장 → KPI 대시보드 → 다음 개선</text>
+    <text x="590" y="705" text-anchor="middle" fill="#9fb3d9" font-size="13" font-family="Segoe UI, Arial">전환율, 재작업률, 리드타임, 고객당 공헌이익을 주간 단위로 추적</text>
+  </g>
+
+  <path d="M 208 688 C 52 668 52 188 330 172" fill="none" stroke="#607498" stroke-opacity="0.68" stroke-width="2" stroke-dasharray="7 7"/>
+  <text x="80" y="430" fill="#90a4c8" font-size="12" font-family="Segoe UI, Arial" transform="rotate(-90 80,430)">Continuous Improvement Loop</text>
+
+  <g filter="url(#shadow)">
+    <rect x="40" y="640" width="180" height="90" rx="14" fill="#0b1327" stroke="#334155"/>
+  </g>
+  <text x="56" y="664" fill="#d6deef" font-size="13" font-family="Segoe UI, Arial" font-weight="700">Legend</text>
+  <rect x="56" y="676" width="11" height="11" rx="2" fill="#6366f1"/><text x="74" y="686" fill="#99acd0" font-size="11" font-family="Segoe UI, Arial">핵심 처리</text>
+  <rect x="56" y="694" width="11" height="11" rx="2" fill="#ef4444"/><text x="74" y="704" fill="#99acd0" font-size="11" font-family="Segoe UI, Arial">예외 처리</text>
+  <rect x="56" y="712" width="11" height="11" rx="2" fill="#22d3ee"/><text x="74" y="722" fill="#99acd0" font-size="11" font-family="Segoe UI, Arial">자동 보정 루프</text>
+</svg>

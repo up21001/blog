@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">AI Sandbox and Inference Platforms Comparison 2026</title>
+  <desc id="desc">Comparison matrix for E2B, Daytona, Modal, Together AI, and Replicate.</desc>
+  <rect width="1200" height="675" fill="#f8fafc"/>
+  <text x="70" y="84" font-size="38" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#0f172a">AI Sandbox and Inference Platforms</text>
+  <text x="70" y="120" font-size="20" font-family="Segoe UI, Arial, sans-serif" fill="#475569">Different products solve different layers: sandbox, compute, inference, and model catalog</text>
+  <rect x="70" y="165" width="1060" height="420" rx="24" fill="#fff" stroke="#cbd5e1"/>
+  <rect x="90" y="190" width="180" height="50" rx="14" fill="#eef2ff"/><text x="140" y="221" font-size="20" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#3730a3">Product</text>
+  <rect x="270" y="190" width="160" height="50" rx="14" fill="#eef2ff"/><text x="308" y="221" font-size="20" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#3730a3">Layer</text>
+  <rect x="430" y="190" width="160" height="50" rx="14" fill="#eef2ff"/><text x="465" y="221" font-size="20" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#3730a3">Strength</text>
+  <rect x="590" y="190" width="160" height="50" rx="14" fill="#eef2ff"/><text x="623" y="221" font-size="20" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#3730a3">Primary focus</text>
+  <rect x="750" y="190" width="160" height="50" rx="14" fill="#eef2ff"/><text x="790" y="221" font-size="20" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#3730a3">Best for</text>
+  <rect x="910" y="190" width="200" height="50" rx="14" fill="#eef2ff"/><text x="964" y="221" font-size="20" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#3730a3">Notes</text>
+  <g font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#0f172a">
+    <rect x="90" y="255" width="180" height="58" rx="12" fill="#fff7ed" stroke="#fed7aa"/><text x="145" y="290" font-weight="700">E2B</text>
+    <rect x="270" y="255" width="160" height="58" rx="12" fill="#fff7ed" stroke="#fed7aa"/><text x="321" y="290">Sandbox</text>
+    <rect x="430" y="255" width="160" height="58" rx="12" fill="#fff7ed" stroke="#fed7aa"/><text x="467" y="290">Isolated VM</text>
+    <rect x="590" y="255" width="160" height="58" rx="12" fill="#fff7ed" stroke="#fed7aa"/><text x="624" y="290">Code exec</text>
+    <rect x="750" y="255" width="160" height="58" rx="12" fill="#fff7ed" stroke="#fed7aa"/><text x="790" y="290">Agents</text>
+    <rect x="910" y="255" width="200" height="58" rx="12" fill="#fff7ed" stroke="#fed7aa"/><text x="944" y="290">Desktop sandbox</text>
+    <rect x="90" y="323" width="180" height="58" rx="12" fill="#eff6ff" stroke="#bfdbfe"/><text x="136" y="358" font-weight="700">Daytona</text>
+    <rect x="270" y="323" width="160" height="58" rx="12" fill="#eff6ff" stroke="#bfdbfe"/><text x="321" y="358">Sandbox</text>
+    <rect x="430" y="323" width="160" height="58" rx="12" fill="#eff6ff" stroke="#bfdbfe"/><text x="453" y="358">SDK/CLI/API</text>
+    <rect x="590" y="323" width="160" height="58" rx="12" fill="#eff6ff" stroke="#bfdbfe"/><text x="624" y="358">Elastic infra</text>
+    <rect x="750" y="323" width="160" height="58" rx="12" fill="#eff6ff" stroke="#bfdbfe"/><text x="784" y="358">AI code</text>
+    <rect x="910" y="323" width="200" height="58" rx="12" fill="#eff6ff" stroke="#bfdbfe"/><text x="947" y="358">Composable computers</text>
+    <rect x="90" y="391" width="180" height="58" rx="12" fill="#f0fdf4" stroke="#bbf7d0"/><text x="140" y="426" font-weight="700">Modal</text>
+    <rect x="270" y="391" width="160" height="58" rx="12" fill="#f0fdf4" stroke="#bbf7d0"/><text x="321" y="426">Compute</text>
+    <rect x="430" y="391" width="160" height="58" rx="12" fill="#f0fdf4" stroke="#bbf7d0"/><text x="468" y="426">GPU scale</text>
+    <rect x="590" y="391" width="160" height="58" rx="12" fill="#f0fdf4" stroke="#bbf7d0"/><text x="624" y="426">Inference</text>
+    <rect x="750" y="391" width="160" height="58" rx="12" fill="#f0fdf4" stroke="#bbf7d0"/><text x="784" y="426">Batch/train</text>
+    <rect x="910" y="391" width="200" height="58" rx="12" fill="#f0fdf4" stroke="#bbf7d0"/><text x="953" y="426">No YAML infra</text>
+    <rect x="90" y="459" width="180" height="58" rx="12" fill="#faf5ff" stroke="#e9d5ff"/><text x="126" y="494" font-weight="700">Together AI</text>
+    <rect x="270" y="459" width="160" height="58" rx="12" fill="#faf5ff" stroke="#e9d5ff"/><text x="321" y="494">Model API</text>
+    <rect x="430" y="459" width="160" height="58" rx="12" fill="#faf5ff" stroke="#e9d5ff"/><text x="458" y="494">OpenAI compat</text>
+    <rect x="590" y="459" width="160" height="58" rx="12" fill="#faf5ff" stroke="#e9d5ff"/><text x="624" y="494">Open models</text>
+    <rect x="750" y="459" width="160" height="58" rx="12" fill="#faf5ff" stroke="#e9d5ff"/><text x="790" y="494">Fine-tune</text>
+    <rect x="910" y="459" width="200" height="58" rx="12" fill="#faf5ff" stroke="#e9d5ff"/><text x="962" y="494">Dedicated endpoint</text>
+    <rect x="90" y="527" width="180" height="58" rx="12" fill="#fff1f2" stroke="#fecdd3"/><text x="129" y="562" font-weight="700">Replicate</text>
+    <rect x="270" y="527" width="160" height="58" rx="12" fill="#fff1f2" stroke="#fecdd3"/><text x="321" y="562">Model API</text>
+    <rect x="430" y="527" width="160" height="58" rx="12" fill="#fff1f2" stroke="#fecdd3"/><text x="467" y="562">Official models</text>
+    <rect x="590" y="527" width="160" height="58" rx="12" fill="#fff1f2" stroke="#fecdd3"/><text x="625" y="562">Webhooks</text>
+    <rect x="750" y="527" width="160" height="58" rx="12" fill="#fff1f2" stroke="#fecdd3"/><text x="787" y="562">Deploy models</text>
+    <rect x="910" y="527" width="200" height="58" rx="12" fill="#fff1f2" stroke="#fecdd3"/><text x="960" y="562">Predictable pricing</text>
+  </g>
+</svg>

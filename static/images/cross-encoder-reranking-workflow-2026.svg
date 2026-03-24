@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#f8fafc"/>
+  <text x="70" y="90" fill="#0f172a" font-family="Arial, sans-serif" font-size="42" font-weight="700">Cross-Encoder Reranking</text>
+  <rect x="80" y="190" width="230" height="100" rx="18" fill="#dbeafe" stroke="#60a5fa"/>
+  <text x="195" y="232" text-anchor="middle" fill="#111827" font-family="Arial, sans-serif" font-size="20">Query + doc pair</text>
+  <text x="195" y="260" text-anchor="middle" fill="#475569" font-family="Arial, sans-serif" font-size="16">direct scoring</text>
+  <rect x="355" y="190" width="230" height="100" rx="18" fill="#e9d5ff" stroke="#a855f7"/>
+  <text x="470" y="232" text-anchor="middle" fill="#111827" font-family="Arial, sans-serif" font-size="20">Cross-encoder</text>
+  <text x="470" y="260" text-anchor="middle" fill="#475569" font-family="Arial, sans-serif" font-size="16">relevance score</text>
+  <rect x="630" y="190" width="230" height="100" rx="18" fill="#dcfce7" stroke="#34d399"/>
+  <text x="745" y="232" text-anchor="middle" fill="#111827" font-family="Arial, sans-serif" font-size="20">Sort candidates</text>
+  <text x="745" y="260" text-anchor="middle" fill="#475569" font-family="Arial, sans-serif" font-size="16">top-k ranking</text>
+  <rect x="905" y="190" width="220" height="100" rx="18" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="1015" y="232" text-anchor="middle" fill="#111827" font-family="Arial, sans-serif" font-size="20">LLM answer</text>
+  <text x="1015" y="260" text-anchor="middle" fill="#475569" font-family="Arial, sans-serif" font-size="16">best context first</text>
+  <line x1="310" y1="240" x2="355" y2="240" stroke="#111827" stroke-width="4"/>
+  <line x1="585" y1="240" x2="630" y2="240" stroke="#111827" stroke-width="4"/>
+  <line x1="860" y1="240" x2="905" y2="240" stroke="#111827" stroke-width="4"/>
+  <rect x="70" y="350" width="1060" height="180" rx="22" fill="#111827"/>
+  <text x="100" y="395" fill="#f8fafc" font-family="Arial, sans-serif" font-size="22" font-weight="700">Best fit</text>
+  <text x="100" y="435" fill="#cbd5e1" font-family="Arial, sans-serif" font-size="18">high-ambiguity queries, domain-heavy corpora, and precision-sensitive tasks</text>
+  <text x="100" y="465" fill="#cbd5e1" font-family="Arial, sans-serif" font-size="18">usually applied only to top candidates because latency scales linearly</text>
+</svg>
+

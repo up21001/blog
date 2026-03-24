@@ -1,0 +1,82 @@
+<svg width="800" height="450" viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg" font-family="'Malgun Gothic', sans-serif">
+  <!-- Background -->
+  <rect width="800" height="450" fill="#F8FAFC" rx="12"/>
+  <!-- Title -->
+  <text x="400" y="40" text-anchor="middle" font-size="20" font-weight="bold" fill="#1E293B">Next.js 15 App Router 아키텍처</text>
+
+  <!-- Browser / Client -->
+  <rect x="30" y="70" width="160" height="80" rx="8" fill="#DBEAFE" stroke="#3B82F6" stroke-width="2"/>
+  <text x="110" y="105" text-anchor="middle" font-size="13" font-weight="bold" fill="#1E40AF">브라우저 (Client)</text>
+  <text x="110" y="125" text-anchor="middle" font-size="11" fill="#3B82F6">Client Components</text>
+  <text x="110" y="140" text-anchor="middle" font-size="11" fill="#3B82F6">Hydration</text>
+
+  <!-- Arrow 1 -->
+  <line x1="190" y1="110" x2="240" y2="110" stroke="#6B7280" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Next.js Server -->
+  <rect x="240" y="60" width="200" height="260" rx="8" fill="#EDE9FE" stroke="#8B5CF6" stroke-width="2"/>
+  <text x="340" y="90" text-anchor="middle" font-size="13" font-weight="bold" fill="#5B21B6">Next.js 15 서버</text>
+
+  <rect x="258" y="105" width="164" height="40" rx="6" fill="#DDD6FE" stroke="#7C3AED" stroke-width="1.5"/>
+  <text x="340" y="120" text-anchor="middle" font-size="11" font-weight="bold" fill="#5B21B6">App Router</text>
+  <text x="340" y="136" text-anchor="middle" font-size="10" fill="#6D28D9">app/ 디렉토리 기반 라우팅</text>
+
+  <rect x="258" y="155" width="164" height="40" rx="6" fill="#DDD6FE" stroke="#7C3AED" stroke-width="1.5"/>
+  <text x="340" y="170" text-anchor="middle" font-size="11" font-weight="bold" fill="#5B21B6">Server Components</text>
+  <text x="340" y="186" text-anchor="middle" font-size="10" fill="#6D28D9">DB 직접 접근 가능</text>
+
+  <rect x="258" y="205" width="164" height="40" rx="6" fill="#DDD6FE" stroke="#7C3AED" stroke-width="1.5"/>
+  <text x="340" y="220" text-anchor="middle" font-size="11" font-weight="bold" fill="#5B21B6">Route Handlers</text>
+  <text x="340" y="236" text-anchor="middle" font-size="10" fill="#6D28D9">app/api/ REST / Edge</text>
+
+  <rect x="258" y="255" width="164" height="40" rx="6" fill="#DDD6FE" stroke="#7C3AED" stroke-width="1.5"/>
+  <text x="340" y="270" text-anchor="middle" font-size="11" font-weight="bold" fill="#5B21B6">Middleware</text>
+  <text x="340" y="286" text-anchor="middle" font-size="10" fill="#6D28D9">인증 / 리다이렉트</text>
+
+  <!-- Arrow 2 -->
+  <line x1="440" y1="175" x2="490" y2="175" stroke="#6B7280" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Data Sources -->
+  <rect x="490" y="70" width="160" height="80" rx="8" fill="#D1FAE5" stroke="#10B981" stroke-width="2"/>
+  <text x="570" y="103" text-anchor="middle" font-size="13" font-weight="bold" fill="#065F46">데이터 소스</text>
+  <text x="570" y="120" text-anchor="middle" font-size="11" fill="#047857">PostgreSQL / MySQL</text>
+  <text x="570" y="136" text-anchor="middle" font-size="11" fill="#047857">REST API / GraphQL</text>
+
+  <!-- Arrow 3 -->
+  <line x1="490" y1="240" x2="490" y2="270" stroke="#6B7280" stroke-width="2"/>
+  <line x1="490" y1="270" x2="650" y2="270" stroke="#6B7280" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Vercel Deploy -->
+  <rect x="490" y="180" width="160" height="80" rx="8" fill="#FEF3C7" stroke="#F59E0B" stroke-width="2"/>
+  <text x="570" y="213" text-anchor="middle" font-size="13" font-weight="bold" fill="#92400E">Vercel 배포</text>
+  <text x="570" y="230" text-anchor="middle" font-size="11" fill="#B45309">Edge Functions</text>
+  <text x="570" y="246" text-anchor="middle" font-size="11" fill="#B45309">CDN + ISR 캐싱</text>
+
+  <!-- Cache Layer -->
+  <rect x="490" y="290" width="160" height="60" rx="8" fill="#F3F4F6" stroke="#6B7280" stroke-width="2"/>
+  <text x="570" y="318" text-anchor="middle" font-size="12" font-weight="bold" fill="#374151">캐시 전략</text>
+  <text x="570" y="336" text-anchor="middle" font-size="10" fill="#6B7280">fetch cache / revalidate</text>
+
+  <!-- File structure -->
+  <rect x="30" y="190" width="190" height="130" rx="8" fill="#F3F4F6" stroke="#6B7280" stroke-width="2"/>
+  <text x="125" y="212" text-anchor="middle" font-size="12" font-weight="bold" fill="#374151">디렉토리 구조</text>
+  <text x="45" y="232" font-size="10" fill="#4B5563">app/</text>
+  <text x="55" y="248" font-size="10" fill="#4B5563">├─ layout.tsx</text>
+  <text x="55" y="264" font-size="10" fill="#4B5563">├─ page.tsx</text>
+  <text x="55" y="280" font-size="10" fill="#4B5563">├─ loading.tsx</text>
+  <text x="55" y="296" font-size="10" fill="#4B5563">└─ api/route.ts</text>
+
+  <!-- Bottom labels -->
+  <rect x="30" y="370" width="740" height="60" rx="8" fill="#DBEAFE" stroke="#3B82F6" stroke-width="1.5"/>
+  <text x="400" y="395" text-anchor="middle" font-size="12" font-weight="bold" fill="#1E40AF">Next.js 15 핵심 개선사항</text>
+  <text x="200" y="415" text-anchor="middle" font-size="11" fill="#1D4ED8">Turbopack 기본 활성화</text>
+  <text x="400" y="415" text-anchor="middle" font-size="11" fill="#1D4ED8">React 19 완전 지원</text>
+  <text x="600" y="415" text-anchor="middle" font-size="11" fill="#1D4ED8">fetch 캐싱 기본값 변경</text>
+
+  <!-- Arrow marker -->
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#6B7280"/>
+    </marker>
+  </defs>
+</svg>

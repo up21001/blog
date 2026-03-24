@@ -1,0 +1,98 @@
+<svg width="800" height="450" viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg" font-family="'Malgun Gothic', sans-serif">
+  <rect width="800" height="450" fill="#FAFAFA" rx="12"/>
+  <text x="400" y="38" text-anchor="middle" font-size="20" font-weight="bold" fill="#1E293B">Streamlit AI 앱 아키텍처</text>
+
+  <!-- Browser -->
+  <rect x="30" y="100" width="150" height="260" fill="#EDE9FE" stroke="#8B5CF6" stroke-width="2" rx="10"/>
+  <text x="105" y="128" text-anchor="middle" font-size="13" font-weight="bold" fill="#5B21B6">브라우저</text>
+  <rect x="45" y="138" width="120" height="28" fill="white" stroke="#C4B5FD" rx="4"/>
+  <text x="105" y="157" text-anchor="middle" font-size="10" fill="#6D28D9">파일 업로드 위젯</text>
+  <rect x="45" y="174" width="120" height="28" fill="white" stroke="#C4B5FD" rx="4"/>
+  <text x="105" y="193" text-anchor="middle" font-size="10" fill="#6D28D9">텍스트 입력 박스</text>
+  <rect x="45" y="210" width="120" height="28" fill="white" stroke="#C4B5FD" rx="4"/>
+  <text x="105" y="229" text-anchor="middle" font-size="10" fill="#6D28D9">슬라이더 / 버튼</text>
+  <rect x="45" y="246" width="120" height="28" fill="white" stroke="#C4B5FD" rx="4"/>
+  <text x="105" y="265" text-anchor="middle" font-size="10" fill="#6D28D9">차트 / 테이블</text>
+  <rect x="45" y="282" width="120" height="28" fill="white" stroke="#C4B5FD" rx="4"/>
+  <text x="105" y="301" text-anchor="middle" font-size="10" fill="#6D28D9">AI 응답 스트림</text>
+  <text x="105" y="338" text-anchor="middle" font-size="10" fill="#7C3AED">WebSocket 통신</text>
+  <text x="105" y="354" text-anchor="middle" font-size="9" fill="#A78BFA">자동 재실행 모델</text>
+
+  <!-- Arrows -->
+  <line x1="182" y1="230" x2="225" y2="230" stroke="#8B5CF6" stroke-width="2" marker-end="url(#sv1)"/>
+  <line x1="225" y1="240" x2="182" y2="240" stroke="#10B981" stroke-width="2" marker-end="url(#sv2)"/>
+
+  <!-- Streamlit Server -->
+  <rect x="227" y="100" width="180" height="260" fill="#DBEAFE" stroke="#3B82F6" stroke-width="2" rx="10"/>
+  <text x="317" y="128" text-anchor="middle" font-size="13" font-weight="bold" fill="#1E40AF">Streamlit 서버</text>
+  <rect x="242" y="140" width="150" height="32" fill="white" stroke="#93C5FD" rx="4"/>
+  <text x="317" y="158" text-anchor="middle" font-size="11" font-weight="bold" fill="#1D4ED8">app.py 실행</text>
+  <text x="317" y="172" text-anchor="middle" font-size="9" fill="#3B82F6">위에서 아래로 순차 실행</text>
+  <rect x="242" y="180" width="150" height="28" fill="#EFF6FF" stroke="#BFDBFE" rx="4"/>
+  <text x="317" y="199" text-anchor="middle" font-size="10" fill="#1D4ED8">Session State 관리</text>
+  <rect x="242" y="216" width="150" height="28" fill="#EFF6FF" stroke="#BFDBFE" rx="4"/>
+  <text x="317" y="235" text-anchor="middle" font-size="10" fill="#1D4ED8">캐시 (st.cache_data)</text>
+  <rect x="242" y="252" width="150" height="28" fill="#EFF6FF" stroke="#BFDBFE" rx="4"/>
+  <text x="317" y="271" text-anchor="middle" font-size="10" fill="#1D4ED8">컴포넌트 렌더링</text>
+  <rect x="242" y="288" width="150" height="28" fill="#EFF6FF" stroke="#BFDBFE" rx="4"/>
+  <text x="317" y="307" text-anchor="middle" font-size="10" fill="#1D4ED8">st.write_stream()</text>
+  <text x="317" y="342" text-anchor="middle" font-size="10" fill="#60A5FA">Python 스크립트</text>
+  <text x="317" y="358" text-anchor="middle" font-size="9" fill="#93C5FD">순수 Python API</text>
+
+  <!-- Arrows to AI -->
+  <line x1="409" y1="200" x2="452" y2="200" stroke="#3B82F6" stroke-width="2" marker-end="url(#sv3)"/>
+  <line x1="452" y1="210" x2="409" y2="210" stroke="#F59E0B" stroke-width="2" marker-end="url(#sv4)"/>
+
+  <!-- AI / Data Layer -->
+  <rect x="454" y="100" width="180" height="260" fill="#D1FAE5" stroke="#10B981" stroke-width="2" rx="10"/>
+  <text x="544" y="128" text-anchor="middle" font-size="13" font-weight="bold" fill="#065F46">AI / 데이터 레이어</text>
+  <rect x="469" y="140" width="150" height="32" fill="white" stroke="#6EE7B7" rx="4"/>
+  <text x="544" y="158" text-anchor="middle" font-size="11" font-weight="bold" fill="#047857">LLM API 호출</text>
+  <text x="544" y="172" text-anchor="middle" font-size="9" fill="#10B981">OpenAI / Anthropic / Gemini</text>
+  <rect x="469" y="180" width="150" height="28" fill="#ECFDF5" stroke="#A7F3D0" rx="4"/>
+  <text x="544" y="199" text-anchor="middle" font-size="10" fill="#047857">Transformers 모델</text>
+  <rect x="469" y="216" width="150" height="28" fill="#ECFDF5" stroke="#A7F3D0" rx="4"/>
+  <text x="544" y="235" text-anchor="middle" font-size="10" fill="#047857">Pandas / Polars</text>
+  <rect x="469" y="252" width="150" height="28" fill="#ECFDF5" stroke="#A7F3D0" rx="4"/>
+  <text x="544" y="271" text-anchor="middle" font-size="10" fill="#047857">LangChain / LlamaIndex</text>
+  <rect x="469" y="288" width="150" height="28" fill="#ECFDF5" stroke="#A7F3D0" rx="4"/>
+  <text x="544" y="307" text-anchor="middle" font-size="10" fill="#047857">파일 처리 (PDF, CSV)</text>
+  <text x="544" y="342" text-anchor="middle" font-size="10" fill="#34D399">외부 서비스 / DB</text>
+  <text x="544" y="358" text-anchor="middle" font-size="9" fill="#6EE7B7">비즈니스 로직</text>
+
+  <!-- Deploy box -->
+  <rect x="670" y="140" width="110" height="180" fill="#FEF3C7" stroke="#F59E0B" stroke-width="2" rx="10"/>
+  <text x="725" y="165" text-anchor="middle" font-size="12" font-weight="bold" fill="#92400E">배포 옵션</text>
+  <rect x="682" y="175" width="86" height="24" fill="white" stroke="#FCD34D" rx="4"/>
+  <text x="725" y="191" text-anchor="middle" font-size="10" fill="#B45309">Streamlit Cloud</text>
+  <rect x="682" y="207" width="86" height="24" fill="white" stroke="#FCD34D" rx="4"/>
+  <text x="725" y="223" text-anchor="middle" font-size="10" fill="#B45309">Docker + 서버</text>
+  <rect x="682" y="239" width="86" height="24" fill="white" stroke="#FCD34D" rx="4"/>
+  <text x="725" y="255" text-anchor="middle" font-size="10" fill="#B45309">HuggingFace</text>
+  <rect x="682" y="271" width="86" height="24" fill="white" stroke="#FCD34D" rx="4"/>
+  <text x="725" y="287" text-anchor="middle" font-size="10" fill="#B45309">Railway / Render</text>
+  <line x1="636" y1="230" x2="668" y2="230" stroke="#F59E0B" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#sv5)"/>
+
+  <!-- Bottom bar -->
+  <rect x="30" y="382" width="740" height="44" fill="#ECFDF5" stroke="#6EE7B7" rx="8"/>
+  <text x="400" y="400" text-anchor="middle" font-size="12" font-weight="bold" fill="#065F46">핵심 장점: 순수 Python 코드만으로 대화형 웹 앱 제작 — HTML/JS/CSS 불필요</text>
+  <text x="400" y="418" text-anchor="middle" font-size="11" fill="#047857">위젯 클릭 → 전체 스크립트 재실행 → UI 자동 업데이트 (반응형 실행 모델)</text>
+
+  <defs>
+    <marker id="sv1" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#8B5CF6"/>
+    </marker>
+    <marker id="sv2" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#10B981"/>
+    </marker>
+    <marker id="sv3" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#3B82F6"/>
+    </marker>
+    <marker id="sv4" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#F59E0B"/>
+    </marker>
+    <marker id="sv5" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#F59E0B"/>
+    </marker>
+  </defs>
+</svg>

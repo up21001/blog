@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">MCP Server Deployment Architecture</title>
+  <desc id="desc">Architecture showing execution, secret, and gateway layers for deployment.</desc>
+  <rect width="1200" height="630" rx="36" fill="#121018"/>
+  <text x="64" y="88" fill="#f8f4fb" font-family="Inter, Arial, sans-serif" font-size="38" font-weight="700">MCP Server Deployment Architecture</text>
+  <text x="64" y="124" fill="#c2b7d3" font-family="Inter, Arial, sans-serif" font-size="19">Execution -> Secrets -> Gateway -> Rollout</text>
+  <g fill="#231f2f" stroke="#c7a7ff" stroke-width="2">
+    <rect x="70" y="210" width="220" height="140" rx="20"/>
+    <rect x="330" y="210" width="220" height="140" rx="20"/>
+    <rect x="590" y="210" width="220" height="140" rx="20"/>
+    <rect x="850" y="210" width="280" height="140" rx="20"/>
+  </g>
+  <g fill="#f8f4fb" font-family="Inter, Arial, sans-serif" font-size="23" font-weight="600">
+    <text x="112" y="252">Execution</text>
+    <text x="380" y="252">Secrets</text>
+    <text x="645" y="252">Gateway</text>
+    <text x="896" y="252">Rollout</text>
+  </g>
+  <g fill="#c2b7d3" font-family="Inter, Arial, sans-serif" font-size="17">
+    <text x="98" y="286">Container or edge</text>
+    <text x="364" y="286">Env and auth</text>
+    <text x="620" y="286">Policy and audit</text>
+    <text x="888" y="286">Pin versions and rollback</text>
+  </g>
+  <g stroke="#c7a7ff" stroke-width="5" fill="none" stroke-linecap="round">
+    <path d="M290 280 H320"/>
+    <path d="M550 280 H580"/>
+    <path d="M810 280 H840"/>
+  </g>
+</svg>

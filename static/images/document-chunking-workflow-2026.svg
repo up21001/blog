@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#08111f"/>
+      <stop offset="1" stop-color="#1a2740"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="120" y1="180" x2="1080" y2="180" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#f59e0b"/>
+      <stop offset="1" stop-color="#38bdf8"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" rx="32" fill="url(#bg)"/>
+  <text x="70" y="96" fill="#e2e8f0" font-family="Arial, Helvetica, sans-serif" font-size="52" font-weight="700">Document Chunking</text>
+  <text x="70" y="138" fill="#fbbf24" font-family="Arial, Helvetica, sans-serif" font-size="22">fixed length - semantic - hierarchical</text>
+  <rect x="70" y="220" width="180" height="110" rx="20" fill="#1f2937" stroke="#f59e0b" stroke-width="2"/>
+  <rect x="285" y="220" width="180" height="110" rx="20" fill="#1f2937" stroke="#f59e0b" stroke-width="2"/>
+  <rect x="500" y="220" width="180" height="110" rx="20" fill="#1f2937" stroke="#f59e0b" stroke-width="2"/>
+  <rect x="715" y="220" width="180" height="110" rx="20" fill="#1f2937" stroke="#f59e0b" stroke-width="2"/>
+  <rect x="930" y="220" width="200" height="110" rx="20" fill="#12344d" stroke="#38bdf8" stroke-width="2"/>
+  <text x="160" y="262" text-anchor="middle" fill="#fff" font-family="Arial" font-size="24" font-weight="700">Parse</text>
+  <text x="160" y="292" text-anchor="middle" fill="#cbd5e1" font-family="Arial" font-size="16">structure</text>
+  <text x="375" y="262" text-anchor="middle" fill="#fff" font-family="Arial" font-size="24" font-weight="700">Select</text>
+  <text x="375" y="292" text-anchor="middle" fill="#cbd5e1" font-family="Arial" font-size="16">strategy</text>
+  <text x="590" y="262" text-anchor="middle" fill="#fff" font-family="Arial" font-size="24" font-weight="700">Split</text>
+  <text x="590" y="292" text-anchor="middle" fill="#cbd5e1" font-family="Arial" font-size="16">chunk + overlap</text>
+  <text x="805" y="262" text-anchor="middle" fill="#fff" font-family="Arial" font-size="24" font-weight="700">Attach</text>
+  <text x="805" y="292" text-anchor="middle" fill="#cbd5e1" font-family="Arial" font-size="16">metadata</text>
+  <text x="1030" y="262" text-anchor="middle" fill="#fff" font-family="Arial" font-size="22" font-weight="700">Embed</text>
+  <text x="1030" y="292" text-anchor="middle" fill="#bfdbfe" font-family="Arial" font-size="16">ready for retrieval</text>
+  <path d="M250 275 H275" stroke="url(#accent)" stroke-width="6" stroke-linecap="round"/>
+  <path d="M465 275 H490" stroke="url(#accent)" stroke-width="6" stroke-linecap="round"/>
+  <path d="M680 275 H705" stroke="url(#accent)" stroke-width="6" stroke-linecap="round"/>
+  <path d="M895 275 H920" stroke="url(#accent)" stroke-width="6" stroke-linecap="round"/>
+  <text x="70" y="400" fill="#dbeafe" font-family="Arial" font-size="26" font-weight="700">Chunking is about preserving meaning, not just shortening text.</text>
+  <text x="70" y="442" fill="#cbd5e1" font-family="Arial" font-size="18">Good splits keep titles, sections, and code blocks aligned with retrieval boundaries.</text>
+</svg>
+

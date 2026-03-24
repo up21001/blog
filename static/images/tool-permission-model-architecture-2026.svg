@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" rx="36" fill="#0f172a"/>
+  <text x="70" y="92" fill="#e2e8f0" font-size="42" font-family="Arial" font-weight="700">Permission Architecture</text>
+  <rect x="90" y="190" width="220" height="120" rx="18" fill="#111827" stroke="#334155"/>
+  <text x="200" y="240" fill="#f8fafc" text-anchor="middle" font-size="28" font-family="Arial" font-weight="700">Agent</text>
+  <text x="200" y="272" fill="#cbd5e1" text-anchor="middle" font-size="18" font-family="Arial">request tool call</text>
+  <rect x="360" y="190" width="220" height="120" rx="18" fill="#111827" stroke="#38bdf8" stroke-width="2"/>
+  <text x="470" y="240" fill="#f8fafc" text-anchor="middle" font-size="28" font-family="Arial" font-weight="700">Policy Engine</text>
+  <text x="470" y="272" fill="#cbd5e1" text-anchor="middle" font-size="18" font-family="Arial">role + context + risk</text>
+  <rect x="630" y="190" width="220" height="120" rx="18" fill="#111827" stroke="#334155"/>
+  <text x="740" y="240" fill="#f8fafc" text-anchor="middle" font-size="28" font-family="Arial" font-weight="700">Approval UI</text>
+  <text x="740" y="272" fill="#cbd5e1" text-anchor="middle" font-size="18" font-family="Arial">human decision</text>
+  <rect x="900" y="190" width="220" height="120" rx="18" fill="#111827" stroke="#22c55e" stroke-width="2"/>
+  <text x="1010" y="240" fill="#f8fafc" text-anchor="middle" font-size="28" font-family="Arial" font-weight="700">Tool Runtime</text>
+  <text x="1010" y="272" fill="#cbd5e1" text-anchor="middle" font-size="18" font-family="Arial">scoped execution</text>
+  <path d="M310 250 L350 250" stroke="#38bdf8" stroke-width="6" stroke-linecap="round"/>
+  <path d="M580 250 L620 250" stroke="#38bdf8" stroke-width="6" stroke-linecap="round"/>
+  <path d="M850 250 L890 250" stroke="#38bdf8" stroke-width="6" stroke-linecap="round"/>
+  <rect x="120" y="370" width="960" height="170" rx="24" fill="#111827" stroke="#334155"/>
+  <text x="600" y="420" fill="#f8fafc" text-anchor="middle" font-size="28" font-family="Arial" font-weight="700">Principle: deny by default, approve by policy</text>
+  <text x="600" y="458" fill="#cbd5e1" text-anchor="middle" font-size="20" font-family="Arial">log every decision, scope every token, isolate every sensitive action</text>
+  <text x="600" y="496" fill="#38bdf8" text-anchor="middle" font-size="18" font-family="Arial">least privilege for agent tools</text>
+</svg>
+

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#f8fafc"/>
+  <rect x="48" y="42" width="1104" height="546" rx="34" fill="#fff" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="82" y="106" font-size="40" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#1d4ed8">Model Routing Decision</text>
+  <rect x="88" y="232" width="180" height="112" rx="24" fill="#eff6ff" stroke="#60a5fa"/>
+  <text x="136" y="277" font-size="28" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#1e3a8a">Request</text>
+  <text x="122" y="309" font-size="18" font-family="Segoe UI, Arial, sans-serif" fill="#1d4ed8">task, budget, SLA</text>
+  <rect x="342" y="186" width="220" height="220" rx="28" fill="#eff6ff" stroke="#60a5fa"/>
+  <text x="386" y="239" font-size="30" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#1e3a8a">Decision</text>
+  <text x="380" y="274" font-size="18" font-family="Segoe UI, Arial, sans-serif" fill="#1d4ed8">quality vs cost</text>
+  <rect x="372" y="300" width="160" height="38" rx="12" fill="#fff" stroke="#60a5fa"/>
+  <text x="397" y="325" font-size="18" font-family="Segoe UI, Arial, sans-serif" fill="#1d4ed8">high quality</text>
+  <rect x="610" y="156" width="178" height="110" rx="24" fill="#fff" stroke="#93c5fd"/>
+  <text x="662" y="201" font-size="26" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#1e3a8a">Best</text>
+  <text x="648" y="232" font-size="18" font-family="Segoe UI, Arial, sans-serif" fill="#1d4ed8">primary model</text>
+  <rect x="610" y="342" width="178" height="110" rx="24" fill="#fff" stroke="#93c5fd"/>
+  <text x="662" y="387" font-size="24" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#1e3a8a">Cheaper</text>
+  <text x="636" y="418" font-size="18" font-family="Segoe UI, Arial, sans-serif" fill="#1d4ed8">fallback model</text>
+  <rect x="856" y="232" width="240" height="112" rx="24" fill="#eff6ff" stroke="#60a5fa"/>
+  <text x="916" y="277" font-size="28" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#1e3a8a">Outcome</text>
+  <text x="880" y="309" font-size="18" font-family="Segoe UI, Arial, sans-serif" fill="#1d4ed8">route logged + tracked</text>
+  <path d="M268 288 C305 288, 310 288, 342 288" fill="none" stroke="#1d4ed8" stroke-width="4"/>
+  <path d="M562 255 C590 245, 595 232, 610 212" fill="none" stroke="#1d4ed8" stroke-width="4"/>
+  <path d="M562 320 C590 338, 595 355, 610 386" fill="none" stroke="#1d4ed8" stroke-width="4"/>
+  <path d="M788 212 C822 224, 830 238, 856 272" fill="none" stroke="#1d4ed8" stroke-width="4"/>
+  <path d="M788 386 C822 376, 830 360, 856 310" fill="none" stroke="#1d4ed8" stroke-width="4"/>
+</svg>

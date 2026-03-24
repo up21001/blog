@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Agent Permission Review workflow">
+  <defs>
+    <linearGradient id="bg4" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1e1b4b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <style>
+      .t{font-family:Arial,Helvetica,sans-serif;fill:#e5e7eb}
+      .h{font-size:38px;font-weight:700}
+      .s{font-size:22px;fill:#cbd5e1}
+      .b{font-size:20px;font-weight:700}
+      .n{font-size:18px;fill:#cbd5e1}
+    </style>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg4)"/>
+  <text x="72" y="76" class="t h">Agent Permission Review</text>
+  <text x="72" y="114" class="t s">권한 수집 -> 사용 비교 -> 회수 / 유지 / 승격</text>
+  <g transform="translate(72 170)">
+    <rect width="225" height="130" rx="18" fill="#312e81" stroke="#818cf8"/>
+    <text x="28" y="44" class="t b">Collect</text>
+    <text x="28" y="78" class="t n">권한 목록 수집</text>
+    <rect x="270" width="225" height="130" rx="18" fill="#312e81" stroke="#818cf8"/>
+    <text x="298" y="44" class="t b">Compare</text>
+    <text x="298" y="78" class="t n">실제 사용과 비교</text>
+    <rect x="468" width="225" height="130" rx="18" fill="#312e81" stroke="#818cf8"/>
+    <text x="498" y="44" class="t b">Review</text>
+    <text x="498" y="78" class="t n">회수 / 유지 결정</text>
+    <rect x="666" width="225" height="130" rx="18" fill="#312e81" stroke="#818cf8"/>
+    <text x="690" y="44" class="t b">Approve</text>
+    <text x="690" y="78" class="t n">고위험 권한 승인</text>
+    <rect x="864" width="225" height="130" rx="18" fill="#312e81" stroke="#818cf8"/>
+    <text x="892" y="44" class="t b">Apply</text>
+    <text x="892" y="78" class="t n">정책 즉시 반영</text>
+    <path d="M247 65H262" stroke="#c4b5fd" stroke-width="5" marker-end="url(#b1)"/>
+    <path d="M469 65H454" stroke="#c4b5fd" stroke-width="5" marker-end="url(#b1)"/>
+    <path d="M666 65H651" stroke="#c4b5fd" stroke-width="5" marker-end="url(#b1)"/>
+    <path d="M864 65H849" stroke="#c4b5fd" stroke-width="5" marker-end="url(#b1)"/>
+  </g>
+  <g transform="translate(72 360)">
+    <rect width="1056" height="170" rx="22" fill="#0b1020" stroke="#4c1d95"/>
+    <text x="34" y="48" class="t b">핵심 포인트</text>
+    <text x="34" y="86" class="t n">검토는 수동 확인이 아니라, 사용 로그와 정책을 비교하는 정기 운영 절차입니다.</text>
+    <text x="34" y="120" class="t n">고위험 권한은 승인, 저위험 권한은 자동 회수처럼 등급화하면 운영이 단순해집니다.</text>
+  </g>
+  <defs>
+    <marker id="b1" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 Z" fill="#c4b5fd"/>
+    </marker>
+  </defs>
+</svg>
+

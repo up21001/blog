@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#082f49"/>
+  <text x="60" y="90" fill="#e0f2fe" font-size="36" font-family="Arial" font-weight="700">Web Accessibility Checklist</text>
+  <rect x="90" y="220" width="300" height="120" rx="12" fill="#0ea5e9"/><text x="145" y="290" fill="#082f49" font-size="24" font-family="Arial">Keyboard</text>
+  <rect x="450" y="220" width="300" height="120" rx="12" fill="#38bdf8"/><text x="530" y="290" fill="#082f49" font-size="24" font-family="Arial">Contrast</text>
+  <rect x="810" y="220" width="300" height="120" rx="12" fill="#7dd3fc"/><text x="860" y="290" fill="#082f49" font-size="24" font-family="Arial">Screen Reader</text>
+</svg>

@@ -1,0 +1,59 @@
+<svg width="1400" height="820" viewBox="0 0 1400 820" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Zapier AI choice flow</title>
+  <desc id="desc">Zapier AI를 선택할지, 코드 기반 자동화나 다른 에이전트 도구를 선택할지 판단하는 흐름</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#160f26"/>
+      <stop offset="100%" stop-color="#311a4d"/>
+    </linearGradient>
+    <style>
+      .title{font:700 42px Arial, sans-serif; fill:#fff0ff}
+      .sub{font:400 20px Arial, sans-serif; fill:#dfcdea}
+      .box{fill:#251638; stroke:#f0b7ff; stroke-width:2.5; rx:24; ry:24}
+      .boxA{fill:#132b3c; stroke:#88e6ff; stroke-width:2.5; rx:24; ry:24}
+      .boxB{fill:#2f2410; stroke:#ffd47d; stroke-width:2.5; rx:24; ry:24}
+      .label{font:700 26px Arial, sans-serif; fill:#fff7ff}
+      .small{font:400 18px Arial, sans-serif; fill:#e9dcf4}
+      .arrow{stroke:#d2b8f0; stroke-width:5; fill:none; marker-end:url(#m)}
+      .yes{font:700 18px Arial, sans-serif; fill:#8fe6bf}
+      .no{font:700 18px Arial, sans-serif; fill:#ffd17d}
+    </style>
+    <marker id="m" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 Z" fill="#d2b8f0"/>
+    </marker>
+  </defs>
+  <rect width="1400" height="820" fill="url(#bg)"/>
+  <text x="80" y="92" class="title">Zapier AI Choice Flow</text>
+  <text x="80" y="130" class="sub">자동화 난이도와 운영 방식에 따라 Zapier AI가 맞는지 빠르게 판단하는 흐름</text>
+
+  <rect x="520" y="190" width="360" height="130" class="box"/>
+  <text x="700" y="240" text-anchor="middle" class="label">반복 업무 자동화가 핵심인가?</text>
+  <text x="700" y="275" text-anchor="middle" class="small">여러 SaaS를 연결하고 실행을 줄이는 목적</text>
+
+  <path d="M700 320 L700 390" class="arrow"/>
+  <text x="720" y="360" class="yes">Yes</text>
+
+  <rect x="120" y="420" width="360" height="150" class="boxA"/>
+  <text x="300" y="470" text-anchor="middle" class="label">Zapier AI</text>
+  <text x="300" y="505" text-anchor="middle" class="small">트리거 + AI + 액션</text>
+  <text x="300" y="532" text-anchor="middle" class="small">빠른 구축, 쉬운 운영</text>
+
+  <rect x="520" y="420" width="360" height="150" class="box"/>
+  <text x="700" y="470" text-anchor="middle" class="label">코드 기반 자동화</text>
+  <text x="700" y="505" text-anchor="middle" class="small">세밀한 분기, 복잡한 로직</text>
+  <text x="700" y="532" text-anchor="middle" class="small">개발 리소스 충분할 때</text>
+
+  <rect x="920" y="420" width="360" height="150" class="boxB"/>
+  <text x="1100" y="470" text-anchor="middle" class="label">다른 에이전트 도구</text>
+  <text x="1100" y="505" text-anchor="middle" class="small">멀티스텝 실행, 커스텀 제어</text>
+  <text x="1100" y="532" text-anchor="middle" class="small">전문 워크플로 요구</text>
+
+  <path d="M700 320 L300 390 L300 420" class="arrow"/>
+  <path d="M700 320 L700 390 L700 420" class="arrow"/>
+  <path d="M700 320 L1100 390 L1100 420" class="arrow"/>
+  <text x="245" y="388" class="yes">빠른 도입</text>
+  <text x="645" y="388" class="no">세밀한 제어</text>
+  <text x="1035" y="388" class="no">전문화 필요</text>
+
+  <text x="700" y="690" text-anchor="middle" class="small">핵심 판단 기준: 자동화 속도, 유지보수, 앱 연결성, 승인 흐름</text>
+</svg>

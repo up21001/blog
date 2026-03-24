@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Agent Permission Review architecture">
+  <defs>
+    <linearGradient id="bg6" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#111827"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <style>
+      .t{font-family:Arial,Helvetica,sans-serif;fill:#e5e7eb}
+      .h{font-size:38px;font-weight:700}
+      .s{font-size:22px;fill:#cbd5e1}
+      .b{font-size:19px;font-weight:700}
+      .n{font-size:17px;fill:#cbd5e1}
+    </style>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg6)"/>
+  <text x="72" y="76" class="t h">Agent Permission Review Architecture</text>
+  <text x="72" y="114" class="t s">정책, 로그, 승인 UI를 연결한 운영 구조</text>
+  <g transform="translate(72 170)">
+    <rect width="260" height="130" rx="18" fill="#1e293b" stroke="#64748b"/>
+    <text x="28" y="44" class="t b">Policy Store</text>
+    <text x="28" y="78" class="t n">권한 정의와 버전</text>
+    <rect x="290" width="260" height="130" rx="18" fill="#1e293b" stroke="#64748b"/>
+    <text x="314" y="44" class="t b">Usage Logs</text>
+    <text x="314" y="78" class="t n">실제 호출 이력</text>
+    <rect x="580" width="260" height="130" rx="18" fill="#1e293b" stroke="#64748b"/>
+    <text x="604" y="44" class="t b">Review Engine</text>
+    <text x="604" y="78" class="t n">차이 탐지와 분류</text>
+    <rect x="870" width="260" height="130" rx="18" fill="#1e293b" stroke="#64748b"/>
+    <text x="904" y="44" class="t b">Approval UI</text>
+    <text x="904" y="78" class="t n">회수 / 유지 / 승격</text>
+    <path d="M332 65H282" stroke="#fcd34d" stroke-width="5" marker-end="url(#b3)"/>
+    <path d="M622 65H572" stroke="#fcd34d" stroke-width="5" marker-end="url(#b3)"/>
+    <path d="M912 65H862" stroke="#fcd34d" stroke-width="5" marker-end="url(#b3)"/>
+  </g>
+  <g transform="translate(72 360)">
+    <rect width="1056" height="170" rx="22" fill="#0f172a" stroke="#854d0e"/>
+    <text x="34" y="48" class="t b">설계 원칙</text>
+    <text x="34" y="86" class="t n">검토는 문서가 아니라 시스템이어야 하며, 정책 변경이 자동 반영돼야 합니다.</text>
+    <text x="34" y="120" class="t n">승인 UI는 사람의 판단을 돕는 마지막 단계로 두는 것이 운영상 안정적입니다.</text>
+  </g>
+  <defs>
+    <marker id="b3" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 Z" fill="#fcd34d"/>
+    </marker>
+  </defs>
+</svg>
+

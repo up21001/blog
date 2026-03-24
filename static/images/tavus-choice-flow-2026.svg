@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Tavus Choice Flow 2026</title>
+  <desc id="desc">Decision flow for when to use Tavus.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fdf2f8"/>
+      <stop offset="100%" stop-color="#f9a8d4"/>
+    </linearGradient>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#be185d"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bg)"/>
+  <text x="70" y="88" font-size="38" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#9d174d">Should You Use Tavus?</text>
+  <rect x="440" y="120" width="320" height="90" rx="22" fill="#fff" stroke="#ec4899" stroke-width="2"/>
+  <text x="481" y="175" font-size="28" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#9d174d">Need video conversations?</text>
+  <rect x="120" y="285" width="300" height="110" rx="24" fill="#fff" stroke="#f9a8d4"/>
+  <text x="190" y="335" font-size="26" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#be185d">No</text>
+  <text x="150" y="365" font-size="18" font-family="Segoe UI, Arial, sans-serif" fill="#be185d">Text chat or voice-only may be enough</text>
+  <rect x="450" y="285" width="300" height="110" rx="24" fill="#fff" stroke="#f9a8d4"/>
+  <text x="486" y="335" font-size="26" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#be185d">Need persona and</text>
+  <text x="530" y="365" font-size="26" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#be185d">replica?</text>
+  <rect x="790" y="285" width="300" height="110" rx="24" fill="#fff" stroke="#f9a8d4"/>
+  <text x="835" y="335" font-size="26" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#be185d">Need low-latency</text>
+  <text x="853" y="365" font-size="26" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#be185d">multimodal UX?</text>
+  <rect x="445" y="500" width="320" height="110" rx="26" fill="#9d174d"/>
+  <text x="525" y="550" font-size="30" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#fdf2f8">Use Tavus</text>
+  <text x="482" y="580" font-size="18" font-family="Segoe UI, Arial, sans-serif" fill="#fbcfe8">Best when presence and video matter</text>
+  <path d="M600 210 L600 285" fill="none" stroke="#be185d" stroke-width="4" marker-end="url(#arrow)"/>
+  <path d="M450 340 L420 340" fill="none" stroke="#be185d" stroke-width="4" marker-end="url(#arrow)"/>
+  <path d="M750 340 L790 340" fill="none" stroke="#be185d" stroke-width="4" marker-end="url(#arrow)"/>
+  <path d="M600 395 L600 500" fill="none" stroke="#be185d" stroke-width="4" marker-end="url(#arrow)"/>
+</svg>

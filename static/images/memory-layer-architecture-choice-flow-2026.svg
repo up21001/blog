@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#fdfdfc"/>
+  <text x="70" y="84" font-family="Segoe UI, Arial, sans-serif" font-size="42" font-weight="700" fill="#0f172a">Memory Layer Architecture Choice</text>
+  <text x="70" y="118" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#475569">pick the right layer for each memory type</text>
+
+  <rect x="70" y="235" width="200" height="100" rx="22" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="115" y="280" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="700" fill="#334155">Need</text>
+  <text x="96" y="307" font-family="Segoe UI, Arial, sans-serif" font-size="16" fill="#64748b">what should persist?</text>
+
+  <rect x="320" y="145" width="210" height="120" rx="22" fill="#dbeafe" stroke="#93c5fd" stroke-width="2"/>
+  <text x="379" y="196" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="700" fill="#1d4ed8">Session</text>
+  <text x="353" y="226" font-family="Segoe UI, Arial, sans-serif" font-size="16" fill="#2563eb">turn-level state</text>
+
+  <rect x="320" y="285" width="210" height="120" rx="22" fill="#dcfce7" stroke="#86efac" stroke-width="2"/>
+  <text x="381" y="336" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="700" fill="#166534">Profile</text>
+  <text x="343" y="366" font-family="Segoe UI, Arial, sans-serif" font-size="16" fill="#15803d">preferences / identity</text>
+
+  <rect x="320" y="425" width="210" height="120" rx="22" fill="#fef3c7" stroke="#fcd34d" stroke-width="2"/>
+  <text x="361" y="476" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="700" fill="#92400e">Knowledge</text>
+  <text x="337" y="506" font-family="Segoe UI, Arial, sans-serif" font-size="16" fill="#b45309">docs / facts / RAG</text>
+
+  <rect x="595" y="175" width="220" height="150" rx="24" fill="#111827"/>
+  <text x="650" y="230" font-family="Segoe UI, Arial, sans-serif" font-size="30" font-weight="700" fill="#ffffff">Policy</text>
+  <text x="628" y="264" font-family="Segoe UI, Arial, sans-serif" font-size="16" fill="#d1d5db">security / TTL / ACL</text>
+
+  <rect x="870" y="250" width="250" height="100" rx="22" fill="#e0e7ff" stroke="#a5b4fc" stroke-width="2"/>
+  <text x="921" y="294" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="700" fill="#3730a3">Cache / Recall</text>
+  <text x="906" y="321" font-family="Segoe UI, Arial, sans-serif" font-size="16" fill="#4338ca">fast retrieval path</text>
+
+  <path d="M270 285 L320 205" stroke="#334155" stroke-width="8" stroke-linecap="round"/>
+  <path d="M270 285 L320 345" stroke="#334155" stroke-width="8" stroke-linecap="round"/>
+  <path d="M270 285 L320 485" stroke="#334155" stroke-width="8" stroke-linecap="round"/>
+  <path d="M530 205 L595 250" stroke="#334155" stroke-width="8" stroke-linecap="round"/>
+  <path d="M530 345 L595 250" stroke="#334155" stroke-width="8" stroke-linecap="round"/>
+  <path d="M530 485 L595 250" stroke="#334155" stroke-width="8" stroke-linecap="round"/>
+  <path d="M815 250 L870 300" stroke="#334155" stroke-width="8" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Upstash Vector workflow 2026</title>
+  <desc id="desc">Serverless vector database workflow showing dense, sparse, hybrid search, REST API, and pay-as-you-go.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#07111f"/>
+      <stop offset="100%" stop-color="#0f2744"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#45d6c8"/>
+      <stop offset="100%" stop-color="#76f0ff"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="18" flood-color="#000" flood-opacity="0.28"/>
+    </filter>
+    <style>
+      .title { font: 700 42px/1.2 'Segoe UI', Arial, sans-serif; fill: #f4fbff; }
+      .sub { font: 400 20px/1.5 'Segoe UI', Arial, sans-serif; fill: #bfd3e6; }
+      .label { font: 700 22px/1.2 'Segoe UI', Arial, sans-serif; fill: #ecfeff; }
+      .text { font: 400 18px/1.5 'Segoe UI', Arial, sans-serif; fill: #c9d8e6; }
+      .small { font: 600 16px/1.2 'Segoe UI', Arial, sans-serif; fill: #8ff1ea; letter-spacing: .08em; }
+    </style>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 z" fill="#7ef1ff"/>
+    </marker>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <circle cx="1320" cy="120" r="180" fill="#45d6c8" opacity=".10"/>
+  <circle cx="210" cy="760" r="220" fill="#7ef1ff" opacity=".08"/>
+  <text x="90" y="110" class="title">Upstash Vector workflow</text>
+  <text x="90" y="150" class="sub">Serverless vector DB for dense, sparse, and hybrid search via REST API</text>
+  <text x="90" y="198" class="small">PAY-AS-YOU-GO · REST API · DENSE · SPARSE · HYBRID</text>
+
+  <rect x="85" y="260" width="370" height="250" rx="28" fill="#10253f" stroke="#2d4f78" stroke-width="2" filter="url(#shadow)"/>
+  <text x="120" y="318" class="label">1. Ingest embeddings</text>
+  <text x="120" y="360" class="text">Chunk documents, create embeddings,</text>
+  <text x="120" y="392" class="text">and send them to Upstash Vector.</text>
+  <text x="120" y="430" class="text">Metadata stays ready for filtering.</text>
+
+  <rect x="545" y="260" width="460" height="250" rx="28" fill="#11314f" stroke="#2d4f78" stroke-width="2" filter="url(#shadow)"/>
+  <text x="580" y="318" class="label">2. Choose the search mode</text>
+  <text x="580" y="360" class="text">Dense search for semantic similarity.</text>
+  <text x="580" y="392" class="text">Sparse search for keyword-heavy queries.</text>
+  <text x="580" y="424" class="text">Hybrid search combines both signals.</text>
+
+  <rect x="1075" y="260" width="440" height="250" rx="28" fill="#123651" stroke="#2d4f78" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1110" y="318" class="label">3. Query over REST API</text>
+  <text x="1110" y="360" class="text">Call from serverless functions, edge</text>
+  <text x="1110" y="392" class="text">apps, or backend services without</text>
+  <text x="1110" y="424" class="text">running a vector cluster yourself.</text>
+
+  <rect x="290" y="610" width="1020" height="150" rx="28" fill="#0f2235" stroke="url(#accent)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="340" y="670" class="label">4. Scale with usage</text>
+  <text x="340" y="710" class="text">Pay only for what you use, keep the architecture simple, and move the effort from infrastructure to product work.</text>
+
+  <line x1="455" y1="385" x2="545" y2="385" stroke="#7ef1ff" stroke-width="5" marker-end="url(#arrow)"/>
+  <line x1="1005" y1="385" x2="1075" y2="385" stroke="#7ef1ff" stroke-width="5" marker-end="url(#arrow)"/>
+  <line x1="1280" y1="510" x2="1280" y2="610" stroke="#7ef1ff" stroke-width="5" marker-end="url(#arrow)"/>
+  <line x1="800" y1="510" x2="800" y2="610" stroke="#7ef1ff" stroke-width="5" marker-end="url(#arrow)"/>
+</svg>

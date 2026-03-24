@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f7f3ee"/>
+      <stop offset="100%" stop-color="#eadfd1"/>
+    </linearGradient>
+    <style>
+      .title{font:700 44px Arial,sans-serif;fill:#1e1a16}
+      .sub{font:400 20px Arial,sans-serif;fill:#51483f}
+      .box{fill:#fff7f0;stroke:#8c6f55;stroke-width:3;rx:18;ry:18}
+      .label{font:700 22px Arial,sans-serif;fill:#2c231d}
+      .small{font:400 18px Arial,sans-serif;fill:#53463c}
+      .arrow{stroke:#8c6f55;stroke-width:5;fill:none;marker-end:url(#m)}
+    </style>
+    <marker id="m" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 Z" fill="#8c6f55"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <text x="60" y="80" class="title">Multimodal Testing Workflow</text>
+  <text x="60" y="115" class="sub">Collect inputs, replay traces, score outputs, gate regressions</text>
+  <rect class="box" x="60" y="170" width="190" height="110"/><text x="155" y="214" text-anchor="middle" class="label">Inputs</text><text x="155" y="244" text-anchor="middle" class="small">image / audio / screen</text>
+  <rect class="box" x="290" y="170" width="190" height="110"/><text x="385" y="214" text-anchor="middle" class="label">Normalize</text><text x="385" y="244" text-anchor="middle" class="small">resize / STT / OCR</text>
+  <rect class="box" x="520" y="170" width="190" height="110"/><text x="615" y="214" text-anchor="middle" class="label">Replay</text><text x="615" y="244" text-anchor="middle" class="small">prompt / model / tool</text>
+  <rect class="box" x="750" y="170" width="190" height="110"/><text x="845" y="214" text-anchor="middle" class="label">Score</text><text x="845" y="244" text-anchor="middle" class="small">quality / latency / schema</text>
+  <rect class="box" x="980" y="170" width="160" height="110"/><text x="1060" y="214" text-anchor="middle" class="label">Gate</text><text x="1060" y="244" text-anchor="middle" class="small">pass / fail</text>
+  <path class="arrow" d="M250 225 H285"/><path class="arrow" d="M480 225 H515"/><path class="arrow" d="M710 225 H745"/><path class="arrow" d="M940 225 H975"/>
+  <rect class="box" x="110" y="360" width="280" height="150"/><text x="250" y="405" text-anchor="middle" class="label">Expected Signals</text><text x="250" y="440" text-anchor="middle" class="small">expected text, expected tool, expected state</text><text x="250" y="470" text-anchor="middle" class="small">ground truth + tolerance + trace id</text>
+  <rect class="box" x="450" y="360" width="280" height="150"/><text x="590" y="405" text-anchor="middle" class="label">Test Dataset</text><text x="590" y="440" text-anchor="middle" class="small">golden cases + edge cases</text><text x="590" y="470" text-anchor="middle" class="small">real + synthetic mix</text>
+  <rect class="box" x="790" y="360" width="300" height="150"/><text x="940" y="405" text-anchor="middle" class="label">Output</text><text x="940" y="440" text-anchor="middle" class="small">dashboard, diff, regression alert</text><text x="940" y="470" text-anchor="middle" class="small">manual review if needed</text>
+  <path class="arrow" d="M390 435 H445"/><path class="arrow" d="M730 435 H785"/>
+</svg>

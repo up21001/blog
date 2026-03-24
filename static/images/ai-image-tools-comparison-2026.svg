@@ -1,0 +1,72 @@
+<svg width="800" height="450" viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg" font-family="'Malgun Gothic', sans-serif">
+  <rect width="800" height="450" fill="#F8FAFC" rx="12"/>
+
+  <!-- Title -->
+  <text x="400" y="42" text-anchor="middle" font-size="22" font-weight="bold" fill="#1E293B">AI 이미지 생성 도구 비교 — 2026</text>
+
+  <!-- Column Headers -->
+  <rect x="40" y="58" width="220" height="48" rx="8" fill="#EDE9FE" stroke="#8B5CF6" stroke-width="2"/>
+  <text x="150" y="88" text-anchor="middle" font-size="16" font-weight="bold" fill="#5B21B6">Midjourney</text>
+
+  <rect x="290" y="58" width="220" height="48" rx="8" fill="#DBEAFE" stroke="#3B82F6" stroke-width="2"/>
+  <text x="400" y="88" text-anchor="middle" font-size="16" font-weight="bold" fill="#1D4ED8">DALL-E 3</text>
+
+  <rect x="540" y="58" width="220" height="48" rx="8" fill="#D1FAE5" stroke="#10B981" stroke-width="2"/>
+  <text x="650" y="88" text-anchor="middle" font-size="16" font-weight="bold" fill="#065F46">Stable Diffusion</text>
+
+  <!-- Row: 가격 -->
+  <rect x="40" y="120" width="720" height="36" rx="0" fill="#F1F5F9"/>
+  <text x="10" y="143" text-anchor="start" font-size="11" fill="#94A3B8">가격</text>
+  <text x="150" y="143" text-anchor="middle" font-size="12" fill="#475569">$10~ / 월 구독</text>
+  <text x="400" y="143" text-anchor="middle" font-size="12" fill="#475569">ChatGPT Plus 포함</text>
+  <text x="650" y="143" text-anchor="middle" font-size="12" fill="#10B981" font-weight="bold">무료 (로컬 실행)</text>
+
+  <!-- Row: 품질 -->
+  <rect x="40" y="156" width="720" height="36" rx="0" fill="#FFFFFF"/>
+  <text x="10" y="179" text-anchor="start" font-size="11" fill="#94A3B8">품질</text>
+  <text x="150" y="179" text-anchor="middle" font-size="12" fill="#8B5CF6" font-weight="bold">최고 수준 아트워크</text>
+  <text x="400" y="179" text-anchor="middle" font-size="12" fill="#475569">텍스트 정확도 우수</text>
+  <text x="650" y="179" text-anchor="middle" font-size="12" fill="#475569">모델에 따라 상이</text>
+
+  <!-- Row: 사용 방법 -->
+  <rect x="40" y="192" width="720" height="36" rx="0" fill="#F1F5F9"/>
+  <text x="10" y="215" text-anchor="start" font-size="11" fill="#94A3B8">사용법</text>
+  <text x="150" y="215" text-anchor="middle" font-size="12" fill="#475569">Discord / 웹앱</text>
+  <text x="400" y="215" text-anchor="middle" font-size="12" fill="#475569">ChatGPT / API</text>
+  <text x="650" y="215" text-anchor="middle" font-size="12" fill="#475569">로컬 / ComfyUI</text>
+
+  <!-- Row: API 지원 -->
+  <rect x="40" y="228" width="720" height="36" rx="0" fill="#FFFFFF"/>
+  <text x="10" y="251" text-anchor="start" font-size="11" fill="#94A3B8">API</text>
+  <text x="150" y="251" text-anchor="middle" font-size="12" fill="#10B981">API 지원 (v1)</text>
+  <text x="400" y="251" text-anchor="middle" font-size="12" fill="#10B981">OpenAI API</text>
+  <text x="650" y="251" text-anchor="middle" font-size="12" fill="#10B981">Diffusers 라이브러리</text>
+
+  <!-- Row: 커스터마이징 -->
+  <rect x="40" y="264" width="720" height="36" rx="0" fill="#F1F5F9"/>
+  <text x="10" y="287" text-anchor="start" font-size="11" fill="#94A3B8">커스터마이징</text>
+  <text x="150" y="287" text-anchor="middle" font-size="12" fill="#475569">--style / --sref</text>
+  <text x="400" y="287" text-anchor="middle" font-size="12" fill="#475569">프롬프트 기반</text>
+  <text x="650" y="287" text-anchor="middle" font-size="12" fill="#8B5CF6" font-weight="bold">LoRA / ControlNet</text>
+
+  <!-- Recommendation section -->
+  <text x="400" y="330" text-anchor="middle" font-size="14" font-weight="bold" fill="#1E293B">엔지니어 활용 추천</text>
+
+  <rect x="40" y="342" width="215" height="80" rx="8" fill="#EDE9FE" stroke="#8B5CF6" stroke-width="1.5"/>
+  <text x="147" y="366" text-anchor="middle" font-size="12" font-weight="bold" fill="#5B21B6">Midjourney</text>
+  <text x="147" y="384" text-anchor="middle" font-size="11" fill="#6D28D9">브랜딩 / 마케팅 이미지</text>
+  <text x="147" y="401" text-anchor="middle" font-size="11" fill="#6D28D9">고품질 UI 목업 레퍼런스</text>
+
+  <rect x="292" y="342" width="215" height="80" rx="8" fill="#DBEAFE" stroke="#3B82F6" stroke-width="1.5"/>
+  <text x="399" y="366" text-anchor="middle" font-size="12" font-weight="bold" fill="#1D4ED8">DALL-E 3</text>
+  <text x="399" y="384" text-anchor="middle" font-size="11" fill="#1E40AF">블로그 / 문서 일러스트</text>
+  <text x="399" y="401" text-anchor="middle" font-size="11" fill="#1E40AF">ChatGPT 워크플로우 통합</text>
+
+  <rect x="544" y="342" width="215" height="80" rx="8" fill="#D1FAE5" stroke="#10B981" stroke-width="1.5"/>
+  <text x="651" y="366" text-anchor="middle" font-size="12" font-weight="bold" fill="#065F46">Stable Diffusion</text>
+  <text x="651" y="384" text-anchor="middle" font-size="11" fill="#047857">파이프라인 자동화</text>
+  <text x="651" y="401" text-anchor="middle" font-size="11" fill="#047857">로컬 / 보안 환경 생성</text>
+
+  <!-- Footer -->
+  <text x="400" y="440" text-anchor="middle" font-size="11" fill="#94A3B8">2026년 3월 기준  |  가격 및 기능은 변동될 수 있습니다</text>
+</svg>

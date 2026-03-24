@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Julep Choice Flow 2026</title>
+  <desc id="desc">Decision flow showing when Julep is a good fit for persistent memory and multi-step workflows.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fff7ed"/>
+      <stop offset="100%" stop-color="#e2e8f0"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#111827" flood-opacity="0.14"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bg)"/>
+  <text x="70" y="88" font-size="38" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#111827">Should You Use Julep?</text>
+
+  <rect x="430" y="120" rx="22" width="340" height="90" fill="#fff" stroke="#cbd5e1" filter="url(#shadow)"/>
+  <text x="473" y="174" font-size="28" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#111827">Need persistent memory?</text>
+
+  <rect x="110" y="285" rx="24" width="300" height="110" fill="#fff" stroke="#cbd5e1" filter="url(#shadow)"/>
+  <text x="179" y="337" font-size="26" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#334155">No</text>
+  <text x="140" y="367" font-size="18" font-family="Segoe UI, Arial, sans-serif" fill="#334155">A simpler chat flow may be enough</text>
+
+  <rect x="450" y="285" rx="24" width="300" height="110" fill="#fff" stroke="#cbd5e1" filter="url(#shadow)"/>
+  <text x="482" y="337" font-size="26" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#334155">Need loops and</text>
+  <text x="520" y="367" font-size="26" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#334155">parallel tasks?</text>
+
+  <rect x="790" y="285" rx="24" width="300" height="110" fill="#fff" stroke="#cbd5e1" filter="url(#shadow)"/>
+  <text x="850" y="337" font-size="26" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#334155">Need tools and</text>
+  <text x="852" y="367" font-size="26" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#334155">long-running tasks?</text>
+
+  <rect x="445" y="500" rx="26" width="320" height="110" fill="#111827" filter="url(#shadow)"/>
+  <text x="510" y="551" font-size="30" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#fff7ed">Use Julep</text>
+  <text x="470" y="581" font-size="18" font-family="Segoe UI, Arial, sans-serif" fill="#fed7aa">Best fit for stateful agent workflows</text>
+</svg>

@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Vector Storage Cost Architecture</title>
+  <desc id="desc">Architecture diagram for storage cost in Qdrant, Qdrant Cloud, and pgvector systems.</desc>
+  <defs>
+    <style>
+      .bg{fill:#111827}
+      .panel{fill:#1f2937; stroke:#334155; stroke-width:2}
+      .title{font:700 40px Arial,sans-serif; fill:#f8fafc}
+      .sub{font:400 20px Arial,sans-serif; fill:#cbd5e1}
+      .h{font:700 22px Arial,sans-serif; fill:#e2e8f0}
+      .t{font:400 17px Arial,sans-serif; fill:#cbd5e1}
+      .arrow{stroke:#38bdf8; stroke-width:4; fill:none; marker-end:url(#m)}
+      .tag{font:700 14px Arial,sans-serif; fill:#93c5fd; letter-spacing:1px}
+    </style>
+    <marker id="m" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#38bdf8"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="630" class="bg"/>
+  <text x="64" y="74" class="tag">ARCHITECTURE</text>
+  <text x="64" y="122" class="title">Storage architecture decides your long-term bill</text>
+  <text x="64" y="160" class="sub">Vectors, metadata, replication, backups, and memory all accumulate.</text>
+
+  <rect x="58" y="220" rx="20" ry="20" width="200" height="140" class="panel"/>
+  <text x="82" y="260" class="h">Source docs</text>
+  <text x="82" y="292" class="t">raw text, OCR, chunks</text>
+  <text x="82" y="320" class="t">avoid duplicate storage</text>
+
+  <rect x="296" y="220" rx="20" ry="20" width="200" height="140" class="panel"/>
+  <text x="320" y="260" class="h">Embedding layer</text>
+  <text x="320" y="292" class="t">dimension, batching</text>
+  <text x="320" y="320" class="t">re-use when possible</text>
+
+  <rect x="534" y="220" rx="20" ry="20" width="200" height="140" class="panel"/>
+  <text x="558" y="260" class="h">Index layer</text>
+  <text x="558" y="292" class="t">HNSW / postgres index</text>
+  <text x="558" y="320" class="t">memory footprint matters</text>
+
+  <rect x="772" y="220" rx="20" ry="20" width="200" height="140" class="panel"/>
+  <text x="796" y="260" class="h">Ops layer</text>
+  <text x="796" y="292" class="t">replication, backups, SLA</text>
+  <text x="796" y="320" class="t">paid for resilience</text>
+
+  <rect x="1010" y="220" rx="20" ry="20" width="132" height="140" class="panel"/>
+  <text x="1032" y="260" class="h">Monitor</text>
+  <text x="1032" y="292" class="t">size, cost,</text>
+  <text x="1032" y="320" class="t">query time</text>
+
+  <path class="arrow" d="M 258 290 L 292 290"/>
+  <path class="arrow" d="M 496 290 L 530 290"/>
+  <path class="arrow" d="M 734 290 L 768 290"/>
+  <path class="arrow" d="M 972 290 L 1006 290"/>
+
+  <rect x="58" y="420" rx="18" ry="18" width="1084" height="120" fill="#0f172a" stroke="#334155" stroke-width="2"/>
+  <text x="84" y="462" class="h">Practical rule</text>
+  <text x="84" y="496" class="t">Do not pay for large vectors, long retention, and always-on replication unless they improve actual retrieval quality.</text>
+</svg>
+

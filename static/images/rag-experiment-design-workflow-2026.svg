@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e3a8a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#g)"/>
+  <rect x="60" y="70" width="1080" height="490" rx="28" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.18)"/>
+  <text x="100" y="150" fill="#fff" font-family="Arial, sans-serif" font-size="54" font-weight="700">RAG Experiment Design</text>
+  <text x="100" y="195" fill="#cbd5e1" font-family="Arial, sans-serif" font-size="24">Hypothesis → Baseline → Candidate → Evaluation → Rollout</text>
+  <g fill="#e2e8f0" font-family="Arial, sans-serif" font-size="22">
+    <rect x="110" y="280" width="180" height="90" rx="18" fill="#334155"/><text x="150" y="333">Hypothesis</text>
+    <rect x="340" y="280" width="180" height="90" rx="18" fill="#0f766e"/><text x="392" y="333">Baseline</text>
+    <rect x="570" y="280" width="180" height="90" rx="18" fill="#7c3aed"/><text x="612" y="333">Candidate</text>
+    <rect x="800" y="280" width="180" height="90" rx="18" fill="#b45309"/><text x="845" y="333">Metrics</text>
+  </g>
+  <g stroke="#cbd5e1" stroke-width="5" fill="none">
+    <path d="M290 325h50"/><path d="M520 325h50"/><path d="M750 325h50"/><path d="M980 325h35"/>
+  </g>
+  <text x="100" y="470" fill="#e2e8f0" font-family="Arial, sans-serif" font-size="22">One variable at a time keeps the experiment readable.</text>
+</svg>

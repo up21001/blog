@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#f8fafc"/>
+  <text x="70" y="84" font-family="Segoe UI, Arial, sans-serif" font-size="42" font-weight="700" fill="#0f172a">Short-term vs Long-term Memory</text>
+  <text x="70" y="118" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#475569">session state and reusable memory</text>
+
+  <rect x="70" y="220" width="210" height="110" rx="22" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="118" y="270" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="700" fill="#334155">Current Turn</text>
+  <text x="118" y="298" font-family="Segoe UI, Arial, sans-serif" font-size="16" fill="#64748b">live context / temp data</text>
+
+  <rect x="330" y="165" width="240" height="220" rx="24" fill="#dbeafe" stroke="#93c5fd" stroke-width="2"/>
+  <text x="390" y="222" font-family="Segoe UI, Arial, sans-serif" font-size="30" font-weight="700" fill="#1d4ed8">Short-term</text>
+  <text x="375" y="257" font-family="Segoe UI, Arial, sans-serif" font-size="16" fill="#1d4ed8">working memory</text>
+  <text x="383" y="285" font-family="Segoe UI, Arial, sans-serif" font-size="16" fill="#1d4ed8">session memory</text>
+  <text x="388" y="313" font-family="Segoe UI, Arial, sans-serif" font-size="16" fill="#1d4ed8">expires quickly</text>
+
+  <rect x="635" y="165" width="240" height="220" rx="24" fill="#dcfce7" stroke="#86efac" stroke-width="2"/>
+  <text x="697" y="222" font-family="Segoe UI, Arial, sans-serif" font-size="30" font-weight="700" fill="#166534">Long-term</text>
+  <text x="683" y="257" font-family="Segoe UI, Arial, sans-serif" font-size="16" fill="#166534">profile memory</text>
+  <text x="682" y="285" font-family="Segoe UI, Arial, sans-serif" font-size="16" fill="#166534">preferences</text>
+  <text x="690" y="313" font-family="Segoe UI, Arial, sans-serif" font-size="16" fill="#166534">reusable facts</text>
+
+  <rect x="935" y="220" width="195" height="110" rx="22" fill="#111827"/>
+  <text x="978" y="270" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="700" fill="#ffffff">Reuse Later</text>
+  <text x="962" y="298" font-family="Segoe UI, Arial, sans-serif" font-size="16" fill="#d1d5db">retrieval / policy</text>
+
+  <path d="M280 275 L330 275" stroke="#334155" stroke-width="8" stroke-linecap="round"/>
+  <path d="M570 275 L635 275" stroke="#334155" stroke-width="8" stroke-linecap="round"/>
+  <path d="M875 275 L935 275" stroke="#334155" stroke-width="8" stroke-linecap="round"/>
+  <path d="M445 385 L445 470 L735 470 L735 385" stroke="#334155" stroke-width="8" fill="none" stroke-linecap="round"/>
+  <path d="M735 470 L735 520" stroke="#334155" stroke-width="8" stroke-linecap="round"/>
+  <text x="500" y="520" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#475569">summarize and keep only reusable data</text>
+</svg>

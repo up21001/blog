@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#fff9f2"/>
+      <stop offset="100%" stop-color="#fff1df"/>
+    </linearGradient>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 Z" fill="#d97706"/>
+    </marker>
+    <style>
+      .title { font: 700 42px 'Segoe UI', Arial, sans-serif; fill: #4b2a00; }
+      .sub { font: 400 18px 'Segoe UI', Arial, sans-serif; fill: #7a5b31; }
+      .card { fill: #ffffff; stroke: #ffd8a8; stroke-width: 2; }
+      .label { font: 700 24px 'Segoe UI', Arial, sans-serif; fill: #5a3400; }
+      .small { font: 400 16px 'Segoe UI', Arial, sans-serif; fill: #7d5a2f; }
+      .line { stroke: #d97706; stroke-width: 4; fill: none; marker-end: url(#arrow); }
+    </style>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <text x="70" y="80" class="title">AI Cache Strategy</text>
+  <text x="70" y="114" class="sub">prompt cache, semantic cache, session cache, tool cache</text>
+  <rect x="60" y="220" width="180" height="110" rx="22" class="card"/>
+  <text x="108" y="265" class="label">Request</text>
+  <text x="94" y="295" class="small">prompt / session</text>
+  <rect x="285" y="190" width="205" height="170" rx="24" class="card"/>
+  <text x="332" y="238" class="label">Cache Router</text>
+  <text x="321" y="270" class="small">exact / semantic</text>
+  <text x="326" y="296" class="small">ttl / invalidation</text>
+  <rect x="540" y="170" width="250" height="210" rx="26" fill="#fff8ee" stroke="#ffc57a" stroke-width="2"/>
+  <text x="612" y="224" class="label">Cache Layer</text>
+  <text x="605" y="256" class="small">prompt cache</text>
+  <text x="596" y="282" class="small">semantic cache</text>
+  <text x="600" y="308" class="small">session / result</text>
+  <rect x="845" y="205" width="220" height="140" rx="24" class="card"/>
+  <text x="902" y="252" class="label">LLM</text>
+  <text x="874" y="282" class="small">fallback on miss</text>
+  <path d="M240 275 L285 275" class="line"/>
+  <path d="M490 275 L540 275" class="line"/>
+  <path d="M790 275 L845 275" class="line"/>
+</svg>

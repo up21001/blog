@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y1="1">
+      <stop offset="0%" stop-color="#0b1321"/>
+      <stop offset="100%" stop-color="#1a2941"/>
+    </linearGradient>
+    <style>
+      .t { fill: #eff6ff; font-family: Arial, sans-serif; }
+      .s { fill: #a9bed8; font-family: Arial, sans-serif; }
+      .b { fill: #22334e; stroke: #4c6d93; stroke-width: 2; }
+      .l { stroke: #8fb6e8; stroke-width: 4; fill: none; marker-end: url(#arrow); }
+    </style>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 Z" fill="#8fb6e8"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <text x="70" y="96" class="t" font-size="42" font-weight="700">OpenAI Agent Evals Workflow</text>
+  <rect x="70" y="185" width="240" height="120" rx="18" class="b"/>
+  <rect x="360" y="185" width="240" height="120" rx="18" class="b"/>
+  <rect x="650" y="185" width="240" height="120" rx="18" class="b"/>
+  <rect x="940" y="185" width="190" height="120" rx="18" class="b"/>
+  <text x="105" y="232" class="t" font-size="24" font-weight="700">Task trace</text>
+  <text x="105" y="264" class="s" font-size="18">steps and tools</text>
+  <text x="395" y="232" class="t" font-size="24" font-weight="700">Process checks</text>
+  <text x="395" y="264" class="s" font-size="18">sequence + state</text>
+  <text x="684" y="232" class="t" font-size="24" font-weight="700">Failure cases</text>
+  <text x="684" y="264" class="s" font-size="18">replay + compare</text>
+  <text x="967" y="232" class="t" font-size="24" font-weight="700">Ship or fix</text>
+  <text x="967" y="264" class="s" font-size="18">regression gate</text>
+  <path d="M310 245 L360 245" class="l"/>
+  <path d="M600 245 L650 245" class="l"/>
+  <path d="M890 245 L940 245" class="l"/>
+  <circle cx="110" cy="425" r="10" fill="#6fd0ff"/>
+  <text x="135" y="432" class="s" font-size="21">Validate tool use, state transitions, and final response together</text>
+  <circle cx="110" cy="473" r="10" fill="#6fd0ff"/>
+  <text x="135" y="480" class="s" font-size="21">Use traces as the main artifact for debugging</text>
+</svg>

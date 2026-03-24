@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675">
+  <rect width="1200" height="675" fill="#ecfeff"/>
+  <text x="70" y="90" font-size="38" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#155e75">Bolt.new Workflow</text>
+  <rect x="80" y="220" width="220" height="110" rx="24" fill="#fff" stroke="#67e8f9"/>
+  <text x="143" y="280" font-size="28" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#155e75">Prompt</text>
+  <rect x="360" y="150" width="480" height="360" rx="28" fill="#fff" stroke="#22d3ee"/>
+  <text x="530" y="205" font-size="34" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#155e75">Bolt.new</text>
+  <rect x="415" y="250" width="160" height="82" rx="18" fill="#ecfeff" stroke="#67e8f9"/>
+  <text x="450" y="300" font-size="24" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#0f766e">Agents</text>
+  <rect x="625" y="250" width="160" height="82" rx="18" fill="#ecfeff" stroke="#67e8f9"/>
+  <text x="650" y="300" font-size="24" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#0f766e">MCP</text>
+  <rect x="415" y="370" width="160" height="82" rx="18" fill="#ecfeff" stroke="#67e8f9"/>
+  <text x="428" y="410" font-size="22" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#0f766e">Token</text>
+  <text x="437" y="437" font-size="18" font-family="Segoe UI, Arial, sans-serif" fill="#0f766e">efficiency</text>
+  <rect x="625" y="370" width="160" height="82" rx="18" fill="#ecfeff" stroke="#67e8f9"/>
+  <text x="647" y="410" font-size="22" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#0f766e">Bolt Cloud</text>
+  <text x="646" y="437" font-size="18" font-family="Segoe UI, Arial, sans-serif" fill="#0f766e">deploy</text>
+  <rect x="900" y="220" width="220" height="110" rx="24" fill="#fff" stroke="#67e8f9"/>
+  <text x="964" y="280" font-size="28" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#155e75">Live App</text>
+</svg>

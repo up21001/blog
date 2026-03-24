@@ -1,0 +1,64 @@
+<svg width="1400" height="820" viewBox="0 0 1400 820" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Supabase AI &amp; Vectors workflow</title>
+  <desc id="desc">문서 업로드에서 임베딩, pgvector 저장, 하이브리드 검색, Edge Functions 응답 조립까지의 흐름</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#07111f"/>
+      <stop offset="100%" stop-color="#0f2440"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#10243b"/>
+      <stop offset="100%" stop-color="#173355"/>
+    </linearGradient>
+    <style>
+      .title{font:700 42px Arial, sans-serif; fill:#e8f1ff}
+      .sub{font:400 20px Arial, sans-serif; fill:#b8c9e6}
+      .box{fill:url(#card); stroke:#74b3ff; stroke-width:2.5; rx:24; ry:24}
+      .box2{fill:#0c1c31; stroke:#86e7b8; stroke-width:2.5; rx:24; ry:24}
+      .box3{fill:#122a45; stroke:#ffd37a; stroke-width:2.5; rx:24; ry:24}
+      .label{font:700 28px Arial, sans-serif; fill:#f3f8ff}
+      .small{font:400 18px Arial, sans-serif; fill:#d0def2}
+      .arrow{stroke:#92a8d8; stroke-width:5; fill:none; marker-end:url(#m)}
+      .note{font:600 18px Arial, sans-serif; fill:#9fd7ff}
+    </style>
+    <marker id="m" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 Z" fill="#92a8d8"/>
+    </marker>
+  </defs>
+  <rect width="1400" height="820" fill="url(#bg)"/>
+  <text x="80" y="92" class="title">Supabase AI &amp; Vectors Workflow</text>
+  <text x="80" y="130" class="sub">문서 수집, 임베딩, pgvector 저장, 하이브리드 검색, Edge Functions 응답 조립</text>
+
+  <rect x="80" y="220" width="250" height="150" class="box"/>
+  <text x="205" y="270" text-anchor="middle" class="label">문서 / 이벤트</text>
+  <text x="205" y="305" text-anchor="middle" class="small">PDF, FAQ, 제품 문서</text>
+  <text x="205" y="332" text-anchor="middle" class="small">업로드 / 변경 감지</text>
+
+  <rect x="410" y="220" width="250" height="150" class="box2"/>
+  <text x="535" y="270" text-anchor="middle" class="label">Edge Functions</text>
+  <text x="535" y="305" text-anchor="middle" class="small">전처리, 분할, 정제</text>
+  <text x="535" y="332" text-anchor="middle" class="small">권한, 라우팅, 후처리</text>
+
+  <rect x="740" y="220" width="250" height="150" class="box"/>
+  <text x="865" y="270" text-anchor="middle" class="label">임베딩 생성</text>
+  <text x="865" y="305" text-anchor="middle" class="small">API / 오픈소스 모델</text>
+  <text x="865" y="332" text-anchor="middle" class="small">벡터화 + 메타데이터</text>
+
+  <rect x="1070" y="220" width="250" height="150" class="box3"/>
+  <text x="1195" y="270" text-anchor="middle" class="label">pgvector 저장</text>
+  <text x="1195" y="305" text-anchor="middle" class="small">semantic + keyword</text>
+  <text x="1195" y="332" text-anchor="middle" class="small">hybrid search 준비</text>
+
+  <path d="M330 295 L410 295" class="arrow"/>
+  <path d="M660 295 L740 295" class="arrow"/>
+  <path d="M990 295 L1070 295" class="arrow"/>
+
+  <rect x="250" y="500" width="900" height="180" class="box2"/>
+  <text x="700" y="550" text-anchor="middle" class="label">검색 요청 → 하이브리드 검색 → 재랭킹 → 응답</text>
+  <text x="700" y="590" text-anchor="middle" class="small">semantic search + keyword search + metadata filter</text>
+  <text x="700" y="620" text-anchor="middle" class="small">Edge Functions에서 응답 조립과 권한 검사를 분리</text>
+  <text x="700" y="650" text-anchor="middle" class="note">실무 포인트: 벡터만 보지 말고 검색 품질과 운영성을 같이 설계</text>
+
+  <path d="M1195 370 L1195 440 L700 440 L700 500" class="arrow"/>
+  <path d="M535 370 L535 440 L700 440" class="arrow"/>
+</svg>

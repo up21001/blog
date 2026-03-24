@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Groq Workflow 2026</title>
+  <desc id="desc">Workflow diagram for Groq inference API, OpenAI compatibility, responses API, and production metrics.</desc>
+  <defs>
+    <linearGradient id="bg3" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f0fdf4"/>
+      <stop offset="100%" stop-color="#dcfce7"/>
+    </linearGradient>
+    <filter id="shadow3" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#166534" flood-opacity="0.15"/>
+    </filter>
+    <marker id="arrow3" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#16a34a"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bg3)"/>
+  <text x="70" y="88" font-size="38" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#166534">Groq Workflow</text>
+  <text x="70" y="124" font-size="20" font-family="Segoe UI, Arial, sans-serif" fill="#16a34a">Fast LLM inference with OpenAI-compatible APIs and metrics</text>
+
+  <rect x="80" y="190" rx="24" ry="24" width="210" height="120" fill="#fff" stroke="#86efac" filter="url(#shadow3)"/>
+  <text x="130" y="245" font-size="30" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#166534">App</text>
+  <text x="106" y="278" font-size="18" font-family="Segoe UI, Arial, sans-serif" fill="#16a34a">OpenAI SDK</text>
+
+  <rect x="360" y="140" rx="28" ry="28" width="480" height="360" fill="#fff" stroke="#22c55e" stroke-width="2" filter="url(#shadow3)"/>
+  <text x="545" y="196" font-size="34" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#166534">Groq</text>
+
+  <rect x="405" y="228" rx="18" ry="18" width="160" height="90" fill="#f0fdf4" stroke="#86efac"/>
+  <text x="430" y="280" font-size="24" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#16a34a">Responses</text>
+
+  <rect x="615" y="228" rx="18" ry="18" width="160" height="90" fill="#f0fdf4" stroke="#86efac"/>
+  <text x="652" y="280" font-size="24" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#16a34a">Models</text>
+
+  <rect x="405" y="350" rx="18" ry="18" width="160" height="90" fill="#f0fdf4" stroke="#86efac"/>
+  <text x="433" y="392" font-size="22" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#16a34a">Metrics</text>
+  <text x="435" y="418" font-size="18" font-family="Segoe UI, Arial, sans-serif" fill="#16a34a">observability</text>
+
+  <rect x="615" y="350" rx="18" ry="18" width="160" height="90" fill="#f0fdf4" stroke="#86efac"/>
+  <text x="644" y="392" font-size="22" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#16a34a">Latency</text>
+  <text x="640" y="418" font-size="18" font-family="Segoe UI, Arial, sans-serif" fill="#16a34a">fast path</text>
+
+  <rect x="920" y="190" rx="24" ry="24" width="210" height="120" fill="#fff" stroke="#86efac" filter="url(#shadow3)"/>
+  <text x="970" y="246" font-size="28" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#166534">Output</text>
+  <text x="942" y="276" font-size="18" font-family="Segoe UI, Arial, sans-serif" fill="#16a34a">streaming text</text>
+
+  <path d="M290 250 C325 250, 330 250, 360 250" fill="none" stroke="#16a34a" stroke-width="4" marker-end="url(#arrow3)"/>
+  <path d="M840 250 C875 250, 890 250, 920 250" fill="none" stroke="#16a34a" stroke-width="4" marker-end="url(#arrow3)"/>
+  <path d="M485 318 C485 328, 485 338, 485 350" fill="none" stroke="#16a34a" stroke-width="3" marker-end="url(#arrow3)"/>
+  <path d="M695 318 C695 328, 695 338, 695 350" fill="none" stroke="#16a34a" stroke-width="3" marker-end="url(#arrow3)"/>
+</svg>

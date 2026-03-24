@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+    <style>
+      .title { font: 700 52px Arial, sans-serif; fill: #f8fafc; }
+      .sub { font: 400 22px Arial, sans-serif; fill: #cbd5e1; }
+      .box { fill: rgba(30, 41, 59, 0.94); stroke: #60a5fa; stroke-width: 2; rx: 18; }
+      .lbl { font: 700 22px Arial, sans-serif; fill: #e2e8f0; }
+      .txt { font: 400 17px Arial, sans-serif; fill: #cbd5e1; }
+      .arrow { stroke: #94a3b8; stroke-width: 5; fill: none; marker-end: url(#m); }
+      .pill { fill: #2563eb; }
+      .pilltxt { font: 700 16px Arial, sans-serif; fill: white; }
+    </style>
+    <marker id="m" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect x="80" y="70" width="250" height="38" rx="19" class="pill"/>
+  <text x="205" y="95" text-anchor="middle" class="pilltxt">RETRIEVAL METRICS</text>
+  <text x="80" y="180" class="title">Retrieval Quality Metrics</text>
+  <text x="80" y="220" class="sub">Precision, recall, MRR, and nDCG for RAG and search</text>
+
+  <rect x="80" y="300" width="190" height="140" class="box"/>
+  <text x="175" y="348" text-anchor="middle" class="lbl">Query set</text>
+  <text x="175" y="378" text-anchor="middle" class="txt">Real user questions</text>
+
+  <rect x="315" y="300" width="190" height="140" class="box"/>
+  <text x="410" y="348" text-anchor="middle" class="lbl">Relevant docs</text>
+  <text x="410" y="378" text-anchor="middle" class="txt">Ground truth labels</text>
+
+  <rect x="550" y="300" width="190" height="140" class="box"/>
+  <text x="645" y="348" text-anchor="middle" class="lbl">Metric run</text>
+  <text x="645" y="378" text-anchor="middle" class="txt">P@K, R@K, MRR</text>
+
+  <rect x="785" y="300" width="335" height="140" class="box"/>
+  <text x="952" y="348" text-anchor="middle" class="lbl">Decision</text>
+  <text x="952" y="378" text-anchor="middle" class="txt">Tune retrieval, reranking, or prompt</text>
+
+  <path class="arrow" d="M 270 370 L 305 370"/>
+  <path class="arrow" d="M 505 370 L 540 370"/>
+  <path class="arrow" d="M 740 370 L 775 370"/>
+</svg>
+

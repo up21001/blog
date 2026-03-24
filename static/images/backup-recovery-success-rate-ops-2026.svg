@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#14532d"/>
+    </linearGradient>
+    <marker id="ar" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#86efac"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect x="40" y="36" width="520" height="558" rx="16" fill="#111827" stroke="#22c55e" stroke-opacity="0.5"/>
+  <text x="72" y="100" fill="#f8fafc" font-size="32" font-family="Segoe UI, Malgun Gothic, sans-serif" font-weight="700">복구 성공률 중심 백업 운영</text>
+  <text x="72" y="148" fill="#86efac" font-size="20" font-family="Segoe UI, Malgun Gothic, sans-serif">RPO/RTO · 3-2-1 · 리허설 = 진짜 KPI</text>
+  <line x1="72" y1="172" x2="528" y2="172" stroke="#334155"/>
+  <text x="72" y="220" fill="#cbd5e1" font-size="17" font-family="Segoe UI, Malgun Gothic, sans-serif">백업 잡 성공보다 복구 시나리오 통과가 1차 지표.</text>
+  <text x="72" y="258" fill="#94a3b8" font-size="16" font-family="Segoe UI, Malgun Gothic, sans-serif">불변 사본 · 키 분리 · 월간 부분 복구.</text>
+  <rect x="72" y="300" width="200" height="44" rx="8" fill="#14532d" stroke="#22c55e"/>
+  <text x="92" y="330" fill="#dcfce7" font-size="15" font-family="Segoe UI, sans-serif">RPO / RTO</text>
+  <rect x="288" y="300" width="200" height="44" rx="8" fill="#14532d" stroke="#22c55e"/>
+  <text x="318" y="330" fill="#dcfce7" font-size="15" font-family="Segoe UI, sans-serif">3-2-1 + WORM</text>
+  <rect x="72" y="368" width="416" height="44" rx="8" fill="#1e293b" stroke="#64748b"/>
+  <text x="92" y="398" fill="#e2e8f0" font-size="15" font-family="Segoe UI, Malgun Gothic, sans-serif">월 리허설 · 분기 풀 복구</text>
+  <rect x="72" y="436" width="416" height="44" rx="8" fill="#1e293b" stroke="#64748b"/>
+  <text x="92" y="466" fill="#e2e8f0" font-size="15" font-family="Segoe UI, Malgun Gothic, sans-serif">런북·ACL·키 동기화</text>
+  <rect x="600" y="36" width="560" height="558" rx="16" fill="#0c1222" stroke="#334155"/>
+  <text x="632" y="88" fill="#94a3b8" font-size="18" font-family="Segoe UI, sans-serif">Recovery loop</text>
+  <rect x="640" y="120" width="120" height="56" rx="10" fill="#1e3a5f" stroke="#60a5fa"/>
+  <text x="668" y="154" fill="#dbeafe" font-size="15" font-family="Segoe UI, sans-serif">Backup</text>
+  <rect x="820" y="120" width="120" height="56" rx="10" fill="#1e3a5f" stroke="#60a5fa"/>
+  <text x="838" y="154" fill="#dbeafe" font-size="15" font-family="Segoe UI, sans-serif">Verify</text>
+  <rect x="1000" y="120" width="120" height="56" rx="10" fill="#1e3a5f" stroke="#60a5fa"/>
+  <text x="1012" y="154" fill="#dbeafe" font-size="15" font-family="Segoe UI, sans-serif">Restore</text>
+  <line x1="760" y1="148" x2="818" y2="148" stroke="#60a5fa" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="940" y1="148" x2="998" y2="148" stroke="#60a5fa" stroke-width="2" marker-end="url(#ar)"/>
+  <path d="M1060 176 L1060 280 L700 280 L700 188" fill="none" stroke="#86efac" stroke-width="2" marker-end="url(#ar)"/>
+  <rect x="640" y="320" width="480" height="220" rx="12" fill="#111827" stroke="#475569"/>
+  <text x="660" y="360" fill="#f1f5f9" font-size="17" font-family="Segoe UI, Malgun Gothic, sans-serif" font-weight="600">성공 정의</text>
+  <text x="660" y="398" fill="#cbd5e1" font-size="15" font-family="Segoe UI, Malgun Gothic, sans-serif">· RTO 내 복구 완료</text>
+  <text x="660" y="428" fill="#cbd5e1" font-size="15" font-family="Segoe UI, Malgun Gothic, sans-serif">· 스모크 테스트 통과</text>
+  <text x="660" y="458" fill="#cbd5e1" font-size="15" font-family="Segoe UI, Malgun Gothic, sans-serif">· 문서 없이 재현 가능</text>
+  <text x="660" y="498" fill="#86efac" font-size="14" font-family="Segoe UI, Malgun Gothic, sans-serif">백업 성공 로그는 참고용, 리허설이 본증명</text>
+</svg>

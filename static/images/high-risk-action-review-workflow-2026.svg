@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f5f0ec"/>
+      <stop offset="100%" stop-color="#eef3f9"/>
+    </linearGradient>
+    <style>
+      .title{font:700 40px Arial,sans-serif;fill:#1a2233}
+      .sub{font:400 22px Arial,sans-serif;fill:#4b586f}
+      .box{fill:#fff;stroke:#263449;stroke-width:3;rx:18;ry:18}
+      .label{font:700 22px Arial,sans-serif;fill:#1a2233}
+      .small{font:400 18px Arial,sans-serif;fill:#4b586f}
+      .arrow{stroke:#263449;stroke-width:4;fill:none;marker-end:url(#m)}
+      .pill{fill:#1a2233;rx:999;ry:999}
+      .pillText{font:700 18px Arial,sans-serif;fill:#fff}
+    </style>
+    <marker id="m" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 z" fill="#263449"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <text x="60" y="68" class="title">High-Risk Action Review</text>
+  <text x="60" y="106" class="sub">Review before delete, send, pay, or change access</text>
+  <rect x="60" y="140" width="170" height="38" class="pill"/>
+  <text x="88" y="166" class="pillText">workflow</text>
+
+  <rect class="box" x="70" y="230" width="180" height="110"/>
+  <text x="120" y="274" class="label">Agent</text>
+  <text x="98" y="304" class="small">Proposes action</text>
+  <rect class="box" x="330" y="230" width="220" height="110"/>
+  <text x="370" y="274" class="label">Risk Analyzer</text>
+  <text x="352" y="304" class="small">Score and classify</text>
+  <rect class="box" x="635" y="190" width="200" height="110"/>
+  <text x="670" y="234" class="label">Review UI</text>
+  <text x="652" y="264" class="small">Explain impact</text>
+  <rect class="box" x="635" y="340" width="200" height="110"/>
+  <text x="674" y="384" class="label">Human</text>
+  <text x="658" y="414" class="small">Approve or reject</text>
+  <rect class="box" x="915" y="260" width="180" height="110"/>
+  <text x="950" y="304" class="label">Audit Log</text>
+  <text x="941" y="334" class="small">Store decision</text>
+  <path class="arrow" d="M250 285 L330 285"/>
+  <path class="arrow" d="M550 285 L635 245"/>
+  <path class="arrow" d="M735 300 L735 340"/>
+  <path class="arrow" d="M835 295 L915 315"/>
+</svg>

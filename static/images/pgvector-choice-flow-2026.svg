@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">pgvector choice flow 2026</title>
+  <desc id="desc">Decision flow for choosing pgvector when PostgreSQL already exists and vectors should stay inside the same database.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#08101a"/>
+      <stop offset="100%" stop-color="#16233f"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#13213a"/>
+      <stop offset="100%" stop-color="#101829"/>
+    </linearGradient>
+    <style>
+      .title { font: 700 42px/1.2 'Segoe UI', Arial, sans-serif; fill: #f7fbff; }
+      .sub { font: 400 20px/1.5 'Segoe UI', Arial, sans-serif; fill: #c8d4e5; }
+      .box { fill: url(#card); stroke: #4b5e86; stroke-width: 2; rx: 24; }
+      .label { font: 700 22px/1.2 'Segoe UI', Arial, sans-serif; fill: #f6f9ff; }
+      .text { font: 400 18px/1.5 'Segoe UI', Arial, sans-serif; fill: #d5e0ee; }
+      .yes { fill: #c4b5fd; font: 700 18px/1.2 'Segoe UI', Arial, sans-serif; }
+      .no { fill: #f9a8d4; font: 700 18px/1.2 'Segoe UI', Arial, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 z" fill="#c4b5fd"/>
+    </marker>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <text x="90" y="110" class="title">pgvector decision flow</text>
+  <text x="90" y="150" class="sub">Choose it when PostgreSQL is already your source of truth</text>
+
+  <rect x="100" y="240" width="380" height="170" class="box"/>
+  <text x="135" y="292" class="label">Already on PostgreSQL?</text>
+  <text x="135" y="332" class="text">If the app already stores business</text>
+  <text x="135" y="362" class="text">data in Postgres, pgvector is a strong fit.</text>
+
+  <rect x="580" y="240" width="380" height="170" class="box"/>
+  <text x="615" y="292" class="label">Need SQL + joins + filters?</text>
+  <text x="615" y="332" class="text">Keep embeddings close to relational</text>
+  <text x="615" y="362" class="text">data and query everything together.</text>
+
+  <rect x="1060" y="240" width="380" height="170" class="box"/>
+  <text x="1095" y="292" class="label">Want simpler ops?</text>
+  <text x="1095" y="332" class="text">Avoid running a separate vector DB</text>
+  <text x="1095" y="362" class="text">when the current stack can handle it.</text>
+
+  <rect x="300" y="520" width="1000" height="170" rx="26" fill="#111c30" stroke="#c4b5fd" stroke-width="2"/>
+  <text x="345" y="575" class="label">Choose pgvector</text>
+  <text x="345" y="616" class="text">Best fit for teams that want embeddings inside PostgreSQL and a simpler operational model.</text>
+  <text x="345" y="648" class="text">If you need a dedicated vector platform later, compare Qdrant, Weaviate, or Upstash Vector.</text>
+
+  <line x1="480" y1="325" x2="580" y2="325" stroke="#c4b5fd" stroke-width="5" marker-end="url(#arrow)"/>
+  <line x1="960" y1="325" x2="1060" y2="325" stroke="#c4b5fd" stroke-width="5" marker-end="url(#arrow)"/>
+  <line x1="1250" y1="410" x2="1250" y2="520" stroke="#c4b5fd" stroke-width="5" marker-end="url(#arrow)"/>
+  <text x="500" y="305" class="yes">Yes</text>
+  <text x="980" y="305" class="yes">Yes</text>
+  <text x="1200" y="305" class="yes">Yes</text>
+  <text x="230" y="475" class="no">If no</text>
+  <text x="720" y="475" class="no">If no</text>
+  <text x="1180" y="475" class="no">If no</text>
+</svg>

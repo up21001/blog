@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <text x="60" y="82" fill="#f8fafc" font-family="Arial, sans-serif" font-size="40" font-weight="700">AI Cost Dashboard Workflow</text>
+  <text x="60" y="120" fill="#cbd5e1" font-family="Arial, sans-serif" font-size="20">SDK / Gateway / Batch events to dashboard</text>
+  <g fill="#0ea5e9" stroke="#38bdf8" stroke-width="2">
+    <rect x="70" y="220" width="170" height="88" rx="18"/><rect x="300" y="220" width="170" height="88" rx="18"/><rect x="530" y="220" width="170" height="88" rx="18"/><rect x="760" y="220" width="170" height="88" rx="18"/><rect x="990" y="220" width="140" height="88" rx="18"/>
+  </g>
+  <g fill="#e2e8f0" font-family="Arial, sans-serif" font-size="20" font-weight="700" text-anchor="middle">
+    <text x="155" y="268">SDK Events</text><text x="385" y="268">Gateway Logs</text><text x="615" y="268">Token Aggregation</text><text x="845" y="268">Cost Metrics</text><text x="1060" y="268">Dashboard</text>
+  </g>
+  <g stroke="#94a3b8" stroke-width="5" fill="none" marker-end="url(#arrow)"><path d="M240 264 L300 264"/><path d="M470 264 L530 264"/><path d="M700 264 L760 264"/><path d="M930 264 L990 264"/></g>
+  <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#94a3b8"/></marker></defs>
+  <rect x="70" y="410" width="1060" height="120" rx="20" fill="#111827" stroke="#334155"/>
+  <text x="110" y="460" fill="#f8fafc" font-family="Arial, sans-serif" font-size="22" font-weight="700">What you watch</text>
+  <text x="110" y="495" fill="#cbd5e1" font-family="Arial, sans-serif" font-size="18">Cost, tokens, success rate, retries, model mix, team spend, spikes</text>
+</svg>
+

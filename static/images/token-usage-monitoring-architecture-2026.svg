@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#111827"/>
+  <text x="60" y="76" fill="#f8fafc" font-family="Arial, sans-serif" font-size="38" font-weight="700">Token Usage Monitoring Architecture</text>
+  <g fill="#2563eb" stroke="#93c5fd" stroke-width="2">
+    <rect x="70" y="180" width="220" height="100" rx="18"/><rect x="340" y="180" width="220" height="100" rx="18"/><rect x="610" y="180" width="220" height="100" rx="18"/><rect x="880" y="180" width="250" height="100" rx="18"/>
+  </g>
+  <g fill="#e2e8f0" font-family="Arial, sans-serif" font-size="19" font-weight="700" text-anchor="middle">
+    <text x="180" y="224">SDK / Proxy</text><text x="450" y="224">Event Store</text><text x="720" y="224">Metrics Job</text><text x="1005" y="224">Monitor UI</text>
+  </g>
+  <g stroke="#94a3b8" stroke-width="5" fill="none" marker-end="url(#c)"><path d="M290 230 L340 230"/><path d="M560 230 L610 230"/><path d="M830 230 L880 230"/></g>
+  <defs><marker id="c" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#94a3b8"/></marker></defs>
+  <rect x="70" y="340" width="1060" height="160" rx="22" fill="#0f172a" stroke="#334155"/>
+  <text x="110" y="390" fill="#f8fafc" font-family="Arial, sans-serif" font-size="20" font-weight="700">Key dimensions</text>
+  <text x="110" y="426" fill="#cbd5e1" font-family="Arial, sans-serif" font-size="18">model, user, endpoint, team, prompt, completion, retry, batch</text>
+  <text x="110" y="462" fill="#cbd5e1" font-family="Arial, sans-serif" font-size="18">Store raw events first, then aggregate for reporting</text>
+</svg>
+

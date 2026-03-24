@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">MCP Server Operations Workflow</title>
+  <desc id="desc">Workflow for MCP server operations: allowlist, schema lock, failure handling, audit.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#07111f"/>
+      <stop offset="100%" stop-color="#10283f"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" rx="36" fill="url(#bg)"/>
+  <text x="64" y="88" fill="#f5f7fb" font-family="Inter, Arial, sans-serif" font-size="40" font-weight="700">MCP Server Operations</text>
+  <text x="64" y="126" fill="#9fb6d6" font-family="Inter, Arial, sans-serif" font-size="20">Workflow: allowlist -> schema -> failure handling -> audit</text>
+  <g fill="#0f2740" stroke="#7cc8ff" stroke-width="2">
+    <rect x="70" y="210" width="220" height="120" rx="22"/>
+    <rect x="340" y="210" width="220" height="120" rx="22"/>
+    <rect x="610" y="210" width="220" height="120" rx="22"/>
+    <rect x="880" y="210" width="250" height="120" rx="22"/>
+  </g>
+  <g fill="#eaf2ff" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="600">
+    <text x="110" y="258">1. Allowlist</text>
+    <text x="380" y="258">2. Schema Lock</text>
+    <text x="648" y="258">3. Failure Rules</text>
+    <text x="934" y="258">4. Audit Trail</text>
+  </g>
+  <g stroke="#7cc8ff" stroke-width="5" fill="none" stroke-linecap="round">
+    <path d="M290 270 H330"/>
+    <path d="M560 270 H600"/>
+    <path d="M830 270 H870"/>
+  </g>
+  <g fill="#9fb6d6" font-family="Inter, Arial, sans-serif" font-size="18">
+    <text x="92" y="304">Open only what is needed</text>
+    <text x="356" y="304">Keep inputs narrow</text>
+    <text x="628" y="304">Retry or block explicitly</text>
+    <text x="920" y="304">Keep a change record</text>
+  </g>
+</svg>

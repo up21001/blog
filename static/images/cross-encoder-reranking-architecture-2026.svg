@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#111827"/>
+  <text x="70" y="90" fill="#f8fafc" font-family="Arial, sans-serif" font-size="42" font-weight="700">Cross-Encoder Architecture</text>
+  <rect x="70" y="185" width="210" height="100" rx="18" fill="#2563eb"/>
+  <text x="175" y="228" text-anchor="middle" fill="#fff" font-family="Arial, sans-serif" font-size="20">Retriever</text>
+  <text x="175" y="256" text-anchor="middle" fill="#dbeafe" font-family="Arial, sans-serif" font-size="16">candidate set</text>
+  <rect x="330" y="185" width="240" height="100" rx="18" fill="#7c3aed"/>
+  <text x="450" y="228" text-anchor="middle" fill="#fff" font-family="Arial, sans-serif" font-size="20">Cross-Encoder</text>
+  <text x="450" y="256" text-anchor="middle" fill="#ede9fe" font-family="Arial, sans-serif" font-size="16">pairwise scoring</text>
+  <rect x="620" y="185" width="220" height="100" rx="18" fill="#0ea5e9"/>
+  <text x="730" y="228" text-anchor="middle" fill="#fff" font-family="Arial, sans-serif" font-size="20">Ranked top-k</text>
+  <text x="730" y="256" text-anchor="middle" fill="#e0f2fe" font-family="Arial, sans-serif" font-size="16">best contexts</text>
+  <rect x="900" y="185" width="240" height="100" rx="18" fill="#22c55e"/>
+  <text x="1020" y="228" text-anchor="middle" fill="#111827" font-family="Arial, sans-serif" font-size="20">LLM answer</text>
+  <text x="1020" y="256" text-anchor="middle" fill="#dcfce7" font-family="Arial, sans-serif" font-size="16">final output</text>
+  <line x1="280" y1="235" x2="330" y2="235" stroke="#e2e8f0" stroke-width="4"/>
+  <line x1="570" y1="235" x2="620" y2="235" stroke="#e2e8f0" stroke-width="4"/>
+  <line x1="840" y1="235" x2="900" y2="235" stroke="#e2e8f0" stroke-width="4"/>
+  <rect x="70" y="345" width="1060" height="165" rx="22" fill="#0f172a" stroke="#334155"/>
+  <text x="100" y="390" fill="#f8fafc" font-family="Arial, sans-serif" font-size="22" font-weight="700">Tradeoff</text>
+  <text x="100" y="430" fill="#cbd5e1" font-family="Arial, sans-serif" font-size="18">higher precision, higher latency, higher compute cost</text>
+  <text x="100" y="460" fill="#cbd5e1" font-family="Arial, sans-serif" font-size="18">best applied as a narrow quality gate after retrieval</text>
+</svg>

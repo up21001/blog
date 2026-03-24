@@ -1,0 +1,119 @@
+<svg width="800" height="450" viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg" font-family="'Malgun Gothic', sans-serif">
+  <rect width="800" height="450" fill="#F9FAFB" rx="12"/>
+  <text x="400" y="38" text-anchor="middle" font-size="20" font-weight="bold" fill="#1F2937">MongoDB 아키텍처 개요</text>
+
+  <!-- 클라이언트 -->
+  <rect x="30" y="60" width="140" height="50" fill="#DBEAFE" stroke="#3B82F6" stroke-width="2" rx="8"/>
+  <text x="100" y="82" text-anchor="middle" font-size="12" font-weight="bold" fill="#1D4ED8">Node.js / Python</text>
+  <text x="100" y="99" text-anchor="middle" font-size="11" fill="#3B82F6">드라이버 클라이언트</text>
+
+  <!-- 화살표 -->
+  <line x1="170" y1="85" x2="220" y2="85" stroke="#6B7280" stroke-width="2" marker-end="url(#arrow)"/>
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#6B7280"/>
+    </marker>
+  </defs>
+
+  <!-- MongoDB 서버 -->
+  <rect x="220" y="50" width="180" height="70" fill="#D1FAE5" stroke="#10B981" stroke-width="2" rx="8"/>
+  <text x="310" y="75" text-anchor="middle" font-size="13" font-weight="bold" fill="#065F46">mongod 프로세스</text>
+  <text x="310" y="93" text-anchor="middle" font-size="11" fill="#10B981">쿼리 라우팅 · 인덱스</text>
+  <text x="310" y="108" text-anchor="middle" font-size="10" fill="#065F46">WiredTiger 스토리지 엔진</text>
+
+  <!-- 화살표 -->
+  <line x1="400" y1="85" x2="450" y2="85" stroke="#6B7280" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- 데이터베이스 -->
+  <rect x="450" y="50" width="160" height="70" fill="#FEF3C7" stroke="#F59E0B" stroke-width="2" rx="8"/>
+  <text x="530" y="75" text-anchor="middle" font-size="13" font-weight="bold" fill="#92400E">Database</text>
+  <text x="530" y="93" text-anchor="middle" font-size="11" fill="#B45309">Collection 1</text>
+  <text x="530" y="108" text-anchor="middle" font-size="11" fill="#B45309">Collection 2</text>
+
+  <!-- 화살표 -->
+  <line x1="610" y1="85" x2="660" y2="85" stroke="#6B7280" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- 도큐먼트 -->
+  <rect x="660" y="50" width="120" height="70" fill="#EDE9FE" stroke="#8B5CF6" stroke-width="2" rx="8"/>
+  <text x="720" y="75" text-anchor="middle" font-size="13" font-weight="bold" fill="#5B21B6">Document</text>
+  <text x="720" y="93" text-anchor="middle" font-size="11" fill="#7C3AED">BSON 형식</text>
+  <text x="720" y="108" text-anchor="middle" font-size="11" fill="#7C3AED">유연한 스키마</text>
+
+  <!-- CRUD 섹션 -->
+  <text x="400" y="148" text-anchor="middle" font-size="14" font-weight="bold" fill="#374151">핵심 CRUD 작업</text>
+
+  <rect x="30" y="158" width="170" height="80" fill="#EFF6FF" stroke="#BFDBFE" stroke-width="1" rx="8"/>
+  <text x="115" y="178" text-anchor="middle" font-size="12" font-weight="bold" fill="#1D4ED8">Create</text>
+  <text x="115" y="196" text-anchor="middle" font-size="10" fill="#374151">insertOne()</text>
+  <text x="115" y="212" text-anchor="middle" font-size="10" fill="#374151">insertMany()</text>
+  <text x="115" y="228" text-anchor="middle" font-size="10" fill="#6B7280">_id 자동 생성 (ObjectId)</text>
+
+  <rect x="215" y="158" width="170" height="80" fill="#ECFDF5" stroke="#A7F3D0" stroke-width="1" rx="8"/>
+  <text x="300" y="178" text-anchor="middle" font-size="12" font-weight="bold" fill="#065F46">Read</text>
+  <text x="300" y="196" text-anchor="middle" font-size="10" fill="#374151">find() · findOne()</text>
+  <text x="300" y="212" text-anchor="middle" font-size="10" fill="#374151">$eq · $gt · $in · $regex</text>
+  <text x="300" y="228" text-anchor="middle" font-size="10" fill="#6B7280">프로젝션으로 필드 선택</text>
+
+  <rect x="400" y="158" width="170" height="80" fill="#FEF9C3" stroke="#FDE68A" stroke-width="1" rx="8"/>
+  <text x="485" y="178" text-anchor="middle" font-size="12" font-weight="bold" fill="#92400E">Update</text>
+  <text x="485" y="196" text-anchor="middle" font-size="10" fill="#374151">updateOne() · updateMany()</text>
+  <text x="485" y="212" text-anchor="middle" font-size="10" fill="#374151">$set · $inc · $push</text>
+  <text x="485" y="228" text-anchor="middle" font-size="10" fill="#6B7280">upsert 옵션 지원</text>
+
+  <rect x="585" y="158" width="185" height="80" fill="#F5F3FF" stroke="#DDD6FE" stroke-width="1" rx="8"/>
+  <text x="677" y="178" text-anchor="middle" font-size="12" font-weight="bold" fill="#5B21B6">Delete</text>
+  <text x="677" y="196" text-anchor="middle" font-size="10" fill="#374151">deleteOne() · deleteMany()</text>
+  <text x="677" y="212" text-anchor="middle" font-size="10" fill="#374151">필터 조건 지정</text>
+  <text x="677" y="228" text-anchor="middle" font-size="10" fill="#6B7280">논리 삭제 패턴 권장</text>
+
+  <!-- 집계 파이프라인 -->
+  <text x="400" y="266" text-anchor="middle" font-size="14" font-weight="bold" fill="#374151">집계 파이프라인 (Aggregation Pipeline)</text>
+
+  <rect x="30" y="276" width="100" height="42" fill="#DBEAFE" stroke="#3B82F6" stroke-width="1.5" rx="6"/>
+  <text x="80" y="294" text-anchor="middle" font-size="11" font-weight="bold" fill="#1D4ED8">$match</text>
+  <text x="80" y="310" text-anchor="middle" font-size="10" fill="#3B82F6">필터링</text>
+  <line x1="130" y1="297" x2="160" y2="297" stroke="#9CA3AF" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <rect x="160" y="276" width="100" height="42" fill="#D1FAE5" stroke="#10B981" stroke-width="1.5" rx="6"/>
+  <text x="210" y="294" text-anchor="middle" font-size="11" font-weight="bold" fill="#065F46">$group</text>
+  <text x="210" y="310" text-anchor="middle" font-size="10" fill="#10B981">그룹화·집계</text>
+  <line x1="260" y1="297" x2="290" y2="297" stroke="#9CA3AF" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <rect x="290" y="276" width="100" height="42" fill="#FEF3C7" stroke="#F59E0B" stroke-width="1.5" rx="6"/>
+  <text x="340" y="294" text-anchor="middle" font-size="11" font-weight="bold" fill="#92400E">$sort</text>
+  <text x="340" y="310" text-anchor="middle" font-size="10" fill="#B45309">정렬</text>
+  <line x1="390" y1="297" x2="420" y2="297" stroke="#9CA3AF" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <rect x="420" y="276" width="100" height="42" fill="#EDE9FE" stroke="#8B5CF6" stroke-width="1.5" rx="6"/>
+  <text x="470" y="294" text-anchor="middle" font-size="11" font-weight="bold" fill="#5B21B6">$limit</text>
+  <text x="470" y="310" text-anchor="middle" font-size="10" fill="#7C3AED">페이징</text>
+  <line x1="520" y1="297" x2="550" y2="297" stroke="#9CA3AF" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <rect x="550" y="276" width="100" height="42" fill="#F3F4F6" stroke="#6B7280" stroke-width="1.5" rx="6"/>
+  <text x="600" y="294" text-anchor="middle" font-size="11" font-weight="bold" fill="#374151">$project</text>
+  <text x="600" y="310" text-anchor="middle" font-size="10" fill="#4B5563">출력 형식</text>
+  <line x1="650" y1="297" x2="680" y2="297" stroke="#9CA3AF" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <rect x="680" y="276" width="90" height="42" fill="#D1FAE5" stroke="#10B981" stroke-width="1.5" rx="6"/>
+  <text x="725" y="297" text-anchor="middle" font-size="11" font-weight="bold" fill="#065F46">결과</text>
+  <text x="725" y="312" text-anchor="middle" font-size="10" fill="#10B981">배열 반환</text>
+
+  <!-- 인덱스 종류 -->
+  <rect x="30" y="338" width="740" height="95" fill="white" stroke="#E5E7EB" stroke-width="1" rx="10"/>
+  <text x="400" y="358" text-anchor="middle" font-size="13" font-weight="bold" fill="#374151">주요 인덱스 유형</text>
+  <rect x="50" y="368" width="150" height="50" fill="#EFF6FF" stroke="#BFDBFE" stroke-width="1" rx="6"/>
+  <text x="125" y="389" text-anchor="middle" font-size="11" font-weight="bold" fill="#1D4ED8">단일 필드 인덱스</text>
+  <text x="125" y="406" text-anchor="middle" font-size="10" fill="#3B82F6">createIndex({field: 1})</text>
+
+  <rect x="220" y="368" width="150" height="50" fill="#ECFDF5" stroke="#A7F3D0" stroke-width="1" rx="6"/>
+  <text x="295" y="389" text-anchor="middle" font-size="11" font-weight="bold" fill="#065F46">복합 인덱스</text>
+  <text x="295" y="406" text-anchor="middle" font-size="10" fill="#10B981">{a: 1, b: -1}</text>
+
+  <rect x="390" y="368" width="150" height="50" fill="#FEF9C3" stroke="#FDE68A" stroke-width="1" rx="6"/>
+  <text x="465" y="389" text-anchor="middle" font-size="11" font-weight="bold" fill="#92400E">텍스트 인덱스</text>
+  <text x="465" y="406" text-anchor="middle" font-size="10" fill="#B45309">$text 전문 검색</text>
+
+  <rect x="560" y="368" width="190" height="50" fill="#F5F3FF" stroke="#DDD6FE" stroke-width="1" rx="6"/>
+  <text x="655" y="389" text-anchor="middle" font-size="11" font-weight="bold" fill="#5B21B6">TTL 인덱스</text>
+  <text x="655" y="406" text-anchor="middle" font-size="10" fill="#7C3AED">expireAfterSeconds 자동 삭제</text>
+</svg>

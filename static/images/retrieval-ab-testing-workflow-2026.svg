@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#0f172a"/>
+  <text x="70" y="105" fill="#fff" font-family="Arial, sans-serif" font-size="50" font-weight="700">Retrieval A/B Testing</text>
+  <text x="70" y="148" fill="#cbd5e1" font-family="Arial, sans-serif" font-size="22">Baseline vs Candidate</text>
+  <g font-family="Arial, sans-serif" font-size="20" fill="#e2e8f0">
+    <rect x="80" y="240" width="220" height="90" rx="16" fill="#334155"/><text x="130" y="293">Query sample</text>
+    <rect x="360" y="240" width="220" height="90" rx="16" fill="#0f766e"/><text x="408" y="293">Baseline path</text>
+    <rect x="640" y="240" width="220" height="90" rx="16" fill="#7c3aed"/><text x="684" y="293">Candidate path</text>
+    <rect x="920" y="240" width="180" height="90" rx="16" fill="#b45309"/><text x="962" y="293">Compare</text>
+  </g>
+  <g stroke="#94a3b8" stroke-width="5" fill="none">
+    <path d="M300 285h60"/><path d="M580 285h60"/><path d="M860 285h55"/>
+  </g>
+</svg>

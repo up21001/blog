@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#fff8f1"/>
+  <text x="70" y="92" font-family="Segoe UI, Arial" font-size="38" font-weight="700" fill="#4a2e14">Claude Prompt Caching Choice Flow</text>
+  <text x="70" y="130" font-family="Segoe UI, Arial" font-size="20" fill="#8b6d53">Use cache when the same context repeats often</text>
+  <rect x="82" y="228" width="206" height="112" rx="22" fill="#214e72"/>
+  <text x="106" y="272" font-family="Segoe UI, Arial" font-size="24" font-weight="700" fill="#fff">Repeated context?</text>
+  <text x="118" y="304" font-family="Segoe UI, Arial" font-size="15" fill="#dbe9f6">docs, policy, specs</text>
+  <rect x="352" y="182" width="250" height="204" rx="28" fill="#1f8a70"/>
+  <text x="396" y="244" font-family="Segoe UI, Arial" font-size="30" font-weight="700" fill="#fff">Enable Cache</text>
+  <text x="378" y="282" font-family="Segoe UI, Arial" font-size="17" fill="#e7fff7">reuse long context</text>
+  <text x="374" y="312" font-family="Segoe UI, Arial" font-size="17" fill="#e7fff7">optimize repeated calls</text>
+  <rect x="686" y="142" width="234" height="86" rx="20" fill="#d46a2c"/>
+  <text x="734" y="194" font-family="Segoe UI, Arial" font-size="24" font-weight="700" fill="#fff">Low Cost</text>
+  <rect x="686" y="262" width="234" height="86" rx="20" fill="#d46a2c"/>
+  <text x="728" y="314" font-family="Segoe UI, Arial" font-size="24" font-weight="700" fill="#fff">Fast Reply</text>
+  <rect x="686" y="382" width="234" height="86" rx="20" fill="#d46a2c"/>
+  <text x="714" y="434" font-family="Segoe UI, Arial" font-size="24" font-weight="700" fill="#fff">Scale Better</text>
+  <rect x="970" y="228" width="156" height="112" rx="22" fill="#2f6fb0"/>
+  <text x="1002" y="272" font-family="Segoe UI, Arial" font-size="24" font-weight="700" fill="#fff">Ship</text>
+  <text x="988" y="304" font-family="Segoe UI, Arial" font-size="15" fill="#e8f2fb">optimized flow</text>
+  <path d="M288 284 L352 284" stroke="#8a6c54" stroke-width="8" stroke-linecap="round"/>
+  <path d="M602 226 L686 184" stroke="#8a6c54" stroke-width="8" stroke-linecap="round"/>
+  <path d="M602 284 L686 304" stroke="#8a6c54" stroke-width="8" stroke-linecap="round"/>
+  <path d="M602 342 L686 424" stroke="#8a6c54" stroke-width="8" stroke-linecap="round"/>
+  <path d="M920 284 L970 284" stroke="#8a6c54" stroke-width="8" stroke-linecap="round"/>
+</svg>

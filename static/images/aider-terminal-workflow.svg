@@ -1,0 +1,88 @@
+<svg width="800" height="450" viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg" font-family="'Malgun Gothic', sans-serif">
+  <!-- 배경 -->
+  <rect width="800" height="450" fill="#0F172A" rx="12"/>
+  <!-- 제목 -->
+  <text x="400" y="38" text-anchor="middle" font-size="18" font-weight="bold" fill="#F1F5F9">Aider 터미널 AI 페어 프로그래밍 워크플로우</text>
+
+  <!-- 터미널 창 배경 -->
+  <rect x="30" y="55" width="740" height="220" rx="8" fill="#1E293B" stroke="#334155" stroke-width="1.5"/>
+  <!-- 터미널 상단 버튼 -->
+  <circle cx="55" cy="72" r="7" fill="#EF4444"/>
+  <circle cx="75" cy="72" r="7" fill="#F59E0B"/>
+  <circle cx="95" cy="72" r="7" fill="#10B981"/>
+  <text x="400" y="77" text-anchor="middle" font-size="11" fill="#64748B">bash — aider session</text>
+
+  <!-- 터미널 내용 -->
+  <text x="50" y="105" font-size="12" fill="#94A3B8">$</text>
+  <text x="65" y="105" font-size="12" fill="#34D399">pip install aider-chat</text>
+
+  <text x="50" y="125" font-size="12" fill="#94A3B8">$</text>
+  <text x="65" y="125" font-size="12" fill="#34D399">aider --model claude-3-5-sonnet-20241022 main.py utils.py</text>
+
+  <text x="50" y="148" font-size="12" fill="#60A5FA">Aider v0.68 with claude-3-5-sonnet-20241022</text>
+  <text x="50" y="165" font-size="12" fill="#60A5FA">Added main.py, utils.py to the chat</text>
+
+  <text x="50" y="188" font-size="12" fill="#FBBF24">&gt;</text>
+  <text x="65" y="188" font-size="12" fill="#F1F5F9">사용자 인증 모듈에 JWT 토큰 갱신 기능을 추가해줘</text>
+
+  <text x="50" y="208" font-size="12" fill="#34D399">utils.py</text>
+  <text x="120" y="208" font-size="12" fill="#94A3B8">|</text>
+  <text x="130" y="208" font-size="12" fill="#F1F5F9">+42 -3 lines  [Y]es / [N]o / [D]iff?</text>
+
+  <text x="50" y="228" font-size="12" fill="#FBBF24">&gt;</text>
+  <text x="65" y="228" font-size="12" fill="#F1F5F9">y</text>
+  <text x="90" y="228" font-size="12" fill="#34D399">  Applied. Running tests... ✓ All pass</text>
+
+  <text x="50" y="248" font-size="12" fill="#60A5FA">Commit 3f8a2c1 feat: add JWT token refresh to auth module</text>
+
+  <!-- 흐름 단계 박스들 -->
+  <text x="400" y="300" text-anchor="middle" font-size="14" font-weight="bold" fill="#1E293B">Aider 작업 흐름 5단계</text>
+
+  <!-- 단계 1 -->
+  <rect x="30" y="315" width="125" height="80" rx="8" fill="#DBEAFE" stroke="#3B82F6" stroke-width="2"/>
+  <text x="92" y="345" text-anchor="middle" font-size="20" font-weight="bold" fill="#1D4ED8">①</text>
+  <text x="92" y="362" text-anchor="middle" font-size="11" font-weight="bold" fill="#1D4ED8">설치 &amp; 설정</text>
+  <text x="92" y="377" text-anchor="middle" font-size="10" fill="#1E40AF">pip install</text>
+  <text x="92" y="390" text-anchor="middle" font-size="10" fill="#1E40AF">API 키 설정</text>
+
+  <!-- 단계 2 -->
+  <rect x="168" y="315" width="125" height="80" rx="8" fill="#D1FAE5" stroke="#10B981" stroke-width="2"/>
+  <text x="230" y="345" text-anchor="middle" font-size="20" font-weight="bold" fill="#065F46">②</text>
+  <text x="230" y="362" text-anchor="middle" font-size="11" font-weight="bold" fill="#065F46">파일 선택</text>
+  <text x="230" y="377" text-anchor="middle" font-size="10" fill="#065F46">aider file1.py</text>
+  <text x="230" y="390" text-anchor="middle" font-size="10" fill="#065F46">file2.py ...</text>
+
+  <!-- 단계 3 -->
+  <rect x="306" y="315" width="125" height="80" rx="8" fill="#FEF3C7" stroke="#F59E0B" stroke-width="2"/>
+  <text x="368" y="345" text-anchor="middle" font-size="20" font-weight="bold" fill="#92400E">③</text>
+  <text x="368" y="362" text-anchor="middle" font-size="11" font-weight="bold" fill="#92400E">작업 지시</text>
+  <text x="368" y="377" text-anchor="middle" font-size="10" fill="#92400E">자연어로</text>
+  <text x="368" y="390" text-anchor="middle" font-size="10" fill="#92400E">요청 입력</text>
+
+  <!-- 단계 4 -->
+  <rect x="444" y="315" width="125" height="80" rx="8" fill="#EDE9FE" stroke="#8B5CF6" stroke-width="2"/>
+  <text x="506" y="345" text-anchor="middle" font-size="20" font-weight="bold" fill="#4C1D95">④</text>
+  <text x="506" y="362" text-anchor="middle" font-size="11" font-weight="bold" fill="#4C1D95">변경 검토</text>
+  <text x="506" y="377" text-anchor="middle" font-size="10" fill="#4C1D95">diff 확인</text>
+  <text x="506" y="390" text-anchor="middle" font-size="10" fill="#4C1D95">Y/N 결정</text>
+
+  <!-- 단계 5 -->
+  <rect x="582" y="315" width="188" height="80" rx="8" fill="#F3F4F6" stroke="#6B7280" stroke-width="2"/>
+  <text x="676" y="345" text-anchor="middle" font-size="20" font-weight="bold" fill="#374151">⑤</text>
+  <text x="676" y="362" text-anchor="middle" font-size="11" font-weight="bold" fill="#374151">자동 커밋</text>
+  <text x="676" y="377" text-anchor="middle" font-size="10" fill="#4B5563">git commit</text>
+  <text x="676" y="390" text-anchor="middle" font-size="10" fill="#4B5563">자동 생성</text>
+
+  <!-- 화살표 연결 -->
+  <defs>
+    <marker id="arrow2" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#64748B"/>
+    </marker>
+  </defs>
+  <line x1="155" y1="355" x2="166" y2="355" stroke="#64748B" stroke-width="1.5" marker-end="url(#arrow2)"/>
+  <line x1="293" y1="355" x2="304" y2="355" stroke="#64748B" stroke-width="1.5" marker-end="url(#arrow2)"/>
+  <line x1="431" y1="355" x2="442" y2="355" stroke="#64748B" stroke-width="1.5" marker-end="url(#arrow2)"/>
+  <line x1="569" y1="355" x2="580" y2="355" stroke="#64748B" stroke-width="1.5" marker-end="url(#arrow2)"/>
+
+  <text x="400" y="443" text-anchor="middle" font-size="10" fill="#94A3B8">* Aider 공식 문서 기반 | aider.chat</text>
+</svg>

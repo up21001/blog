@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#fff7ed"/>
+  <text x="70" y="84" font-family="Segoe UI, Arial, sans-serif" font-size="42" font-weight="700" fill="#9a3412">Memory Choice Flow</text>
+  <text x="70" y="118" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#7c2d12">what goes to short-term, what survives long-term</text>
+
+  <rect x="70" y="240" width="180" height="110" rx="22" fill="#ffffff" stroke="#fdba74" stroke-width="2"/>
+  <text x="113" y="288" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="700" fill="#c2410c">New Data</text>
+  <text x="103" y="316" font-family="Segoe UI, Arial, sans-serif" font-size="16" fill="#ea580c">prompt / event</text>
+
+  <rect x="300" y="200" width="230" height="190" rx="24" fill="#ffedd5" stroke="#fb923c" stroke-width="2"/>
+  <text x="361" y="252" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="700" fill="#9a3412">Check</text>
+  <text x="335" y="288" font-family="Segoe UI, Arial, sans-serif" font-size="16" fill="#b45309">relevant now?</text>
+  <text x="334" y="316" font-family="Segoe UI, Arial, sans-serif" font-size="16" fill="#b45309">reusable later?</text>
+  <text x="337" y="344" font-family="Segoe UI, Arial, sans-serif" font-size="16" fill="#b45309">sensitive?</text>
+
+  <rect x="585" y="150" width="220" height="120" rx="22" fill="#dbeafe" stroke="#93c5fd" stroke-width="2"/>
+  <text x="626" y="202" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="700" fill="#1d4ed8">Short-term</text>
+  <text x="614" y="232" font-family="Segoe UI, Arial, sans-serif" font-size="16" fill="#2563eb">current context</text>
+
+  <rect x="585" y="320" width="220" height="120" rx="22" fill="#dcfce7" stroke="#86efac" stroke-width="2"/>
+  <text x="640" y="372" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="700" fill="#166534">Long-term</text>
+  <text x="610" y="402" font-family="Segoe UI, Arial, sans-serif" font-size="16" fill="#15803d">profile / memory store</text>
+
+  <rect x="585" y="490" width="220" height="80" rx="22" fill="#fee2e2" stroke="#fca5a5" stroke-width="2"/>
+  <text x="650" y="540" font-family="Segoe UI, Arial, sans-serif" font-size="26" font-weight="700" fill="#991b1b">Forget</text>
+
+  <path d="M250 295 L300 295" stroke="#7c2d12" stroke-width="8" stroke-linecap="round"/>
+  <path d="M530 295 L585 210" stroke="#7c2d12" stroke-width="8" stroke-linecap="round"/>
+  <path d="M530 295 L585 380" stroke="#7c2d12" stroke-width="8" stroke-linecap="round"/>
+  <path d="M530 295 L585 530" stroke="#7c2d12" stroke-width="8" stroke-linecap="round"/>
+</svg>

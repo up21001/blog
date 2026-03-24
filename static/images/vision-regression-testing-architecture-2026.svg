@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#eef4fb"/>
+      <stop offset="100%" stop-color="#dce8f5"/>
+    </linearGradient>
+    <style>
+      .title{font:700 42px Arial,sans-serif;fill:#17212b}
+      .box{fill:#f8fbff;stroke:#6d89a8;stroke-width:3;rx:18;ry:18}
+      .label{font:700 21px Arial,sans-serif;fill:#1f2a35}
+      .small{font:400 17px Arial,sans-serif;fill:#4b5d6c}
+      .arrow{stroke:#6d89a8;stroke-width:5;fill:none;marker-end:url(#m)}
+    </style>
+    <marker id="m" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 Z" fill="#6d89a8"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <text x="60" y="80" class="title">Vision Regression Architecture</text>
+  <rect class="box" x="70" y="170" width="210" height="120"/><text x="175" y="212" text-anchor="middle" class="label">Sample Store</text><text x="175" y="242" text-anchor="middle" class="small">goldens, edge cases</text>
+  <rect class="box" x="330" y="170" width="210" height="120"/><text x="435" y="212" text-anchor="middle" class="label">Replay Layer</text><text x="435" y="242" text-anchor="middle" class="small">prompt / model matrix</text>
+  <rect class="box" x="590" y="170" width="210" height="120"/><text x="695" y="212" text-anchor="middle" class="label">Grader</text><text x="695" y="242" text-anchor="middle" class="small">OCR / grounding / schema</text>
+  <rect class="box" x="850" y="170" width="250" height="120"/><text x="975" y="212" text-anchor="middle" class="label">Diff Layer</text><text x="975" y="242" text-anchor="middle" class="small">visual + text comparison</text>
+  <path class="arrow" d="M280 230 H325"/><path class="arrow" d="M540 230 H585"/><path class="arrow" d="M800 230 H845"/>
+  <rect class="box" x="120" y="370" width="290" height="130"/><text x="265" y="412" text-anchor="middle" class="label">Metadata</text><text x="265" y="442" text-anchor="middle" class="small">trace id, case type, labels</text><text x="265" y="468" text-anchor="middle" class="small">model version, prompt version</text>
+  <rect class="box" x="455" y="370" width="290" height="130"/><text x="600" y="412" text-anchor="middle" class="label">Outputs</text><text x="600" y="442" text-anchor="middle" class="small">field match, bbox match, score</text><text x="600" y="468" text-anchor="middle" class="small">pass / fail / review</text>
+  <rect class="box" x="790" y="370" width="300" height="130"/><text x="940" y="412" text-anchor="middle" class="label">Dashboard</text><text x="940" y="442" text-anchor="middle" class="small">regression trend, alert, review</text><text x="940" y="468" text-anchor="middle" class="small">release gate</text>
+  <path class="arrow" d="M410 435 H450"/><path class="arrow" d="M745 435 H785"/>
+</svg>

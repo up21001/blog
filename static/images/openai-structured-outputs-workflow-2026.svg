@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">OpenAI Structured Outputs Workflow 2026</title>
+  <desc id="desc">Workflow diagram for OpenAI Structured Outputs</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#eef8ff"/>
+      <stop offset="100%" stop-color="#f3fbf4"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#425864" flood-opacity="0.15"/>
+    </filter>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 z" fill="#4d6471"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <text x="70" y="86" font-family="Segoe UI, Arial, sans-serif" font-size="38" font-weight="700" fill="#183245">OpenAI Structured Outputs</text>
+  <text x="70" y="120" font-family="Segoe UI, Arial, sans-serif" font-size="20" fill="#5b7182">자연어 답변을 바로 앱이 읽는 JSON 구조로 바꾸는 흐름</text>
+
+  <rect x="80" y="220" width="220" height="120" rx="22" fill="#0f4c81" filter="url(#shadow)"/>
+  <text x="130" y="273" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="700" fill="#fff">Input</text>
+  <text x="108" y="307" font-family="Segoe UI, Arial, sans-serif" font-size="16" fill="#d7e8ff">text / docs / data</text>
+
+  <rect x="360" y="190" width="260" height="180" rx="28" fill="#1f8a70" filter="url(#shadow)"/>
+  <text x="405" y="242" font-family="Segoe UI, Arial, sans-serif" font-size="30" font-weight="700" fill="#fff">Schema</text>
+  <text x="405" y="278" font-family="Segoe UI, Arial, sans-serif" font-size="17" fill="#e8fff8">field names</text>
+  <text x="405" y="310" font-family="Segoe UI, Arial, sans-serif" font-size="17" fill="#e8fff8">types</text>
+  <text x="405" y="342" font-family="Segoe UI, Arial, sans-serif" font-size="17" fill="#e8fff8">constraints</text>
+
+  <rect x="700" y="120" width="200" height="90" rx="20" fill="#cc6b2c" filter="url(#shadow)"/>
+  <text x="734" y="174" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" fill="#fff">Validate</text>
+
+  <rect x="700" y="245" width="200" height="90" rx="20" fill="#cc6b2c" filter="url(#shadow)"/>
+  <text x="745" y="299" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" fill="#fff">Parse</text>
+
+  <rect x="700" y="370" width="200" height="90" rx="20" fill="#cc6b2c" filter="url(#shadow)"/>
+  <text x="738" y="424" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" fill="#fff">Store</text>
+
+  <rect x="950" y="235" width="170" height="130" rx="24" fill="#24415a" filter="url(#shadow)"/>
+  <text x="984" y="288" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="700" fill="#fff">App</text>
+  <text x="970" y="323" font-family="Segoe UI, Arial, sans-serif" font-size="16" fill="#d8ebff">safe JSON</text>
+
+  <path d="M300 280 L360 280" stroke="#4d6471" stroke-width="7" fill="none" marker-end="url(#arrow)"/>
+  <path d="M620 230 L700 165" stroke="#4d6471" stroke-width="7" fill="none" marker-end="url(#arrow)"/>
+  <path d="M620 280 L700 290" stroke="#4d6471" stroke-width="7" fill="none" marker-end="url(#arrow)"/>
+  <path d="M620 330 L700 415" stroke="#4d6471" stroke-width="7" fill="none" marker-end="url(#arrow)"/>
+  <path d="M900 290 L950 300" stroke="#4d6471" stroke-width="7" fill="none" marker-end="url(#arrow)"/>
+</svg>

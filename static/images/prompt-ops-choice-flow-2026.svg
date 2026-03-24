@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#f8fafc"/>
+  <rect x="46" y="46" width="1108" height="538" rx="30" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="72" y="108" font-family="Arial, sans-serif" font-size="40" font-weight="700" fill="#0f172a">Prompt Ops Decision Flow</text>
+  <text x="72" y="148" font-family="Arial, sans-serif" font-size="20" fill="#475569">Which prompts need strict operations and which can stay experimental?</text>
+  <g font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#0f172a">
+    <rect x="92" y="220" width="230" height="92" rx="18" fill="#dbeafe"/><text x="128" y="258">User-facing prompt</text><text x="136" y="284">or policy prompt?</text>
+    <rect x="390" y="220" width="230" height="92" rx="18" fill="#dcfce7"/><text x="434" y="258">Requires approval</text><text x="432" y="284">and tests?</text>
+    <rect x="688" y="220" width="230" height="92" rx="18" fill="#fef3c7"/><text x="744" y="258">Versioned release</text><text x="732" y="284">with rollback?</text>
+    <rect x="390" y="384" width="230" height="92" rx="18" fill="#fee2e2"/><text x="448" y="422">Experimental only</text><text x="452" y="448">No release gate</text>
+  </g>
+  <g stroke="#64748b" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M322 266h54"/>
+    <path d="M620 266h54"/>
+    <path d="M504 312v44"/>
+    <path d="M504 356v14"/>
+    <path d="M504 356h184"/>
+  </g>
+</svg>

@@ -1,0 +1,52 @@
+<svg width="800" height="450" viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg" font-family="'Malgun Gothic', sans-serif">
+  <rect width="800" height="450" fill="#0D1117" rx="12"/>
+  <text x="400" y="40" text-anchor="middle" font-size="20" font-weight="bold" fill="#E6EDF3">개발자 GitHub 포트폴리오 구성 요소</text>
+  <text x="400" y="62" text-anchor="middle" font-size="13" fill="#8B949E">채용 담당자가 실제로 확인하는 5가지 영역</text>
+
+  <!-- 중앙 GitHub 아이콘 텍스트 -->
+  <circle cx="400" cy="230" r="50" fill="#21262D" stroke="#30363D" stroke-width="2"/>
+  <text x="400" y="224" text-anchor="middle" font-size="13" font-weight="bold" fill="#E6EDF3">GitHub</text>
+  <text x="400" y="242" text-anchor="middle" font-size="12" fill="#8B949E">Profile</text>
+
+  <!-- 연결선 -->
+  <line x1="400" y1="180" x2="400" y2="110" stroke="#30363D" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <line x1="355" y1="205" x2="215" y2="155" stroke="#30363D" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <line x1="445" y1="205" x2="585" y2="155" stroke="#30363D" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <line x1="355" y1="255" x2="215" y2="305" stroke="#30363D" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <line x1="445" y1="255" x2="585" y2="305" stroke="#30363D" stroke-width="1.5" stroke-dasharray="5,3"/>
+
+  <!-- 프로필 README -->
+  <rect x="300" y="68" width="200" height="64" rx="8" fill="#1C2128" stroke="#3B82F6" stroke-width="2"/>
+  <text x="400" y="91" text-anchor="middle" font-size="12" font-weight="bold" fill="#79C0FF">프로필 README</text>
+  <text x="400" y="108" text-anchor="middle" font-size="10" fill="#8B949E">자기소개 · 기술 스택</text>
+  <text x="400" y="122" text-anchor="middle" font-size="10" fill="#8B949E">뱃지 · GitHub Stats</text>
+
+  <!-- 핀된 레포지토리 -->
+  <rect x="90" y="120" width="170" height="64" rx="8" fill="#1C2128" stroke="#10B981" stroke-width="2"/>
+  <text x="175" y="143" text-anchor="middle" font-size="12" font-weight="bold" fill="#56D364">핀된 레포지토리</text>
+  <text x="175" y="160" text-anchor="middle" font-size="10" fill="#8B949E">대표 프로젝트 6개</text>
+  <text x="175" y="174" text-anchor="middle" font-size="10" fill="#8B949E">Star · 설명 최적화</text>
+
+  <!-- 기여도 잔디 -->
+  <rect x="540" y="120" width="170" height="64" rx="8" fill="#1C2128" stroke="#F59E0B" stroke-width="2"/>
+  <text x="625" y="143" text-anchor="middle" font-size="12" font-weight="bold" fill="#E3B341">기여도 그래프</text>
+  <text x="625" y="160" text-anchor="middle" font-size="10" fill="#8B949E">꾸준한 커밋 습관</text>
+  <text x="625" y="174" text-anchor="middle" font-size="10" fill="#8B949E">streak · 연속 기여</text>
+
+  <!-- 프로젝트 README -->
+  <rect x="90" y="274" width="170" height="64" rx="8" fill="#1C2128" stroke="#8B5CF6" stroke-width="2"/>
+  <text x="175" y="297" text-anchor="middle" font-size="12" font-weight="bold" fill="#BC8CFF">프로젝트 README</text>
+  <text x="175" y="314" text-anchor="middle" font-size="10" fill="#8B949E">데모 · 설치 가이드</text>
+  <text x="175" y="328" text-anchor="middle" font-size="10" fill="#8B949E">아키텍처 다이어그램</text>
+
+  <!-- 오픈소스 기여 -->
+  <rect x="540" y="274" width="170" height="64" rx="8" fill="#1C2128" stroke="#6B7280" stroke-width="2"/>
+  <text x="625" y="297" text-anchor="middle" font-size="12" font-weight="bold" fill="#B1BAC4">오픈소스 기여</text>
+  <text x="625" y="314" text-anchor="middle" font-size="10" fill="#8B949E">PR · Issue 참여</text>
+  <text x="625" y="328" text-anchor="middle" font-size="10" fill="#8B949E">커뮤니티 활동</text>
+
+  <!-- 하단 팁 -->
+  <rect x="80" y="375" width="640" height="52" rx="8" fill="#161B22" stroke="#30363D" stroke-width="1"/>
+  <text x="400" y="397" text-anchor="middle" font-size="11" font-weight="bold" fill="#E6EDF3">채용 담당자 체크포인트</text>
+  <text x="400" y="416" text-anchor="middle" font-size="11" fill="#8B949E">커밋 메시지 품질 · README 가독성 · 코드 일관성 · 최근 활동 여부 · 협업 이력(PR/리뷰)</text>
+</svg>

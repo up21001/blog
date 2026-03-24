@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#101722"/>
+      <stop offset="100%" stop-color="#1d2636"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#fb7185"/>
+      <stop offset="100%" stop-color="#f59e0b"/>
+    </linearGradient>
+    <style>
+      .title { font: 700 40px Arial, sans-serif; fill: #f8fafc; }
+      .sub { font: 400 18px Arial, sans-serif; fill: #cbd5e1; }
+      .box { fill: #142033; stroke: #334155; stroke-width: 2; rx: 18; }
+      .box2 { fill: #17263b; stroke: #475569; stroke-width: 2; rx: 18; }
+      .txt { font: 700 22px Arial, sans-serif; fill: #f8fafc; }
+      .small { font: 400 16px Arial, sans-serif; fill: #cbd5e1; }
+      .arrow { stroke: #94a3b8; stroke-width: 4; fill: none; marker-end: url(#m); }
+    </style>
+    <marker id="m" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 Z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="1040" cy="90" r="180" fill="#f59e0b" opacity="0.08"/>
+  <circle cx="200" cy="540" r="220" fill="#fb7185" opacity="0.07"/>
+  <rect x="70" y="60" width="1060" height="510" rx="28" fill="#0f172a" opacity="0.55" stroke="#334155"/>
+  <rect x="70" y="60" width="1060" height="12" fill="url(#accent)"/>
+  <text x="110" y="130" class="title">Agent Failure Patterns Workflow</text>
+  <text x="110" y="165" class="sub">detect  classify  recover  verify  escalate</text>
+  <rect x="110" y="225" width="210" height="130" class="box"/>
+  <text x="145" y="275" class="txt">Trigger</text>
+  <text x="145" y="305" class="small">user request</text>
+  <rect x="380" y="225" width="230" height="130" class="box2"/>
+  <text x="415" y="275" class="txt">Classify</text>
+  <text x="415" y="305" class="small">timeout / schema</text>
+  <rect x="670" y="225" width="230" height="130" class="box2"/>
+  <text x="705" y="275" class="txt">Recover</text>
+  <text x="705" y="305" class="small">retry / fallback</text>
+  <rect x="960" y="225" width="120" height="130" class="box"/>
+  <text x="980" y="275" class="txt">Done</text>
+  <text x="980" y="305" class="small">trace + eval</text>
+  <path d="M320 290 L370 290" class="arrow"/>
+  <path d="M610 290 L660 290" class="arrow"/>
+  <path d="M900 290 L950 290" class="arrow"/>
+  <rect x="150" y="420" width="900" height="88" rx="20" fill="#111827" stroke="#334155"/>
+  <text x="185" y="455" class="txt">Key idea</text>
+  <text x="185" y="485" class="small">Failures must be typed before recovery. Retry without classification only increases cost.</text>
+</svg>

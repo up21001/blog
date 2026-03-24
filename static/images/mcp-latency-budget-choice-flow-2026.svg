@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">MCP latency budget choice flow</title>
+  <desc id="desc">Decision flow for choosing where to spend latency budget first.</desc>
+  <defs>
+    <linearGradient id="bg5" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#111827"/>
+      <stop offset="100%" stop-color="#0f766e"/>
+    </linearGradient>
+    <style>
+      .title { font: 700 34px Arial, sans-serif; fill: #fff; }
+      .sub { font: 400 18px Arial, sans-serif; fill: #ccfbf1; }
+      .card { fill: #ccfbf1; stroke: #2dd4bf; stroke-width: 2; rx: 18; }
+      .text { font: 700 20px Arial, sans-serif; fill: #042f2e; }
+      .small { font: 400 15px Arial, sans-serif; fill: #042f2e; }
+      .arrow { stroke: #fff; stroke-width: 4; fill: none; marker-end: url(#arrow); }
+    </style>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 Z" fill="#fff"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg5)"/>
+  <text x="60" y="78" class="title">MCP Latency Budget Choice Flow</text>
+  <text x="60" y="112" class="sub">Where should you optimize first?</text>
+  <rect x="70" y="180" width="260" height="120" class="card"/>
+  <rect x="470" y="180" width="260" height="120" class="card"/>
+  <rect x="870" y="180" width="260" height="120" class="card"/>
+  <text x="110" y="226" class="text">p95 too high?</text>
+  <text x="110" y="255" class="small">trim tool call count first</text>
+  <text x="505" y="226" class="text">network dominated?</text>
+  <text x="505" y="255" class="small">cache and batch where possible</text>
+  <text x="905" y="226" class="text">tool dominated?</text>
+  <text x="905" y="255" class="small">optimize downstream execution</text>
+  <path class="arrow" d="M330 240 L470 240"/>
+  <path class="arrow" d="M730 240 L870 240"/>
+  <rect x="120" y="360" width="960" height="140" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.35)" stroke-width="2" rx="22"/>
+  <text x="150" y="410" class="text" fill="#fff">Practical rule</text>
+  <text x="150" y="445" class="sub">If latency is ambiguous, measure before optimizing. Budget numbers are only useful when every layer reports them.</text>
+</svg>
+

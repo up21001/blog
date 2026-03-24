@@ -1,0 +1,62 @@
+<svg width="800" height="450" viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg" font-family="'Malgun Gothic', sans-serif">
+  <rect width="800" height="450" fill="#F8FAFC" rx="12"/>
+
+  <!-- Title -->
+  <text x="400" y="42" text-anchor="middle" font-size="22" font-weight="bold" fill="#1E293B">Docker 컨테이너 구조 — 개발 환경 흐름</text>
+
+  <!-- Host Machine -->
+  <rect x="30" y="60" width="740" height="340" rx="10" fill="#F3F4F6" stroke="#6B7280" stroke-width="2"/>
+  <text x="60" y="85" font-size="13" font-weight="bold" fill="#374151">Host Machine (개발자 PC / 서버)</text>
+
+  <!-- Docker Engine -->
+  <rect x="50" y="96" width="700" height="284" rx="8" fill="#E0F2FE" stroke="#3B82F6" stroke-width="1.5"/>
+  <text x="80" y="118" font-size="12" font-weight="bold" fill="#0369A1">Docker Engine</text>
+
+  <!-- Container 1 -->
+  <rect x="70" y="130" width="195" height="220" rx="8" fill="#DBEAFE" stroke="#3B82F6" stroke-width="1.5"/>
+  <text x="167" y="158" text-anchor="middle" font-size="13" font-weight="bold" fill="#1D4ED8">Container A</text>
+  <text x="167" y="176" text-anchor="middle" font-size="11" fill="#1E40AF">Node.js App</text>
+  <!-- Layers -->
+  <rect x="85" y="188" width="165" height="28" rx="4" fill="#BFDBFE" stroke="#93C5FD" stroke-width="1"/>
+  <text x="167" y="207" text-anchor="middle" font-size="11" fill="#1D4ED8">App Layer</text>
+  <rect x="85" y="220" width="165" height="28" rx="4" fill="#BFDBFE" stroke="#93C5FD" stroke-width="1"/>
+  <text x="167" y="239" text-anchor="middle" font-size="11" fill="#1D4ED8">Dependencies</text>
+  <rect x="85" y="252" width="165" height="28" rx="4" fill="#93C5FD" stroke="#60A5FA" stroke-width="1"/>
+  <text x="167" y="271" text-anchor="middle" font-size="11" fill="#1E40AF">Base Image (node:20)</text>
+  <text x="167" y="300" text-anchor="middle" font-size="11" fill="#475569">포트: 3000</text>
+  <text x="167" y="318" text-anchor="middle" font-size="11" fill="#475569">볼륨: ./app</text>
+
+  <!-- Container 2 -->
+  <rect x="300" y="130" width="195" height="220" rx="8" fill="#D1FAE5" stroke="#10B981" stroke-width="1.5"/>
+  <text x="397" y="158" text-anchor="middle" font-size="13" font-weight="bold" fill="#065F46">Container B</text>
+  <text x="397" y="176" text-anchor="middle" font-size="11" fill="#047857">PostgreSQL DB</text>
+  <rect x="315" y="188" width="165" height="28" rx="4" fill="#A7F3D0" stroke="#6EE7B7" stroke-width="1"/>
+  <text x="397" y="207" text-anchor="middle" font-size="11" fill="#065F46">DB Data Layer</text>
+  <rect x="315" y="220" width="165" height="28" rx="4" fill="#A7F3D0" stroke="#6EE7B7" stroke-width="1"/>
+  <text x="397" y="239" text-anchor="middle" font-size="11" fill="#065F46">Config Layer</text>
+  <rect x="315" y="252" width="165" height="28" rx="4" fill="#6EE7B7" stroke="#34D399" stroke-width="1"/>
+  <text x="397" y="271" text-anchor="middle" font-size="11" fill="#047857">Base: postgres:16</text>
+  <text x="397" y="300" text-anchor="middle" font-size="11" fill="#475569">포트: 5432</text>
+  <text x="397" y="318" text-anchor="middle" font-size="11" fill="#475569">볼륨: pgdata</text>
+
+  <!-- Container 3 -->
+  <rect x="530" y="130" width="195" height="220" rx="8" fill="#FEF3C7" stroke="#F59E0B" stroke-width="1.5"/>
+  <text x="627" y="158" text-anchor="middle" font-size="13" font-weight="bold" fill="#92400E">Container C</text>
+  <text x="627" y="176" text-anchor="middle" font-size="11" fill="#B45309">Nginx Proxy</text>
+  <rect x="545" y="188" width="165" height="28" rx="4" fill="#FDE68A" stroke="#FCD34D" stroke-width="1"/>
+  <text x="627" y="207" text-anchor="middle" font-size="11" fill="#92400E">Proxy Config</text>
+  <rect x="545" y="220" width="165" height="28" rx="4" fill="#FDE68A" stroke="#FCD34D" stroke-width="1"/>
+  <text x="627" y="239" text-anchor="middle" font-size="11" fill="#92400E">Static Files</text>
+  <rect x="545" y="252" width="165" height="28" rx="4" fill="#FCD34D" stroke="#FBBF24" stroke-width="1"/>
+  <text x="627" y="271" text-anchor="middle" font-size="11" fill="#B45309">Base: nginx:alpine</text>
+  <text x="627" y="300" text-anchor="middle" font-size="11" fill="#475569">포트: 80 / 443</text>
+  <text x="627" y="318" text-anchor="middle" font-size="11" fill="#475569">볼륨: ./nginx.conf</text>
+
+  <!-- Network line -->
+  <line x1="265" y1="240" x2="300" y2="240" stroke="#6B7280" stroke-width="1.5" stroke-dasharray="4,2"/>
+  <line x1="495" y1="240" x2="530" y2="240" stroke="#6B7280" stroke-width="1.5" stroke-dasharray="4,2"/>
+  <text x="400" y="370" text-anchor="middle" font-size="11" fill="#6B7280">docker network: app-network (bridge)</text>
+
+  <!-- Footer -->
+  <text x="400" y="415" text-anchor="middle" font-size="11" fill="#94A3B8">docker.com  |  docker-compose.yml로 일괄 관리  |  2026년 3월 기준</text>
+</svg>

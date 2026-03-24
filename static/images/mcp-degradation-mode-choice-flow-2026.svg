@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#111827"/>
+  <text x="60" y="68" fill="#f9fafb" font-family="Arial" font-size="34" font-weight="700">MCP Degradation Mode Choice Flow</text>
+  <text x="60" y="104" fill="#cbd5e1" font-family="Arial" font-size="18">decide what to keep, reduce, or stop</text>
+  <g font-family="Arial" font-size="17" font-weight="600" fill="#fff">
+    <rect x="65" y="175" width="175" height="82" rx="18" fill="#1d4ed8"/><text x="152" y="224" text-anchor="middle">Query only</text>
+    <rect x="265" y="175" width="175" height="82" rx="18" fill="#7c3aed"/><text x="352" y="224" text-anchor="middle">Tool write</text>
+    <rect x="465" y="175" width="175" height="82" rx="18" fill="#0f766e"/><text x="552" y="224" text-anchor="middle">Sensitive data</text>
+    <rect x="665" y="175" width="175" height="82" rx="18" fill="#b45309"/><text x="752" y="224" text-anchor="middle">Slow path</text>
+    <rect x="865" y="175" width="175" height="82" rx="18" fill="#dc2626"/><text x="952" y="224" text-anchor="middle">Critical action</text>
+  </g>
+  <path d="M152 257 L152 315 L352 315 L352 257" fill="none" stroke="#f9fafb" stroke-width="3"/>
+  <path d="M352 257 L352 315 L552 315 L552 257" fill="none" stroke="#f9fafb" stroke-width="3"/>
+  <path d="M552 257 L552 315 L752 315 L752 257" fill="none" stroke="#f9fafb" stroke-width="3"/>
+  <path d="M752 257 L752 315 L952 315 L952 257" fill="none" stroke="#f9fafb" stroke-width="3"/>
+  <rect x="115" y="390" width="260" height="108" rx="18" fill="#0f172a" stroke="#93c5fd" stroke-width="2"/>
+  <text x="245" y="435" text-anchor="middle" fill="#f9fafb" font-family="Arial" font-size="18" font-weight="600">Keep answer path</text>
+  <text x="245" y="462" text-anchor="middle" fill="#cbd5e1" font-family="Arial" font-size="15">minimal but useful</text>
+  <rect x="405" y="390" width="260" height="108" rx="18" fill="#0f172a" stroke="#a78bfa" stroke-width="2"/>
+  <text x="535" y="435" text-anchor="middle" fill="#f9fafb" font-family="Arial" font-size="18" font-weight="600">Disable write tools</text>
+  <text x="535" y="462" text-anchor="middle" fill="#cbd5e1" font-family="Arial" font-size="15">safe restriction</text>
+  <rect x="695" y="390" width="260" height="108" rx="18" fill="#0f172a" stroke="#5eead4" stroke-width="2"/>
+  <text x="825" y="435" text-anchor="middle" fill="#f9fafb" font-family="Arial" font-size="18" font-weight="600">Escalate or block</text>
+  <text x="825" y="462" text-anchor="middle" fill="#cbd5e1" font-family="Arial" font-size="15">review required</text>
+  <rect x="985" y="390" width="150" height="108" rx="18" fill="#0f172a" stroke="#fca5a5" stroke-width="2"/>
+  <text x="1060" y="435" text-anchor="middle" fill="#f9fafb" font-family="Arial" font-size="18" font-weight="600">Stop</text>
+  <text x="1060" y="462" text-anchor="middle" fill="#cbd5e1" font-family="Arial" font-size="15">critical path</text>
+</svg>

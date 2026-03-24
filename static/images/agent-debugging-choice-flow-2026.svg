@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Agent debugging choice flow">
+  <rect width="1200" height="630" fill="#111827"/>
+  <text x="80" y="90" fill="#f8fafc" font-size="42" font-family="Arial, sans-serif" font-weight="700">Where is the failure?</text>
+  <text x="80" y="128" fill="#94a3b8" font-size="22" font-family="Arial, sans-serif">Choose the right layer before patching</text>
+  <rect x="90" y="220" width="250" height="110" rx="18" fill="#0f172a" stroke="#f59e0b" stroke-width="2"/>
+  <text x="215" y="266" fill="#fff" font-size="23" font-family="Arial, sans-serif" text-anchor="middle" font-weight="700">Tool failed?</text>
+  <text x="215" y="294" fill="#cbd5e1" font-size="16" font-family="Arial, sans-serif" text-anchor="middle">check input/output</text>
+  <polygon points="590,205 675,270 590,335 505,270" fill="#0f172a" stroke="#38bdf8" stroke-width="2"/>
+  <text x="590" y="266" fill="#fff" font-size="23" font-family="Arial, sans-serif" text-anchor="middle" font-weight="700">Trace</text>
+  <text x="590" y="294" fill="#cbd5e1" font-size="16" font-family="Arial, sans-serif" text-anchor="middle">replay the step</text>
+  <rect x="860" y="220" width="250" height="110" rx="18" fill="#0f172a" stroke="#22c55e" stroke-width="2"/>
+  <text x="985" y="266" fill="#fff" font-size="23" font-family="Arial, sans-serif" text-anchor="middle" font-weight="700">Prompt issue?</text>
+  <text x="985" y="294" fill="#cbd5e1" font-size="16" font-family="Arial, sans-serif" text-anchor="middle">compare versions</text>
+  <path d="M340 275 H500" stroke="#f59e0b" stroke-width="6" fill="none"/>
+  <polygon points="500,275 484,265 484,285" fill="#f59e0b"/>
+  <path d="M675 275 H845" stroke="#38bdf8" stroke-width="6" fill="none"/>
+  <polygon points="845,275 829,265 829,285" fill="#38bdf8"/>
+  <rect x="180" y="430" width="840" height="95" rx="20" fill="#0b1020" stroke="#334155" stroke-width="2"/>
+  <text x="600" y="470" fill="#fff" font-size="24" font-family="Arial, sans-serif" text-anchor="middle" font-weight="700">Do not change everything at once. Isolate one layer.</text>
+  <text x="600" y="500" fill="#94a3b8" font-size="17" font-family="Arial, sans-serif" text-anchor="middle">agent debugging becomes deterministic when the replay is stable</text>
+</svg>

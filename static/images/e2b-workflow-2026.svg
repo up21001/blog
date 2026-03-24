@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">E2B Workflow 2026</title>
+  <desc id="desc">E2B sandbox workflow showing agent, template, sandbox, desktop, and code execution.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f0f9ff"/>
+      <stop offset="100%" stop-color="#e0f2fe"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#0f766e" flood-opacity="0.14"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#0f766e"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bg)"/>
+  <text x="70" y="88" font-size="38" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#0f766e">E2B Workflow</text>
+  <text x="70" y="124" font-size="20" font-family="Segoe UI, Arial, sans-serif" fill="#0891b2">Isolated Linux sandboxes and desktop environments for safe agent execution</text>
+  <rect x="70" y="180" rx="24" ry="24" width="210" height="120" fill="#fff" stroke="#7dd3fc" filter="url(#shadow)"/>
+  <text x="120" y="235" font-size="30" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#0f766e">Agent</text>
+  <text x="102" y="268" font-size="18" font-family="Segoe UI, Arial, sans-serif" fill="#0891b2">Code / tools / tasks</text>
+  <rect x="350" y="150" rx="28" ry="28" width="500" height="360" fill="#fff" stroke="#38bdf8" stroke-width="2" filter="url(#shadow)"/>
+  <text x="520" y="205" font-size="34" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#0f766e">E2B Platform</text>
+  <rect x="395" y="240" rx="18" ry="18" width="170" height="90" fill="#f8fdff" stroke="#7dd3fc"/>
+  <text x="438" y="292" font-size="24" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#0891b2">Template</text>
+  <rect x="620" y="240" rx="18" ry="18" width="170" height="90" fill="#f8fdff" stroke="#7dd3fc"/>
+  <text x="658" y="290" font-size="24" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#0891b2">Sandbox</text>
+  <rect x="395" y="360" rx="18" ry="18" width="170" height="90" fill="#f8fdff" stroke="#7dd3fc"/>
+  <text x="442" y="402" font-size="22" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#0891b2">Desktop</text>
+  <text x="435" y="430" font-size="18" font-family="Segoe UI, Arial, sans-serif" fill="#0891b2">VNC / GUI</text>
+  <rect x="620" y="360" rx="18" ry="18" width="170" height="90" fill="#f8fdff" stroke="#7dd3fc"/>
+  <text x="650" y="402" font-size="22" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#0891b2">Execution</text>
+  <text x="646" y="430" font-size="18" font-family="Segoe UI, Arial, sans-serif" fill="#0891b2">safe code run</text>
+  <rect x="920" y="180" rx="24" ry="24" width="210" height="120" fill="#fff" stroke="#7dd3fc" filter="url(#shadow)"/>
+  <text x="975" y="235" font-size="28" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#0f766e">Result</text>
+  <text x="952" y="268" font-size="18" font-family="Segoe UI, Arial, sans-serif" fill="#0891b2">files, logs, screenshots</text>
+  <path d="M280 240 C320 240, 330 240, 350 240" fill="none" stroke="#0f766e" stroke-width="4" marker-end="url(#arrow)"/>
+  <path d="M565 285 C590 285, 600 285, 620 285" fill="none" stroke="#0f766e" stroke-width="4" marker-end="url(#arrow)"/>
+  <path d="M565 405 C590 405, 600 405, 620 405" fill="none" stroke="#0f766e" stroke-width="4" marker-end="url(#arrow)"/>
+  <path d="M790 405 C840 405, 870 405, 920 240" fill="none" stroke="#0f766e" stroke-width="4" marker-end="url(#arrow)"/>
+</svg>

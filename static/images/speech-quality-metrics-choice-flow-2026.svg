@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#111827"/>
+  <text x="70" y="90" fill="#fff" font-size="44" font-family="Arial, sans-serif" font-weight="700">Speech Quality Metrics</text>
+  <text x="70" y="132" fill="#9ab6d6" font-size="22" font-family="Arial, sans-serif">choice flow</text>
+  <g fill="#17263e" stroke="#607faa" stroke-width="2">
+    <rect x="70" y="220" width="220" height="88" rx="18"/><rect x="340" y="220" width="220" height="88" rx="18"/><rect x="610" y="220" width="220" height="88" rx="18"/><rect x="880" y="220" width="220" height="88" rx="18"/>
+  </g>
+  <g fill="#f5f8fb" font-size="20" font-family="Arial, sans-serif" text-anchor="middle">
+    <text x="180" y="254">Accuracy</text><text x="450" y="254">Latency</text><text x="720" y="254">Naturalness</text><text x="990" y="254">Recovery</text>
+  </g>
+  <g stroke="#9ab6d6" stroke-width="4" fill="none" marker-end="url(#k2)">
+    <path d="M290 264 H340"/><path d="M560 264 H610"/><path d="M830 264 H880"/>
+  </g>
+  <defs><marker id="k2" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#9ab6d6"/></marker></defs>
+  <text x="70" y="430" fill="#c8d5e5" font-size="20" font-family="Arial, sans-serif">Keep the metrics separate so the dashboard shows where quality actually drops.</text>
+</svg>
+

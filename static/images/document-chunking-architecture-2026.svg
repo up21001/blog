@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#06101d"/>
+      <stop offset="1" stop-color="#20304b"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="120" y1="180" x2="1080" y2="180" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#f59e0b"/>
+      <stop offset="1" stop-color="#38bdf8"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" rx="32" fill="url(#bg)"/>
+  <text x="70" y="96" fill="#e2e8f0" font-family="Arial" font-size="52" font-weight="700">Chunking Architecture</text>
+  <text x="70" y="138" fill="#fbbf24" font-family="Arial" font-size="22">parser, splitter, metadata, embedding, storage</text>
+  <rect x="70" y="220" width="150" height="110" rx="20" fill="#1f2937" stroke="#f59e0b" stroke-width="2"/>
+  <rect x="250" y="220" width="150" height="110" rx="20" fill="#1f2937" stroke="#f59e0b" stroke-width="2"/>
+  <rect x="430" y="220" width="150" height="110" rx="20" fill="#1f2937" stroke="#f59e0b" stroke-width="2"/>
+  <rect x="610" y="220" width="150" height="110" rx="20" fill="#1f2937" stroke="#f59e0b" stroke-width="2"/>
+  <rect x="790" y="220" width="150" height="110" rx="20" fill="#12344d" stroke="#60a5fa" stroke-width="2"/>
+  <rect x="970" y="220" width="160" height="110" rx="20" fill="#0f3b37" stroke="#34d399" stroke-width="2"/>
+  <text x="145" y="260" text-anchor="middle" fill="#fff" font-family="Arial" font-size="22" font-weight="700">Parse</text>
+  <text x="145" y="290" text-anchor="middle" fill="#cbd5e1" font-family="Arial" font-size="15">raw docs</text>
+  <text x="325" y="260" text-anchor="middle" fill="#fff" font-family="Arial" font-size="22" font-weight="700">Extract</text>
+  <text x="325" y="290" text-anchor="middle" fill="#cbd5e1" font-family="Arial" font-size="15">headings</text>
+  <text x="505" y="260" text-anchor="middle" fill="#fff" font-family="Arial" font-size="22" font-weight="700">Split</text>
+  <text x="505" y="290" text-anchor="middle" fill="#cbd5e1" font-family="Arial" font-size="15">chunks</text>
+  <text x="685" y="260" text-anchor="middle" fill="#fff" font-family="Arial" font-size="22" font-weight="700">Enrich</text>
+  <text x="685" y="290" text-anchor="middle" fill="#cbd5e1" font-family="Arial" font-size="15">metadata</text>
+  <text x="865" y="260" text-anchor="middle" fill="#fff" font-family="Arial" font-size="22" font-weight="700">Embed</text>
+  <text x="865" y="290" text-anchor="middle" fill="#bfdbfe" font-family="Arial" font-size="15">vector ready</text>
+  <text x="1050" y="260" text-anchor="middle" fill="#fff" font-family="Arial" font-size="22" font-weight="700">Store</text>
+  <text x="1050" y="290" text-anchor="middle" fill="#bbf7d0" font-family="Arial" font-size="15">retrieval index</text>
+  <path d="M220 275 H245" stroke="url(#accent)" stroke-width="6" stroke-linecap="round"/>
+  <path d="M400 275 H425" stroke="url(#accent)" stroke-width="6" stroke-linecap="round"/>
+  <path d="M580 275 H605" stroke="url(#accent)" stroke-width="6" stroke-linecap="round"/>
+  <path d="M760 275 H785" stroke="url(#accent)" stroke-width="6" stroke-linecap="round"/>
+  <path d="M940 275 H965" stroke="url(#accent)" stroke-width="6" stroke-linecap="round"/>
+  <text x="70" y="410" fill="#dbeafe" font-family="Arial" font-size="26" font-weight="700">Keep chunk boundaries visible to both retrieval and analytics.</text>
+</svg>
+

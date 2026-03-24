@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#0f172a"/>
+  <text x="70" y="86" fill="#f8fafc" font-size="40" font-family="sans-serif" font-weight="700">Memory Retention Policy</text>
+  <text x="70" y="126" fill="#cbd5e1" font-size="18" font-family="sans-serif">TTL, 중요도, 범위를 반영하는 보존 흐름</text>
+  <rect x="90" y="210" width="170" height="100" rx="16" fill="#1e293b" stroke="#38bdf8" stroke-width="2"/>
+  <text x="127" y="255" fill="#e2e8f0" font-size="22" font-family="sans-serif" font-weight="700">Capture</text>
+  <rect x="310" y="210" width="170" height="100" rx="16" fill="#1e293b" stroke="#34d399" stroke-width="2"/>
+  <text x="340" y="255" fill="#e2e8f0" font-size="22" font-family="sans-serif" font-weight="700">Score</text>
+  <rect x="530" y="210" width="170" height="100" rx="16" fill="#1e293b" stroke="#f59e0b" stroke-width="2"/>
+  <text x="548" y="255" fill="#e2e8f0" font-size="22" font-family="sans-serif" font-weight="700">Retain</text>
+  <rect x="750" y="210" width="170" height="100" rx="16" fill="#1e293b" stroke="#a78bfa" stroke-width="2"/>
+  <text x="776" y="255" fill="#e2e8f0" font-size="22" font-family="sans-serif" font-weight="700">Expire</text>
+  <rect x="970" y="210" width="150" height="100" rx="16" fill="#1e293b" stroke="#fb7185" stroke-width="2"/>
+  <text x="995" y="255" fill="#e2e8f0" font-size="22" font-family="sans-serif" font-weight="700">Archive</text>
+  <path d="M260 260 L310 260" stroke="#f59e0b" stroke-width="5" fill="none" marker-end="url(#m)"/>
+  <path d="M480 260 L530 260" stroke="#f59e0b" stroke-width="5" fill="none" marker-end="url(#m)"/>
+  <path d="M700 260 L750 260" stroke="#f59e0b" stroke-width="5" fill="none" marker-end="url(#m)"/>
+  <path d="M920 260 L970 260" stroke="#f59e0b" stroke-width="5" fill="none" marker-end="url(#m)"/>
+  <defs><marker id="m" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#f59e0b"/></marker></defs>
+  <rect x="80" y="370" width="1040" height="150" rx="18" fill="#111827" stroke="#334155" stroke-width="2"/>
+  <text x="110" y="418" fill="#f8fafc" font-size="22" font-family="sans-serif" font-weight="700">정책 규칙</text>
+  <text x="110" y="455" fill="#cbd5e1" font-size="18" font-family="sans-serif">민감정보는 짧게, 선호도는 길게, 임시 상태는 자동 만료.</text>
+  <text x="110" y="488" fill="#cbd5e1" font-size="18" font-family="sans-serif">보존 정책은 사용자, 세션, 워크스페이스 단위로 분리합니다.</text>
+</svg>

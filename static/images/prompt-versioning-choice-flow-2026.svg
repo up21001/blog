@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#f8fafc"/>
+  <text x="60" y="92" fill="#0f172a" font-family="Arial, sans-serif" font-size="42" font-weight="700">Prompt Versioning Choice Flow</text>
+  <rect x="86" y="190" width="240" height="96" rx="18" fill="#dbeafe"/>
+  <rect x="372" y="190" width="240" height="96" rx="18" fill="#dcfce7"/>
+  <rect x="658" y="190" width="240" height="96" rx="18" fill="#fef3c7"/>
+  <rect x="944" y="190" width="170" height="96" rx="18" fill="#fee2e2"/>
+  <text x="124" y="232" font-family="Arial, sans-serif" font-size="20" font-weight="700">What changed?</text>
+  <text x="402" y="232" font-family="Arial, sans-serif" font-size="20" font-weight="700">Safe to test?</text>
+  <text x="690" y="232" font-family="Arial, sans-serif" font-size="20" font-weight="700">Approve release</text>
+  <text x="987" y="232" font-family="Arial, sans-serif" font-size="20" font-weight="700">Rollback</text>
+  <g stroke="#475569" stroke-width="5" fill="none" stroke-linecap="round">
+    <path d="M326 238h44"/>
+    <path d="M612 238h44"/>
+    <path d="M898 238h28"/>
+  </g>
+  <text x="92" y="372" fill="#334155" font-family="Arial, sans-serif" font-size="20">Version tags, test set, approval note, deploy channel, fallback path</text>
+</svg>

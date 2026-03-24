@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Deep Agents Workflow 2026</title>
+  <desc id="desc">Deep Agents architecture showing planning, subagents, file system context, memory, and LangGraph runtime.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#eff6ff"/>
+      <stop offset="100%" stop-color="#dbeafe"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#1d4ed8" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bg)"/>
+  <text x="70" y="88" font-size="38" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#1e3a8a">Deep Agents Workflow</text>
+  <text x="70" y="124" font-size="20" font-family="Segoe UI, Arial, sans-serif" fill="#2563eb">Planning, subagents, file-system context, and memory built on LangGraph</text>
+  <rect x="70" y="180" width="220" height="120" rx="24" fill="#fff" stroke="#93c5fd" filter="url(#shadow)"/>
+  <text x="134" y="232" font-size="30" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#1e3a8a">Task</text>
+  <text x="110" y="266" font-size="18" font-family="Segoe UI, Arial, sans-serif" fill="#2563eb">complex request</text>
+  <rect x="350" y="140" width="470" height="360" rx="28" fill="#fff" stroke="#60a5fa" stroke-width="2" filter="url(#shadow)"/>
+  <text x="490" y="196" font-size="34" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#1e3a8a">LangGraph Runtime</text>
+  <rect x="395" y="228" width="170" height="90" rx="18" fill="#eff6ff" stroke="#93c5fd"/>
+  <text x="441" y="279" font-size="24" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#2563eb">Planning</text>
+  <rect x="595" y="228" width="170" height="90" rx="18" fill="#eff6ff" stroke="#93c5fd"/>
+  <text x="637" y="279" font-size="24" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#2563eb">Subagents</text>
+  <rect x="395" y="350" width="170" height="90" rx="18" fill="#eff6ff" stroke="#93c5fd"/>
+  <text x="406" y="391" font-size="22" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#2563eb">File system</text>
+  <text x="425" y="418" font-size="18" font-family="Segoe UI, Arial, sans-serif" fill="#2563eb">context</text>
+  <rect x="595" y="350" width="170" height="90" rx="18" fill="#eff6ff" stroke="#93c5fd"/>
+  <text x="631" y="391" font-size="22" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#2563eb">Memory</text>
+  <text x="625" y="418" font-size="18" font-family="Segoe UI, Arial, sans-serif" fill="#2563eb">long-term</text>
+  <rect x="900" y="180" width="220" height="120" rx="24" fill="#fff" stroke="#93c5fd" filter="url(#shadow)"/>
+  <text x="966" y="232" font-size="28" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#1e3a8a">Output</text>
+  <text x="948" y="266" font-size="18" font-family="Segoe UI, Arial, sans-serif" fill="#2563eb">steps, files,</text>
+  <text x="953" y="290" font-size="18" font-family="Segoe UI, Arial, sans-serif" fill="#2563eb">answers</text>
+</svg>

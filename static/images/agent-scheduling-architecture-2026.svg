@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Agent Scheduling Architecture</title>
+  <desc id="desc">Architecture with trigger source, scheduler, delay queue, worker execution, and audit logging.</desc>
+  <defs>
+    <style>
+      text { font-family: Arial, Helvetica, sans-serif; fill: #e5e7eb; }
+      .title { font-size: 38px; font-weight: 700; }
+      .small { font-size: 18px; fill: #cbd5e1; }
+      .box { rx: 18; ry: 18; stroke: #f59e0b; stroke-width: 2.5; fill: rgba(15, 23, 42, 0.78); }
+      .line { stroke: #fbbf24; stroke-width: 4; marker-end: url(#arrow); }
+    </style>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 z" fill="#fbbf24"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="630" fill="#0b1020"/>
+  <text x="60" y="82" class="title">Agent Scheduling Architecture</text>
+  <text x="60" y="120" class="small">Trigger source, scheduler, delay queue, worker, audit log</text>
+  <rect x="50" y="205" width="160" height="120" class="box"/>
+  <text x="130" y="245" text-anchor="middle" font-size="22" font-weight="700">Trigger</text>
+  <text x="130" y="273" text-anchor="middle" class="small">Event / cron</text>
+  <rect x="260" y="185" width="180" height="150" class="box"/>
+  <text x="350" y="228" text-anchor="middle" font-size="22" font-weight="700">Scheduler</text>
+  <text x="350" y="256" text-anchor="middle" class="small">Policy engine</text>
+  <text x="350" y="284" text-anchor="middle" class="small">Windows / delay</text>
+  <rect x="500" y="185" width="180" height="150" class="box"/>
+  <text x="590" y="228" text-anchor="middle" font-size="22" font-weight="700">Delay Queue</text>
+  <text x="590" y="256" text-anchor="middle" class="small">Deferred tasks</text>
+  <text x="590" y="284" text-anchor="middle" class="small">Retry schedule</text>
+  <rect x="740" y="175" width="190" height="170" class="box"/>
+  <text x="835" y="220" text-anchor="middle" font-size="22" font-weight="700">Worker Pool</text>
+  <text x="835" y="248" text-anchor="middle" class="small">Agent execution</text>
+  <text x="835" y="276" text-anchor="middle" class="small">Concurrency</text>
+  <text x="835" y="304" text-anchor="middle" class="small">Retry policy</text>
+  <rect x="980" y="210" width="160" height="120" class="box"/>
+  <text x="1060" y="252" text-anchor="middle" font-size="22" font-weight="700">Audit</text>
+  <text x="1060" y="280" text-anchor="middle" class="small">Log / trace</text>
+  <line x1="210" y1="265" x2="260" y2="265" class="line"/>
+  <line x1="440" y1="265" x2="500" y2="265" class="line"/>
+  <line x1="680" y1="265" x2="740" y2="265" class="line"/>
+  <line x1="930" y1="265" x2="980" y2="265" class="line"/>
+</svg>

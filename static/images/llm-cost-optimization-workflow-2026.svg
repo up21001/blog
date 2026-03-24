@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#fefce8"/>
+  <rect x="48" y="42" width="1104" height="546" rx="34" fill="#fff" stroke="#facc15" stroke-width="2"/>
+  <text x="82" y="106" font-size="40" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#a16207">LLM Cost Optimization Workflow</text>
+  <text x="82" y="146" font-size="20" font-family="Segoe UI, Arial, sans-serif" fill="#ca8a04">model choice -> caching -> batching -> budget control</text>
+  <rect x="88" y="246" width="182" height="112" rx="24" fill="#fff" stroke="#facc15"/>
+  <text x="136" y="293" font-size="28" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#854d0e">Input</text>
+  <text x="112" y="324" font-size="18" font-family="Segoe UI, Arial, sans-serif" fill="#a16207">prompt + task type</text>
+  <rect x="336" y="182" width="238" height="240" rx="28" fill="#fffbeb" stroke="#eab308" stroke-width="2"/>
+  <text x="388" y="232" font-size="30" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#854d0e">Optimizer</text>
+  <rect x="368" y="252" width="174" height="42" rx="12" fill="#fff" stroke="#facc15"/>
+  <text x="392" y="279" font-size="18" font-family="Segoe UI, Arial, sans-serif" fill="#a16207">route by cost</text>
+  <rect x="368" y="306" width="174" height="42" rx="12" fill="#fff" stroke="#facc15"/>
+  <text x="382" y="333" font-size="18" font-family="Segoe UI, Arial, sans-serif" fill="#a16207">cache / batch</text>
+  <rect x="368" y="360" width="174" height="42" rx="12" fill="#fff" stroke="#facc15"/>
+  <text x="389" y="387" font-size="18" font-family="Segoe UI, Arial, sans-serif" fill="#a16207">limit output</text>
+  <rect x="640" y="246" width="182" height="112" rx="24" fill="#fff" stroke="#facc15"/>
+  <text x="681" y="293" font-size="28" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#854d0e">Model</text>
+  <text x="663" y="324" font-size="18" font-family="Segoe UI, Arial, sans-serif" fill="#a16207">cheap or premium</text>
+  <rect x="888" y="246" width="180" height="112" rx="24" fill="#fff" stroke="#facc15"/>
+  <text x="934" y="293" font-size="28" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#854d0e">Budget</text>
+  <text x="916" y="324" font-size="18" font-family="Segoe UI, Arial, sans-serif" fill="#a16207">tracked per team</text>
+  <path d="M270 302 C305 302, 310 302, 336 302" fill="none" stroke="#a16207" stroke-width="4"/>
+  <path d="M574 302 C608 302, 612 302, 640 302" fill="none" stroke="#a16207" stroke-width="4"/>
+  <path d="M822 302 C860 302, 864 302, 888 302" fill="none" stroke="#a16207" stroke-width="4"/>
+</svg>

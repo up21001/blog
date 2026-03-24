@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg3" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#100f1b"/>
+      <stop offset="100%" stop-color="#23345d"/>
+    </linearGradient>
+    <marker id="arrow3" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#ffd27f"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg3)"/>
+  <text x="70" y="86" fill="#fff6e8" font-size="38" font-weight="700" font-family="Inter, Arial, sans-serif">Remote MCP Security Workflow</text>
+  <text x="70" y="120" fill="#c1b7a8" font-size="20" font-family="Inter, Arial, sans-serif">allowlist, approval, logging, and network boundaries</text>
+  <rect x="70" y="180" width="180" height="120" rx="22" fill="#1b2336" stroke="#6b5a3a"/>
+  <text x="160" y="228" text-anchor="middle" fill="#ffffff" font-size="24" font-weight="700" font-family="Inter, Arial, sans-serif">Agent</text>
+  <text x="160" y="260" text-anchor="middle" fill="#ccb998" font-size="18" font-family="Inter, Arial, sans-serif">request</text>
+  <rect x="300" y="180" width="250" height="120" rx="22" fill="#2a2230" stroke="#6b5a3a"/>
+  <text x="425" y="225" text-anchor="middle" fill="#ffffff" font-size="24" font-weight="700" font-family="Inter, Arial, sans-serif">Policy Gate</text>
+  <text x="425" y="257" text-anchor="middle" fill="#ccb998" font-size="18" font-family="Inter, Arial, sans-serif">allowlist + approval</text>
+  <rect x="610" y="180" width="220" height="120" rx="22" fill="#243144" stroke="#6b5a3a"/>
+  <text x="720" y="225" text-anchor="middle" fill="#ffffff" font-size="24" font-weight="700" font-family="Inter, Arial, sans-serif">Remote MCP</text>
+  <text x="720" y="257" text-anchor="middle" fill="#ccb998" font-size="18" font-family="Inter, Arial, sans-serif">tool execution</text>
+  <rect x="880" y="180" width="250" height="120" rx="22" fill="#1d2b3e" stroke="#6b5a3a"/>
+  <text x="1005" y="225" text-anchor="middle" fill="#ffffff" font-size="24" font-weight="700" font-family="Inter, Arial, sans-serif">Audit Log</text>
+  <text x="1005" y="257" text-anchor="middle" fill="#ccb998" font-size="18" font-family="Inter, Arial, sans-serif">who, what, when</text>
+  <line x1="250" y1="240" x2="300" y2="240" stroke="#ffd27f" stroke-width="5" marker-end="url(#arrow3)"/>
+  <line x1="550" y1="240" x2="610" y2="240" stroke="#ffd27f" stroke-width="5" marker-end="url(#arrow3)"/>
+  <line x1="830" y1="240" x2="880" y2="240" stroke="#ffd27f" stroke-width="5" marker-end="url(#arrow3)"/>
+  <rect x="100" y="370" width="1000" height="160" rx="26" fill="#171f30" stroke="#6b5a3a"/>
+  <text x="600" y="420" text-anchor="middle" fill="#ffffff" font-size="28" font-weight="700" font-family="Inter, Arial, sans-serif">Checklist</text>
+  <text x="600" y="458" text-anchor="middle" fill="#ccb998" font-size="18" font-family="Inter, Arial, sans-serif">limit tools, separate read/write paths, log approvals, mask secrets, verify tool output</text>
+  <text x="600" y="490" text-anchor="middle" fill="#ccb998" font-size="18" font-family="Inter, Arial, sans-serif">treat the MCP server as untrusted until proven otherwise</text>
+</svg>

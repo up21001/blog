@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">OpenAI Agents SDK Choice Flow 2026</title>
+  <desc id="desc">Decision flow for choosing OpenAI Agents SDK</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fff7ef"/>
+      <stop offset="100%" stop-color="#eef9f4"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#4a4b52" flood-opacity="0.16"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <text x="70" y="88" font-family="Segoe UI, Arial, sans-serif" font-size="38" font-weight="700" fill="#213242">OpenAI Agents SDK Decision Flow</text>
+  <text x="70" y="122" font-family="Segoe UI, Arial, sans-serif" font-size="20" fill="#5b6d79">어떤 경우에 SDK를 쓰고, 어떤 경우는 Responses API로 충분한가</text>
+
+  <rect x="80" y="220" width="250" height="120" rx="24" fill="#0f4c81" filter="url(#shadow)"/>
+  <text x="138" y="272" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="700" fill="#fff">Start</text>
+  <text x="118" y="306" font-family="Segoe UI, Arial, sans-serif" font-size="16" fill="#d7e8ff">작업 복잡도 확인</text>
+
+  <polygon points="420,165 520,225 420,285 320,225" fill="#1f8a70" filter="url(#shadow)"/>
+  <text x="360" y="222" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" fill="#fff">도구가 3개 이상?</text>
+
+  <rect x="610" y="100" width="210" height="90" rx="20" fill="#cc6b2c" filter="url(#shadow)"/>
+  <text x="657" y="154" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" fill="#fff">SDK 권장</text>
+
+  <rect x="610" y="235" width="210" height="90" rx="20" fill="#cc6b2c" filter="url(#shadow)"/>
+  <text x="642" y="289" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" fill="#fff">Responses API</text>
+
+  <rect x="610" y="370" width="210" height="90" rx="20" fill="#cc6b2c" filter="url(#shadow)"/>
+  <text x="666" y="424" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" fill="#fff">Stream only</text>
+
+  <rect x="880" y="235" width="230" height="140" rx="24" fill="#24415a" filter="url(#shadow)"/>
+  <text x="924" y="285" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="700" fill="#fff">Choose simple</text>
+  <text x="910" y="320" font-family="Segoe UI, Arial, sans-serif" font-size="16" fill="#d8ebff">작으면 단순 API</text>
+  <text x="910" y="347" font-family="Segoe UI, Arial, sans-serif" font-size="16" fill="#d8ebff">크면 에이전트 SDK</text>
+
+  <path d="M330 225 L320 225" stroke="#516674" stroke-width="7" fill="none"/>
+  <path d="M520 225 L610 145" stroke="#516674" stroke-width="7" fill="none"/>
+  <path d="M520 225 L610 280" stroke="#516674" stroke-width="7" fill="none"/>
+  <path d="M520 225 L610 415" stroke="#516674" stroke-width="7" fill="none"/>
+  <path d="M820 280 L880 300" stroke="#516674" stroke-width="7" fill="none"/>
+</svg>

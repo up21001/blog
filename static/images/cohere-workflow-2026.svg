@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Cohere Workflow 2026</title>
+  <desc id="desc">Cohere architecture showing command, embed, rerank, search, and enterprise deployment.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f5fbff"/>
+      <stop offset="100%" stop-color="#e0f2fe"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#0f172a" flood-opacity="0.12"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#0369a1"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bg)"/>
+  <text x="70" y="88" font-size="38" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#0f172a">Cohere Workflow</text>
+  <text x="70" y="124" font-size="20" font-family="Segoe UI, Arial, sans-serif" fill="#0369a1">Command, Embed, and Rerank combine into a search-first enterprise AI stack</text>
+
+  <rect x="70" y="210" rx="24" ry="24" width="210" height="120" fill="#fff" stroke="#7dd3fc" filter="url(#shadow)"/>
+  <text x="122" y="262" font-size="28" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#0f172a">Documents</text>
+  <text x="105" y="295" font-size="18" font-family="Segoe UI, Arial, sans-serif" fill="#0369a1">Search / RAG corpus</text>
+
+  <rect x="350" y="150" rx="28" ry="28" width="500" height="360" fill="#fff" stroke="#38bdf8" stroke-width="2" filter="url(#shadow)"/>
+  <text x="540" y="206" font-size="34" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#0f172a">Cohere Platform</text>
+
+  <rect x="400" y="245" rx="18" ry="18" width="160" height="86" fill="#f8fdff" stroke="#7dd3fc"/>
+  <text x="442" y="296" font-size="24" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#0369a1">Embed</text>
+  <rect x="610" y="245" rx="18" ry="18" width="160" height="86" fill="#f8fdff" stroke="#7dd3fc"/>
+  <text x="652" y="296" font-size="24" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#0369a1">Rerank</text>
+
+  <rect x="400" y="360" rx="18" ry="18" width="160" height="86" fill="#f8fdff" stroke="#7dd3fc"/>
+  <text x="435" y="410" font-size="24" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#0369a1">Command</text>
+  <rect x="610" y="360" rx="18" ry="18" width="160" height="86" fill="#f8fdff" stroke="#7dd3fc"/>
+  <text x="661" y="410" font-size="24" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#0369a1">Aya</text>
+
+  <rect x="930" y="210" rx="24" ry="24" width="200" height="120" fill="#fff" stroke="#7dd3fc" filter="url(#shadow)"/>
+  <text x="989" y="262" font-size="28" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#0f172a">Apps</text>
+  <text x="950" y="295" font-size="18" font-family="Segoe UI, Arial, sans-serif" fill="#0369a1">RAG, search, chat</text>
+
+  <path d="M280 270 C320 270, 330 270, 350 270" fill="none" stroke="#0284c7" stroke-width="4" marker-end="url(#arrow)"/>
+  <path d="M560 288 C585 288, 595 288, 610 288" fill="none" stroke="#0284c7" stroke-width="4" marker-end="url(#arrow)"/>
+  <path d="M770 288 C835 288, 870 288, 930 288" fill="none" stroke="#0284c7" stroke-width="4" marker-end="url(#arrow)"/>
+  <path d="M480 446 C480 468, 480 480, 480 494" fill="none" stroke="#0284c7" stroke-width="3" marker-end="url(#arrow)"/>
+</svg>

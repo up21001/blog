@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#111827"/>
+      <stop offset="100%" stop-color="#1f2937"/>
+    </linearGradient>
+    <style>
+      .title{font:700 44px sans-serif;fill:#f8fafc}
+      .sub{font:400 20px sans-serif;fill:#cbd5e1}
+      .box{fill:url(#card);stroke:#38bdf8;stroke-width:2;rx:18;ry:18}
+      .txt{font:600 22px sans-serif;fill:#e2e8f0}
+      .small{font:400 18px sans-serif;fill:#cbd5e1}
+      .arrow{stroke:#f59e0b;stroke-width:5;fill:none;marker-end:url(#m)}
+      .badge{fill:#0ea5e9;opacity:.16;stroke:#38bdf8;stroke-width:1.5;rx:14;ry:14}
+    </style>
+    <marker id="m" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 z" fill="#f59e0b"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect x="48" y="48" width="1104" height="534" class="badge"/>
+  <text x="80" y="110" class="title">Agent Memory Operations</text>
+  <text x="80" y="150" class="sub">저장, 조회, 갱신, 보존, 정리의 운영 흐름</text>
+  <rect x="70" y="210" width="170" height="110" class="box"/><text x="105" y="252" class="txt">Write</text><text x="96" y="283" class="small">새 기억 저장</text>
+  <rect x="300" y="210" width="170" height="110" class="box"/><text x="332" y="252" class="txt">Read</text><text x="317" y="283" class="small">적절한 조회</text>
+  <rect x="530" y="210" width="170" height="110" class="box"/><text x="550" y="252" class="txt">Retain</text><text x="548" y="283" class="small">보존 정책 적용</text>
+  <rect x="760" y="210" width="170" height="110" class="box"/><text x="789" y="252" class="txt">Prune</text><text x="786" y="283" class="small">압축/삭제</text>
+  <rect x="990" y="210" width="130" height="110" class="box"/><text x="1010" y="252" class="txt">Loop</text><text x="1000" y="283" class="small">재평가</text>
+  <path d="M240 265 L300 265" class="arrow"/>
+  <path d="M470 265 L530 265" class="arrow"/>
+  <path d="M700 265 L760 265" class="arrow"/>
+  <path d="M930 265 L990 265" class="arrow"/>
+  <rect x="80" y="380" width="1040" height="110" class="badge"/>
+  <text x="110" y="425" class="txt">핵심 포인트</text>
+  <text x="110" y="458" class="sub">정책이 없으면 메모리는 쌓이고, 정책이 있으면 품질과 비용이 같이 잡힙니다.</text>
+</svg>

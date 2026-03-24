@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <style>
+      .bg { fill:#111827; }
+      .title { fill:#fff; font:700 38px Arial, sans-serif; }
+      .sub { fill:#cbd5e1; font:400 18px Arial, sans-serif; }
+      .box { fill:#f8fafc; stroke:#94a3b8; stroke-width:2; rx:18; }
+      .yes { fill:#dcfce7; stroke:#22c55e; stroke-width:2; rx:18; }
+      .no { fill:#fee2e2; stroke:#ef4444; stroke-width:2; rx:18; }
+      .label { fill:#0f172a; font:700 20px Arial, sans-serif; }
+      .small { fill:#475569; font:400 15px Arial, sans-serif; }
+      .line { stroke:#cbd5e1; stroke-width:4; fill:none; marker-end:url(#arrow); }
+    </style>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#cbd5e1"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="630" class="bg"/>
+  <text x="84" y="110" class="title">Browser Agent Security Choice Flow</text>
+  <text x="84" y="146" class="sub">Decide what can run automatically and what must be approved</text>
+  <rect x="78" y="220" width="210" height="112" class="box"/>
+  <text x="108" y="260" class="label">Need login state?</text>
+  <text x="108" y="292" class="small">use isolated session</text>
+  <rect x="332" y="220" width="210" height="112" class="yes"/>
+  <text x="362" y="260" class="label">Allowed</text>
+  <text x="362" y="292" class="small">read-only browsing</text>
+  <rect x="586" y="220" width="210" height="112" class="box"/>
+  <text x="616" y="260" class="label">Sensitive action?</text>
+  <text x="616" y="292" class="small">payment / delete / send</text>
+  <rect x="840" y="220" width="210" height="112" class="no"/>
+  <text x="870" y="260" class="label">Require approval</text>
+  <text x="870" y="292" class="small">human-in-the-loop</text>
+  <path d="M288 276 L332 276" class="line"/>
+  <path d="M542 276 L586 276" class="line"/>
+  <path d="M796 276 L840 276" class="line"/>
+  <rect x="170" y="398" width="860" height="108" class="box"/>
+  <text x="208" y="440" class="label">Rule of thumb: automate navigation, isolate identity, approve irreversible actions</text>
+  <text x="208" y="472" class="small">keep secrets out of prompts and separate browser profiles by task</text>
+</svg>
