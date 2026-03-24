@@ -13,7 +13,7 @@ enableRobotsTXT = true
   colorScheme = "ocean"
 
 [params.verification]
-  google = ""
+  google = "dUlA-mHlZxD1WkU1NXY2THAW5fT5Oa0Kmw6IM6jF1Bw"
   bing = ""
   defaultAppearance = "light"
   autoSwitchAppearance = true
