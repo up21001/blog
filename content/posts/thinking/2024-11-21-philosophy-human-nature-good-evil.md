@@ -4,7 +4,7 @@ date: 2024-11-21T12:34:00+09:00
 lastmod: 2024-11-28T12:34:00+09:00
 description: "맹자·홉스·도킨스·재난 현장의 협력을 한 화면에 두고, ‘본성’ 대신 ‘가능성’을 말하는 이유를 담았습니다."
 slug: "philosophy-human-nature-good-evil"
-categories: ["philosophy"]
+categories: ["thinking"]
 tags: ["성선성악", "맹자", "홉스", "도킨스", "협력"]
 draft: false
 showTableOfContents: false

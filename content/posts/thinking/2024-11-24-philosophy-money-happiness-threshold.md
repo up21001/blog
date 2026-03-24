@@ -4,7 +4,7 @@ date: 2024-11-24T12:34:00+09:00
 lastmod: 2024-11-30T12:34:00+09:00
 description: "에우다이모니아·에피쿠로스·행복의 소득 상한 연구를 엮어, 물질의 한계와 정치적 함의를 짚습니다."
 slug: "philosophy-money-happiness-threshold"
-categories: ["philosophy"]
+categories: ["thinking"]
 tags: ["돈", "행복", "마슬로우", "에피쿠로스", "공리"]
 draft: false
 showTableOfContents: false

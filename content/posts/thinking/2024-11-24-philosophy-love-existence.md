@@ -4,7 +4,7 @@ date: 2024-11-24T08:00:00+09:00
 lastmod: 2024-11-24T08:00:00+09:00
 description: "도파민 환원과 인격적 결단, 쇼펜하우어의 맹목적 의지를 건너 ‘의심하면서도 남는 것’으로 사랑을 읽습니다."
 slug: "philosophy-love-existence"
-categories: ["philosophy"]
+categories: ["thinking"]
 tags: ["사랑", "플라톤", "프롬", "현상학", "신경과학"]
 draft: false
 showTableOfContents: false

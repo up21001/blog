@@ -4,7 +4,7 @@ date: 2024-11-21T10:17:00+09:00
 lastmod: 2024-11-25T10:17:00+09:00
 description: "리벳 실험·스피노자·칸트·사르트르를 한 테이블에 두고, 결정론이 스스로를 부정하는 지점을 정리합니다."
 slug: "philosophy-free-will-paradox"
-categories: ["philosophy"]
+categories: ["thinking"]
 tags: ["자유의지", "결정론", "리벳", "칸트", "사르트르"]
 draft: false
 showTableOfContents: false

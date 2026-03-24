@@ -4,7 +4,7 @@ date: 2024-11-24T18:25:00+09:00
 lastmod: 2024-11-27T18:25:00+09:00
 description: "아리스토텔레스·촘스키·사르트르·여성·노예 논쟁을 건너, 인권을 지키는 두 가지 태도를 비교합니다."
 slug: "philosophy-what-is-human-essence"
-categories: ["philosophy"]
+categories: ["thinking"]
 tags: ["인간", "본질", "사르트르", "인권", "실존주의"]
 draft: false
 showTableOfContents: false

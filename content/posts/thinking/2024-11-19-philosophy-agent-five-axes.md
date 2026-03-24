@@ -4,7 +4,7 @@ date: 2024-11-19T08:00:00+09:00
 lastmod: 2024-11-21T08:00:00+09:00
 description: "인간 정의, 메리의 방·중국어 방, 자유의지 쟁점, 공감 시뮬레이션, 죽음과 AI를 한 장의 지도로 엮습니다."
 slug: "philosophy-agent-five-axes"
-categories: ["philosophy"]
+categories: ["thinking"]
 tags: ["AI", "의식", "자유의지", "공감", "죽음"]
 draft: false
 showTableOfContents: false

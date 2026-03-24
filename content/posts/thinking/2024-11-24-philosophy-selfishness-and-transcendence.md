@@ -4,7 +4,7 @@ date: 2024-11-24T14:51:00+09:00
 lastmod: 2024-12-01T14:51:00+09:00
 description: "모든 행위를 이기심으로 환원할 때 생기는 반증 불가능성과, 타자의 얼굴 앞에서의 책임을 짧게 잇습니다."
 slug: "philosophy-selfishness-and-transcendence"
-categories: ["philosophy"]
+categories: ["thinking"]
 tags: ["이기심", "이타", "홉스", "레비나스", "도킨스"]
 draft: false
 showTableOfContents: false

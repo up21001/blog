@@ -4,7 +4,7 @@ date: 2024-11-20T08:00:00+09:00
 lastmod: 2024-11-27T08:00:00+09:00
 description: "국가 살인의 정당화, 계약론, 오판 통계, 유족의 분노를 철학적으로 겹쳐 읽는 짧은 글입니다."
 slug: "philosophy-death-penalty-and-state"
-categories: ["philosophy"]
+categories: ["thinking"]
 tags: ["사형제", "칸트", "베카리아", "카뮈", "국가"]
 draft: false
 showTableOfContents: false

@@ -4,7 +4,7 @@ date: 2024-11-19T10:17:00+09:00
 lastmod: 2024-11-26T10:17:00+09:00
 description: "공리주의·칸트·하이데거·아렌트를 잇는 짧은 논지로, AI 시대에 인간을 수단으로만 두지 않을 이유를 정리합니다."
 slug: "philosophy-ai-and-human-purpose"
-categories: ["philosophy"]
+categories: ["thinking"]
 tags: ["AI", "칸트", "공리주의", "하이데거", "존엄"]
 draft: false
 showTableOfContents: false

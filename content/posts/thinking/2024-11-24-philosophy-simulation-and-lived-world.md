@@ -4,7 +4,7 @@ date: 2024-11-24T16:08:00+09:00
 lastmod: 2024-11-27T16:08:00+09:00
 description: "삼중 딜레마·포퍼·오컴·현상학을 거쳐 ‘진짜’보다 ‘어떻게 살 것인가’로 귀결되는 지점을 담았습니다."
 slug: "philosophy-simulation-and-lived-world"
-categories: ["philosophy"]
+categories: ["thinking"]
 tags: ["시뮬레이션", "보스트롬", "포퍼", "현상학", "실재"]
 draft: false
 showTableOfContents: false

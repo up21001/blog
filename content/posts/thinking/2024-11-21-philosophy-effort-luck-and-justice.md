@@ -4,7 +4,7 @@ date: 2024-11-21T08:00:00+09:00
 lastmod: 2024-11-28T08:00:00+09:00
 description: "무지의 베일 뒤에서도 ‘노력만이 답’이라 말할 수 있는지, 그리고 운만 믿을 때 생기는 허무를 짧게 짚습니다."
 slug: "philosophy-effort-luck-and-justice"
-categories: ["philosophy"]
+categories: ["thinking"]
 tags: ["노력", "운", "롤스", "스토아", "정의"]
 draft: false
 showTableOfContents: false

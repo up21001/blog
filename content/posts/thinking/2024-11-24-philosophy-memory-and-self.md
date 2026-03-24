@@ -4,7 +4,7 @@ date: 2024-11-24T10:17:00+09:00
 lastmod: 2024-11-25T10:17:00+09:00
 description: "내러티브 정체성, 데카르트, 로프터스의 기억 재구성, 불교적 무아를 한 바퀴 돌아 정리합니다."
 slug: "philosophy-memory-and-self"
-categories: ["philosophy"]
+categories: ["thinking"]
 tags: ["정체성", "기억", "로크", "데카르트", "무아"]
 draft: false
 showTableOfContents: false

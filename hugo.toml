@@ -8,6 +8,9 @@ buildFuture = true
 title = "통합 블로그"
 theme = "blowfish"
 enableRobotsTXT = true
+[permalinks]
+  posts = "/posts/:slug/"
+
 [pagination]
   pagerSize = 10
 
