@@ -1,0 +1,98 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <!-- Drop Shadow Filter -->
+        <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+            <feDropShadow dx="2" dy="2" stdDeviation="3" flood-color="#000" flood-opacity="0.2"/>
+        </filter>
+        <!-- Arrow Marker -->
+        <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+            <path d="M0,0 L0,6 L9,3 z" fill="#666"/>
+        </marker>
+    </defs>
+
+    <!-- Background -->
+    <rect x="0" y="0" width="800" height="600" fill="#f8f9fa"/>
+
+    <!-- Styles -->
+    <style>
+        .box {
+            font-family: "Arial, sans-serif";
+            font-size: 16px;
+            fill: #4A90D9; /* Blue */
+            stroke: #3A7BBF;
+            stroke-width: 1;
+            filter: url(#shadow);
+            rx: 10;
+            ry: 10;
+        }
+        .box.green { fill: #50C878; stroke: #40A360; }
+        .box.yellow { fill: #FFD93D; stroke: #CCA32D; }
+        .box.purple { fill: #6C5CE7; stroke: #5B4ACF; }
+        .label {
+            font-family: "Arial, sans-serif";
+            font-size: 16px;
+            fill: #333;
+            text-anchor: middle;
+            dominant-baseline: central;
+        }
+        .arrow-line {
+            stroke: #666;
+            stroke-width: 2;
+            fill: none;
+            marker-end: url(#arrow);
+        }
+    </style>
+
+    <!-- Components -->
+    <!-- Training Flow -->
+    <rect class="box green" x="50" y="50" width="160" height="70"/>
+    <text class="label" x="130" y="85">데이터 소스</text>
+
+    <rect class="box" x="250" y="50" width="160" height="70"/>
+    <text class="label" x="330" y="85">데이터 전처리</text>
+
+    <rect class="box green" x="450" y="50" width="160" height="70"/>
+    <text class="label" x="530" y="85">훈련 데이터셋</text>
+
+    <rect class="box" x="270" y="180" width="280" height="70"/>
+    <text class="label" x="410" y="215">SLM 훈련/미세조정 파이프라인</text>
+
+    <rect class="box" x="350" y="310" width="160" height="70"/>
+    <text class="label" x="430" y="345">SLM 모델</text>
+
+    <rect class="box" x="550" y="310" width="160" height="70"/>
+    <text class="label" x="630" y="345">모델 레지스트리</text>
+
+    <!-- Inference Flow -->
+    <rect class="box yellow" x="50" y="480" width="160" height="70"/>
+    <text class="label" x="130" y="515">사용자/애플리케이션</text>
+
+    <rect class="box yellow" x="250" y="480" width="160" height="70"/>
+    <text class="label" x="330" y="515">API 게이트웨이</text>
+
+    <rect class="box" x="450" y="480" width="160" height="70"/>
+    <text class="label" x="530" y="515">추론 서비스</text>
+
+    <rect class="box purple" x="650" y="480" width="160" height="70"/>
+    <text class="label" x="730" y="515">지식 기반/벡터 DB</text>
+
+    <!-- Arrows -->
+    <!-- Training Flow Connections -->
+    <path class="arrow-line" d="M210,85 H250"/> <!-- 데이터 소스 -> 데이터 전처리 -->
+    <path class="arrow-line" d="M410,85 H450"/> <!-- 데이터 전처리 -> 훈련 데이터셋 -->
+    <path class="arrow-line" d="M530,120 V180 H410"/> <!-- 훈련 데이터셋 -> SLM 훈련/미세조정 파이프라인 -->
+    <path class="arrow-line" d="M410,250 V310"/> <!-- SLM 훈련/미세조정 파이프라인 -> SLM 모델 (훈련 완료) -->
+    <path class="arrow-line" d="M510,345 H550"/> <!-- SLM 모델 -> 모델 레지스트리 (저장) -->
+
+    <!-- Inference Flow Connections -->
+    <path class="arrow-line" d="M210,515 H250"/> <!-- 사용자/애플리케이션 -> API 게이트웨이 (요청) -->
+    <path class="arrow-line" d="M410,515 H450"/> <!-- API 게이트웨이 -> 추론 서비스 (요청 전달) -->
+
+    <path class="arrow-line" d="M630,380 V480 H530"/> <!-- 모델 레지스트리 -> 추론 서비스 (모델 로드) -->
+    <path class="arrow-line" d="M530,480 V380 H430"/> <!-- 추론 서비스 -> SLM 모델 (모델 사용) -->
+    <path class="arrow-line" d="M610,515 H650"/> <!-- 추론 서비스 -> 지식 기반/벡터 DB (정보 검색) -->
+
+    <path class="arrow-line" d="M450,515 H410"/> <!-- 추론 서비스 -> API 게이트웨이 (응답) -->
+    <path class="arrow-line" d="M250,515 H210"/> <!-- API 게이트웨이 -> 사용자/애플리케이션 (응답) -->
+
+</svg>

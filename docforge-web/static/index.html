@@ -79,9 +79,12 @@
 
         <div class="field category-field">
           <label for="publishSubfolder">저장할 카테고리 (<code>content/posts</code> 하위)</label>
-          <select id="publishSubfolder" name="publishSubfolder">
-            <option value="">(루트 — posts 바로 아래)</option>
-          </select>
+          <div class="category-row">
+            <select id="publishSubfolder" name="publishSubfolder">
+              <option value="">(루트 — posts 바로 아래)</option>
+            </select>
+            <button type="button" id="btnSuggestCategory" class="btn btn-sm btn-suggest">추천</button>
+          </div>
         </div>
 
         <button type="submit" id="submitBtn" class="btn primary">생성</button>
@@ -194,6 +197,7 @@
       <div class="result-head">
         <h2>본문</h2>
         <div class="actions">
+          <button type="button" id="btnQuickPublish" class="btn btn-quick-publish">블로그에 저장</button>
           <button type="button" id="btnCopy" class="btn">마크다운 복사</button>
           <button type="button" id="btnMd" class="btn">.md 다운로드</button>
           <button type="button" id="btnZip" class="btn">ZIP (md + 에셋)</button>
@@ -202,10 +206,19 @@
       <p id="meta" class="meta"></p>
 
       <div class="tabs" role="tablist">
+        <button type="button" class="tab" id="tabSplit" role="tab" data-tab="split">분할 보기</button>
         <button type="button" class="tab active" id="tabPreview" role="tab" data-tab="preview">미리보기</button>
-        <button type="button" class="tab" id="tabEditor" role="tab" data-tab="editor">마크다운 편집</button>
+        <button type="button" class="tab" id="tabEditor" role="tab" data-tab="editor">편집만</button>
       </div>
-      <div id="panelPreview" class="tab-panel" role="tabpanel">
+      <div id="panelSplit" class="tab-panel split-panel">
+        <div class="split-editor">
+          <textarea id="mdEditorSplit" class="md-editor" spellcheck="false" placeholder="마크다운 편집"></textarea>
+        </div>
+        <div class="split-preview">
+          <article id="previewSplit" class="preview prose"></article>
+        </div>
+      </div>
+      <div id="panelPreview" class="tab-panel" hidden role="tabpanel">
         <article id="preview" class="preview prose"></article>
       </div>
       <div id="panelEditor" class="tab-panel" hidden role="tabpanel">

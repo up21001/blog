@@ -23,6 +23,10 @@
   }
 
   function getMarkdown() {
+    if (activeTab === "split") {
+      const s = $("mdEditorSplit");
+      if (s && s.value) return s.value;
+    }
     const ed = $("mdEditor");
     if (ed && ed.value !== undefined) return ed.value;
     return (lastPayload && lastPayload.markdown) || "";
@@ -89,21 +93,70 @@
     else if (mode === "published") { [s1, s2, s3].forEach(s => s.classList.add("done")); }
   }
 
-  // ── 탭 ──
-  function setActiveTab(which) {
-    const isP = which === "preview";
-    $("tabPreview").classList.toggle("active", isP);
-    $("tabEditor").classList.toggle("active", !isP);
-    $("tabPreview").setAttribute("aria-selected", isP);
-    $("tabEditor").setAttribute("aria-selected", !isP);
-    $("panelPreview").hidden = !isP;
-    $("panelEditor").hidden = isP;
-    if (isP) renderPreviewHtml(getMarkdown());
+  // ── 탭 (분할/미리보기/편집) ──
+  let activeTab = "split";
+
+  function syncEditors(source) {
+    const main = $("mdEditor");
+    const split = $("mdEditorSplit");
+    if (source === "split" && main && split) main.value = split.value;
+    else if (source === "main" && main && split) split.value = main.value;
   }
 
+  function getMarkdownFromActive() {
+    if (activeTab === "split") return ($("mdEditorSplit") && $("mdEditorSplit").value) || "";
+    return ($("mdEditor") && $("mdEditor").value) || "";
+  }
+
+  function setActiveTab(which) {
+    activeTab = which;
+    const tabs = ["tabSplit", "tabPreview", "tabEditor"];
+    const panels = ["panelSplit", "panelPreview", "panelEditor"];
+    tabs.forEach(id => {
+      const el = $(id);
+      if (el) { el.classList.remove("active"); el.setAttribute("aria-selected", "false"); }
+    });
+    panels.forEach(id => { const el = $(id); if (el) el.hidden = true; });
+
+    if (which === "split") {
+      $("tabSplit").classList.add("active");
+      $("panelSplit").hidden = false;
+      syncEditors("main");
+      renderSplitPreview();
+    } else if (which === "preview") {
+      $("tabPreview").classList.add("active");
+      $("panelPreview").hidden = false;
+      syncEditors("split");
+      renderPreviewHtml(getMarkdown());
+    } else {
+      $("tabEditor").classList.add("active");
+      $("panelEditor").hidden = false;
+      syncEditors("split");
+    }
+  }
+
+  function renderSplitPreview() {
+    const p = $("previewSplit");
+    if (!p) return;
+    const md = ($("mdEditorSplit") && $("mdEditorSplit").value) || "";
+    const processed = renderPreviewWithImages(md);
+    p.innerHTML = (window.marked && processed) ? marked.parse(processed) : (processed || "");
+  }
+
+  const scheduleSplitRefresh = debounce(renderSplitPreview, 250);
+
+  $("tabSplit").addEventListener("click", () => setActiveTab("split"));
   $("tabPreview").addEventListener("click", () => setActiveTab("preview"));
   $("tabEditor").addEventListener("click", () => setActiveTab("editor"));
-  $("mdEditor").addEventListener("input", schedulePreviewRefresh);
+
+  $("mdEditor").addEventListener("input", () => {
+    syncEditors("main");
+    schedulePreviewRefresh();
+  });
+  $("mdEditorSplit").addEventListener("input", () => {
+    syncEditors("split");
+    scheduleSplitRefresh();
+  });
 
   // ── 모델 패널 ──
   function renderModelsPanel(models) {
@@ -457,6 +510,8 @@
 
     const editor = $("mdEditor");
     if (editor) editor.value = j.markdown || "";
+    const splitEditor = $("mdEditorSplit");
+    if (splitEditor) splitEditor.value = j.markdown || "";
 
     // 에셋 상태 초기화
     currentImages = (j.images || []).map((img, i) => ({
@@ -528,7 +583,7 @@
       if (j.models) renderModelsPanel(j.models);
       applyPayload(j);
       res.hidden = false;
-      setActiveTab("preview");
+      setActiveTab("split");
     } catch (ex) {
       err.textContent = String(ex.message || ex);
       err.hidden = false;
@@ -628,6 +683,59 @@
     const blob = await zip.generateAsync({ type: "blob" });
     const stem = mdName.replace(/\.md$/i, "");
     saveAs(blob, `${stem}-docforge.zip`);
+  });
+
+  // ── 바로 저장 (블로그에 저장) ──
+  $("btnQuickPublish").addEventListener("click", async () => {
+    const md = getMarkdown().trim();
+    if (!md) { alert("저장할 마크다운이 없습니다."); return; }
+
+    const sub = ($("publishSubfolder") && $("publishSubfolder").value.trim()) || null;
+    const fname = ($("publishFilename") && $("publishFilename").value.trim()) || null;
+    if (!sub) {
+      alert("카테고리를 선택해주세요 (하단 저장 영역 또는 상단 폼).");
+      $("publishSubfolder").focus();
+      return;
+    }
+
+    const btn = $("btnQuickPublish");
+    btn.disabled = true;
+    btn.textContent = "저장 중…";
+
+    try {
+      const imagesToSave = currentImages.map((img, i) => {
+        const ext = img.mime.includes("png") ? "png" : "jpg";
+        return { filename: `image-${i + 1}.${ext}`, mime: img.mime, data_base64: img.data_base64 };
+      });
+      currentSvgs.forEach((svg, i) => {
+        const svgB64 = btoa(unescape(encodeURIComponent(svg.svg || "")));
+        imagesToSave.push({ filename: `svg-${i + 1}.svg`, mime: "image/svg+xml", data_base64: svgB64 });
+      });
+
+      const r = await fetch(apiUrl("/api/publish-post"), {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          markdown: md, filename: fname || null, slug_hint: lastSlug,
+          subfolder: sub, images: imagesToSave.length ? imagesToSave : null,
+        }),
+      });
+      const j = await r.json();
+      if (!r.ok) throw new Error(typeof j.detail === "string" ? j.detail : JSON.stringify(j.detail || j));
+
+      if ($("publishSubfolder")) localStorage.setItem(SUBFOLDER_LS, $("publishSubfolder").value);
+      const rel = j.relative_path || j.filename;
+      const savedImgs = j.saved_images || [];
+      alert(`저장 완료!\n\n📄 content/posts/${rel}\n🖼 이미지 ${savedImgs.length}개 저장됨`);
+      setWorkflow("published");
+      const ps = $("publishStatus");
+      if (ps) ps.textContent = `저장됨: content/posts/${rel}`;
+    } catch (e) {
+      alert("저장 실패: " + e.message);
+    } finally {
+      btn.disabled = false;
+      btn.textContent = "블로그에 저장";
+    }
   });
 
   // ── 게시 ──
@@ -769,6 +877,41 @@
     } catch { line.hidden = true; }
   }
 
+  // ── 카테고리 추천 ──
+  $("btnSuggestCategory").addEventListener("click", async () => {
+    const topic = $("topic").value.trim() || getMarkdown().slice(0, 2000);
+    if (!topic) { alert("주제를 먼저 입력하세요."); return; }
+
+    const btn = $("btnSuggestCategory");
+    btn.disabled = true;
+    btn.textContent = "분석 중…";
+
+    try {
+      const r = await fetch(apiUrl("/api/suggest-category"), {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ topic }),
+      });
+      const j = await r.json();
+      if (!r.ok) throw new Error(j.detail || "추천 실패");
+
+      const sel = $("publishSubfolder");
+      const match = [...sel.options].find(o => o.value === j.category);
+      if (match) {
+        sel.value = j.category;
+        localStorage.setItem(SUBFOLDER_LS, j.category);
+        updatePublishCategoryRecap();
+      } else {
+        alert(`추천: ${j.category} (목록에 없음)`);
+      }
+    } catch (e) {
+      alert("추천 실패: " + e.message);
+    } finally {
+      btn.disabled = false;
+      btn.textContent = "추천";
+    }
+  });
+
   // ── 기존 글 열기 ──
   async function loadPostCategories() {
     const sel = $("openPostCategory");
@@ -853,7 +996,14 @@
         mime: img.mime,
         data_base64: img.data_base64,
       }));
-      currentSvgs = [];
+      // SVG 로드
+      currentSvgs = (j.svgs || []).map((svg, i) => ({
+        index: i,
+        type: svg.type || "architecture",
+        style: svg.style || "modern",
+        description: svg.description || svg.filename || "",
+        svg: svg.svg || "",
+      }));
       renderAssetGrid();
 
       $("meta").textContent = `기존 포스트: ${path}`;
@@ -861,7 +1011,7 @@
       setWorkflow("review");
       updatePublishCategoryRecap();
       res.hidden = false;
-      setActiveTab("preview");
+      setActiveTab("split");
     } catch (ex) {
       err.textContent = String(ex.message || ex);
       err.hidden = false;
@@ -902,7 +1052,7 @@
       lastGenerateParams = { topic: url, template: "blog", with_images: false, max_images: 0, with_svg: false, max_svg: 0, length: "medium", image_hints: null };
       applyPayload(j);
       res.hidden = false;
-      setActiveTab("preview");
+      setActiveTab("split");
     } catch (ex) {
       err.textContent = String(ex.message || ex);
       err.hidden = false;

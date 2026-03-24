@@ -18,11 +18,11 @@ TEXT_MODEL = "gemini-2.5-flash"
 
 # (max_output_tokens, 사용자 메시지에 붙는 분량 지시)
 LENGTH_TIER: dict[str, tuple[int, str]] = {
-    "short": (4096, "분량: 짧게. 핵심만 약 800~1500자 한글 분량."),
-    "medium": (8192, "분량: 보통. 약 2000~4000자 한글, 예제 1~2개."),
-    "long": (16384, "분량: 길게. 약 5000~9000자 한글. 단계·표·코드를 충분히."),
+    "short": (65536, "분량: 짧게. 핵심만 약 800~1500자 한글 분량."),
+    "medium": (65536, "분량: 보통. 약 2000~4000자 한글, 예제 1~2개."),
+    "long": (65536, "분량: 길게. 약 5000~9000자 한글. 단계·표·코드를 충분히."),
     "very_long": (
-        24576,
+        65536,
         "분량: 매우 길게. 10000자 한글 이상에 가깝게. H2로 장을 나누고 개념도 설명·주의사항·예제를 상세히.",
     ),
 }
@@ -142,7 +142,7 @@ def generate_image_prompts(
     response = client.models.generate_content(
         model=TEXT_MODEL,
         contents=prompt,
-        config=types.GenerateContentConfig(max_output_tokens=1024, temperature=0.85),
+        config=types.GenerateContentConfig(max_output_tokens=65536, temperature=0.85),
     )
     lines = []
     for line in response.text.strip().splitlines():
@@ -190,7 +190,7 @@ Rules:
     response = client.models.generate_content(
         model=TEXT_MODEL,
         contents=prompt,
-        config=types.GenerateContentConfig(max_output_tokens=1024, temperature=0.5),
+        config=types.GenerateContentConfig(max_output_tokens=65536, temperature=0.5),
     )
 
     import json

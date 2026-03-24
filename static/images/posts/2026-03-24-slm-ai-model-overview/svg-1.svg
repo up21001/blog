@@ -1,0 +1,137 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <!-- Arrow marker definition -->
+        <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto-start-reverse">
+            <path d="M0,0 L10,5 L0,10 z" fill="#333"/>
+        </marker>
+
+        <!-- Drop shadow filter -->
+        <filter id="drop-shadow" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur in="SourceAlpha" stdDeviation="3"/>
+            <feOffset dx="2" dy="2" result="offsetblur"/>
+            <feFlood flood-color="#000" flood-opacity="0.2"/>
+            <feComposite in2="offsetblur" operator="in"/>
+            <feMerge>
+                <feMergeNode/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+    </defs>
+
+    <!-- Background -->
+    <rect x="0" y="0" width="800" height="600" fill="#f8f9fa"/>
+
+    <!-- Styles -->
+    <style>
+        .box {
+            font-family: "Arial, sans-serif";
+            font-size: 14px;
+            fill: #fff;
+            stroke: #ccc;
+            stroke-width: 1;
+            rx: 8;
+            ry: 8;
+            filter: url(#drop-shadow);
+        }
+        .label {
+            font-family: "Arial, sans-serif";
+            font-size: 14px;
+            fill: #333;
+            text-anchor: middle;
+            dominant-baseline: central;
+        }
+        .sub-label {
+            font-family: "Arial, sans-serif";
+            font-size: 11px;
+            fill: #555;
+            text-anchor: middle;
+            dominant-baseline: central;
+        }
+        .arrow-path {
+            stroke: #333;
+            stroke-width: 1.5;
+            fill: none;
+            marker-end: url(#arrow);
+        }
+        .environment-box {
+            fill: #e0f2f7; /* Lighter blue */
+            stroke: #4A90D9;
+            stroke-width: 2;
+            rx: 15;
+            ry: 15;
+            filter: url(#drop-shadow);
+        }
+    </style>
+
+    <!-- Deployment Environment -->
+    <rect x="50" y="50" width="700" height="500" class="environment-box"/>
+    <text x="150" y="75" class="label" fill="#4A90D9" font-size="16px" font-weight="bold">배포 환경 (클라우드/엣지)</text>
+
+    <!-- Components -->
+    <!-- User/Application -->
+    <rect x="80" y="265" width="120" height="70" class="box" fill="#4A90D9"/>
+    <text x="140" y="290" class="label" fill="#fff">사용자</text>
+    <text x="140" y="315" class="label" fill="#fff">/애플리케이션</text>
+
+    <!-- Input Processing -->
+    <rect x="230" y="265" width="120" height="70" class="box" fill="#50C878"/>
+    <text x="290" y="290" class="label" fill="#fff">입력 처리</text>
+    <text x="290" y="315" class="sub-label" fill="#fff">(토큰화, 임베딩)</text>
+
+    <!-- SLM Core -->
+    <rect x="380" y="265" width="120" height="70" class="box" fill="#6C5CE7"/>
+    <text x="440" y="290" class="label" fill="#fff">SLM</text>
+    <text x="440" y="315" class="sub-label" fill="#fff">(소형 언어 모델)</text>
+
+    <!-- Output Generation -->
+    <rect x="530" y="265" width="120" height="70" class="box" fill="#50C878"/>
+    <text x="590" y="290" class="label" fill="#fff">출력 생성</text>
+    <text x="590" y="315" class="sub-label" fill="#fff">(디코딩, 후처리)</text>
+
+    <!-- Knowledge Base (RAG) -->
+    <rect x="380" y="140" width="120" height="70" class="box" fill="#FFD93D"/>
+    <text x="440" y="165" class="label">지식 기반</text>
+    <text x="440" y="190" class="sub-label">(RAG)</text>
+
+    <!-- External Tools (Function Calling) -->
+    <rect x="380" y="390" width="120" height="70" class="box" fill="#FFD93D"/>
+    <text x="440" y="415" class="label">외부 도구</text>
+    <text x="440" y="440" class="sub-label">(함수 호출)</text>
+
+    <!-- Monitoring & Logging -->
+    <rect x="600" y="480" width="120" height="50" class="box" fill="#FF6B6B"/>
+    <text x="660" y="505" class="label" fill="#fff">모니터링/로깅</text>
+
+    <!-- Arrows -->
+    <!-- User -> Input Processing -->
+    <path d="M200,300 H230" class="arrow-path"/>
+    <text x="215" y="285" class="sub-label">질의</text>
+
+    <!-- Input Processing -> SLM Core -->
+    <path d="M350,300 H380" class="arrow-path"/>
+
+    <!-- SLM Core -> Output Generation -->
+    <path d="M500,300 H530" class="arrow-path"/>
+
+    <!-- Output Generation -> User -->
+    <path d="M650,300 H680 V280 H80 V300" class="arrow-path"/>
+    <text x="665" y="285" class="sub-label">응답</text>
+
+    <!-- SLM Core <-> Knowledge Base -->
+    <path d="M440,265 V210" class="arrow-path"/>
+    <path d="M440,210 V265" class="arrow-path"/>
+    <text x="470" y="237" class="sub-label">참조/갱신</text>
+
+    <!-- SLM Core <-> External Tools -->
+    <path d="M440,335 V390" class="arrow-path"/>
+    <path d="M440,390 V335" class="arrow-path"/>
+    <text x="470" y="362" class="sub-label">호출/결과</text>
+
+    <!-- Monitoring arrows (simplified) -->
+    <path d="M140,335 V480 H600" class="arrow-path" marker-end="none" stroke-dasharray="4 2"/>
+    <path d="M290,335 V480 H600" class="arrow-path" marker-end="none" stroke-dasharray="4 2"/>
+    <path d="M440,335 V480 H600" class="arrow-path" marker-end="none" stroke-dasharray="4 2"/>
+    <path d="M590,335 V480 H600" class="arrow-path" marker-end="none" stroke-dasharray="4 2"/>
+    <text x="520" y="495" class="sub-label" fill="#FF6B6B">로그/메트릭</text>
+
+</svg>

@@ -292,14 +292,15 @@ def load_post(rel_path: str) -> dict:
     subfolder = parts[0] if len(parts) > 1 else ""
     filename = parts[-1]
 
-    # 연결된 이미지 찾기 (마크다운에서 /images/posts/<slug>/ 참조 탐색)
+    # 연결된 이미지/SVG 찾기 (마크다운에서 /images/posts/<slug>/ 참조 탐색)
     slug = filename.replace(".md", "")
     img_dir = get_static_images_dir() / slug
     images = []
+    svgs = []
     if img_dir.is_dir():
-        exts = {".png", ".jpg", ".jpeg", ".webp", ".gif"}
+        img_exts = {".png", ".jpg", ".jpeg", ".webp", ".gif"}
         for f in sorted(img_dir.iterdir()):
-            if f.suffix.lower() in exts:
+            if f.suffix.lower() in img_exts:
                 data = _b64.standard_b64encode(f.read_bytes()).decode("ascii")
                 mime = "image/png" if f.suffix.lower() == ".png" else "image/jpeg"
                 if f.suffix.lower() == ".webp":
@@ -310,6 +311,16 @@ def load_post(rel_path: str) -> dict:
                     "data_base64": data,
                     "url": f"/images/posts/{slug}/{f.name}",
                 })
+            elif f.suffix.lower() == ".svg":
+                svg_code = f.read_text(encoding="utf-8")
+                svgs.append({
+                    "filename": f.name,
+                    "description": f.stem,
+                    "type": "architecture",
+                    "style": "modern",
+                    "svg": svg_code,
+                    "url": f"/images/posts/{slug}/{f.name}",
+                })
 
     return {
         "markdown": markdown,
@@ -317,6 +328,7 @@ def load_post(rel_path: str) -> dict:
         "subfolder": subfolder,
         "slug": slug,
         "images": images,
+        "svgs": svgs,
     }
 
 

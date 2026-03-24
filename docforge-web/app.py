@@ -254,6 +254,59 @@ def api_delete_post_image(slug: str, filename: str):
     return {"ok": True}
 
 
+class SuggestCategoryBody(BaseModel):
+    topic: str = Field(..., min_length=1, max_length=5000)
+
+
+@app.post("/api/suggest-category")
+async def suggest_category(body: SuggestCategoryBody):
+    """주제를 보고 적절한 카테고리를 추천."""
+    key = _api_key()
+    if not key:
+        raise HTTPException(503, "GEMINI_API_KEY가 설정되지 않았습니다.")
+
+    categories = content_target_info().get("subfolders", [])
+    if not categories:
+        raise HTTPException(422, "카테고리 폴더가 없습니다.")
+
+    from google import genai
+    from google.genai import types
+
+    client = genai.Client(api_key=key)
+    prompt = f"""다음 카테고리 목록 중에서 주제에 가장 적합한 카테고리 하나만 골라줘.
+반드시 목록에 있는 이름 그대로 한 단어만 답해. 설명 없이 카테고리 이름만.
+
+카테고리 목록: {', '.join(categories)}
+
+주제: {body.topic[:2000]}"""
+
+    try:
+        resp = await client.aio.models.generate_content(
+            model=text_gen.TEXT_MODEL,
+            config=types.GenerateContentConfig(
+                max_output_tokens=64,
+                temperature=0.1,
+                thinking_config=types.ThinkingConfig(thinking_budget=0),
+            ),
+            contents=prompt,
+        )
+        suggestion = resp.text.strip().lower().replace(" ", "-")
+        # 목록에 있는지 확인
+        if suggestion not in categories:
+            # 부분 매칭 시도
+            for cat in categories:
+                if cat in suggestion or suggestion in cat:
+                    suggestion = cat
+                    break
+            else:
+                suggestion = categories[0]
+    except Exception as e:
+        logger.warning("카테고리 추천 실패: %s", e)
+        suggestion = categories[0]
+
+    return {"category": suggestion}
+
+
 @app.get("/api/health")
 def health():
     k = _api_key()
@@ -525,6 +578,11 @@ def read_edit():
         raise HTTPException(500, "static/edit.html 없음")
     return FileResponse(edit)
 
+
+# 블로그 static/images/ 서빙 (미리보기에서 /images/posts/... 경로 해결)
+blog_images_dir = ROOT.parent / "static" / "images"
+if blog_images_dir.is_dir():
+    app.mount("/images", StaticFiles(directory=str(blog_images_dir)), name="blog-images")
 
 if static_dir.is_dir():
     app.mount("/static", StaticFiles(directory=str(static_dir)), name="static")

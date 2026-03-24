@@ -2,8 +2,13 @@
 
 from __future__ import annotations
 
+import logging
 import re
+import xml.etree.ElementTree as ET
+
 import httpx
+
+logger = logging.getLogger(__name__)
 
 SVG_MODEL = "gemini-2.5-flash"
 GEMINI_API_URL = (
@@ -67,16 +72,60 @@ def _build_prompt(svg_type: str, description: str, style: str) -> str:
 
 
 def _extract_svg(text: str) -> str:
-    """응답에서 SVG 코드만 추출."""
-    # ```svg ... ``` 또는 ```xml ... ``` 블록 처리
-    m = re.search(r"```(?:svg|xml)?\s*(<svg[\s\S]*?</svg>)\s*```", text, re.IGNORECASE)
-    if m:
-        return m.group(1).strip()
-    # 직접 <svg>...</svg> 추출
+    """응답에서 SVG 코드만 추출하고 유효성 검사."""
+    # 코드블록 마커 제거
+    text = re.sub(r"^```(?:svg|xml)?\s*", "", text.strip())
+    text = re.sub(r"\s*```\s*$", "", text.strip())
+
+    # <svg>...</svg> 추출
     m = re.search(r"(<svg[\s\S]*?</svg>)", text, re.IGNORECASE)
     if m:
-        return m.group(1).strip()
-    return text.strip()
+        svg = m.group(1).strip()
+    else:
+        # </svg> 없이 잘린 경우 → 자동 닫기 시도
+        m = re.search(r"(<svg[\s\S]*)", text, re.IGNORECASE)
+        if m:
+            svg = m.group(1).strip() + "\n</svg>"
+            logger.warning("SVG가 잘려 있어 </svg>를 자동 추가했습니다.")
+        else:
+            return text.strip()
+
+    return _validate_and_fix_svg(svg)
+
+
+def _validate_and_fix_svg(svg: str) -> str:
+    """SVG XML 유효성 검사. 깨진 경우 복구 시도."""
+    try:
+        ET.fromstring(svg)
+        return svg
+    except ET.ParseError as e:
+        logger.warning("SVG XML 파싱 실패: %s — 복구 시도", e)
+
+    # 열린 태그 자동 닫기 시도 (최대 5단계)
+    fixed = svg
+    for _ in range(5):
+        try:
+            ET.fromstring(fixed)
+            return fixed
+        except ET.ParseError:
+            # 마지막 완전한 태그 이후를 잘라내고 </svg>로 닫기
+            pass
+
+        # 마지막 불완전한 태그/속성 제거
+        # 잘린 속성값 (예: fill="#4) 제거
+        fixed = re.sub(r'<[^>]*$', '', fixed.rstrip())
+        # 닫히지 않은 텍스트 노드 정리
+        fixed = fixed.rstrip()
+        if not fixed.endswith("</svg>"):
+            fixed += "\n</svg>"
+
+    # 최종 검증
+    try:
+        ET.fromstring(fixed)
+        logger.info("SVG 복구 성공")
+        return fixed
+    except ET.ParseError as e:
+        raise ValueError(f"SVG가 유효하지 않아 복구할 수 없습니다: {e}") from e
 
 
 async def generate_svg_async(
@@ -84,28 +133,37 @@ async def generate_svg_async(
     description: str,
     svg_type: str = "architecture",
     style: str = "modern",
+    max_retries: int = 2,
 ) -> str:
-    """SVG 코드 생성 후 반환."""
+    """SVG 코드 생성 후 유효성 검사까지 수행. 실패 시 재시도."""
     system_prompt = SYSTEM_PROMPTS.get(svg_type, SYSTEM_PROMPTS["architecture"])
     user_prompt = _build_prompt(svg_type, description, style)
 
-    payload = {
-        "system_instruction": {"parts": [{"text": system_prompt}]},
-        "contents": [{"role": "user", "parts": [{"text": user_prompt}]}],
-        "generationConfig": {
-            "temperature": 0.4,
-            "maxOutputTokens": 8192,
-        },
-    }
+    last_err = None
+    for attempt in range(1, max_retries + 1):
+        payload = {
+            "system_instruction": {"parts": [{"text": system_prompt}]},
+            "contents": [{"role": "user", "parts": [{"text": user_prompt}]}],
+            "generationConfig": {
+                "temperature": 0.4,
+                "maxOutputTokens": 65536,
+            },
+        }
 
-    async with httpx.AsyncClient(timeout=60.0) as client:
-        resp = await client.post(
-            GEMINI_API_URL,
-            params={"key": api_key},
-            json=payload,
-        )
-        resp.raise_for_status()
-        data = resp.json()
+        async with httpx.AsyncClient(timeout=60.0) as client:
+            resp = await client.post(
+                GEMINI_API_URL,
+                params={"key": api_key},
+                json=payload,
+            )
+            resp.raise_for_status()
+            data = resp.json()
 
-    raw = data["candidates"][0]["content"]["parts"][0]["text"]
-    return _extract_svg(raw)
+        raw = data["candidates"][0]["content"]["parts"][0]["text"]
+        try:
+            return _extract_svg(raw)
+        except ValueError as e:
+            last_err = e
+            logger.warning("SVG 생성 시도 %d/%d 실패: %s — 재시도", attempt, max_retries, e)
+
+    raise ValueError(f"SVG 생성 {max_retries}회 시도 후 실패: {last_err}")

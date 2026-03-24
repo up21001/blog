@@ -160,7 +160,7 @@ async def rewrite_text(text: str, api_key: str, url: str = "") -> str:
         model=TEXT_MODEL,
         config=types.GenerateContentConfig(
             system_instruction=REWRITE_SYSTEM,
-            max_output_tokens=16384,
+            max_output_tokens=65536,
             temperature=0.5,
             thinking_config=types.ThinkingConfig(thinking_budget=0),
         ),
