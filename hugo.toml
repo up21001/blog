@@ -73,6 +73,9 @@ enableRobotsTXT = true
   series = "series"
 
 [markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
   [markup.highlight]
     style = "github"
     lineNos = true
