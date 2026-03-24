@@ -11,59 +11,73 @@ draft: false
 
 ![에이전트 복구 런북 실험 71차](/images/agent-recovery-runbook-lab-71-2026.svg)
 
-## 왜 이 문서가 필요한가
+**에이전트 복구 런북 실험 71차** — 에이전트 루프 장애 처리
 
-이 문서의 핵심 목표는 **장애 감지부터 복구까지 표준화** 입니다.  
-실무에서는 속도와 품질, 비용이 동시에 충돌하므로 단일 지표로는 운영 의사결정을 내리기 어렵습니다. 아래 구조를 기준으로 운영하면, 실험 결과를 팀 자산으로 축적하면서도 릴리즈 안정성을 유지할 수 있습니다.
+이번 실험의 핵심 주제는 **무한 루프 탐지 및 강제 종료**입니다. 실무 운영 현장에서 직접 마주친 시나리오를 기반으로 설계했으며, 각 단계의 결과와 교훈을 솔직하게 기록합니다.
 
-## 운영 지표 표준
+## 장애 시나리오 개요
 
-| 지표 | 정의 | 목표 |
-|---|---|---|
-| MTTD | 탐지까지 걸린 시간 | <= 5분 |
-| MTTR | 복구 완료 시간 | <= 30분 |
-| 재발률 | 동일 유형 재발 | <= 10% |
+**장애 유형**: 에이전트 무한 루프
+**영향 범위**: 해당 에이전트 세션, 컴퓨팅 리소스
+**심각도**: P2
 
-## 실행 절차
+에이전트가 명확한 종료 조건 없이 반복 작업에 빠지는 경우입니다. '정보 부족 → 검색 → 결과 불충분 → 다시 검색' 사이클이 대표적입니다. 이 경우 토큰과 비용이 무한히 소모됩니다.
 
-1. **기준선 설정**: 최근 2주 데이터를 기준으로 현재 상태를 수치화합니다.  
-2. **실험 설계**: 가설 1개당 변경점 1개 원칙으로 실험을 분리합니다.  
-3. **게이트 검증**: 품질 하한을 넘지 못하면 배포를 중단합니다.  
-4. **운영 반영**: 통과 실험만 프로덕션에 반영하고 변경 로그를 남깁니다.
+## 루프 감지 알고리즘
 
-## 체크리스트
-
-- 입력/출력 샘플셋이 최신 데이터 분포를 반영하는가
-- 품질 하한과 비용 상한이 사전에 합의되었는가
-- 실패 시 롤백 경로와 담당자가 명확한가
-- 실험 결과가 다음 스프린트 백로그에 반영되는가
-
-## 운영 플로우
-
-```mermaid
-flowchart TD
-    A[기준선 수집] --> B[가설 수립]
-    B --> C[실험 실행]
-    C --> D[품질/비용 게이트 검증]
-    D -->|통과| E[배포 반영]
-    D -->|실패| F[롤백 및 원인분석]
-    E --> G[성과 기록]
-    F --> G
-    G --> H[다음 실험 계획]
+```python
+class LoopDetector:
+    def __init__(self, window=10, similarity_threshold=0.85):
+        self.history = deque(maxlen=window)
+        self.threshold = similarity_threshold
+    
+    def is_looping(self, current_action):
+        if not self.history:
+            self.history.append(current_action)
+            return False
+        
+        # 최근 행동과 유사도 검사
+        similarities = [
+            cosine_similarity(current_action, past)
+            for past in self.history
+        ]
+        max_sim = max(similarities)
+        
+        if max_sim > self.threshold:
+            logger.warning(f'Loop detected! Similarity: {max_sim:.2f}')
+            return True
+        
+        self.history.append(current_action)
+        return False
 ```
 
-## 마무리
+## 강제 종료 절차
 
-핵심은 문서를 많이 만드는 것이 아니라, 각 문서가 실제 운영 행동으로 이어지도록 만드는 것입니다.  
-이 템플릿을 팀 주간 리뷰에 연결하면, 실험-검증-배포-회고가 하나의 루프로 작동합니다.
+루프 감지 시 에스컬레이션 단계:
 
-## 참고문헌
+1. **경고 주입**: 에이전트에게 루프 가능성 알림 메시지 추가
+2. **도구 제한**: 반복 사용된 도구 임시 차단
+3. **강제 요약**: '지금까지 작업한 내용으로 최선의 결과를 제출하라' 지시
+4. **세션 종료**: 위 조치 후에도 5회 더 루프 시 강제 종료
 
-- [Google SRE - Incident Response](https://sre.google/sre-book/managing-load/)
-- [Google SRE Workbook - Postmortem](https://sre.google/workbook/postmortem-culture/)
-- [ITIL 4 - Incident management (Axelos)](https://www.axelos.com/best-practice-solutions/itil)
+## 비용 보호 설정
 
-## 이번 차수 실전 포인트
+```yaml
+agent_limits:
+  max_tokens_per_session: 100_000
+  max_tool_calls: 50
+  max_same_tool_calls: 5  # 동일 도구 연속 호출 제한
+  loop_detection:
+    enabled: true
+    window_size: 8
+    similarity_threshold: 0.80
+```
 
-게이트 조건은 사전 합의된 문장으로 고정합니다. 릴리즈 직전에 기준을 바꾸면 팀 신뢰와 속도가 동시에 손상됩니다.
+## 재발 방지
+
+에이전트 프롬프트에 명확한 종료 조건을 명시하는 것이 근본적인 해결책입니다. '최대 N번 시도 후 가능한 최선의 답변 제공'이라는 제약을 시스템 프롬프트에 포함하세요.
+
+## 마치며
+
+이번 71차 실험에서 얻은 가장 큰 교훈은 **에이전트 루프 장애 처리**의 중요성입니다. 다음 실험에서는 이번 결과를 바탕으로 한 단계 더 발전된 접근법을 적용할 예정입니다. 실험 결과나 질문이 있으시면 댓글로 공유해 주세요.
 

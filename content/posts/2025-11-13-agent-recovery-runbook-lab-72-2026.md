@@ -11,59 +11,72 @@ draft: false
 
 ![에이전트 복구 런북 실험 72차](/images/agent-recovery-runbook-lab-72-2026.svg)
 
-## 왜 이 문서가 필요한가
+**에이전트 복구 런북 실험 72차** — 에이전트 상태 동기화 오류
 
-이 문서의 핵심 목표는 **장애 감지부터 복구까지 표준화** 입니다.  
-실무에서는 속도와 품질, 비용이 동시에 충돌하므로 단일 지표로는 운영 의사결정을 내리기 어렵습니다. 아래 구조를 기준으로 운영하면, 실험 결과를 팀 자산으로 축적하면서도 릴리즈 안정성을 유지할 수 있습니다.
+이번 실험의 핵심 주제는 **데이터 불일치 복구 런북**입니다. 실무 운영 현장에서 직접 마주친 시나리오를 기반으로 설계했으며, 각 단계의 결과와 교훈을 솔직하게 기록합니다.
 
-## 운영 지표 표준
+## 장애 시나리오 개요
 
-| 지표 | 정의 | 목표 |
-|---|---|---|
-| MTTD | 탐지까지 걸린 시간 | <= 5분 |
-| MTTR | 복구 완료 시간 | <= 30분 |
-| 재발률 | 동일 유형 재발 | <= 10% |
+**장애 유형**: 에이전트 내부 상태와 외부 데이터 불일치
+**영향 범위**: 에이전트 출력 결과 신뢰성
+**심각도**: P2
 
-## 실행 절차
+에이전트가 오래된 캐시 데이터를 기반으로 의사결정을 내리거나, 동시성 문제로 인해 여러 에이전트가 서로 다른 상태를 보는 경우입니다.
 
-1. **기준선 설정**: 최근 2주 데이터를 기준으로 현재 상태를 수치화합니다.  
-2. **실험 설계**: 가설 1개당 변경점 1개 원칙으로 실험을 분리합니다.  
-3. **게이트 검증**: 품질 하한을 넘지 못하면 배포를 중단합니다.  
-4. **운영 반영**: 통과 실험만 프로덕션에 반영하고 변경 로그를 남깁니다.
+## 불일치 탐지 방법
 
-## 체크리스트
-
-- 입력/출력 샘플셋이 최신 데이터 분포를 반영하는가
-- 품질 하한과 비용 상한이 사전에 합의되었는가
-- 실패 시 롤백 경로와 담당자가 명확한가
-- 실험 결과가 다음 스프린트 백로그에 반영되는가
-
-## 운영 플로우
-
-```mermaid
-flowchart TD
-    A[기준선 수집] --> B[가설 수립]
-    B --> C[실험 실행]
-    C --> D[품질/비용 게이트 검증]
-    D -->|통과| E[배포 반영]
-    D -->|실패| F[롤백 및 원인분석]
-    E --> G[성과 기록]
-    F --> G
-    G --> H[다음 실험 계획]
+```python
+def validate_state_consistency(agent_state, source_of_truth):
+    discrepancies = []
+    
+    for key, agent_value in agent_state.items():
+        actual_value = source_of_truth.get(key)
+        
+        if actual_value is None:
+            discrepancies.append({'key': key, 'issue': 'missing_in_source'})
+        elif agent_value != actual_value:
+            discrepancies.append({
+                'key': key,
+                'agent': agent_value,
+                'actual': actual_value,
+                'issue': 'value_mismatch'
+            })
+    
+    return discrepancies
 ```
 
-## 마무리
+## 상태 재동기화 절차
 
-핵심은 문서를 많이 만드는 것이 아니라, 각 문서가 실제 운영 행동으로 이어지도록 만드는 것입니다.  
-이 템플릿을 팀 주간 리뷰에 연결하면, 실험-검증-배포-회고가 하나의 루프로 작동합니다.
+1. **현재 작업 일시 중단**: 추가 손상 방지
+2. **상태 스냅샷 저장**: 디버깅을 위한 현재 상태 보존
+3. **소스 오브 트루스 조회**: DB 또는 상태 저장소에서 최신 상태 가져오기
+4. **상태 덮어쓰기**: 에이전트 내부 상태를 실제 상태로 강제 업데이트
+5. **작업 재개**: 올바른 상태에서 중단된 지점부터 계속
 
-## 참고문헌
+## 예방 설계 패턴
 
-- [Google SRE - Incident Response](https://sre.google/sre-book/managing-load/)
-- [Google SRE Workbook - Postmortem](https://sre.google/workbook/postmortem-culture/)
-- [ITIL 4 - Incident management (Axelos)](https://www.axelos.com/best-practice-solutions/itil)
+에이전트가 상태를 캐싱할 때 TTL(Time-To-Live)을 반드시 설정합니다:
 
-## 이번 차수 실전 포인트
+```python
+@cached(ttl=60)  # 60초 캐시
+def get_user_context(user_id):
+    return db.get_user(user_id)
 
-이번 차수에서는 변경을 최소 단위로 쪼개고, 한 번에 하나의 가설만 검증합니다. 동시에 여러 요인을 바꾸면 회고에서 원인을 특정하기 어렵습니다.
+# 중요 작업 전에는 캐시 무효화
+def before_critical_action(user_id):
+    invalidate_cache(f'user:{user_id}')
+    fresh_state = get_user_context.refresh(user_id)
+    return fresh_state
+```
+
+## 모니터링 포인트
+
+상태 불일치 예방을 위해 모니터링해야 할 지표:
+- 캐시 히트율 vs 미스율
+- 상태 조회 지연 시간
+- 동시 접근 충돌 횟수
+
+## 마치며
+
+이번 72차 실험에서 얻은 가장 큰 교훈은 **에이전트 상태 동기화 오류**의 중요성입니다. 다음 실험에서는 이번 결과를 바탕으로 한 단계 더 발전된 접근법을 적용할 예정입니다. 실험 결과나 질문이 있으시면 댓글로 공유해 주세요.
 
