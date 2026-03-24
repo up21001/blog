@@ -6,6 +6,7 @@ disableLanguages = ["en"]
 # 미래 날짜 글도 HTML/RSS/index.json에 포함 (예: 발행일이 오늘보다 뒤인 초안 공개 글)
 buildFuture = true
 title = "통합 블로그"
+description = "하드웨어/소프트웨어 엔지니어의 기술 블로그 - PCB 설계, 임베디드, AI, DevOps 실전 경험 공유"
 theme = "blowfish"
 enableRobotsTXT = true
 [permalinks]
@@ -16,17 +17,17 @@ enableRobotsTXT = true
 
 [params]
   colorScheme = "ocean"
-
-[params.verification]
-  google = "dUlA-mHlZxD1WkU1NXY2THAW5fT5Oa0Kmw6IM6jF1Bw"
-  bing = "2A34F9D8910EAE2FB3B6D41CCA337145"
+  description = "하드웨어/소프트웨어 엔지니어의 기술 블로그 - PCB 설계, 임베디드, AI, DevOps 실전 경험 공유"
+  keywords = ["하드웨어", "소프트웨어", "AI", "임베디드", "PCB 설계", "Python", "DevOps"]
   defaultAppearance = "light"
   autoSwitchAppearance = true
   enableSearch = true
   enableCodeCopy = true
   mainSections = ["posts"]
-  description = "하드웨어/소프트웨어 엔지니어의 기술 블로그 - PCB 설계, 임베디드, AI, DevOps 실전 경험 공유"
-  keywords = ["하드웨어", "소프트웨어", "AI", "임베디드", "PCB 설계", "Python", "DevOps"]
+
+[params.verification]
+  google = "dUlA-mHlZxD1WkU1NXY2THAW5fT5Oa0Kmw6IM6jF1Bw"
+  bing = "2A34F9D8910EAE2FB3B6D41CCA337145"
 
 [params.author]
   name = "Engineer"
