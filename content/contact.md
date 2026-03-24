@@ -7,15 +7,6 @@ layout: "simple"
 
 ## 문의하기
 
-블로그 콘텐츠, 기술 질문, 협업 제안 또는 광고 관련 문의는 아래 이메일로 연락해 주세요.
+기술 질문, 협업 제안, 광고 관련 등 문의를 남겨주세요. 가능한 빠르게 답변드리겠습니다.
 
-**이메일:** [blog.contact@example.com](mailto:blog.contact@example.com)
-
-### 문의 유형
-
-- **기술 질문** — 포스트 내용에 대한 질문이나 오류 제보
-- **협업 제안** — 기술 콘텐츠 공동 작성, 프로젝트 협업
-- **광고/스폰서** — 광고 게재, 리뷰 요청
-- **기타** — 기타 건의사항
-
-가능한 빠르게 답변드리겠습니다. 감사합니다.
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSep0aV2xP1pQAT0vEEiHLF5TedbixnG7fUB4xb7iZj23W7Yyw/viewform?embedded=true" width="100%" height="800" frameborder="0" marginheight="0" marginwidth="0" style="border:none;border-radius:8px;">로딩 중…</iframe>
