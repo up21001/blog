@@ -1,6 +1,8 @@
 baseURL = "https://blog-8ye.pages.dev"
 languageCode = "ko"
 defaultContentLanguage = "ko"
+defaultContentLanguageInSubdir = false
+disableLanguages = ["en"]
 # 미래 날짜 글도 HTML/RSS/index.json에 포함 (예: 발행일이 오늘보다 뒤인 초안 공개 글)
 buildFuture = true
 title = "통합 블로그"
