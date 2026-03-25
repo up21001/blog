@@ -307,6 +307,110 @@ async def suggest_category(body: SuggestCategoryBody):
     return {"category": suggestion}
 
 
+class AutoInsertBody(BaseModel):
+    markdown: str = Field(..., min_length=1)
+    assets: list[dict] = Field(..., description="[{path, description}]")
+
+
+@app.post("/api/auto-insert-assets")
+async def auto_insert_assets(body: AutoInsertBody):
+    """Gemini로 본문 분석 후 에셋을 적절한 위치에 삽입."""
+    key = _api_key()
+    if not key:
+        raise HTTPException(503, "GEMINI_API_KEY가 설정되지 않았습니다.")
+
+    from google import genai
+    from google.genai import types
+
+    asset_list = "\n".join(
+        f"- `![{a.get('description', a['path'])}]({a['path']})`"
+        for a in body.assets
+    )
+
+    prompt = f"""아래 마크다운 본문에 이미지/SVG 에셋을 적절한 위치에 삽입해줘.
+
+## 규칙
+1. 각 에셋을 본문 내용과 관련된 섹션 바로 아래에 삽입하라.
+2. 에셋을 골고루 분배하라 — 한 곳에 몰리지 않게.
+3. 본문 텍스트는 절대 수정하지 마라. 에셋 마크다운만 삽입.
+4. 프론트매터(--- 사이)는 건드리지 마라.
+5. 마크다운 이미지 문법을 사용: `![설명](경로)`
+6. 결과는 전체 마크다운을 그대로 출력하라 (코드블록 없이).
+
+## 삽입할 에셋
+{asset_list}
+
+## 본문
+{body.markdown}"""
+
+    client = genai.Client(api_key=key)
+    try:
+        resp = await client.aio.models.generate_content(
+            model=text_gen.TEXT_MODEL,
+            config=types.GenerateContentConfig(
+                max_output_tokens=65536,
+                temperature=0.1,
+                thinking_config=types.ThinkingConfig(thinking_budget=0),
+            ),
+            contents=prompt,
+        )
+        result = resp.text.strip()
+        # 코드블록 제거
+        if result.startswith("```"):
+            result = re.sub(r"^```[^\n]*\n", "", result)
+            result = re.sub(r"\n```\s*$", "", result)
+        return {"ok": True, "markdown": result.strip()}
+    except Exception as e:
+        logger.exception("에셋 자동 삽입 실패")
+        raise HTTPException(500, str(e)) from e
+
+
+@app.post("/api/hugo-build")
+async def api_hugo_build():
+    """Hugo 빌드 실행."""
+    import subprocess
+    blog_root = str(ROOT.parent)
+    try:
+        result = subprocess.run(
+            ["hugo", "--quiet"],
+            cwd=blog_root,
+            capture_output=True, text=True, timeout=120,
+        )
+        if result.returncode != 0:
+            raise HTTPException(500, f"Hugo 빌드 실패: {result.stderr}")
+        return {"ok": True, "output": result.stdout.strip()}
+    except FileNotFoundError:
+        raise HTTPException(500, "hugo 명령어를 찾을 수 없습니다.")
+    except subprocess.TimeoutExpired:
+        raise HTTPException(500, "Hugo 빌드 타임아웃 (120초)")
+
+
+@app.post("/api/git-push")
+async def api_git_push():
+    """git add + commit + push."""
+    import subprocess
+    blog_root = str(ROOT.parent)
+    try:
+        subprocess.run(["git", "add", "-A"], cwd=blog_root, check=True, capture_output=True, timeout=30)
+        result = subprocess.run(
+            ["git", "commit", "-m", "feat: DocForge에서 콘텐츠 추가/수정"],
+            cwd=blog_root, capture_output=True, text=True, timeout=30,
+        )
+        if result.returncode != 0 and "nothing to commit" in result.stdout:
+            return {"ok": True, "message": "변경사항 없음"}
+        push = subprocess.run(
+            ["git", "push"],
+            cwd=blog_root, capture_output=True, text=True, timeout=60,
+        )
+        if push.returncode != 0:
+            raise HTTPException(500, f"git push 실패: {push.stderr}")
+        return {"ok": True, "message": "커밋 & 푸시 완료"}
+    except subprocess.TimeoutExpired:
+        raise HTTPException(500, "git 명령 타임아웃")
+    except Exception as e:
+        raise HTTPException(500, str(e))
+
+
 @app.post("/api/restart")
 def api_restart():
     """서버 재시작 (uvicorn --reload 환경에서 동작)."""

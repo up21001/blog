@@ -685,9 +685,78 @@
     saveAs(blob, `${stem}-docforge.zip`);
   });
 
+  // ── 빌드 & 배포 ──
+  $("btnHugoBuild").addEventListener("click", async () => {
+    const btn = $("btnHugoBuild");
+    btn.disabled = true; btn.textContent = "빌드 중…";
+    try {
+      const r = await fetch(apiUrl("/api/hugo-build"), { method: "POST" });
+      const j = await r.json();
+      if (!r.ok) throw new Error(j.detail || "빌드 실패");
+      alert("Hugo 빌드 완료! localhost:1313에서 확인하세요.");
+    } catch (e) { alert("빌드 실패: " + e.message); }
+    finally { btn.disabled = false; btn.textContent = "빌드"; }
+  });
+
+  $("btnGitPush").addEventListener("click", async () => {
+    if (!confirm("변경사항을 커밋하고 GitHub에 푸시합니다. 진행할까요?")) return;
+    const btn = $("btnGitPush");
+    btn.disabled = true; btn.textContent = "배포 중…";
+    try {
+      const r = await fetch(apiUrl("/api/git-push"), { method: "POST" });
+      const j = await r.json();
+      if (!r.ok) throw new Error(j.detail || "배포 실패");
+      alert(j.message || "배포 완료!");
+    } catch (e) { alert("배포 실패: " + e.message); }
+    finally { btn.disabled = false; btn.textContent = "배포"; }
+  });
+
+  // ── 에셋 자동 삽입 (Gemini가 본문 분석 후 적절한 위치에 배치) ──
+  async function autoInsertAssets() {
+    let md = getMarkdown();
+    const missing = [];
+
+    currentImages.forEach((img, i) => {
+      const ext = img.mime.includes("png") ? "png" : "jpg";
+      const fname = `image-${i + 1}.${ext}`;
+      const path = `/images/posts/${lastSlug}/${fname}`;
+      if (!md.includes(path)) missing.push({ path, description: fname });
+    });
+
+    currentSvgs.forEach((svg, i) => {
+      const fname = `svg-${i + 1}.svg`;
+      const path = `/images/posts/${lastSlug}/${fname}`;
+      if (!md.includes(path)) missing.push({ path, description: svg.description || fname });
+    });
+
+    if (missing.length === 0) return md;
+
+    try {
+      const r = await fetch(apiUrl("/api/auto-insert-assets"), {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ markdown: md, assets: missing }),
+      });
+      const j = await r.json();
+      if (!r.ok) throw new Error(j.detail || "삽입 실패");
+
+      md = j.markdown;
+      $("mdEditor").value = md;
+      const split = $("mdEditorSplit");
+      if (split) split.value = md;
+    } catch (e) {
+      console.warn("에셋 자동 삽입 실패, 끝에 추가:", e);
+      missing.forEach(a => { md += `\n\n![${a.description}](${a.path})`; });
+      $("mdEditor").value = md;
+      const split = $("mdEditorSplit");
+      if (split) split.value = md;
+    }
+    return md;
+  }
+
   // ── 바로 저장 (블로그에 저장) ──
   $("btnQuickPublish").addEventListener("click", async () => {
-    const md = getMarkdown().trim();
+    const md = (await autoInsertAssets()).trim();
     if (!md) { alert("저장할 마크다운이 없습니다."); return; }
 
     const sub = ($("publishSubfolder") && $("publishSubfolder").value.trim()) || null;
@@ -760,7 +829,7 @@
   }
 
   $("btnPublish").addEventListener("click", async () => {
-    const md = getMarkdown().trim();
+    const md = (await autoInsertAssets()).trim();
     const status = $("publishStatus");
     if (!md) { status.textContent = "저장할 마크다운이 없습니다."; return; }
     status.textContent = "저장 중…";

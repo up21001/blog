@@ -398,6 +398,20 @@ textarea { resize: vertical; min-height: 80px; }
 .btn-suggest:hover { opacity: 0.9; }
 .btn-suggest:disabled { opacity: 0.5; cursor: not-allowed; }
 
+.btn-build {
+  background: linear-gradient(135deg, #1565c0, #1e88e5) !important;
+  border: none !important; font-weight: 600; color: #fff !important;
+}
+.btn-build:hover { opacity: 0.9; }
+.btn-build:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.btn-deploy {
+  background: linear-gradient(135deg, #6a1b9a, #8e24aa) !important;
+  border: none !important; font-weight: 600; color: #fff !important;
+}
+.btn-deploy:hover { opacity: 0.9; }
+.btn-deploy:disabled { opacity: 0.5; cursor: not-allowed; }
+
 .btn-quick-publish {
   background: linear-gradient(135deg, #e65100, #ff6d00) !important;
   border: none !important;
