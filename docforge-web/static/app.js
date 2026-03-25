@@ -76,6 +76,36 @@
     btn.addEventListener("click", () => switchLang(btn.dataset.lang));
   });
 
+  // 영문 재번역 버튼
+  $("btnRetranslate").addEventListener("click", async () => {
+    const btn = $("btnRetranslate");
+    // 현재 편집 내용 저장
+    setMarkdownForLang(currentLang, getMarkdown());
+    const koMd = getMarkdownForLang("ko");
+    if (!koMd.trim()) { alert("한글 본문이 없습니다."); return; }
+
+    btn.disabled = true;
+    btn.textContent = "번역 중…";
+    try {
+      const r = await fetch(apiUrl("/api/translate-en"), {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ markdown: koMd }),
+      });
+      const j = await r.json();
+      if (!r.ok) throw new Error(j.detail || "번역 실패");
+      currentMarkdownEn = j.markdown_en || "";
+      // 영문 탭으로 전환해서 결과 보여주기
+      switchLang("en");
+      alert("영문 재번역 완료!");
+    } catch (e) {
+      alert("번역 실패: " + e.message);
+    } finally {
+      btn.disabled = false;
+      btn.textContent = "🔄 영문 재번역";
+    }
+  });
+
   function renderPreviewHtml(md) {
     const p = $("preview");
     if (!p) return;
@@ -617,6 +647,25 @@
 
     const with_english = $("withEnglish") ? $("withEnglish").checked : false;
     const model_preset = ($("modelPreset") && $("modelPreset").value) || "fast";
+
+    // 참고 양식 파일 읽기
+    let reference_doc = null;
+    let reference_file_b64 = null;
+    let reference_file_name = null;
+    const refInput = $("referenceDoc");
+    if (refInput && refInput.files && refInput.files.length > 0) {
+      const file = refInput.files[0];
+      reference_file_name = file.name;
+      const ext = file.name.split(".").pop().toLowerCase();
+      if (["md", "txt", "markdown", "html", "htm"].includes(ext)) {
+        reference_doc = await file.text();
+      } else {
+        // docx, pdf → base64
+        const buf = await file.arrayBuffer();
+        reference_file_b64 = btoa(String.fromCharCode(...new Uint8Array(buf)));
+      }
+    }
+
     lastGenerateParams = { topic, template, with_images, max_images: with_images ? max_images : 0, with_svg, max_svg: with_svg ? max_svg : 0, length, image_hints, with_english, model_preset };
 
     try {
@@ -628,6 +677,8 @@
           max_images: with_images ? max_images : 0,
           with_svg, max_svg: with_svg ? max_svg : 0,
           length, image_hints, with_english, model_preset,
+          reference_doc, reference_file_b64, reference_file_name,
+          reference_url: ($("referenceUrl") && $("referenceUrl").value.trim()) || null,
         }),
       });
       const j = await r.json();

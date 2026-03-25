@@ -25,6 +25,7 @@ from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field
 
+from services import doc_parser
 from services import image_gen
 from services import svg_gen
 from services import text_gen
@@ -70,6 +71,10 @@ class GenerateBody(BaseModel):
     image_hints: str | None = Field(None, max_length=3000)
     with_english: bool = False
     model_preset: str = Field("fast", pattern="^(fast|quality|creative)$")
+    reference_doc: str | None = Field(None, max_length=50000, description="참고 양식 텍스트")
+    reference_file_b64: str | None = Field(None, max_length=10_000_000, description="참고 양식 파일 base64")
+    reference_file_name: str | None = Field(None, max_length=200, description="참고 양식 파일명")
+    reference_url: str | None = Field(None, max_length=2000, description="참고할 웹 페이지 URL")
 
 
 class ImageSaveItem(BaseModel):
@@ -264,6 +269,24 @@ def api_delete_post_image(slug: str, filename: str):
     if not ok:
         raise HTTPException(404, "이미지를 찾을 수 없습니다.")
     return {"ok": True}
+
+
+class TranslateBody(BaseModel):
+    markdown: str = Field(..., min_length=1, max_length=5_000_000)
+
+
+@app.post("/api/translate-en")
+async def api_translate_en(body: TranslateBody):
+    """한글 마크다운을 영문으로 번역."""
+    key = _api_key()
+    if not key:
+        raise HTTPException(503, "GEMINI_API_KEY가 설정되지 않았습니다.")
+    try:
+        result = await translate_to_english_async(body.markdown, key)
+    except Exception as e:
+        logger.exception("영문 번역 실패")
+        raise HTTPException(500, str(e)) from e
+    return {"ok": True, "markdown_en": result}
 
 
 class SuggestCategoryBody(BaseModel):
@@ -566,6 +589,27 @@ async def generate(body: GenerateBody):
             "GEMINI_API_KEY가 설정되지 않았습니다. 프로젝트 루트 또는 docforge-web/.env 에 키를 넣어 주세요.",
         )
 
+    # 참고 양식 파싱
+    ref_doc = body.reference_doc
+    if not ref_doc and body.reference_file_b64 and body.reference_file_name:
+        try:
+            ref_doc = doc_parser.parse_reference(body.reference_file_b64, body.reference_file_name)
+        except Exception as e:
+            logger.warning("참고 양식 파싱 실패: %s", e)
+    if not ref_doc and body.reference_url:
+        try:
+            import httpx
+            async with httpx.AsyncClient(timeout=30.0, follow_redirects=True) as client:
+                resp = await client.get(body.reference_url)
+                resp.raise_for_status()
+                html_bytes = resp.content
+            ref_doc = doc_parser.parse_reference(
+                __import__("base64").standard_b64encode(html_bytes).decode(),
+                "page.html",
+            )
+        except Exception as e:
+            logger.warning("참고 URL 가져오기 실패: %s", e)
+
     # 프리셋 → 텍스트 모델 매핑
     preset_text_model = {
         "fast": "gemini-2.5-flash",
@@ -580,6 +624,7 @@ async def generate(body: GenerateBody):
         markdown = await text_gen.generate_document_async(
             topic, body.template, key, length_tier=body.length,
             text_model=text_model,
+            reference_doc=ref_doc,
         )
     except Exception as e:
         logger.exception("텍스트 생성 실패")

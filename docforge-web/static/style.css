@@ -480,6 +480,20 @@ textarea { resize: vertical; min-height: 80px; }
 }
 .lang-tab:hover { border-color: var(--success); color: var(--text); }
 .lang-tab.active { border-color: var(--success); color: var(--success); background: rgba(137, 209, 133, 0.12); }
+.reference-url-row { margin-top: 0.4rem; }
+.reference-url-row input { width: 100%; }
+.btn-retranslate {
+  margin-left: 0.5rem;
+  padding: 0.35rem 0.8rem;
+  border-radius: 6px;
+  border: 1px solid var(--accent);
+  background: var(--accent-dim);
+  color: var(--accent);
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+.btn-retranslate:hover { background: var(--accent); color: #fff; }
+.btn-retranslate:disabled { opacity: 0.5; cursor: not-allowed; }
 
 .tabs { display: flex; gap: 0.35rem; margin-bottom: 0.75rem; }
 .tab {

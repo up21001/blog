@@ -82,6 +82,16 @@
         </div>
 
         <div class="field">
+          <label for="referenceDoc">참고 양식 (파일 또는 URL)</label>
+          <div class="reference-upload-row">
+            <input type="file" id="referenceDoc" accept=".md,.txt,.markdown,.html,.htm,.docx,.pdf,.pptx" />
+          </div>
+          <div class="reference-url-row">
+            <input type="url" id="referenceUrl" placeholder="https://example.com/blog-post (참고할 웹 페이지 URL)" />
+          </div>
+        </div>
+
+        <div class="field">
           <label for="lengthTier">목표 분량</label>
           <select id="lengthTier" name="lengthTier">
             <option value="short">짧게 (핵심 위주)</option>
@@ -228,6 +238,7 @@
       <div class="lang-tabs" id="langTabs" hidden>
         <button type="button" class="lang-tab active" id="langKo" data-lang="ko">🇰🇷 한국어</button>
         <button type="button" class="lang-tab" id="langEn" data-lang="en">🇺🇸 English</button>
+        <button type="button" class="btn btn-sm btn-retranslate" id="btnRetranslate" title="한글 본문을 영문으로 다시 번역">🔄 영문 재번역</button>
       </div>
       <div class="tabs" role="tablist">
         <button type="button" class="tab" id="tabSplit" role="tab" data-tab="split">분할 보기</button>
