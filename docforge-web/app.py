@@ -307,6 +307,15 @@ async def suggest_category(body: SuggestCategoryBody):
     return {"category": suggestion}
 
 
+@app.post("/api/restart")
+def api_restart():
+    """서버 재시작 (uvicorn --reload 환경에서 동작)."""
+    import signal
+    logger.info("서버 재시작 요청")
+    os.kill(os.getpid(), signal.SIGTERM)
+    return {"ok": True}
+
+
 @app.get("/api/health")
 def health():
     k = _api_key()

@@ -19,7 +19,11 @@
         주제만 입력하면 마크다운 문서를 만들고, 선택 시 삽화 이미지와 SVG까지 생성합니다.
         <span class="tagline-models">텍스트: <code>gemini-2.5-flash</code> · 이미지: Imagen 4 → Imagen 4 Fast → Gemini 2.5 Flash Image (순차 폴백)</span>
       </p>
-      <p id="healthLine" class="health"></p>
+      <div class="health-row">
+        <p id="healthLine" class="health"></p>
+        <button type="button" id="btnHealthCheck" class="btn btn-sm btn-health" title="서버 상태 확인">상태 확인</button>
+        <button type="button" id="btnServerRestart" class="btn btn-sm btn-restart" title="서버 재시작">재시작</button>
+      </div>
       <p id="contentTargetLine" class="content-target meta" hidden></p>
       <div id="modelsPanel" class="models-panel" hidden></div>
     </header>

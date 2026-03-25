@@ -1063,6 +1063,35 @@
     }
   });
 
+  // ── 서버 상태/재시작 버튼 ──
+  $("btnHealthCheck").addEventListener("click", () => checkHealth());
+
+  $("btnServerRestart").addEventListener("click", async () => {
+    if (!confirm("서버를 재시작합니다. 진행할까요?")) return;
+    $("btnServerRestart").disabled = true;
+    $("btnServerRestart").textContent = "재시작 중…";
+    try {
+      await fetch(apiUrl("/api/restart"), { method: "POST" });
+    } catch {}
+    // 서버가 죽었다가 살아나므로 폴링
+    let ok = false;
+    for (let i = 0; i < 10; i++) {
+      await new Promise(r => setTimeout(r, 2000));
+      try {
+        const r = await fetch(apiUrl("/api/health"), { cache: "no-store" });
+        if (r.ok) { ok = true; break; }
+      } catch {}
+    }
+    if (ok) {
+      checkHealth();
+      alert("서버 재시작 완료");
+    } else {
+      alert("서버 재시작 실패 — 터미널에서 수동으로 시작하세요.");
+    }
+    $("btnServerRestart").disabled = false;
+    $("btnServerRestart").textContent = "재시작";
+  });
+
   // ── 초기화 ──
   checkHealth();
   fetchContentTarget();
