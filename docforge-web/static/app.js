@@ -756,9 +756,14 @@
 
   // ── 바로 저장 (블로그에 저장) ──
   $("btnQuickPublish").addEventListener("click", async () => {
-    const md = (await autoInsertAssets()).trim();
-    if (!md) { alert("저장할 마크다운이 없습니다."); return; }
+    const btn = $("btnQuickPublish");
+    btn.disabled = true;
+    btn.textContent = "에셋 배치 중…";
 
+    const md = (await autoInsertAssets()).trim();
+    if (!md) { alert("저장할 마크다운이 없습니다."); btn.disabled = false; btn.textContent = "블로그에 저장"; return; }
+
+    btn.textContent = "저장 중…";
     const sub = ($("publishSubfolder") && $("publishSubfolder").value.trim()) || null;
     const fname = ($("publishFilename") && $("publishFilename").value.trim()) || null;
     if (!sub) {

@@ -83,18 +83,25 @@ def generate_document(
             )
             text = response.text.strip()
             text = _strip_markdown_fence(text)
-            if template_key == "blog":
-                now_str = datetime.now().strftime("%Y-%m-%dT%H:%M:%S+09:00")
-                text = re.sub(
-                    r"date:\s*\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}[^\n]*",
-                    f"date: {now_str}",
-                    text,
-                )
-                text = re.sub(
-                    r"lastmod:\s*\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}[^\n]*",
-                    f"lastmod: {now_str}",
-                    text,
-                )
+            # 모든 템플릿에서 날짜를 현재 시간으로 교정
+            now_str = datetime.now().strftime("%Y-%m-%dT%H:%M:%S+09:00")
+            text = re.sub(
+                r"date:\s*\d{4}-\d{2}-\d{2}[T\s]\d{2}:\d{2}:\d{2}[^\n]*",
+                f"date: {now_str}",
+                text,
+            )
+            text = re.sub(
+                r"lastmod:\s*\d{4}-\d{2}-\d{2}[T\s]\d{2}:\d{2}:\d{2}[^\n]*",
+                f"lastmod: {now_str}",
+                text,
+            )
+            # date: YYYY-MM-DD (시간 없는 형태)도 교정
+            text = re.sub(
+                r"date:\s*\d{4}-\d{2}-\d{2}\s*$",
+                f"date: {now_str}",
+                text,
+                flags=re.MULTILINE,
+            )
             return text
         except Exception as e:
             last_err = e
