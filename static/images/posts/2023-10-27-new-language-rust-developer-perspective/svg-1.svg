@@ -1,0 +1,60 @@
+<svg width="800" height="1000" viewBox="0 0 800 1000" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Icon for Memory Safety: Shield -->
+    <g id="icon-shield" fill="#fff">
+      <path d="M -20 -25 L 20 -25 L 20 20 L 0 30 L -20 20 Z"/>
+    </g>
+
+    <!-- Icon for Performance: Lightning Bolt -->
+    <g id="icon-lightning" fill="#fff">
+      <path d="M -15 -20 L 10 -20 L 0 -30 L 15 -30 L -15 30 L -5 10 Z"/>
+    </g>
+
+    <!-- Icon for Concurrency: Connected Dots -->
+    <g id="icon-concurrency" fill="#fff">
+      <circle cx="-15" cy="-15" r="5"/>
+      <circle cx="15" cy="-15" r="5"/>
+      <circle cx="0" cy="15" r="5"/>
+      <line x1="-15" y1="-15" x2="15" y2="-15" stroke="#fff" stroke-width="3"/>
+      <line x1="-15" y1="-15" x2="0" y2="15" stroke="#fff" stroke-width="3"/>
+      <line x1="15" y1="-15" x2="0" y2="15" stroke="#fff" stroke-width="3"/>
+    </g>
+  </defs>
+
+  <!-- Background -->
+  <rect x="0" y="0" width="800" height="1000" fill="#f8f8f8"/>
+
+  <!-- Title -->
+  <text x="400" y="80" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="#333" text-anchor="middle">Rust의 핵심 가치</text>
+
+  <!-- Central Rust Core -->
+  <circle cx="400" cy="583.33" r="60" fill="#455A64"/>
+  <text x="400" y="594" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="#fff" text-anchor="middle">Rust</text>
+
+  <!-- Connecting Lines from Rust Core to Values -->
+  <line x1="400" y1="583.33" x2="400" y2="250" stroke="#666" stroke-width="4" stroke-dasharray="8 4"/>
+  <line x1="400" y1="583.33" x2="200" y2="750" stroke="#666" stroke-width="4" stroke-dasharray="8 4"/>
+  <line x1="400" y1="583.33" x2="600" y2="750" stroke="#666" stroke-width="4" stroke-dasharray="8 4"/>
+
+  <!-- Node 1: 메모리 안전성 (Memory Safety) -->
+  <g transform="translate(400, 250)">
+    <circle r="80" fill="#42A5F5"/> <!-- Vibrant Blue -->
+    <use href="#icon-shield" transform="translate(0, -15) scale(1.5)"/>
+    <text y="30" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#fff" text-anchor="middle">메모리 안전성</text>
+  </g>
+
+  <!-- Node 2: 동시성 (Concurrency) -->
+  <g transform="translate(200, 750)">
+    <circle r="80" fill="#9C27B0"/> <!-- Vibrant Purple -->
+    <use href="#icon-concurrency" transform="translate(0, -10) scale(1.5)"/>
+    <text y="30" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#fff" text-anchor="middle">동시성</text>
+  </g>
+
+  <!-- Node 3: 성능 (Performance) -->
+  <g transform="translate(600, 750)">
+    <circle r="80" fill="#FF9800"/> <!-- Vibrant Orange -->
+    <use href="#icon-lightning" transform="translate(0, -10) scale(1.5)"/>
+    <text y="30" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#fff" text-anchor="middle">성능</text>
+  </g>
+
+</svg>

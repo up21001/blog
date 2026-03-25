@@ -1,0 +1,44 @@
+<svg viewBox="0 0 800 1000" font-family="Arial, sans-serif">
+    <title>프로그래밍 언어 특징 비교</title>
+
+    <!-- Main Title -->
+    <text x="400" y="80" font-size="40" font-weight="bold" text-anchor="middle" fill="#333">프로그래밍 언어 특징 비교</text>
+    <text x="400" y="120" font-size="20" text-anchor="middle" fill="#666">고성능, 메모리 안전성, 그리고 그 사이</text>
+
+    <!-- C/C++ Section (Left) -->
+    <rect x="50" y="200" width="275" height="600" rx="20" ry="20" fill="#FF6B6B" opacity="0.8"/>
+    <text x="187.5" y="250" font-size="28" font-weight="bold" text-anchor="middle" fill="#FFF">C/C++</text>
+    <!-- Icon for C/C++ (Performance - Lightning Bolt) -->
+    <path d="M187.5 300 L172.5 340 L187.5 340 L172.5 380 L202.5 330 L187.5 330 Z" fill="#FFF"/>
+    <text x="187.5" y="450" font-size="24" font-weight="bold" text-anchor="middle" fill="#FFF">고성능</text>
+    <text x="187.5" y="480" font-size="18" text-anchor="middle" fill="#FFF">하드웨어 직접 제어</text>
+    <text x="187.5" y="580" font-size="24" font-weight="bold" text-anchor="middle" fill="#CC0000">메모리 안전성 문제</text>
+    <text x="187.5" y="610" font-size="18" text-anchor="middle" fill="#CC0000">수동 메모리 관리</text>
+
+    <!-- GC Languages Section (Right) -->
+    <rect x="475" y="200" width="275" height="600" rx="20" ry="20" fill="#6BFF6B" opacity="0.8"/>
+    <text x="612.5" y="250" font-size="28" font-weight="bold" text-anchor="middle" fill="#FFF">GC 언어</text>
+    <!-- Icon for GC (Memory Safety - Shield) -->
+    <path d="M612.5 300 L577.5 330 L577.5 370 C577.5 385 587.5 395 612.5 400 C637.5 395 647.5 385 647.5 370 L647.5 330 Z" fill="#FFF"/>
+    <text x="612.5" y="450" font-size="24" font-weight="bold" text-anchor="middle" fill="#FFF">메모리 안전성</text>
+    <text x="612.5" y="480" font-size="18" text-anchor="middle" fill="#FFF">자동 메모리 관리</text>
+    <text x="612.5" y="580" font-size="24" font-weight="bold" text-anchor="middle" fill="#CC0000">예측 불가능한 지연</text>
+    <text x="612.5" y="610" font-size="18" text-anchor="middle" fill="#CC0000">가비지 컬렉션 오버헤드</text>
+
+    <!-- Rust Section (Center, Overlapping) -->
+    <rect x="250" y="150" width="300" height="700" rx="20" ry="20" fill="#6B6BFF" opacity="0.9"/>
+    <text x="400" y="200" font-size="32" font-weight="bold" text-anchor="middle" fill="#FFF">Rust</text>
+    <!-- Icon for Rust (Diamond) -->
+    <path d="M400 270 L370 300 L400 330 L430 300 Z" fill="#FFF"/>
+    <text x="400" y="400" font-size="28" font-weight="bold" text-anchor="middle" fill="#FFF">고성능</text>
+    <text x="400" y="435" font-size="20" text-anchor="middle" fill="#FFF">제로 코스트 추상화</text>
+    <text x="400" y="500" font-size="28" font-weight="bold" text-anchor="middle" fill="#FFF">메모리 안전성</text>
+    <text x="400" y="535" font-size="20" text-anchor="middle" fill="#FFF">소유권 시스템</text>
+    <text x="400" y="600" font-size="24" font-weight="bold" text-anchor="middle" fill="#FFF">동시성 안전</text>
+    <text x="400" y="630" font-size="18" text-anchor="middle" fill="#FFF">데이터 경쟁 방지</text>
+
+    <!-- Overlap explanation at the bottom -->
+    <text x="400" y="900" font-size="24" font-weight="bold" text-anchor="middle" fill="#333">Rust: 고성능과 메모리 안전성을 동시에!</text>
+    <text x="400" y="930" font-size="18" text-anchor="middle" fill="#666">두 세계의 장점 결합</text>
+
+</svg>
