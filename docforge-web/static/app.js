@@ -5,6 +5,8 @@
   let lastSlug = "document";
   let lastGenerateParams = null;
   let previewTimer = null;
+  let currentMarkdownEn = "";
+  let currentLang = "ko"; // "ko" | "en"
 
   // ── 유틸리티 ──
   function escapeHtml(s) {
@@ -31,6 +33,48 @@
     if (ed && ed.value !== undefined) return ed.value;
     return (lastPayload && lastPayload.markdown) || "";
   }
+
+  function getMarkdownForLang(lang) {
+    if (lang === "en") return currentMarkdownEn;
+    return getMarkdown();
+  }
+
+  function setMarkdownForLang(lang, md) {
+    if (lang === "en") {
+      currentMarkdownEn = md;
+    } else {
+      const ed = $("mdEditor");
+      if (ed) ed.value = md;
+      const split = $("mdEditorSplit");
+      if (split) split.value = md;
+    }
+  }
+
+  // ── 언어 전환 ──
+  function switchLang(lang) {
+    if (lang === currentLang) return;
+    // 현재 편집 내용 저장
+    setMarkdownForLang(currentLang, getMarkdown());
+    currentLang = lang;
+    // 새 언어 내용 로드
+    const md = getMarkdownForLang(lang) || "";
+    const ed = $("mdEditor");
+    if (ed) ed.value = md;
+    const split = $("mdEditorSplit");
+    if (split) split.value = md;
+    // 모든 미리보기 패널 갱신
+    renderPreviewHtml(md);
+    if (typeof renderSplitPreview === "function") renderSplitPreview();
+    // 탭 활성화
+    document.querySelectorAll(".lang-tab").forEach(b => {
+      b.classList.toggle("active", b.dataset.lang === lang);
+    });
+  }
+
+  // 언어 탭 이벤트
+  document.querySelectorAll(".lang-tab").forEach(btn => {
+    btn.addEventListener("click", () => switchLang(btn.dataset.lang));
+  });
 
   function renderPreviewHtml(md) {
     const p = $("preview");
@@ -212,6 +256,7 @@
     card.innerHTML = `
       <div class="asset-card-header">
         <span class="asset-type-badge">이미지 ${idx + 1}</span>
+        <span class="asset-model-label">${escapeHtml(img.model || "")}</span>
         <div class="asset-card-actions">
           <button class="btn-icon btn-card-regen" title="재생성">🔄</button>
           <button class="btn-icon btn-card-download" title="다운로드">💾</button>
@@ -530,6 +575,17 @@
     }));
     renderAssetGrid();
 
+    // 영문 마크다운 저장 및 언어 탭 표시
+    currentMarkdownEn = j.markdown_en || "";
+    currentLang = "ko";
+    const langTabs = $("langTabs");
+    if (langTabs) {
+      langTabs.hidden = !currentMarkdownEn;
+      document.querySelectorAll(".lang-tab").forEach(b => {
+        b.classList.toggle("active", b.dataset.lang === "ko");
+      });
+    }
+
     renderPreviewHtml(getMarkdown());
     setWorkflow("review");
     const ps = $("publishStatus");
@@ -559,7 +615,9 @@
     const length = ($("lengthTier") && $("lengthTier").value) || "medium";
     const image_hints = ($("imageHints").value || "").trim() || null;
 
-    lastGenerateParams = { topic, template, with_images, max_images: with_images ? max_images : 0, with_svg, max_svg: with_svg ? max_svg : 0, length, image_hints };
+    const with_english = $("withEnglish") ? $("withEnglish").checked : false;
+    const model_preset = ($("modelPreset") && $("modelPreset").value) || "fast";
+    lastGenerateParams = { topic, template, with_images, max_images: with_images ? max_images : 0, with_svg, max_svg: with_svg ? max_svg : 0, length, image_hints, with_english, model_preset };
 
     try {
       const r = await fetch(apiUrl("/api/generate"), {
@@ -569,7 +627,7 @@
           topic, template, with_images,
           max_images: with_images ? max_images : 0,
           with_svg, max_svg: with_svg ? max_svg : 0,
-          length, image_hints,
+          length, image_hints, with_english, model_preset,
         }),
       });
       const j = await r.json();
@@ -772,10 +830,6 @@
       return;
     }
 
-    const btn = $("btnQuickPublish");
-    btn.disabled = true;
-    btn.textContent = "저장 중…";
-
     try {
       const imagesToSave = currentImages.map((img, i) => {
         const ext = img.mime.includes("png") ? "png" : "jpg";
@@ -786,11 +840,17 @@
         imagesToSave.push({ filename: `svg-${i + 1}.svg`, mime: "image/svg+xml", data_base64: svgB64 });
       });
 
+      // 현재 언어가 en이면 영문 내용 동기화
+      if (currentLang === "en") currentMarkdownEn = md;
+      const enMd = currentLang === "ko" ? currentMarkdownEn : md;
+      const koMd = currentLang === "ko" ? md : getMarkdownForLang("ko");
+
       const r = await fetch(apiUrl("/api/publish-post"), {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          markdown: md, filename: fname || null, slug_hint: lastSlug,
+          markdown: koMd, markdown_en: enMd || null,
+          filename: fname || null, slug_hint: lastSlug,
           subfolder: sub, images: imagesToSave.length ? imagesToSave : null,
         }),
       });
@@ -800,7 +860,8 @@
       if ($("publishSubfolder")) localStorage.setItem(SUBFOLDER_LS, $("publishSubfolder").value);
       const rel = j.relative_path || j.filename;
       const savedImgs = j.saved_images || [];
-      alert(`저장 완료!\n\n📄 content/posts/${rel}\n🖼 이미지 ${savedImgs.length}개 저장됨`);
+      const enInfo = j.en_filename ? `\n🇺🇸 ${j.en_filename}` : "";
+      alert(`저장 완료!\n\n📄 content/posts/${rel}${enInfo}\n🖼 이미지 ${savedImgs.length}개 저장됨`);
       setWorkflow("published");
       const ps = $("publishStatus");
       if (ps) ps.textContent = `저장됨: content/posts/${rel}`;
@@ -860,11 +921,16 @@
           data_base64: svgB64,
         });
       });
+      if (currentLang === "en") currentMarkdownEn = md;
+      const enMd2 = currentLang === "ko" ? currentMarkdownEn : md;
+      const koMd2 = currentLang === "ko" ? md : getMarkdownForLang("ko");
+
       const r = await fetch(apiUrl("/api/publish-post"), {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          markdown: md, filename: fname || null, slug_hint: lastSlug,
+          markdown: koMd2, markdown_en: enMd2 || null,
+          filename: fname || null, slug_hint: lastSlug,
           subfolder: sub, images: imagesToSave.length ? imagesToSave : null,
         }),
       });
@@ -1079,6 +1145,17 @@
         svg: svg.svg || "",
       }));
       renderAssetGrid();
+
+      // 영문 마크다운 로드
+      currentMarkdownEn = j.markdown_en || "";
+      currentLang = "ko";
+      const langTabs = $("langTabs");
+      if (langTabs) {
+        langTabs.hidden = !currentMarkdownEn;
+        document.querySelectorAll(".lang-tab").forEach(b => {
+          b.classList.toggle("active", b.dataset.lang === "ko");
+        });
+      }
 
       $("meta").textContent = `기존 포스트: ${path}`;
       renderPreviewHtml(getMarkdown());

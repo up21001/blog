@@ -236,6 +236,11 @@ textarea { resize: vertical; min-height: 80px; }
   color: var(--success);
 }
 
+.asset-model-label {
+  font-size: 0.7rem;
+  color: var(--muted);
+  opacity: 0.8;
+}
 .asset-card-actions { display: flex; gap: 0.15rem; }
 
 .asset-card-body {
@@ -461,6 +466,20 @@ textarea { resize: vertical; min-height: 80px; }
 .result-head h2 { margin: 0; font-size: 1.2rem; }
 .actions { display: flex; flex-wrap: wrap; gap: 0.5rem; }
 .meta { font-size: 0.85rem; color: var(--muted); margin: 0.5rem 0 1rem; }
+
+.lang-tabs { display: flex; gap: 0.35rem; margin-bottom: 0.5rem; }
+.lang-tab {
+  padding: 0.4rem 1rem;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: #222836;
+  color: var(--muted);
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+.lang-tab:hover { border-color: var(--success); color: var(--text); }
+.lang-tab.active { border-color: var(--success); color: var(--success); background: rgba(137, 209, 133, 0.12); }
 
 .tabs { display: flex; gap: 0.35rem; margin-bottom: 0.75rem; }
 .tab {

@@ -2,7 +2,6 @@ baseURL = "https://blog-8ye.pages.dev"
 languageCode = "ko"
 defaultContentLanguage = "ko"
 defaultContentLanguageInSubdir = false
-disableLanguages = ["en"]
 # 미래 날짜 글도 HTML/RSS/index.json에 포함 (예: 발행일이 오늘보다 뒤인 초안 공개 글)
 buildFuture = true
 title = "통합 블로그"
@@ -192,5 +191,125 @@ enableRobotsTXT = true
 
 [[menus.footer]]
   name = "면책 조항"
+  pageRef = "/disclaimer"
+  weight = 4
+
+# ══════════════════════════════════════════════════════
+# Korean language (default)
+# ══════════════════════════════════════════════════════
+[languages.ko]
+  languageCode = "ko"
+  languageName = "한국어"
+  weight = 1
+  title = "통합 블로그"
+
+# ══════════════════════════════════════════════════════
+# English language
+# ══════════════════════════════════════════════════════
+[languages.en]
+  languageCode = "en"
+  languageName = "English"
+  weight = 2
+  title = "Tech Blog"
+  description = "Hardware/Software Engineer's Tech Blog - PCB Design, Embedded, AI, DevOps"
+
+[languages.en.params]
+  description = "Hardware/Software Engineer's Tech Blog - PCB Design, Embedded, AI, DevOps"
+  keywords = ["Hardware", "Software", "AI", "Embedded", "PCB Design", "Python", "DevOps"]
+
+[languages.en.params.author]
+  name = "Engineer"
+
+# ── English Main Menu ────────────────────────────────
+[[languages.en.menus.main]]
+  name = "Core"
+  weight = 1
+
+[[languages.en.menus.main]]
+  name = "Hardware Lab"
+  pageRef = "/categories/hardware-lab"
+  parent = "Core"
+  weight = 1
+
+[[languages.en.menus.main]]
+  name = "Software Dev"
+  pageRef = "/categories/software-dev"
+  parent = "Core"
+  weight = 2
+
+[[languages.en.menus.main]]
+  name = "AI & Automation"
+  pageRef = "/categories/ai-automation"
+  parent = "Core"
+  weight = 3
+
+[[languages.en.menus.main]]
+  name = "AI Agents"
+  pageRef = "/categories/ai-agents"
+  parent = "Core"
+  weight = 4
+
+[[languages.en.menus.main]]
+  name = "MCP"
+  pageRef = "/categories/mcp"
+  parent = "Core"
+  weight = 5
+
+[[languages.en.menus.main]]
+  name = "Insight"
+  weight = 2
+
+[[languages.en.menus.main]]
+  name = "Tech Review"
+  pageRef = "/categories/tech-review"
+  parent = "Insight"
+  weight = 1
+
+[[languages.en.menus.main]]
+  name = "Engineering Life"
+  pageRef = "/categories/engineering-life"
+  parent = "Insight"
+  weight = 2
+
+[[languages.en.menus.main]]
+  name = "Learning Log"
+  pageRef = "/categories/learning-log"
+  parent = "Insight"
+  weight = 3
+
+[[languages.en.menus.main]]
+  name = "Life"
+  weight = 3
+
+[[languages.en.menus.main]]
+  name = "Daily Log"
+  pageRef = "/categories/daily-log"
+  parent = "Life"
+  weight = 1
+
+[[languages.en.menus.main]]
+  name = "Thinking"
+  pageRef = "/categories/thinking"
+  parent = "Life"
+  weight = 2
+
+# ── English Footer Menu ──────────────────────────────
+[[languages.en.menus.footer]]
+  name = "About"
+  pageRef = "/about"
+  weight = 1
+
+[[languages.en.menus.footer]]
+  name = "Contact"
+  pageRef = "/contact"
+  weight = 2
+
+[[languages.en.menus.footer]]
+  name = "Privacy Policy"
+  pageRef = "/privacy"
+  weight = 3
+
+[[languages.en.menus.footer]]
+  name = "Disclaimer"
   pageRef = "/disclaimer"
   weight = 4

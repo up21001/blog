@@ -49,6 +49,14 @@
               <option value="plain">일반 문서 (개요·상세·요약)</option>
             </select>
           </div>
+          <div class="field">
+            <label for="modelPreset">모델 프리셋</label>
+            <select id="modelPreset" name="modelPreset">
+              <option value="fast">⚡ 빠름/저비용 — Flash + Imagen 4</option>
+              <option value="quality">💎 최고 품질 — Pro + Imagen Ultra</option>
+              <option value="creative">🎨 크리에이티브 — Pro + Gemini Image</option>
+            </select>
+          </div>
           <div class="field check">
             <label>
               <input type="checkbox" id="withImages" name="withImages" />
@@ -64,6 +72,12 @@
             </label>
             <label for="maxSvg">최대 개수</label>
             <input type="number" id="maxSvg" name="maxSvg" min="0" max="6" value="2" />
+          </div>
+          <div class="field check">
+            <label>
+              <input type="checkbox" id="withEnglish" name="withEnglish" checked />
+              영문 버전 생성
+            </label>
           </div>
         </div>
 
@@ -211,6 +225,10 @@
       </div>
       <p id="meta" class="meta"></p>
 
+      <div class="lang-tabs" id="langTabs" hidden>
+        <button type="button" class="lang-tab active" id="langKo" data-lang="ko">🇰🇷 한국어</button>
+        <button type="button" class="lang-tab" id="langEn" data-lang="en">🇺🇸 English</button>
+      </div>
       <div class="tabs" role="tablist">
         <button type="button" class="tab" id="tabSplit" role="tab" data-tab="split">분할 보기</button>
         <button type="button" class="tab active" id="tabPreview" role="tab" data-tab="preview">미리보기</button>

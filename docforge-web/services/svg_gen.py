@@ -29,7 +29,17 @@ Rules:
 - Include proper arrow markers with <defs>
 - Make it visually clear and professionally structured
 - Add subtle drop shadows using <filter> for boxes
-- No external resources, no JavaScript""",
+- No external resources, no JavaScript
+
+CRITICAL arrow/connector rules:
+- Arrows must START and END at the EDGE of boxes, NOT inside or behind them
+- Leave at least 10px gap between arrow endpoints and box borders
+- Use markerWidth="10" markerHeight="7" for arrow markers, keep them small
+- Draw connectors AFTER all boxes so arrows render on top
+- For vertical flows, connect bottom-center of source to top-center of target
+- For horizontal flows, connect right-center of source to left-center of target
+- Use polyline or path with waypoints to route arrows AROUND boxes, never through them
+- Add refX offset to markers so arrowheads don't overlap target boxes""",
 
     "infographic": """You are an expert SVG infographic generator.
 Generate clean, readable, manually-editable SVG code for infographics and data visualizations.
@@ -43,7 +53,8 @@ Rules:
 - Font: font-family="Arial, sans-serif", use bold for numbers/titles
 - All text must be in Korean if the prompt is Korean
 - Include a clear title at the top
-- No external resources, no JavaScript""",
+- No external resources, no JavaScript
+- If using arrows/connectors: start/end at box EDGES with 10px gap, route AROUND boxes not through them""",
 
     "icon": """You are an expert SVG icon generator.
 Generate clean, scalable, manually-editable SVG icon code.
@@ -95,6 +106,12 @@ def _extract_svg(text: str) -> str:
 
 def _validate_and_fix_svg(svg: str) -> str:
     """SVG XML 유효성 검사. 깨진 경우 복구 시도."""
+    # xmlns 누락 시 추가
+    if 'xmlns=' not in svg:
+        svg = svg.replace('<svg ', '<svg xmlns="http://www.w3.org/2000/svg" ', 1)
+    # currentColor → 실제 색상 (img 태그에서 렌더링 안 됨)
+    svg = svg.replace('stroke="currentColor"', 'stroke="#4A90D9"')
+    svg = svg.replace('fill="currentColor"', 'fill="#4A90D9"')
     try:
         ET.fromstring(svg)
         return svg
@@ -133,7 +150,7 @@ async def generate_svg_async(
     description: str,
     svg_type: str = "architecture",
     style: str = "modern",
-    max_retries: int = 2,
+    max_retries: int = 3,
 ) -> str:
     """SVG 코드 생성 후 유효성 검사까지 수행. 실패 시 재시도."""
     system_prompt = SYSTEM_PROMPTS.get(svg_type, SYSTEM_PROMPTS["architecture"])
@@ -147,6 +164,7 @@ async def generate_svg_async(
             "generationConfig": {
                 "temperature": 0.4,
                 "maxOutputTokens": 65536,
+                "thinkingConfig": {"thinkingBudget": 0},
             },
         }
 

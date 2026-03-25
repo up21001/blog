@@ -29,8 +29,8 @@ from services import image_gen
 from services import svg_gen
 from services import text_gen
 from services import web_import
-from services.image_gen import AVAILABLE_MODELS, MODEL_PRIORITY
-from services.text_gen import excerpt_limit_for_tier, generate_svg_specs_async
+from services.image_gen import AVAILABLE_MODELS, MODEL_PRIORITY, IMAGE_PRESETS
+from services.text_gen import excerpt_limit_for_tier, generate_svg_specs_async, translate_to_english_async
 from services.markdown_images import inject_images_into_markdown, strip_placeholder_images
 from services.prompt_config import get_builtin_defaults, get_for_api, reset_to_defaults, save_prompts
 from services.publish import (
@@ -68,6 +68,8 @@ class GenerateBody(BaseModel):
     max_svg: int = Field(2, ge=0, le=6)
     length: str = Field("medium", pattern="^(short|medium|long|very_long)$")
     image_hints: str | None = Field(None, max_length=3000)
+    with_english: bool = False
+    model_preset: str = Field("fast", pattern="^(fast|quality|creative)$")
 
 
 class ImageSaveItem(BaseModel):
@@ -80,6 +82,7 @@ class PublishBody(BaseModel):
     """Hugo `content/posts` 에 마크다운 저장."""
 
     markdown: str = Field(..., min_length=1, max_length=5_000_000)
+    markdown_en: str | None = Field(None, max_length=5_000_000, description="영문 마크다운 (.en.md)")
     filename: str | None = Field(None, max_length=240)
     slug_hint: str | None = Field(None, max_length=200)
     subfolder: str | None = Field(
@@ -207,6 +210,14 @@ def api_publish_post(body: PublishBody):
     except OSError as e:
         logger.exception("게시물 저장 실패")
         raise HTTPException(500, str(e)) from e
+    # 영문 마크다운 저장 (.en.md)
+    en_saved = ""
+    if body.markdown_en and body.markdown_en.strip():
+        en_fname = fname.replace(".md", ".en.md") if fname else "post.en.md"
+        en_target = path.parent / en_fname
+        en_target.write_text(body.markdown_en, encoding="utf-8", newline="\n")
+        en_saved = en_fname
+
     # 에셋 이미지 → static/images/posts/<slug>/ 에 저장
     saved_images = []
     if body.images:
@@ -224,6 +235,7 @@ def api_publish_post(body: PublishBody):
         "posts_dir": info["posts_dir"],
         "bundle": use_bundle,
         "saved_images": saved_images,
+        "en_filename": en_saved,
     }
 
 
@@ -554,10 +566,20 @@ async def generate(body: GenerateBody):
             "GEMINI_API_KEY가 설정되지 않았습니다. 프로젝트 루트 또는 docforge-web/.env 에 키를 넣어 주세요.",
         )
 
+    # 프리셋 → 텍스트 모델 매핑
+    preset_text_model = {
+        "fast": "gemini-2.5-flash",
+        "quality": "gemini-3-pro-preview",
+        "creative": "gemini-3-pro-preview",
+    }
+    text_model = preset_text_model.get(body.model_preset, "gemini-2.5-flash")
+    image_preset = body.model_preset
+
     t0 = time.perf_counter()
     try:
         markdown = await text_gen.generate_document_async(
-            topic, body.template, key, length_tier=body.length
+            topic, body.template, key, length_tier=body.length,
+            text_model=text_model,
         )
     except Exception as e:
         logger.exception("텍스트 생성 실패")
@@ -586,12 +608,12 @@ async def generate(body: GenerateBody):
         for i, prompt in enumerate(prompts[: body.max_images]):
             try:
                 data, label, mime = await image_gen.generate_one_image_async(
-                    key, prompt, aspect_ratio="16:9"
+                    key, prompt, aspect_ratio="16:9", image_preset=image_preset,
                 )
             except Exception as e:
                 logger.warning("이미지 %s 실패: %s", i, e)
                 data, label, mime = image_gen.generate_one_image(
-                    "", prompt, aspect_ratio="16:9"
+                    "", prompt, aspect_ratio="16:9",
                 )
             b64 = base64.standard_b64encode(data).decode("ascii")
             images_out.append(
@@ -640,6 +662,15 @@ async def generate(body: GenerateBody):
             except Exception as e:
                 logger.warning("SVG %s 생성 실패: %s", i, e)
 
+    # 영문 번역
+    markdown_en = ""
+    if body.with_english:
+        try:
+            markdown_en = await translate_to_english_async(markdown, key)
+        except Exception as e:
+            logger.warning("영문 번역 실패: %s", e)
+            markdown_en = ""
+
     elapsed_ms = int((time.perf_counter() - t0) * 1000)
     slug = _slug_from_topic(topic)
     suggested = suggest_filename(markdown, slug)
@@ -649,6 +680,7 @@ async def generate(body: GenerateBody):
         "template": body.template,
         "length": body.length,
         "markdown": markdown,
+        "markdown_en": markdown_en,
         "images": images_out,
         "image_prompts": image_prompts_used,
         "svgs": svgs_out,

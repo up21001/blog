@@ -322,8 +322,15 @@ def load_post(rel_path: str) -> dict:
                     "url": f"/images/posts/{slug}/{f.name}",
                 })
 
+    # 영문 버전 로드
+    en_path = target.parent / filename.replace(".md", ".en.md")
+    markdown_en = ""
+    if en_path.is_file():
+        markdown_en = en_path.read_text(encoding="utf-8")
+
     return {
         "markdown": markdown,
+        "markdown_en": markdown_en,
         "filename": filename,
         "subfolder": subfolder,
         "slug": slug,

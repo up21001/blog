@@ -17,6 +17,11 @@ _MIN_PNG = base64.b64decode(
 )
 
 AVAILABLE_MODELS = {
+    "imagen4ultra": {
+        "id": "imagen-4.0-ultra-generate-001",
+        "label": "Imagen 4 Ultra",
+        "type": "imagen",
+    },
     "imagen4": {
         "id": "imagen-4.0-generate-001",
         "label": "Imagen 4",
@@ -27,6 +32,11 @@ AVAILABLE_MODELS = {
         "label": "Imagen 4 Fast",
         "type": "imagen",
     },
+    "gemini-3-pro-image": {
+        "id": "gemini-3-pro-image-preview",
+        "label": "Gemini 3 Pro Image",
+        "type": "gemini",
+    },
     "gemini-flash-image": {
         "id": "gemini-2.5-flash-image",
         "label": "Gemini 2.5 Flash Image",
@@ -34,7 +44,14 @@ AVAILABLE_MODELS = {
     },
 }
 
-MODEL_PRIORITY = ["imagen4", "imagen4fast", "gemini-flash-image"]
+# 프리셋별 이미지 모델 우선순위
+IMAGE_PRESETS = {
+    "fast": ["imagen4", "imagen4fast", "gemini-flash-image"],
+    "quality": ["imagen4ultra", "imagen4", "gemini-flash-image"],
+    "creative": ["gemini-3-pro-image", "imagen4", "gemini-flash-image"],
+}
+
+MODEL_PRIORITY = IMAGE_PRESETS["fast"]
 
 
 def _pillow_placeholder(prompt: str, aspect_ratio: str = "16:9") -> bytes:
@@ -101,6 +118,7 @@ def generate_one_image(
     api_key: str,
     prompt: str,
     aspect_ratio: str = "16:9",
+    image_preset: str = "fast",
 ) -> Tuple[bytes, str, str]:
     """
     이미지 바이트, 모델 라벨, mime type 반환.
@@ -109,8 +127,9 @@ def generate_one_image(
     if not api_key:
         return _pillow_placeholder(prompt, aspect_ratio), "Placeholder", "image/png"
 
+    priority = IMAGE_PRESETS.get(image_preset, MODEL_PRIORITY)
     last_err = None
-    for mk in MODEL_PRIORITY:
+    for mk in priority:
         try:
             data, label = _generate_with_model_sync(api_key, prompt, mk, aspect_ratio)
             return data, label, "image/png"
@@ -123,6 +142,7 @@ def generate_one_image(
 
 
 async def generate_one_image_async(
-    api_key: str, prompt: str, aspect_ratio: str = "16:9"
+    api_key: str, prompt: str, aspect_ratio: str = "16:9",
+    image_preset: str = "fast",
 ) -> Tuple[bytes, str, str]:
-    return await asyncio.to_thread(generate_one_image, api_key, prompt, aspect_ratio)
+    return await asyncio.to_thread(generate_one_image, api_key, prompt, aspect_ratio, image_preset)

@@ -16,6 +16,11 @@ from .prompt_config import get_effective_prompts
 # 문서 본문·이미지용 영문 프롬프트 생성에 공통 사용
 TEXT_MODEL = "gemini-2.5-flash"
 
+TEXT_MODELS = {
+    "gemini-2.5-flash": "Gemini 2.5 Flash (빠름/저비용)",
+    "gemini-3-pro-preview": "Gemini 3 Pro (고품질 추론)",
+}
+
 # (max_output_tokens, 사용자 메시지에 붙는 분량 지시)
 LENGTH_TIER: dict[str, tuple[int, str]] = {
     "short": (65536, "분량: 짧게. 핵심만 약 800~1500자 한글 분량."),
@@ -53,6 +58,7 @@ def generate_document(
     api_key: str,
     max_retries: int = 3,
     length_tier: str = "medium",
+    text_model: str | None = None,
 ) -> str:
     eff = get_effective_prompts()
     if template_key not in eff:
@@ -65,6 +71,7 @@ def generate_document(
     tier = length_tier if length_tier in LENGTH_TIER else "medium"
     max_out, length_msg = LENGTH_TIER[tier]
 
+    use_model = text_model if text_model and text_model in TEXT_MODELS else TEXT_MODEL
     client = genai.Client(api_key=key)
     user_msg = eff["document_user"].format(topic=topic) + f"\n\n【작성 지시】{length_msg}"
 
@@ -72,7 +79,7 @@ def generate_document(
     for attempt in range(1, max_retries + 1):
         try:
             response = client.models.generate_content(
-                model=TEXT_MODEL,
+                model=use_model,
                 config=types.GenerateContentConfig(
                     system_instruction=system_instruction,
                     max_output_tokens=max_out,
@@ -232,11 +239,68 @@ async def generate_svg_specs_async(
 
 
 async def generate_document_async(
-    topic: str, template_key: str, api_key: str, length_tier: str = "medium"
+    topic: str, template_key: str, api_key: str, length_tier: str = "medium",
+    text_model: str | None = None,
 ) -> str:
     return await asyncio.to_thread(
-        generate_document, topic, template_key, api_key, 3, length_tier
+        generate_document, topic, template_key, api_key, 3, length_tier, text_model
     )
+
+
+def translate_to_english(
+    korean_markdown: str,
+    api_key: str,
+    max_retries: int = 3,
+) -> str:
+    """한글 마크다운을 영문으로 번역. 프론트매터 구조 유지."""
+    key = api_key or os.environ.get("GEMINI_API_KEY")
+    if not key:
+        raise ValueError("GEMINI_API_KEY가 설정되지 않았습니다.")
+
+    client = genai.Client(api_key=key)
+    prompt = f"""Translate the following Korean blog post markdown to English.
+
+Rules:
+- Keep ALL frontmatter YAML fields (---, title, date, slug, categories, tags, draft, etc.)
+- Translate the title to English
+- Keep the slug as-is (do not translate)
+- Keep categories and tags as-is (do not translate)
+- Keep all markdown formatting, headings, code blocks, links, image paths exactly as-is
+- Translate only the Korean text content to natural, professional English
+- Do not add or remove any sections
+- Do not wrap output in code fences
+- Output the complete translated markdown directly
+
+Korean markdown:
+{korean_markdown}"""
+
+    last_err: Exception | None = None
+    for attempt in range(1, max_retries + 1):
+        try:
+            response = client.models.generate_content(
+                model=TEXT_MODEL,
+                config=types.GenerateContentConfig(
+                    max_output_tokens=65536,
+                    temperature=0.3,
+                    thinking_config=types.ThinkingConfig(thinking_budget=0),
+                ),
+                contents=prompt,
+            )
+            text = response.text.strip()
+            text = _strip_markdown_fence(text)
+            return text
+        except Exception as e:
+            last_err = e
+            if attempt < max_retries:
+                time.sleep(2**attempt)
+            else:
+                raise RuntimeError(f"영문 번역 실패 ({max_retries}회): {last_err}") from last_err
+
+
+async def translate_to_english_async(
+    korean_markdown: str, api_key: str
+) -> str:
+    return await asyncio.to_thread(translate_to_english, korean_markdown, api_key)
 
 
 async def generate_image_prompts_async(
