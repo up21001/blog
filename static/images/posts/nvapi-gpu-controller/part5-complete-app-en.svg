@@ -1,0 +1,152 @@
+<svg viewBox="0 0 800 700" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-opacity="0.18"/>
+    </filter>
+    <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#888"/>
+    </marker>
+    <marker id="arr-blue" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#4A90D9"/>
+    </marker>
+    <marker id="arr-green" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#50C878"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="700" fill="#f8f9fa"/>
+
+  <!-- Title bar -->
+  <rect x="0" y="0" width="800" height="50" fill="#2d3436"/>
+  <text x="400" y="32" fill="white" font-size="17" font-weight="bold" text-anchor="middle">NvGpuController — Complete Application Architecture</text>
+
+  <!-- MainForm window frame -->
+  <rect x="30" y="65" width="740" height="430" rx="8" fill="white" stroke="#b2bec3" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="30" y="65" width="740" height="28" rx="8" fill="#3d3d3d"/>
+  <rect x="30" y="81" width="740" height="12" fill="#3d3d3d"/>
+  <text x="400" y="82" fill="white" font-size="11" text-anchor="middle">NvGpuController - NVAPI GPU Controller + EDID Editor</text>
+
+  <!-- Tab bar -->
+  <rect x="30" y="93" width="740" height="28" fill="#f0f0f0" stroke="#ddd" stroke-width="1"/>
+  <rect x="35" y="96" width="100" height="25" rx="4" fill="#4A90D9"/>
+  <text x="85" y="113" fill="white" font-size="10" font-weight="bold" text-anchor="middle">GPU Info</text>
+  <rect x="140" y="96" width="100" height="25" rx="4" fill="white" stroke="#ccc" stroke-width="1"/>
+  <text x="190" y="113" fill="#555" font-size="10" text-anchor="middle">Display</text>
+  <rect x="245" y="96" width="130" height="25" rx="4" fill="white" stroke="#ccc" stroke-width="1"/>
+  <text x="310" y="113" fill="#555" font-size="10" text-anchor="middle">Custom Resolution</text>
+  <rect x="380" y="96" width="110" height="25" rx="4" fill="white" stroke="#ccc" stroke-width="1"/>
+  <text x="435" y="113" fill="#555" font-size="10" text-anchor="middle">EDID Editor</text>
+
+  <!-- Tab 1: GPU Info Panel -->
+  <rect x="40" y="130" width="175" height="165" rx="6" fill="#EBF5FB" stroke="#4A90D9" stroke-width="1.5"/>
+  <text x="127" y="148" fill="#4A90D9" font-size="11" font-weight="bold" text-anchor="middle">GPU Info</text>
+  <text x="55" y="165" fill="#555" font-size="9">GPU Name, VRAM</text>
+  <text x="55" y="179" fill="#555" font-size="9">Temperature (thermal sensor)</text>
+  <text x="55" y="193" fill="#555" font-size="9">Clocks (Graphics/Mem)</text>
+  <text x="55" y="207" fill="#555" font-size="9">Bus Type / PCI Slot</text>
+  <text x="55" y="221" fill="#555" font-size="9">Driver Version</text>
+  <text x="55" y="238" fill="#4A90D9" font-size="8">NvGpuInfo.EnumerateGPUs()</text>
+  <text x="55" y="250" fill="#4A90D9" font-size="8">NvDisplay.GetDriverInfo()</text>
+  <text x="55" y="263" fill="#4A90D9" font-size="8">NvGpuInfo.GetThermalSettings()</text>
+  <text x="55" y="280" fill="#4A90D9" font-size="8">NvGpuInfo.GetClockFrequencies()</text>
+
+  <!-- Tab 2: Display Panel -->
+  <rect x="225" y="130" width="175" height="165" rx="6" fill="#EAFAF1" stroke="#50C878" stroke-width="1.5"/>
+  <text x="312" y="148" fill="#27ae60" font-size="11" font-weight="bold" text-anchor="middle">Display</text>
+  <text x="240" y="165" fill="#555" font-size="9">Connected display list</text>
+  <text x="240" y="179" fill="#555" font-size="9">Connection type (HDMI/DP/DVI)</text>
+  <text x="240" y="193" fill="#555" font-size="9">DisplayId / OutputId</text>
+  <text x="240" y="207" fill="#555" font-size="9">Current resolution / refresh rate</text>
+  <text x="240" y="221" fill="#555" font-size="9">Color control (SetColor)</text>
+  <text x="240" y="238" fill="#27ae60" font-size="8">NvDisplay.EnumerateDisplays()</text>
+  <text x="240" y="252" fill="#27ae60" font-size="8">NvCustomDisplayManager</text>
+  <text x="240" y="266" fill="#27ae60" font-size="8">  .SetColorControl()</text>
+  <text x="240" y="280" fill="#27ae60" font-size="8">  V5 → V3 → V1 Fallback</text>
+
+  <!-- Tab 3: Custom Resolution Panel -->
+  <rect x="410" y="130" width="175" height="165" rx="6" fill="#FDF2FB" stroke="#6C5CE7" stroke-width="1.5"/>
+  <text x="497" y="148" fill="#6C5CE7" font-size="11" font-weight="bold" text-anchor="middle">Custom Resolution</text>
+  <text x="425" y="165" fill="#555" font-size="9">Manual timing input</text>
+  <text x="425" y="179" fill="#555" font-size="9">pclk / HTotal / VTotal</text>
+  <text x="425" y="193" fill="#555" font-size="9">H/V Sync polarity</text>
+  <text x="425" y="207" fill="#555" font-size="9">Try → Save → Revert</text>
+  <text x="425" y="221" fill="#555" font-size="9">Enumerate saved resolutions</text>
+  <text x="425" y="238" fill="#6C5CE7" font-size="8">DISP_TryCustomDisplay()</text>
+  <text x="425" y="252" fill="#6C5CE7" font-size="8">DISP_SaveCustomDisplay()</text>
+  <text x="425" y="266" fill="#6C5CE7" font-size="8">4 save strategies attempted</text>
+  <text x="425" y="280" fill="#6C5CE7" font-size="8">DISP_RevertCustomDisplay()</text>
+
+  <!-- Tab 4: EDID Editor Panel -->
+  <rect x="595" y="130" width="165" height="165" rx="6" fill="#FEF9E7" stroke="#FFD93D" stroke-width="1.5"/>
+  <text x="677" y="148" fill="#d4a800" font-size="11" font-weight="bold" text-anchor="middle">EDID Editor</text>
+  <text x="610" y="165" fill="#555" font-size="9">EDID Read / Write</text>
+  <text x="610" y="179" fill="#555" font-size="9">Hex editor view</text>
+  <text x="610" y="193" fill="#555" font-size="9">Tree structure parser</text>
+  <text x="610" y="207" fill="#555" font-size="9">Per-field edit form</text>
+  <text x="610" y="221" fill="#555" font-size="9">EDID Override</text>
+  <text x="610" y="238" fill="#d4a800" font-size="8">EdidEditor.CreateBlank()</text>
+  <text x="610" y="252" fill="#d4a800" font-size="8">NvEdid.WriteEDID()</text>
+  <text x="610" y="266" fill="#d4a800" font-size="8">NvEdid.RemoveEDIDOverride()</text>
+  <text x="610" y="280" fill="#d4a800" font-size="8">EdidFileIO (4 formats)</text>
+
+  <!-- Log area -->
+  <rect x="40" y="310" width="720" height="60" rx="6" fill="#1e1e1e"/>
+  <text x="55" y="328" fill="#90ee90" font-size="9" font-family="Consolas, monospace">[INFO] NVAPI initialized successfully</text>
+  <text x="55" y="342" fill="#90ee90" font-size="9" font-family="Consolas, monospace">[INFO] EDID read: 256 bytes from DELL U2720Q (0x0E4A0200)</text>
+  <text x="55" y="356" fill="#90ee90" font-size="9" font-family="Consolas, monospace">[INFO] EDID Override applied successfully</text>
+
+  <!-- Status bar -->
+  <rect x="30" y="375" width="740" height="22" fill="#f0f0f0" stroke="#ddd" stroke-width="1"/>
+  <text x="45" y="390" fill="#555" font-size="9">GPU: NVIDIA GeForce RTX 4090</text>
+  <text x="250" y="390" fill="#555" font-size="9">Driver: 537.42</text>
+  <text x="400" y="390" fill="#555" font-size="9">Displays: 3</text>
+
+  <!-- Core layer -->
+  <rect x="30" y="510" width="740" height="170" rx="8" fill="white" stroke="#b2bec3" stroke-width="1.5" filter="url(#shadow)"/>
+  <rect x="30" y="510" width="740" height="30" rx="8" fill="#636e72"/>
+  <rect x="30" y="528" width="740" height="12" fill="#636e72"/>
+  <text x="400" y="530" fill="white" font-size="13" font-weight="bold" text-anchor="middle">Core Layer</text>
+
+  <!-- Core modules -->
+  <rect x="45" y="548" width="130" height="60" rx="6" fill="#EBF5FB" stroke="#4A90D9" stroke-width="1"/>
+  <text x="110" y="565" fill="#4A90D9" font-size="10" font-weight="bold" text-anchor="middle">NvApiWrapper</text>
+  <text x="110" y="579" fill="#555" font-size="8" text-anchor="middle">P/Invoke bindings</text>
+  <text x="110" y="591" fill="#555" font-size="8" text-anchor="middle">nvapi64.dll load</text>
+  <text x="110" y="603" fill="#555" font-size="8" text-anchor="middle">Dynamic function resolve</text>
+
+  <rect x="190" y="548" width="130" height="60" rx="6" fill="#EAFAF1" stroke="#50C878" stroke-width="1"/>
+  <text x="255" y="565" fill="#27ae60" font-size="10" font-weight="bold" text-anchor="middle">EdidParser</text>
+  <text x="255" y="579" fill="#555" font-size="8" text-anchor="middle">128/256-byte parsing</text>
+  <text x="255" y="591" fill="#555" font-size="8" text-anchor="middle">CTA-861 extension block</text>
+  <text x="255" y="603" fill="#555" font-size="8" text-anchor="middle">Checksum calculation</text>
+
+  <rect x="335" y="548" width="130" height="60" rx="6" fill="#FDF2FB" stroke="#6C5CE7" stroke-width="1"/>
+  <text x="400" y="565" fill="#6C5CE7" font-size="10" font-weight="bold" text-anchor="middle">NvApiTypes</text>
+  <text x="400" y="579" fill="#555" font-size="8" text-anchor="middle">Struct definitions</text>
+  <text x="400" y="591" fill="#555" font-size="8" text-anchor="middle">Enums (Status, etc.)</text>
+  <text x="400" y="603" fill="#555" font-size="8" text-anchor="middle">Version packing rules</text>
+
+  <rect x="480" y="548" width="130" height="60" rx="6" fill="#FEF9E7" stroke="#FFD93D" stroke-width="1"/>
+  <text x="545" y="565" fill="#d4a800" font-size="10" font-weight="bold" text-anchor="middle">EdidFileIO</text>
+  <text x="545" y="579" fill="#555" font-size="8" text-anchor="middle">.bin binary read/write</text>
+  <text x="545" y="591" fill="#555" font-size="8" text-anchor="middle">.dat table format</text>
+  <text x="545" y="603" fill="#555" font-size="8" text-anchor="middle">Hex text format</text>
+
+  <rect x="625" y="548" width="130" height="60" rx="6" fill="#FDEDEC" stroke="#FF6B6B" stroke-width="1"/>
+  <text x="690" y="565" fill="#c0392b" font-size="10" font-weight="bold" text-anchor="middle">Logger</text>
+  <text x="690" y="579" fill="#555" font-size="8" text-anchor="middle">Event-based logging</text>
+  <text x="690" y="591" fill="#555" font-size="8" text-anchor="middle">UI thread-safe</text>
+  <text x="690" y="603" fill="#555" font-size="8" text-anchor="middle">INFO/WARN/ERROR</text>
+
+  <!-- Arrows from tabs to core -->
+  <line x1="127" y1="295" x2="127" y2="420" stroke="#4A90D9" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arr-blue)"/>
+  <line x1="312" y1="295" x2="255" y2="420" stroke="#50C878" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arr-green)"/>
+  <line x1="497" y1="295" x2="400" y2="420" stroke="#6C5CE7" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <line x1="677" y1="295" x2="545" y2="420" stroke="#FFD93D" stroke-width="1.5" stroke-dasharray="4,3"/>
+
+  <!-- NVAPI label at bottom -->
+  <rect x="40" y="618" width="720" height="52" rx="6" fill="#2d3436"/>
+  <text x="400" y="638" fill="#74b9ff" font-size="11" font-weight="bold" text-anchor="middle">NVAPI (nvapi64.dll) — NvAPI_GPU_*, NvAPI_DISP_*, NvAPI_SYS_*</text>
+  <text x="400" y="657" fill="#dfe6e9" font-size="9" text-anchor="middle">GPU enumeration · Clock/temp query · Display enumeration · EDID read/write · Color control · Custom resolution</text>
+</svg>

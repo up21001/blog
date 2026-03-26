@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 620">
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-color="#00000030"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="620" fill="#f8f9fa"/>
+
+  <!-- Title -->
+  <text x="400" y="36" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#2d3436" text-anchor="middle">GPU 열거 및 정보 수집 흐름</text>
+
+  <!-- Step 1: NvAPI_Initialize -->
+  <rect x="280" y="60" width="240" height="50" rx="8" fill="#4A90D9" filter="url(#shadow)"/>
+  <text x="400" y="80" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="white" text-anchor="middle">NvAPI_Initialize()</text>
+  <text x="400" y="98" font-family="Arial, sans-serif" font-size="11" fill="#d0e8ff" text-anchor="middle">NVAPI 라이브러리 초기화</text>
+
+  <!-- Arrow 1 -->
+  <line x1="400" y1="110" x2="400" y2="138" stroke="#4A90D9" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- Step 2: EnumPhysicalGPUs -->
+  <rect x="220" y="140" width="360" height="50" rx="8" fill="#4A90D9" filter="url(#shadow)"/>
+  <text x="400" y="160" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="white" text-anchor="middle">NvAPI_EnumPhysicalGPUs()</text>
+  <text x="400" y="178" font-family="Arial, sans-serif" font-size="11" fill="#d0e8ff" text-anchor="middle">물리 GPU 핸들 배열 획득 (최대 64개)</text>
+
+  <!-- Arrow 2 -->
+  <line x1="400" y1="190" x2="400" y2="218" stroke="#4A90D9" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- Loop box -->
+  <rect x="60" y="220" width="680" height="290" rx="10" fill="none" stroke="#6C5CE7" stroke-width="2" stroke-dasharray="6,3"/>
+  <text x="80" y="240" font-family="Arial, sans-serif" font-size="11" fill="#6C5CE7" font-style="italic">for (int i = 0; i &lt; count; i++)</text>
+
+  <!-- GPU Name -->
+  <rect x="100" y="252" width="260" height="44" rx="6" fill="#50C878" filter="url(#shadow)"/>
+  <text x="230" y="270" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white" text-anchor="middle">GPU_GetFullName()</text>
+  <text x="230" y="286" font-family="Arial, sans-serif" font-size="10" fill="#d0ffe0" text-anchor="middle">GPU 모델명 문자열</text>
+
+  <!-- VRAM -->
+  <rect x="440" y="252" width="260" height="44" rx="6" fill="#50C878" filter="url(#shadow)"/>
+  <text x="570" y="270" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white" text-anchor="middle">GPU_GetPhysicalFrameBufferSize()</text>
+  <text x="570" y="286" font-family="Arial, sans-serif" font-size="10" fill="#d0ffe0" text-anchor="middle">VRAM 크기 (KB 단위)</text>
+
+  <!-- VBIOS -->
+  <rect x="100" y="312" width="260" height="44" rx="6" fill="#50C878" filter="url(#shadow)"/>
+  <text x="230" y="330" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white" text-anchor="middle">GPU_GetVbiosVersionString()</text>
+  <text x="230" y="346" font-family="Arial, sans-serif" font-size="10" fill="#d0ffe0" text-anchor="middle">VBIOS 버전 문자열</text>
+
+  <!-- Thermal -->
+  <rect x="440" y="312" width="260" height="44" rx="6" fill="#FF6B6B" filter="url(#shadow)"/>
+  <text x="570" y="330" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white" text-anchor="middle">GPU_GetThermalSettings()</text>
+  <text x="570" y="346" font-family="Arial, sans-serif" font-size="10" fill="#ffe0e0" text-anchor="middle">온도 센서 배열 (최대 3개)</text>
+
+  <!-- Bus -->
+  <rect x="100" y="372" width="260" height="44" rx="6" fill="#FFD93D" filter="url(#shadow)"/>
+  <text x="230" y="390" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#333" text-anchor="middle">GPU_GetBusId() / GetBusType()</text>
+  <text x="230" y="406" font-family="Arial, sans-serif" font-size="10" fill="#665900" text-anchor="middle">PCI-E 버스 ID / 버스 타입</text>
+
+  <!-- Clocks -->
+  <rect x="440" y="372" width="260" height="44" rx="6" fill="#FFD93D" filter="url(#shadow)"/>
+  <text x="570" y="390" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#333" text-anchor="middle">GPU_GetAllClockFrequencies()</text>
+  <text x="570" y="406" font-family="Arial, sans-serif" font-size="10" fill="#665900" text-anchor="middle">Graphics / Memory / Boost 클럭</text>
+
+  <!-- Arrow 3 -->
+  <line x1="400" y1="510" x2="400" y2="538" stroke="#4A90D9" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- GpuInfoData result -->
+  <rect x="200" y="540" width="400" height="58" rx="8" fill="#6C5CE7" filter="url(#shadow)"/>
+  <text x="400" y="562" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="white" text-anchor="middle">GpuInfoData 객체 생성 완료</text>
+  <text x="400" y="580" font-family="Arial, sans-serif" font-size="10" fill="#d8d0ff" text-anchor="middle">Name · VRAM · VBIOS · Temp · Clocks · BusId · BusType · GpuType</text>
+
+  <!-- Collect arrow from loop box bottom -->
+  <line x1="400" y1="430" x2="400" y2="458" stroke="#888" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="400" y="476" font-family="Arial, sans-serif" font-size="11" fill="#555" text-anchor="middle">result.Add(info) — List&lt;GpuInfoData&gt;</text>
+  <line x1="400" y1="488" x2="400" y2="508" stroke="#888" stroke-width="1.5" stroke-dasharray="4,3"/>
+
+  <!-- Arrow marker -->
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#4A90D9"/>
+    </marker>
+  </defs>
+</svg>

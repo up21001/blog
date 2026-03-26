@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 580">
+  <defs>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-color="#00000033"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
+    </marker>
+    <marker id="arrow-blue" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#4A90D9"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="580" fill="#f8f9fa"/>
+
+  <!-- Title -->
+  <text x="400" y="36" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#2d3436">P/Invoke 래퍼 패턴 — 델리게이트 마샬링</text>
+
+  <!-- Section A: C# 측 -->
+  <rect x="40" y="60" width="340" height="460" rx="12" ry="12" fill="#e8f4fd" stroke="#4A90D9" stroke-width="2"/>
+  <text x="210" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#4A90D9">C# (관리 코드)</text>
+
+  <!-- DllImport box -->
+  <rect x="60" y="105" width="300" height="80" rx="8" ry="8" fill="#4A90D9" filter="url(#shadow)"/>
+  <text x="210" y="128" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#fff">[DllImport] 진입점 선언</text>
+  <text x="70" y="150" font-family="Arial, sans-serif" font-size="11" fill="#d0e8ff">[DllImport("nvapi64.dll",</text>
+  <text x="70" y="167" font-family="Arial, sans-serif" font-size="11" fill="#d0e8ff">  EntryPoint = "nvapi_QueryInterface")]</text>
+
+  <!-- down arrow -->
+  <line x1="210" y1="187" x2="210" y2="213" stroke="#4A90D9" stroke-width="2" marker-end="url(#arrow-blue)"/>
+
+  <!-- Function ID constant box -->
+  <rect x="60" y="215" width="300" height="70" rx="8" ry="8" fill="#6C5CE7" filter="url(#shadow)"/>
+  <text x="210" y="238" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#fff">함수 ID 상수 (uint)</text>
+  <text x="70" y="258" font-family="Arial, sans-serif" font-size="11" fill="#ddd8ff">const uint ID_Initialize = 0x0150E828;</text>
+  <text x="70" y="275" font-family="Arial, sans-serif" font-size="11" fill="#ddd8ff">const uint ID_GPU_GetEDID = 0x37D32E69;</text>
+
+  <!-- down arrow -->
+  <line x1="210" y1="287" x2="210" y2="313" stroke="#4A90D9" stroke-width="2" marker-end="url(#arrow-blue)"/>
+
+  <!-- Delegate type box -->
+  <rect x="60" y="315" width="300" height="80" rx="8" ry="8" fill="#50C878" filter="url(#shadow)"/>
+  <text x="210" y="338" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#fff">델리게이트 타입 선언</text>
+  <text x="70" y="358" font-family="Arial, sans-serif" font-size="11" fill="#e0fff0">[UnmanagedFunctionPointer(</text>
+  <text x="70" y="374" font-family="Arial, sans-serif" font-size="11" fill="#e0fff0">  CallingConvention.Cdecl)]</text>
+  <text x="70" y="390" font-family="Arial, sans-serif" font-size="11" fill="#e0fff0">delegate NvStatus NvAPI_Initialize_t();</text>
+
+  <!-- down arrow -->
+  <line x1="210" y1="397" x2="210" y2="423" stroke="#4A90D9" stroke-width="2" marker-end="url(#arrow-blue)"/>
+
+  <!-- GetDelegate box -->
+  <rect x="60" y="425" width="300" height="80" rx="8" ry="8" fill="#FFD93D" filter="url(#shadow)"/>
+  <text x="210" y="448" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#2d3436">GetDelegate&lt;T&gt;(uint id)</text>
+  <text x="70" y="468" font-family="Arial, sans-serif" font-size="11" fill="#555">IntPtr ptr = QueryInterface(id);</text>
+  <text x="70" y="484" font-family="Arial, sans-serif" font-size="11" fill="#555">return Marshal.GetDelegateFor</text>
+  <text x="70" y="500" font-family="Arial, sans-serif" font-size="11" fill="#555">  FunctionPointer(ptr, typeof(T));</text>
+
+  <!-- Section B: 런타임 측 -->
+  <rect x="420" y="60" width="340" height="460" rx="12" ry="12" fill="#fdf0e8" stroke="#FF6B6B" stroke-width="2"/>
+  <text x="590" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#FF6B6B">네이티브 런타임 (nvapi64.dll)</text>
+
+  <!-- nvapi_QueryInterface -->
+  <rect x="440" y="105" width="300" height="70" rx="8" ry="8" fill="#FF6B6B" filter="url(#shadow)"/>
+  <text x="590" y="132" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#fff">nvapi_QueryInterface(uint id)</text>
+  <text x="590" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#ffe0e0">내부 함수 테이블에서 포인터 검색 후 반환</text>
+
+  <!-- down arrow native -->
+  <line x1="590" y1="177" x2="590" y2="213" stroke="#FF6B6B" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Function pointer table -->
+  <rect x="440" y="215" width="300" height="130" rx="8" ry="8" fill="#fff" stroke="#FF6B6B" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="590" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#FF6B6B">내부 함수 포인터 테이블</text>
+  <text x="460" y="262" font-family="Arial, sans-serif" font-size="11" fill="#555">0x0150E828 → NvAPI_Initialize *</text>
+  <text x="460" y="280" font-family="Arial, sans-serif" font-size="11" fill="#555">0xE5AC921F → NvAPI_EnumPhysicalGPUs *</text>
+  <text x="460" y="298" font-family="Arial, sans-serif" font-size="11" fill="#555">0x37D32E69 → NvAPI_GPU_GetEDID *</text>
+  <text x="460" y="316" font-family="Arial, sans-serif" font-size="11" fill="#aaa">... (총 수백 개 함수)</text>
+  <text x="460" y="334" font-family="Arial, sans-serif" font-size="11" fill="#555">0x92F9D80D → NvAPI_DISP_ColorControl *</text>
+
+  <!-- down arrow native -->
+  <line x1="590" y1="347" x2="590" y2="373" stroke="#FF6B6B" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Actual C function -->
+  <rect x="440" y="375" width="300" height="80" rx="8" ry="8" fill="#FF6B6B" filter="url(#shadow)"/>
+  <text x="590" y="398" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#fff">실제 C 함수 (Cdecl)</text>
+  <text x="590" y="420" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#ffe0e0">NvAPI_Status __cdecl NvAPI_Initialize()</text>
+  <text x="590" y="440" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#ffe0e0">드라이버 내부 초기화 수행</text>
+
+  <!-- Cross arrows: C# GetDelegate → QueryInterface -->
+  <line x1="362" y1="140" x2="438" y2="140" stroke="#888" stroke-width="2" stroke-dasharray="6,3" marker-end="url(#arrow)"/>
+  <text x="400" y="133" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#888">호출</text>
+
+  <!-- Cross arrows: QueryInterface result → GetDelegate -->
+  <line x1="438" y1="160" x2="362" y2="450" stroke="#4A90D9" stroke-width="2" stroke-dasharray="6,3" marker-end="url(#arrow-blue)"/>
+  <text x="390" y="320" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#4A90D9" transform="rotate(-70, 400, 300)">IntPtr 반환</text>
+
+  <!-- Bottom note -->
+  <rect x="40" y="535" width="720" height="34" rx="8" ry="8" fill="#2d3436"/>
+  <text x="400" y="557" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#fff">헤더 파일 없이 런타임에 함수 ID로 포인터를 조회 — NVAPI 고유의 ABI 설계</text>
+</svg>

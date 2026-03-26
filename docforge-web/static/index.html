@@ -89,6 +89,10 @@
           <div class="reference-url-row">
             <input type="url" id="referenceUrl" placeholder="https://example.com/blog-post (참고할 웹 페이지 URL)" />
           </div>
+          <div class="reference-codebase-row">
+            <input type="text" id="codebasePath" placeholder="코드베이스 경로 (예: C:\Projects\my-app 또는 /home/user/project)" autocomplete="off" />
+            <span id="codebasePathStatus" class="codebase-path-status"></span>
+          </div>
         </div>
 
         <div class="field">
@@ -152,6 +156,56 @@
       </div>
     </main>
 
+    <!-- ── 시리즈 기획 ── -->
+    <section id="seriesSection" class="panel series-panel">
+      <details id="seriesDetails">
+        <summary class="series-summary">
+          <span class="series-summary-icon">&#128218;</span>
+          <strong>시리즈 기획</strong>
+          <span class="series-summary-hint muted">&#8212; 연재 구성 자동 생성 &middot; 일괄 번역</span>
+        </summary>
+
+        <div class="series-body">
+          <!-- 기획 생성 폼 -->
+          <div class="series-plan-form">
+            <div class="row row-2col">
+              <div class="field">
+                <label for="seriesTopic">시리즈 주제</label>
+                <textarea id="seriesTopic" rows="3" placeholder="예: Rust로 배우는 시스템 프로그래밍"></textarea>
+              </div>
+              <div class="field">
+                <label for="seriesNameHint">시리즈 이름 (비우면 자동 생성)</label>
+                <input type="text" id="seriesNameHint" placeholder="예: Rust 시스템 프로그래밍 완전 가이드" />
+                <label for="seriesPartCount" style="margin-top:0.6rem">파트 수</label>
+                <input type="number" id="seriesPartCount" min="2" max="12" value="5" />
+              </div>
+            </div>
+            <div class="series-plan-actions">
+              <button type="button" id="btnPlanSeries" class="btn primary">기획 생성</button>
+              <span id="seriesPlanStatus" class="meta"></span>
+            </div>
+          </div>
+
+          <!-- 기획 결과 -->
+          <div id="seriesPlanResult" class="series-plan-result" hidden>
+            <div class="series-plan-header">
+              <h3 id="seriesPlanName" class="series-plan-name"></h3>
+              <div class="series-plan-header-actions">
+                <button type="button" id="btnTranslateSeries" class="btn btn-sm btn-translate-series">일괄 번역 (용어집 자동 생성)</button>
+                <span id="seriesTranslateStatus" class="meta"></span>
+              </div>
+            </div>
+            <div id="seriesPartsList" class="series-parts-list"></div>
+
+            <!-- 용어집 미리보기 -->
+            <details id="glossaryDetails" class="glossary-details" hidden>
+              <summary>번역 용어집 <span id="glossaryCount" class="muted"></span></summary>
+              <div id="glossaryTable" class="glossary-table"></div>
+            </details>
+          </div>
+        </div>
+      </details>
+    </section>
     <!-- ── 결과 ── -->
     <section id="result" class="result" hidden>
       <div class="workflow-bar" role="status">
@@ -206,12 +260,23 @@
               <option value="architecture">아키텍처</option>
               <option value="infographic">인포그래픽</option>
               <option value="icon">아이콘</option>
+              <option value="data_structure">데이터 구조</option>
+              <option value="timing">타이밍 다이어그램</option>
+              <option value="class_diagram">클래스 다이어그램</option>
+              <option value="pipeline">파이프라인</option>
+              <option value="flowchart">플로우차트</option>
+              <option value="comparison">비교 다이어그램</option>
+              <option value="hierarchy">계층 구조</option>
             </select>
             <select id="addSvgStyle">
               <option value="modern">모던</option>
               <option value="minimal">미니멀</option>
               <option value="colorful">컬러풀</option>
               <option value="dark">다크</option>
+            </select>
+            <select id="addSvgLang">
+              <option value="ko">한국어</option>
+              <option value="en">English</option>
             </select>
           </div>
           <div class="add-asset-actions">

@@ -25,12 +25,31 @@
     <a href="{{ "" | relLangURL }}" class="text-base font-medium truncate min-w-0 shrink">
       {{ if .IsHome }}
         {{ .Site.Title | markdownify }}
-      {{ else if .Description }}
-        통합 블로그 | {{ .Description }}
-      {{ else if and .Title (not .IsHome) }}
-        통합 블로그 | {{ .Title }}
       {{ else }}
-        {{ .Site.Title | markdownify }}
+        {{ if eq .Site.Language.Lang "en" }}Unified Blog{{ else }}통합 블로그{{ end }}
+        {{- $cats := .GetTerms "categories" -}}
+        {{- if $cats -}}
+          {{- $cat := index $cats 0 -}}
+          {{- $catSlug := $cat.Page.Title | urlize -}}
+          {{- $menuLabel := "" -}}
+          {{- $parentLabel := "" -}}
+          {{- range .Site.Menus.main -}}
+            {{- if .HasChildren -}}
+              {{- $p := .Name -}}
+              {{- range .Children -}}
+                {{- $ref := .PageRef | default "" -}}
+                {{- if and $ref (strings.HasSuffix $ref $catSlug) -}}
+                  {{- $parentLabel = $p -}}
+                  {{- $menuLabel = .Name -}}
+                {{- end -}}
+              {{- end -}}
+            {{- end -}}
+          {{- end -}}
+          {{- if $menuLabel }} | <span class="opacity-60">{{ $parentLabel }} › {{ $menuLabel }}</span>{{ end -}}
+        {{- end }}
+        {{- if .Description }} | {{ .Description }}
+        {{- else if .Title }} | {{ .Title }}
+        {{- end }}
       {{ end }}
     </a>
   {{ end }}

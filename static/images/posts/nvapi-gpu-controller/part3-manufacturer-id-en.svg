@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-color="#00000033"/>
+    </filter>
+    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#495057"/>
+    </marker>
+  </defs>
+
+  <rect width="800" height="500" fill="#f8f9fa"/>
+
+  <!-- Title -->
+  <rect x="40" y="16" width="720" height="44" rx="8" fill="#343a40" filter="url(#shadow)"/>
+  <text x="400" y="43" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" font-weight="bold" fill="white">Manufacturer ID Encoding — 3 Chars → 2 Bytes Bit Conversion</text>
+
+  <!-- Example label -->
+  <text x="400" y="88" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#495057">Example: "SAM" (Samsung) → 0x4C 0x2D</text>
+
+  <!-- ASCII chars -->
+  <rect x="120" y="100" width="120" height="64" rx="10" fill="#50C878" filter="url(#shadow)"/>
+  <text x="180" y="126" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="white">'S'</text>
+  <text x="180" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white">S - A + 1 = 19</text>
+
+  <rect x="340" y="100" width="120" height="64" rx="10" fill="#4A90D9" filter="url(#shadow)"/>
+  <text x="400" y="126" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="white">'A'</text>
+  <text x="400" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white">A - A + 1 = 1</text>
+
+  <rect x="560" y="100" width="120" height="64" rx="10" fill="#FF6B6B" filter="url(#shadow)"/>
+  <text x="620" y="126" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="white">'M'</text>
+  <text x="620" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white">M - A + 1 = 13</text>
+
+  <!-- 5-bit binary values -->
+  <text x="180" y="184" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#495057">10011 (5 bits)</text>
+  <text x="400" y="184" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#495057">00001 (5 bits)</text>
+  <text x="620" y="184" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#495057">01101 (5 bits)</text>
+
+  <!-- Combined 16-bit value -->
+  <rect x="80" y="204" width="640" height="60" rx="10" fill="white" stroke="#dee2e6" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="400" y="224" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#343a40">16-bit Packing: bit[14:10]=S, bit[9:5]=A, bit[4:0]=M</text>
+
+  <!-- Bit layout boxes -->
+  <!-- bit 15 (always 0) -->
+  <rect x="90" y="232" width="32" height="24" rx="3" fill="#e9ecef" stroke="#ced4da" stroke-width="1"/>
+  <text x="106" y="249" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#6c757d">0</text>
+
+  <!-- S bits (10011) -->
+  <rect x="126" y="232" width="32" height="24" rx="3" fill="#50C878" stroke="#27ae60" stroke-width="1"/>
+  <text x="142" y="249" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="white">1</text>
+  <rect x="162" y="232" width="32" height="24" rx="3" fill="#50C878" stroke="#27ae60" stroke-width="1"/>
+  <text x="178" y="249" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="white">0</text>
+  <rect x="198" y="232" width="32" height="24" rx="3" fill="#50C878" stroke="#27ae60" stroke-width="1"/>
+  <text x="214" y="249" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="white">0</text>
+  <rect x="234" y="232" width="32" height="24" rx="3" fill="#50C878" stroke="#27ae60" stroke-width="1"/>
+  <text x="250" y="249" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="white">1</text>
+  <rect x="270" y="232" width="32" height="24" rx="3" fill="#50C878" stroke="#27ae60" stroke-width="1"/>
+  <text x="286" y="249" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="white">1</text>
+
+  <!-- A bits (00001) -->
+  <rect x="306" y="232" width="32" height="24" rx="3" fill="#4A90D9" stroke="#2471a3" stroke-width="1"/>
+  <text x="322" y="249" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="white">0</text>
+  <rect x="342" y="232" width="32" height="24" rx="3" fill="#4A90D9" stroke="#2471a3" stroke-width="1"/>
+  <text x="358" y="249" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="white">0</text>
+  <rect x="378" y="232" width="32" height="24" rx="3" fill="#4A90D9" stroke="#2471a3" stroke-width="1"/>
+  <text x="394" y="249" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="white">0</text>
+  <rect x="414" y="232" width="32" height="24" rx="3" fill="#4A90D9" stroke="#2471a3" stroke-width="1"/>
+  <text x="430" y="249" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="white">0</text>
+  <rect x="450" y="232" width="32" height="24" rx="3" fill="#4A90D9" stroke="#2471a3" stroke-width="1"/>
+  <text x="466" y="249" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="white">1</text>
+
+  <!-- M bits (01101) -->
+  <rect x="486" y="232" width="32" height="24" rx="3" fill="#FF6B6B" stroke="#c0392b" stroke-width="1"/>
+  <text x="502" y="249" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="white">0</text>
+  <rect x="522" y="232" width="32" height="24" rx="3" fill="#FF6B6B" stroke="#c0392b" stroke-width="1"/>
+  <text x="538" y="249" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="white">1</text>
+  <rect x="558" y="232" width="32" height="24" rx="3" fill="#FF6B6B" stroke="#c0392b" stroke-width="1"/>
+  <text x="574" y="249" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="white">1</text>
+  <rect x="594" y="232" width="32" height="24" rx="3" fill="#FF6B6B" stroke="#c0392b" stroke-width="1"/>
+  <text x="610" y="249" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="white">0</text>
+  <rect x="630" y="232" width="32" height="24" rx="3" fill="#FF6B6B" stroke="#c0392b" stroke-width="1"/>
+  <text x="646" y="249" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="white">1</text>
+
+  <!-- Bit labels -->
+  <text x="106" y="270" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#6c757d">15</text>
+  <text x="286" y="270" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#50C878">10</text>
+  <text x="466" y="270" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#4A90D9">5</text>
+  <text x="646" y="270" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#FF6B6B">0</text>
+
+  <!-- Result bytes -->
+  <rect x="120" y="290" width="240" height="60" rx="10" fill="#50C878" filter="url(#shadow)"/>
+  <text x="240" y="316" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">High Byte: 0x4C</text>
+  <text x="240" y="338" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white">0_10011_00001 → 0100 1100</text>
+
+  <rect x="440" y="290" width="240" height="60" rx="10" fill="#FF6B6B" filter="url(#shadow)"/>
+  <text x="560" y="316" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">Low Byte: 0x2D</text>
+  <text x="560" y="338" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white">001_01101 → 0010 1101</text>
+
+  <!-- Code box -->
+  <rect x="40" y="370" width="720" height="114" rx="8" fill="#2d3436" filter="url(#shadow)"/>
+  <text x="60" y="395" font-family="Arial, monospace, sans-serif" font-size="12" fill="#74b9ff">// C# Decoding Code (EdidParser.cs)</text>
+  <text x="60" y="415" font-family="Arial, monospace, sans-serif" font-size="12" fill="#dfe6e9">int id = (b1 &lt;&lt; 8) | b2;  // 0x4C2D</text>
+  <text x="60" y="435" font-family="Arial, monospace, sans-serif" font-size="12" fill="#dfe6e9">char c1 = (char)(((id &gt;&gt; 10) &amp; 0x1F) + 'A' - 1);  <tspan fill="#6c757d">// bits 14~10 = S</tspan></text>
+  <text x="60" y="455" font-family="Arial, monospace, sans-serif" font-size="12" fill="#dfe6e9">char c2 = (char)(((id &gt;&gt;  5) &amp; 0x1F) + 'A' - 1);  <tspan fill="#6c757d">// bits 9~5  = A</tspan></text>
+  <text x="60" y="475" font-family="Arial, monospace, sans-serif" font-size="12" fill="#dfe6e9">char c3 = (char)(( id        &amp; 0x1F) + 'A' - 1);  <tspan fill="#6c757d">// bits 4~0  = M</tspan></text>
+</svg>

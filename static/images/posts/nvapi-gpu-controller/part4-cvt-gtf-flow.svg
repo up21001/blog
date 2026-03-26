@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560">
+  <defs>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-color="#00000030"/>
+    </filter>
+    <marker id="arrowB" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#4A90D9"/>
+    </marker>
+    <marker id="arrowG" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#50C878"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="560" fill="#f8f9fa" rx="8"/>
+
+  <!-- Title -->
+  <rect x="0" y="0" width="800" height="48" fill="#2d3748" rx="8"/>
+  <rect x="0" y="40" width="800" height="8" fill="#2d3748"/>
+  <text x="400" y="30" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white" text-anchor="middle">CVT vs GTF 타이밍 계산 알고리즘 비교</text>
+
+  <!-- Column headers -->
+  <rect x="40" y="60" width="330" height="36" fill="#4A90D9" rx="6" filter="url(#shadow)"/>
+  <text x="205" y="83" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white" text-anchor="middle">CVT v1.2 (Coordinated Video Timings)</text>
+
+  <rect x="430" y="60" width="330" height="36" fill="#50C878" rx="6" filter="url(#shadow)"/>
+  <text x="595" y="83" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white" text-anchor="middle">GTF (Generalized Timing Formula)</text>
+
+  <!-- Divider line -->
+  <line x1="400" y1="55" x2="400" y2="540" stroke="#ddd" stroke-width="1.5" stroke-dasharray="5,3"/>
+
+  <!-- === CVT FLOW === -->
+  <!-- Step 1 -->
+  <rect x="50" y="112" width="310" height="44" fill="white" rx="6" stroke="#4A90D9" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="205" y="128" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#4A90D9" text-anchor="middle">입력: hActive, vActive, refreshRate</text>
+  <text x="205" y="146" font-family="Arial, sans-serif" font-size="10" fill="#555" text-anchor="middle">reducedBlanking 플래그 선택</text>
+  <line x1="205" y1="156" x2="205" y2="174" stroke="#4A90D9" stroke-width="1.5" marker-end="url(#arrowB)"/>
+
+  <!-- CVT Branch -->
+  <rect x="50" y="175" width="145" height="36" fill="#E8F4FD" rx="5" stroke="#4A90D9" stroke-width="1.5"/>
+  <text x="122" y="196" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#4A90D9" text-anchor="middle">Standard</text>
+
+  <rect x="215" y="175" width="145" height="36" fill="#FFF3CD" rx="5" stroke="#FFD93D" stroke-width="1.5"/>
+  <text x="287" y="196" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#856404" text-anchor="middle">Reduced Blanking</text>
+
+  <!-- CVT Standard steps -->
+  <line x1="122" y1="211" x2="122" y2="229" stroke="#4A90D9" stroke-width="1.5" marker-end="url(#arrowB)"/>
+  <rect x="50" y="230" width="145" height="50" fill="white" rx="5" stroke="#4A90D9" stroke-width="1"/>
+  <text x="122" y="248" font-family="Arial, sans-serif" font-size="9.5" fill="#333" text-anchor="middle">hPeriodEst 계산</text>
+  <text x="122" y="261" font-family="Arial, sans-serif" font-size="9" fill="#888" text-anchor="middle">(1M/rr - 550) / (vActive+3)</text>
+  <text x="122" y="274" font-family="Arial, sans-serif" font-size="9" fill="#888" text-anchor="middle">idealDutyCycle = 30 - 300K×T</text>
+
+  <!-- CVT RB steps -->
+  <line x1="287" y1="211" x2="287" y2="229" stroke="#FFD93D" stroke-width="1.5" marker-end="url(#arrowB)"/>
+  <rect x="215" y="230" width="145" height="50" fill="white" rx="5" stroke="#FFD93D" stroke-width="1"/>
+  <text x="287" y="248" font-family="Arial, sans-serif" font-size="9.5" fill="#333" text-anchor="middle">고정값 사용</text>
+  <text x="287" y="261" font-family="Arial, sans-serif" font-size="9" fill="#888" text-anchor="middle">hBlank = 80px</text>
+  <text x="287" y="274" font-family="Arial, sans-serif" font-size="9" fill="#888" text-anchor="middle">hFP=48, hSW=32</text>
+
+  <!-- Merge arrows -->
+  <line x1="122" y1="280" x2="122" y2="300" stroke="#4A90D9" stroke-width="1.5"/>
+  <line x1="287" y1="280" x2="287" y2="300" stroke="#4A90D9" stroke-width="1.5"/>
+  <line x1="122" y1="300" x2="287" y2="300" stroke="#4A90D9" stroke-width="1.5"/>
+  <line x1="205" y1="300" x2="205" y2="318" stroke="#4A90D9" stroke-width="1.5" marker-end="url(#arrowB)"/>
+
+  <rect x="55" y="319" width="300" height="44" fill="white" rx="5" stroke="#4A90D9" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="205" y="335" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#333" text-anchor="middle">hBlanking = hActive × duty / (100 - duty)</text>
+  <text x="205" y="351" font-family="Arial, sans-serif" font-size="9.5" fill="#888" text-anchor="middle">16의 배수로 올림 (char cell 정렬)</text>
+
+  <line x1="205" y1="363" x2="205" y2="381" stroke="#4A90D9" stroke-width="1.5" marker-end="url(#arrowB)"/>
+  <rect x="55" y="382" width="300" height="44" fill="white" rx="5" stroke="#4A90D9" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="205" y="398" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#333" text-anchor="middle">hSyncWidth = hTotal × 8%</text>
+  <text x="205" y="414" font-family="Arial, sans-serif" font-size="9.5" fill="#888" text-anchor="middle">8의 배수 / hBP = hBlank÷2 / hFP = 나머지</text>
+
+  <line x1="205" y1="426" x2="205" y2="444" stroke="#4A90D9" stroke-width="1.5" marker-end="url(#arrowB)"/>
+  <rect x="55" y="445" width="300" height="44" fill="#4A90D9" rx="5" filter="url(#shadow)"/>
+  <text x="205" y="461" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white" text-anchor="middle">pclk = hTotal × vTotal × rr ÷ 1M</text>
+  <text x="205" y="477" font-family="Arial, sans-serif" font-size="10" fill="#E8F4FD" text-anchor="middle">0.25 MHz 단위로 올림 (ceil×4/4)</text>
+
+  <!-- Sync polarity note CVT -->
+  <rect x="55" y="500" width="300" height="30" fill="#E8F4FD" rx="5" stroke="#4A90D9" stroke-width="1"/>
+  <text x="205" y="519" font-family="Arial, sans-serif" font-size="10" fill="#4A90D9" text-anchor="middle">Standard: HSyn- VSyn+ / RB: HSyn+ VSyn-</text>
+
+  <!-- === GTF FLOW === -->
+  <rect x="440" y="112" width="320" height="44" fill="white" rx="6" stroke="#50C878" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="600" y="128" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#50C878" text-anchor="middle">입력: hActive, vActive, refreshRate</text>
+  <text x="600" y="146" font-family="Arial, sans-serif" font-size="10" fill="#555" text-anchor="middle">GTF 상수 초기화 M=600, C=40, K=128, J=20</text>
+
+  <line x1="600" y1="156" x2="600" y2="174" stroke="#50C878" stroke-width="1.5" marker-end="url(#arrowG)"/>
+
+  <rect x="440" y="175" width="320" height="50" fill="white" rx="5" stroke="#50C878" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="600" y="191" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#333" text-anchor="middle">C' = (C - J) × K / 256 + J</text>
+  <text x="600" y="207" font-family="Arial, sans-serif" font-size="10" fill="#888" text-anchor="middle">M' = K / 256 × M  →  C'=30, M'=300</text>
+  <text x="600" y="221" font-family="Arial, sans-serif" font-size="9.5" fill="#888" text-anchor="middle">(레거시 CRT 모니터 특성 모델링 상수)</text>
+
+  <line x1="600" y1="225" x2="600" y2="243" stroke="#50C878" stroke-width="1.5" marker-end="url(#arrowG)"/>
+
+  <rect x="440" y="244" width="320" height="50" fill="white" rx="5" stroke="#50C878" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="600" y="260" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#333" text-anchor="middle">hPeriodEst = (1/rr - 550µs) / (vActive + vFP + vSW)</text>
+  <text x="600" y="276" font-family="Arial, sans-serif" font-size="9.5" fill="#888" text-anchor="middle">vBackPorch = 550µs ÷ hPeriod</text>
+  <text x="600" y="290" font-family="Arial, sans-serif" font-size="9" fill="#aaa" text-anchor="middle">MIN_V_BACK_PORCH = 550 µs (GTF 규격)</text>
+
+  <line x1="600" y1="294" x2="600" y2="312" stroke="#50C878" stroke-width="1.5" marker-end="url(#arrowG)"/>
+
+  <rect x="440" y="313" width="320" height="50" fill="white" rx="5" stroke="#50C878" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="600" y="329" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#333" text-anchor="middle">idealDutyCycle = C' - M' × hPeriod(µs) / 1000</text>
+  <text x="600" y="345" font-family="Arial, sans-serif" font-size="9.5" fill="#888" text-anchor="middle">hBlanking = hActive × duty / (100 - duty)</text>
+  <text x="600" y="361" font-family="Arial, sans-serif" font-size="9" fill="#aaa" text-anchor="middle">16의 배수 (2×8 단위)</text>
+
+  <line x1="600" y1="363" x2="600" y2="381" stroke="#50C878" stroke-width="1.5" marker-end="url(#arrowG)"/>
+
+  <rect x="440" y="382" width="320" height="44" fill="white" rx="5" stroke="#50C878" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="600" y="398" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#333" text-anchor="middle">hSyncWidth = hTotal × 8% (8의 배수)</text>
+  <text x="600" y="414" font-family="Arial, sans-serif" font-size="9.5" fill="#888" text-anchor="middle">hBP = hBlank÷2 / hFP = 나머지</text>
+
+  <line x1="600" y1="426" x2="600" y2="444" stroke="#50C878" stroke-width="1.5" marker-end="url(#arrowG)"/>
+
+  <rect x="440" y="445" width="320" height="44" fill="#50C878" rx="5" filter="url(#shadow)"/>
+  <text x="600" y="461" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white" text-anchor="middle">pclk = hTotal ÷ (hPeriod × 1M)</text>
+  <text x="600" y="477" font-family="Arial, sans-serif" font-size="10" fill="white" text-anchor="middle">단위 변환: × 100000000 ÷ 10000 → 10kHz</text>
+
+  <rect x="440" y="500" width="320" height="30" fill="#E8F7F0" rx="5" stroke="#50C878" stroke-width="1"/>
+  <text x="600" y="519" font-family="Arial, sans-serif" font-size="10" fill="#1a7340" text-anchor="middle">항상 HSyn- VSyn+ / 레거시 CRT 호환</text>
+</svg>

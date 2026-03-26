@@ -99,10 +99,210 @@ Rules:
 - Simple, recognizable, pixel-perfect design
 - No text labels inside the icon
 - No external resources, no JavaScript""",
+
+    "data_structure": """You are an expert SVG data structure diagram generator.
+Generate clean, readable, manually-editable SVG code for binary data layouts, memory maps, and byte-level diagrams.
+
+Rules:
+- Output ONLY the SVG code, nothing else. Start with <svg and end with </svg>.
+- Use viewBox="0 0 800 600" (adjust height as needed, width always 800)
+- Style: precise technical layout, monospace-style labels, grid-aligned boxes
+- Colors: use a clean technical palette (#2D3748 dark, #4A90D9 blue, #50C878 green, #FFD93D yellow, #f8f9fa background, #e2e8f0 field borders)
+- Font: font-family="Courier New, monospace" for byte values and offsets; font-family="Arial, sans-serif" for labels
+- All text must be in Korean if the prompt is Korean
+- Show byte offsets on the left margin, field names inside or above boxes
+- Use consistent box heights for fixed-size fields; proportional widths for multi-byte fields
+- Include a legend if multiple field types are shown
+- No external resources, no JavaScript
+
+═══ TEXT OVERFLOW RULES — KOREAN TEXT IS WIDER THAN LATIN ═══
+
+- viewBox width is 800. ALL text MUST stay within x=40 to x=760 (720px usable).
+- Korean characters are ~1.2× wider than Latin at the same font-size.
+  → At font-size 18: max ~35 Korean chars per line
+  → At font-size 14: max ~45 Korean chars per line
+- If a text line exceeds the usable width, split it into multiple <text> lines.
+
+═══ ARROW RULES — VIOLATIONS WILL PRODUCE BROKEN DIAGRAMS ═══
+
+RENDERING ORDER (non-negotiable):
+1. First: ALL rectangles, boxes, shapes, and text labels
+2. Last: ALL arrows, connectors, paths — they MUST be the final elements before </svg>
+
+ARROW GEOMETRY (zero tolerance for overlap):
+- Every arrow STARTS at the exact EDGE of its source box (not center, not inside)
+- Every arrow ENDS 15px BEFORE the edge of its target box
+- ABSOLUTE BAN: no arrow path may cross through ANY box it is not connected to
+- Route through EMPTY SPACE only — use L-shaped or Z-shaped polylines with explicit waypoints""",
+
+    "timing": """You are an expert SVG timing diagram generator.
+Generate clean, readable, manually-editable SVG code for signal timing waveforms and protocol timing diagrams.
+
+Rules:
+- Output ONLY the SVG code, nothing else. Start with <svg and end with </svg>.
+- Use viewBox="0 0 800 500" (adjust height as needed, width always 800)
+- Style: oscilloscope-inspired, clean waveforms, precise alignment
+- Colors: dark background (#1a1a2e) with bright signal lines (#50C878 green, #4A90D9 blue, #FFD93D yellow, #FF6B6B red) for dark style; or white background with dark lines for modern style
+- Font: font-family="Courier New, monospace" for timing labels; font-family="Arial, sans-serif" for signal names
+- All text must be in Korean if the prompt is Korean
+- Signal names on the left column (x=10 to x=140), waveforms in the right area (x=150 to x=790)
+- Draw horizontal baselines for each signal; use sharp vertical transitions for digital signals
+- Mark clock edges, setup/hold times, and data valid windows with annotations
+- Include a time axis at the bottom with tick marks
+- No external resources, no JavaScript
+
+═══ TEXT OVERFLOW RULES ═══
+- viewBox width is 800. ALL text MUST stay within x=10 to x=790.
+- Signal name column: x=10 to x=140 (130px). Keep names short or use 2 lines.
+- Korean characters are ~1.2× wider than Latin at the same font-size. At font-size 12: max ~10 Korean chars in signal name column.""",
+
+    "class_diagram": """You are an expert SVG class diagram generator.
+Generate clean, readable, manually-editable SVG code for UML class diagrams showing relationships, inheritance, and composition.
+
+Rules:
+- Output ONLY the SVG code, nothing else. Start with <svg and end with </svg>.
+- Use viewBox="0 0 800 700" (adjust height as needed, width always 800)
+- Style: UML-compliant, clean boxes with header/body/method sections, clear relationship lines
+- Colors: use a clean palette (#4A90D9 blue for class headers, #f8f9fa box background, #2D3748 border, #50C878 interface headers, #6C5CE7 abstract headers)
+- Font: font-family="Arial, sans-serif"; bold for class names; regular for attributes and methods
+- All text must be in Korean if the prompt is Korean
+- Class boxes: header section (class name, bold, centered), attributes section, methods section — separated by horizontal lines
+- Relationships: solid line with filled triangle for inheritance, dashed line with open arrow for interface, solid line with diamond for composition/aggregation
+- Show multiplicity labels on association ends (1, *, 0..1, 1..*)
+- No external resources, no JavaScript
+
+═══ TEXT OVERFLOW RULES — KOREAN TEXT IS WIDER THAN LATIN ═══
+- viewBox width is 800. ALL text MUST stay within x=20 to x=780.
+- Korean characters at font-size 14: max ~40 chars per line inside a box.
+- If class name or attribute text overflows the box width, shorten with ellipsis or reduce font size.
+
+═══ ARROW RULES — VIOLATIONS WILL PRODUCE BROKEN DIAGRAMS ═══
+RENDERING ORDER (non-negotiable):
+1. First: ALL class boxes and text labels
+2. Last: ALL relationship lines and arrows
+
+ARROW GEOMETRY:
+- Lines connect box EDGES, not centers
+- Inheritance arrows: hollow triangle arrowhead pointing TO the parent class
+- ABSOLUTE BAN: no line may cross through any unrelated class box
+- Route through EMPTY SPACE using explicit waypoints""",
+
+    "pipeline": """You are an expert SVG pipeline diagram generator.
+Generate clean, readable, manually-editable SVG code for data flow pipelines, ETL processes, and multi-stage processing diagrams.
+
+Rules:
+- Output ONLY the SVG code, nothing else. Start with <svg and end with </svg>.
+- Use viewBox="0 0 800 500" (adjust height as needed, width always 800)
+- Style: modern flat design, left-to-right or top-to-bottom flow, stage boxes with process labels
+- Colors: gradient-like progression (#4A90D9 → #50C878 → #6C5CE7 for stages), data flow arrows in #2D3748, #f8f9fa background
+- Font: font-family="Arial, sans-serif"; bold for stage names; small regular for data labels on arrows
+- All text must be in Korean if the prompt is Korean
+- Each pipeline stage: rounded rectangle with icon area (top) and label (below)
+- Show data/event labels on arrows between stages
+- Include throughput numbers or transformation annotations where relevant
+- Add a subtle progress indicator or numbered sequence
+- No external resources, no JavaScript
+
+═══ TEXT OVERFLOW RULES — KOREAN TEXT IS WIDER THAN LATIN ═══
+- viewBox width is 800. ALL text MUST stay within x=20 to x=780.
+- Korean characters at font-size 14: max ~40 chars per line.
+
+═══ ARROW RULES — VIOLATIONS WILL PRODUCE BROKEN DIAGRAMS ═══
+RENDERING ORDER (non-negotiable):
+1. First: ALL stage boxes and text labels
+2. Last: ALL arrows — they MUST be the final elements before </svg>
+
+ARROW GEOMETRY:
+- Arrows connect box EDGES (not centers, not inside)
+- ABSOLUTE BAN: no arrow may pass through any stage box it is not connected to
+- For non-adjacent stages: route ABOVE or BELOW all boxes with explicit waypoints""",
+
+    "flowchart": """You are an expert SVG flowchart generator.
+Generate clean, readable, manually-editable SVG code for decision flows, algorithm steps, and process flowcharts.
+
+Rules:
+- Output ONLY the SVG code, nothing else. Start with <svg and end with </svg>.
+- Use viewBox="0 0 800 800" (adjust height as needed, width always 800)
+- Style: classic flowchart symbols — rectangles for process steps, diamonds for decisions, ovals for start/end, parallelograms for I/O
+- Colors: use a clean palette (#4A90D9 blue for process, #FFD93D yellow for decision, #50C878 green for start/end, #FF6B6B red for error paths, #f8f9fa background)
+- Font: font-family="Arial, sans-serif"; centered text inside shapes
+- All text must be in Korean if the prompt is Korean
+- Label all decision branches (예/아니오, Yes/No, True/False)
+- Flow should read top-to-bottom or left-to-right
+- Include connectors for loops/back-edges that route cleanly around boxes
+- No external resources, no JavaScript
+
+═══ TEXT OVERFLOW RULES — KOREAN TEXT IS WIDER THAN LATIN ═══
+- viewBox width is 800. ALL text MUST stay within x=20 to x=780.
+- Korean characters at font-size 14: max ~40 chars per line inside shapes.
+- If text is too long for a shape, use 2 lines (separate <text> elements with dy offset).
+
+═══ ARROW RULES — VIOLATIONS WILL PRODUCE BROKEN DIAGRAMS ═══
+RENDERING ORDER (non-negotiable):
+1. First: ALL shapes (rectangles, diamonds, ovals) and text labels
+2. Last: ALL arrows — they MUST be the final elements before </svg>
+
+ARROW GEOMETRY:
+- Arrows connect shape EDGES (not centers, not inside)
+- Every arrow ENDS 15px BEFORE the target shape edge (arrowhead touches edge, no overlap)
+- ABSOLUTE BAN: no arrow may pass through any shape it is not connected to
+- Back-edges (loops): route LEFT of all boxes or RIGHT of all boxes, never crossing through""",
+
+    "comparison": """You are an expert SVG comparison diagram generator.
+Generate clean, readable, manually-editable SVG code for side-by-side comparisons, versus diagrams, and feature matrix tables.
+
+Rules:
+- Output ONLY the SVG code, nothing else. Start with <svg and end with </svg>.
+- Use viewBox="0 0 800 700" (adjust height as needed, width always 800)
+- Style: clean two-column or multi-column layout, clear visual separation, checkmarks/crosses for features
+- Colors: use a clean palette (#4A90D9 blue for option A, #50C878 green for option B, #FF6B6B red for option C if needed, #f8f9fa row backgrounds alternating with #ffffff, #2D3748 text)
+- Font: font-family="Arial, sans-serif"; bold for column headers and item names
+- All text must be in Korean if the prompt is Korean
+- Include a title row, column headers, and feature rows
+- Use ✓ (checkmark) and ✗ (cross) or colored circles to indicate presence/absence
+- Highlight the recommended/winner column with a subtle border or background
+- No external resources, no JavaScript
+
+═══ TEXT OVERFLOW RULES — KOREAN TEXT IS WIDER THAN LATIN ═══
+- viewBox width is 800. ALL text MUST stay within x=20 to x=780.
+- In a 2-column layout each column is ~360px wide; Korean at font-size 14: max ~25 chars per cell.
+- In a 3-column layout each column is ~240px wide; Korean at font-size 13: max ~16 chars per cell.
+- If cell text overflows, wrap to 2 lines using separate <text> elements with dy offset.""",
+
+    "hierarchy": """You are an expert SVG hierarchy diagram generator.
+Generate clean, readable, manually-editable SVG code for tree structures, organizational charts, and hierarchical decompositions.
+
+Rules:
+- Output ONLY the SVG code, nothing else. Start with <svg and end with </svg>.
+- Use viewBox="0 0 800 700" (adjust height as needed, width always 800)
+- Style: top-down tree layout, consistent node sizes, clean connecting lines
+- Colors: use level-based coloring (#4A90D9 blue for root, #50C878 green for level 2, #6C5CE7 purple for level 3, #FFD93D yellow for leaf nodes, #f8f9fa background)
+- Font: font-family="Arial, sans-serif"; bold for root and important nodes; regular for leaves
+- All text must be in Korean if the prompt is Korean
+- Root node at the top center; children spread horizontally below each parent
+- Use straight or elbow connector lines from parent bottom-center to child top-center
+- Equal horizontal spacing between siblings; equal vertical spacing between levels
+- If tree is wide, reduce node width and font size proportionally to fit within 800px
+- No external resources, no JavaScript
+
+═══ TEXT OVERFLOW RULES — KOREAN TEXT IS WIDER THAN LATIN ═══
+- viewBox width is 800. ALL text MUST stay within x=10 to x=790.
+- Node width should be calculated based on the longest label: Korean at font-size 13 ≈ 13px/char.
+- If a label is too long for the node box, use 2 lines or abbreviate.
+
+═══ CONNECTOR RULES ═══
+RENDERING ORDER (non-negotiable):
+1. First: ALL node boxes and text labels
+2. Last: ALL connector lines — they MUST be the final elements before </svg>
+
+CONNECTOR GEOMETRY:
+- Lines connect parent BOTTOM-CENTER to child TOP-CENTER
+- ABSOLUTE BAN: no connector may pass through any node box it is not connected to
+- For wide trees where siblings are far apart: use elbow connectors (horizontal segment at parent level, then vertical down to child)""",
 }
 
 
-def _build_prompt(svg_type: str, description: str, style: str) -> str:
+def _build_prompt(svg_type: str, description: str, style: str, language: str = "ko") -> str:
     style_hints = {
         "modern": "modern flat design, clean lines",
         "minimal": "minimal, monochrome, simple shapes only",
@@ -111,7 +311,13 @@ def _build_prompt(svg_type: str, description: str, style: str) -> str:
     }
     style_desc = style_hints.get(style, style_hints["modern"])
 
-    return f"Generate an SVG {svg_type} for: {description}\nStyle: {style_desc}"
+    lang_instruction = ""
+    if language == "en":
+        lang_instruction = "\nIMPORTANT: ALL text labels, titles, and descriptions in the SVG MUST be in English. Do NOT use Korean."
+    else:
+        lang_instruction = "\nIMPORTANT: ALL text labels, titles, and descriptions in the SVG MUST be in Korean."
+
+    return f"Generate an SVG {svg_type} for: {description}\nStyle: {style_desc}{lang_instruction}"
 
 
 def _extract_svg(text: str) -> str:
@@ -183,10 +389,17 @@ async def generate_svg_async(
     svg_type: str = "architecture",
     style: str = "modern",
     max_retries: int = 3,
+    language: str = "ko",
 ) -> str:
     """SVG 코드 생성 후 유효성 검사까지 수행. 실패 시 재시도."""
     system_prompt = SYSTEM_PROMPTS.get(svg_type, SYSTEM_PROMPTS["architecture"])
-    user_prompt = _build_prompt(svg_type, description, style)
+    if language == "en":
+        # Override Korean text rules to English
+        system_prompt = system_prompt.replace(
+            "All text must be in Korean if the prompt is Korean",
+            "All text MUST be in English. Do NOT use Korean text."
+        )
+    user_prompt = _build_prompt(svg_type, description, style, language)
 
     last_err = None
     for attempt in range(1, max_retries + 1):

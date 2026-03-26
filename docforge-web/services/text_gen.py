@@ -60,6 +60,9 @@ def generate_document(
     length_tier: str = "medium",
     text_model: str | None = None,
     reference_doc: str | None = None,
+    series_name: str = "",
+    series_order: int = 0,
+    series_slug: str = "",
 ) -> str:
     eff = get_effective_prompts()
     if template_key not in eff:
@@ -75,6 +78,19 @@ def generate_document(
     use_model = text_model if text_model and text_model in TEXT_MODELS else TEXT_MODEL
     client = genai.Client(api_key=key)
     user_msg = eff["document_user"].format(topic=topic) + f"\n\n【작성 지시】{length_msg}"
+
+    # 시리즈 메타데이터 주입
+    if series_name.strip():
+        order_hint = f" (파트 {series_order})" if series_order > 0 else ""
+        slug_hint = f"\n시리즈 슬러그: {series_slug}" if series_slug.strip() else ""
+        user_msg += (
+            f"\n\n【시리즈 프론트매터 지시】\n"
+            f"이 글은 시리즈의 한 파트입니다. 프론트매터에 반드시 다음 필드를 추가하라:\n"
+            f'series: ["{series_name}"]\n'
+            f"series_order: {series_order if series_order > 0 else 1}\n"
+            f"(series 필드는 배열 형태로){slug_hint}\n"
+            f"시리즈 이름{order_hint}: {series_name}"
+        )
 
     if reference_doc and reference_doc.strip():
         ref_text = reference_doc.strip()[:30000]
@@ -219,12 +235,19 @@ Based on this article, decide what SVG assets would best enhance the content.
 Generate exactly {count} SVG asset specifications.
 
 For each asset output one JSON object per line (no array brackets, no markdown):
-{{"type": "architecture"|"infographic"|"icon", "style": "modern"|"minimal"|"colorful"|"dark", "description": "Korean description of what to draw"}}
+{{"type": "architecture"|"infographic"|"icon"|"data_structure"|"timing"|"class_diagram"|"pipeline"|"flowchart"|"comparison"|"hierarchy", "style": "modern"|"minimal"|"colorful"|"dark", "description": "Korean description of what to draw"}}
 
 Rules:
-- type "architecture": system diagrams, flow charts, process flows
-- type "infographic": data comparisons, step lists, statistics
-- type "icon": single concept icons (small, symbolic)
+- type "architecture": system diagrams, component relationships, service maps
+- type "infographic": data visualizations, step lists, statistics, key numbers
+- type "icon": single concept icons (small, symbolic, 24x24)
+- type "data_structure": binary layouts, memory maps, packet formats, byte-level diagrams
+- type "timing": signal waveforms, protocol timing, sequence of events over time
+- type "class_diagram": UML class diagrams, inheritance trees, interface relationships
+- type "pipeline": ETL flows, data processing stages, CI/CD pipelines, multi-step transforms
+- type "flowchart": decision trees, algorithm steps, process flows with yes/no branches
+- type "comparison": side-by-side feature comparisons, vs tables, option matrices
+- type "hierarchy": org charts, tree structures, category taxonomies, nested groupings
 - Match each asset to a specific section or concept in the article
 - Write descriptions in Korean, be specific and detailed
 - Output only JSON lines, nothing else"""
@@ -269,9 +292,11 @@ async def generate_svg_specs_async(
 async def generate_document_async(
     topic: str, template_key: str, api_key: str, length_tier: str = "medium",
     text_model: str | None = None, reference_doc: str | None = None,
+    series_name: str = "", series_order: int = 0, series_slug: str = "",
 ) -> str:
     return await asyncio.to_thread(
-        generate_document, topic, template_key, api_key, 3, length_tier, text_model, reference_doc
+        generate_document, topic, template_key, api_key, 3, length_tier,
+        text_model, reference_doc, series_name, series_order, series_slug,
     )
 
 
@@ -348,3 +373,197 @@ async def generate_image_prompts_async(
         excerpt_max_chars,
         extra_hints,
     )
+
+
+def generate_series_plan(
+    topic: str,
+    part_count: int,
+    series_name: str,
+    api_key: str,
+    language: str = "ko",
+) -> dict:
+    """주제를 받아 시리즈 기획안(JSON)을 생성."""
+    import json
+    from .prompts import SERIES_PLAN
+
+    key = api_key or os.environ.get("GEMINI_API_KEY")
+    if not key:
+        raise ValueError("GEMINI_API_KEY가 설정되지 않았습니다.")
+
+    client = genai.Client(api_key=key)
+    series_hint = f'시리즈 이름(제안): "{series_name}"' if series_name.strip() else "시리즈 이름은 자동으로 정해줘."
+    user_msg = f"""주제: {topic}
+
+파트 수: {part_count}개
+{series_hint}
+출력 언어: {"한국어" if language == "ko" else "English"}
+
+위 주제로 {part_count}개 파트 시리즈 기획 JSON을 출력하라."""
+
+    response = client.models.generate_content(
+        model=TEXT_MODEL,
+        config=types.GenerateContentConfig(
+            system_instruction=SERIES_PLAN,
+            max_output_tokens=65536,
+            temperature=0.6,
+            thinking_config=types.ThinkingConfig(thinking_budget=0),
+        ),
+        contents=user_msg,
+    )
+    raw = response.text.strip()
+    raw = _strip_markdown_fence(raw)
+    # JSON 파싱
+    data = json.loads(raw)
+    # 기본값 보장
+    if "series_name" not in data:
+        data["series_name"] = series_name or topic[:40]
+    if "parts" not in data:
+        data["parts"] = []
+    return data
+
+
+async def generate_series_plan_async(
+    topic: str,
+    part_count: int,
+    series_name: str,
+    api_key: str,
+    language: str = "ko",
+) -> dict:
+    return await asyncio.to_thread(
+        generate_series_plan, topic, part_count, series_name, api_key, language
+    )
+
+
+def extract_glossary(
+    markdown: str,
+    api_key: str,
+) -> dict[str, str]:
+    """한글 마크다운에서 기술 용어 Korean→English 용어집 추출."""
+    import json
+
+    key = api_key or os.environ.get("GEMINI_API_KEY")
+    if not key:
+        raise ValueError("GEMINI_API_KEY가 설정되지 않았습니다.")
+
+    client = genai.Client(api_key=key)
+    prompt = f"""아래 한글 기술 문서에서 영문 번역 시 일관성이 필요한 핵심 기술 용어를 추출하라.
+
+출력 규칙:
+- 반드시 유효한 JSON 객체 하나만 출력. 코드 블록 없이.
+- 형식: {{"한글 용어": "English Term", ...}}
+- 고유명사, 프레임워크명, 개념어 위주로 20~40개
+- 일반 단어(예: "방법", "결과")는 포함하지 마라
+
+문서:
+{markdown[:8000]}"""
+
+    response = client.models.generate_content(
+        model=TEXT_MODEL,
+        config=types.GenerateContentConfig(
+            max_output_tokens=4096,
+            temperature=0.1,
+            thinking_config=types.ThinkingConfig(thinking_budget=0),
+        ),
+        contents=prompt,
+    )
+    raw = response.text.strip()
+    raw = _strip_markdown_fence(raw)
+    import json
+    try:
+        return json.loads(raw)
+    except Exception:
+        return {}
+
+
+async def extract_glossary_async(
+    markdown: str,
+    api_key: str,
+) -> dict[str, str]:
+    return await asyncio.to_thread(extract_glossary, markdown, api_key)
+
+
+def translate_with_glossary(
+    korean_markdown: str,
+    api_key: str,
+    glossary: dict[str, str] | None = None,
+    series_name_en: str = "",
+    max_retries: int = 3,
+) -> str:
+    """용어집을 참조하여 한글 마크다운을 영문으로 번역."""
+    key = api_key or os.environ.get("GEMINI_API_KEY")
+    if not key:
+        raise ValueError("GEMINI_API_KEY가 설정되지 않았습니다.")
+
+    glossary_section = ""
+    if glossary:
+        lines = [f"- {k} → {v}" for k, v in list(glossary.items())[:60]]
+        glossary_section = "\n\nGlossary (use these translations consistently):\n" + "\n".join(lines)
+    series_section = f"\n\nThis post belongs to the series: \"{series_name_en}\"" if series_name_en.strip() else ""
+
+    client = genai.Client(api_key=key)
+    prompt = f"""Translate the following Korean blog post markdown to English.
+
+Rules:
+- Keep ALL frontmatter YAML fields (---, title, date, slug, categories, tags, draft, series, series_order, etc.)
+- Translate the title to English
+- Keep the slug as-is (do not translate)
+- Keep categories and tags as-is (do not translate)
+- Keep all markdown formatting, headings, code blocks, links, image paths exactly as-is
+- Translate only the Korean text content to natural, professional English
+- Do not add or remove any sections
+- Do not wrap output in code fences
+- Output the complete translated markdown directly{series_section}{glossary_section}
+
+Korean markdown:
+{korean_markdown}"""
+
+    last_err: Exception | None = None
+    for attempt in range(1, max_retries + 1):
+        try:
+            response = client.models.generate_content(
+                model=TEXT_MODEL,
+                config=types.GenerateContentConfig(
+                    max_output_tokens=65536,
+                    temperature=0.3,
+                    thinking_config=types.ThinkingConfig(thinking_budget=0),
+                ),
+                contents=prompt,
+            )
+            text = response.text.strip()
+            text = _strip_markdown_fence(text)
+            return text
+        except Exception as e:
+            last_err = e
+            if attempt < max_retries:
+                time.sleep(2**attempt)
+            else:
+                raise RuntimeError(f"영문 번역 실패 ({max_retries}회): {last_err}") from last_err
+
+
+async def translate_series_to_english(
+    markdowns: list[str],
+    api_key: str,
+    series_name_en: str = "",
+    glossary: dict[str, str] | None = None,
+) -> dict:
+    """시리즈 마크다운 목록을 공유 용어집으로 일괄 번역.
+
+    Returns:
+        {"glossary": {...}, "translations": ["...", "..."]}
+    """
+    if not markdowns:
+        return {"glossary": {}, "translations": []}
+
+    # 용어집이 없으면 첫 번째 파트에서 추출
+    if not glossary and markdowns:
+        glossary = await extract_glossary_async(markdowns[0], api_key)
+
+    # 각 파트를 순차 번역 (용어집 공유)
+    translations = []
+    for md in markdowns:
+        translated = await asyncio.to_thread(
+            translate_with_glossary, md, api_key, glossary, series_name_en
+        )
+        translations.append(translated)
+
+    return {"glossary": glossary or {}, "translations": translations}

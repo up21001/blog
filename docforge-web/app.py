@@ -25,13 +25,20 @@ from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field
 
+from services import codebase_parser
 from services import doc_parser
 from services import image_gen
 from services import svg_gen
 from services import text_gen
 from services import web_import
 from services.image_gen import AVAILABLE_MODELS, MODEL_PRIORITY, IMAGE_PRESETS
-from services.text_gen import excerpt_limit_for_tier, generate_svg_specs_async, translate_to_english_async
+from services.text_gen import (
+    excerpt_limit_for_tier,
+    generate_series_plan_async,
+    generate_svg_specs_async,
+    translate_series_to_english,
+    translate_to_english_async,
+)
 from services.markdown_images import inject_images_into_markdown, strip_placeholder_images
 from services.prompt_config import get_builtin_defaults, get_for_api, reset_to_defaults, save_prompts
 from services.publish import (
@@ -75,6 +82,10 @@ class GenerateBody(BaseModel):
     reference_file_b64: str | None = Field(None, max_length=10_000_000, description="참고 양식 파일 base64")
     reference_file_name: str | None = Field(None, max_length=200, description="참고 양식 파일명")
     reference_url: str | None = Field(None, max_length=2000, description="참고할 웹 페이지 URL")
+    codebase_path: str = Field("", max_length=1000, description="코드베이스 디렉터리 경로")
+    series_name: str = Field("", max_length=200, description="시리즈 이름 (있으면 프론트매터에 주입)")
+    series_order: int = Field(0, ge=0, description="시리즈 내 순서 (0=단독 포스트)")
+    series_slug: str = Field("", max_length=200, description="시리즈 슬러그")
 
 
 class ImageSaveItem(BaseModel):
@@ -557,8 +568,9 @@ async def generate_single_image(body: SingleImageBody):
 
 class SvgBody(BaseModel):
     description: str = Field(..., min_length=1, max_length=2000)
-    svg_type: str = Field("architecture", pattern="^(architecture|infographic|icon)$")
+    svg_type: str = Field("architecture", pattern="^(architecture|infographic|icon|data_structure|timing|class_diagram|pipeline|flowchart|comparison|hierarchy)$")
     style: str = Field("modern", pattern="^(modern|minimal|colorful|dark)$")
+    language: str = Field("ko", pattern="^(ko|en)$")
 
 
 @app.post("/api/generate-svg")
@@ -568,7 +580,7 @@ async def generate_svg(body: SvgBody):
         raise HTTPException(503, "GEMINI_API_KEY가 설정되지 않았습니다.")
     try:
         svg_code = await svg_gen.generate_svg_async(
-            key, body.description, body.svg_type, body.style
+            key, body.description, body.svg_type, body.style, language=body.language
         )
     except Exception as e:
         logger.exception("SVG 생성 실패")
@@ -609,6 +621,12 @@ async def generate(body: GenerateBody):
             )
         except Exception as e:
             logger.warning("참고 URL 가져오기 실패: %s", e)
+    if body.codebase_path:
+        try:
+            codebase_text = codebase_parser.parse_codebase(body.codebase_path)
+            ref_doc = (codebase_text + "\n\n---\n\n" + ref_doc) if ref_doc else codebase_text
+        except Exception as e:
+            logger.warning("코드베이스 파싱 실패: %s", e)
 
     # 프리셋 → 텍스트 모델 매핑
     preset_text_model = {
@@ -625,6 +643,9 @@ async def generate(body: GenerateBody):
             topic, body.template, key, length_tier=body.length,
             text_model=text_model,
             reference_doc=ref_doc,
+            series_name=body.series_name,
+            series_order=body.series_order,
+            series_slug=body.series_slug,
         )
     except Exception as e:
         logger.exception("텍스트 생성 실패")
@@ -738,6 +759,53 @@ async def generate(body: GenerateBody):
             "svg_count": len(svgs_out),
         },
     }
+
+
+class SeriesPlanBody(BaseModel):
+    topic: str = Field(..., min_length=1, max_length=24000)
+    part_count: int = Field(5, ge=2, le=12)
+    series_name: str = Field("", max_length=200)
+    language: str = Field("ko", pattern="^(ko|en)$")
+
+
+@app.post("/api/plan-series")
+async def api_plan_series(body: SeriesPlanBody):
+    """주제로 시리즈 기획안 생성."""
+    key = _api_key()
+    if not key:
+        raise HTTPException(503, "GEMINI_API_KEY가 설정되지 않았습니다.")
+    try:
+        plan = await generate_series_plan_async(
+            body.topic, body.part_count, body.series_name, key, body.language
+        )
+    except Exception as e:
+        logger.exception("시리즈 기획 생성 실패")
+        raise HTTPException(500, str(e)) from e
+    return {"ok": True, "plan": plan}
+
+
+class TranslateSeriesBody(BaseModel):
+    markdowns: list[str] = Field(..., min_length=1)
+    series_name_en: str = Field("", max_length=200)
+    glossary: dict[str, str] = Field(default_factory=dict)
+
+
+@app.post("/api/translate-series")
+async def api_translate_series(body: TranslateSeriesBody):
+    """시리즈 마크다운을 공유 용어집으로 일괄 영문 번역."""
+    key = _api_key()
+    if not key:
+        raise HTTPException(503, "GEMINI_API_KEY가 설정되지 않았습니다.")
+    if not body.markdowns:
+        raise HTTPException(400, "번역할 마크다운이 없습니다.")
+    try:
+        result = await translate_series_to_english(
+            body.markdowns, key, body.series_name_en, body.glossary or None
+        )
+    except Exception as e:
+        logger.exception("시리즈 번역 실패")
+        raise HTTPException(500, str(e)) from e
+    return {"ok": True, **result}
 
 
 def _slug_from_topic(topic: str) -> str:

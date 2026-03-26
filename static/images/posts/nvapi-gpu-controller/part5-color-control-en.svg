@@ -1,0 +1,133 @@
+<svg viewBox="0 0 800 560" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-opacity="0.18"/>
+    </filter>
+    <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#555"/>
+    </marker>
+    <marker id="arr-green" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#50C878"/>
+    </marker>
+    <marker id="arr-red" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#FF6B6B"/>
+    </marker>
+    <marker id="arr-blue" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#4A90D9"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="560" fill="#f8f9fa"/>
+
+  <!-- Title -->
+  <rect x="0" y="0" width="800" height="50" fill="#2d3436"/>
+  <text x="400" y="32" fill="white" font-size="17" font-weight="bold" text-anchor="middle">Color Control Pipeline (NvColorControl Multi-Version Fallback)</text>
+
+  <!-- Entry point -->
+  <rect x="280" y="70" width="240" height="50" rx="10" fill="#4A90D9" filter="url(#shadow)"/>
+  <text x="400" y="91" fill="white" font-size="13" font-weight="bold" text-anchor="middle">SetColorControl()</text>
+  <text x="400" y="109" fill="#d0e8ff" font-size="10" text-anchor="middle">depth, format, range parameters</text>
+
+  <!-- V5 box -->
+  <rect x="100" y="160" width="200" height="90" rx="10" fill="white" stroke="#50C878" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="100" y="160" width="200" height="30" rx="10" fill="#50C878"/>
+  <rect x="100" y="178" width="200" height="12" fill="#50C878"/>
+  <text x="200" y="180" fill="white" font-size="12" font-weight="bold" text-anchor="middle">V5 Attempt (16 bytes)</text>
+  <text x="200" y="205" fill="#333" font-size="10" text-anchor="middle">Version: size|(5&lt;&lt;16)</text>
+  <text x="200" y="219" fill="#333" font-size="10" text-anchor="middle">Includes ColorSpaceId field</text>
+  <text x="200" y="233" fill="#555" font-size="9" text-anchor="middle">Latest drivers (530+)</text>
+
+  <!-- V3 box -->
+  <rect x="340" y="160" width="200" height="90" rx="10" fill="white" stroke="#FFD93D" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="340" y="160" width="200" height="30" rx="10" fill="#FFD93D"/>
+  <rect x="340" y="178" width="200" height="12" fill="#FFD93D"/>
+  <text x="440" y="180" fill="#333" font-size="12" font-weight="bold" text-anchor="middle">V3 Attempt (12 bytes)</text>
+  <text x="440" y="205" fill="#333" font-size="10" text-anchor="middle">Version: size|(3&lt;&lt;16)</text>
+  <text x="440" y="219" fill="#333" font-size="10" text-anchor="middle">Includes Colorimetry field</text>
+  <text x="440" y="233" fill="#555" font-size="9" text-anchor="middle">Intermediate driver support</text>
+
+  <!-- V1 box -->
+  <rect x="580" y="160" width="180" height="90" rx="10" fill="white" stroke="#FF6B6B" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="580" y="160" width="180" height="30" rx="10" fill="#FF6B6B"/>
+  <rect x="580" y="178" width="180" height="12" fill="#FF6B6B"/>
+  <text x="670" y="180" fill="white" font-size="12" font-weight="bold" text-anchor="middle">V1 Attempt (12 bytes)</text>
+  <text x="670" y="205" fill="#333" font-size="10" text-anchor="middle">Version: size|(1&lt;&lt;16)</text>
+  <text x="670" y="219" fill="#333" font-size="10" text-anchor="middle">Basic fields only</text>
+  <text x="670" y="233" fill="#555" font-size="9" text-anchor="middle">Legacy driver compatible</text>
+
+  <!-- Entry to V5 arrow -->
+  <line x1="370" y1="120" x2="230" y2="158" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+  <!-- Entry to V3 arrow -->
+  <line x1="400" y1="120" x2="420" y2="158" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+  <!-- Entry to V1 arrow (via V3 fail) -->
+  <line x1="430" y1="120" x2="650" y2="158" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- V5 OK -->
+  <line x1="200" y1="250" x2="200" y2="290" stroke="#50C878" stroke-width="2" marker-end="url(#arr-green)"/>
+  <rect x="130" y="253" width="50" height="18" rx="4" fill="#50C878" opacity="0.15"/>
+  <text x="155" y="265" fill="#27ae60" font-size="10" text-anchor="middle">OK</text>
+
+  <!-- V5 fail → V3 -->
+  <line x1="300" y1="205" x2="338" y2="205" stroke="#FF6B6B" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arr-red)"/>
+  <text x="319" y="199" fill="#c0392b" font-size="9" text-anchor="middle">Fail</text>
+
+  <!-- V3 OK -->
+  <line x1="440" y1="250" x2="440" y2="290" stroke="#50C878" stroke-width="2" marker-end="url(#arr-green)"/>
+  <rect x="370" y="253" width="50" height="18" rx="4" fill="#50C878" opacity="0.15"/>
+  <text x="395" y="265" fill="#27ae60" font-size="10" text-anchor="middle">OK</text>
+
+  <!-- V3 fail → V1 -->
+  <line x1="540" y1="205" x2="578" y2="205" stroke="#FF6B6B" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arr-red)"/>
+  <text x="559" y="199" fill="#c0392b" font-size="9" text-anchor="middle">Fail</text>
+
+  <!-- V1 OK -->
+  <line x1="670" y1="250" x2="670" y2="290" stroke="#50C878" stroke-width="2" marker-end="url(#arr-green)"/>
+  <rect x="600" y="253" width="50" height="18" rx="4" fill="#50C878" opacity="0.15"/>
+  <text x="625" y="265" fill="#27ae60" font-size="10" text-anchor="middle">OK</text>
+
+  <!-- Success result box -->
+  <rect x="130" y="290" width="120" height="35" rx="8" fill="#50C878" filter="url(#shadow)"/>
+  <text x="190" y="312" fill="white" font-size="11" font-weight="bold" text-anchor="middle">Color Applied</text>
+
+  <rect x="370" y="290" width="120" height="35" rx="8" fill="#50C878" filter="url(#shadow)"/>
+  <text x="430" y="312" fill="white" font-size="11" font-weight="bold" text-anchor="middle">Color Applied</text>
+
+  <rect x="600" y="290" width="120" height="35" rx="8" fill="#50C878" filter="url(#shadow)"/>
+  <text x="660" y="312" fill="white" font-size="11" font-weight="bold" text-anchor="middle">Color Applied</text>
+
+  <!-- Color options section -->
+  <rect x="40" y="355" width="220" height="175" rx="10" fill="white" stroke="#4A90D9" stroke-width="1.5" filter="url(#shadow)"/>
+  <rect x="40" y="355" width="220" height="34" rx="10" fill="#4A90D9"/>
+  <rect x="40" y="375" width="220" height="14" fill="#4A90D9"/>
+  <text x="150" y="377" fill="white" font-size="12" font-weight="bold" text-anchor="middle">NvColorDepth (Bit Depth)</text>
+  <text x="60" y="407" fill="#555" font-size="11">Default = 0  (driver auto)</text>
+  <text x="60" y="423" fill="#555" font-size="11">Bpc6   = 1  (6 bpc)</text>
+  <text x="60" y="439" fill="#555" font-size="11">Bpc8   = 2  (8 bpc)</text>
+  <text x="60" y="455" fill="#555" font-size="11">Bpc10  = 3  (10 bpc)</text>
+  <text x="60" y="471" fill="#555" font-size="11">Bpc12  = 4  (12 bpc)</text>
+  <text x="60" y="487" fill="#555" font-size="11">Bpc16  = 5  (16 bpc)</text>
+  <text x="60" y="510" fill="#4A90D9" font-size="10">For HDR: Bpc10 or higher recommended</text>
+
+  <rect x="290" y="355" width="220" height="175" rx="10" fill="white" stroke="#6C5CE7" stroke-width="1.5" filter="url(#shadow)"/>
+  <rect x="290" y="355" width="220" height="34" rx="10" fill="#6C5CE7"/>
+  <rect x="290" y="375" width="220" height="14" fill="#6C5CE7"/>
+  <text x="400" y="377" fill="white" font-size="12" font-weight="bold" text-anchor="middle">NvColorFormat (Color Format)</text>
+  <text x="310" y="410" fill="#555" font-size="11">RGB     = 0  (PC monitor default)</text>
+  <text x="310" y="428" fill="#555" font-size="11">YUV422  = 1  (HDMI bandwidth saving)</text>
+  <text x="310" y="446" fill="#555" font-size="11">YUV444  = 2  (TV full chroma)</text>
+  <text x="310" y="464" fill="#555" font-size="11">Default = 3  (driver choice)</text>
+  <text x="310" y="495" fill="#6C5CE7" font-size="10">4K@60Hz HDMI: use YUV422</text>
+  <text x="310" y="509" fill="#6C5CE7" font-size="10">instead of YUV420 for bandwidth</text>
+
+  <rect x="540" y="355" width="220" height="175" rx="10" fill="white" stroke="#FF6B6B" stroke-width="1.5" filter="url(#shadow)"/>
+  <rect x="540" y="355" width="220" height="34" rx="10" fill="#FF6B6B"/>
+  <rect x="540" y="375" width="220" height="14" fill="#FF6B6B"/>
+  <text x="650" y="377" fill="white" font-size="12" font-weight="bold" text-anchor="middle">NvDynamicRange (Dynamic Range)</text>
+  <text x="560" y="410" fill="#555" font-size="11">Auto    = 0  (auto detect)</text>
+  <text x="560" y="428" fill="#555" font-size="11">Limited = 1  (16-235, TV)</text>
+  <text x="560" y="446" fill="#555" font-size="11">Full    = 2  (0-255, PC)</text>
+  <text x="560" y="476" fill="#FF6B6B" font-size="10">TV → Limited</text>
+  <text x="560" y="490" fill="#50C878" font-size="10">PC monitor → Full recommended</text>
+  <text x="560" y="510" fill="#888" font-size="9">HDR10: Limited + Bpc10</text>
+</svg>

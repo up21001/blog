@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480">
+  <defs>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-color="#00000030"/>
+    </filter>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#555"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="480" fill="#f8f9fa" rx="8"/>
+
+  <!-- Title -->
+  <rect x="0" y="0" width="800" height="48" fill="#2d3748" rx="8"/>
+  <rect x="0" y="40" width="800" height="8" fill="#2d3748"/>
+  <text x="400" y="30" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white" text-anchor="middle">Bandwidth Calculation Formula &amp; HDMI / DisplayPort Limits</text>
+
+  <!-- Formula box -->
+  <rect x="40" y="62" width="720" height="72" fill="white" rx="8" stroke="#4A90D9" stroke-width="2" filter="url(#shadow)"/>
+  <text x="400" y="85" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#2d3748" text-anchor="middle">Bandwidth Formula (CalculateBandwidthGbps)</text>
+  <text x="400" y="108" font-family="Arial, sans-serif" font-size="15" fill="#FF6B6B" text-anchor="middle" font-style="italic">Bandwidth (Gbps) = H_Total × V_Total × Refresh × BitsPerPixel ÷ 1,000,000,000</text>
+  <text x="400" y="126" font-family="Arial, sans-serif" font-size="11" fill="#888" text-anchor="middle">* H_Total, V_Total: total pixels/lines including blanking  |  BitsPerPixel: 8bpc RGB = 24, 10bpc = 30</text>
+
+  <!-- Example calculation -->
+  <rect x="40" y="146" width="720" height="56" fill="#FFF8E1" rx="6" stroke="#FFD93D" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="400" y="164" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#856404" text-anchor="middle">Example: 4K 60Hz 8bpc RGB</text>
+  <text x="400" y="182" font-family="Arial, sans-serif" font-size="12" fill="#555" text-anchor="middle">4400 × 2250 × 60 × 24 ÷ 1,000,000,000 = 14.256 Gbps</text>
+  <text x="400" y="197" font-family="Arial, sans-serif" font-size="10" fill="#888" text-anchor="middle">(H_Total=4400, V_Total=2250 for 3840×2160 CVT)</text>
+
+  <!-- Interface limits bars -->
+  <text x="40" y="226" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#2d3748">Maximum Bandwidth by Interface</text>
+
+  <!-- HDMI 1.4 -->
+  <rect x="40" y="238" width="181" height="34" fill="#FF6B6B" rx="5" filter="url(#shadow)"/>
+  <text x="55" y="256" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white">HDMI 1.4</text>
+  <text x="55" y="270" font-family="Arial, sans-serif" font-size="10" fill="white">10.2 Gbps</text>
+  <text x="228" y="259" font-family="Arial, sans-serif" font-size="10" fill="#555">→ Up to 1080p 144Hz or 4K 30Hz (8bpc)</text>
+
+  <!-- HDMI 2.0 -->
+  <rect x="40" y="282" width="295" height="34" fill="#FF6B6B" rx="5" filter="url(#shadow)" opacity="0.85"/>
+  <text x="55" y="300" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white">HDMI 2.0</text>
+  <text x="55" y="314" font-family="Arial, sans-serif" font-size="10" fill="white">18 Gbps</text>
+  <text x="342" y="303" font-family="Arial, sans-serif" font-size="10" fill="#555">→ Supports 4K 60Hz (8bpc)</text>
+
+  <!-- HDMI 2.1 -->
+  <rect x="40" y="326" width="491" height="34" fill="#FF6B6B" rx="5" filter="url(#shadow)" opacity="0.7"/>
+  <text x="55" y="344" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white">HDMI 2.1</text>
+  <text x="55" y="358" font-family="Arial, sans-serif" font-size="10" fill="white">48 Gbps</text>
+  <text x="538" y="347" font-family="Arial, sans-serif" font-size="10" fill="#555">→ 8K 60Hz, 4K 144Hz</text>
+
+  <!-- DP 1.4 -->
+  <rect x="40" y="370" width="320" height="34" fill="#4A90D9" rx="5" filter="url(#shadow)"/>
+  <text x="55" y="388" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white">DisplayPort 1.4</text>
+  <text x="55" y="402" font-family="Arial, sans-serif" font-size="10" fill="white">32.4 Gbps (DSC)</text>
+  <text x="367" y="391" font-family="Arial, sans-serif" font-size="10" fill="#555">→ 4K 120Hz, 8K 30Hz (with DSC)</text>
+
+  <!-- DP 2.0 -->
+  <rect x="40" y="414" width="680" height="34" fill="#4A90D9" rx="5" filter="url(#shadow)" opacity="0.85"/>
+  <text x="55" y="432" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white">DisplayPort 2.0</text>
+  <text x="55" y="446" font-family="Arial, sans-serif" font-size="10" fill="white">80 Gbps</text>
+  <text x="727" y="435" font-family="Arial, sans-serif" font-size="10" fill="#555">→ 16K</text>
+
+  <!-- Scale line -->
+  <line x1="40" y1="460" x2="760" y2="460" stroke="#ccc" stroke-width="1.5"/>
+  <text x="40" y="473" font-family="Arial, sans-serif" font-size="9" fill="#aaa" text-anchor="middle">0</text>
+  <text x="222" y="473" font-family="Arial, sans-serif" font-size="9" fill="#aaa" text-anchor="middle">~10 Gbps</text>
+  <text x="400" y="473" font-family="Arial, sans-serif" font-size="9" fill="#aaa" text-anchor="middle">~20 Gbps</text>
+  <text x="580" y="473" font-family="Arial, sans-serif" font-size="9" fill="#aaa" text-anchor="middle">~40 Gbps</text>
+  <text x="760" y="473" font-family="Arial, sans-serif" font-size="9" fill="#aaa" text-anchor="middle">80 Gbps</text>
+</svg>

@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560">
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-color="#00000030"/>
+    </filter>
+    <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#555"/>
+    </marker>
+    <marker id="arr-green" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#50C878"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="560" fill="#f8f9fa"/>
+
+  <!-- Title -->
+  <text x="400" y="36" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#2d3436" text-anchor="middle">핵심 데이터 클래스 관계도</text>
+
+  <!-- GpuInfoData -->
+  <rect x="40" y="60" width="230" height="300" rx="8" fill="#4A90D9" filter="url(#shadow)"/>
+  <rect x="40" y="60" width="230" height="36" rx="8" fill="#2d7abf"/>
+  <rect x="40" y="88" width="230" height="8" fill="#2d7abf"/>
+  <text x="155" y="84" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white" text-anchor="middle">GpuInfoData</text>
+  <text x="55" y="116" font-family="Arial, sans-serif" font-size="11" fill="#d0e8ff">int Index</text>
+  <text x="55" y="134" font-family="Arial, sans-serif" font-size="11" fill="#d0e8ff">NvPhysicalGpuHandle Handle</text>
+  <text x="55" y="152" font-family="Arial, sans-serif" font-size="11" fill="white" font-weight="bold">string Name</text>
+  <text x="55" y="170" font-family="Arial, sans-serif" font-size="11" fill="white" font-weight="bold">uint VramSizeKB</text>
+  <text x="55" y="188" font-family="Arial, sans-serif" font-size="11" fill="white" font-weight="bold">string VbiosVersion</text>
+  <text x="55" y="206" font-family="Arial, sans-serif" font-size="11" fill="white" font-weight="bold">int Temperature</text>
+  <text x="55" y="224" font-family="Arial, sans-serif" font-size="11" fill="white" font-weight="bold">uint GraphicsClockMHz</text>
+  <text x="55" y="242" font-family="Arial, sans-serif" font-size="11" fill="white" font-weight="bold">uint MemoryClockMHz</text>
+  <text x="55" y="260" font-family="Arial, sans-serif" font-size="11" fill="white" font-weight="bold">uint BoostClockMHz</text>
+  <text x="55" y="278" font-family="Arial, sans-serif" font-size="11" fill="#d0e8ff">uint BusId</text>
+  <text x="55" y="296" font-family="Arial, sans-serif" font-size="11" fill="#d0e8ff">NvGpuBusType BusType</text>
+  <text x="55" y="314" font-family="Arial, sans-serif" font-size="11" fill="#d0e8ff">NvGpuType GpuType</text>
+  <!-- Computed properties -->
+  <line x1="48" y1="326" x2="262" y2="326" stroke="#2d7abf" stroke-width="1" stroke-dasharray="4,2"/>
+  <text x="55" y="342" font-family="Arial, sans-serif" font-size="10" fill="#a0c8f0" font-style="italic">→ VramSizeMB (계산됨)</text>
+  <text x="55" y="356" font-family="Arial, sans-serif" font-size="10" fill="#a0c8f0" font-style="italic">→ VramSizeGB (계산됨)</text>
+
+  <!-- DisplayInfo -->
+  <rect x="290" y="60" width="230" height="340" rx="8" fill="#50C878" filter="url(#shadow)"/>
+  <rect x="290" y="60" width="230" height="36" rx="8" fill="#3aad62"/>
+  <rect x="290" y="88" width="230" height="8" fill="#3aad62"/>
+  <text x="405" y="84" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white" text-anchor="middle">DisplayInfo</text>
+  <text x="305" y="116" font-family="Arial, sans-serif" font-size="11" fill="#d0ffe0">int Index</text>
+  <text x="305" y="134" font-family="Arial, sans-serif" font-size="11" fill="#d0ffe0">NvDisplayHandle Handle</text>
+  <text x="305" y="152" font-family="Arial, sans-serif" font-size="11" fill="white" font-weight="bold">string DeviceName</text>
+  <text x="305" y="170" font-family="Arial, sans-serif" font-size="11" fill="white" font-weight="bold">string MonitorName</text>
+  <text x="305" y="188" font-family="Arial, sans-serif" font-size="11" fill="white" font-weight="bold">uint OutputId</text>
+  <text x="305" y="206" font-family="Arial, sans-serif" font-size="11" fill="white" font-weight="bold">uint DisplayId</text>
+  <text x="305" y="224" font-family="Arial, sans-serif" font-size="11" fill="#d0ffe0">NvPhysicalGpuHandle GpuHandle</text>
+  <text x="305" y="242" font-family="Arial, sans-serif" font-size="11" fill="#d0ffe0">string GpuName</text>
+  <text x="305" y="260" font-family="Arial, sans-serif" font-size="11" fill="white" font-weight="bold">int CurrentWidth</text>
+  <text x="305" y="278" font-family="Arial, sans-serif" font-size="11" fill="white" font-weight="bold">int CurrentHeight</text>
+  <text x="305" y="296" font-family="Arial, sans-serif" font-size="11" fill="white" font-weight="bold">int CurrentRefreshRate</text>
+  <text x="305" y="314" font-family="Arial, sans-serif" font-size="11" fill="white" font-weight="bold">int CurrentBitsPerPixel</text>
+  <!-- Computed properties -->
+  <line x1="298" y1="326" x2="512" y2="326" stroke="#3aad62" stroke-width="1" stroke-dasharray="4,2"/>
+  <text x="305" y="342" font-family="Arial, sans-serif" font-size="10" fill="#90dfa8" font-style="italic">→ Name (계산됨)</text>
+  <text x="305" y="358" font-family="Arial, sans-serif" font-size="10" fill="#90dfa8" font-style="italic">→ CurrentResolution (계산됨)</text>
+  <text x="305" y="374" font-family="Arial, sans-serif" font-size="9" fill="#b0f0c0" font-style="italic">  예: "1920x1080 @ 144Hz"</text>
+
+  <!-- DriverInfo -->
+  <rect x="540" y="60" width="220" height="180" rx="8" fill="#FFD93D" filter="url(#shadow)"/>
+  <rect x="540" y="60" width="220" height="36" rx="8" fill="#e6c200"/>
+  <rect x="540" y="88" width="220" height="8" fill="#e6c200"/>
+  <text x="650" y="84" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#333" text-anchor="middle">DriverInfo</text>
+  <text x="556" y="116" font-family="Arial, sans-serif" font-size="11" fill="#333" font-weight="bold">uint DriverVersion</text>
+  <text x="556" y="134" font-family="Arial, sans-serif" font-size="11" fill="#333" font-weight="bold">string Branch</text>
+  <line x1="548" y1="146" x2="752" y2="146" stroke="#e6c200" stroke-width="1" stroke-dasharray="4,2"/>
+  <text x="556" y="164" font-family="Arial, sans-serif" font-size="10" fill="#665900" font-style="italic">→ VersionString (계산됨)</text>
+  <text x="556" y="180" font-family="Arial, sans-serif" font-size="9" fill="#887700" font-style="italic">  예: "572.83"</text>
+  <text x="556" y="200" font-family="Arial, sans-serif" font-size="10" fill="#555">SYS_GetDriverAndBranchVersion()</text>
+  <text x="556" y="216" font-family="Arial, sans-serif" font-size="10" fill="#555">으로 채워짐</text>
+  <text x="556" y="234" font-family="Arial, sans-serif" font-size="9" fill="#777">NvDisplay.GetDriverInfo() 반환</text>
+
+  <!-- NvGpuInfo static class -->
+  <rect x="40" y="420" width="230" height="60" rx="8" fill="#2d3436" filter="url(#shadow)"/>
+  <text x="155" y="443" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white" text-anchor="middle">NvGpuInfo (static)</text>
+  <text x="155" y="463" font-family="Arial, sans-serif" font-size="10" fill="#adb5bd" text-anchor="middle">EnumerateGPUs() → List&lt;GpuInfoData&gt;</text>
+  <text x="155" y="477" font-family="Arial, sans-serif" font-size="9" fill="#6c757d" text-anchor="middle">NvGpuInfo.cs</text>
+
+  <!-- NvDisplay static class -->
+  <rect x="290" y="460" width="230" height="60" rx="8" fill="#2d3436" filter="url(#shadow)"/>
+  <text x="405" y="483" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white" text-anchor="middle">NvDisplay (static)</text>
+  <text x="405" y="501" font-family="Arial, sans-serif" font-size="10" fill="#adb5bd" text-anchor="middle">EnumerateDisplays() / GetDriverInfo()</text>
+  <text x="405" y="515" font-family="Arial, sans-serif" font-size="9" fill="#6c757d" text-anchor="middle">NvDisplay.cs</text>
+
+  <!-- Arrows: static class -> data class -->
+  <line x1="155" y1="420" x2="155" y2="368" stroke="#4A90D9" stroke-width="1.5" marker-end="url(#arr)"/>
+  <line x1="405" y1="460" x2="405" y2="402" stroke="#50C878" stroke-width="1.5" marker-end="url(#arr-green)"/>
+
+  <!-- GpuHandle shared -->
+  <line x1="270" y1="224" x2="290" y2="224" stroke="#aaa" stroke-width="1.2" stroke-dasharray="3,2"/>
+  <text x="280" y="218" font-family="Arial, sans-serif" font-size="9" fill="#888" text-anchor="middle">공유</text>
+
+  <!-- DriverInfo arrow from NvDisplay -->
+  <line x1="520" y1="488" x2="540" y2="150" stroke="#FFD93D" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arr)"/>
+</svg>

@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 660">
+  <defs>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-color="#00000033"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
+    </marker>
+    <marker id="arrow-red" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#FF6B6B"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="660" fill="#f8f9fa"/>
+
+  <!-- Title -->
+  <text x="400" y="36" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#2d3436">NVAPI Initialization Sequence</text>
+
+  <!-- Step boxes: left column (main flow) -->
+
+  <!-- Step 1 -->
+  <rect x="60" y="60" width="480" height="60" rx="8" ry="8" fill="#4A90D9" filter="url(#shadow)"/>
+  <text x="70" y="84" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#fff">① Application Start (Program.Main)</text>
+  <text x="70" y="106" font-family="Arial, sans-serif" font-size="12" fill="#d0e8ff">Application.Run(new UI.MainForm())</text>
+
+  <line x1="300" y1="121" x2="300" y2="145" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Step 2 -->
+  <rect x="60" y="147" width="480" height="60" rx="8" ry="8" fill="#4A90D9" filter="url(#shadow)"/>
+  <text x="70" y="171" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#fff">② DLL Load Attempt (DllImport)</text>
+  <text x="70" y="193" font-family="Arial, sans-serif" font-size="12" fill="#d0e8ff">IntPtr.Size == 8 → nvapi64.dll, otherwise → nvapi.dll</text>
+
+  <line x1="300" y1="208" x2="300" y2="232" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Step 3 -->
+  <rect x="60" y="234" width="480" height="60" rx="8" ry="8" fill="#50C878" filter="url(#shadow)"/>
+  <text x="70" y="258" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#fff">③ QueryInterface(ID_Initialize = 0x0150E828)</text>
+  <text x="70" y="280" font-family="Arial, sans-serif" font-size="12" fill="#e0fff0">nvapi_QueryInterface(id) → returns Function Pointer (IntPtr)</text>
+
+  <!-- DLL not found branch -->
+  <line x1="541" y1="264" x2="620" y2="264" stroke="#FF6B6B" stroke-width="2" marker-end="url(#arrow-red)"/>
+  <rect x="622" y="234" width="138" height="60" rx="8" ry="8" fill="#FF6B6B" filter="url(#shadow)"/>
+  <text x="691" y="260" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#fff">DllNotFoundException</text>
+  <text x="691" y="280" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#ffe0e0">Driver Not Installed</text>
+
+  <line x1="300" y1="295" x2="300" y2="319" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Step 4 -->
+  <rect x="60" y="321" width="480" height="60" rx="8" ry="8" fill="#50C878" filter="url(#shadow)"/>
+  <text x="70" y="345" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#fff">④ Marshal.GetDelegateForFunctionPointer</text>
+  <text x="70" y="367" font-family="Arial, sans-serif" font-size="12" fill="#e0fff0">IntPtr → Cast to NvAPI_Initialize_t Delegate</text>
+
+  <!-- ptr == Zero branch -->
+  <line x1="541" y1="351" x2="620" y2="351" stroke="#FF6B6B" stroke-width="2" marker-end="url(#arrow-red)"/>
+  <rect x="622" y="321" width="138" height="60" rx="8" ry="8" fill="#FF6B6B" filter="url(#shadow)"/>
+  <text x="691" y="347" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#fff">ptr == IntPtr.Zero</text>
+  <text x="691" y="367" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#ffe0e0">Returns LibraryNotFound</text>
+
+  <line x1="300" y1="382" x2="300" y2="406" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Step 5 -->
+  <rect x="60" y="408" width="480" height="60" rx="8" ry="8" fill="#6C5CE7" filter="url(#shadow)"/>
+  <text x="70" y="432" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#fff">⑤ _Initialize() Call → Returns NvStatus</text>
+  <text x="70" y="454" font-family="Arial, sans-serif" font-size="12" fill="#e0d8ff">Logger.NvApiCall("NvAPI_Initialize", status)</text>
+
+  <!-- status != OK branch -->
+  <line x1="541" y1="438" x2="620" y2="438" stroke="#FF6B6B" stroke-width="2" marker-end="url(#arrow-red)"/>
+  <rect x="622" y="408" width="138" height="60" rx="8" ry="8" fill="#FF6B6B" filter="url(#shadow)"/>
+  <text x="691" y="434" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#fff">status != OK</text>
+  <text x="691" y="454" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#ffe0e0">Returns Error Code</text>
+
+  <line x1="300" y1="469" x2="300" y2="493" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Step 6 -->
+  <rect x="60" y="495" width="480" height="60" rx="8" ry="8" fill="#FFD93D" filter="url(#shadow)"/>
+  <text x="70" y="519" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#2d3436">⑥ LoadDelegates() — Bulk Load Remaining Function Pointers</text>
+  <text x="70" y="541" font-family="Arial, sans-serif" font-size="12" fill="#555">EnumPhysicalGPUs, GPU_GetFullName, GPU_GetEDID ... 21 total</text>
+
+  <line x1="300" y1="556" x2="300" y2="580" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Step 7 -->
+  <rect x="60" y="582" width="480" height="54" rx="8" ry="8" fill="#50C878" filter="url(#shadow)"/>
+  <text x="70" y="606" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#fff">⑦ _initialized = true → NVAPI Ready</text>
+  <text x="70" y="626" font-family="Arial, sans-serif" font-size="12" fill="#e0fff0">Logger.Info("NVAPI: All delegates loaded")</text>
+</svg>

@@ -466,6 +466,7 @@
           description: svg.description || "diagram",
           svg_type: svg.type || "architecture",
           style: svg.style || "modern",
+          language: svg.language || ($("addSvgLang") ? $("addSvgLang").value : "ko"),
         }),
       });
       const j = await r.json();
@@ -545,6 +546,7 @@
           description: desc,
           svg_type: $("addSvgType").value,
           style: $("addSvgStyle").value,
+          language: $("addSvgLang") ? $("addSvgLang").value : "ko",
         }),
       });
       const j = await r.json();
@@ -666,6 +668,23 @@
       }
     }
 
+    // 코드베이스 경로 읽기 및 기본 검증
+    const codebasePathEl = $("codebasePath");
+    const codebase_path = (codebasePathEl && codebasePathEl.value.trim()) || "";
+    if (codebase_path) {
+      const statusEl = $("codebasePathStatus");
+      // 보안 경고: 민감 경로 패턴 체크 (로컬 도구이므로 경고만)
+      const suspiciousPaths = ["/etc", "/sys", "/proc", "C:\\Windows", "C:\\Program Files"];
+      const looksRisky = suspiciousPaths.some(p => codebase_path.startsWith(p));
+      if (looksRisky && statusEl) {
+        statusEl.textContent = "⚠ 시스템 경로가 포함될 수 있습니다.";
+        statusEl.className = "codebase-path-status warn";
+      } else if (statusEl) {
+        statusEl.textContent = "";
+        statusEl.className = "codebase-path-status";
+      }
+    }
+
     lastGenerateParams = { topic, template, with_images, max_images: with_images ? max_images : 0, with_svg, max_svg: with_svg ? max_svg : 0, length, image_hints, with_english, model_preset };
 
     try {
@@ -679,6 +698,7 @@
           length, image_hints, with_english, model_preset,
           reference_doc, reference_file_b64, reference_file_name,
           reference_url: ($("referenceUrl") && $("referenceUrl").value.trim()) || null,
+          codebase_path: codebase_path || "",
         }),
       });
       const j = await r.json();
@@ -1292,6 +1312,173 @@
     }
     $("btnServerRestart").disabled = false;
     $("btnServerRestart").textContent = "재시작";
+  });
+
+  // ════════════════════════════════════════════
+  // ── 시리즈 기획 (Series Planning) ──
+  // ════════════════════════════════════════════
+  let currentSeriesPlan = null;   // { series_name, parts: [...] }
+  let currentGlossary = {};       // { "한글": "English", ... }
+  // parts 별 번역 결과 캐시: index → translated markdown
+  const partTranslations = {};
+
+  function renderSeriesPlan(plan) {
+    currentSeriesPlan = plan;
+    $("seriesPlanName").textContent = plan.series_name || "시리즈";
+    const list = $("seriesPartsList");
+    list.innerHTML = "";
+    (plan.parts || []).forEach((part, idx) => {
+      const card = document.createElement("div");
+      card.className = "series-part-card";
+      card.id = `seriesPartCard-${idx}`;
+      const svgHints = (part.suggested_svgs || []).map(s => escapeHtml(s)).join(", ");
+      card.innerHTML = `
+        <div class="series-part-card-header">
+          <span class="series-part-order">파트 ${part.order || idx + 1}</span>
+          <span class="series-part-title">${escapeHtml(part.title || "")}</span>
+        </div>
+        <div class="series-part-slug"><code>${escapeHtml(part.slug || "")}</code></div>
+        <div class="series-part-desc">${escapeHtml(part.description || "")}</div>
+        <div class="series-part-scope">✔ ${escapeHtml(part.scope || "")}</div>
+        ${svgHints ? `<div class="series-part-svgs">SVG 제안: ${svgHints}</div>` : ""}
+        <div class="series-part-actions">
+          <button type="button" class="btn btn-sm btn-use-part" data-idx="${idx}">이 파트로 생성</button>
+        </div>
+        <div class="series-part-translated" id="partTranslated-${idx}" hidden></div>`;
+      list.appendChild(card);
+    });
+
+    // "이 파트로 생성" 버튼 이벤트
+    list.querySelectorAll(".btn-use-part").forEach(btn => {
+      btn.addEventListener("click", () => {
+        const idx = parseInt(btn.dataset.idx, 10);
+        const part = plan.parts[idx];
+        if (!part) return;
+        // 메인 폼에 파트 정보 채우기
+        const topicEl = $("topic");
+        if (topicEl) {
+          topicEl.value = `[${plan.series_name}] 파트 ${part.order || idx + 1}: ${part.title}\n\n${part.description || ""}\n\n범위: ${part.scope || ""}`;
+        }
+        // 스크롤 to 메인 폼
+        $("form") && $("form").scrollIntoView({ behavior: "smooth" });
+        // 상태 표시
+        $("seriesPlanStatus").textContent = `파트 ${part.order || idx + 1} 정보를 주제 칸에 넣었습니다.`;
+      });
+    });
+
+    $("seriesPlanResult").hidden = false;
+  }
+
+  // 기획 생성 버튼
+  $("btnPlanSeries").addEventListener("click", async () => {
+    const topic = ($("seriesTopic") && $("seriesTopic").value.trim()) || "";
+    if (!topic) { alert("시리즈 주제를 입력해 주세요."); return; }
+    const partCount = parseInt(($("seriesPartCount") && $("seriesPartCount").value) || "5", 10);
+    const seriesName = ($("seriesNameHint") && $("seriesNameHint").value.trim()) || "";
+
+    $("btnPlanSeries").disabled = true;
+    $("seriesPlanStatus").textContent = "기획 생성 중…";
+    $("seriesPlanResult").hidden = true;
+
+    try {
+      const resp = await fetch(apiUrl("/api/plan-series"), {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ topic, part_count: partCount, series_name: seriesName, language: "ko" }),
+      });
+      const data = await resp.json();
+      if (!resp.ok) throw new Error(data.detail || resp.statusText);
+      renderSeriesPlan(data.plan);
+      $("seriesPlanStatus").textContent = `${(data.plan.parts || []).length}개 파트 기획 완료`;
+      // 용어집 초기화
+      currentGlossary = {};
+      $("glossaryDetails").hidden = true;
+    } catch (e) {
+      $("seriesPlanStatus").textContent = `오류: ${e.message}`;
+    } finally {
+      $("btnPlanSeries").disabled = false;
+    }
+  });
+
+  // 일괄 번역 버튼
+  $("btnTranslateSeries").addEventListener("click", async () => {
+    if (!currentSeriesPlan) return;
+    // parts에서 마크다운 수집 — 파트 카드에 마크다운이 없으면 description을 플레이스홀더로 사용
+    // 실제로는 이미 생성된 파트 마크다운이 있어야 유용하지만,
+    // 여기서는 lastPayload.markdown을 포함해 생성된 글이 있으면 번역 대상에 포함
+    const markdowns = [];
+    const plan = currentSeriesPlan;
+    // 이미 생성된 현재 마크다운을 첫 번째로 포함 (있을 경우)
+    const curMd = getMarkdown();
+    if (curMd && curMd.trim()) {
+      markdowns.push(curMd);
+    } else {
+      // 각 파트의 description을 임시 마크다운으로
+      (plan.parts || []).forEach(p => {
+        markdowns.push(`# ${p.title}\n\n${p.description || ""}\n\n## 범위\n${p.scope || ""}`);
+      });
+    }
+    if (!markdowns.length) {
+      alert("번역할 마크다운이 없습니다. 먼저 파트를 생성해 주세요.");
+      return;
+    }
+
+    $("btnTranslateSeries").disabled = true;
+    $("seriesTranslateStatus").textContent = "번역 중…";
+    $("glossaryDetails").hidden = true;
+
+    try {
+      const resp = await fetch(apiUrl("/api/translate-series"), {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          markdowns,
+          series_name_en: plan.series_name,
+          glossary: currentGlossary && Object.keys(currentGlossary).length ? currentGlossary : {},
+        }),
+      });
+      const data = await resp.json();
+      if (!resp.ok) throw new Error(data.detail || resp.statusText);
+
+      currentGlossary = data.glossary || {};
+      const translations = data.translations || [];
+
+      // 번역 결과를 영문 에디터에 적용 (첫 번째)
+      if (translations[0]) {
+        currentMarkdownEn = translations[0];
+        const langTabs = $("langTabs");
+        if (langTabs) langTabs.hidden = false;
+        // 영문 탭으로 전환
+        switchLang("en");
+      }
+
+      // 각 파트 카드에 번역 완료 표시
+      translations.forEach((tr, idx) => {
+        partTranslations[idx] = tr;
+        const el = $(`partTranslated-${idx}`);
+        if (el) {
+          el.textContent = "번역 완료";
+          el.hidden = false;
+        }
+      });
+
+      // 용어집 표시
+      const glossaryKeys = Object.keys(currentGlossary);
+      if (glossaryKeys.length) {
+        $("glossaryCount").textContent = `(${glossaryKeys.length}개 용어)`;
+        const table = $("glossaryTable");
+        table.innerHTML = glossaryKeys.map(k =>
+          `<span class="g-ko">${escapeHtml(k)}</span><span class="g-en">${escapeHtml(currentGlossary[k])}</span>`
+        ).join("");
+        $("glossaryDetails").hidden = false;
+      }
+
+      $("seriesTranslateStatus").textContent = `번역 완료 (${translations.length}개)`;
+    } catch (e) {
+      $("seriesTranslateStatus").textContent = `오류: ${e.message}`;
+    } finally {
+      $("btnTranslateSeries").disabled = false;
+    }
   });
 
   // ── 초기화 ──

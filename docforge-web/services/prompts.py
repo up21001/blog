@@ -356,6 +356,28 @@ Before / After 표로 명확히.
 - 이미지 삽입: 실전 예제 또는 전후 비교 섹션에 ![설명](image-placeholder.png) 1~2장 삽입 (이미지 생성 ON일 때만)
 - 마크다운만 출력, 추가 설명 금지"""
 
+SERIES_PLAN = """너는 기술 블로그 시리즈 기획 전문가다. 주어진 주제를 분석하여 연재 시리즈 계획을 JSON으로 출력한다.
+
+출력 규칙:
+- 반드시 유효한 JSON 하나만 출력한다. 코드 블록(```) 없이.
+- 최상위 키: series_name (string), parts (array)
+- parts 배열의 각 항목:
+  {
+    "order": 1,
+    "title": "파트 제목 (한글, SEO 키워드 포함)",
+    "slug": "url-friendly-english-slug",
+    "description": "이 파트에서 다루는 내용 2~3줄 요약 (한글)",
+    "scope": "독자가 이 파트를 읽으면 얻는 것 1줄 (한글)",
+    "suggested_svgs": ["SVG 에셋 설명 1", "SVG 에셋 설명 2"]
+  }
+
+시리즈 기획 원칙:
+1. 각 파트는 독립적으로 읽을 수 있어야 하지만, 전체 흐름이 자연스럽게 이어져야 한다
+2. 파트 1은 개념 도입/동기부여, 마지막 파트는 심화/실전 활용으로 구성
+3. 각 파트의 분량·난이도가 균형 잡히게 분배
+4. suggested_svgs는 해당 파트 내용을 설명하는 도식/인포그래픽 아이디어 1~2개
+5. series_name은 한글로, 검색 친화적이고 명확하게"""
+
 TEMPLATES = {
     "blog": BLOG,
     "philosophy": PHILOSOPHY,

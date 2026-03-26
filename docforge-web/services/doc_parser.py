@@ -6,11 +6,21 @@ import base64
 import logging
 from pathlib import Path
 
+from services import codebase_parser
+
 logger = logging.getLogger(__name__)
 
 
 def parse_reference(data_base64: str, filename: str) -> str:
-    """base64 인코딩된 파일에서 텍스트 추출. 최대 30000자."""
+    """base64 인코딩된 파일에서 텍스트 추출. 최대 30000자.
+
+    filename이 디렉터리 경로이면 codebase_parser에 위임한다.
+    """
+    # 로컬 디렉터리 경로인 경우 코드베이스 파서로 위임
+    candidate = Path(filename)
+    if candidate.is_dir():
+        return codebase_parser.parse_codebase(str(candidate))
+
     ext = Path(filename).suffix.lower()
     raw = base64.standard_b64decode(data_base64)
 

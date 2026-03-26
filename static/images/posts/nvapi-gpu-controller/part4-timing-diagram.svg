@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520">
+  <defs>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-color="#00000030"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="520" fill="#f8f9fa" rx="8"/>
+
+  <!-- Title -->
+  <rect x="0" y="0" width="800" height="48" fill="#2d3748" rx="8"/>
+  <rect x="0" y="40" width="800" height="8" fill="#2d3748"/>
+  <text x="400" y="30" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white" text-anchor="middle">디스플레이 타이밍 구조 — 수평(H) &amp; 수직(V) 신호</text>
+
+  <!-- === HORIZONTAL SECTION === -->
+  <text x="40" y="80" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#4A90D9">수평(Horizontal) 타이밍</text>
+
+  <!-- H waveform baseline -->
+  <line x1="40" y1="130" x2="760" y2="130" stroke="#ccc" stroke-width="1" stroke-dasharray="4,4"/>
+
+  <!-- HActive box -->
+  <rect x="40" y="95" width="320" height="40" fill="#4A90D9" rx="4" filter="url(#shadow)"/>
+  <text x="200" y="120" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="white" text-anchor="middle">H Active (가시 영역)</text>
+
+  <!-- HFrontPorch box -->
+  <rect x="360" y="95" width="80" height="40" fill="#50C878" rx="4" filter="url(#shadow)"/>
+  <text x="400" y="112" font-family="Arial, sans-serif" font-size="10" fill="white" text-anchor="middle">H Front</text>
+  <text x="400" y="126" font-family="Arial, sans-serif" font-size="10" fill="white" text-anchor="middle">Porch</text>
+
+  <!-- HSyncWidth box -->
+  <rect x="440" y="95" width="100" height="40" fill="#FF6B6B" rx="4" filter="url(#shadow)"/>
+  <text x="490" y="112" font-family="Arial, sans-serif" font-size="10" fill="white" text-anchor="middle">H Sync</text>
+  <text x="490" y="126" font-family="Arial, sans-serif" font-size="10" fill="white" text-anchor="middle">Width</text>
+
+  <!-- HBackPorch box -->
+  <rect x="540" y="95" width="110" height="40" fill="#FFD93D" rx="4" filter="url(#shadow)"/>
+  <text x="595" y="112" font-family="Arial, sans-serif" font-size="10" fill="#333" text-anchor="middle">H Back</text>
+  <text x="595" y="126" font-family="Arial, sans-serif" font-size="10" fill="#333" text-anchor="middle">Porch</text>
+
+  <!-- Border/next cycle indicator -->
+  <rect x="650" y="95" width="110" height="40" fill="#4A90D9" rx="4" filter="url(#shadow)" opacity="0.5"/>
+  <text x="705" y="120" font-family="Arial, sans-serif" font-size="12" fill="white" text-anchor="middle">다음 라인...</text>
+
+  <!-- H Blanking bracket -->
+  <line x1="360" y1="148" x2="650" y2="148" stroke="#888" stroke-width="1.5"/>
+  <line x1="360" y1="143" x2="360" y2="153" stroke="#888" stroke-width="1.5"/>
+  <line x1="650" y1="143" x2="650" y2="153" stroke="#888" stroke-width="1.5"/>
+  <text x="505" y="163" font-family="Arial, sans-serif" font-size="11" fill="#555" text-anchor="middle">H Blanking = HFP + HSW + HBP</text>
+
+  <!-- H Total bracket -->
+  <line x1="40" y1="175" x2="650" y2="175" stroke="#4A90D9" stroke-width="2"/>
+  <line x1="40" y1="169" x2="40" y2="181" stroke="#4A90D9" stroke-width="2"/>
+  <line x1="650" y1="169" x2="650" y2="181" stroke="#4A90D9" stroke-width="2"/>
+  <text x="345" y="190" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#4A90D9" text-anchor="middle">H Total</text>
+
+  <!-- Sync pulse waveform -->
+  <text x="40" y="218" font-family="Arial, sans-serif" font-size="11" fill="#888">H Sync 신호:</text>
+  <polyline points="120,210 120,230 440,230 440,210 540,210 540,230 760,230" fill="none" stroke="#FF6B6B" stroke-width="2.5"/>
+  <text x="490" y="246" font-family="Arial, sans-serif" font-size="10" fill="#FF6B6B" text-anchor="middle">sync pulse (LOW)</text>
+
+  <!-- === VERTICAL SECTION === -->
+  <line x1="40" y1="265" x2="760" y2="265" stroke="#ddd" stroke-width="1"/>
+  <text x="40" y="285" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#6C5CE7">수직(Vertical) 타이밍</text>
+
+  <!-- V Active box -->
+  <rect x="40" y="300" width="310" height="40" fill="#6C5CE7" rx="4" filter="url(#shadow)"/>
+  <text x="195" y="325" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="white" text-anchor="middle">V Active (가시 라인 수)</text>
+
+  <!-- VFrontPorch -->
+  <rect x="350" y="300" width="70" height="40" fill="#50C878" rx="4" filter="url(#shadow)"/>
+  <text x="385" y="316" font-family="Arial, sans-serif" font-size="10" fill="white" text-anchor="middle">V Front</text>
+  <text x="385" y="330" font-family="Arial, sans-serif" font-size="10" fill="white" text-anchor="middle">Porch</text>
+
+  <!-- VSyncWidth -->
+  <rect x="420" y="300" width="80" height="40" fill="#FF6B6B" rx="4" filter="url(#shadow)"/>
+  <text x="460" y="316" font-family="Arial, sans-serif" font-size="10" fill="white" text-anchor="middle">V Sync</text>
+  <text x="460" y="330" font-family="Arial, sans-serif" font-size="10" fill="white" text-anchor="middle">Width</text>
+
+  <!-- VBackPorch -->
+  <rect x="500" y="300" width="100" height="40" fill="#FFD93D" rx="4" filter="url(#shadow)"/>
+  <text x="550" y="316" font-family="Arial, sans-serif" font-size="10" fill="#333" text-anchor="middle">V Back</text>
+  <text x="550" y="330" font-family="Arial, sans-serif" font-size="10" fill="#333" text-anchor="middle">Porch</text>
+
+  <!-- Next frame -->
+  <rect x="600" y="300" width="160" height="40" fill="#6C5CE7" rx="4" filter="url(#shadow)" opacity="0.4"/>
+  <text x="680" y="325" font-family="Arial, sans-serif" font-size="11" fill="white" text-anchor="middle">다음 프레임...</text>
+
+  <!-- V Blanking bracket -->
+  <line x1="350" y1="353" x2="600" y2="353" stroke="#888" stroke-width="1.5"/>
+  <line x1="350" y1="348" x2="350" y2="358" stroke="#888" stroke-width="1.5"/>
+  <line x1="600" y1="348" x2="600" y2="358" stroke="#888" stroke-width="1.5"/>
+  <text x="475" y="368" font-family="Arial, sans-serif" font-size="11" fill="#555" text-anchor="middle">V Blanking = VFP + VSW + VBP</text>
+
+  <!-- V Total bracket -->
+  <line x1="40" y1="383" x2="600" y2="383" stroke="#6C5CE7" stroke-width="2"/>
+  <line x1="40" y1="377" x2="40" y2="389" stroke="#6C5CE7" stroke-width="2"/>
+  <line x1="600" y1="377" x2="600" y2="389" stroke="#6C5CE7" stroke-width="2"/>
+  <text x="320" y="398" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#6C5CE7" text-anchor="middle">V Total</text>
+
+  <!-- Pixel clock formula box -->
+  <rect x="40" y="418" width="720" height="80" fill="white" rx="8" stroke="#4A90D9" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="400" y="438" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#2d3748" text-anchor="middle">픽셀 클럭 공식</text>
+  <text x="400" y="460" font-family="Arial, sans-serif" font-size="14" fill="#FF6B6B" text-anchor="middle" font-style="italic">Pixel Clock (MHz) = H_Total × V_Total × Refresh Rate ÷ 1,000,000</text>
+  <text x="400" y="482" font-family="Arial, sans-serif" font-size="12" fill="#555" text-anchor="middle">예: 1920×1080@60Hz → 2200 × 1125 × 60 ÷ 1,000,000 = 148.5 MHz</text>
+  <text x="400" y="498" font-family="Arial, sans-serif" font-size="11" fill="#888" text-anchor="middle">NVAPI Pclk 단위: 10kHz → 148.5 MHz = 14850 (단위)</text>
+</svg>
