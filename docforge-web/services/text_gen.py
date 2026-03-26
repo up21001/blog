@@ -59,6 +59,7 @@ def generate_document(
     max_retries: int = 3,
     length_tier: str = "medium",
     text_model: str | None = None,
+    reference_doc: str | None = None,
 ) -> str:
     eff = get_effective_prompts()
     if template_key not in eff:
@@ -74,6 +75,33 @@ def generate_document(
     use_model = text_model if text_model and text_model in TEXT_MODELS else TEXT_MODEL
     client = genai.Client(api_key=key)
     user_msg = eff["document_user"].format(topic=topic) + f"\n\n【작성 지시】{length_msg}"
+
+    if reference_doc and reference_doc.strip():
+        ref_text = reference_doc.strip()[:30000]
+        user_msg += f"""
+
+═══ 참고 양식 — 이 구조를 반드시 따를 것 ═══
+
+아래 문서는 "참고 양식"이다. 내용을 복사하지 말고, 구조와 패턴을 분석하여 동일한 형태로 새 글을 작성하라.
+
+반드시 따라야 할 요소:
+1. **섹션 구성**: 참고 양식과 동일한 개수·순서·깊이의 제목(H1/H2/H3) 구조를 사용하라
+2. **콘텐츠 패턴**: 참고 양식에서 표가 있던 위치에 표를, 목록이 있던 위치에 목록을, 코드블록이 있던 위치에 코드블록을 배치하라
+3. **이미지/에셋 위치**: [이미지 위치] 또는 이미지 마크다운이 있던 곳에 동일하게 이미지 플레이스홀더를 넣어라
+4. **말투·톤**: 참고 양식의 문체(격식체/반말/기술적/캐주얼 등)를 그대로 유지하라
+5. **프론트매터**: 참고 양식에 YAML 프론트매터가 있으면 동일한 필드 구조를 사용하라
+6. **분량 비율**: 각 섹션의 상대적 분량 비율(짧은 도입, 긴 본론 등)을 유사하게 맞춰라
+7. **특수 요소**: 참고 양식에 인용문, 팁 박스, 경고 등이 있으면 유사한 위치에 동일 형식을 사용하라
+
+금지 사항:
+- 참고 양식의 텍스트를 그대로 복사하지 마라
+- 참고 양식의 구조를 무시하고 기본 템플릿으로 돌아가지 마라
+- 참고 양식에 없는 섹션을 임의로 추가하지 마라
+
+아래가 참고 양식이다:
+───────────────────
+{ref_text}
+───────────────────"""
 
     last_err: Exception | None = None
     for attempt in range(1, max_retries + 1):
@@ -240,10 +268,10 @@ async def generate_svg_specs_async(
 
 async def generate_document_async(
     topic: str, template_key: str, api_key: str, length_tier: str = "medium",
-    text_model: str | None = None,
+    text_model: str | None = None, reference_doc: str | None = None,
 ) -> str:
     return await asyncio.to_thread(
-        generate_document, topic, template_key, api_key, 3, length_tier, text_model
+        generate_document, topic, template_key, api_key, 3, length_tier, text_model, reference_doc
     )
 
 

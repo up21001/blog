@@ -31,15 +31,34 @@ Rules:
 - Add subtle drop shadows using <filter> for boxes
 - No external resources, no JavaScript
 
-CRITICAL arrow/connector rules:
-- Arrows must START and END at the EDGE of boxes, NOT inside or behind them
-- Leave at least 10px gap between arrow endpoints and box borders
-- Use markerWidth="10" markerHeight="7" for arrow markers, keep them small
-- Draw connectors AFTER all boxes so arrows render on top
-- For vertical flows, connect bottom-center of source to top-center of target
-- For horizontal flows, connect right-center of source to left-center of target
-- Use polyline or path with waypoints to route arrows AROUND boxes, never through them
-- Add refX offset to markers so arrowheads don't overlap target boxes""",
+═══ ARROW RULES — VIOLATIONS WILL PRODUCE BROKEN DIAGRAMS ═══
+
+RENDERING ORDER (non-negotiable):
+1. First: ALL rectangles, boxes, shapes, and text labels
+2. Last: ALL arrows, connectors, paths — they MUST be the final elements before </svg>
+→ This ensures arrows render ON TOP of everything
+
+ARROW GEOMETRY (zero tolerance for overlap):
+- Every arrow STARTS at the exact EDGE of its source box (not center, not inside)
+- Every arrow ENDS 15px BEFORE the edge of its target box (so arrowhead touches edge, not overlaps)
+- Use markerWidth="8" markerHeight="6", refX="8" so the arrowhead tip aligns with path end
+- ABSOLUTE BAN: no arrow path may cross through ANY box it is not connected to
+- If source and target are not adjacent: the arrow MUST route through EMPTY SPACE only
+  → Go UP above all boxes, travel horizontally, then come DOWN to target
+  → Or go DOWN below all boxes, travel horizontally, then come UP to target
+  → Use L-shaped (2 segments) or Z-shaped (3 segments) polylines with explicit x,y waypoints
+- For vertical connections between stacked boxes: use straight vertical lines, centered on the box
+
+ARROW LABELS:
+- Place labels in empty space NEAR the arrow midpoint
+- Labels must NEVER overlap any box or other label
+- Use small font (12-13px), offset 10px from the arrow path
+
+SELF-CHECK before outputting:
+For each arrow, mentally trace its full path pixel by pixel.
+Ask: "Does this path cross any rectangle boundary it shouldn't?"
+If YES → add waypoints to route around it.
+If you skip this check, the diagram WILL have overlapping arrows.""",
 
     "infographic": """You are an expert SVG infographic generator.
 Generate clean, readable, manually-editable SVG code for infographics and data visualizations.
@@ -54,7 +73,7 @@ Rules:
 - All text must be in Korean if the prompt is Korean
 - Include a clear title at the top
 - No external resources, no JavaScript
-- If using arrows/connectors: start/end at box EDGES with 10px gap, route AROUND boxes not through them""",
+- If using arrows/connectors: ABSOLUTE BAN on crossing through any box. Route arrows through empty space only (above/below all boxes). Place all arrow elements AFTER all box elements. Self-check each path for overlap before output.""",
 
     "icon": """You are an expert SVG icon generator.
 Generate clean, scalable, manually-editable SVG icon code.

@@ -1,0 +1,164 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+            <feDropShadow dx="2" dy="2" stdDeviation="3" flood-color="#000" flood-opacity="0.2"/>
+        </filter>
+        <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
+        </marker>
+    </defs>
+
+    <style>
+        .title { font-size: 28px; font-weight: bold; fill: #333; font-family: "Arial, sans-serif"; }
+        .header { font-size: 20px; font-weight: bold; fill: #333; font-family: "Arial, sans-serif"; }
+        .box-title { font-size: 16px; font-weight: bold; fill: #333; font-family: "Arial, sans-serif"; }
+        .box-content { font-size: 14px; fill: #555; font-family: "Arial, sans-serif"; }
+        .box-content.white { fill: white; }
+        .arrow { stroke: #333; stroke-width: 2; fill: none; marker-end: url(#arrowhead); }
+        .arrow-label { font-size: 13px; fill: #333; font-family: "Arial, sans-serif"; font-weight: bold; }
+
+        .rect-blue { fill: #4A90D9; filter: url(#shadow); rx: 8; }
+        .rect-green { fill: #50C878; filter: url(#shadow); rx: 8; }
+        .rect-red { fill: #FF6B6B; filter: url(#shadow); rx: 8; }
+        .rect-yellow { fill: #FFD93D; filter: url(#shadow); rx: 8; }
+        .rect-purple { fill: #6C5CE7; filter: url(#shadow); rx: 8; }
+    </style>
+
+    <!-- Background -->
+    <rect x="0" y="0" width="800" height="600" fill="#f8f9fa"/>
+
+    <!-- Main Title -->
+    <text x="400" y="40" text-anchor="middle" class="title">프로그래밍 언어 특징 및 비교</text>
+
+    <!-- Column 1: C/C++ -->
+    <g>
+        <text x="150" y="90" text-anchor="middle" class="header">C/C++</text>
+
+        <!-- Memory Management -->
+        <rect x="50" y="130" width="200" height="80" class="rect-yellow"/>
+        <text x="150" y="155" text-anchor="middle" class="box-title">메모리 관리</text>
+        <text x="150" y="175" text-anchor="middle" class="box-content">
+            <tspan x="150" dy="0">수동 관리</tspan>
+            <tspan x="150" dy="18">(malloc/free, new/delete)</tspan>
+        </text>
+
+        <!-- Performance Overhead -->
+        <rect x="50" y="230" width="200" height="60" class="rect-green"/>
+        <text x="150" y="250" text-anchor="middle" class="box-title">성능 오버헤드</text>
+        <text x="150" y="270" text-anchor="middle" class="box-content">최소 (개발자 책임)</text>
+
+        <!-- Concurrency Issues (and general memory safety issues) -->
+        <rect x="50" y="310" width="200" height="80" class="rect-red"/>
+        <text x="150" y="335" text-anchor="middle" class="box-title white">동시성 문제</text>
+        <text x="150" y="355" text-anchor="middle" class="box-content white">
+            <tspan x="150" dy="0">수동 동기화</tspan>
+            <tspan x="150" dy="18">데이터 경쟁, 메모리 안전성 위험</tspan>
+        </text>
+
+        <!-- Summary -->
+        <rect x="50" y="410" width="200" height="80" class="rect-blue"/>
+        <text x="150" y="435" text-anchor="middle" class="box-title white">특징 및 단점</text>
+        <text x="150" y="455" text-anchor="middle" class="box-content white">
+            <tspan x="150" dy="0">최고 성능, 하드웨어 제어</tspan>
+            <tspan x="150" dy="18">메모리 안전성 취약, 복잡성</tspan>
+        </text>
+    </g>
+
+    <!-- Column 2: GC-based Languages -->
+    <g>
+        <text x="400" y="90" text-anchor="middle" class="header">가비지 컬렉터 기반 언어 (Java, Python)</text>
+
+        <!-- Memory Management -->
+        <rect x="300" y="130" width="200" height="60" class="rect-yellow"/>
+        <text x="400" y="150" text-anchor="middle" class="box-title">메모리 관리</text>
+        <text x="400" y="170" text-anchor="middle" class="box-content">자동 관리 (가비지 컬렉터)</text>
+
+        <!-- Performance Overhead -->
+        <rect x="300" y="210" width="200" height="80" class="rect-red"/>
+        <text x="400" y="235" text-anchor="middle" class="box-title white">성능 오버헤드</text>
+        <text x="400" y="255" text-anchor="middle" class="box-content white">
+            <tspan x="400" dy="0">GC 일시 정지</tspan>
+            <tspan x="400" dy="18">예측 불가능한 성능</tspan>
+        </text>
+
+        <!-- Concurrency Issues -->
+        <rect x="300" y="310" width="200" height="80" class="rect-yellow"/>
+        <text x="400" y="335" text-anchor="middle" class="box-title">동시성 문제</text>
+        <text x="400" y="355" text-anchor="middle" class="box-content">
+            <tspan x="400" dy="0">런타임 스레드 안전성</tspan>
+            <tspan x="400" dy="18">(락, 동기화 프리미티브)</tspan>
+        </text>
+
+        <!-- Summary -->
+        <rect x="300" y="410" width="200" height="80" class="rect-blue"/>
+        <text x="400" y="435" text-anchor="middle" class="box-title white">특징 및 단점</text>
+        <text x="400" y="455" text-anchor="middle" class="box-content white">
+            <tspan x="400" dy="0">개발 생산성, 메모리 안전성</tspan>
+            <tspan x="400" dy="18">GC 오버헤드, 높은 메모리 사용</tspan>
+        </text>
+    </g>
+
+    <!-- Column 3: Rust -->
+    <g>
+        <text x="650" y="90" text-anchor="middle" class="header">러스트 (Rust)</text>
+
+        <!-- Memory Management -->
+        <rect x="550" y="130" width="200" height="80" class="rect-purple"/>
+        <text x="650" y="155" text-anchor="middle" class="box-title white">메모리 관리</text>
+        <text x="650" y="175" text-anchor="middle" class="box-content white">
+            <tspan x="650" dy="0">소유권 시스템</tspan>
+            <tspan x="650" dy="18">(빌림, 수명)</tspan>
+        </text>
+
+        <!-- Performance Overhead -->
+        <rect x="550" y="230" width="200" height="60" class="rect-green"/>
+        <text x="650" y="250" text-anchor="middle" class="box-title white">성능 오버헤드</text>
+        <text x="650" y="270" text-anchor="middle" class="box-content white">런타임 오버헤드 없음 (C/C++급)</text>
+
+        <!-- Concurrency Issues -->
+        <rect x="550" y="310" width="200" height="80" class="rect-green"/>
+        <text x="650" y="335" text-anchor="middle" class="box-title white">동시성 문제</text>
+        <text x="650" y="355" text-anchor="middle" class="box-content white">
+            <tspan x="650" dy="0">컴파일 타임 안전성</tspan>
+            <tspan x="650" dy="18">(데이터 경쟁 방지)</tspan>
+        </text>
+
+        <!-- Summary -->
+        <rect x="550" y="410" width="200" height="80" class="rect-blue"/>
+        <text x="650" y="435" text-anchor="middle" class="box-title white">특징 및 장점</text>
+        <text x="650" y="455" text-anchor="middle" class="box-content white">
+            <tspan x="650" dy="0">메모리/동시성 안전성, 고성능</tspan>
+            <tspan x="650" dy="18">단점: 높은 학습 곡선</tspan>
+        </text>
+    </g>
+
+    <!-- Rust Overcoming Limitations -->
+    <rect x="250" y="520" width="300" height="60" class="rect-green"/>
+    <text x="400" y="540" text-anchor="middle" class="box-title white">러스트의 한계 극복</text>
+    <text x="400" y="560" text-anchor="middle" class="box-content white">
+        <tspan x="400" dy="0">C/C++의 성능과 GC 언어의 안전성을 동시에 달성</tspan>
+    </text>
+
+    <!-- Arrows connecting to Rust's strengths / Overcoming box -->
+    <!-- C/C++ Memory Safety Issue → Rust Memory Management (아래로 우회) -->
+    <path d="M 250 350 L 270 350 L 270 115 L 540 115 L 540 170 L 550 170" class="arrow" fill="none"/>
+    <text x="400" y="108" text-anchor="middle" class="arrow-label">메모리 안전성 문제 해결</text>
+
+    <!-- C/C++ Concurrency Issue → Rust Concurrency Safety (아래로 우회) -->
+    <path d="M 250 370 L 280 370 L 280 400 L 530 400 L 530 350 L 550 350" class="arrow" fill="none"/>
+    <text x="400" y="415" text-anchor="middle" class="arrow-label">데이터 경쟁 방지</text>
+
+    <!-- GC Performance Overhead → Rust Performance (간격 확보) -->
+    <path d="M 500 240 L 520 240 L 520 260 L 550 260" class="arrow" fill="none"/>
+    <text x="525" y="230" text-anchor="middle" class="arrow-label">GC 오버헤드 없음</text>
+
+    <!-- GC Memory → Rust Memory (위로 우회) -->
+    <path d="M 500 160 L 520 160 L 520 145 L 550 145" class="arrow" fill="none"/>
+    <text x="525" y="138" text-anchor="middle" class="arrow-label">예측 가능한 성능</text>
+
+    <!-- Arrows to central "Rust Overcoming Limitations" box -->
+    <path d="M 150 490 L 150 510 L 300 520" class="arrow" fill="none"/>
+    <path d="M 400 490 L 400 520" class="arrow" fill="none"/>
+    <path d="M 650 490 L 650 510 L 550 520" class="arrow" fill="none"/>
+
+</svg>
