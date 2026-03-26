@@ -169,8 +169,33 @@ def generate_image_prompts(
     api_key: str,
     excerpt_max_chars: int = 5000,
     extra_hints: str | None = None,
+    template: str | None = None,
 ) -> list[str]:
     """삽화용 짧은 영문 프롬프트 여러 개."""
+    from .prompts import DEBATE_IMAGE_PROMPTS
+
+    if template == "debate":
+        # Return specialized debate image prompts based on placement slots
+        slots = ["feature", "turning_point", "conclusion"]
+        results = []
+        for slot in slots[:count]:
+            pattern = DEBATE_IMAGE_PROMPTS[slot]
+            filled = pattern.format(
+                description=topic[:120],
+                side_a="one philosophical position",
+                side_b="the opposing philosophical position",
+            )
+            results.append(filled)
+        # Pad with feature prompt if count > 3
+        while len(results) < count:
+            pattern = DEBATE_IMAGE_PROMPTS["feature"]
+            results.append(pattern.format(
+                description=topic[:120],
+                side_a="one philosophical position",
+                side_b="the opposing philosophical position",
+            ))
+        return results[:count]
+
     key = api_key or os.environ.get("GEMINI_API_KEY")
     if not key:
         raise ValueError("GEMINI_API_KEY가 설정되지 않았습니다.")
@@ -363,6 +388,7 @@ async def generate_image_prompts_async(
     api_key: str,
     excerpt_max_chars: int = 5000,
     extra_hints: str | None = None,
+    template: str | None = None,
 ) -> list[str]:
     return await asyncio.to_thread(
         generate_image_prompts,
@@ -372,6 +398,7 @@ async def generate_image_prompts_async(
         api_key,
         excerpt_max_chars,
         extra_hints,
+        template,
     )
 
 
@@ -538,6 +565,178 @@ Korean markdown:
                 time.sleep(2**attempt)
             else:
                 raise RuntimeError(f"영문 번역 실패 ({max_retries}회): {last_err}") from last_err
+
+
+
+async def expand_document_async(
+    api_key: str,
+    source_text: str,
+    expansion_instructions: str,
+    model: str = "gemini-2.5-flash",
+    with_english: bool = False,
+) -> dict:
+    """원본 텍스트를 확장 지시에 따라 확장.
+
+    Returns:
+        {"ko": expanded_korean, "en": expanded_english_or_none}
+    """
+    key = api_key or os.environ.get("GEMINI_API_KEY")
+    if not key:
+        raise ValueError("GEMINI_API_KEY가 설정되지 않았습니다.")
+
+    use_model = model if model in TEXT_MODELS else TEXT_MODEL
+    client = genai.Client(api_key=key)
+
+    sys_inst = (
+        "당신은 콘텐츠 확장 전문가입니다. "
+        "원본 텍스트의 핵심 주장을 보존하면서 "
+        "더 깊고 극적으로 확장하라. 원본 구조와 말투를 유지하라."
+    )
+
+    user_msg = (
+        "아래 원본 텍스트를 다음 지시에 따라 확장하라.\n\n"
+        "【확장 지시】\n"
+        + expansion_instructions
+        + "\n\n【원본 텍스트】\n"
+        + source_text
+        + "\n\n규칙:\n"
+        "- 등장인물, 플롯, 핵심 주장을 반드시 보존하라\n"
+        "- 원본의 구조와 말투를 유지하라\n"
+        "- 코드 블록 없이 완성된 텍스트만 출력하라"
+    )
+
+    if with_english:
+        user_msg += (
+            "\n\n완성된 한국어 버전을 먼저 출력하고, "
+            "그 다음 줄에 ===ENGLISH=== 를 출력하고, "
+            "그 다음에 영문 버전을 출력하라."
+        )
+
+    def _run() -> dict:
+        response = client.models.generate_content(
+            model=use_model,
+            config=types.GenerateContentConfig(
+                system_instruction=sys_inst,
+                max_output_tokens=65536,
+                temperature=0.75,
+                thinking_config=types.ThinkingConfig(thinking_budget=0),
+            ),
+            contents=user_msg,
+        )
+        raw = response.text.strip()
+        raw = _strip_markdown_fence(raw)
+
+        if with_english and "===ENGLISH===" in raw:
+            sp = raw.split("===ENGLISH===", 1)
+            ko = sp[0].strip()
+            en = sp[1].strip() if len(sp) > 1 else ""
+        else:
+            ko = raw
+            en = None
+
+        return {"ko": ko, "en": en}
+
+    return await asyncio.to_thread(_run)
+
+
+async def generate_bilingual_async(
+    api_key: str,
+    topic: str,
+    template_key: str,
+    length_tier: str = "medium",
+    text_model: str | None = None,
+    reference_doc: str | None = None,
+    series_name: str = "",
+    series_order: int = 0,
+    series_slug: str = "",
+) -> dict:
+    """한국어와 영문을 단일 API 호출로 동시 생성.
+
+    Returns:
+        {"ko": korean_markdown, "en": english_markdown}
+    """
+    key = api_key or os.environ.get("GEMINI_API_KEY")
+    if not key:
+        raise ValueError("GEMINI_API_KEY가 설정되지 않았습니다.")
+
+    eff = get_effective_prompts()
+    if template_key not in eff:
+        template_key = "plain"
+    system_instruction = eff.get(template_key) or eff["plain"]
+    tier = length_tier if length_tier in LENGTH_TIER else "medium"
+    max_out, length_msg = LENGTH_TIER[tier]
+    use_model = text_model if text_model and text_model in TEXT_MODELS else TEXT_MODEL
+
+    client = genai.Client(api_key=key)
+    user_msg = eff["document_user"].format(topic=topic) + f"\n\n【작성 지시】{length_msg}"
+
+    if series_name.strip():
+        order_hint = f" (파트 {series_order})" if series_order > 0 else ""
+        slug_hint = f"\n시리즈 슬러그: {series_slug}" if series_slug.strip() else ""
+        user_msg += (
+            f"\n\n【시리즈 프론트매터 지시】\n"
+            f"이 글은 시리즈의 한 파트입니다. 프론트매터에 반드시 다음 필드를 추가하라:\n"
+            f'series: ["{series_name}"]\n'
+            f"series_order: {series_order if series_order > 0 else 1}\n"
+            f"(시리즈 필드는 배열 형태로){slug_hint}\n"
+            f"시리즈 이름{order_hint}: {series_name}"
+        )
+
+    if reference_doc and reference_doc.strip():
+        ref_text = reference_doc.strip()[:30000]
+        user_msg += f"\n\n═══ 참고 양식 ═══\n{ref_text}\n───────────────────"
+
+    user_msg += (
+        "\n\n【이중 언어 출력 지시】\n"
+        "완성된 한국어 버전을 먼저 출력하고, "
+        "그 다음 줄에 정확히 ===ENGLISH=== 를 단독으로 출력하고, "
+        "그 다음에 동일한 내용의 영문 버전을 출력하라. "
+        "영문 버전은 자연스럽고 전문적인 영어로 번역하되 "
+        "프론트매터 title은 영문으로 번역하고 slug/categories/tags는 그대로 유지하라."
+    )
+
+    def _run() -> dict:
+        response = client.models.generate_content(
+            model=use_model,
+            config=types.GenerateContentConfig(
+                system_instruction=system_instruction,
+                max_output_tokens=65536,
+                temperature=0.7,
+                thinking_config=types.ThinkingConfig(thinking_budget=0),
+            ),
+            contents=user_msg,
+        )
+        raw = response.text.strip()
+        raw = _strip_markdown_fence(raw)
+
+        now_str = datetime.now().strftime("%Y-%m-%dT%H:%M:%S+09:00")
+
+        if "===ENGLISH===" in raw:
+            sp = raw.split("===ENGLISH===", 1)
+            ko = sp[0].strip()
+            en = sp[1].strip() if len(sp) > 1 else ""
+        else:
+            ko = raw
+            en = ""
+
+        def _fix_dates(text: str) -> str:
+            text = re.sub(
+                r"date:\s*\d{4}-\d{2}-\d{2}[T\s]\d{2}:\d{2}:\d{2}[^\n]*",
+                f"date: {now_str}", text,
+            )
+            text = re.sub(
+                r"lastmod:\s*\d{4}-\d{2}-\d{2}[T\s]\d{2}:\d{2}:\d{2}[^\n]*",
+                f"lastmod: {now_str}", text,
+            )
+            text = re.sub(
+                r"date:\s*\d{4}-\d{2}-\d{2}\s*$",
+                f"date: {now_str}", text, flags=re.MULTILINE,
+            )
+            return text
+
+        return {"ko": _fix_dates(ko), "en": _fix_dates(en) if en else ""}
+
+    return await asyncio.to_thread(_run)
 
 
 async def translate_series_to_english(

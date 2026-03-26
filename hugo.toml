@@ -29,7 +29,7 @@ enableRobotsTXT = true
   bing = "2A34F9D8910EAE2FB3B6D41CCA337145"
 
 [params.author]
-  name = "Engineer"
+  name = "Plus"
 
 [params.homepage]
   layout = "profile"
@@ -218,7 +218,7 @@ enableRobotsTXT = true
   keywords = ["Hardware", "Software", "AI", "Embedded", "PCB Design", "Python", "DevOps"]
 
 [languages.en.params.author]
-  name = "Engineer"
+  name = "Plus"
 
 # ── English Main Menu ────────────────────────────────
 [[languages.en.menus.main]]

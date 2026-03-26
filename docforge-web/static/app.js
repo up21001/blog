@@ -1481,6 +1481,69 @@
     }
   });
 
+  // ── 확장 생성 ──
+  if ($("btnExpand")) {
+    $("btnExpand").addEventListener("click", async () => {
+      const source = $("expandSource") ? $("expandSource").value.trim() : "";
+      const instructions = $("expandInstructions") ? $("expandInstructions").value.trim() : "";
+      const withEn = $("expandWithEnglish") ? $("expandWithEnglish").checked : false;
+      if (!source) { alert("원본 소재를 입력하세요."); return; }
+
+      const btn = $("btnExpand");
+      const status = $("expandStatus");
+      btn.disabled = true;
+      btn.textContent = "확장 중…";
+      if (status) status.textContent = "생성 중…";
+
+      try {
+        const r = await fetch(apiUrl("/api/expand"), {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            source_text: source,
+            instructions: instructions || "10라운드로 확장, 더 깊고 극적으로",
+            with_english: withEn,
+          }),
+        });
+        const j = await r.json();
+        if (!r.ok) throw new Error(typeof j.detail === "string" ? j.detail : JSON.stringify(j.detail || j));
+
+        // Apply to main editor
+        const koMd = j.ko || "";
+        const enMd = j.en || "";
+        $("mdEditor").value = koMd;
+        const split = $("mdEditorSplit");
+        if (split) split.value = koMd;
+        currentMarkdownEn = enMd;
+        currentLang = "ko";
+
+        const langTabs = $("langTabs");
+        if (langTabs) {
+          langTabs.hidden = !enMd;
+          document.querySelectorAll(".lang-tab").forEach(b => {
+            b.classList.toggle("active", b.dataset.lang === "ko");
+          });
+        }
+
+        renderPreviewHtml(koMd);
+        const res = $("result");
+        if (res) res.hidden = false;
+        setActiveTab("split");
+        setWorkflow("review");
+        if (status) status.textContent = "확장 완료!";
+        // Close the expand details panel
+        const det = $("expandDetails");
+        if (det) det.open = false;
+      } catch (e) {
+        if (status) status.textContent = "오류: " + e.message;
+        else alert("확장 실패: " + e.message);
+      } finally {
+        btn.disabled = false;
+        btn.textContent = "확장 생성";
+      }
+    });
+  }
+
   // ── 초기화 ──
   checkHealth();
   fetchContentTarget();

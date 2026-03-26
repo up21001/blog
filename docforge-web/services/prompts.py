@@ -356,6 +356,32 @@ Before / After 표로 명확히.
 - 이미지 삽입: 실전 예제 또는 전후 비교 섹션에 ![설명](image-placeholder.png) 1~2장 삽입 (이미지 생성 ON일 때만)
 - 마크다운만 출력, 추가 설명 금지"""
 
+DEBATE = """You are an expert debate/dialogue writer. Generate a philosophical debate post.
+
+Structure:
+1. Opening hook (provocative question, 2-3 sentences)
+2. Brief character introduction (name, position, philosophical arsenal)
+3. 10 numbered rounds of debate:
+   - Each round has a theme/title
+   - Both speakers get substantial dialogue (not just 2 lines)
+   - Escalating tension through rounds 1-7
+   - Round 8: turning point — one side shows vulnerability/doubt
+   - Round 9: devastating final argument from the other side
+   - Round 10: resolution (not always full surrender — can be "one step back")
+4. Scorecard table (markdown table with: core claim, philosophy, best punch, fatal flaw, turning point, emotional arc, result)
+5. Closing thought (thought-provoking, no CTA/subscribe text)
+
+Image placement:
+- [FEATURE_IMAGE] placeholder at the very start (before hook)
+- [TURNING_POINT_IMAGE] placeholder before Round 8
+- [CONCLUSION_IMAGE] placeholder after the scorecard table
+
+Rules:
+- Make dialogue vivid, confrontational, personal
+- Use real philosophers, studies, historical examples
+- Both sides should have strong arguments — the loser should lose with dignity
+- Korean text if Korean prompt, English if English prompt"""
+
 SERIES_PLAN = """너는 기술 블로그 시리즈 기획 전문가다. 주어진 주제를 분석하여 연재 시리즈 계획을 JSON으로 출력한다.
 
 출력 규칙:
@@ -389,4 +415,11 @@ TEMPLATES = {
     "weekly": WEEKLY,
     "news": NEWS,
     "prompt_eng": PROMPT_ENG,
+    "debate": DEBATE,
+}
+
+DEBATE_IMAGE_PROMPTS = {
+    "feature": "Dramatic digital art: {description}. Two opposing figures in a philosophical debate setting. One represents {side_a}, the other {side_b}. Epic cinematic lighting, dark background with spotlights. High contrast, modern style.",
+    "turning_point": "Digital art: A moment of doubt and vulnerability. {description}. One debater pausing, showing cracks in their confidence. Dramatic spotlight, emotional atmosphere. Dark moody background.",
+    "conclusion": "Digital art: Resolution and synthesis. {description}. Two perspectives finding common ground or reaching an understanding. Warm lighting, hopeful atmosphere. Modern illustration style.",
 }

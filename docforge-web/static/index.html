@@ -46,6 +46,7 @@
               <option value="prompt_eng">프롬프트 엔지니어링 가이드</option>
               <option value="weekly">주간 개발 일지</option>
               <option value="philosophy">철학 에세이 (토론형 구조)</option>
+              <option value="debate">철학 토론 (10라운드 대결)</option>
               <option value="plain">일반 문서 (개요·상세·요약)</option>
             </select>
           </div>
@@ -148,6 +149,38 @@
           </div>
         </div>
       </div>
+
+      <!-- ── 확장 모드 ── -->
+      <div class="divider-or"><span>또는</span></div>
+
+      <section class="expand-section">
+        <details id="expandDetails">
+          <summary class="expand-summary">
+            <strong>확장 생성</strong>
+            <span class="expand-summary-hint muted"> — 짧은 원고를 풍부하게 확장</span>
+          </summary>
+          <div class="expand-body">
+            <div class="field">
+              <label for="expandSource">원본 소재 (짧은 원고, 개요, 초안)</label>
+              <textarea id="expandSource" rows="6" placeholder="예: 10라운드 토론 원고, 짧은 블로그 초안, 아이디어 메모 등"></textarea>
+            </div>
+            <div class="field">
+              <label for="expandInstructions">확장 지시</label>
+              <input type="text" id="expandInstructions" value="10라운드로 확장, 더 깊고 극적으로" placeholder="예: 10라운드로 확장, 더 깊고 극적으로, 새 라운드 5개 추가" />
+            </div>
+            <div class="field check">
+              <label>
+                <input type="checkbox" id="expandWithEnglish" />
+                영문 동시 생성
+              </label>
+            </div>
+            <div class="expand-actions">
+              <button type="button" id="btnExpand" class="btn primary">확장 생성</button>
+              <span id="expandStatus" class="meta"></span>
+            </div>
+          </div>
+        </details>
+      </section>
 
       <div id="error" class="error" hidden></div>
       <div id="loading" class="loading" hidden>
@@ -346,6 +379,6 @@
     </footer>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js"></script>
-  <script src="/static/app.js?v=8"></script>
+  <script src="/static/app.js?v=9"></script>
 </body>
 </html>

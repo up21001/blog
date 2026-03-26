@@ -80,38 +80,63 @@ def _pillow_placeholder(prompt: str, aspect_ratio: str = "16:9") -> bytes:
 
 
 def _generate_with_model_sync(
-    api_key: str, prompt: str, model_key: str, aspect_ratio: str
+    api_key: str, prompt: str, model_key: str, aspect_ratio: str, max_retries: int = 3
 ) -> Tuple[bytes, str]:
+    import time
+
     from google import genai
     from google.genai import types
 
     model_info = AVAILABLE_MODELS[model_key]
     client = genai.Client(api_key=api_key)
 
-    if model_info["type"] == "imagen":
-        response = client.models.generate_images(
-            model=model_info["id"],
-            prompt=prompt,
-            config=types.GenerateImagesConfig(
-                number_of_images=1,
-                aspect_ratio=aspect_ratio,
-            ),
-        )
-        if response.generated_images:
-            return response.generated_images[0].image.image_bytes, model_info["label"]
-        raise RuntimeError(f"{model_info['label']}: 생성된 이미지 없음")
+    _backoff = [5, 15, 30]
 
-    response = client.models.generate_content(
-        model=model_info["id"],
-        contents=prompt,
-        config=types.GenerateContentConfig(
-            response_modalities=["IMAGE", "TEXT"],
-        ),
-    )
-    for part in response.candidates[0].content.parts:
-        if part.inline_data and part.inline_data.mime_type.startswith("image/"):
-            return part.inline_data.data, model_info["label"]
-    raise RuntimeError(f"{model_info['label']}: 이미지 데이터 없음")
+    for attempt in range(max_retries):
+        try:
+            if model_info["type"] == "imagen":
+                response = client.models.generate_images(
+                    model=model_info["id"],
+                    prompt=prompt,
+                    config=types.GenerateImagesConfig(
+                        number_of_images=1,
+                        aspect_ratio=aspect_ratio,
+                    ),
+                )
+                if response.generated_images:
+                    return response.generated_images[0].image.image_bytes, model_info["label"]
+                raise RuntimeError(f"{model_info['label']}: 생성된 이미지 없음")
+
+            response = client.models.generate_content(
+                model=model_info["id"],
+                contents=prompt,
+                config=types.GenerateContentConfig(
+                    response_modalities=["IMAGE", "TEXT"],
+                ),
+            )
+            for part in response.candidates[0].content.parts:
+                if part.inline_data and part.inline_data.mime_type.startswith("image/"):
+                    return part.inline_data.data, model_info["label"]
+            raise RuntimeError(f"{model_info['label']}: 이미지 데이터 없음")
+
+        except Exception as e:
+            err_str = str(e)
+            is_rate_limit = "429" in err_str or "RESOURCE_EXHAUSTED" in err_str
+            if not is_rate_limit:
+                raise
+            if attempt < max_retries - 1:
+                wait = _backoff[attempt] if attempt < len(_backoff) else _backoff[-1]
+                logger.warning(
+                    "%s 429 rate limit (attempt %d/%d), retrying in %ds…",
+                    model_info["label"], attempt + 1, max_retries, wait,
+                )
+                time.sleep(wait)
+            else:
+                logger.warning(
+                    "%s 429 rate limit exhausted after %d retries — falling back",
+                    model_info["label"], max_retries,
+                )
+                raise
 
 
 def generate_one_image(
@@ -129,12 +154,21 @@ def generate_one_image(
 
     priority = IMAGE_PRESETS.get(image_preset, MODEL_PRIORITY)
     last_err = None
-    for mk in priority:
+    for idx, mk in enumerate(priority):
         try:
             data, label = _generate_with_model_sync(api_key, prompt, mk, aspect_ratio)
             return data, label, "image/png"
         except Exception as e:
-            logger.warning("%s 실패: %s", AVAILABLE_MODELS[mk]["label"], e)
+            err_str = str(e)
+            is_rate_limit = "429" in err_str or "RESOURCE_EXHAUSTED" in err_str
+            if is_rate_limit and idx < len(priority) - 1:
+                logger.warning(
+                    "%s rate limit 소진 → %s 로 폴백",
+                    AVAILABLE_MODELS[mk]["label"],
+                    AVAILABLE_MODELS[priority[idx + 1]]["label"],
+                )
+            else:
+                logger.warning("%s 실패: %s", AVAILABLE_MODELS[mk]["label"], e)
             last_err = e
 
     logger.warning("이미지 전 모델 실패 → 플레이스홀더: %s", last_err)
@@ -146,3 +180,20 @@ async def generate_one_image_async(
     image_preset: str = "fast",
 ) -> Tuple[bytes, str, str]:
     return await asyncio.to_thread(generate_one_image, api_key, prompt, aspect_ratio, image_preset)
+
+
+async def generate_batch_images_async(
+    api_key: str,
+    prompts: list[str],
+    aspect_ratio: str = "16:9",
+    image_preset: str = "quality",
+    delay_between: float = 3.0,
+) -> list[Tuple[bytes, str, str]]:
+    """Generate multiple images with delay between requests to avoid rate limits."""
+    results = []
+    for i, prompt in enumerate(prompts):
+        if i > 0:
+            await asyncio.sleep(delay_between)
+        result = await generate_one_image_async(api_key, prompt, aspect_ratio, image_preset)
+        results.append(result)
+    return results

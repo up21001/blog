@@ -34,6 +34,8 @@ from services import web_import
 from services.image_gen import AVAILABLE_MODELS, MODEL_PRIORITY, IMAGE_PRESETS
 from services.text_gen import (
     excerpt_limit_for_tier,
+    expand_document_async,
+    generate_bilingual_async,
     generate_series_plan_async,
     generate_svg_specs_async,
     translate_series_to_english,
@@ -69,7 +71,7 @@ app.add_middleware(
 
 class GenerateBody(BaseModel):
     topic: str = Field(..., min_length=1, max_length=24000)
-    template: str = Field("blog", pattern="^(blog|philosophy|plain|tutorial|review|comparison|troubleshoot|weekly|news|prompt_eng)$")
+    template: str = Field("blog", pattern="^(blog|philosophy|plain|tutorial|review|comparison|troubleshoot|weekly|news|prompt_eng|debate)$")
     with_images: bool = False
     max_images: int = Field(2, ge=0, le=4)
     with_svg: bool = False
@@ -87,6 +89,21 @@ class GenerateBody(BaseModel):
     series_order: int = Field(0, ge=0, description="시리즈 내 순서 (0=단독 포스트)")
     series_slug: str = Field("", max_length=200, description="시리즈 슬러그")
 
+
+TEMPLATE_DEFAULTS: dict[str, dict] = {
+    "debate": {"max_images": 3, "length": "long"},
+    "blog": {"max_images": 2, "length": "medium"},
+    "tutorial": {"max_images": 2, "length": "long"},
+    "philosophy": {"max_images": 1, "length": "medium"},
+    "review": {"max_images": 2, "length": "medium"},
+    "comparison": {"max_images": 2, "length": "medium"},
+}
+
+
+class ExpandBody(BaseModel):
+    source_text: str = Field(..., min_length=1)
+    instructions: str = Field("10라운드로 확장, 더 깊고 극적으로", max_length=2000)
+    with_english: bool = False
 
 class ImageSaveItem(BaseModel):
     filename: str = Field(..., max_length=200)
@@ -588,6 +605,27 @@ async def generate_svg(body: SvgBody):
     return {"ok": True, "svg": svg_code, "type": body.svg_type, "style": body.style}
 
 
+
+
+@app.post("/api/expand")
+async def api_expand(body: ExpandBody):
+    "원본 텍스트를 확장 지시에 따라 확장."
+    key = _api_key()
+    if not key:
+        raise HTTPException(503, "GEMINI_API_KEY가 설정되지 않았습니다.")
+    try:
+        result = await expand_document_async(
+            api_key=key,
+            source_text=body.source_text,
+            expansion_instructions=body.instructions,
+            with_english=body.with_english,
+        )
+    except Exception as e:
+        logger.exception("확장 생성 실패")
+        raise HTTPException(500, str(e)) from e
+    return {"ok": True, "ko": result["ko"], "en": result["en"]}
+
+
 @app.post("/api/generate")
 async def generate(body: GenerateBody):
     topic = body.topic.strip()
@@ -628,6 +666,15 @@ async def generate(body: GenerateBody):
         except Exception as e:
             logger.warning("코드베이스 파싱 실패: %s", e)
 
+    # 템플릿 기본값 적용 (사용자가 명시하지 않은 경우)
+    _tpl_defaults = TEMPLATE_DEFAULTS.get(body.template, {})
+    effective_max_images = body.max_images if body.with_images else 0
+    if body.with_images and body.max_images == 2 and "max_images" in _tpl_defaults:
+        effective_max_images = _tpl_defaults["max_images"]
+    effective_length = body.length
+    if body.length == "medium" and "length" in _tpl_defaults:
+        effective_length = _tpl_defaults["length"]
+
     # 프리셋 → 텍스트 모델 매핑
     preset_text_model = {
         "fast": "gemini-2.5-flash",
@@ -640,7 +687,7 @@ async def generate(body: GenerateBody):
     t0 = time.perf_counter()
     try:
         markdown = await text_gen.generate_document_async(
-            topic, body.template, key, length_tier=body.length,
+            topic, body.template, key, length_tier=effective_length,
             text_model=text_model,
             reference_doc=ref_doc,
             series_name=body.series_name,
@@ -653,16 +700,17 @@ async def generate(body: GenerateBody):
 
     images_out: list[dict] = []
     image_prompts_used: list[str] = []
-    if body.with_images and body.max_images > 0:
-        excerpt_cap = excerpt_limit_for_tier(body.length)
+    if body.with_images and effective_max_images > 0:
+        excerpt_cap = excerpt_limit_for_tier(effective_length)
         try:
             prompts = await text_gen.generate_image_prompts_async(
                 topic,
                 markdown,
-                body.max_images,
+                effective_max_images,
                 key,
                 excerpt_max_chars=excerpt_cap,
                 extra_hints=body.image_hints,
+                template=body.template,
             )
         except Exception as e:
             logger.warning("이미지 프롬프트 생성 실패: %s", e)
@@ -670,8 +718,8 @@ async def generate(body: GenerateBody):
                 f"Editorial illustration, conceptual, related to: {topic[:100]}"
             ] * min(body.max_images, 1)
 
-        image_prompts_used = list(prompts[: body.max_images])
-        for i, prompt in enumerate(prompts[: body.max_images]):
+        image_prompts_used = list(prompts[: effective_max_images])
+        for i, prompt in enumerate(prompts[: effective_max_images]):
             try:
                 data, label, mime = await image_gen.generate_one_image_async(
                     key, prompt, aspect_ratio="16:9", image_preset=image_preset,
@@ -728,14 +776,31 @@ async def generate(body: GenerateBody):
             except Exception as e:
                 logger.warning("SVG %s 생성 실패: %s", i, e)
 
-    # 영문 번역
+    # 영문 생성 (이중 언어 동시 생성 또는 순차 번역)
     markdown_en = ""
     if body.with_english:
         try:
-            markdown_en = await translate_to_english_async(markdown, key)
+            bilingual = await generate_bilingual_async(
+                key, topic, body.template,
+                length_tier=effective_length,
+                text_model=text_model,
+                reference_doc=ref_doc,
+                series_name=body.series_name,
+                series_order=body.series_order,
+                series_slug=body.series_slug,
+            )
+            markdown = bilingual["ko"] or markdown
+            markdown_en = bilingual["en"] or ""
+            # Re-inject images into bilingual korean if needed
+            if images_out:
+                markdown = inject_images_into_markdown(markdown, images_out)
         except Exception as e:
-            logger.warning("영문 번역 실패: %s", e)
-            markdown_en = ""
+            logger.warning("이중 언어 생성 실패, 번역 시도: %s", e)
+            try:
+                markdown_en = await translate_to_english_async(markdown, key)
+            except Exception as e2:
+                logger.warning("영문 번역 실패: %s", e2)
+                markdown_en = ""
 
     elapsed_ms = int((time.perf_counter() - t0) * 1000)
     slug = _slug_from_topic(topic)
