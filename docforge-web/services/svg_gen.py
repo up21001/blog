@@ -31,6 +31,18 @@ Rules:
 - Add subtle drop shadows using <filter> for boxes
 - No external resources, no JavaScript
 
+═══ TEXT OVERFLOW RULES — KOREAN TEXT IS WIDER THAN LATIN ═══
+
+- viewBox width is 800. ALL text MUST stay within x=40 to x=760 (720px usable).
+- Korean characters are ~1.2× wider than Latin at the same font-size.
+  → At font-size 18: max ~35 Korean chars per line
+  → At font-size 22: max ~28 Korean chars per line
+  → At font-size 28: max ~22 Korean chars per line
+- NEVER place long description text beside an icon in a narrow column.
+  → Put the title on one row, icon below it, description text BELOW the icon using FULL width.
+- If a text line exceeds the usable width, split it into multiple <text> lines (dy or separate y).
+- SELF-CHECK: for every <text> element, calculate (x + text_width). If it exceeds 760, shorten or split.
+
 ═══ ARROW RULES — VIOLATIONS WILL PRODUCE BROKEN DIAGRAMS ═══
 
 RENDERING ORDER (non-negotiable):
@@ -73,6 +85,7 @@ Rules:
 - All text must be in Korean if the prompt is Korean
 - Include a clear title at the top
 - No external resources, no JavaScript
+- Korean text overflow prevention: viewBox width is 800, usable text area x=40 to x=760. Korean chars are ~1.2× wider than Latin. At font-size 18 max ~35 chars/line, at 22 max ~28, at 28 max ~22. Never place long text beside icons in narrow columns — use full width below icons. Split long lines into multiple <text> elements.
 - If using arrows/connectors: ABSOLUTE BAN on crossing through any box. Route arrows through empty space only (above/below all boxes). Place all arrow elements AFTER all box elements. Self-check each path for overlap before output.""",
 
     "icon": """You are an expert SVG icon generator.

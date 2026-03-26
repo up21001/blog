@@ -1,0 +1,76 @@
+<svg width="800" height="1050" viewBox="0 0 800 1050" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+  <rect x="0" y="0" width="800" height="1050" fill="#f8f8f8"/>
+
+  <!-- Title -->
+  <text x="400" y="70" font-size="36" font-weight="bold" fill="#333" text-anchor="middle">
+    러스트 소유권 시스템의 세 가지 핵심 규칙
+  </text>
+
+  <!-- Rule 1 -->
+  <g transform="translate(0, 110)">
+    <rect x="40" y="0" width="720" height="230" rx="15" fill="#ffffff" stroke="#e0e0e0" stroke-width="1"/>
+    <text x="70" y="45" font-size="28" font-weight="bold" fill="#4A90E2">1.</text>
+    <text x="108" y="45" font-size="28" font-weight="bold" fill="#333">각 값은 하나의 변수가 소유합니다</text>
+
+    <!-- Icon -->
+    <circle cx="140" cy="120" r="30" fill="#4A90E2"/>
+    <text x="140" y="128" font-size="18" font-weight="bold" fill="#fff" text-anchor="middle">변수</text>
+    <path d="M 175 120 L 210 120" fill="none" stroke="#4A90E2" stroke-width="3" marker-end="url(#arrow1)"/>
+    <rect x="215" y="100" width="55" height="40" rx="5" fill="#D8EEFF" stroke="#4A90E2" stroke-width="2"/>
+    <text x="242" y="128" font-size="18" font-weight="bold" fill="#4A90E2" text-anchor="middle">값</text>
+
+    <text x="70" y="185" font-size="18" fill="#555">러스트의 모든 데이터는 하나의 변수에 의해 '소유'됩니다.</text>
+    <text x="70" y="210" font-size="18" fill="#555">이 변수가 스코프를 벗어나면 데이터도 함께 정리됩니다.</text>
+  </g>
+
+  <!-- Rule 2 -->
+  <g transform="translate(0, 370)">
+    <rect x="40" y="0" width="720" height="230" rx="15" fill="#ffffff" stroke="#e0e0e0" stroke-width="1"/>
+    <text x="70" y="45" font-size="28" font-weight="bold" fill="#50E3C2">2.</text>
+    <text x="108" y="45" font-size="28" font-weight="bold" fill="#333">소유자는 언제든지 변경될 수 있습니다</text>
+
+    <!-- Icon -->
+    <circle cx="110" cy="120" r="28" fill="#50E3C2"/>
+    <text x="110" y="127" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">변수A</text>
+    <rect x="155" y="100" width="45" height="40" rx="5" fill="#E0FFF9" stroke="#50E3C2" stroke-width="2"/>
+    <text x="177" y="127" font-size="18" font-weight="bold" fill="#50E3C2" text-anchor="middle">값</text>
+    <path d="M 205 120 L 235 120" fill="none" stroke="#50E3C2" stroke-width="3" marker-end="url(#arrow2)"/>
+    <circle cx="268" cy="120" r="28" fill="#50E3C2"/>
+    <text x="268" y="127" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">변수B</text>
+
+    <text x="70" y="185" font-size="18" fill="#555">소유권은 변수 간에 이동할 수 있습니다. 이를 '이동(move)'이라 하며,</text>
+    <text x="70" y="210" font-size="18" fill="#555">이동 후 이전 소유자는 더 이상 값에 접근할 수 없습니다.</text>
+  </g>
+
+  <!-- Rule 3 -->
+  <g transform="translate(0, 630)">
+    <rect x="40" y="0" width="720" height="230" rx="15" fill="#ffffff" stroke="#e0e0e0" stroke-width="1"/>
+    <text x="70" y="45" font-size="28" font-weight="bold" fill="#F5A623">3.</text>
+    <text x="108" y="45" font-size="28" font-weight="bold" fill="#333">한 번에 오직 하나의 소유자만 존재합니다</text>
+
+    <!-- Icon -->
+    <circle cx="110" cy="120" r="28" fill="#F5A623"/>
+    <text x="110" y="127" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">변수A</text>
+    <rect x="160" y="100" width="45" height="40" rx="5" fill="#FFF2E0" stroke="#F5A623" stroke-width="2"/>
+    <text x="182" y="127" font-size="18" font-weight="bold" fill="#F5A623" text-anchor="middle">값</text>
+    <circle cx="260" cy="120" r="28" fill="#F5A623"/>
+    <text x="260" y="127" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">변수B</text>
+    <path d="M 232 120 L 205 120" fill="none" stroke="#F5A623" stroke-width="3"/>
+    <!-- X mark on variableB's connection -->
+    <circle cx="232" cy="120" r="16" fill="none" stroke="#E74C3C" stroke-width="3"/>
+    <line x1="222" y1="110" x2="242" y2="130" stroke="#E74C3C" stroke-width="3"/>
+
+    <text x="70" y="185" font-size="18" fill="#555">러스트는 데이터 경쟁을 방지하기 위해 한 번에 오직 하나의</text>
+    <text x="70" y="210" font-size="18" fill="#555">변수만이 특정 값의 소유권을 가질 수 있도록 강제합니다.</text>
+  </g>
+
+  <!-- Arrow markers -->
+  <defs>
+    <marker id="arrow1" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="8" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#4A90E2"/>
+    </marker>
+    <marker id="arrow2" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="8" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#50E3C2"/>
+    </marker>
+  </defs>
+</svg>

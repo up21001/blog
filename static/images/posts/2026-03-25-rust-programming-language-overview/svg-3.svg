@@ -1,0 +1,164 @@
+<svg viewBox="0 0 800 950" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#4A90D9" />
+    </marker>
+    <marker id="arrowhead-red" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#FF6B6B" />
+    </marker>
+    <marker id="arrowhead-green" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#50C878" />
+    </marker>
+    <filter id="dropshadow" height="130%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3"/>
+      <feOffset dx="2" dy="2" result="offsetblur"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.2"/>
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="800" height="950" fill="#f8f9fa"/>
+
+  <style>
+    .code-box { fill: #E0F2F7; stroke: #A7D9ED; stroke-width: 1; filter: url(#dropshadow); rx: 8; ry: 8; }
+    .variable-box { fill: #FFD93D; stroke: #E0C03A; stroke-width: 1; rx: 5; ry: 5; }
+    .data-box { fill: #50C878; stroke: #40A060; stroke-width: 1; rx: 5; ry: 5; }
+    .invalid-box { fill: #FF6B6B; stroke: #D05050; stroke-width: 1; rx: 5; ry: 5; }
+    .scope-box { fill: #6C5CE7; opacity: 0.1; stroke: #6C5CE7; stroke-width: 2; stroke-dasharray: 5 5; rx: 10; ry: 10; }
+    text { font-family: Arial, sans-serif; font-size: 14px; fill: #333; }
+    .code-text { font-size: 16px; font-weight: bold; fill: #222; }
+    .label-text { font-size: 12px; fill: #555; }
+    .ownership-arrow { stroke: #4A90D9; stroke-width: 2; marker-end: url(#arrowhead); fill: none; }
+    .move-arrow { stroke: #FFD93D; stroke-width: 3; marker-end: url(#arrowhead); fill: none; }
+    .clone-arrow { stroke: #50C878; stroke-width: 3; marker-end: url(#arrowhead-green); fill: none; }
+    .dealloc-arrow { stroke: #FF6B6B; stroke-width: 2; marker-end: url(#arrowhead-red); fill: none; stroke-dasharray: 4 2; }
+    .invalid-text { fill: #FF6B6B; font-weight: bold; }
+    .scope-title { font-size: 16px; font-weight: bold; fill: #6C5CE7; }
+  </style>
+
+  <!-- Title -->
+  <text x="400" y="30" text-anchor="middle" class="code-text" font-size="20px">러스트 소유권 및 메모리 관리 시각화</text>
+
+  <!-- Main Scope -->
+  <rect x="30" y="50" width="740" height="890" class="scope-box"/>
+  <text x="45" y="75" class="scope-title">메인 스코프</text>
+
+  <!-- Step 1: let s1 = String::from("hello"); -->
+  <g transform="translate(50, 90)">
+    <rect x="0" y="0" width="300" height="35" class="code-box"/>
+    <text x="10" y="23" class="code-text">1. let s1 = String::from("hello");</text>
+
+    <rect x="30" y="60" width="60" height="30" class="variable-box"/>
+    <text x="60" y="80" text-anchor="middle">s1</text>
+
+    <rect x="200" y="60" width="100" height="30" class="data-box"/>
+    <text x="250" y="80" text-anchor="middle">"hello" (힙)</text>
+
+    <path d="M 90 75 L 195 75" class="ownership-arrow"/>
+    <text x="130" y="58" class="label-text">소유권</text>
+  </g>
+
+  <!-- Step 2: let s2 = s1; -->
+  <g transform="translate(50, 210)">
+    <rect x="0" y="0" width="180" height="35" class="code-box"/>
+    <text x="10" y="23" class="code-text">2. let s2 = s1;</text>
+
+    <rect x="30" y="60" width="60" height="30" class="invalid-box"/>
+    <text x="60" y="80" text-anchor="middle" class="invalid-text">s1</text>
+    <text x="60" y="105" text-anchor="middle" class="label-text">(무효화됨)</text>
+
+    <rect x="150" y="60" width="60" height="30" class="variable-box"/>
+    <text x="180" y="80" text-anchor="middle">s2</text>
+
+    <rect x="320" y="60" width="100" height="30" class="data-box"/>
+    <text x="370" y="80" text-anchor="middle">"hello" (힙)</text>
+
+    <path d="M 90 75 L 145 75" class="move-arrow"/>
+    <text x="95" y="58" class="label-text">소유권 이동</text>
+
+    <path d="M 210 75 L 315 75" class="ownership-arrow"/>
+  </g>
+
+  <!-- Step 3: let s3 = s2.clone(); -->
+  <g transform="translate(50, 340)">
+    <rect x="0" y="0" width="230" height="35" class="code-box"/>
+    <text x="10" y="23" class="code-text">3. let s3 = s2.clone();</text>
+
+    <rect x="30" y="60" width="60" height="30" class="variable-box"/>
+    <text x="60" y="80" text-anchor="middle">s2</text>
+
+    <rect x="30" y="130" width="60" height="30" class="variable-box"/>
+    <text x="60" y="150" text-anchor="middle">s3</text>
+
+    <rect x="250" y="60" width="100" height="30" class="data-box"/>
+    <text x="300" y="80" text-anchor="middle">"hello" (힙)</text>
+
+    <rect x="250" y="130" width="130" height="30" class="data-box"/>
+    <text x="315" y="150" text-anchor="middle">"hello" (복제본)</text>
+
+    <path d="M 90 75 L 245 75" class="ownership-arrow"/>
+
+    <path d="M 300 90 C 340 100, 340 120, 300 130" class="clone-arrow"/>
+    <text x="345" y="115" class="label-text">데이터 복제</text>
+
+    <path d="M 90 145 L 245 145" class="ownership-arrow"/>
+  </g>
+
+  <!-- Step 4: takes_ownership(s3); -->
+  <g transform="translate(50, 530)">
+    <rect x="0" y="0" width="250" height="35" class="code-box"/>
+    <text x="10" y="23" class="code-text">4. takes_ownership(s3);</text>
+
+    <rect x="30" y="60" width="60" height="30" class="variable-box"/>
+    <text x="60" y="80" text-anchor="middle">s2</text>
+
+    <rect x="250" y="60" width="100" height="30" class="data-box"/>
+    <text x="300" y="80" text-anchor="middle">"hello" (힙)</text>
+
+    <path d="M 90 75 L 245 75" class="ownership-arrow"/>
+
+    <!-- s3 invalidated -->
+    <rect x="30" y="130" width="60" height="30" class="invalid-box"/>
+    <text x="60" y="150" text-anchor="middle" class="invalid-text">s3</text>
+    <text x="60" y="170" text-anchor="middle" class="label-text">(무효화됨)</text>
+
+    <!-- Function scope -->
+    <rect x="220" y="115" width="470" height="80" class="scope-box"/>
+    <text x="235" y="137" class="scope-title">takes_ownership 함수 스코프</text>
+
+    <rect x="240" y="150" width="80" height="30" class="variable-box"/>
+    <text x="280" y="170" text-anchor="middle">param_s</text>
+
+    <rect x="430" y="150" width="130" height="30" class="data-box"/>
+    <text x="495" y="170" text-anchor="middle">"hello" (복제본)</text>
+
+    <path d="M 90 145 L 235 165" class="move-arrow"/>
+    <text x="130" y="140" class="label-text">소유권 이동</text>
+
+    <path d="M 320 165 L 425 165" class="ownership-arrow"/>
+
+    <!-- Dealloc when function returns -->
+    <path d="M 495 180 V 210" class="dealloc-arrow"/>
+    <text x="495" y="228" text-anchor="middle" class="invalid-text" font-size="12px">함수 종료 → 복제본 해제</text>
+  </g>
+
+  <!-- Final: Main scope end -->
+  <g transform="translate(50, 800)">
+    <text x="300" y="0" text-anchor="middle" class="code-text" font-size="16px">메인 스코프 종료</text>
+
+    <rect x="30" y="20" width="60" height="30" class="invalid-box"/>
+    <text x="60" y="40" text-anchor="middle" class="invalid-text">s2</text>
+    <text x="60" y="60" text-anchor="middle" class="label-text">(무효화됨)</text>
+
+    <rect x="250" y="20" width="100" height="30" class="invalid-box"/>
+    <text x="300" y="40" text-anchor="middle" class="invalid-text">"hello" (힙)</text>
+
+    <path d="M 90 35 L 245 35" class="dealloc-arrow"/>
+    <text x="160" y="18" class="label-text">데이터 해제</text>
+  </g>
+</svg>
