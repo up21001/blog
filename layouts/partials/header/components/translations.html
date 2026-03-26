@@ -1,0 +1,37 @@
+{{ if gt (len .Site.Languages) 1 }}
+  <div class="translation nested-menu">
+    <button class="cursor-pointer flex items-center">
+      <span class="me-1">
+        {{ partial "icon.html" "language" }}
+      </span>
+      <span class="text-sm font-medium bf-icon-color-hover">
+        {{- upper .Site.Language.Lang -}}
+      </span>
+    </button>
+    <ul class="menuhide">
+      <li class="rounded-xl backdrop-blur shadow-2xl p-2 flex flex-col gap-1">
+        {{ if .IsTranslated }}
+          {{/* 번역이 있으면 해당 페이지로 이동 */}}
+          {{ range .AllTranslations }}
+            <a href="{{ .RelPermalink }}" class="flex items-center bf-icon-color-hover px-3 py-1">
+              <span class="text-sm font-sm" title="{{ .Title }}">
+                {{ .Language.Params.displayName | default .Language.LanguageName | emojify }}
+              </span>
+            </a>
+          {{ end }}
+        {{ else }}
+          {{/* 번역이 없으면 다른 언어의 홈으로 이동 */}}
+          {{ range .Site.Languages }}
+            {{ if ne .Lang $.Site.Language.Lang }}
+              <a href="{{ "" | absLangURL }}" class="flex items-center bf-icon-color-hover px-3 py-1">
+                <span class="text-sm font-sm">
+                  {{ .Params.displayName | default .LanguageName | emojify }}
+                </span>
+              </a>
+            {{ end }}
+          {{ end }}
+        {{ end }}
+      </li>
+    </ul>
+  </div>
+{{ end }}
