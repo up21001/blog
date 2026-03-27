@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <defs>
+    <filter id="shadow1" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrowB" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#4A90D9"/>
+    </marker>
+    <marker id="arrowG" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#50C878"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="400" fill="#f8f9fa" rx="12"/>
+
+  <!-- Title -->
+  <text x="400" y="38" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#2d3748">웹 요청 vs 작업 스케줄링</text>
+
+  <!-- Divider -->
+  <line x1="400" y1="55" x2="400" y2="380" stroke="#dee2e6" stroke-width="2" stroke-dasharray="6,4"/>
+
+  <!-- LEFT SIDE HEADER -->
+  <rect x="60" y="60" width="300" height="40" rx="8" fill="#4A90D9" filter="url(#shadow1)"/>
+  <text x="210" y="86" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#ffffff">웹 요청 흐름</text>
+
+  <!-- LEFT BOXES -->
+  <rect x="80" y="120" width="260" height="44" rx="8" fill="#ffffff" stroke="#4A90D9" stroke-width="2" filter="url(#shadow1)"/>
+  <text x="210" y="147" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#2d3748">👆 사용자 클릭</text>
+
+  <rect x="80" y="196" width="260" height="44" rx="8" fill="#ffffff" stroke="#4A90D9" stroke-width="2" filter="url(#shadow1)"/>
+  <text x="210" y="223" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#2d3748">🌐 서버 API 호출</text>
+
+  <rect x="80" y="272" width="260" height="44" rx="8" fill="#ffffff" stroke="#4A90D9" stroke-width="2" filter="url(#shadow1)"/>
+  <text x="210" y="299" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#2d3748">⚙️ 데이터 처리</text>
+
+  <rect x="80" y="348" width="260" height="44" rx="8" fill="#e8f4fd" stroke="#4A90D9" stroke-width="2" filter="url(#shadow1)"/>
+  <text x="210" y="375" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#2d3748">📤 결과 응답</text>
+
+  <!-- LEFT ARROWS -->
+  <line x1="210" y1="164" x2="210" y2="194" stroke="#4A90D9" stroke-width="2" marker-end="url(#arrowB)"/>
+  <line x1="210" y1="240" x2="210" y2="270" stroke="#4A90D9" stroke-width="2" marker-end="url(#arrowB)"/>
+  <line x1="210" y1="316" x2="210" y2="346" stroke="#4A90D9" stroke-width="2" marker-end="url(#arrowB)"/>
+
+  <!-- RIGHT SIDE HEADER -->
+  <rect x="440" y="60" width="300" height="40" rx="8" fill="#50C878" filter="url(#shadow1)"/>
+  <text x="590" y="86" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#ffffff">작업 스케줄링 흐름</text>
+
+  <!-- RIGHT BOXES -->
+  <rect x="460" y="120" width="260" height="44" rx="8" fill="#ffffff" stroke="#50C878" stroke-width="2" filter="url(#shadow1)"/>
+  <text x="590" y="147" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#2d3748">⏳ 스케줄러 대기</text>
+
+  <rect x="460" y="196" width="260" height="44" rx="8" fill="#ffffff" stroke="#50C878" stroke-width="2" filter="url(#shadow1)"/>
+  <text x="590" y="223" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#2d3748">⏰ 지정 시간 도달</text>
+
+  <rect x="460" y="272" width="260" height="44" rx="8" fill="#ffffff" stroke="#50C878" stroke-width="2" filter="url(#shadow1)"/>
+  <text x="590" y="299" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#2d3748">🔄 백그라운드 작업 실행</text>
+
+  <rect x="460" y="348" width="260" height="44" rx="8" fill="#e8fdf0" stroke="#50C878" stroke-width="2" filter="url(#shadow1)"/>
+  <text x="590" y="375" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#2d3748">📝 로그 기록</text>
+
+  <!-- RIGHT ARROWS -->
+  <line x1="590" y1="164" x2="590" y2="194" stroke="#50C878" stroke-width="2" marker-end="url(#arrowG)"/>
+  <line x1="590" y1="240" x2="590" y2="270" stroke="#50C878" stroke-width="2" marker-end="url(#arrowG)"/>
+  <line x1="590" y1="316" x2="590" y2="346" stroke="#50C878" stroke-width="2" marker-end="url(#arrowG)"/>
+</svg>

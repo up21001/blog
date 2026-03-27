@@ -34,7 +34,7 @@ enableRobotsTXT = true
 [params.homepage]
   layout = "profile"
   showRecent = true
-  recentLimit = 20
+  recentLimit = 12
 
 [params.list]
   showHero = true

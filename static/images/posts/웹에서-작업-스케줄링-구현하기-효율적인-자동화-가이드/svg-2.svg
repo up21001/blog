@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <defs>
+    <filter id="shadow2" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="400" fill="#f8f9fa" rx="12"/>
+
+  <!-- Title -->
+  <text x="400" y="38" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#2d3748">스케줄링 방식 4가지 분류</text>
+
+  <!-- Top-left: OS 레벨 -->
+  <rect x="50" y="60" width="330" height="150" rx="12" fill="#ffffff" stroke="#4A90D9" stroke-width="2" filter="url(#shadow2)"/>
+  <rect x="50" y="60" width="330" height="44" rx="12" fill="#4A90D9"/>
+  <rect x="50" y="92" width="330" height="12" fill="#4A90D9"/>
+  <text x="215" y="88" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#ffffff">🖥️ OS 레벨</text>
+  <text x="80" y="132" font-family="Arial, sans-serif" font-size="28" fill="#4A90D9">$</text>
+  <text x="118" y="128" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2d3748">Cron</text>
+  <text x="118" y="148" font-family="Arial, sans-serif" font-size="12" fill="#666666">리눅스 내장 스케줄러</text>
+  <text x="80" y="185" font-family="Arial, sans-serif" font-size="11" fill="#888888">• crontab -e 로 설정</text>
+  <text x="80" y="202" font-family="Arial, sans-serif" font-size="11" fill="#888888">• 단일 서버 환경에 적합</text>
+
+  <!-- Top-right: 앱 레벨 -->
+  <rect x="420" y="60" width="330" height="150" rx="12" fill="#ffffff" stroke="#50C878" stroke-width="2" filter="url(#shadow2)"/>
+  <rect x="420" y="60" width="330" height="44" rx="12" fill="#50C878"/>
+  <rect x="420" y="92" width="330" height="12" fill="#50C878"/>
+  <text x="585" y="88" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#ffffff">📦 앱 레벨</text>
+  <text x="450" y="132" font-family="Arial, sans-serif" font-size="24" fill="#50C878">{ }</text>
+  <text x="490" y="128" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2d3748">node-cron / APScheduler</text>
+  <text x="490" y="148" font-family="Arial, sans-serif" font-size="12" fill="#666666">앱 코드 내 스케줄러 내장</text>
+  <text x="450" y="185" font-family="Arial, sans-serif" font-size="11" fill="#888888">• 배포 일원화 가능</text>
+  <text x="450" y="202" font-family="Arial, sans-serif" font-size="11" fill="#888888">• 소규모 웹 서비스에 적합</text>
+
+  <!-- Bottom-left: 분산 처리 -->
+  <rect x="50" y="232" width="330" height="150" rx="12" fill="#ffffff" stroke="#6C5CE7" stroke-width="2" filter="url(#shadow2)"/>
+  <rect x="50" y="232" width="330" height="44" rx="12" fill="#6C5CE7"/>
+  <rect x="50" y="264" width="330" height="12" fill="#6C5CE7"/>
+  <text x="215" y="260" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#ffffff">⚡ 분산 처리</text>
+  <text x="80" y="305" font-family="Arial, sans-serif" font-size="22" fill="#6C5CE7">⚙⚙</text>
+  <text x="118" y="300" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2d3748">Celery</text>
+  <text x="118" y="320" font-family="Arial, sans-serif" font-size="12" fill="#666666">워커 기반 분산 처리</text>
+  <text x="80" y="357" font-family="Arial, sans-serif" font-size="11" fill="#888888">• Redis/RabbitMQ 브로커 연동</text>
+  <text x="80" y="374" font-family="Arial, sans-serif" font-size="11" fill="#888888">• 대규모 서비스에 적합</text>
+
+  <!-- Bottom-right: 클라우드 -->
+  <rect x="420" y="232" width="330" height="150" rx="12" fill="#ffffff" stroke="#FFD93D" stroke-width="2" filter="url(#shadow2)"/>
+  <rect x="420" y="232" width="330" height="44" rx="12" fill="#FFD93D"/>
+  <rect x="420" y="264" width="330" height="12" fill="#FFD93D"/>
+  <text x="585" y="260" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#2d3748">☁️ 클라우드</text>
+  <text x="450" y="305" font-family="Arial, sans-serif" font-size="22" fill="#FF9900">☁</text>
+  <text x="490" y="300" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2d3748">AWS EventBridge</text>
+  <text x="490" y="320" font-family="Arial, sans-serif" font-size="12" fill="#666666">클라우드 관리형 스케줄러</text>
+  <text x="450" y="357" font-family="Arial, sans-serif" font-size="11" fill="#888888">• 서버리스 환경에 적합</text>
+  <text x="450" y="374" font-family="Arial, sans-serif" font-size="11" fill="#888888">• 인프라 관리 불필요</text>
+</svg>

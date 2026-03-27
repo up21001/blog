@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300">
+  <defs>
+    <filter id="shadow3" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="300" fill="#f8f9fa" rx="12"/>
+
+  <!-- Title -->
+  <text x="400" y="35" text-anchor="middle" font-family="Arial, sans-serif" font-size="19" font-weight="bold" fill="#2d3748">Cron 표현식 — 5개 필드 구조</text>
+
+  <!-- Field boxes -->
+  <!-- 분 -->
+  <rect x="48" y="58" width="128" height="80" rx="10" fill="#4A90D9" filter="url(#shadow3)"/>
+  <text x="112" y="95" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" font-weight="bold" fill="#ffffff">분</text>
+  <text x="112" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#d0e8ff">0 – 59</text>
+
+  <!-- 시 -->
+  <rect x="192" y="58" width="128" height="80" rx="10" fill="#50C878" filter="url(#shadow3)"/>
+  <text x="256" y="95" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" font-weight="bold" fill="#ffffff">시</text>
+  <text x="256" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#d0fde4">0 – 23</text>
+
+  <!-- 일 -->
+  <rect x="336" y="58" width="128" height="80" rx="10" fill="#FFD93D" filter="url(#shadow3)"/>
+  <text x="400" y="95" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" font-weight="bold" fill="#2d3748">일</text>
+  <text x="400" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#7a6000">1 – 31</text>
+
+  <!-- 월 -->
+  <rect x="480" y="58" width="128" height="80" rx="10" fill="#FF6B6B" filter="url(#shadow3)"/>
+  <text x="544" y="95" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" font-weight="bold" fill="#ffffff">월</text>
+  <text x="544" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#ffd0d0">1 – 12</text>
+
+  <!-- 요일 -->
+  <rect x="624" y="58" width="128" height="80" rx="10" fill="#6C5CE7" filter="url(#shadow3)"/>
+  <text x="688" y="95" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" font-weight="bold" fill="#ffffff">요일</text>
+  <text x="688" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#ddd0ff">0 – 7</text>
+
+  <!-- Separator dots -->
+  <text x="182" y="103" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#aaaaaa">·</text>
+  <text x="326" y="103" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#aaaaaa">·</text>
+  <text x="470" y="103" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#aaaaaa">·</text>
+  <text x="614" y="103" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#aaaaaa">·</text>
+
+  <!-- Example section -->
+  <rect x="80" y="168" width="640" height="60" rx="10" fill="#2d3748" filter="url(#shadow3)"/>
+  <text x="400" y="193" text-anchor="middle" font-family="Arial, monospace" font-size="22" font-weight="bold" fill="#FFD93D">0   0   *   *   *</text>
+  <text x="400" y="217" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#a0aec0">= 매일 자정 (00:00) 에 실행</text>
+
+  <!-- Field labels below example -->
+  <text x="112" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#666666">minute</text>
+  <text x="256" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#666666">hour</text>
+  <text x="400" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#666666">day</text>
+  <text x="544" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#666666">month</text>
+  <text x="688" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#666666">weekday</text>
+
+  <!-- Wildcard note -->
+  <text x="400" y="257" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#888888">* = 모든 값 (와일드카드)</text>
+</svg>
