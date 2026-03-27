@@ -1,7 +1,7 @@
 ---
 title: "하네스(Harness) 엔지니어링 완전 가이드 — CI/CD부터 비용 관리까지"
-date: 2023-10-27T09:00:00+09:00
-lastmod: 2023-10-27T09:00:00+09:00
+date: 2026-03-27T18:00:00+09:00
+lastmod: 2026-03-27T18:00:00+09:00
 description: "Harness CI/CD 플랫폼의 아키텍처, GitOps 워크플로우, 피처 플래그, 클라우드 비용 관리까지. 개발자를 위한 Harness 완전 정복 가이드."
 slug: "harness-engineering-for-developers"
 categories: ["ai-agents"]

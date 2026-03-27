@@ -1,7 +1,7 @@
 ---
 title: "Harness Engineering Complete Guide — From CI/CD to Cloud Cost Management"
-date: 2023-10-27T09:00:00+09:00
-lastmod: 2023-10-27T09:00:00+09:00
+date: 2026-03-27T18:00:00+09:00
+lastmod: 2026-03-27T18:00:00+09:00
 description: "A comprehensive guide to Harness CI/CD platform: architecture, GitOps workflows, feature flags, and cloud cost management for developers."
 slug: "harness-engineering-for-developers"
 categories: ["ai-agents"]
