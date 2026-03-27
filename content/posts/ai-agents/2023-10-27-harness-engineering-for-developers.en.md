@@ -6,7 +6,7 @@ description: "A comprehensive guide to Harness CI/CD platform: architecture, Git
 slug: "harness-engineering-for-developers"
 categories: ["ai-agents"]
 tags: ["Harness", "CI/CD", "DevOps", "GitOps", "Feature Flags", "Cloud Cost"]
-featureimage: "/images/posts/하네스-엔지니어링/svg-1.svg"
+featureimage: "/images/posts/하네스-엔지니어링/svg-1-en.svg"
 series: []
 draft: false
 ---
@@ -52,7 +52,7 @@ Harness modules at a glance:
 
 Understanding the Harness architecture is the starting point for effective operations.
 
-![Harness CI architecture diagram — Control Plane SaaS and Delegate model in customer infrastructure](/images/posts/하네스-엔지니어링/svg-1.svg)
+![Harness CI architecture diagram — Control Plane SaaS and Delegate model in customer infrastructure](/images/posts/하네스-엔지니어링/svg-1-en.svg)
 
 ### Control Plane (SaaS)
 
@@ -92,7 +92,7 @@ helm install harness harness/harness \
 
 ## 3. Six Key Benefits of Harness
 
-![Six key benefits of using Harness](/images/posts/하네스-엔지니어링/svg-2.svg)
+![Six key benefits of using Harness](/images/posts/하네스-엔지니어링/svg-2-en.svg)
 
 Teams that adopt Harness consistently report the following benefits:
 
@@ -310,7 +310,7 @@ rollbackSteps:
 
 ## 6. GitOps Workflow — Git as the Source of Truth
 
-![Harness GitOps workflow — from Git commit to pipeline trigger to build and deploy](/images/posts/하네스-엔지니어링/svg-3.svg)
+![Harness GitOps workflow — from Git commit to pipeline trigger to build and deploy](/images/posts/하네스-엔지니어링/svg-3-en.svg)
 
 ### What Is GitOps?
 
@@ -375,7 +375,7 @@ triggers:
 
 ## 7. Feature Flags — Safe Feature Releases
 
-![Feature Flags concept icon — toggle switch](/images/posts/하네스-엔지니어링/svg-4.svg)
+![Feature Flags concept icon — toggle switch](/images/posts/하네스-엔지니어링/svg-4-en.svg)
 
 ### What Are Feature Flags?
 
@@ -487,7 +487,7 @@ analytics.track('Checkout Initiated', {
 
 ## 8. Cloud Cost Management — Taking Control of Cloud Spend
 
-![Cloud Cost Management icon](/images/posts/하네스-엔지니어링/svg-5.svg)
+![Cloud Cost Management icon](/images/posts/하네스-엔지니어링/svg-5-en.svg)
 
 ### The Reality of Cloud Costs
 

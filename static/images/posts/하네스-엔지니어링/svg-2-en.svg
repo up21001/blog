@@ -1,0 +1,50 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="ds2" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="1" dy="1" stdDeviation="2" flood-color="#000" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="800" height="400" fill="#f8f9fa"/>
+  <text x="400" y="35" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#333" text-anchor="middle">6 Key Benefits of Harness</text>
+
+  <!-- Row 1 -->
+  <rect x="40" y="60" width="230" height="130" rx="10" fill="#4A90D9" filter="url(#ds2)"/>
+  <text x="155" y="95" font-family="Arial, sans-serif" font-size="28" text-anchor="middle">🚀</text>
+  <text x="155" y="120" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Deploy Speed &amp; Stability</text>
+  <text x="155" y="140" font-family="Arial, sans-serif" font-size="11" fill="#ddd" text-anchor="middle">Canary/Blue-Green auto deploy</text>
+  <text x="155" y="158" font-family="Arial, sans-serif" font-size="11" fill="#ddd" text-anchor="middle">Auto rollback minimizes outages</text>
+
+  <rect x="285" y="60" width="230" height="130" rx="10" fill="#50C878" filter="url(#ds2)"/>
+  <text x="400" y="95" font-family="Arial, sans-serif" font-size="28" text-anchor="middle">⚡</text>
+  <text x="400" y="120" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Max Dev Productivity</text>
+  <text x="400" y="140" font-family="Arial, sans-serif" font-size="11" fill="#ddd" text-anchor="middle">Test Intelligence optimization</text>
+  <text x="400" y="158" font-family="Arial, sans-serif" font-size="11" fill="#ddd" text-anchor="middle">Auto pipeline generation</text>
+
+  <rect x="530" y="60" width="230" height="130" rx="10" fill="#FFD93D" filter="url(#ds2)"/>
+  <text x="645" y="95" font-family="Arial, sans-serif" font-size="28" text-anchor="middle">💰</text>
+  <text x="645" y="120" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#333" text-anchor="middle">Cloud Cost Optimization</text>
+  <text x="645" y="140" font-family="Arial, sans-serif" font-size="11" fill="#555" text-anchor="middle">Cost visibility dashboard</text>
+  <text x="645" y="158" font-family="Arial, sans-serif" font-size="11" fill="#555" text-anchor="middle">Auto idle resource detection</text>
+
+  <!-- Row 2 -->
+  <rect x="40" y="210" width="230" height="130" rx="10" fill="#6C5CE7" filter="url(#ds2)"/>
+  <text x="155" y="245" font-family="Arial, sans-serif" font-size="28" text-anchor="middle">🔄</text>
+  <text x="155" y="270" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Release Flexibility</text>
+  <text x="155" y="290" font-family="Arial, sans-serif" font-size="11" fill="#ddd" text-anchor="middle">Feature Flags for gradual rollout</text>
+  <text x="155" y="308" font-family="Arial, sans-serif" font-size="11" fill="#ddd" text-anchor="middle">Built-in A/B testing</text>
+
+  <rect x="285" y="210" width="230" height="130" rx="10" fill="#FF6B6B" filter="url(#ds2)"/>
+  <text x="400" y="245" font-family="Arial, sans-serif" font-size="28" text-anchor="middle">🔒</text>
+  <text x="400" y="270" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Security &amp; Compliance</text>
+  <text x="400" y="290" font-family="Arial, sans-serif" font-size="11" fill="#ddd" text-anchor="middle">Built-in OPA policy engine</text>
+  <text x="400" y="308" font-family="Arial, sans-serif" font-size="11" fill="#ddd" text-anchor="middle">RBAC + audit logs</text>
+
+  <rect x="530" y="210" width="230" height="130" rx="10" fill="#333" filter="url(#ds2)"/>
+  <text x="645" y="245" font-family="Arial, sans-serif" font-size="28" text-anchor="middle">🔗</text>
+  <text x="645" y="270" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Unified DevOps Experience</text>
+  <text x="645" y="290" font-family="Arial, sans-serif" font-size="11" fill="#ddd" text-anchor="middle">CI + CD + FF + CCM single platform</text>
+  <text x="645" y="308" font-family="Arial, sans-serif" font-size="11" fill="#ddd" text-anchor="middle">Eliminates tool fragmentation</text>
+
+  <text x="400" y="380" font-family="Arial, sans-serif" font-size="12" fill="#999" text-anchor="middle">CI: Continuous Integration · CD: Continuous Delivery · FF: Feature Flags · CCM: Cloud Cost Management</text>
+</svg>
