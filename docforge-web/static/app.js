@@ -5,6 +5,7 @@
   let lastSlug = "document";
   let lastGenerateParams = null;
   let previewTimer = null;
+  let currentMarkdownKo = "";
   let currentMarkdownEn = "";
   let currentLang = "ko"; // "ko" | "en"
 
@@ -50,13 +51,19 @@
 
   function getMarkdownForLang(lang) {
     if (lang === "en") return currentMarkdownEn;
-    return getMarkdown();
+    // KO: 현재 편집 중이면 에디터에서, 아니면 저장된 변수에서
+    if (currentLang === "ko") {
+      const live = getMarkdown();
+      if (live) return live;
+    }
+    return currentMarkdownKo;
   }
 
   function setMarkdownForLang(lang, md) {
     if (lang === "en") {
       currentMarkdownEn = md;
     } else {
+      currentMarkdownKo = md;
       const ed = $("mdEditor");
       if (ed) ed.value = md;
       const split = $("mdEditorSplit");
@@ -67,11 +74,13 @@
   // ── 언어 전환 ──
   function switchLang(lang) {
     if (lang === currentLang) return;
-    // 현재 편집 내용 저장
-    setMarkdownForLang(currentLang, getMarkdown());
+    // 현재 편집 내용을 해당 언어 변수에 저장
+    const currentContent = getMarkdown();
+    if (currentLang === "ko") currentMarkdownKo = currentContent;
+    else currentMarkdownEn = currentContent;
     currentLang = lang;
     // 새 언어 내용 로드
-    const md = getMarkdownForLang(lang) || "";
+    const md = (lang === "en" ? currentMarkdownEn : currentMarkdownKo) || "";
     const ed = $("mdEditor");
     if (ed) ed.value = md;
     const split = $("mdEditorSplit");
@@ -674,10 +683,11 @@
     const fn = $("publishFilename");
     if (fn && j.suggested_filename) fn.value = j.suggested_filename;
 
+    currentMarkdownKo = j.markdown || "";
     const editor = $("mdEditor");
-    if (editor) editor.value = j.markdown || "";
+    if (editor) editor.value = currentMarkdownKo;
     const splitEditor = $("mdEditorSplit");
-    if (splitEditor) splitEditor.value = j.markdown || "";
+    if (splitEditor) splitEditor.value = currentMarkdownKo;
 
     // 에셋 상태 초기화
     currentImages = (j.images || []).map((img, i) => ({
