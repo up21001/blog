@@ -16,7 +16,21 @@
   }
 
   function apiUrl(path) {
-    return new URL(path, window.location.origin).href;
+    const p = path.startsWith("/") ? path : `/${path}`;
+    const raw = (typeof localStorage !== "undefined" && localStorage.getItem("docforge_api_base")) || "";
+    const stored = raw.trim();
+    if (stored && /^https?:\/\//i.test(stored)) {
+      const base = stored.replace(/\/$/, "");
+      return new URL(p, `${base}/`).href;
+    }
+    const proto = window.location.protocol;
+    const origin = window.location.origin;
+    if (proto === "http:" || proto === "https:") {
+      if (origin && origin !== "null") {
+        return new URL(p, `${origin}/`).href;
+      }
+    }
+    return new URL(p, "http://127.0.0.1:8765/").href;
   }
 
   function debounce(fn, ms) {
@@ -154,6 +168,43 @@
     const s = p.replace(/\\/g, "/");
     const i = s.lastIndexOf("/");
     return i >= 0 ? s.slice(i + 1) : s;
+  }
+
+  /** SVG 문자열을 안전하게 미리보기 (innerHTML에 직접 넣지 않음 — </div> 등으로 카드 DOM이 깨지는 것 방지) */
+  function svgToDataUri(svgStr) {
+    const s = String(svgStr || "").trim();
+    if (!s) return "";
+    return `data:image/svg+xml;charset=utf-8,${encodeURIComponent(s)}`;
+  }
+
+  function syncSvgPreviewBody(bodyEl, code) {
+    if (!bodyEl) return;
+    const uri = svgToDataUri(code);
+    let img = bodyEl.querySelector(".svg-preview-img");
+    let empty = bodyEl.querySelector(".svg-empty-preview");
+    if (uri) {
+      if (empty) empty.hidden = true;
+      if (!img) {
+        img = document.createElement("img");
+        img.className = "svg-preview-img";
+        img.alt = "";
+        bodyEl.appendChild(img);
+      }
+      img.hidden = false;
+      img.src = uri;
+    } else {
+      if (img) {
+        img.hidden = true;
+        img.removeAttribute("src");
+      }
+      if (!empty) {
+        empty = document.createElement("span");
+        empty.className = "svg-empty-preview";
+        bodyEl.appendChild(empty);
+      }
+      empty.hidden = false;
+      empty.textContent = "SVG 코드 없음 — 재생성을 눌러 주세요";
+    }
   }
 
   // ── 워크플로우 ──
@@ -349,7 +400,7 @@
           <button class="btn-icon danger btn-card-delete" title="삭제">✕</button>
         </div>
       </div>
-      <div class="asset-card-body svg-body">${svg.svg || ""}</div>
+      <div class="asset-card-body svg-body"></div>
       <div class="asset-card-edit">
         <div class="edit-actions" style="margin-bottom:0.4rem">
           <button class="btn btn-sm btn-card-insert-svg">📎 본문에 삽입</button>
@@ -375,10 +426,11 @@
     const editor = card.querySelector(".svg-editor");
     const body = card.querySelector(".svg-body");
     const debouncedSvg = debounce(() => {
-      body.innerHTML = editor.value;
       currentSvgs[idx].svg = editor.value;
+      syncSvgPreviewBody(body, editor.value);
     }, 300);
     editor.addEventListener("input", debouncedSvg);
+    syncSvgPreviewBody(body, svg.svg || "");
 
     // 재생성
     card.querySelector(".btn-card-regen").addEventListener("click", () => regenSvg(idx));
@@ -599,6 +651,15 @@
       data_base64: img.data_base64,
     }));
     currentSvgs = (j.svgs || []).map((svg, i) => ({
+      index: i,
+      type: svg.type || "architecture",
+      style: svg.style || "modern",
+      description: svg.description || "",
+      svg: svg.svg || "",
+    }));
+
+    // 영문 SVG 저장 (있으면)
+    window._currentSvgsEn = (j.svgs_en || []).map((svg, i) => ({
       index: i,
       type: svg.type || "architecture",
       style: svg.style || "modern",
@@ -912,6 +973,15 @@
         const svgB64 = btoa(unescape(encodeURIComponent(svg.svg || "")));
         imagesToSave.push({ filename: `svg-${i + 1}.svg`, mime: "image/svg+xml", data_base64: svgB64 });
       });
+      // 영문 SVG도 저장
+      if (window._currentSvgsEn && window._currentSvgsEn.length) {
+        window._currentSvgsEn.forEach((svg, i) => {
+          if (svg.svg) {
+            const svgB64 = btoa(unescape(encodeURIComponent(svg.svg)));
+            imagesToSave.push({ filename: `svg-${i + 1}-en.svg`, mime: "image/svg+xml", data_base64: svgB64 });
+          }
+        });
+      }
 
       // 현재 언어가 en이면 영문 내용 동기화
       if (currentLang === "en") currentMarkdownEn = md;
@@ -1088,6 +1158,147 @@
         updatePublishCategoryRecap();
       }
     } catch { line.hidden = true; }
+  }
+
+  async function appendTrending404Diagnosis() {
+    const lines = ["", "── 자동 진단 ──"];
+    try {
+      const hr = await fetch(apiUrl("/api/health"), { cache: "no-store" });
+      const hj = await hr.json().catch(() => ({}));
+      if (hr.ok) {
+        lines.push(`GET /api/health → OK, version=${hj.version != null ? hj.version : "?"}`);
+        if (!hj.capabilities || !hj.capabilities.trending_topics) {
+          lines.push("→ capabilities.trending_topics 없음: 구버전 DocForge가 8765에서 돌고 있을 수 있습니다.");
+        }
+      } else {
+        lines.push(`GET /api/health → HTTP ${hr.status} (이 주소에 DocForge API가 아닐 수 있음)`);
+      }
+    } catch (e) {
+      lines.push(`GET /api/health 실패: ${e.message || e}`);
+    }
+    try {
+      const orr = await fetch(apiUrl("/openapi.json"), { cache: "no-store" });
+      const spec = await orr.json();
+      const has = spec.paths && Object.prototype.hasOwnProperty.call(spec.paths, "/api/trending-topics");
+      lines.push(
+        has
+          ? "OpenAPI: /api/trending-topics 등록됨 (URL/프록시 불일치 가능)"
+          : "OpenAPI: /api/trending-topics 없음 → 실행 중인 app.py가 트렌드 이전 버전입니다.",
+      );
+    } catch (e) {
+      lines.push(`OpenAPI 조회 실패: ${e.message || e}`);
+    }
+    lines.push("", "포트 점유 확인(PowerShell): netstat -ano | findstr :8765");
+    return lines.join("\n");
+  }
+
+  // ── 트렌드 주제 (Hacker News + DEV Community 공개 API) ──
+  const btnTrend = $("btnTrendingTopics");
+  if (btnTrend) {
+    btnTrend.addEventListener("click", async () => {
+      const panel = $("trendingPanel");
+      const list = $("trendingList");
+      const errEl = $("trendingError");
+      const meta = $("trendingMeta");
+      const loc = $("trendingLocalize");
+      const localize = !!(loc && loc.checked);
+      if (panel) panel.hidden = false;
+      if (errEl) {
+        errEl.hidden = true;
+        errEl.textContent = "";
+      }
+      if (meta) meta.textContent = "";
+      if (list) list.innerHTML = "<li class=\"trending-loading\">불러오는 중…</li>";
+      btnTrend.disabled = true;
+      try {
+        const r = await fetch(
+          apiUrl(`/api/trending-topics?limit=18&localize=${localize ? "true" : "false"}`),
+          { cache: "no-store" },
+        );
+        const j = await r.json().catch(() => ({}));
+        if (!r.ok) {
+          const d = j.detail;
+          let msg = typeof d === "string" ? d : (Array.isArray(d) ? d.map((x) => x.msg || x).join(" ") : JSON.stringify(d || {}));
+          if (r.status === 404 || msg === "Not Found") {
+            msg = [
+              "API를 찾을 수 없습니다(404).",
+              "",
+              "① docforge-web 폴더에서 서버를 다시 켜 보세요.",
+              "   .\\run.ps1",
+              "   또는: python -m uvicorn app:app --host 127.0.0.1 --reload --port 8765",
+              "② 8765를 이미 쓰는 다른 프로그램이 있으면 끄거나 DocForge를 다른 포트로 띄운 뒤",
+              "   localStorage.setItem(\"docforge_api_base\", \"http://127.0.0.1:새포트\")",
+              "③ Live Server로 HTML만 연 경우에도 위와 같이 docforge_api_base를 맞추세요.",
+            ].join("\n");
+            msg += await appendTrending404Diagnosis();
+          }
+          throw new Error(msg || "불러오기 실패");
+        }
+        const items = Array.isArray(j.items) ? j.items : [];
+        if (meta) {
+          meta.textContent = `갱신(UTC): ${j.fetched_at || "—"} · HN + DEV${localize ? " · 한글 주제 변환" : ""}`;
+        }
+        if (!list) return;
+        list.innerHTML = "";
+        if (!items.length) {
+          list.innerHTML = "<li class=\"trending-loading\">항목이 없습니다.</li>";
+          return;
+        }
+        items.forEach((it) => {
+          const topicLine = (it.topic_ko != null && String(it.topic_ko).trim())
+            ? String(it.topic_ko).trim()
+            : String(it.title || "").trim();
+          const li = document.createElement("li");
+          const left = document.createElement("div");
+          left.className = "trend-title";
+          const srcEl = document.createElement("div");
+          srcEl.className = "trend-src";
+          srcEl.textContent = String(it.source || "").replace(/_/g, " ");
+          left.appendChild(srcEl);
+          const t1 = document.createElement("div");
+          t1.textContent = it.title || "";
+          left.appendChild(t1);
+          if (it.topic_ko && String(it.topic_ko).trim() && it.topic_ko !== it.title) {
+            const tk = document.createElement("div");
+            tk.className = "trend-ko";
+            tk.textContent = it.topic_ko;
+            left.appendChild(tk);
+          }
+          const btns = document.createElement("div");
+          btns.className = "trend-btns";
+          const a = document.createElement("a");
+          a.className = "trend-link";
+          a.textContent = "원문";
+          a.target = "_blank";
+          a.rel = "noopener noreferrer";
+          if (it.url) a.href = it.url;
+          const use = document.createElement("button");
+          use.type = "button";
+          use.className = "trend-use";
+          use.textContent = "적용";
+          use.addEventListener("click", () => {
+            const ta = $("topic");
+            if (ta) {
+              ta.value = topicLine;
+              ta.focus();
+            }
+          });
+          btns.appendChild(a);
+          btns.appendChild(use);
+          li.appendChild(left);
+          li.appendChild(btns);
+          list.appendChild(li);
+        });
+      } catch (e) {
+        if (errEl) {
+          errEl.hidden = false;
+          errEl.textContent = e.message || String(e);
+        }
+        if (list) list.innerHTML = "";
+      } finally {
+        btnTrend.disabled = false;
+      }
+    });
   }
 
   // ── 카테고리 추천 ──

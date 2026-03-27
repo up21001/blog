@@ -5,6 +5,7 @@ DocForge — 주제만 넣으면 문서(+선택 이미지) 생성 웹앱.
 
 from __future__ import annotations
 
+import asyncio
 import base64
 import hashlib
 import logging
@@ -19,13 +20,15 @@ except ImportError:
     def load_dotenv(*_a, **_k):
         return False
 
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, Query
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field
 
 from services import codebase_parser
+from services.gemini_thinking import text_thinking_config
+from services import trending_topics
 from services import doc_parser
 from services import image_gen
 from services import svg_gen
@@ -51,6 +54,14 @@ from services.publish import (
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
+# SVG 연속 생성 실패 시에도 슬롯을 유지 (빈 항목이면 UI에서 5·6번만 사라지는 것처럼 보일 수 있음)
+_SVG_FAIL_PLACEHOLDER = (
+    '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 56">'
+    '<rect width="240" height="56" fill="#1e2430" rx="6"/>'
+    '<text x="120" y="32" fill="#8b93a7" font-size="12" font-family="system-ui,sans-serif" '
+    'text-anchor="middle">SVG failed — click regen</text></svg>'
+)
+
 ROOT = Path(__file__).resolve().parent
 for _base in (ROOT, ROOT.parent):
     _env = _base / ".env"
@@ -58,7 +69,7 @@ for _base in (ROOT, ROOT.parent):
         load_dotenv(_env)
         break
 
-app = FastAPI(title="DocForge", version="0.1.0")
+app = FastAPI(title="DocForge", version="0.2.0")
 
 app.add_middleware(
     CORSMiddleware,
@@ -349,7 +360,7 @@ async def suggest_category(body: SuggestCategoryBody):
             config=types.GenerateContentConfig(
                 max_output_tokens=64,
                 temperature=0.1,
-                thinking_config=types.ThinkingConfig(thinking_budget=0),
+                thinking_config=text_thinking_config(1024),
             ),
             contents=prompt,
         )
@@ -368,6 +379,35 @@ async def suggest_category(body: SuggestCategoryBody):
         suggestion = categories[0]
 
     return {"category": suggestion}
+
+
+@app.get("/api/trending-topics")
+async def api_trending_topics(
+    limit: int = Query(18, ge=6, le=30, description="가져올 후보 개수(중복 제거 후)"),
+    localize: bool = Query(
+        False,
+        description="True면 제목을 한국어 블로그 주제 한 줄(topic_ko)로 변환 — GEMINI_API_KEY 필요",
+    ),
+):
+    """해커뉴스·DEV Community 공개 API로 요즘 이슈 제목을 수집한다."""
+    try:
+        items, fetched_at = await asyncio.to_thread(trending_topics.fetch_merged, limit)
+    except Exception as e:
+        logger.exception("트렌드 소스 조회 실패")
+        raise HTTPException(502, f"트렌드 소스 불러오기 실패: {e}") from e
+    if not items:
+        raise HTTPException(502, "트렌드 항목을 가져오지 못했습니다. 네트워크 또는 방화벽을 확인하세요.")
+    if localize:
+        key = _api_key()
+        if not key:
+            raise HTTPException(503, "한글 주제 변환에는 GEMINI_API_KEY가 필요합니다.")
+        items = await asyncio.to_thread(trending_topics.add_korean_topics, items, key)
+    return {
+        "ok": True,
+        "fetched_at": fetched_at,
+        "sources": ["hacker_news", "dev_to"],
+        "items": items,
+    }
 
 
 class AutoInsertBody(BaseModel):
@@ -413,7 +453,7 @@ async def auto_insert_assets(body: AutoInsertBody):
             config=types.GenerateContentConfig(
                 max_output_tokens=65536,
                 temperature=0.1,
-                thinking_config=types.ThinkingConfig(thinking_budget=0),
+                thinking_config=text_thinking_config(),
             ),
             contents=prompt,
         )
@@ -491,9 +531,13 @@ def health():
     k = _api_key()
     return {
         "ok": True,
+        "version": "0.2.0",
         "gemini_configured": bool(k),
         "service": "docforge",
         "models": _models_payload(),
+        "capabilities": {
+            "trending_topics": True,
+        },
     }
 
 
@@ -763,6 +807,8 @@ async def generate(body: GenerateBody):
 
         for i, spec in enumerate(svg_specs[: body.max_svg]):
             try:
+                if i > 0:
+                    await asyncio.sleep(0.75)
                 svg_code = await svg_gen.generate_svg_async(
                     key,
                     spec.get("description", topic),
@@ -779,36 +825,48 @@ async def generate(body: GenerateBody):
                 })
             except Exception as e:
                 logger.warning("SVG %s 생성 실패: %s", i, e)
+                svgs_out.append({
+                    "index": i,
+                    "type": spec.get("type", "architecture"),
+                    "style": spec.get("style", "modern"),
+                    "description": spec.get("description", ""),
+                    "svg": _SVG_FAIL_PLACEHOLDER,
+                })
 
-    # 영문 생성 (이중 언어 동시 생성 또는 순차 번역)
+    # 영문 SVG 자동 생성 (한글 SVG가 있고 with_english인 경우)
+    svgs_en_out: list[dict] = []
+    if body.with_english and svgs_out:
+        for i, spec in enumerate(svgs_out):
+            if spec.get("svg", "").startswith("<svg"):
+                try:
+                    if i > 0:
+                        await asyncio.sleep(0.75)
+                    svg_en = await svg_gen.generate_svg_async(
+                        key,
+                        spec.get("description", topic),
+                        spec.get("type", "architecture"),
+                        spec.get("style", "modern"),
+                        language="en",
+                    )
+                    svgs_en_out.append({**spec, "svg": svg_en, "index": i})
+                except Exception as e:
+                    logger.warning("영문 SVG %s 생성 실패: %s", i, e)
+
+    # 영문 생성 (순차 번역 — 이미 완성된 한글 마크다운 기반)
     markdown_en = ""
     if body.with_english:
         try:
-            bilingual = await generate_bilingual_async(
-                key, topic, body.template,
-                length_tier=effective_length,
-                text_model=text_model,
-                reference_doc=ref_doc,
-                series_name=body.series_name,
-                series_order=body.series_order,
-                series_slug=body.series_slug,
-            )
-            markdown = bilingual["ko"] or markdown
-            markdown_en = bilingual["en"] or ""
-            # Re-inject images into bilingual korean if needed
-            if images_out:
-                markdown = inject_images_into_markdown(markdown, images_out)
-            # 이중 언어 생성에서 영문이 비어있으면 순차 번역 폴백
-            if not markdown_en.strip():
-                logger.warning("이중 언어 영문 비어있음 — 순차 번역 폴백")
-                markdown_en = await translate_to_english_async(markdown, key)
+            markdown_en = await translate_to_english_async(markdown, key)
         except Exception as e:
-            logger.warning("이중 언어 생성 실패, 번역 시도: %s", e)
-            try:
-                markdown_en = await translate_to_english_async(markdown, key)
-            except Exception as e2:
-                logger.warning("영문 번역 실패: %s", e2)
-                markdown_en = ""
+            logger.warning("영문 번역 실패: %s", e)
+            markdown_en = ""
+
+        # 영문 마크다운의 SVG 참조를 -en 버전으로 변경
+        if markdown_en and svgs_out:
+            for i in range(len(svgs_out)):
+                markdown_en = markdown_en.replace(
+                    f"svg-{i + 1}.svg", f"svg-{i + 1}-en.svg"
+                )
 
     elapsed_ms = int((time.perf_counter() - t0) * 1000)
     slug = _slug_from_topic(topic)
@@ -830,7 +888,9 @@ async def generate(body: GenerateBody):
             "elapsed_ms": elapsed_ms,
             "image_count": len(images_out),
             "svg_count": len(svgs_out),
+            "svg_en_count": len(svgs_en_out),
         },
+        "svgs_en": svgs_en_out,
     }
 
 
