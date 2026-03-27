@@ -14,6 +14,7 @@ logger = logging.getLogger(__name__)
 from google import genai
 from google.genai import types
 
+from .gemini_thinking import text_thinking_config
 from .prompt_config import get_effective_prompts
 
 # 문서 본문·이미지용 영문 프롬프트 생성에 공통 사용
@@ -131,7 +132,7 @@ def generate_document(
                     system_instruction=system_instruction,
                     max_output_tokens=max_out,
                     temperature=0.7,
-                    thinking_config=types.ThinkingConfig(thinking_budget=0),
+                    thinking_config=text_thinking_config(),
                 ),
                 contents=user_msg,
             )
@@ -228,7 +229,11 @@ def generate_image_prompts(
     response = client.models.generate_content(
         model=TEXT_MODEL,
         contents=prompt,
-        config=types.GenerateContentConfig(max_output_tokens=65536, temperature=0.85),
+        config=types.GenerateContentConfig(
+            max_output_tokens=65536,
+            temperature=0.85,
+            thinking_config=text_thinking_config(),
+        ),
     )
     lines = []
     for line in response.text.strip().splitlines():
@@ -283,7 +288,11 @@ Rules:
     response = client.models.generate_content(
         model=TEXT_MODEL,
         contents=prompt,
-        config=types.GenerateContentConfig(max_output_tokens=65536, temperature=0.5),
+        config=types.GenerateContentConfig(
+            max_output_tokens=65536,
+            temperature=0.5,
+            thinking_config=text_thinking_config(),
+        ),
     )
 
     import json
@@ -363,7 +372,7 @@ Korean markdown:
                 config=types.GenerateContentConfig(
                     max_output_tokens=65536,
                     temperature=0.3,
-                    thinking_config=types.ThinkingConfig(thinking_budget=0),
+                    thinking_config=text_thinking_config(),
                 ),
                 contents=prompt,
             )
@@ -436,7 +445,7 @@ def generate_series_plan(
             system_instruction=SERIES_PLAN,
             max_output_tokens=65536,
             temperature=0.6,
-            thinking_config=types.ThinkingConfig(thinking_budget=0),
+            thinking_config=text_thinking_config(),
         ),
         contents=user_msg,
     )
@@ -492,7 +501,7 @@ def extract_glossary(
         config=types.GenerateContentConfig(
             max_output_tokens=4096,
             temperature=0.1,
-            thinking_config=types.ThinkingConfig(thinking_budget=0),
+            thinking_config=text_thinking_config(),
         ),
         contents=prompt,
     )
@@ -555,7 +564,7 @@ Korean markdown:
                 config=types.GenerateContentConfig(
                     max_output_tokens=65536,
                     temperature=0.3,
-                    thinking_config=types.ThinkingConfig(thinking_budget=0),
+                    thinking_config=text_thinking_config(),
                 ),
                 contents=prompt,
             )
@@ -622,7 +631,7 @@ async def expand_document_async(
                 system_instruction=sys_inst,
                 max_output_tokens=65536,
                 temperature=0.75,
-                thinking_config=types.ThinkingConfig(thinking_budget=0),
+                thinking_config=text_thinking_config(),
             ),
             contents=user_msg,
         )
@@ -705,7 +714,7 @@ async def generate_bilingual_async(
                 system_instruction=system_instruction,
                 max_output_tokens=131072,
                 temperature=0.7,
-                thinking_config=types.ThinkingConfig(thinking_budget=0),
+                thinking_config=text_thinking_config(),
             ),
             contents=user_msg,
         )
@@ -771,3 +780,62 @@ async def translate_series_to_english(
         translations.append(translated)
 
     return {"glossary": glossary or {}, "translations": translations}
+
+
+async def polish_document_async(
+    api_key: str,
+    markdown: str,
+    style: str = "engaging",
+    max_retries: int = 2,
+) -> str:
+    """기존 마크다운 문서를 더 멋지게 다듬기.
+
+    Args:
+        markdown: 원본 마크다운
+        style: engaging, professional, conversational, technical_deep, seo_optimized
+    Returns:
+        다듬어진 마크다운
+    """
+    from .prompts import WRITING_POLISH, WRITING_ENHANCE_STYLES
+
+    key = api_key or os.environ.get("GEMINI_API_KEY")
+    if not key:
+        raise ValueError("GEMINI_API_KEY가 설정되지 않았습니다.")
+
+    style_hint = WRITING_ENHANCE_STYLES.get(style, WRITING_ENHANCE_STYLES["engaging"])
+    system_prompt = WRITING_POLISH + f"\n\n━━━ STYLE FOCUS ━━━\n{style_hint}"
+
+    client = genai.Client(api_key=key)
+    user_msg = f"아래 블로그 글을 다듬어 주세요. 프론트매터·코드·이미지 경로는 그대로 유지하고, 글의 품질만 향상시켜 주세요.\n\n{markdown}"
+
+    def _run() -> str:
+        last_err = None
+        for attempt in range(1, max_retries + 1):
+            try:
+                response = client.models.generate_content(
+                    model="gemini-2.5-flash",
+                    config=types.GenerateContentConfig(
+                        system_instruction=system_prompt,
+                        max_output_tokens=131072,
+                        temperature=0.7,
+                        thinking_config=text_thinking_config(),
+                    ),
+                    contents=user_msg,
+                )
+                text = response.text.strip()
+                text = _strip_markdown_fence(text)
+                # 프론트매터가 보존되었는지 확인
+                if text.startswith("---") and "---" in text[3:]:
+                    return text
+                # 프론트매터가 날아간 경우 원본에서 복원
+                if markdown.startswith("---"):
+                    fm_end = markdown.index("---", 3) + 3
+                    frontmatter = markdown[:fm_end]
+                    return frontmatter + "\n\n" + text
+                return text
+            except Exception as e:
+                last_err = e
+                logger.warning("글 다듬기 시도 %d/%d 실패: %s", attempt, max_retries, e)
+        raise ValueError(f"글 다듬기 실패: {last_err}")
+
+    return await asyncio.to_thread(_run)

@@ -262,6 +262,19 @@ textarea { resize: vertical; min-height: 80px; }
   max-width: 100%;
   height: auto;
 }
+.asset-card-body.svg-body .svg-preview-img {
+  max-width: 100%;
+  max-height: 220px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+.asset-card-body.svg-body .svg-empty-preview {
+  font-size: 0.82rem;
+  color: #6b7280;
+  padding: 0.5rem;
+  text-align: center;
+}
 
 .asset-card-edit {
   padding: 0.6rem 0.75rem;
@@ -391,6 +404,105 @@ textarea { resize: vertical; min-height: 80px; }
 .btn-open:hover { opacity: 0.9; }
 .btn-open:disabled { opacity: 0.5; cursor: not-allowed; }
 
+.topic-label-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.35rem;
+}
+.topic-label-row .topic-label-main { margin-bottom: 0; }
+.topic-label-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.trending-localize-label {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.8rem;
+  color: var(--muted);
+  cursor: pointer;
+  margin: 0;
+  user-select: none;
+}
+.btn-trending {
+  white-space: nowrap;
+  background: linear-gradient(135deg, #5e35b1, #7e57c2) !important;
+  border: none !important;
+  font-weight: 600;
+  color: #fff !important;
+}
+.btn-trending:hover { opacity: 0.9; }
+.btn-trending:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.trending-panel {
+  margin: 0 0 0.75rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: #12151c;
+}
+.trending-head { margin: 0 0 0.35rem; font-size: 0.82rem; color: var(--muted); }
+.trending-meta { margin: 0 0 0.5rem; font-size: 0.72rem; color: #6b7280; }
+.trending-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-height: 240px;
+  overflow-y: auto;
+}
+.trending-list li {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.65rem;
+  padding: 0.45rem 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.86rem;
+}
+.trending-list li:last-child { border-bottom: none; }
+.trending-list .trend-title { flex: 1; min-width: 0; }
+.trending-list .trend-src {
+  font-size: 0.68rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 0.15rem;
+}
+.trending-list .trend-ko {
+  margin-top: 0.25rem;
+  color: var(--accent);
+  font-size: 0.88rem;
+}
+.trending-list .trend-btns {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  flex-shrink: 0;
+}
+.trending-list a.trend-link {
+  font-size: 0.72rem;
+  color: var(--accent);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.trending-list a.trend-link:hover { text-decoration: underline; }
+.trending-list button.trend-use {
+  font-size: 0.72rem;
+  padding: 0.28rem 0.55rem;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: var(--accent-dim);
+  color: var(--accent);
+  cursor: pointer;
+  font-weight: 600;
+}
+.trending-list button.trend-use:hover { opacity: 0.92; }
+.trending-loading { color: var(--muted); padding: 0.25rem 0; }
+
 .category-row {
   display: flex; gap: 0.5rem;
 }
@@ -456,6 +568,7 @@ textarea { resize: vertical; min-height: 80px; }
   border: 1px solid rgba(240, 113, 120, 0.35);
   color: #ffb4b8;
   font-size: 0.9rem;
+  white-space: pre-wrap;
 }
 
 /* ── Result / Tabs ── */
@@ -498,6 +611,21 @@ textarea { resize: vertical; min-height: 80px; }
 }
 .btn-retranslate:hover { background: var(--accent); color: #fff; }
 .btn-retranslate:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.tab-divider { color: var(--muted); margin: 0 4px; user-select: none; }
+.polish-select {
+  font-size: 0.8rem; padding: 3px 6px; border-radius: 6px;
+  background: var(--surface); color: var(--text); border: 1px solid var(--border);
+  cursor: pointer;
+}
+.btn-polish {
+  font-size: 0.8rem; padding: 4px 10px; border-radius: 6px;
+  background: linear-gradient(135deg, #6C5CE7, #4A90D9);
+  color: #fff; border: none; cursor: pointer;
+  transition: opacity 0.2s;
+}
+.btn-polish:hover { opacity: 0.85; }
+.btn-polish:disabled { opacity: 0.5; cursor: not-allowed; }
 
 .tabs { display: flex; gap: 0.35rem; margin-bottom: 0.75rem; }
 .tab {

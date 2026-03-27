@@ -41,6 +41,7 @@ from services.text_gen import (
     generate_bilingual_async,
     generate_series_plan_async,
     generate_svg_specs_async,
+    polish_document_async,
     translate_series_to_english,
     translate_to_english_async,
 )
@@ -115,6 +116,12 @@ class ExpandBody(BaseModel):
     source_text: str = Field(..., min_length=1)
     instructions: str = Field("10라운드로 확장, 더 깊고 극적으로", max_length=2000)
     with_english: bool = False
+
+
+class PolishBody(BaseModel):
+    markdown: str = Field(..., min_length=1, max_length=5_000_000)
+    style: str = Field("engaging", pattern="^(engaging|professional|conversational|technical_deep|seo_optimized)$")
+
 
 class ImageSaveItem(BaseModel):
     filename: str = Field(..., max_length=200)
@@ -671,6 +678,20 @@ async def api_expand(body: ExpandBody):
         logger.exception("확장 생성 실패")
         raise HTTPException(500, str(e)) from e
     return {"ok": True, "ko": result["ko"], "en": result["en"]}
+
+
+@app.post("/api/polish")
+async def api_polish(body: PolishBody):
+    """기존 마크다운 문서를 더 멋지게 다듬기."""
+    key = _api_key()
+    if not key:
+        raise HTTPException(503, "GEMINI_API_KEY가 설정되지 않았습니다.")
+    try:
+        polished = await polish_document_async(key, body.markdown, body.style)
+    except Exception as e:
+        logger.exception("글 다듬기 실패")
+        raise HTTPException(500, str(e)) from e
+    return {"ok": True, "markdown": polished}
 
 
 @app.post("/api/generate")

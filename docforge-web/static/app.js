@@ -120,6 +120,43 @@
     }
   });
 
+  // ── 글 다듬기 (Polish) ──
+  if ($("btnPolish")) {
+    $("btnPolish").addEventListener("click", async () => {
+      const btn = $("btnPolish");
+      const md = getMarkdown();
+      if (!md.trim()) { alert("다듬을 마크다운이 없습니다."); return; }
+      const style = ($("polishStyle") && $("polishStyle").value) || "engaging";
+
+      btn.disabled = true;
+      btn.textContent = "다듬는 중…";
+      try {
+        const r = await fetch(apiUrl("/api/polish"), {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ markdown: md, style }),
+        });
+        const j = await r.json();
+        if (!r.ok) throw new Error(j.detail || "다듬기 실패");
+
+        const polished = j.markdown || "";
+        if (polished) {
+          setMarkdownForLang(currentLang, polished);
+          $("mdEditor").value = polished;
+          const split = $("mdEditorSplit");
+          if (split) split.value = polished;
+          renderPreviewHtml(polished);
+          if (typeof renderSplitPreview === "function") renderSplitPreview();
+        }
+      } catch (e) {
+        alert("다듬기 실패: " + e.message);
+      } finally {
+        btn.disabled = false;
+        btn.textContent = "✨ 글 다듬기";
+      }
+    });
+  }
+
   function renderPreviewHtml(md) {
     const p = $("preview");
     if (!p) return;

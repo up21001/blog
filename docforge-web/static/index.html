@@ -30,7 +30,22 @@
 
     <main class="panel">
       <form id="form" class="form">
-        <label for="topic">주제</label>
+        <div class="topic-label-row">
+          <label for="topic" class="topic-label-main">주제</label>
+          <div class="topic-label-actions">
+            <label class="trending-localize-label" title="체크 시 GEMINI_API_KEY로 한국어 블로그 주제 한 줄로 변환">
+              <input type="checkbox" id="trendingLocalize" />
+              한글 주제
+            </label>
+            <button type="button" id="btnTrendingTopics" class="btn btn-sm btn-trending">트렌드</button>
+          </div>
+        </div>
+        <div id="trendingPanel" class="trending-panel" hidden>
+          <p class="trending-head">요즘 커뮤니티에서 많이 올라오는 글 제목입니다. 「적용」을 누르면 주제란에 넣습니다.</p>
+          <p id="trendingMeta" class="trending-meta"></p>
+          <ul id="trendingList" class="trending-list"></ul>
+          <p id="trendingError" class="error" role="alert" hidden></p>
+        </div>
         <textarea id="topic" name="topic" rows="4" placeholder="예: Docker Compose로 로컬 개발 환경 구축하기" required></textarea>
 
         <div class="row row-3col">
@@ -342,6 +357,15 @@
         <button type="button" class="tab" id="tabSplit" role="tab" data-tab="split">분할 보기</button>
         <button type="button" class="tab active" id="tabPreview" role="tab" data-tab="preview">미리보기</button>
         <button type="button" class="tab" id="tabEditor" role="tab" data-tab="editor">편집만</button>
+        <span class="tab-divider">|</span>
+        <select id="polishStyle" class="polish-select" title="다듬기 스타일">
+          <option value="engaging">✨ 몰입형</option>
+          <option value="professional">🎯 전문적</option>
+          <option value="conversational">💬 대화체</option>
+          <option value="technical_deep">🔬 기술 심화</option>
+          <option value="seo_optimized">📈 SEO 최적화</option>
+        </select>
+        <button type="button" class="btn btn-sm btn-polish" id="btnPolish" title="AI가 글을 더 멋지게 다듬습니다">✨ 글 다듬기</button>
       </div>
       <div id="panelSplit" class="tab-panel split-panel">
         <div class="split-editor">
@@ -379,6 +403,6 @@
     </footer>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js"></script>
-  <script src="/static/app.js?v=9"></script>
+  <script src="/static/app.js?v=13"></script>
 </body>
 </html>
