@@ -829,7 +829,7 @@ async def generate(body: GenerateBody):
         for i, spec in enumerate(svg_specs[: body.max_svg]):
             try:
                 if i > 0:
-                    await asyncio.sleep(0.75)
+                    await asyncio.sleep(8)
                 svg_code = await svg_gen.generate_svg_async(
                     key,
                     spec.get("description", topic),
@@ -861,7 +861,7 @@ async def generate(body: GenerateBody):
             if spec.get("svg", "").startswith("<svg"):
                 try:
                     if i > 0:
-                        await asyncio.sleep(0.75)
+                        await asyncio.sleep(8)
                     svg_en = await svg_gen.generate_svg_async(
                         key,
                         spec.get("description", topic),
