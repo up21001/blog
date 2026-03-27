@@ -3,10 +3,13 @@
 from __future__ import annotations
 
 import asyncio
+import logging
 import os
 import re
 import time
 from datetime import datetime
+
+logger = logging.getLogger(__name__)
 
 from google import genai
 from google.genai import types

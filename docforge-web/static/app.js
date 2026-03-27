@@ -897,6 +897,8 @@
     const fname = ($("publishFilename") && $("publishFilename").value.trim()) || null;
     if (!sub) {
       alert("카테고리를 선택해주세요 (하단 저장 영역 또는 상단 폼).");
+      btn.disabled = false;
+      btn.textContent = "블로그에 저장";
       $("publishSubfolder").focus();
       return;
     }

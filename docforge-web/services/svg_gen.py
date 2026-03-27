@@ -448,14 +448,11 @@ async def generate_svg_async(
                     params={"key": api_key},
                     json=payload,
                 )
-            except httpx.HTTPStatusError as e:
-                if e.response.status_code == 429:
-                    delay = min(5 * (2 ** (attempt - 1)), 30)
-                    logger.warning("SVG 429 rate limit, %ds 후 재시도 (%d/%d)", delay, attempt, max_retries)
-                    await _aio.sleep(delay)
-                    last_err = e
-                    continue
-                raise
+            except Exception as e:
+                last_err = e
+                logger.warning("SVG HTTP 요청 실패: %s — 재시도 %d/%d", e, attempt, max_retries)
+                await _aio.sleep(min(5 * (2 ** (attempt - 1)), 30))
+                continue
 
             if resp.status_code == 429:
                 delay = min(5 * (2 ** (attempt - 1)), 30)

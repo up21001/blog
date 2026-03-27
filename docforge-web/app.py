@@ -459,8 +459,11 @@ async def api_git_push():
             ["git", "commit", "-m", "feat: DocForge에서 콘텐츠 추가/수정"],
             cwd=blog_root, capture_output=True, text=True, timeout=30,
         )
-        if result.returncode != 0 and "nothing to commit" in result.stdout:
-            return {"ok": True, "message": "변경사항 없음"}
+        combined = (result.stdout or "") + (result.stderr or "")
+        if result.returncode != 0:
+            if "nothing to commit" in combined:
+                return {"ok": True, "message": "변경사항 없음"}
+            raise HTTPException(500, f"git commit 실패: {result.stderr}")
         push = subprocess.run(
             ["git", "push"],
             cwd=blog_root, capture_output=True, text=True, timeout=60,
@@ -765,6 +768,7 @@ async def generate(body: GenerateBody):
                     spec.get("description", topic),
                     spec.get("type", "architecture"),
                     spec.get("style", "modern"),
+                    language="en" if body.with_english else "ko",
                 )
                 svgs_out.append({
                     "index": i,
