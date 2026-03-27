@@ -1,0 +1,68 @@
+<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="ds1" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-color="#000" flood-opacity="0.15"/>
+    </filter>
+    <marker id="arr1" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#333"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="800" height="500" fill="#f8f9fa"/>
+  <text x="400" y="35" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#333" text-anchor="middle">Harness CI 아키텍처 — Control Plane &amp; Delegate 모델</text>
+
+  <!-- Control Plane (SaaS) -->
+  <rect x="40" y="60" width="320" height="180" rx="12" fill="#4A90D9" opacity="0.1" stroke="#4A90D9" stroke-width="2" stroke-dasharray="6 3"/>
+  <text x="200" y="85" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#4A90D9" text-anchor="middle">Control Plane (SaaS)</text>
+
+  <rect x="70" y="100" width="120" height="50" rx="8" fill="#4A90D9" filter="url(#ds1)"/>
+  <text x="130" y="130" font-family="Arial, sans-serif" font-size="13" fill="#fff" text-anchor="middle">Pipeline Engine</text>
+
+  <rect x="210" y="100" width="120" height="50" rx="8" fill="#4A90D9" filter="url(#ds1)"/>
+  <text x="270" y="130" font-family="Arial, sans-serif" font-size="13" fill="#fff" text-anchor="middle">Dashboard</text>
+
+  <rect x="70" y="170" width="120" height="50" rx="8" fill="#4A90D9" filter="url(#ds1)"/>
+  <text x="130" y="200" font-family="Arial, sans-serif" font-size="13" fill="#fff" text-anchor="middle">RBAC / Policy</text>
+
+  <rect x="210" y="170" width="120" height="50" rx="8" fill="#4A90D9" filter="url(#ds1)"/>
+  <text x="270" y="200" font-family="Arial, sans-serif" font-size="13" fill="#fff" text-anchor="middle">Secret Manager</text>
+
+  <!-- Customer Infrastructure -->
+  <rect x="440" y="60" width="320" height="380" rx="12" fill="#50C878" opacity="0.1" stroke="#50C878" stroke-width="2" stroke-dasharray="6 3"/>
+  <text x="600" y="85" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#50C878" text-anchor="middle">고객 인프라</text>
+
+  <rect x="470" y="100" width="260" height="60" rx="8" fill="#6C5CE7" filter="url(#ds1)"/>
+  <text x="600" y="125" font-family="Arial, sans-serif" font-size="14" fill="#fff" text-anchor="middle" font-weight="bold">Delegate</text>
+  <text x="600" y="145" font-family="Arial, sans-serif" font-size="11" fill="#ddd" text-anchor="middle">Kubernetes / VM / Docker</text>
+
+  <rect x="470" y="185" width="120" height="45" rx="8" fill="#50C878" filter="url(#ds1)"/>
+  <text x="530" y="212" font-family="Arial, sans-serif" font-size="12" fill="#fff" text-anchor="middle">코드 리포지토리</text>
+
+  <rect x="610" y="185" width="120" height="45" rx="8" fill="#50C878" filter="url(#ds1)"/>
+  <text x="670" y="212" font-family="Arial, sans-serif" font-size="12" fill="#fff" text-anchor="middle">아티팩트 저장소</text>
+
+  <rect x="470" y="255" width="120" height="45" rx="8" fill="#FFD93D" filter="url(#ds1)"/>
+  <text x="530" y="282" font-family="Arial, sans-serif" font-size="12" fill="#333" text-anchor="middle">빌드 실행</text>
+
+  <rect x="610" y="255" width="120" height="45" rx="8" fill="#FFD93D" filter="url(#ds1)"/>
+  <text x="670" y="282" font-family="Arial, sans-serif" font-size="12" fill="#333" text-anchor="middle">테스트 실행</text>
+
+  <rect x="470" y="325" width="260" height="45" rx="8" fill="#FF6B6B" filter="url(#ds1)"/>
+  <text x="600" y="352" font-family="Arial, sans-serif" font-size="13" fill="#fff" text-anchor="middle">배포 대상 (K8s, ECS, Lambda...)</text>
+
+  <!-- 하단 설명 -->
+  <rect x="40" y="460" width="720" height="30" rx="5" fill="#E8F4FD"/>
+  <text x="400" y="480" font-family="Arial, sans-serif" font-size="12" fill="#4A90D9" text-anchor="middle">Delegate는 고객 네트워크 내에서 실행되며, Control Plane과 아웃바운드 HTTPS로 안전하게 통신합니다.</text>
+
+  <!-- Arrows -->
+  <path d="M 360 130 L 465 130" stroke="#333" stroke-width="2" fill="none" marker-end="url(#arr1)"/>
+  <text x="412" y="122" font-family="Arial, sans-serif" font-size="10" fill="#555" text-anchor="middle">명령 전달</text>
+
+  <path d="M 465 145 L 360 195" stroke="#50C878" stroke-width="2" fill="none" marker-end="url(#arr1)" stroke-dasharray="4 2"/>
+  <text x="400" y="178" font-family="Arial, sans-serif" font-size="10" fill="#50C878" text-anchor="middle">상태 보고</text>
+
+  <path d="M 600 160 L 600 180" stroke="#333" stroke-width="1.5" fill="none" marker-end="url(#arr1)"/>
+  <path d="M 530 230 L 530 250" stroke="#333" stroke-width="1.5" fill="none" marker-end="url(#arr1)"/>
+  <path d="M 670 230 L 670 250" stroke="#333" stroke-width="1.5" fill="none" marker-end="url(#arr1)"/>
+  <path d="M 600 300 L 600 320" stroke="#333" stroke-width="1.5" fill="none" marker-end="url(#arr1)"/>
+</svg>

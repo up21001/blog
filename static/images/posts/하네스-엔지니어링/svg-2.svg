@@ -1,0 +1,50 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="ds2" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="1" dy="1" stdDeviation="2" flood-color="#000" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="800" height="400" fill="#f8f9fa"/>
+  <text x="400" y="35" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#333" text-anchor="middle">Harness 6가지 핵심 이점</text>
+
+  <!-- Row 1 -->
+  <rect x="40" y="60" width="230" height="130" rx="10" fill="#4A90D9" filter="url(#ds2)"/>
+  <text x="155" y="95" font-family="Arial, sans-serif" font-size="28" text-anchor="middle">🚀</text>
+  <text x="155" y="120" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">배포 속도 &amp; 안정성</text>
+  <text x="155" y="140" font-family="Arial, sans-serif" font-size="11" fill="#ddd" text-anchor="middle">카나리/블루그린 자동 배포</text>
+  <text x="155" y="158" font-family="Arial, sans-serif" font-size="11" fill="#ddd" text-anchor="middle">자동 롤백으로 장애 최소화</text>
+
+  <rect x="285" y="60" width="230" height="130" rx="10" fill="#50C878" filter="url(#ds2)"/>
+  <text x="400" y="95" font-family="Arial, sans-serif" font-size="28" text-anchor="middle">⚡</text>
+  <text x="400" y="120" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">개발 생산성 극대화</text>
+  <text x="400" y="140" font-family="Arial, sans-serif" font-size="11" fill="#ddd" text-anchor="middle">Test Intelligence로 테스트 최적화</text>
+  <text x="400" y="158" font-family="Arial, sans-serif" font-size="11" fill="#ddd" text-anchor="middle">파이프라인 자동 생성</text>
+
+  <rect x="530" y="60" width="230" height="130" rx="10" fill="#FFD93D" filter="url(#ds2)"/>
+  <text x="645" y="95" font-family="Arial, sans-serif" font-size="28" text-anchor="middle">💰</text>
+  <text x="645" y="120" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#333" text-anchor="middle">클라우드 비용 최적화</text>
+  <text x="645" y="140" font-family="Arial, sans-serif" font-size="11" fill="#555" text-anchor="middle">비용 가시성 대시보드</text>
+  <text x="645" y="158" font-family="Arial, sans-serif" font-size="11" fill="#555" text-anchor="middle">유휴 자원 자동 감지</text>
+
+  <!-- Row 2 -->
+  <rect x="40" y="210" width="230" height="130" rx="10" fill="#6C5CE7" filter="url(#ds2)"/>
+  <text x="155" y="245" font-family="Arial, sans-serif" font-size="28" text-anchor="middle">🔄</text>
+  <text x="155" y="270" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">릴리스 관리 유연성</text>
+  <text x="155" y="290" font-family="Arial, sans-serif" font-size="11" fill="#ddd" text-anchor="middle">Feature Flags로 점진적 릴리스</text>
+  <text x="155" y="308" font-family="Arial, sans-serif" font-size="11" fill="#ddd" text-anchor="middle">A/B 테스트 내장</text>
+
+  <rect x="285" y="210" width="230" height="130" rx="10" fill="#FF6B6B" filter="url(#ds2)"/>
+  <text x="400" y="245" font-family="Arial, sans-serif" font-size="28" text-anchor="middle">🔒</text>
+  <text x="400" y="270" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">보안 &amp; 규정 준수</text>
+  <text x="400" y="290" font-family="Arial, sans-serif" font-size="11" fill="#ddd" text-anchor="middle">OPA 정책 엔진 내장</text>
+  <text x="400" y="308" font-family="Arial, sans-serif" font-size="11" fill="#ddd" text-anchor="middle">RBAC + 감사 로그</text>
+
+  <rect x="530" y="210" width="230" height="130" rx="10" fill="#333" filter="url(#ds2)"/>
+  <text x="645" y="245" font-family="Arial, sans-serif" font-size="28" text-anchor="middle">🔗</text>
+  <text x="645" y="270" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">통합된 DevOps 경험</text>
+  <text x="645" y="290" font-family="Arial, sans-serif" font-size="11" fill="#ddd" text-anchor="middle">CI + CD + FF + CCM 단일 플랫폼</text>
+  <text x="645" y="308" font-family="Arial, sans-serif" font-size="11" fill="#ddd" text-anchor="middle">도구 파편화 해소</text>
+
+  <text x="400" y="380" font-family="Arial, sans-serif" font-size="12" fill="#999" text-anchor="middle">CI: Continuous Integration · CD: Continuous Delivery · FF: Feature Flags · CCM: Cloud Cost Management</text>
+</svg>
