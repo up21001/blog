@@ -136,6 +136,7 @@
       const md = getMarkdown();
       if (!md.trim()) { alert("다듬을 마크다운이 없습니다."); return; }
       const style = ($("polishStyle") && $("polishStyle").value) || "engaging";
+      if (style === "none") { alert("다듬기 스타일을 선택해주세요."); return; }
 
       btn.disabled = true;
       btn.textContent = "다듬는 중…";
@@ -672,7 +673,7 @@
   //  결과 적용
   // ══════════════════════════════════════════════════════════
 
-  function applyPayload(j) {
+  async function applyPayload(j) {
     lastPayload = j;
     lastSlug = (j.manifest && j.manifest.slug) || "document";
 
@@ -731,6 +732,41 @@
     const ps = $("publishStatus");
     if (ps) ps.textContent = "";
     updatePublishCategoryRecap();
+
+    // 생성 후 자동 다듬기 (polishStyle이 "none"이 아닌 경우)
+    const autoPolishStyle = ($("polishStyle") && $("polishStyle").value) || "none";
+    if (autoPolishStyle !== "none" && currentMarkdownKo.trim()) {
+      const polishBtn = $("btnPolish");
+      if (polishBtn) {
+        polishBtn.disabled = true;
+        polishBtn.textContent = "자동 다듬기 중…";
+      }
+      try {
+        const pr = await fetch(apiUrl("/api/polish"), {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ markdown: currentMarkdownKo, style: autoPolishStyle }),
+        });
+        const pj = await pr.json();
+        if (pr.ok && pj.markdown) {
+          currentMarkdownKo = pj.markdown;
+          const ed = $("mdEditor");
+          if (ed) ed.value = currentMarkdownKo;
+          const sp = $("mdEditorSplit");
+          if (sp) sp.value = currentMarkdownKo;
+          renderPreviewHtml(currentMarkdownKo);
+          if (typeof renderSplitPreview === "function") renderSplitPreview();
+          $("meta").textContent += ` · ✨ 다듬기(${autoPolishStyle}) 적용`;
+        }
+      } catch (e) {
+        console.warn("자동 다듬기 실패:", e);
+      } finally {
+        if (polishBtn) {
+          polishBtn.disabled = false;
+          polishBtn.textContent = "✨ 글 다듬기";
+        }
+      }
+    }
   }
 
   // ══════════════════════════════════════════════════════════
