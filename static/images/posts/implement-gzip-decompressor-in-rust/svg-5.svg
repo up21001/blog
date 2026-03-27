@@ -1,0 +1,87 @@
+<svg viewBox="0 0 800 1000" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .title { font: bold 30px Arial, sans-serif; fill: #333; }
+    .subtitle { font: bold 21px Arial, sans-serif; fill: #333; }
+    .text { font: 16px Arial, sans-serif; fill: #333; }
+    .bold-text { font: bold 17px Arial, sans-serif; fill: #333; }
+    .char { font: bold 24px Arial, sans-serif; fill: #333; text-anchor: middle; }
+    .box { fill: #EEE; stroke: #666; stroke-width: 2; }
+    .highlight-box { fill: #CCC; stroke: #666; stroke-width: 2; }
+    .output-box { fill: #F0F0F0; stroke: #666; stroke-width: 1; }
+    .step-number { font: bold 24px Arial, sans-serif; fill: #666; }
+    .arrow { stroke: #666; stroke-width: 3; fill: none; marker-end: url(#arrowhead); }
+    .dashed-box { fill: none; stroke: #666; stroke-width: 2; stroke-dasharray: 5 5; }
+  </style>
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#666" />
+    </marker>
+  </defs>
+  <text x="400" y="60" text-anchor="middle" class="title">LZ77 슬라이딩 윈도우</text>
+  <rect x="50" y="100" width="700" height="150" class="box" />
+  <text x="400" y="90" text-anchor="middle" class="subtitle">슬라이딩 윈도우</text>
+  <rect x="50" y="100" width="350" height="150" class="box" />
+  <text x="225" y="130" text-anchor="middle" class="subtitle">사전</text>
+  <text x="225" y="155" text-anchor="middle" class="text">(검색 버퍼)</text>
+  <rect x="400" y="100" width="350" height="150" class="box" />
+  <text x="575" y="130" text-anchor="middle" class="subtitle">룩어헤드 버퍼</text>
+  <g>
+    <rect x="80" y="180" width="30" height="40" fill="#FFF" stroke="#AAA" stroke-width="1"/><text x="95" y="210" class="char">A</text>
+    <rect x="115" y="180" width="30" height="40" fill="#FFF" stroke="#AAA" stroke-width="1"/><text x="130" y="210" class="char">B</text>
+    <rect x="150" y="180" width="30" height="40" class="highlight-box"/><text x="165" y="210" class="char">C</text>
+    <rect x="185" y="180" width="30" height="40" class="highlight-box"/><text x="200" y="210" class="char">D</text>
+    <rect x="220" y="180" width="30" height="40" class="highlight-box"/><text x="235" y="210" class="char">E</text>
+    <rect x="255" y="180" width="30" height="40" fill="#FFF" stroke="#AAA" stroke-width="1"/><text x="270" y="210" class="char">F</text>
+    <rect x="290" y="180" width="30" height="40" fill="#FFF" stroke="#AAA" stroke-width="1"/><text x="305" y="210" class="char">G</text>
+    <rect x="325" y="180" width="30" height="40" fill="#FFF" stroke="#AAA" stroke-width="1"/><text x="340" y="210" class="char">H</text>
+  </g>
+  <g>
+    <rect x="430" y="180" width="30" height="40" class="highlight-box"/><text x="445" y="210" class="char">C</text>
+    <rect x="465" y="180" width="30" height="40" class="highlight-box"/><text x="480" y="210" class="char">D</text>
+    <rect x="500" y="180" width="30" height="40" class="highlight-box"/><text x="515" y="210" class="char">E</text>
+    <rect x="535" y="180" width="30" height="40" fill="#FFF" stroke="#AAA" stroke-width="1"/><text x="550" y="210" class="char">I</text>
+    <rect x="570" y="180" width="30" height="40" fill="#FFF" stroke="#AAA" stroke-width="1"/><text x="585" y="210" class="char">J</text>
+    <rect x="605" y="180" width="30" height="40" fill="#FFF" stroke="#AAA" stroke-width="1"/><text x="620" y="210" class="char">K</text>
+    <rect x="640" y="180" width="30" height="40" fill="#FFF" stroke="#AAA" stroke-width="1"/><text x="655" y="210" class="char">L</text>
+    <rect x="675" y="180" width="30" height="40" fill="#FFF" stroke="#AAA" stroke-width="1"/><text x="690" y="210" class="char">M</text>
+  </g>
+  <path d="M 470 230 C 470 270, 200 270, 200 230" class="arrow" />
+  <text x="335" y="280" text-anchor="middle" class="bold-text">최장 일치: "CDE"</text>
+  <rect x="250" y="320" width="300" height="70" class="output-box" />
+  <text x="400" y="345" text-anchor="middle" class="subtitle">출력 토큰</text>
+  <text x="400" y="375" text-anchor="middle" class="bold-text">(거리: 6, 길이: 3)</text>
+  <text x="50" y="450" class="subtitle">동작 방식</text>
+  <g transform="translate(0, 40)">
+    <text x="60" y="450" class="step-number">1.</text>
+    <text x="90" y="450" class="bold-text">윈도우 초기화</text>
+    <text x="90" y="475" class="text">윈도우는 사전(검색 버퍼)과 룩어헤드 버퍼로 나뉩니다.</text>
+  </g>
+  <g transform="translate(0, 100)">
+    <text x="60" y="450" class="step-number">2.</text>
+    <text x="90" y="450" class="bold-text">최장 일치 찾기</text>
+    <text x="90" y="475" class="text">룩어헤드 버퍼의 문자열이 사전에 있는지 가장 길게 찾습니다.</text>
+  </g>
+  <g transform="translate(0, 160)">
+    <text x="60" y="450" class="step-number">3.</text>
+    <text x="90" y="450" class="bold-text">토큰 생성</text>
+    <text x="90" y="485" class="text">일치가 있으면 (거리, 길이) 토큰을 출력합니다.</text>
+    <text x="90" y="505" class="text">거리: 사전에서 일치가 시작된 위치까지의 거리</text>
+    <text x="90" y="525" class="text">길이: 일치한 문자열의 길이</text>
+    <text x="90" y="545" class="text">일치가 없으면 다음 문자를 그대로 출력합니다.</text>
+  </g>
+  <g transform="translate(0, 280)">
+    <text x="60" y="450" class="step-number">4.</text>
+    <text x="90" y="450" class="bold-text">윈도우 이동</text>
+    <text x="90" y="475" class="text">윈도우는 일치 길이만큼, 없으면 1칸 앞으로 이동합니다.</text>
+    <text x="90" y="495" class="text">매칭된 문자는 사전으로 넘어가고 새 데이터가 뒤에 들어옵니다.</text>
+  </g>
+  <text x="400" y="800" text-anchor="middle" class="subtitle">윈도우 이동 개념</text>
+  <rect x="50" y="830" width="700" height="50" fill="#F0F0F0" stroke="#666" stroke-width="1"/>
+  <text x="400" y="860" text-anchor="middle" class="text">D A T A S T R E A M . . .</text>
+  <rect x="100" y="820" width="300" height="70" class="dashed-box"/>
+  <text x="250" y="810" text-anchor="middle" class="bold-text">윈도우 (초기)</text>
+  <path d="M 250 900 L 450 900" class="arrow" />
+  <text x="350" y="920" text-anchor="middle" class="bold-text">길이만큼 이동</text>
+  <rect x="400" y="820" width="300" height="70" class="dashed-box"/>
+  <text x="550" y="810" text-anchor="middle" class="bold-text">윈도우 (이동 후)</text>
+</svg>

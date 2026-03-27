@@ -1,0 +1,119 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <rect x="0" y="0" width="800" height="600" fill="#f8f9fa"/>
+
+  <!-- Styles -->
+  <style>
+    .title {
+      font-family: "Arial, sans-serif";
+      font-size: 24px;
+      font-weight: bold;
+      fill: #2D3748;
+    }
+    .block-title {
+      font-family: "Arial, sans-serif";
+      font-size: 18px;
+      font-weight: bold;
+      fill: #2D3748;
+    }
+    .field-label {
+      font-family: "Arial, sans-serif";
+      font-size: 16px;
+      fill: #2D3748;
+    }
+    .bit-value {
+      font-family: "Courier New, monospace";
+      font-size: 14px;
+      fill: #2D3748;
+    }
+    .legend-label {
+      font-family: "Arial, sans-serif";
+      font-size: 14px;
+      fill: #2D3748;
+    }
+    .header-bit { fill: #4A90D9; stroke: #e2e8f0; stroke-width: 1; }
+    .metadata-field { fill: #FFD93D; stroke: #e2e8f0; stroke-width: 1; }
+    .data-field { fill: #50C878; stroke: #e2e8f0; stroke-width: 1; }
+    .legend-box { stroke: #e2e8f0; stroke-width: 1; }
+  </style>
+
+  <!-- Title -->
+  <text x="400" y="40" text-anchor="middle" class="title">DEFLATE Stream Block Types</text>
+
+  <!-- Reusable Header Bit Definitions -->
+  <defs>
+    <g id="header-bfinal">
+      <rect width="200" height="30" class="header-bit"/>
+      <text x="100" y="20" text-anchor="middle" class="field-label">BFINAL (1 bit)</text>
+    </g>
+    <g id="header-btype-00">
+      <rect width="200" height="30" class="header-bit"/>
+      <text x="100" y="15" text-anchor="middle" class="field-label">BTYPE (2 bits)</text>
+      <text x="100" y="28" text-anchor="middle" class="bit-value">= 00</text>
+    </g>
+    <g id="header-btype-01">
+      <rect width="200" height="30" class="header-bit"/>
+      <text x="100" y="15" text-anchor="middle" class="field-label">BTYPE (2 bits)</text>
+      <text x="100" y="28" text-anchor="middle" class="bit-value">= 01</text>
+    </g>
+    <g id="header-btype-10">
+      <rect width="200" height="30" class="header-bit"/>
+      <text x="100" y="15" text-anchor="middle" class="field-label">BTYPE (2 bits)</text>
+      <text x="100" y="28" text-anchor="middle" class="bit-value">= 10</text>
+    </g>
+  </defs>
+
+  <!-- Block 1: Uncompressed Block -->
+  <text x="150" y="80" text-anchor="middle" class="block-title">Uncompressed Block</text>
+  <g transform="translate(50, 100)">
+    <use href="#header-bfinal"/>
+    <g transform="translate(0, 30)">
+      <use href="#header-btype-00"/>
+    </g>
+    <rect y="60" width="200" height="60" class="metadata-field"/>
+    <text x="100" y="95" text-anchor="middle" class="field-label">LEN (16 bits)</text>
+    <rect y="120" width="200" height="60" class="metadata-field"/>
+    <text x="100" y="155" text-anchor="middle" class="field-label">NLEN (16 bits)</text>
+    <rect y="180" width="200" height="150" class="data-field"/>
+    <text x="100" y="245" text-anchor="middle" class="field-label">Uncompressed Data</text>
+    <text x="100" y="265" text-anchor="middle" class="bit-value">(LEN bytes)</text>
+  </g>
+
+  <!-- Block 2: Fixed Huffman Block -->
+  <text x="400" y="80" text-anchor="middle" class="block-title">Fixed Huffman Block</text>
+  <g transform="translate(300, 100)">
+    <use href="#header-bfinal"/>
+    <g transform="translate(0, 30)">
+      <use href="#header-btype-01"/>
+    </g>
+    <rect y="60" width="200" height="270" class="data-field"/>
+    <text x="100" y="180" text-anchor="middle" class="field-label">Compressed Data</text>
+    <text x="100" y="200" text-anchor="middle" class="bit-value">(using fixed Huffman codes)</text>
+  </g>
+
+  <!-- Block 3: Dynamic Huffman Block -->
+  <text x="650" y="80" text-anchor="middle" class="block-title">Dynamic Huffman Block</text>
+  <g transform="translate(550, 100)">
+    <use href="#header-bfinal"/>
+    <g transform="translate(0, 30)">
+      <use href="#header-btype-10"/>
+    </g>
+    <rect y="60" width="200" height="90" class="metadata-field"/>
+    <text x="100" y="100" text-anchor="middle" class="field-label">Dynamic Huffman Table Definition</text>
+    <text x="100" y="120" text-anchor="middle" class="bit-value">(HLIT, HDIST, HCLEN, Code Lengths)</text>
+    <rect y="150" width="200" height="180" class="data-field"/>
+    <text x="100" y="230" text-anchor="middle" class="field-label">Compressed Data</text>
+    <text x="100" y="250" text-anchor="middle" class="bit-value">(using dynamic Huffman codes)</text>
+  </g>
+
+  <!-- Legend -->
+  <g transform="translate(50, 450)">
+    <text x="0" y="0" class="block-title">Legend:</text>
+    <rect x="0" y="20" width="20" height="20" class="header-bit legend-box"/>
+    <text x="30" y="35" class="legend-label">Header Bits (BFINAL, BTYPE)</text>
+    <rect x="0" y="50" width="20" height="20" class="metadata-field legend-box"/>
+    <text x="30" y="65" class="legend-label">Metadata (LEN, NLEN, Huffman Table Def)</text>
+    <rect x="0" y="80" width="20" height="20" class="data-field legend-box"/>
+    <text x="30" y="95" class="legend-label">Data (Compressed/Uncompressed)</text>
+  </g>
+
+</svg>

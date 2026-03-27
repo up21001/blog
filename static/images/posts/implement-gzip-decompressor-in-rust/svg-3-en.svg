@@ -1,0 +1,164 @@
+<svg viewBox="0 0 800 1400" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .shape {
+      stroke: #333;
+      stroke-width: 2;
+      fill: #f8f9fa; /* Default fill, overridden by specific types */
+    }
+    .process { fill: #4A90D9; }
+    .decision { fill: #FFD93D; }
+    .start-end { fill: #50C878; }
+    .io { fill: #4A90D9; } /* Using process color for I/O */
+    .arrow {
+      stroke: #333;
+      stroke-width: 2;
+      fill: none;
+      marker-end: url(#arrowhead);
+    }
+    text {
+      font-family: "Arial, sans-serif";
+      font-size: 14px;
+      fill: #333;
+      text-anchor: middle;
+      dominant-baseline: central;
+    }
+    .label {
+      font-size: 12px;
+      fill: #555;
+    }
+  </style>
+
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#333" />
+    </marker>
+  </defs>
+
+  <!-- Shapes and Text Labels (Rendering Order: Shapes then Text) -->
+
+  <!-- Start -->
+  <ellipse id="start" class="shape start-end" cx="400" cy="50" rx="100" ry="35" />
+  <text x="400" y="50">Start</text>
+
+  <!-- Read Compressed Data Stream (I/O) -->
+  <path id="read_compressed" class="shape io" d="M300 115 L500 115 L480 185 L280 185 Z" />
+  <text x="390" y="135">Read Compressed</text>
+  <text x="390" y="155">Data Stream</text>
+
+  <!-- Decode Block Header (Process) -->
+  <rect id="decode_header" class="shape process" x="300" y="215" width="200" height="70" />
+  <text x="400" y="250">Decode Block Header</text>
+
+  <!-- Is Final Block? (Decision) -->
+  <polygon id="is_final_block" class="shape decision" points="400,315 500,365 400,415 300,365" />
+  <text x="400" y="365">Is Final Block?</text>
+
+  <!-- End -->
+  <ellipse id="end" class="shape start-end" cx="650" cy="365" rx="100" ry="35" />
+  <text x="650" y="365">End</text>
+
+  <!-- Block Type? (Decision) -->
+  <polygon id="block_type" class="shape decision" points="400,465 500,515 400,565 300,515" />
+  <text x="400" y="515">Block Type?</text>
+
+  <!-- No Compression (Type 00) (Process) -->
+  <rect id="no_compression" class="shape process" x="100" y="615" width="200" height="70" />
+  <text x="200" y="650">Read Uncompressed Data</text>
+
+  <!-- Fixed Huffman (Type 01) (Process) -->
+  <rect id="fixed_huffman" class="shape process" x="400" y="615" width="200" height="70" />
+  <text x="500" y="650">Use Fixed</text>
+  <text x="500" y="670">Huffman Trees</text>
+
+  <!-- Dynamic Huffman (Type 10) (Process) -->
+  <rect id="dynamic_huffman" class="shape process" x="400" y="715" width="200" height="70" />
+  <text x="500" y="740">Build Dynamic</text>
+  <text x="500" y="760">Huffman Trees</text>
+
+  <!-- Huffman Decode Next Symbol (Process) -->
+  <rect id="huffman_decode" class="shape process" x="400" y="815" width="200" height="70" />
+  <text x="500" y="850">Huffman Decode</text>
+  <text x="500" y="870">Next Symbol</text>
+
+  <!-- Symbol Type? (Decision) -->
+  <polygon id="symbol_type" class="shape decision" points="500,915 600,965 500,1015 400,965" />
+  <text x="500" y="965">Symbol Type?</text>
+
+  <!-- Output Literal Byte (Process) -->
+  <rect id="output_literal" class="shape process" x="200" y="1065" width="200" height="70" />
+  <text x="300" y="1100">Output Literal Byte</text>
+
+  <!-- Read Length/Distance Extra Bits (Process) -->
+  <rect id="read_length_distance_extra_bits" class="shape process" x="500" y="1065" width="200" height="70" />
+  <text x="600" y="1090">Read Length/</text>
+  <text x="600" y="1110">Distance Extra Bits</text>
+
+  <!-- LZ77 Decode (Process) -->
+  <rect id="lz77_decode" class="shape process" x="500" y="1165" width="200" height="70" />
+  <text x="600" y="1190">LZ77 Decode</text>
+  <text x="600" y="1210">(Copy from History Window)</text>
+
+  <!-- Arrows (Rendering Order: Last) -->
+
+  <!-- Start to Read Compressed Data -->
+  <path class="arrow" d="M400 85 V100" />
+
+  <!-- Read Compressed Data to Decode Block Header -->
+  <path class="arrow" d="M390 185 V200" />
+
+  <!-- Decode Block Header to Is Final Block? -->
+  <path class="arrow" d="M400 285 V300" />
+
+  <!-- Is Final Block? (Yes) to End -->
+  <path class="arrow" d="M500 365 H535" />
+  <text x="520" y="345" class="label">Yes</text>
+
+  <!-- Is Final Block? (No) to Block Type? -->
+  <path class="arrow" d="M400 415 V450" />
+  <text x="420" y="435" class="label">No</text>
+
+  <!-- Block Type? (Type 00) to No Compression -->
+  <path class="arrow" d="M300 515 H215 V600" />
+  <text x="250" y="500" class="label">Type 00</text>
+
+  <!-- Block Type? (Type 01) to Fixed Huffman -->
+  <path class="arrow" d="M400 565 V600" />
+  <text x="420" y="585" class="label">Type 01</text>
+
+  <!-- Block Type? (Type 10) to Dynamic Huffman -->
+  <path class="arrow" d="M500 515 H550 V700" />
+  <text x="520" y="500" class="label">Type 10</text>
+
+  <!-- No Compression (loop back to Decode Block Header) -->
+  <path class="arrow" d="M200 615 V590 H50 V200 H285" />
+
+  <!-- Fixed Huffman to Huffman Decode Next Symbol -->
+  <path class="arrow" d="M500 685 V800" />
+
+  <!-- Dynamic Huffman to Huffman Decode Next Symbol -->
+  <path class="arrow" d="M500 785 V800" />
+
+  <!-- Huffman Decode Next Symbol to Symbol Type? -->
+  <path class="arrow" d="M500 885 V900" />
+
+  <!-- Symbol Type? (Literal) to Output Literal Byte -->
+  <path class="arrow" d="M400 965 H315 V1050" />
+  <text x="350" y="950" class="label">Literal</text>
+
+  <!-- Symbol Type? (Length/Distance) to Read Length/Distance Extra Bits -->
+  <path class="arrow" d="M600 965 H615 V1050" />
+  <text x="650" y="950" class="label">Length/Distance</text>
+
+  <!-- Symbol Type? (EOB) to Decode Block Header (loop) -->
+  <path class="arrow" d="M500 1015 V1030 H750 V200 H515" />
+  <text x="700" y="1030" class="label">EOB</text>
+
+  <!-- Output Literal Byte (loop back to Huffman Decode Next Symbol) -->
+  <path class="arrow" d="M300 1065 V1040 H50 V800 H485" />
+
+  <!-- Read Length/Distance Extra Bits to LZ77 Decode -->
+  <path class="arrow" d="M600 1135 V1150" />
+
+  <!-- LZ77 Decode (loop back to Huffman Decode Next Symbol) -->
+  <path class="arrow" d="M600 1165 V1140 H750 V800 H515" />
+</svg>

@@ -1,0 +1,64 @@
+<svg viewBox="0 0 800 700" xmlns="http://www.w3.org/2000/svg">
+  <rect x="0" y="0" width="800" height="700" rx="18" fill="#f8f9fa"/>
+  <text x="400" y="34" font-family="Arial, sans-serif" font-size="24" font-weight="700" text-anchor="middle" fill="#2D3748">정규 허프만 트리와 디코딩 원리</text>
+  <circle cx="400" cy="95" r="11" fill="#4A90D9"/>
+  <circle cx="500" cy="145" r="11" fill="#4A90D9"/>
+  <circle cx="400" cy="195" r="11" fill="#4A90D9"/>
+  <circle cx="600" cy="195" r="11" fill="#4A90D9"/>
+  <circle cx="300" cy="245" r="11" fill="#4A90D9"/>
+  <line x1="390" y1="100" x2="312" y2="119" stroke="#2D3748" stroke-width="1.5"/>
+  <line x1="410" y1="100" x2="489" y2="140" stroke="#2D3748" stroke-width="1.5"/>
+  <line x1="491" y1="151" x2="410" y2="190" stroke="#2D3748" stroke-width="1.5"/>
+  <line x1="509" y1="151" x2="589" y2="190" stroke="#2D3748" stroke-width="1.5"/>
+  <line x1="390" y1="201" x2="311" y2="240" stroke="#2D3748" stroke-width="1.5"/>
+  <line x1="590" y1="201" x2="511" y2="220" stroke="#2D3748" stroke-width="1.5"/>
+  <line x1="610" y1="201" x2="689" y2="220" stroke="#2D3748" stroke-width="1.5"/>
+  <line x1="290" y1="251" x2="211" y2="270" stroke="#2D3748" stroke-width="1.5"/>
+  <line x1="310" y1="251" x2="389" y2="270" stroke="#2D3748" stroke-width="1.5"/>
+  <text x="345" y="119" font-family="Courier New, monospace" font-size="14" fill="#2D3748">0</text>
+  <text x="458" y="120" font-family="Courier New, monospace" font-size="14" fill="#2D3748">1</text>
+  <text x="442" y="177" font-family="Courier New, monospace" font-size="14" fill="#2D3748">0</text>
+  <text x="556" y="177" font-family="Courier New, monospace" font-size="14" fill="#2D3748">1</text>
+  <text x="343" y="227" font-family="Courier New, monospace" font-size="14" fill="#2D3748">0</text>
+  <text x="541" y="227" font-family="Courier New, monospace" font-size="14" fill="#2D3748">0</text>
+  <text x="739" y="227" font-family="Courier New, monospace" font-size="14" fill="#2D3748">1</text>
+  <text x="242" y="278" font-family="Courier New, monospace" font-size="14" fill="#2D3748">0</text>
+  <text x="340" y="278" font-family="Courier New, monospace" font-size="14" fill="#2D3748">1</text>
+  <rect x="266" y="136" width="68" height="30" rx="6" fill="#50C878" stroke="#d7dee8"/>
+  <text x="300" y="155" font-family="Courier New, monospace" font-size="13" text-anchor="middle" fill="#1f2937">D0 (0)</text>
+  <rect x="466" y="236" width="68" height="30" rx="6" fill="#50C878" stroke="#d7dee8"/>
+  <text x="500" y="255" font-family="Courier New, monospace" font-size="13" text-anchor="middle" fill="#1f2937">L0 (10)</text>
+  <rect x="664" y="236" width="72" height="30" rx="6" fill="#50C878" stroke="#d7dee8"/>
+  <text x="700" y="255" font-family="Courier New, monospace" font-size="13" text-anchor="middle" fill="#1f2937">L1 (11)</text>
+  <rect x="162" y="286" width="78" height="30" rx="6" fill="#50C878" stroke="#d7dee8"/>
+  <text x="201" y="305" font-family="Courier New, monospace" font-size="13" text-anchor="middle" fill="#1f2937">L2 (1000)</text>
+  <rect x="362" y="286" width="78" height="30" rx="6" fill="#50C878" stroke="#d7dee8"/>
+  <text x="401" y="305" font-family="Courier New, monospace" font-size="13" text-anchor="middle" fill="#1f2937">D1 (1001)</text>
+  <text x="46" y="364" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#2D3748">1. 코드 할당</text>
+  <text x="46" y="392" font-family="Arial, sans-serif" font-size="13" fill="#2D3748">
+    <tspan x="46" dy="0">정규 허프만 코드는 트리 모양 대신 코드 길이만으로 정해집니다.</tspan>
+    <tspan x="46" dy="18">같은 길이 정보가 주어지면 누구나 같은 코드를 만들 수 있습니다.</tspan>
+    <tspan x="46" dy="24">• 각 심볼의 비트 길이를 계산합니다.</tspan>
+    <tspan x="46" dy="18">• 길이 순, 심볼 값 순으로 정렬합니다.</tspan>
+    <tspan x="46" dy="18">• 가장 짧은 코드부터 차례대로 값을 배정합니다.</tspan>
+    <tspan x="46" dy="18">• 길이가 늘어나면 왼쪽 시프트 후 다음 코드를 줍니다.</tspan>
+  </text>
+  <rect x="46" y="520" width="320" height="84" rx="10" fill="#ffffff" stroke="#d7dee8"/>
+  <text x="62" y="545" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#2D3748">예시 코드</text>
+  <text x="62" y="568" font-family="Courier New, monospace" font-size="13" fill="#2D3748">D0 (길이 1): 0</text>
+  <text x="62" y="588" font-family="Courier New, monospace" font-size="13" fill="#2D3748">L0 (길이 2): 10   L1 (길이 2): 11</text>
+  <text x="62" y="608" font-family="Courier New, monospace" font-size="13" fill="#2D3748">L2 (길이 4): 1000 D1 (길이 4): 1001</text>
+  <text x="430" y="364" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#2D3748">2. 디코딩</text>
+  <text x="430" y="392" font-family="Arial, sans-serif" font-size="13" fill="#2D3748">
+    <tspan x="430" dy="0">비트 스트림을 읽을 때는 루트에서 시작합니다.</tspan>
+    <tspan x="430" dy="24">• 비트를 한 개씩 읽습니다.</tspan>
+    <tspan x="430" dy="18">• 0이면 왼쪽, 1이면 오른쪽으로 이동합니다.</tspan>
+    <tspan x="430" dy="18">• 초록색 리프 노드에 도달하면 심볼이 결정됩니다.</tspan>
+    <tspan x="430" dy="18">• 심볼을 출력한 뒤 다시 루트로 돌아갑니다.</tspan>
+  </text>
+  <rect x="430" y="520" width="320" height="84" rx="10" fill="#ffffff" stroke="#d7dee8"/>
+  <text x="446" y="545" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#2D3748">읽기 예시</text>
+  <text x="446" y="568" font-family="Courier New, monospace" font-size="13" fill="#2D3748">0    → D0</text>
+  <text x="446" y="588" font-family="Courier New, monospace" font-size="13" fill="#2D3748">10   → L0    11   → L1</text>
+  <text x="446" y="608" font-family="Courier New, monospace" font-size="13" fill="#2D3748">1000 → L2    1001 → D1</text>
+</svg>

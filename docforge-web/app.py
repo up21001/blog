@@ -48,8 +48,8 @@ from services.text_gen import (
 from services.markdown_images import inject_images_into_markdown, strip_placeholder_images
 from services.prompt_config import get_builtin_defaults, get_for_api, reset_to_defaults, save_prompts
 from services.publish import (
-    content_target_info, delete_static_image, has_data_images, list_posts,
-    load_post, publish_bundle, publish_markdown, save_static_images, suggest_filename,
+    content_target_info, delete_static_image, extract_slug, has_data_images, list_posts,
+    load_post, publish_bundle, publish_markdown, rewrite_post_asset_urls, save_static_images, suggest_filename,
 )
 
 logging.basicConfig(level=logging.INFO)
@@ -240,18 +240,21 @@ def api_publish_post(body: PublishBody):
             f"해당 폴더에 쓸 수 없습니다: {info['posts_dir']}",
         )
     hint = (body.slug_hint or "").strip() or "post"
-    use_bundle = has_data_images(body.markdown)
+    asset_slug = extract_slug(body.markdown, hint)
+    markdown_ko = rewrite_post_asset_urls(body.markdown, asset_slug)
+    markdown_en = rewrite_post_asset_urls(body.markdown_en or "", asset_slug) if body.markdown_en else ""
+    use_bundle = has_data_images(markdown_ko)
     try:
         if use_bundle:
             path, fname, rel_display, sub_used = publish_bundle(
-                body.markdown,
+                markdown_ko,
                 body.filename,
                 hint,
                 body.subfolder or "",
             )
         else:
             path, fname, rel_display, sub_used = publish_markdown(
-                body.markdown,
+                markdown_ko,
                 body.filename,
                 hint,
                 body.subfolder or "",
@@ -263,18 +266,17 @@ def api_publish_post(body: PublishBody):
         raise HTTPException(500, str(e)) from e
     # 영문 마크다운 저장 (.en.md)
     en_saved = ""
-    if body.markdown_en and body.markdown_en.strip():
+    if markdown_en and markdown_en.strip():
         en_fname = fname.replace(".md", ".en.md") if fname else "post.en.md"
         en_target = path.parent / en_fname
-        en_target.write_text(body.markdown_en, encoding="utf-8", newline="\n")
+        en_target.write_text(markdown_en, encoding="utf-8", newline="\n")
         en_saved = en_fname
 
     # 에셋 이미지 → static/images/posts/<slug>/ 에 저장
     saved_images = []
     if body.images:
-        slug = fname.replace(".md", "") if fname else (body.slug_hint or "post")
         saved_images = save_static_images(
-            [img.model_dump() for img in body.images], slug
+            [img.model_dump() for img in body.images], asset_slug
         )
 
     return {
@@ -835,7 +837,7 @@ async def generate(body: GenerateBody):
                     spec.get("description", topic),
                     spec.get("type", "architecture"),
                     spec.get("style", "modern"),
-                    language="en" if body.with_english else "ko",
+                    language="ko",
                 )
                 svgs_out.append({
                     "index": i,

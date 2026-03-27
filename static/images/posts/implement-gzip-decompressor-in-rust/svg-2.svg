@@ -1,0 +1,47 @@
+<svg width="800" height="500" viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <rect x="0" y="0" width="800" height="500" fill="#f8f9fa"/>
+  <defs>
+    <style>
+      .stage-rect { fill: #ffffff; stroke: #e0e0e0; stroke-width: 1; rx: 8; ry: 8; filter: drop-shadow(2px 2px 3px rgba(0,0,0,0.1)); }
+      .stage-label { font-family: "Arial, sans-serif"; font-weight: bold; font-size: 16px; fill: #2D3748; text-anchor: middle; }
+      .arrow-label { font-family: "Arial, sans-serif"; font-size: 12px; fill: #2D3748; text-anchor: middle; }
+      .progress-circle { fill: #2D3748; }
+      .progress-text { font-family: "Arial, sans-serif"; font-size: 12px; fill: #ffffff; text-anchor: middle; dominant-baseline: central; }
+      .icon-text { font-family: "Arial, sans-serif"; font-size: 18px; fill: #ffffff; text-anchor: middle; dominant-baseline: central; }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#2D3748" />
+    </marker>
+  </defs>
+  <g transform="translate(80, 190)">
+    <rect x="0" y="0" width="200" height="120" class="stage-rect"/>
+    <rect x="0" y="0" width="200" height="30" fill="#4A90D9"/>
+    <text x="100" y="18" class="icon-text">&#x1F4BE;</text>
+    <text x="100" y="75" class="stage-label">입력 바이트 버퍼</text>
+    <text x="100" y="95" class="arrow-label" style="font-weight:normal; font-size:11px;">(예: 0xAF, 0x12, 0xCD)</text>
+  </g>
+  <circle cx="180" cy="160" r="12" class="progress-circle"/>
+  <text x="180" y="160" class="progress-text">1</text>
+  <g transform="translate(300, 190)">
+    <rect x="0" y="0" width="200" height="120" class="stage-rect"/>
+    <rect x="0" y="0" width="200" height="30" fill="#50C878"/>
+    <text x="100" y="18" class="icon-text">&#x231B;</text>
+    <text x="100" y="75" class="stage-label">비트 리더 로직</text>
+    <text x="100" y="95" class="arrow-label" style="font-weight:normal; font-size:11px;">현재 비트 위치: 5</text>
+  </g>
+  <circle cx="400" cy="160" r="12" class="progress-circle"/>
+  <text x="400" y="160" class="progress-text">2</text>
+  <g transform="translate(520, 190)">
+    <rect x="0" y="0" width="200" height="120" class="stage-rect"/>
+    <rect x="0" y="0" width="200" height="30" fill="#6C5CE7"/>
+    <text x="100" y="18" class="icon-text">&#x1F4A1;</text>
+    <text x="100" y="75" class="stage-label">출력 비트 스트림</text>
+    <text x="100" y="95" class="arrow-label" style="font-weight:normal; font-size:11px;">(예: 1, 0, 1, 1, 0, ...)</text>
+  </g>
+  <circle cx="620" cy="160" r="12" class="progress-circle"/>
+  <text x="620" y="160" class="progress-text">3</text>
+  <path d="M280 250 H300" fill="none" stroke="#2D3748" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="290" y="240" class="arrow-label">바이트 데이터</text>
+  <path d="M500 250 H520" fill="none" stroke="#2D3748" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="510" y="240" class="arrow-label">개별 비트 (0/1)</text>
+</svg>

@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import logging
+import math
 import re
 import xml.etree.ElementTree as ET
 
@@ -342,6 +343,214 @@ def _extract_svg(text: str) -> str:
     return _validate_and_fix_svg(svg)
 
 
+def _fix_style_block_css(svg: str) -> str:
+    """Repair common CSS syntax mistakes inside <style> blocks."""
+
+    def _repair(match: re.Match[str]) -> str:
+        css = match.group(1)
+        css = re.sub(r'([a-zA-Z_-][\w-]*)\s*=\s*"([^"]+)"', r"\1: \2;", css)
+        css = re.sub(r"([a-zA-Z_-][\w-]*)\s*=\s*'([^']+)'", r"\1: \2;", css)
+        css = re.sub(
+            r"([a-zA-Z_-][\w-]*)\s*:\s*([^;{}\n]+)(?=\s+[a-zA-Z_-][\w-]*\s*:|\s*})",
+            r"\1: \2;",
+            css,
+        )
+        css = re.sub(
+            r"([a-zA-Z_-][\w-]*)\s*:\s*([^;{}\n]+)(\s*\n)",
+            r"\1: \2;\3",
+            css,
+        )
+        css = re.sub(r";\s*;", ";", css)
+        css = re.sub(r"\s+}", " }", css)
+        return f"<style>{css}</style>"
+
+    return re.sub(r"<style\b[^>]*>([\s\S]*?)</style>", _repair, svg, flags=re.IGNORECASE)
+
+
+def _fix_common_svg_issues(svg: str) -> str:
+    """Normalize easy-to-repair SVG issues before linting/parsing."""
+    if 'xmlns=' not in svg:
+        svg = svg.replace('<svg ', '<svg xmlns="http://www.w3.org/2000/svg" ', 1)
+    svg = svg.replace('stroke="currentColor"', 'stroke="#4A90D9"')
+    svg = svg.replace('fill="currentColor"', 'fill="#4A90D9"')
+    svg = re.sub(r'&(?!amp;|lt;|gt;|quot;|apos;|#\d+;|#x[0-9a-fA-F]+;)', '&amp;', svg)
+    svg = _fix_style_block_css(svg)
+    return svg
+
+
+def _parse_num(value: str | None, default: float = 0.0) -> float:
+    if not value:
+        return default
+    match = re.search(r"-?\d+(?:\.\d+)?", str(value))
+    return float(match.group(0)) if match else default
+
+
+def _parse_viewbox(root: ET.Element) -> tuple[float, float, float, float]:
+    viewbox = root.get("viewBox")
+    if viewbox:
+        parts = [p for p in re.split(r"[\s,]+", viewbox.strip()) if p]
+        if len(parts) == 4:
+            return tuple(float(p) for p in parts)  # type: ignore[return-value]
+    width = _parse_num(root.get("width"), 800.0)
+    height = _parse_num(root.get("height"), 600.0)
+    return 0.0, 0.0, width, height
+
+
+def _text_content(el: ET.Element) -> str:
+    parts = [el.text or ""]
+    for child in el:
+        parts.append(child.text or "")
+        parts.append(child.tail or "")
+    return "".join(parts).strip()
+
+
+def _approx_text_width(text: str, font_size: float) -> float:
+    width = 0.0
+    for ch in text:
+        if ord(ch) > 127:
+            width += font_size * 0.95
+        elif ch.isspace():
+            width += font_size * 0.35
+        else:
+            width += font_size * 0.6
+    return width
+
+
+def _nearest_container_width(root: ET.Element, x: float, y: float) -> float | None:
+    best_distance = math.inf
+    best_width: float | None = None
+
+    for el in root.iter():
+        tag = el.tag.rsplit("}", 1)[-1]
+        if tag == "rect":
+            rx = _parse_num(el.get("x"))
+            ry = _parse_num(el.get("y"))
+            rw = _parse_num(el.get("width"))
+            rh = _parse_num(el.get("height"))
+            if rx <= x <= rx + rw and ry <= y <= ry + rh:
+                distance = abs((rx + rw / 2) - x) + abs((ry + rh / 2) - y)
+                if distance < best_distance:
+                    best_distance = distance
+                    best_width = max(rw - 16.0, 0.0)
+        elif tag == "ellipse":
+            cx = _parse_num(el.get("cx"))
+            cy = _parse_num(el.get("cy"))
+            rx = _parse_num(el.get("rx"))
+            ry = _parse_num(el.get("ry"))
+            if rx and ry and ((x - cx) / rx) ** 2 + ((y - cy) / ry) ** 2 <= 1.0:
+                distance = abs(cx - x) + abs(cy - y)
+                if distance < best_distance:
+                    best_distance = distance
+                    best_width = max(rx * 2 - 16.0, 0.0)
+        elif tag == "polygon":
+            points = []
+            for pair in re.findall(r"(-?\d+(?:\.\d+)?),(-?\d+(?:\.\d+)?)", el.get("points", "")):
+                points.append((float(pair[0]), float(pair[1])))
+            if points:
+                xs = [p[0] for p in points]
+                ys = [p[1] for p in points]
+                if min(xs) <= x <= max(xs) and min(ys) <= y <= max(ys):
+                    distance = abs((min(xs) + max(xs)) / 2 - x) + abs((min(ys) + max(ys)) / 2 - y)
+                    if distance < best_distance:
+                        best_distance = distance
+                        best_width = max(max(xs) - min(xs) - 20.0, 0.0)
+
+    return best_width
+
+
+def _lint_svg_quality(svg: str) -> list[str]:
+    svg = _fix_common_svg_issues(svg)
+    issues: list[str] = []
+
+    for style_match in re.finditer(r"<style\b[^>]*>([\s\S]*?)</style>", svg, flags=re.IGNORECASE):
+        if re.search(r"[a-zA-Z_-][\w-]*\s*=\s*['\"][^'\"]+['\"]", style_match.group(1)):
+            issues.append("style block contains XML-style assignments instead of CSS declarations")
+            break
+
+    try:
+        root = ET.fromstring(svg)
+    except ET.ParseError as e:
+        issues.append(f"svg is not valid XML: {e}")
+        return issues
+
+    _, _, viewbox_width, viewbox_height = _parse_viewbox(root)
+
+    for el in root.iter():
+        if el.tag.rsplit("}", 1)[-1] != "text":
+            continue
+
+        text = _text_content(el)
+        if not text:
+            continue
+
+        x = _parse_num(el.get("x"))
+        y = _parse_num(el.get("y"))
+        font_size = _parse_num(el.get("font-size"), 14.0)
+        width = _approx_text_width(text, font_size)
+
+        if x < 0 or y < 0 or x > viewbox_width or y > viewbox_height:
+            issues.append(f'text "{text[:40]}" is positioned outside the viewBox')
+            continue
+
+        if x + width > viewbox_width - 10:
+            issues.append(f'text "{text[:40]}" overflows the right edge of the viewBox')
+            continue
+
+        container_width = _nearest_container_width(root, x, y)
+        if container_width and width > container_width:
+            issues.append(f'text "{text[:40]}" is wider than its containing shape')
+
+    return issues
+
+
+async def _repair_svg_with_model(
+    client: httpx.AsyncClient,
+    api_key: str,
+    svg: str,
+    issues: list[str],
+    svg_type: str,
+    style: str,
+    language: str,
+) -> str:
+    issue_lines = "\n".join(f"- {issue}" for issue in issues[:10])
+    repair_prompt = f"""You are repairing a broken SVG {svg_type} diagram.
+Return ONLY valid SVG markup.
+
+Requirements:
+- Keep the same topic and overall meaning.
+- Fix invalid CSS in <style> blocks.
+- Fix overlapping labels, clipped text, and text that is wider than its box.
+- If text is too long, wrap it into multiple <text>/<tspan> lines or enlarge the container.
+- Preserve the intended visual style: {style}.
+- Keep all labels in {"English" if language == "en" else "Korean"}.
+- Ensure the final SVG is valid XML and renders cleanly inside its own viewBox.
+- Do not output markdown fences or explanations.
+
+Detected issues:
+{issue_lines}
+
+SVG to repair:
+{svg}
+"""
+    payload = {
+        "contents": [{"role": "user", "parts": [{"text": repair_prompt}]}],
+        "generationConfig": {
+            "temperature": 0.2,
+            "maxOutputTokens": 32768,
+        },
+    }
+    resp = await client.post(
+        GEMINI_API_URL,
+        params={"key": api_key},
+        json=payload,
+    )
+    resp.raise_for_status()
+    data = resp.json()
+    candidate = data["candidates"][0]
+    repaired_raw = candidate["content"]["parts"][0]["text"]
+    return _extract_svg(repaired_raw)
+
+
 def _validate_and_fix_svg(svg: str) -> str:
     """SVG XML 유효성 검사. 깨진 경우 단계별 복구 시도."""
     # xmlns 누락 시 추가
@@ -412,6 +621,17 @@ async def generate_svg_async(
 ) -> str:
     """SVG 코드 생성 후 유효성 검사까지 수행. 실패 시 재시도."""
     system_prompt = SYSTEM_PROMPTS.get(svg_type, SYSTEM_PROMPTS["architecture"])
+    system_prompt += """
+
+Global SVG quality requirements:
+- Output valid XML SVG only.
+- Never use XML attributes inside <style> blocks. CSS must use property: value; syntax only.
+- Avoid giant solid fallback shapes caused by invalid styles.
+- Before finishing, verify every text label fits inside its shape and does not overlap nearby labels.
+- For long labels, wrap into multiple lines using <tspan> or separate <text> elements.
+- If a label cannot fit, enlarge the containing box or diamond instead of letting text overflow.
+- Keep at least 12px padding between text and shape borders.
+"""
     if language == "en":
         # Override Korean text rules to English
         system_prompt = system_prompt.replace(
@@ -476,7 +696,29 @@ async def generate_svg_async(
 
             raw = candidate["content"]["parts"][0]["text"]
             try:
-                return _extract_svg(raw)
+                svg = _extract_svg(raw)
+                issues = _lint_svg_quality(svg)
+                if issues:
+                    logger.warning("SVG quality issues detected for %s: %s", svg_type, "; ".join(issues[:5]))
+                    try:
+                        repaired = await _repair_svg_with_model(
+                            client=client,
+                            api_key=api_key,
+                            svg=svg,
+                            issues=issues,
+                            svg_type=svg_type,
+                            style=style,
+                            language=language,
+                        )
+                        repaired_issues = _lint_svg_quality(repaired)
+                        if len(repaired_issues) < len(issues):
+                            svg = repaired
+                            issues = repaired_issues
+                    except Exception as repair_err:
+                        logger.warning("SVG repair pass failed: %s", repair_err)
+                if issues:
+                    logger.warning("Returning SVG with remaining issues: %s", "; ".join(issues[:5]))
+                return svg
             except ValueError as e:
                 last_err = e
                 logger.warning("SVG 생성 시도 %d/%d 실패: %s — 재시도", attempt, max_retries, e)

@@ -77,6 +77,24 @@ def suggest_filename(markdown: str, slug_hint: str) -> str:
     return f"{date_prefix}-{slug}.md"
 
 
+def extract_slug(markdown: str, slug_hint: str = "") -> str:
+    """Return the normalized front matter slug, or a normalized fallback."""
+    slug = None
+    m = re.search(r'^slug:\s*["\']?([^\s"\']+)["\']?\s*$', markdown, re.MULTILINE)
+    if m:
+        slug = m.group(1).strip()
+    if not slug:
+        slug = slug_hint or "post"
+    return re.sub(r"[^\w\-가-힣]", "-", slug).strip("-")[:100] or "post"
+
+
+def rewrite_post_asset_urls(markdown: str, slug: str) -> str:
+    """Normalize /images/posts/<slug>/... references to the final slug."""
+    if not markdown or not slug:
+        return markdown
+    return re.sub(r"(/images/posts/)[^/\s)]+/([^)\"'\s]+)", rf"\1{slug}/\2", markdown)
+
+
 _SUBDIR_RE = re.compile(r"^[a-zA-Z0-9][a-zA-Z0-9_-]{0,126}$")
 
 
@@ -293,8 +311,14 @@ def load_post(rel_path: str) -> dict:
     filename = parts[-1]
 
     # 연결된 이미지/SVG 찾기 (마크다운에서 /images/posts/<slug>/ 참조 탐색)
-    slug = filename.replace(".md", "")
+    slug = extract_slug(markdown, filename.replace(".md", ""))
+    legacy_slug = filename.replace(".md", "")
     img_dir = get_static_images_dir() / slug
+    if not img_dir.is_dir() and legacy_slug != slug:
+        legacy_dir = get_static_images_dir() / legacy_slug
+        if legacy_dir.is_dir():
+            img_dir = legacy_dir
+            slug = legacy_slug
     images = []
     svgs = []
     if img_dir.is_dir():
