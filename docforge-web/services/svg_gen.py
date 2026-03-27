@@ -343,41 +343,60 @@ def _extract_svg(text: str) -> str:
 
 
 def _validate_and_fix_svg(svg: str) -> str:
-    """SVG XML 유효성 검사. 깨진 경우 복구 시도."""
+    """SVG XML 유효성 검사. 깨진 경우 단계별 복구 시도."""
     # xmlns 누락 시 추가
     if 'xmlns=' not in svg:
         svg = svg.replace('<svg ', '<svg xmlns="http://www.w3.org/2000/svg" ', 1)
     # currentColor → 실제 색상 (img 태그에서 렌더링 안 됨)
     svg = svg.replace('stroke="currentColor"', 'stroke="#4A90D9"')
     svg = svg.replace('fill="currentColor"', 'fill="#4A90D9"')
+
+    # Step 1: 이스케이프되지 않은 & 문자 처리 (가장 흔한 XML 파싱 오류)
+    svg = re.sub(r'&(?!amp;|lt;|gt;|quot;|apos;|#\d+;|#x[0-9a-fA-F]+;)', '&amp;', svg)
+
     try:
         ET.fromstring(svg)
         return svg
     except ET.ParseError as e:
         logger.warning("SVG XML 파싱 실패: %s — 복구 시도", e)
 
-    # 열린 태그 자동 닫기 시도 (최대 5단계)
     fixed = svg
-    for _ in range(5):
-        try:
-            ET.fromstring(fixed)
-            return fixed
-        except ET.ParseError:
-            # 마지막 완전한 태그 이후를 잘라내고 </svg>로 닫기
-            pass
 
-        # 마지막 불완전한 태그/속성 제거
-        # 잘린 속성값 (예: fill="#4) 제거
-        fixed = re.sub(r'<[^>]*$', '', fixed.rstrip())
-        # 닫히지 않은 텍스트 노드 정리
-        fixed = fixed.rstrip()
-        if not fixed.endswith("</svg>"):
-            fixed += "\n</svg>"
-
-    # 최종 검증
+    # Step 2: 잘린 속성값 제거 (예: fill="#4)
+    fixed = re.sub(r'<[^>]*$', '', fixed.rstrip())
+    if not fixed.rstrip().endswith("</svg>"):
+        fixed = fixed.rstrip() + "\n</svg>"
     try:
         ET.fromstring(fixed)
-        logger.info("SVG 복구 성공")
+        logger.info("SVG 복구 성공 (잘린 태그 제거)")
+        return fixed
+    except ET.ParseError:
+        pass
+
+    # Step 3: 닫히지 않은 태그 강제 닫기 (text, g, rect, path 등)
+    unclosed_tags = re.findall(r'<(text|g|tspan|style|defs|filter|marker)\b[^/]*(?<!/)>', fixed)
+    for tag in reversed(unclosed_tags):
+        close_tag = f"</{tag}>"
+        if fixed.count(f"<{tag}") > fixed.count(close_tag):
+            # </svg> 앞에 닫는 태그 삽입
+            fixed = fixed.replace("</svg>", f"{close_tag}\n</svg>", 1)
+    try:
+        ET.fromstring(fixed)
+        logger.info("SVG 복구 성공 (닫히지 않은 태그 처리)")
+        return fixed
+    except ET.ParseError:
+        pass
+
+    # Step 4: 마지막 완전한 최상위 요소까지만 유지
+    last_complete = fixed.rfind("</g>")
+    if last_complete == -1:
+        last_complete = fixed.rfind("/>")
+    if last_complete > 0:
+        fixed = fixed[:last_complete + (4 if "</g>" in fixed[last_complete:last_complete+4] else 2)]
+        fixed = fixed.rstrip() + "\n</svg>"
+    try:
+        ET.fromstring(fixed)
+        logger.info("SVG 복구 성공 (불완전 요소 절삭)")
         return fixed
     except ET.ParseError as e:
         raise ValueError(f"SVG가 유효하지 않아 복구할 수 없습니다: {e}") from e
@@ -401,32 +420,68 @@ async def generate_svg_async(
         )
     user_prompt = _build_prompt(svg_type, description, style, language)
 
-    last_err = None
-    for attempt in range(1, max_retries + 1):
-        payload = {
-            "system_instruction": {"parts": [{"text": system_prompt}]},
-            "contents": [{"role": "user", "parts": [{"text": user_prompt}]}],
-            "generationConfig": {
-                "temperature": 0.4,
-                "maxOutputTokens": 65536,
-                "thinkingConfig": {"thinkingBudget": 0},
-            },
-        }
+    import asyncio as _aio
+    import time as _time
 
-        async with httpx.AsyncClient(timeout=180.0) as client:
-            resp = await client.post(
-                GEMINI_API_URL,
-                params={"key": api_key},
-                json=payload,
-            )
+    last_err = None
+    t_start = _time.monotonic()
+    total_deadline = 180.0  # 전체 최대 3분
+
+    async with httpx.AsyncClient(timeout=90.0) as client:
+        for attempt in range(1, max_retries + 1):
+            if _time.monotonic() - t_start > total_deadline:
+                break
+
+            payload = {
+                "system_instruction": {"parts": [{"text": system_prompt}]},
+                "contents": [{"role": "user", "parts": [{"text": user_prompt}]}],
+                "generationConfig": {
+                    "temperature": 0.4,
+                    "maxOutputTokens": 65536,
+                    "thinkingConfig": {"thinkingBudget": 8192},
+                },
+            }
+
+            try:
+                resp = await client.post(
+                    GEMINI_API_URL,
+                    params={"key": api_key},
+                    json=payload,
+                )
+            except httpx.HTTPStatusError as e:
+                if e.response.status_code == 429:
+                    delay = min(5 * (2 ** (attempt - 1)), 30)
+                    logger.warning("SVG 429 rate limit, %ds 후 재시도 (%d/%d)", delay, attempt, max_retries)
+                    await _aio.sleep(delay)
+                    last_err = e
+                    continue
+                raise
+
+            if resp.status_code == 429:
+                delay = min(5 * (2 ** (attempt - 1)), 30)
+                logger.warning("SVG 429 rate limit, %ds 후 재시도 (%d/%d)", delay, attempt, max_retries)
+                await _aio.sleep(delay)
+                last_err = ValueError("429 rate limit")
+                continue
+
             resp.raise_for_status()
             data = resp.json()
 
-        raw = data["candidates"][0]["content"]["parts"][0]["text"]
-        try:
-            return _extract_svg(raw)
-        except ValueError as e:
-            last_err = e
-            logger.warning("SVG 생성 시도 %d/%d 실패: %s — 재시도", attempt, max_retries, e)
+            # finishReason 확인 — 잘린 출력 감지
+            candidate = data["candidates"][0]
+            finish_reason = candidate.get("finishReason", "")
+            if finish_reason == "MAX_TOKENS":
+                logger.warning("SVG 출력 잘림 (MAX_TOKENS) 시도 %d/%d — 재시도", attempt, max_retries)
+                last_err = ValueError("SVG output truncated (MAX_TOKENS)")
+                continue
+            if finish_reason == "SAFETY":
+                raise ValueError("SVG 콘텐츠가 안전 필터에 의해 차단됨")
+
+            raw = candidate["content"]["parts"][0]["text"]
+            try:
+                return _extract_svg(raw)
+            except ValueError as e:
+                last_err = e
+                logger.warning("SVG 생성 시도 %d/%d 실패: %s — 재시도", attempt, max_retries, e)
 
     raise ValueError(f"SVG 생성 {max_retries}회 시도 후 실패: {last_err}")
