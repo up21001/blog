@@ -1,0 +1,89 @@
+<svg viewBox="0 0 800 420" xmlns="http://www.w3.org/2000/svg" font-family="'Noto Sans KR', Arial, sans-serif">
+  <defs>
+    <filter id="shadow1" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="2" dy="3" stdDeviation="4" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow1" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#4A90D9"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="420" fill="#F0F4FA" rx="12"/>
+  <text x="400" y="36" text-anchor="middle" font-size="18" font-weight="bold" fill="#2C3E50">자동화 파이프라인 아키텍처</text>
+  <text x="400" y="58" text-anchor="middle" font-size="13" fill="#7F8C8D">문서 입력 → OCR/AI 분석 → 스크립트 처리 → 정리된 데이터 출력</text>
+
+  <!-- Step 1: Document Input -->
+  <rect x="30" y="100" width="155" height="220" rx="12" fill="#4A90D9" filter="url(#shadow1)"/>
+  <text x="107" y="135" text-anchor="middle" font-size="28">📄</text>
+  <text x="107" y="162" text-anchor="middle" font-size="14" font-weight="bold" fill="white">문서 입력</text>
+  <rect x="45" y="175" width="125" height="1" fill="white" opacity="0.4"/>
+  <text x="107" y="198" text-anchor="middle" font-size="11" fill="#D6EAF8">영수증 사진</text>
+  <text x="107" y="216" text-anchor="middle" font-size="11" fill="#D6EAF8">스캔 PDF</text>
+  <text x="107" y="234" text-anchor="middle" font-size="11" fill="#D6EAF8">이미지 계약서</text>
+  <text x="107" y="252" text-anchor="middle" font-size="11" fill="#D6EAF8">엑셀 데이터</text>
+  <text x="107" y="270" text-anchor="middle" font-size="11" fill="#D6EAF8">워드 문서</text>
+  <rect x="45" y="285" width="125" height="24" rx="6" fill="white" opacity="0.2"/>
+  <text x="107" y="302" text-anchor="middle" font-size="11" fill="white">다양한 형식 지원</text>
+
+  <!-- Arrow 1 -->
+  <line x1="185" y1="210" x2="218" y2="210" stroke="#4A90D9" stroke-width="2.5" marker-end="url(#arrow1)"/>
+
+  <!-- Step 2: OCR/AI Analysis -->
+  <rect x="220" y="100" width="155" height="220" rx="12" fill="#6C5CE7" filter="url(#shadow1)"/>
+  <text x="297" y="135" text-anchor="middle" font-size="28">🔍</text>
+  <text x="297" y="162" text-anchor="middle" font-size="14" font-weight="bold" fill="white">OCR / AI 분석</text>
+  <rect x="235" y="175" width="125" height="1" fill="white" opacity="0.4"/>
+  <text x="297" y="198" text-anchor="middle" font-size="11" fill="#DDD8FD">이미지 전처리</text>
+  <text x="297" y="216" text-anchor="middle" font-size="11" fill="#DDD8FD">문자 인식 (OCR)</text>
+  <text x="297" y="234" text-anchor="middle" font-size="11" fill="#DDD8FD">의미 분석 (LLM)</text>
+  <text x="297" y="252" text-anchor="middle" font-size="11" fill="#DDD8FD">데이터 추출</text>
+  <text x="297" y="270" text-anchor="middle" font-size="11" fill="#DDD8FD">구조화 변환</text>
+  <rect x="235" y="285" width="125" height="24" rx="6" fill="white" opacity="0.2"/>
+  <text x="297" y="302" text-anchor="middle" font-size="11" fill="white">Tesseract · GPT-4</text>
+
+  <!-- Arrow 2 -->
+  <line x1="375" y1="210" x2="408" y2="210" stroke="#4A90D9" stroke-width="2.5" marker-end="url(#arrow1)"/>
+
+  <!-- Step 3: Script Processing -->
+  <rect x="410" y="100" width="155" height="220" rx="12" fill="#50C878" filter="url(#shadow1)"/>
+  <text x="487" y="135" text-anchor="middle" font-size="28">⚙️</text>
+  <text x="487" y="162" text-anchor="middle" font-size="14" font-weight="bold" fill="white">스크립트 처리</text>
+  <rect x="425" y="175" width="125" height="1" fill="white" opacity="0.4"/>
+  <text x="487" y="198" text-anchor="middle" font-size="11" fill="#D5F5E3">데이터 검증</text>
+  <text x="487" y="216" text-anchor="middle" font-size="11" fill="#D5F5E3">템플릿 적용</text>
+  <text x="487" y="234" text-anchor="middle" font-size="11" fill="#D5F5E3">문서 자동 생성</text>
+  <text x="487" y="252" text-anchor="middle" font-size="11" fill="#D5F5E3">이메일 자동 발송</text>
+  <text x="487" y="270" text-anchor="middle" font-size="11" fill="#D5F5E3">결재 상신</text>
+  <rect x="425" y="285" width="125" height="24" rx="6" fill="white" opacity="0.2"/>
+  <text x="487" y="302" text-anchor="middle" font-size="11" fill="white">Python · RPA</text>
+
+  <!-- Arrow 3 -->
+  <line x1="565" y1="210" x2="598" y2="210" stroke="#4A90D9" stroke-width="2.5" marker-end="url(#arrow1)"/>
+
+  <!-- Step 4: Output -->
+  <rect x="600" y="100" width="165" height="220" rx="12" fill="#FF6B6B" filter="url(#shadow1)"/>
+  <text x="682" y="135" text-anchor="middle" font-size="28">✅</text>
+  <text x="682" y="162" text-anchor="middle" font-size="14" font-weight="bold" fill="white">정리된 데이터 출력</text>
+  <rect x="615" y="175" width="135" height="1" fill="white" opacity="0.4"/>
+  <text x="682" y="198" text-anchor="middle" font-size="11" fill="#FDECEA">엑셀 원장 자동 입력</text>
+  <text x="682" y="216" text-anchor="middle" font-size="11" fill="#FDECEA">PDF 문서 저장</text>
+  <text x="682" y="234" text-anchor="middle" font-size="11" fill="#FDECEA">ERP/CRM 연동</text>
+  <text x="682" y="252" text-anchor="middle" font-size="11" fill="#FDECEA">팀 알림 발송</text>
+  <text x="682" y="270" text-anchor="middle" font-size="11" fill="#FDECEA">감사 로그 기록</text>
+  <rect x="615" y="285" width="135" height="24" rx="6" fill="white" opacity="0.2"/>
+  <text x="682" y="302" text-anchor="middle" font-size="11" fill="white">자동화 완료</text>
+
+  <!-- Bottom stats -->
+  <rect x="30" y="345" width="225" height="52" rx="8" fill="white" opacity="0.7"/>
+  <text x="142" y="366" text-anchor="middle" font-size="12" font-weight="bold" fill="#2C3E50">처리 시간</text>
+  <text x="142" y="386" text-anchor="middle" font-size="13" fill="#4A90D9" font-weight="bold">수동 4시간 → 자동 5분</text>
+
+  <rect x="285" y="345" width="225" height="52" rx="8" fill="white" opacity="0.7"/>
+  <text x="397" y="366" text-anchor="middle" font-size="12" font-weight="bold" fill="#2C3E50">오류율</text>
+  <text x="397" y="386" text-anchor="middle" font-size="13" fill="#50C878" font-weight="bold">인적 오류 90% 감소</text>
+
+  <rect x="540" y="345" width="225" height="52" rx="8" fill="white" opacity="0.7"/>
+  <text x="652" y="366" text-anchor="middle" font-size="12" font-weight="bold" fill="#2C3E50">운영 방식</text>
+  <text x="652" y="386" text-anchor="middle" font-size="13" fill="#FF6B6B" font-weight="bold">24/7 무중단 자동화</text>
+</svg>

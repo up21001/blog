@@ -1,0 +1,87 @@
+<svg viewBox="0 0 800 460" xmlns="http://www.w3.org/2000/svg" font-family="'Noto Sans KR', Arial, sans-serif">
+  <defs>
+    <filter id="shadow3" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="2" dy="3" stdDeviation="4" flood-color="#00000022"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="460" fill="#F0F8F4" rx="12"/>
+  <text x="400" y="36" text-anchor="middle" font-size="18" font-weight="bold" fill="#2C3E50">서류 자동화 핵심 기술 3가지 비교</text>
+  <text x="400" y="58" text-anchor="middle" font-size="13" fill="#7F8C8D">각 기술의 역할, 장점, 적합한 사용 사례</text>
+
+  <!-- Card 1: RPA/Scripting -->
+  <rect x="25" y="75" width="235" height="345" rx="14" fill="white" filter="url(#shadow3)"/>
+  <rect x="25" y="75" width="235" height="70" rx="14" fill="#4A90D9"/>
+  <rect x="25" y="115" width="235" height="30" fill="#4A90D9"/>
+  <text x="142" y="105" text-anchor="middle" font-size="15" font-weight="bold" fill="white">RPA / 스크립팅</text>
+  <text x="142" y="130" text-anchor="middle" font-size="12" fill="#D6EAF8">Robotic Process Automation</text>
+
+  <text x="50" y="170" font-size="12" font-weight="bold" fill="#4A90D9">핵심 특징</text>
+  <text x="50" y="190" font-size="11" fill="#555">• 규칙 기반 반복 작업 자동화</text>
+  <text x="50" y="208" font-size="11" fill="#555">• 구조화 데이터 처리에 최적화</text>
+  <text x="50" y="226" font-size="11" fill="#555">• 빠른 처리 속도와 높은 정확도</text>
+
+  <text x="50" y="255" font-size="12" font-weight="bold" fill="#4A90D9">주요 활용</text>
+  <text x="50" y="273" font-size="11" fill="#555">• 엑셀 데이터 자동 추출</text>
+  <text x="50" y="291" font-size="11" fill="#555">• 계약서/청구서 대량 생성</text>
+  <text x="50" y="309" font-size="11" fill="#555">• 자동 이메일 발송</text>
+
+  <rect x="40" y="328" width="205" height="30" rx="6" fill="#EBF5FB"/>
+  <text x="142" y="348" text-anchor="middle" font-size="11" fill="#4A90D9" font-weight="bold">Python · pandas · UiPath</text>
+
+  <rect x="40" y="368" width="205" height="36" rx="6" fill="#4A90D9" opacity="0.1"/>
+  <text x="142" y="382" text-anchor="middle" font-size="11" fill="#2C3E50">난이도:</text>
+  <text x="142" y="396" text-anchor="middle" font-size="11" fill="#4A90D9" font-weight="bold">초급~중급 (코딩 기초 필요)</text>
+
+  <!-- Card 2: OCR -->
+  <rect x="282" y="75" width="235" height="345" rx="14" fill="white" filter="url(#shadow3)"/>
+  <rect x="282" y="75" width="235" height="70" rx="14" fill="#6C5CE7"/>
+  <rect x="282" y="115" width="235" height="30" fill="#6C5CE7"/>
+  <text x="399" y="105" text-anchor="middle" font-size="15" font-weight="bold" fill="white">OCR 기술</text>
+  <text x="399" y="130" text-anchor="middle" font-size="12" fill="#DDD8FD">Optical Character Recognition</text>
+
+  <text x="307" y="170" font-size="12" font-weight="bold" fill="#6C5CE7">핵심 특징</text>
+  <text x="307" y="190" font-size="11" fill="#555">• 이미지/스캔 PDF → 텍스트 변환</text>
+  <text x="307" y="208" font-size="11" fill="#555">• AI 결합으로 인식률 대폭 향상</text>
+  <text x="307" y="226" font-size="11" fill="#555">• 다국어 문서 동시 처리 가능</text>
+
+  <text x="307" y="255" font-size="12" font-weight="bold" fill="#6C5CE7">주요 활용</text>
+  <text x="307" y="273" font-size="11" fill="#555">• 종이 영수증 디지털화</text>
+  <text x="307" y="291" font-size="11" fill="#555">• 신분증/사업자등록증 추출</text>
+  <text x="307" y="309" font-size="11" fill="#555">• 계약서 스캔본 처리</text>
+
+  <rect x="297" y="328" width="205" height="30" rx="6" fill="#F0EDFB"/>
+  <text x="399" y="348" text-anchor="middle" font-size="11" fill="#6C5CE7" font-weight="bold">Tesseract · Cloud Vision · Clova</text>
+
+  <rect x="297" y="368" width="205" height="36" rx="6" fill="#6C5CE7" opacity="0.1"/>
+  <text x="399" y="382" text-anchor="middle" font-size="11" fill="#2C3E50">난이도:</text>
+  <text x="399" y="396" text-anchor="middle" font-size="11" fill="#6C5CE7" font-weight="bold">초급~중급 (API 활용 가능)</text>
+
+  <!-- Card 3: NLP/AI -->
+  <rect x="540" y="75" width="235" height="345" rx="14" fill="white" filter="url(#shadow3)"/>
+  <rect x="540" y="75" width="235" height="70" rx="14" fill="#FF6B6B"/>
+  <rect x="540" y="115" width="235" height="30" fill="#FF6B6B"/>
+  <text x="657" y="105" text-anchor="middle" font-size="15" font-weight="bold" fill="white">NLP / AI</text>
+  <text x="657" y="130" text-anchor="middle" font-size="12" fill="#FDECEA">Natural Language Processing</text>
+
+  <text x="565" y="170" font-size="12" font-weight="bold" fill="#FF6B6B">핵심 특징</text>
+  <text x="565" y="190" font-size="11" fill="#555">• 비정형 텍스트 맥락 이해</text>
+  <text x="565" y="208" font-size="11" fill="#555">• 요약·분류·정보 추출 자동화</text>
+  <text x="565" y="226" font-size="11" fill="#555">• 복잡한 문서 핵심 파악</text>
+
+  <text x="565" y="255" font-size="12" font-weight="bold" fill="#FF6B6B">주요 활용</text>
+  <text x="565" y="273" font-size="11" fill="#555">• 계약서 위험 조항 검토</text>
+  <text x="565" y="291" font-size="11" fill="#555">• 고객 불만 자동 분류</text>
+  <text x="565" y="309" font-size="11" fill="#555">• 보고서 자동 요약</text>
+
+  <rect x="555" y="328" width="205" height="30" rx="6" fill="#FDF0F0"/>
+  <text x="657" y="348" text-anchor="middle" font-size="11" fill="#FF6B6B" font-weight="bold">OpenAI · Anthropic · HuggingFace</text>
+
+  <rect x="555" y="368" width="205" height="36" rx="6" fill="#FF6B6B" opacity="0.1"/>
+  <text x="657" y="382" text-anchor="middle" font-size="11" fill="#2C3E50">난이도:</text>
+  <text x="657" y="396" text-anchor="middle" font-size="11" fill="#FF6B6B" font-weight="bold">중급~고급 (프롬프트 설계)</text>
+
+  <!-- Bottom note -->
+  <rect x="25" y="435" width="750" height="16" rx="4" fill="none"/>
+  <text x="400" y="448" text-anchor="middle" font-size="12" fill="#7F8C8D">세 기술을 유기적으로 결합할 때 진정한 자동화 파이프라인이 완성됩니다</text>
+</svg>

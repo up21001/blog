@@ -1,0 +1,86 @@
+<svg viewBox="0 0 800 460" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+  <defs>
+    <filter id="shadow3e" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="2" dy="3" stdDeviation="4" flood-color="#00000022"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="460" fill="#F0F8F4" rx="12"/>
+  <text x="400" y="36" text-anchor="middle" font-size="18" font-weight="bold" fill="#2C3E50">Three Core Technologies for Paperwork Automation</text>
+  <text x="400" y="58" text-anchor="middle" font-size="13" fill="#7F8C8D">Role, advantages, and best use cases for each technology</text>
+
+  <!-- Card 1: RPA/Scripting -->
+  <rect x="25" y="75" width="235" height="345" rx="14" fill="white" filter="url(#shadow3e)"/>
+  <rect x="25" y="75" width="235" height="70" rx="14" fill="#4A90D9"/>
+  <rect x="25" y="115" width="235" height="30" fill="#4A90D9"/>
+  <text x="142" y="105" text-anchor="middle" font-size="15" font-weight="bold" fill="white">RPA / Scripting</text>
+  <text x="142" y="130" text-anchor="middle" font-size="12" fill="#D6EAF8">Robotic Process Automation</text>
+
+  <text x="50" y="170" font-size="12" font-weight="bold" fill="#4A90D9">Key Features</text>
+  <text x="50" y="190" font-size="11" fill="#555">• Rule-based repetitive automation</text>
+  <text x="50" y="208" font-size="11" fill="#555">• Optimized for structured data</text>
+  <text x="50" y="226" font-size="11" fill="#555">• Fast and highly accurate</text>
+
+  <text x="50" y="255" font-size="12" font-weight="bold" fill="#4A90D9">Main Use Cases</text>
+  <text x="50" y="273" font-size="11" fill="#555">• Excel data extraction</text>
+  <text x="50" y="291" font-size="11" fill="#555">• Bulk contract/invoice generation</text>
+  <text x="50" y="309" font-size="11" fill="#555">• Automated email dispatch</text>
+
+  <rect x="40" y="328" width="205" height="30" rx="6" fill="#EBF5FB"/>
+  <text x="142" y="348" text-anchor="middle" font-size="11" fill="#4A90D9" font-weight="bold">Python · pandas · UiPath</text>
+
+  <rect x="40" y="368" width="205" height="36" rx="6" fill="#4A90D9" opacity="0.1"/>
+  <text x="142" y="382" text-anchor="middle" font-size="11" fill="#2C3E50">Difficulty:</text>
+  <text x="142" y="396" text-anchor="middle" font-size="11" fill="#4A90D9" font-weight="bold">Beginner–Intermediate</text>
+
+  <!-- Card 2: OCR -->
+  <rect x="282" y="75" width="235" height="345" rx="14" fill="white" filter="url(#shadow3e)"/>
+  <rect x="282" y="75" width="235" height="70" rx="14" fill="#6C5CE7"/>
+  <rect x="282" y="115" width="235" height="30" fill="#6C5CE7"/>
+  <text x="399" y="105" text-anchor="middle" font-size="15" font-weight="bold" fill="white">OCR Technology</text>
+  <text x="399" y="130" text-anchor="middle" font-size="12" fill="#DDD8FD">Optical Character Recognition</text>
+
+  <text x="307" y="170" font-size="12" font-weight="bold" fill="#6C5CE7">Key Features</text>
+  <text x="307" y="190" font-size="11" fill="#555">• Image/scanned PDF → text</text>
+  <text x="307" y="208" font-size="11" fill="#555">• AI integration boosts accuracy</text>
+  <text x="307" y="226" font-size="11" fill="#555">• Multi-language document support</text>
+
+  <text x="307" y="255" font-size="12" font-weight="bold" fill="#6C5CE7">Main Use Cases</text>
+  <text x="307" y="273" font-size="11" fill="#555">• Paper receipt digitization</text>
+  <text x="307" y="291" font-size="11" fill="#555">• ID / registration extraction</text>
+  <text x="307" y="309" font-size="11" fill="#555">• Contract scan processing</text>
+
+  <rect x="297" y="328" width="205" height="30" rx="6" fill="#F0EDFB"/>
+  <text x="399" y="348" text-anchor="middle" font-size="11" fill="#6C5CE7" font-weight="bold">Tesseract · Cloud Vision · Clova</text>
+
+  <rect x="297" y="368" width="205" height="36" rx="6" fill="#6C5CE7" opacity="0.1"/>
+  <text x="399" y="382" text-anchor="middle" font-size="11" fill="#2C3E50">Difficulty:</text>
+  <text x="399" y="396" text-anchor="middle" font-size="11" fill="#6C5CE7" font-weight="bold">Beginner–Intermediate (APIs)</text>
+
+  <!-- Card 3: NLP/AI -->
+  <rect x="540" y="75" width="235" height="345" rx="14" fill="white" filter="url(#shadow3e)"/>
+  <rect x="540" y="75" width="235" height="70" rx="14" fill="#FF6B6B"/>
+  <rect x="540" y="115" width="235" height="30" fill="#FF6B6B"/>
+  <text x="657" y="105" text-anchor="middle" font-size="15" font-weight="bold" fill="white">NLP / AI</text>
+  <text x="657" y="130" text-anchor="middle" font-size="12" fill="#FDECEA">Natural Language Processing</text>
+
+  <text x="565" y="170" font-size="12" font-weight="bold" fill="#FF6B6B">Key Features</text>
+  <text x="565" y="190" font-size="11" fill="#555">• Understands unstructured text</text>
+  <text x="565" y="208" font-size="11" fill="#555">• Summarization, classification</text>
+  <text x="565" y="226" font-size="11" fill="#555">• Complex document comprehension</text>
+
+  <text x="565" y="255" font-size="12" font-weight="bold" fill="#FF6B6B">Main Use Cases</text>
+  <text x="565" y="273" font-size="11" fill="#555">• Contract risk clause review</text>
+  <text x="565" y="291" font-size="11" fill="#555">• Customer complaint routing</text>
+  <text x="565" y="309" font-size="11" fill="#555">• Auto report summarization</text>
+
+  <rect x="555" y="328" width="205" height="30" rx="6" fill="#FDF0F0"/>
+  <text x="657" y="348" text-anchor="middle" font-size="11" fill="#FF6B6B" font-weight="bold">OpenAI · Anthropic · HuggingFace</text>
+
+  <rect x="555" y="368" width="205" height="36" rx="6" fill="#FF6B6B" opacity="0.1"/>
+  <text x="657" y="382" text-anchor="middle" font-size="11" fill="#2C3E50">Difficulty:</text>
+  <text x="657" y="396" text-anchor="middle" font-size="11" fill="#FF6B6B" font-weight="bold">Intermediate–Advanced</text>
+
+  <!-- Bottom note -->
+  <text x="400" y="448" text-anchor="middle" font-size="12" fill="#7F8C8D">Combining all three technologies creates a complete, end-to-end automation pipeline</text>
+</svg>

@@ -1,0 +1,102 @@
+<svg viewBox="0 0 800 480" xmlns="http://www.w3.org/2000/svg" font-family="'Noto Sans KR', Arial, sans-serif">
+  <defs>
+    <filter id="sh5" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="2" dy="3" stdDeviation="4" flood-color="#00000022"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="480" fill="#FFF8F0" rx="12"/>
+  <text x="400" y="36" text-anchor="middle" font-size="18" font-weight="bold" fill="#2C3E50">노코드 자동화 도구 비교</text>
+  <text x="400" y="58" text-anchor="middle" font-size="13" fill="#7F8C8D">Zapier · Make · Power Automate — 특징, 가격, 적합 대상</text>
+
+  <!-- Header Row -->
+  <rect x="25" y="75" width="750" height="44" rx="8" fill="#2C3E50"/>
+  <text x="210" y="103" text-anchor="middle" font-size="13" font-weight="bold" fill="white">Zapier</text>
+  <text x="420" y="103" text-anchor="middle" font-size="13" font-weight="bold" fill="white">Make (Integromat)</text>
+  <text x="635" y="103" text-anchor="middle" font-size="13" font-weight="bold" fill="white">Power Automate</text>
+  <line x1="315" y1="80" x2="315" y2="115" stroke="white" stroke-width="1" opacity="0.3"/>
+  <line x1="525" y1="80" x2="525" y2="115" stroke="white" stroke-width="1" opacity="0.3"/>
+
+  <!-- Row: Logo/Color band -->
+  <rect x="25" y="119" width="290" height="8" fill="#FF6B6B"/>
+  <rect x="315" y="119" width="210" height="8" fill="#FFD93D"/>
+  <rect x="525" y="119" width="250" height="8" fill="#4A90D9"/>
+
+  <!-- Row: Strengths -->
+  <rect x="25" y="127" width="750" height="72" rx="0" fill="white"/>
+  <text x="60" y="148" font-size="11" font-weight="bold" fill="#FF6B6B">강점</text>
+  <text x="60" y="166" font-size="11" fill="#555">앱 연동 수 세계 최다</text>
+  <text x="60" y="182" font-size="11" fill="#555">(6,000+ 앱 지원)</text>
+  <line x1="315" y1="130" x2="315" y2="196" stroke="#EEE" stroke-width="1"/>
+  <text x="330" y="148" font-size="11" font-weight="bold" fill="#E6B800">강점</text>
+  <text x="330" y="166" font-size="11" fill="#555">복잡한 로직 · 데이터 변환</text>
+  <text x="330" y="182" font-size="11" fill="#555">시각적 플로우 편집기</text>
+  <line x1="525" y1="130" x2="525" y2="196" stroke="#EEE" stroke-width="1"/>
+  <text x="540" y="148" font-size="11" font-weight="bold" fill="#4A90D9">강점</text>
+  <text x="540" y="166" font-size="11" fill="#555">Microsoft 365 네이티브 연동</text>
+  <text x="540" y="182" font-size="11" fill="#555">기업 보안 · 컴플라이언스</text>
+
+  <!-- Row: Pricing -->
+  <rect x="25" y="199" width="750" height="72" fill="#F9F9F9"/>
+  <text x="60" y="220" font-size="11" font-weight="bold" fill="#FF6B6B">가격</text>
+  <text x="60" y="238" font-size="11" fill="#555">무료: 100 작업/월</text>
+  <text x="60" y="254" font-size="11" fill="#555">유료: $19.99~/월부터</text>
+  <line x1="315" y1="202" x2="315" y2="268" stroke="#EEE" stroke-width="1"/>
+  <text x="330" y="220" font-size="11" font-weight="bold" fill="#E6B800">가격</text>
+  <text x="330" y="238" font-size="11" fill="#555">무료: 1,000 작업/월</text>
+  <text x="330" y="254" font-size="11" fill="#555">유료: $9~/월부터</text>
+  <line x1="525" y1="202" x2="525" y2="268" stroke="#EEE" stroke-width="1"/>
+  <text x="540" y="220" font-size="11" font-weight="bold" fill="#4A90D9">가격</text>
+  <text x="540" y="238" font-size="11" fill="#555">Microsoft 365 요금에 포함</text>
+  <text x="540" y="254" font-size="11" fill="#555">단독: $15~/월부터</text>
+
+  <!-- Row: Best For -->
+  <rect x="25" y="271" width="750" height="72" fill="white"/>
+  <text x="60" y="292" font-size="11" font-weight="bold" fill="#FF6B6B">적합 대상</text>
+  <text x="60" y="310" font-size="11" fill="#555">비기술직 사용자</text>
+  <text x="60" y="326" font-size="11" fill="#555">빠른 설정이 필요한 팀</text>
+  <line x1="315" y1="274" x2="315" y2="340" stroke="#EEE" stroke-width="1"/>
+  <text x="330" y="292" font-size="11" font-weight="bold" fill="#E6B800">적합 대상</text>
+  <text x="330" y="310" font-size="11" fill="#555">중급 자동화 사용자</text>
+  <text x="330" y="326" font-size="11" fill="#555">세밀한 제어가 필요한 팀</text>
+  <line x1="525" y1="274" x2="525" y2="340" stroke="#EEE" stroke-width="1"/>
+  <text x="540" y="292" font-size="11" font-weight="bold" fill="#4A90D9">적합 대상</text>
+  <text x="540" y="310" font-size="11" fill="#555">Office 환경 기업</text>
+  <text x="540" y="326" font-size="11" fill="#555">IT 부서가 있는 조직</text>
+
+  <!-- Row: Learning Curve -->
+  <rect x="25" y="343" width="750" height="50" fill="#F9F9F9" rx="0"/>
+  <text x="60" y="364" font-size="11" font-weight="bold" fill="#FF6B6B">학습 곡선</text>
+  <rect x="60" y="372" width="200" height="10" rx="4" fill="#EEE"/>
+  <rect x="60" y="372" width="90" height="10" rx="4" fill="#FF6B6B" opacity="0.7"/>
+  <text x="265" y="382" font-size="10" fill="#FF6B6B">쉬움</text>
+  <line x1="315" y1="346" x2="315" y2="390" stroke="#EEE" stroke-width="1"/>
+  <text x="330" y="364" font-size="11" font-weight="bold" fill="#E6B800">학습 곡선</text>
+  <rect x="330" y="372" width="150" height="10" rx="4" fill="#EEE"/>
+  <rect x="330" y="372" width="100" height="10" rx="4" fill="#FFD93D" opacity="0.8"/>
+  <text x="485" y="382" font-size="10" fill="#E6B800">보통</text>
+  <line x1="525" y1="346" x2="525" y2="390" stroke="#EEE" stroke-width="1"/>
+  <text x="540" y="364" font-size="11" font-weight="bold" fill="#4A90D9">학습 곡선</text>
+  <rect x="540" y="372" width="200" height="10" rx="4" fill="#EEE"/>
+  <rect x="540" y="372" width="140" height="10" rx="4" fill="#4A90D9" opacity="0.7"/>
+  <text x="745" y="382" font-size="10" fill="#4A90D9">중간</text>
+
+  <!-- Bottom border -->
+  <rect x="25" y="393" width="750" height="4" rx="0" fill="#2C3E50" opacity="0.1"/>
+
+  <!-- Recommendation boxes -->
+  <rect x="25" y="408" width="230" height="56" rx="8" fill="#FF6B6B" opacity="0.1" filter="url(#sh5)"/>
+  <text x="140" y="428" text-anchor="middle" font-size="11" font-weight="bold" fill="#FF6B6B">빠르게 시작하려면</text>
+  <text x="140" y="446" text-anchor="middle" font-size="11" fill="#555">Zapier 추천</text>
+  <text x="140" y="458" text-anchor="middle" font-size="10" fill="#777">무료로 시작, 직관적 UI</text>
+
+  <rect x="285" y="408" width="230" height="56" rx="8" fill="#FFD93D" opacity="0.15" filter="url(#sh5)"/>
+  <text x="400" y="428" text-anchor="middle" font-size="11" font-weight="bold" fill="#B8860B">복잡한 로직이 필요하면</text>
+  <text x="400" y="446" text-anchor="middle" font-size="11" fill="#555">Make 추천</text>
+  <text x="400" y="458" text-anchor="middle" font-size="10" fill="#777">강력한 시각적 편집기</text>
+
+  <rect x="545" y="408" width="230" height="56" rx="8" fill="#4A90D9" opacity="0.1" filter="url(#sh5)"/>
+  <text x="660" y="428" text-anchor="middle" font-size="11" font-weight="bold" fill="#4A90D9">Office 환경이라면</text>
+  <text x="660" y="446" text-anchor="middle" font-size="11" fill="#555">Power Automate 추천</text>
+  <text x="660" y="458" text-anchor="middle" font-size="10" fill="#777">Microsoft 365 완벽 통합</text>
+</svg>

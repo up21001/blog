@@ -1,0 +1,85 @@
+<svg viewBox="0 0 800 440" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+  <defs>
+    <filter id="shadow2e" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="2" dy="3" stdDeviation="4" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow2e" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#6C5CE7"/>
+    </marker>
+  </defs>
+
+  <rect width="800" height="440" fill="#F5F0FF" rx="12"/>
+  <text x="400" y="36" text-anchor="middle" font-size="18" font-weight="bold" fill="#2C3E50">OCR + AI Data Extraction Pipeline</text>
+  <text x="400" y="58" text-anchor="middle" font-size="13" fill="#7F8C8D">Scanned Doc → Text Recognition → AI Semantic Analysis → Validation &amp; Storage</text>
+
+  <!-- Step 1 -->
+  <rect x="25" y="85" width="165" height="230" rx="12" fill="#4A90D9" filter="url(#shadow2e)"/>
+  <text x="107" y="120" text-anchor="middle" font-size="32">📥</text>
+  <text x="107" y="150" text-anchor="middle" font-size="14" font-weight="bold" fill="white">Step 1</text>
+  <text x="107" y="170" text-anchor="middle" font-size="13" font-weight="bold" fill="white">Document Intake</text>
+  <rect x="40" y="182" width="135" height="1" fill="white" opacity="0.4"/>
+  <text x="107" y="202" text-anchor="middle" font-size="11" fill="#D6EAF8">Receipt photo upload</text>
+  <text x="107" y="220" text-anchor="middle" font-size="11" fill="#D6EAF8">Email PDF ingestion</text>
+  <text x="107" y="238" text-anchor="middle" font-size="11" fill="#D6EAF8">Cloud folder watch</text>
+  <text x="107" y="256" text-anchor="middle" font-size="11" fill="#D6EAF8">Scanner integration</text>
+  <rect x="40" y="272" width="135" height="28" rx="6" fill="white" opacity="0.2"/>
+  <text x="107" y="291" text-anchor="middle" font-size="11" fill="white">Google Drive · S3</text>
+
+  <!-- Arrow 1 -->
+  <line x1="190" y1="200" x2="220" y2="200" stroke="#6C5CE7" stroke-width="2.5" marker-end="url(#arrow2e)"/>
+
+  <!-- Step 2 -->
+  <rect x="222" y="85" width="165" height="230" rx="12" fill="#6C5CE7" filter="url(#shadow2e)"/>
+  <text x="304" y="120" text-anchor="middle" font-size="32">🔬</text>
+  <text x="304" y="150" text-anchor="middle" font-size="14" font-weight="bold" fill="white">Step 2</text>
+  <text x="304" y="170" text-anchor="middle" font-size="13" font-weight="bold" fill="white">Preprocessing / OCR</text>
+  <rect x="237" y="182" width="135" height="1" fill="white" opacity="0.4"/>
+  <text x="304" y="202" text-anchor="middle" font-size="11" fill="#DDD8FD">Noise removal</text>
+  <text x="304" y="220" text-anchor="middle" font-size="11" fill="#DDD8FD">Deskewing</text>
+  <text x="304" y="238" text-anchor="middle" font-size="11" fill="#DDD8FD">Resolution optimization</text>
+  <text x="304" y="256" text-anchor="middle" font-size="11" fill="#DDD8FD">Character recognition</text>
+  <rect x="237" y="272" width="135" height="28" rx="6" fill="white" opacity="0.2"/>
+  <text x="304" y="291" text-anchor="middle" font-size="11" fill="white">OpenCV · Tesseract</text>
+
+  <!-- Arrow 2 -->
+  <line x1="387" y1="200" x2="417" y2="200" stroke="#6C5CE7" stroke-width="2.5" marker-end="url(#arrow2e)"/>
+
+  <!-- Step 3 -->
+  <rect x="419" y="85" width="165" height="230" rx="12" fill="#50C878" filter="url(#shadow2e)"/>
+  <text x="501" y="120" text-anchor="middle" font-size="32">🤖</text>
+  <text x="501" y="150" text-anchor="middle" font-size="14" font-weight="bold" fill="white">Step 3</text>
+  <text x="501" y="170" text-anchor="middle" font-size="13" font-weight="bold" fill="white">AI Semantic Analysis</text>
+  <rect x="434" y="182" width="135" height="1" fill="white" opacity="0.4"/>
+  <text x="501" y="202" text-anchor="middle" font-size="11" fill="#D5F5E3">Context understanding</text>
+  <text x="501" y="220" text-anchor="middle" font-size="11" fill="#D5F5E3">Key field extraction</text>
+  <text x="501" y="238" text-anchor="middle" font-size="11" fill="#D5F5E3">JSON structuring</text>
+  <text x="501" y="256" text-anchor="middle" font-size="11" fill="#D5F5E3">Prompt engineering</text>
+  <rect x="434" y="272" width="135" height="28" rx="6" fill="white" opacity="0.2"/>
+  <text x="501" y="291" text-anchor="middle" font-size="11" fill="white">OpenAI · Claude API</text>
+
+  <!-- Arrow 3 -->
+  <line x1="584" y1="200" x2="614" y2="200" stroke="#6C5CE7" stroke-width="2.5" marker-end="url(#arrow2e)"/>
+
+  <!-- Step 4 -->
+  <rect x="616" y="85" width="162" height="230" rx="12" fill="#FF6B6B" filter="url(#shadow2e)"/>
+  <text x="697" y="120" text-anchor="middle" font-size="32">💾</text>
+  <text x="697" y="150" text-anchor="middle" font-size="14" font-weight="bold" fill="white">Step 4</text>
+  <text x="697" y="170" text-anchor="middle" font-size="13" font-weight="bold" fill="white">Validation / Storage</text>
+  <rect x="631" y="182" width="132" height="1" fill="white" opacity="0.4"/>
+  <text x="697" y="202" text-anchor="middle" font-size="11" fill="#FDECEA">Format validation</text>
+  <text x="697" y="220" text-anchor="middle" font-size="11" fill="#FDECEA">Required field check</text>
+  <text x="697" y="238" text-anchor="middle" font-size="11" fill="#FDECEA">Duplicate removal</text>
+  <text x="697" y="256" text-anchor="middle" font-size="11" fill="#FDECEA">DB / ERP storage</text>
+  <rect x="631" y="272" width="132" height="28" rx="6" fill="white" opacity="0.2"/>
+  <text x="697" y="291" text-anchor="middle" font-size="11" fill="white">MySQL · ERP · CRM</text>
+
+  <!-- Result banner -->
+  <rect x="25" y="340" width="750" height="72" rx="10" fill="white" filter="url(#shadow2e)"/>
+  <text x="400" y="365" text-anchor="middle" font-size="14" font-weight="bold" fill="#2C3E50">Pipeline Impact</text>
+  <rect x="55" y="375" width="195" height="26" rx="6" fill="#4A90D9" opacity="0.15"/>
+  <text x="152" y="393" text-anchor="middle" font-size="12" fill="#2C3E50">Receipt processing <tspan font-weight="bold" fill="#4A90D9">90% faster</tspan></text>
+  <rect x="302" y="375" width="195" height="26" rx="6" fill="#50C878" opacity="0.15"/>
+  <text x="399" y="393" text-anchor="middle" font-size="12" fill="#2C3E50">Data entry errors <tspan font-weight="bold" fill="#50C878">near zero</tspan></text>
+  <rect x="549" y="375" width="195" height="26" rx="6" fill="#FF6B6B" opacity="0.15"/>
+  <text x="646" y="393" text-anchor="middle" font-size="12" fill="#2C3E50">Month-end close <tspan font-weight="bold" fill="#FF6B6B">days → 30 min</tspan></text>
+</svg>

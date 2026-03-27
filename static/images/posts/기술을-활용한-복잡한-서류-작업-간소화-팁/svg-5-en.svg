@@ -1,0 +1,101 @@
+<svg viewBox="0 0 800 480" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+  <defs>
+    <filter id="sh5e" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="2" dy="3" stdDeviation="4" flood-color="#00000022"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="480" fill="#FFF8F0" rx="12"/>
+  <text x="400" y="36" text-anchor="middle" font-size="18" font-weight="bold" fill="#2C3E50">No-Code Automation Tool Comparison</text>
+  <text x="400" y="58" text-anchor="middle" font-size="13" fill="#7F8C8D">Zapier · Make · Power Automate — Features, Pricing, and Best Fit</text>
+
+  <!-- Header Row -->
+  <rect x="25" y="75" width="750" height="44" rx="8" fill="#2C3E50"/>
+  <text x="210" y="103" text-anchor="middle" font-size="13" font-weight="bold" fill="white">Zapier</text>
+  <text x="420" y="103" text-anchor="middle" font-size="13" font-weight="bold" fill="white">Make (Integromat)</text>
+  <text x="635" y="103" text-anchor="middle" font-size="13" font-weight="bold" fill="white">Power Automate</text>
+  <line x1="315" y1="80" x2="315" y2="115" stroke="white" stroke-width="1" opacity="0.3"/>
+  <line x1="525" y1="80" x2="525" y2="115" stroke="white" stroke-width="1" opacity="0.3"/>
+
+  <!-- Color bands -->
+  <rect x="25" y="119" width="290" height="8" fill="#FF6B6B"/>
+  <rect x="315" y="119" width="210" height="8" fill="#FFD93D"/>
+  <rect x="525" y="119" width="250" height="8" fill="#4A90D9"/>
+
+  <!-- Row: Strengths -->
+  <rect x="25" y="127" width="750" height="72" fill="white"/>
+  <text x="60" y="148" font-size="11" font-weight="bold" fill="#FF6B6B">Strengths</text>
+  <text x="60" y="166" font-size="11" fill="#555">Most app integrations</text>
+  <text x="60" y="182" font-size="11" fill="#555">worldwide (6,000+ apps)</text>
+  <line x1="315" y1="130" x2="315" y2="196" stroke="#EEE" stroke-width="1"/>
+  <text x="330" y="148" font-size="11" font-weight="bold" fill="#E6B800">Strengths</text>
+  <text x="330" y="166" font-size="11" fill="#555">Complex logic + data transforms</text>
+  <text x="330" y="182" font-size="11" fill="#555">Visual flow editor</text>
+  <line x1="525" y1="130" x2="525" y2="196" stroke="#EEE" stroke-width="1"/>
+  <text x="540" y="148" font-size="11" font-weight="bold" fill="#4A90D9">Strengths</text>
+  <text x="540" y="166" font-size="11" fill="#555">Native Microsoft 365 integration</text>
+  <text x="540" y="182" font-size="11" fill="#555">Enterprise security &amp; compliance</text>
+
+  <!-- Row: Pricing -->
+  <rect x="25" y="199" width="750" height="72" fill="#F9F9F9"/>
+  <text x="60" y="220" font-size="11" font-weight="bold" fill="#FF6B6B">Pricing</text>
+  <text x="60" y="238" font-size="11" fill="#555">Free: 100 tasks/month</text>
+  <text x="60" y="254" font-size="11" fill="#555">Paid: from $19.99/month</text>
+  <line x1="315" y1="202" x2="315" y2="268" stroke="#EEE" stroke-width="1"/>
+  <text x="330" y="220" font-size="11" font-weight="bold" fill="#E6B800">Pricing</text>
+  <text x="330" y="238" font-size="11" fill="#555">Free: 1,000 ops/month</text>
+  <text x="330" y="254" font-size="11" fill="#555">Paid: from $9/month</text>
+  <line x1="525" y1="202" x2="525" y2="268" stroke="#EEE" stroke-width="1"/>
+  <text x="540" y="220" font-size="11" font-weight="bold" fill="#4A90D9">Pricing</text>
+  <text x="540" y="238" font-size="11" fill="#555">Included with Microsoft 365</text>
+  <text x="540" y="254" font-size="11" fill="#555">Standalone: from $15/month</text>
+
+  <!-- Row: Best For -->
+  <rect x="25" y="271" width="750" height="72" fill="white"/>
+  <text x="60" y="292" font-size="11" font-weight="bold" fill="#FF6B6B">Best For</text>
+  <text x="60" y="310" font-size="11" fill="#555">Non-technical users</text>
+  <text x="60" y="326" font-size="11" fill="#555">Teams that need quick setup</text>
+  <line x1="315" y1="274" x2="315" y2="340" stroke="#EEE" stroke-width="1"/>
+  <text x="330" y="292" font-size="11" font-weight="bold" fill="#E6B800">Best For</text>
+  <text x="330" y="310" font-size="11" fill="#555">Intermediate automation users</text>
+  <text x="330" y="326" font-size="11" fill="#555">Teams needing fine-grained control</text>
+  <line x1="525" y1="274" x2="525" y2="340" stroke="#EEE" stroke-width="1"/>
+  <text x="540" y="292" font-size="11" font-weight="bold" fill="#4A90D9">Best For</text>
+  <text x="540" y="310" font-size="11" fill="#555">Office-heavy organizations</text>
+  <text x="540" y="326" font-size="11" fill="#555">Teams with IT support</text>
+
+  <!-- Row: Learning Curve -->
+  <rect x="25" y="343" width="750" height="50" fill="#F9F9F9"/>
+  <text x="60" y="364" font-size="11" font-weight="bold" fill="#FF6B6B">Learning Curve</text>
+  <rect x="60" y="372" width="200" height="10" rx="4" fill="#EEE"/>
+  <rect x="60" y="372" width="80" height="10" rx="4" fill="#FF6B6B" opacity="0.7"/>
+  <text x="265" y="382" font-size="10" fill="#FF6B6B">Easy</text>
+  <line x1="315" y1="346" x2="315" y2="390" stroke="#EEE" stroke-width="1"/>
+  <text x="330" y="364" font-size="11" font-weight="bold" fill="#E6B800">Learning Curve</text>
+  <rect x="330" y="372" width="150" height="10" rx="4" fill="#EEE"/>
+  <rect x="330" y="372" width="100" height="10" rx="4" fill="#FFD93D" opacity="0.8"/>
+  <text x="485" y="382" font-size="10" fill="#E6B800">Moderate</text>
+  <line x1="525" y1="346" x2="525" y2="390" stroke="#EEE" stroke-width="1"/>
+  <text x="540" y="364" font-size="11" font-weight="bold" fill="#4A90D9">Learning Curve</text>
+  <rect x="540" y="372" width="200" height="10" rx="4" fill="#EEE"/>
+  <rect x="540" y="372" width="130" height="10" rx="4" fill="#4A90D9" opacity="0.7"/>
+  <text x="745" y="382" font-size="10" fill="#4A90D9">Medium</text>
+
+  <rect x="25" y="393" width="750" height="4" fill="#2C3E50" opacity="0.1"/>
+
+  <!-- Recommendation boxes -->
+  <rect x="25" y="408" width="230" height="56" rx="8" fill="#FF6B6B" opacity="0.1" filter="url(#sh5e)"/>
+  <text x="140" y="428" text-anchor="middle" font-size="11" font-weight="bold" fill="#FF6B6B">To get started fast</text>
+  <text x="140" y="446" text-anchor="middle" font-size="11" fill="#555">Choose Zapier</text>
+  <text x="140" y="458" text-anchor="middle" font-size="10" fill="#777">Free tier, intuitive UI</text>
+
+  <rect x="285" y="408" width="230" height="56" rx="8" fill="#FFD93D" opacity="0.15" filter="url(#sh5e)"/>
+  <text x="400" y="428" text-anchor="middle" font-size="11" font-weight="bold" fill="#B8860B">For complex logic</text>
+  <text x="400" y="446" text-anchor="middle" font-size="11" fill="#555">Choose Make</text>
+  <text x="400" y="458" text-anchor="middle" font-size="10" fill="#777">Powerful visual editor</text>
+
+  <rect x="545" y="408" width="230" height="56" rx="8" fill="#4A90D9" opacity="0.1" filter="url(#sh5e)"/>
+  <text x="660" y="428" text-anchor="middle" font-size="11" font-weight="bold" fill="#4A90D9">In a Microsoft environment</text>
+  <text x="660" y="446" text-anchor="middle" font-size="11" fill="#555">Choose Power Automate</text>
+  <text x="660" y="458" text-anchor="middle" font-size="10" fill="#777">Seamless Microsoft 365 fit</text>
+</svg>

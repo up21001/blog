@@ -1,0 +1,85 @@
+<svg viewBox="0 0 800 440" xmlns="http://www.w3.org/2000/svg" font-family="'Noto Sans KR', Arial, sans-serif">
+  <defs>
+    <filter id="shadow2" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="2" dy="3" stdDeviation="4" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow2" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#6C5CE7"/>
+    </marker>
+  </defs>
+
+  <rect width="800" height="440" fill="#F5F0FF" rx="12"/>
+  <text x="400" y="36" text-anchor="middle" font-size="18" font-weight="bold" fill="#2C3E50">OCR + AI 데이터 추출 파이프라인</text>
+  <text x="400" y="58" text-anchor="middle" font-size="13" fill="#7F8C8D">스캔 문서 → 텍스트 인식 → AI 의미 분석 → 검증 및 저장</text>
+
+  <!-- Step 1 -->
+  <rect x="25" y="85" width="165" height="230" rx="12" fill="#4A90D9" filter="url(#shadow2)"/>
+  <text x="107" y="120" text-anchor="middle" font-size="32">📥</text>
+  <text x="107" y="150" text-anchor="middle" font-size="14" font-weight="bold" fill="white">1단계</text>
+  <text x="107" y="170" text-anchor="middle" font-size="13" font-weight="bold" fill="white">문서 수집</text>
+  <rect x="40" y="182" width="135" height="1" fill="white" opacity="0.4"/>
+  <text x="107" y="202" text-anchor="middle" font-size="11" fill="#D6EAF8">영수증 사진 업로드</text>
+  <text x="107" y="220" text-anchor="middle" font-size="11" fill="#D6EAF8">이메일 PDF 수신</text>
+  <text x="107" y="238" text-anchor="middle" font-size="11" fill="#D6EAF8">클라우드 폴더 감지</text>
+  <text x="107" y="256" text-anchor="middle" font-size="11" fill="#D6EAF8">스캐너 자동 연동</text>
+  <rect x="40" y="272" width="135" height="28" rx="6" fill="white" opacity="0.2"/>
+  <text x="107" y="291" text-anchor="middle" font-size="11" fill="white">Google Drive · S3</text>
+
+  <!-- Arrow 1 -->
+  <line x1="190" y1="200" x2="220" y2="200" stroke="#6C5CE7" stroke-width="2.5" marker-end="url(#arrow2)"/>
+
+  <!-- Step 2 -->
+  <rect x="222" y="85" width="165" height="230" rx="12" fill="#6C5CE7" filter="url(#shadow2)"/>
+  <text x="304" y="120" text-anchor="middle" font-size="32">🔬</text>
+  <text x="304" y="150" text-anchor="middle" font-size="14" font-weight="bold" fill="white">2단계</text>
+  <text x="304" y="170" text-anchor="middle" font-size="13" font-weight="bold" fill="white">전처리 / OCR</text>
+  <rect x="237" y="182" width="135" height="1" fill="white" opacity="0.4"/>
+  <text x="304" y="202" text-anchor="middle" font-size="11" fill="#DDD8FD">노이즈 제거</text>
+  <text x="304" y="220" text-anchor="middle" font-size="11" fill="#DDD8FD">기울기 보정</text>
+  <text x="304" y="238" text-anchor="middle" font-size="11" fill="#DDD8FD">해상도 최적화</text>
+  <text x="304" y="256" text-anchor="middle" font-size="11" fill="#DDD8FD">문자 인식 (OCR)</text>
+  <rect x="237" y="272" width="135" height="28" rx="6" fill="white" opacity="0.2"/>
+  <text x="304" y="291" text-anchor="middle" font-size="11" fill="white">OpenCV · Tesseract</text>
+
+  <!-- Arrow 2 -->
+  <line x1="387" y1="200" x2="417" y2="200" stroke="#6C5CE7" stroke-width="2.5" marker-end="url(#arrow2)"/>
+
+  <!-- Step 3 -->
+  <rect x="419" y="85" width="165" height="230" rx="12" fill="#50C878" filter="url(#shadow2)"/>
+  <text x="501" y="120" text-anchor="middle" font-size="32">🤖</text>
+  <text x="501" y="150" text-anchor="middle" font-size="14" font-weight="bold" fill="white">3단계</text>
+  <text x="501" y="170" text-anchor="middle" font-size="13" font-weight="bold" fill="white">AI 의미 분석</text>
+  <rect x="434" y="182" width="135" height="1" fill="white" opacity="0.4"/>
+  <text x="501" y="202" text-anchor="middle" font-size="11" fill="#D5F5E3">맥락 이해 (LLM)</text>
+  <text x="501" y="220" text-anchor="middle" font-size="11" fill="#D5F5E3">핵심 필드 추출</text>
+  <text x="501" y="238" text-anchor="middle" font-size="11" fill="#D5F5E3">JSON 구조화</text>
+  <text x="501" y="256" text-anchor="middle" font-size="11" fill="#D5F5E3">프롬프트 엔지니어링</text>
+  <rect x="434" y="272" width="135" height="28" rx="6" fill="white" opacity="0.2"/>
+  <text x="501" y="291" text-anchor="middle" font-size="11" fill="white">OpenAI · Claude API</text>
+
+  <!-- Arrow 3 -->
+  <line x1="584" y1="200" x2="614" y2="200" stroke="#6C5CE7" stroke-width="2.5" marker-end="url(#arrow2)"/>
+
+  <!-- Step 4 -->
+  <rect x="616" y="85" width="162" height="230" rx="12" fill="#FF6B6B" filter="url(#shadow2)"/>
+  <text x="697" y="120" text-anchor="middle" font-size="32">💾</text>
+  <text x="697" y="150" text-anchor="middle" font-size="14" font-weight="bold" fill="white">4단계</text>
+  <text x="697" y="170" text-anchor="middle" font-size="13" font-weight="bold" fill="white">검증 / 저장</text>
+  <rect x="631" y="182" width="132" height="1" fill="white" opacity="0.4"/>
+  <text x="697" y="202" text-anchor="middle" font-size="11" fill="#FDECEA">형식 유효성 검사</text>
+  <text x="697" y="220" text-anchor="middle" font-size="11" fill="#FDECEA">필수 필드 확인</text>
+  <text x="697" y="238" text-anchor="middle" font-size="11" fill="#FDECEA">중복 데이터 제거</text>
+  <text x="697" y="256" text-anchor="middle" font-size="11" fill="#FDECEA">DB / ERP 저장</text>
+  <rect x="631" y="272" width="132" height="28" rx="6" fill="white" opacity="0.2"/>
+  <text x="697" y="291" text-anchor="middle" font-size="11" fill="white">MySQL · ERP · CRM</text>
+
+  <!-- Result banner -->
+  <rect x="25" y="340" width="750" height="72" rx="10" fill="white" filter="url(#shadow2)"/>
+  <text x="400" y="365" text-anchor="middle" font-size="14" font-weight="bold" fill="#2C3E50">파이프라인 도입 효과</text>
+  <rect x="55" y="375" width="195" height="26" rx="6" fill="#4A90D9" opacity="0.15"/>
+  <text x="152" y="393" text-anchor="middle" font-size="12" fill="#2C3E50">영수증 처리 시간 <tspan font-weight="bold" fill="#4A90D9">90% 단축</tspan></text>
+  <rect x="302" y="375" width="195" height="26" rx="6" fill="#50C878" opacity="0.15"/>
+  <text x="399" y="393" text-anchor="middle" font-size="12" fill="#2C3E50">데이터 입력 오류 <tspan font-weight="bold" fill="#50C878">사실상 제로</tspan></text>
+  <rect x="549" y="375" width="195" height="26" rx="6" fill="#FF6B6B" opacity="0.15"/>
+  <text x="646" y="393" text-anchor="middle" font-size="12" fill="#2C3E50">월말 마감 작업 <tspan font-weight="bold" fill="#FF6B6B">하루→30분</tspan></text>
+</svg>
