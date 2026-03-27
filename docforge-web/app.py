@@ -13,6 +13,7 @@ import os
 import re
 import time
 from pathlib import Path
+from urllib.parse import urlparse
 
 try:
     from dotenv import load_dotenv
@@ -20,7 +21,7 @@ except ImportError:
     def load_dotenv(*_a, **_k):
         return False
 
-from fastapi import FastAPI, HTTPException, Query
+from fastapi import FastAPI, HTTPException, Query, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
@@ -33,6 +34,7 @@ from services import doc_parser
 from services import image_gen
 from services import svg_gen
 from services import text_gen
+from services import view_counter
 from services import web_import
 from services.image_gen import AVAILABLE_MODELS, MODEL_PRIORITY, IMAGE_PRESETS
 from services.text_gen import (
@@ -54,6 +56,7 @@ from services.publish import (
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
+view_counter.init_db()
 
 # SVG 연속 생성 실패 시에도 슬롯을 유지 (빈 항목이면 UI에서 5·6번만 사라지는 것처럼 보일 수 있음)
 _SVG_FAIL_PLACEHOLDER = (
@@ -142,6 +145,12 @@ class PublishBody(BaseModel):
         description="posts 바로 아래 하위 폴더 (예: software-dev). 비우면 posts 루트.",
     )
     images: list[ImageSaveItem] | None = Field(None, description="저장할 이미지 목록")
+
+
+class ViewHitBody(BaseModel):
+    slug: str = Field(..., min_length=1, max_length=200)
+    lang: str = Field("ko", min_length=2, max_length=12)
+    path: str | None = Field(None, max_length=500)
 
 
 class PromptsUpdateBody(BaseModel):
@@ -546,8 +555,54 @@ def health():
         "models": _models_payload(),
         "capabilities": {
             "trending_topics": True,
+            "views": True,
         },
     }
+
+
+def _client_ip(request: Request) -> str:
+    forwarded = request.headers.get("x-forwarded-for", "")
+    if forwarded:
+        return forwarded.split(",")[0].strip()
+    real_ip = request.headers.get("x-real-ip", "").strip()
+    if real_ip:
+        return real_ip
+    return request.client.host if request.client else ""
+
+
+def _slug_from_view_input(slug: str, path: str | None = None) -> str:
+    raw = (slug or "").strip()
+    if raw:
+        return raw
+    parsed = urlparse(path or "")
+    clean_path = parsed.path.strip("/")
+    parts = [p for p in clean_path.split("/") if p]
+    if not parts:
+        return "unknown"
+    return parts[-1]
+
+
+@app.get("/api/views")
+def api_get_views(
+    slug: str = Query(..., min_length=1, max_length=200),
+    lang: str = Query("ko", min_length=2, max_length=12),
+):
+    return {"ok": True, "slug": slug, "lang": lang, "count": view_counter.get_count(slug, lang)}
+
+
+@app.post("/api/views/hit")
+def api_hit_views(body: ViewHitBody, request: Request):
+    visitor_hash = view_counter.make_visitor_hash(
+        _client_ip(request),
+        request.headers.get("user-agent", ""),
+        request.headers.get("accept-language", ""),
+    )
+    result = view_counter.register_view(
+        _slug_from_view_input(body.slug, body.path),
+        body.lang,
+        visitor_hash,
+    )
+    return {"ok": True, **result}
 
 
 class ImportUrlBody(BaseModel):

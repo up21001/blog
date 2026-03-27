@@ -1,0 +1,66 @@
+{{ $slug := .Params.slug }}
+{{ if not $slug }}
+  {{ with .File }}
+    {{ $slug = .ContentBaseName }}
+  {{ end }}
+{{ end }}
+{{ $lang := .Lang | default site.Language.Lang | default "ko" }}
+{{ $apiBase := site.Params.docforgeApiBase | default "http://127.0.0.1:8765" }}
+<span
+  class="inline-flex items-center gap-1"
+  data-docforge-view-counter
+  data-slug="{{ $slug }}"
+  data-lang="{{ $lang }}"
+  data-api-base="{{ $apiBase }}">
+  <span
+    data-docforge-view-value
+    class="inline-block min-w-[2ch] rounded-full bg-neutral-200 px-2 py-[1px] text-xs text-neutral-700 dark:bg-neutral-700 dark:text-neutral-200"
+    title="views">...</span>
+  <span class="inline-block align-text-bottom">{{ partial "icon.html" "eye" }}</span>
+</span>
+<script>
+  (() => {
+    if (window.__docforgeViewCounterInit) return;
+    window.__docforgeViewCounterInit = true;
+
+    const updateCounter = async (el) => {
+      const slug = el.dataset.slug;
+      const lang = el.dataset.lang || "ko";
+      const apiBase = (el.dataset.apiBase || "").replace(/\/$/, "");
+      const valueEl = el.querySelector("[data-docforge-view-value]");
+      if (!slug || !apiBase || !valueEl) return;
+
+      try {
+        const res = await fetch(`${apiBase}/api/views/hit`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            slug,
+            lang,
+            path: window.location.pathname
+          }),
+          credentials: "omit",
+          mode: "cors"
+        });
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const data = await res.json();
+        const count = Number(data.count || 0);
+        valueEl.textContent = count.toLocaleString();
+      } catch (_err) {
+        valueEl.textContent = "-";
+      }
+    };
+
+    const run = () => {
+      document.querySelectorAll("[data-docforge-view-counter]").forEach((el) => {
+        updateCounter(el);
+      });
+    };
+
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", run, { once: true });
+    } else {
+      run();
+    }
+  })();
+</script>

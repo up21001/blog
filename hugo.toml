@@ -23,6 +23,7 @@ enableRobotsTXT = true
   enableSearch = true
   enableCodeCopy = true
   mainSections = ["posts"]
+  docforgeApiBase = "http://127.0.0.1:8765"
 
 [params.verification]
   google = "dUlA-mHlZxD1WkU1NXY2THAW5fT5Oa0Kmw6IM6jF1Bw"
@@ -54,6 +55,7 @@ enableRobotsTXT = true
   showTableOfContents = true
   showReadingTime = true
   showWordCount = true
+  showViews = true
   showRelatedContent = false
   relatedContentLimit = 0
   showEdit = false
@@ -191,6 +193,26 @@ enableRobotsTXT = true
 
 [[menus.footer]]
   name = "면책 조항"
+  pageRef = "/disclaimer"
+  weight = 4
+
+[[languages.en.menus.footer]]
+  name = "About"
+  pageRef = "/about"
+  weight = 1
+
+[[languages.en.menus.footer]]
+  name = "Contact"
+  pageRef = "/contact"
+  weight = 2
+
+[[languages.en.menus.footer]]
+  name = "Privacy Policy"
+  pageRef = "/privacy"
+  weight = 3
+
+[[languages.en.menus.footer]]
+  name = "Disclaimer"
   pageRef = "/disclaimer"
   weight = 4
 
