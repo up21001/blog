@@ -700,7 +700,7 @@ async def generate_bilingual_async(
             model=use_model,
             config=types.GenerateContentConfig(
                 system_instruction=system_instruction,
-                max_output_tokens=65536,
+                max_output_tokens=131072,
                 temperature=0.7,
                 thinking_config=types.ThinkingConfig(thinking_budget=0),
             ),
@@ -716,6 +716,8 @@ async def generate_bilingual_async(
             ko = sp[0].strip()
             en = sp[1].strip() if len(sp) > 1 else ""
         else:
+            # 마커 없이 잘린 경우 — 한국어만 반환, 영문은 폴백으로 처리
+            logger.warning("이중 언어 생성에서 ===ENGLISH=== 마커 미발견 — 한국어만 반환")
             ko = raw
             en = ""
 

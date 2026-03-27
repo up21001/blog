@@ -794,6 +794,10 @@ async def generate(body: GenerateBody):
             # Re-inject images into bilingual korean if needed
             if images_out:
                 markdown = inject_images_into_markdown(markdown, images_out)
+            # 이중 언어 생성에서 영문이 비어있으면 순차 번역 폴백
+            if not markdown_en.strip():
+                logger.warning("이중 언어 영문 비어있음 — 순차 번역 폴백")
+                markdown_en = await translate_to_english_async(markdown, key)
         except Exception as e:
             logger.warning("이중 언어 생성 실패, 번역 시도: %s", e)
             try:

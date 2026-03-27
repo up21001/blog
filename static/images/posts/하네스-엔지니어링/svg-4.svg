@@ -1,0 +1,37 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="shadow4" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="1" dy="1" stdDeviation="2" flood-color="#000" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="200" height="200" rx="20" fill="#f8f9fa"/>
+
+  <!-- Toggle track -->
+  <rect x="45" y="80" width="110" height="40" rx="20" fill="#E0E0E0" filter="url(#shadow4)"/>
+
+  <!-- Toggle knob (ON position) -->
+  <circle cx="125" cy="100" r="16" fill="#50C878" filter="url(#shadow4)"/>
+
+  <!-- ON label -->
+  <text x="72" y="105" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle">ON</text>
+
+  <!-- Feature flag icon lines -->
+  <rect x="85" y="35" width="30" height="3" rx="1.5" fill="#4A90D9"/>
+  <rect x="85" y="43" width="22" height="3" rx="1.5" fill="#4A90D9" opacity="0.6"/>
+  <rect x="85" y="51" width="26" height="3" rx="1.5" fill="#4A90D9" opacity="0.4"/>
+
+  <!-- Flag pole -->
+  <line x1="80" y1="30" x2="80" y2="60" stroke="#4A90D9" stroke-width="2.5"/>
+  <!-- Flag -->
+  <polygon points="80,30 110,38 80,46" fill="#4A90D9" opacity="0.8"/>
+
+  <!-- A/B label -->
+  <text x="60" y="148" font-family="Arial, sans-serif" font-size="11" fill="#6C5CE7" font-weight="bold">A</text>
+  <text x="75" y="148" font-family="Arial, sans-serif" font-size="11" fill="#999">/</text>
+  <text x="85" y="148" font-family="Arial, sans-serif" font-size="11" fill="#FF6B6B" font-weight="bold">B</text>
+  <text x="100" y="148" font-family="Arial, sans-serif" font-size="11" fill="#555">테스트</text>
+
+  <!-- Title -->
+  <text x="100" y="178" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#333" text-anchor="middle">Feature Flags</text>
+</svg>
