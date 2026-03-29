@@ -129,6 +129,16 @@
     }
   });
 
+  // 폼 다듬기 선택과 결과 다듬기 선택 동기화
+  if ($("polishStyleForm") && $("polishStyle")) {
+    $("polishStyleForm").addEventListener("change", () => {
+      $("polishStyle").value = $("polishStyleForm").value;
+    });
+    $("polishStyle").addEventListener("change", () => {
+      $("polishStyleForm").value = $("polishStyle").value;
+    });
+  }
+
   // ── 글 다듬기 (Polish) ──
   if ($("btnPolish")) {
     $("btnPolish").addEventListener("click", async () => {
@@ -733,8 +743,8 @@
     if (ps) ps.textContent = "";
     updatePublishCategoryRecap();
 
-    // 생성 후 자동 다듬기 (polishStyle이 "none"이 아닌 경우)
-    const autoPolishStyle = ($("polishStyle") && $("polishStyle").value) || "none";
+    // 생성 후 자동 다듬기 (폼의 polishStyleForm 또는 결과의 polishStyle)
+    const autoPolishStyle = ($("polishStyleForm") && $("polishStyleForm").value) || ($("polishStyle") && $("polishStyle").value) || "none";
     if (autoPolishStyle !== "none" && currentMarkdownKo.trim()) {
       const polishBtn = $("btnPolish");
       if (polishBtn) {
