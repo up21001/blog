@@ -1,0 +1,121 @@
+<svg viewBox="0 0 800 1000" xmlns="http://www.w3.org/2000/svg">
+  <rect x="0" y="0" width="800" height="1000" fill="#f8f9fa"/>
+
+  <!-- Title -->
+  <text x="400" y="30" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#2D3748" text-anchor="middle">DEFLATE Stream Block Types Overview</text>
+
+  <!-- Legend -->
+  <g transform="translate(50, 60)">
+    <text x="0" y="0" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#2D3748">Legend:</text>
+    <rect x="0" y="15" width="20" height="20" fill="#4A90D9" stroke="#e2e8f0" stroke-width="1"/>
+    <text x="30" y="30" font-family="Arial, sans-serif" font-size="14" fill="#2D3748">Header Field (BFINAL, BTYPE)</text>
+    <rect x="0" y="45" width="20" height="20" fill="#FFD93D" stroke="#e2e8f0" stroke-width="1"/>
+    <text x="30" y="60" font-family="Arial, sans-serif" font-size="14" fill="#2D3748">Metadata Field (Lengths, Tables)</text>
+    <rect x="0" y="75" width="20" height="20" fill="#50C878" stroke="#e2e8f0" stroke-width="1"/>
+    <text x="30" y="90" font-family="Arial, sans-serif" font-size="14" fill="#2D3748">Data Field (Compressed/Literal)</text>
+  </g>
+
+  <!-- Uncompressed Block (BTYPE = 00) -->
+  <text x="40" y="150" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#2D3748">Uncompressed Block (BTYPE = 00)</text>
+
+  <!-- Offset 0 (Byte 0) -->
+  <text x="20" y="195" font-family="Courier New, monospace" font-size="14" fill="#2D3748">0x00</text>
+  <rect x="100" y="180" width="20" height="30" fill="#4A90D9" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="110" y="195" font-family="Courier New, monospace" font-size="14" fill="#f8f9fa" text-anchor="middle">BFINAL</text>
+  <text x="110" y="208" font-family="Arial, sans-serif" font-size="10" fill="#f8f9fa" text-anchor="middle">(1 bit)</text>
+
+  <rect x="120" y="180" width="40" height="30" fill="#4A90D9" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="140" y="195" font-family="Courier New, monospace" font-size="14" fill="#f8f9fa" text-anchor="middle">BTYPE</text>
+  <text x="140" y="208" font-family="Arial, sans-serif" font-size="10" fill="#f8f9fa" text-anchor="middle">(2 bits, '00')</text>
+
+  <rect x="160" y="180" width="100" height="30" fill="#e2e8f0" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="210" y="195" font-family="Arial, sans-serif" font-size="12" fill="#2D3748" text-anchor="middle">Reserved</text>
+  <text x="210" y="208" font-family="Arial, sans-serif" font-size="10" fill="#2D3748" text-anchor="middle">(5 bits, padding)</text>
+
+  <!-- Offset 1 (Byte 1) -->
+  <text x="20" y="250" font-family="Courier New, monospace" font-size="14" fill="#2D3748">0x01</text>
+  <rect x="100" y="230" width="200" height="40" fill="#FFD93D" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="200" y="255" font-family="Arial, sans-serif" font-size="16" fill="#2D3748" text-anchor="middle">LEN (2 bytes)</text>
+
+  <!-- Offset 3 (Byte 3) -->
+  <text x="20" y="290" font-family="Courier New, monospace" font-size="14" fill="#2D3748">0x03</text>
+  <rect x="100" y="270" width="200" height="40" fill="#FFD93D" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="200" y="295" font-family="Arial, sans-serif" font-size="16" fill="#2D3748" text-anchor="middle">NLEN (2 bytes, One's Complement of LEN)</text>
+
+  <!-- Offset 5 (Byte 5) -->
+  <text x="20" y="340" font-family="Courier New, monospace" font-size="14" fill="#2D3748">0x05</text>
+  <rect x="100" y="320" width="600" height="60" fill="#50C878" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="400" y="355" font-family="Arial, sans-serif" font-size="16" fill="#2D3748" text-anchor="middle">Literal Data (LEN bytes)</text>
+
+  <!-- Fixed Huffman Block (BTYPE = 01) -->
+  <text x="40" y="420" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#2D3748">Fixed Huffman Block (BTYPE = 01)</text>
+
+  <!-- Offset 0 (Byte 0) -->
+  <text x="20" y="465" font-family="Courier New, monospace" font-size="14" fill="#2D3748">0x00</text>
+  <rect x="100" y="450" width="20" height="30" fill="#4A90D9" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="110" y="465" font-family="Courier New, monospace" font-size="14" fill="#f8f9fa" text-anchor="middle">BFINAL</text>
+  <text x="110" y="478" font-family="Arial, sans-serif" font-size="10" fill="#f8f9fa" text-anchor="middle">(1 bit)</text>
+
+  <rect x="120" y="450" width="40" height="30" fill="#4A90D9" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="140" y="465" font-family="Courier New, monospace" font-size="14" fill="#f8f9fa" text-anchor="middle">BTYPE</text>
+  <text x="140" y="478" font-family="Arial, sans-serif" font-size="10" fill="#f8f9fa" text-anchor="middle">(2 bits, '01')</text>
+
+  <rect x="160" y="450" width="100" height="30" fill="#e2e8f0" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="210" y="465" font-family="Arial, sans-serif" font-size="12" fill="#2D3748" text-anchor="middle">Reserved</text>
+  <text x="210" y="478" font-family="Arial, sans-serif" font-size="10" fill="#2D3748" text-anchor="middle">(5 bits, padding)</text>
+
+  <!-- Offset 1 (Byte 1) -->
+  <text x="20" y="530" font-family="Courier New, monospace" font-size="14" fill="#2D3748">0x01</text>
+  <rect x="100" y="510" width="600" height="60" fill="#50C878" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="400" y="545" font-family="Arial, sans-serif" font-size="16" fill="#2D3748" text-anchor="middle">Compressed Data (Fixed Huffman Codes)</text>
+
+  <!-- Dynamic Huffman Block (BTYPE = 10) -->
+  <text x="40" y="610" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#2D3748">Dynamic Huffman Block (BTYPE = 10)</text>
+
+  <!-- Offset 0 (Byte 0) -->
+  <text x="20" y="655" font-family="Courier New, monospace" font-size="14" fill="#2D3748">0x00</text>
+  <rect x="100" y="640" width="20" height="30" fill="#4A90D9" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="110" y="655" font-family="Courier New, monospace" font-size="14" fill="#f8f9fa" text-anchor="middle">BFINAL</text>
+  <text x="110" y="668" font-family="Arial, sans-serif" font-size="10" fill="#f8f9fa" text-anchor="middle">(1 bit)</text>
+
+  <rect x="120" y="640" width="40" height="30" fill="#4A90D9" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="140" y="655" font-family="Courier New, monospace" font-size="14" fill="#f8f9fa" text-anchor="middle">BTYPE</text>
+  <text x="140" y="668" font-family="Arial, sans-serif" font-size="10" fill="#f8f9fa" text-anchor="middle">(2 bits, '10')</text>
+
+  <text x="100" y="695" font-family="Arial, sans-serif" font-size="12" fill="#2D3748">Followed by bit-aligned header fields:</text>
+
+  <!-- Dynamic Header Fields (HLIT, HDIST, HCLEN) - Bit-aligned -->
+  <text x="20" y="730" font-family="Courier New, monospace" font-size="14" fill="#2D3748">0x00+</text>
+  <rect x="100" y="710" width="60" height="30" fill="#FFD93D" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="130" y="725" font-family="Arial, sans-serif" font-size="12" fill="#2D3748" text-anchor="middle">HLIT</text>
+  <text x="130" y="738" font-family="Arial, sans-serif" font-size="10" fill="#2D3748" text-anchor="middle">(5 bits)</text>
+
+  <rect x="170" y="710" width="60" height="30" fill="#FFD93D" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="200" y="725" font-family="Arial, sans-serif" font-size="12" fill="#2D3748" text-anchor="middle">HDIST</text>
+  <text x="200" y="738" font-family="Arial, sans-serif" font-size="10" fill="#2D3748" text-anchor="middle">(5 bits)</text>
+
+  <rect x="240" y="710" width="60" height="30" fill="#FFD93D" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="270" y="725" font-family="Arial, sans-serif" font-size="12" fill="#2D3748" text-anchor="middle">HCLEN</text>
+  <text x="270" y="738" font-family="Arial, sans-serif" font-size="10" fill="#2D3748" text-anchor="middle">(4 bits)</text>
+
+  <!-- Code Lengths for Code Length Alphabet -->
+  <text x="20" y="780" font-family="Courier New, monospace" font-size="14" fill="#2D3748">Variable</text>
+  <rect x="100" y="760" width="600" height="40" fill="#FFD93D" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="400" y="785" font-family="Arial, sans-serif" font-size="16" fill="#2D3748" text-anchor="middle">Code Lengths for Code Length Alphabet (HCLEN * 3 bits)</text>
+
+  <!-- Literal/Length Huffman Table -->
+  <text x="20" y="830" font-family="Courier New, monospace" font-size="14" fill="#2D3748">Variable</text>
+  <rect x="100" y="810" width="600" height="40" fill="#FFD93D" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="400" y="835" font-family="Arial, sans-serif" font-size="16" fill="#2D3748" text-anchor="middle">Literal/Length Huffman Table (HLIT codes)</text>
+
+  <!-- Distance Huffman Table -->
+  <text x="20" y="880" font-family="Courier New, monospace" font-size="14" fill="#2D3748">Variable</text>
+  <rect x="100" y="860" width="600" height="40" fill="#FFD93D" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="400" y="885" font-family="Arial, sans-serif" font-size="16" fill="#2D3748" text-anchor="middle">Distance Huffman Table (HDIST codes)</text>
+
+  <!-- Compressed Data (Dynamic Huffman Codes) -->
+  <text x="20" y="930" font-family="Courier New, monospace" font-size="14" fill="#2D3748">Variable</text>
+  <rect x="100" y="910" width="600" height="60" fill="#50C878" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="400" y="945" font-family="Arial, sans-serif" font-size="16" fill="#2D3748" text-anchor="middle">Compressed Data (Dynamic Huffman Codes)</text>
+
+</svg>

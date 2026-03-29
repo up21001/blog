@@ -1,0 +1,147 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" style="background-color: #f8f9fa;">
+  <defs>
+    <!-- Arrow marker -->
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
+    </marker>
+    <!-- Drop shadow filter -->
+    <filter id="dropshadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3"/>
+      <feOffset dx="2" dy="2" result="offsetblur"/>
+      <feFlood flood-color="#000" flood-opacity="0.2"/>
+      <feComposite in2="offsetblur" operator="in"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Styles -->
+  <style>
+    .box {
+      fill: #4A90D9; /* Blue for main application */
+      stroke: #333;
+      stroke-width: 1;
+      rx: 10;
+      ry: 10;
+      filter: url(#dropshadow);
+    }
+    .text-label {
+      font-family: "Arial, sans-serif";
+      font-size: 16px;
+      fill: #333;
+      text-anchor: middle;
+      dominant-baseline: middle;
+    }
+    .arrow {
+      stroke: #333;
+      stroke-width: 2;
+      fill: none;
+      marker-end: url(#arrowhead);
+    }
+    .arrow-text {
+      font-family: "Arial, sans-serif";
+      font-size: 12px;
+      fill: #333;
+      text-anchor: middle;
+      dominant-baseline: middle;
+    }
+    .external-box {
+      fill: #FFD93D; /* Yellow for external registry */
+      stroke: #333;
+      stroke-width: 1;
+      rx: 10;
+      ry: 10;
+      filter: url(#dropshadow);
+    }
+    .tool-box {
+      fill: #6C5CE7; /* Purple for build tool */
+      stroke: #333;
+      stroke-width: 1;
+      rx: 10;
+      ry: 10;
+      filter: url(#dropshadow);
+    }
+    .library-box {
+      fill: #50C878; /* Green for libraries */
+      stroke: #333;
+      stroke-width: 1;
+      rx: 10;
+      ry: 10;
+      filter: url(#dropshadow);
+    }
+    .os-box {
+      fill: #e0e0e0; /* Light grey for OS base */
+      stroke: #333;
+      stroke-width: 1;
+      rx: 10;
+      ry: 10;
+      filter: url(#dropshadow);
+    }
+  </style>
+
+  <!-- Boxes -->
+  <!-- Crates.io (External Registry) -->
+  <rect x="300" y="50" width="200" height="70" class="external-box"/>
+  <text x="400" y="85" class="text-label">Crates.io</text>
+
+  <!-- Cargo (Build Tool) -->
+  <rect x="100" y="200" width="150" height="70" class="tool-box"/>
+  <text x="175" y="235" class="text-label">Cargo</text>
+
+  <!-- Rust 애플리케이션 (Main Application) -->
+  <rect x="325" y="200" width="150" height="100" class="box"/>
+  <text x="400" y="250" class="text-label">Rust</text>
+  <text x="400" y="270" class="text-label">애플리케이션</text>
+
+  <!-- Rust 표준 라이브러리 (Standard Library) -->
+  <rect x="550" y="200" width="180" height="70" class="library-box"/>
+  <text x="640" y="235" class="text-label">Rust 표준 라이브러리</text>
+
+  <!-- 외부 크레이트 (External Crates/Libraries) -->
+  <rect x="550" y="300" width="180" height="70" class="library-box"/>
+  <text x="640" y="335" class="text-label">외부 크레이트</text>
+
+  <!-- 운영 체제 (Operating System) -->
+  <rect x="50" y="450" width="700" height="100" class="os-box"/>
+  <text x="400" y="500" class="text-label">운영 체제</text>
+
+  <!-- Arrows -->
+  <!-- Cargo -> Rust 애플리케이션 (빌드/실행) -->
+  <path d="M250 235 H325" class="arrow"/>
+  <text x="287.5" y="220" class="arrow-text">빌드/실행</text>
+
+  <!-- Cargo -> Crates.io (의존성 요청) -->
+  <path d="M200 200 V150 H350 V120" class="arrow"/>
+  <text x="275" y="160" class="arrow-text">의존성 요청</text>
+
+  <!-- Crates.io -> Cargo (의존성 제공) -->
+  <path d="M450 120 V150 H250 V200" class="arrow"/>
+  <text x="350" y="160" class="arrow-text">의존성 제공</text>
+
+  <!-- Rust 애플리케이션 -> Rust 표준 라이브러리 (사용) -->
+  <path d="M475 250 H550" class="arrow"/>
+  <text x="512.5" y="235" class="arrow-text">사용</text>
+
+  <!-- Rust 애플리케이션 -> 외부 크레이트 (사용) -->
+  <path d="M475 280 H550" class="arrow"/>
+  <text x="512.5" y="295" class="arrow-text">사용</text>
+
+  <!-- Rust 애플리케이션 -> 운영 체제 (실행) -->
+  <path d="M400 300 V450" class="arrow"/>
+  <text x="415" y="375" class="arrow-text">실행</text>
+
+  <!-- Cargo -> 운영 체제 (실행) -->
+  <path d="M175 270 V450" class="arrow"/>
+  <text x="190" y="360" class="arrow-text">실행</text>
+
+  <!-- Rust 표준 라이브러리 -> 운영 체제 (상호작용) -->
+  <path d="M640 270 V450" class="arrow"/>
+  <text x="655" y="360" class="arrow-text">상호작용</text>
+
+  <!-- 외부 크레이트 -> 운영 체제 (상호작용) -->
+  <path d="M640 370 V450" class="arrow"/>
+  <text x="655" y="410" class="arrow-text">상호작용</text>
+
+</svg>

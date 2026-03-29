@@ -1,0 +1,72 @@
+<svg viewBox="0 0 800 1000" xmlns="http://www.w3.org/2000/svg">
+  <rect x="0" y="0" width="800" height="1000" fill="#222222"/>
+
+  <!-- Title -->
+  <text x="400" y="80" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" fill="#FFFFFF" font-weight="bold">
+    3 Key Considerations for Automation Adoption
+  </text>
+
+  <!-- Section 1: PII &amp; Sensitive Data Handling -->
+  <g transform="translate(0, 180)">
+    <rect x="80" y="0" width="640" height="200" fill="#444444" rx="15" ry="15"/>
+    <text x="120" y="60" font-family="Arial, sans-serif" font-size="48" fill="#FFFFFF" font-weight="bold">1</text>
+    
+    <!-- Icon 1: Shield with Keyhole -->
+    <g transform="translate(110, 90) scale(0.6)">
+      <path fill="#FFFFFF" d="M50 0 L0 25 V75 L50 100 L100 75 V25 Z"/>
+      <circle cx="50" cy="55" r="15" fill="#222222"/>
+      <rect x="47" y="55" width="6" height="15" fill="#222222"/>
+    </g>
+
+    <text x="200" y="60" font-family="Arial, sans-serif" font-size="28" fill="#FFFFFF" font-weight="bold">PII &amp; Sensitive Data Handling</text>
+    <text x="200" y="100" font-family="Arial, sans-serif" font-size="20" fill="#FFFFFF">
+      <tspan x="200" dy="0">Ensure robust protocols for processing personal</tspan>
+      <tspan x="200" dy="28">and sensitive data to maintain privacy and compliance.</tspan>
+    </text>
+  </g>
+
+  <!-- Section 2: Exception Handling &amp; Logging -->
+  <g transform="translate(0, 450)">
+    <rect x="80" y="0" width="640" height="200" fill="#444444" rx="15" ry="15"/>
+    <text x="120" y="60" font-family="Arial, sans-serif" font-size="48" fill="#FFFFFF" font-weight="bold">2</text>
+
+    <!-- Icon 2: Warning Triangle -->
+    <g transform="translate(110, 90) scale(0.6)">
+      <path fill="#FFFFFF" d="M50 0 L0 100 H100 Z"/>
+      <rect x="45" y="30" width="10" height="35" fill="#222222"/>
+      <circle cx="50" cy="75" r="5" fill="#222222"/>
+    </g>
+
+    <text x="200" y="60" font-family="Arial, sans-serif" font-size="28" fill="#FFFFFF" font-weight="bold">Exception Handling &amp; Logging</text>
+    <text x="200" y="100" font-family="Arial, sans-serif" font-size="20" fill="#FFFFFF">
+      <tspan x="200" dy="0">Implement comprehensive error handling and detailed</tspan>
+      <tspan x="200" dy="28">logging for system stability, debugging, and auditing.</tspan>
+    </text>
+  </g>
+
+  <!-- Section 3: Human-in-the-Loop (HITL) -->
+  <g transform="translate(0, 720)">
+    <rect x="80" y="0" width="640" height="200" fill="#444444" rx="15" ry="15"/>
+    <text x="120" y="60" font-family="Arial, sans-serif" font-size="48" fill="#FFFFFF" font-weight="bold">3</text>
+
+    <!-- Icon 3: Person with Gear -->
+    <g transform="translate(110, 90) scale(0.6)">
+      <!-- Person -->
+      <circle cx="35" cy="30" r="20" fill="#FFFFFF"/>
+      <path fill="#FFFFFF" d="M15 80 C15 50 55 50 55 80 L55 100 L15 100 Z"/>
+      <!-- Gear -->
+      <circle cx="75" cy="75" r="20" fill="#FFFFFF"/>
+      <circle cx="75" cy="75" r="10" fill="#222222"/>
+      <rect x="72" y="55" width="6" height="10" fill="#FFFFFF"/>
+      <rect x="72" y="85" width="6" height="10" fill="#FFFFFF"/>
+      <rect x="55" y="72" width="10" height="6" fill="#FFFFFF"/>
+      <rect x="85" y="72" width="10" height="6" fill="#FFFFFF"/>
+    </g>
+
+    <text x="200" y="60" font-family="Arial, sans-serif" font-size="28" fill="#FFFFFF" font-weight="bold">Human-in-the-Loop (HITL)</text>
+    <text x="200" y="100" font-family="Arial, sans-serif" font-size="20" fill="#FFFFFF">
+      <tspan x="200" dy="0">Integrate human oversight for complex decisions,</tspan>
+      <tspan x="200" dy="28">edge cases, and continuous process improvement.</tspan>
+    </text>
+  </g>
+</svg>

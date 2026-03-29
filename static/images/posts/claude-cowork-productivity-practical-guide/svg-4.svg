@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="620" viewBox="0 0 1200 620" role="img" aria-label="Schedule loop">
+  <rect width="1200" height="620" fill="#111827"/>
+  <text x="60" y="78" fill="#e5e7eb" font-size="40" font-family="Arial" font-weight="700">Scheduled Task Operating Loop</text>
+  <circle cx="250" cy="320" r="90" fill="#1f2937" stroke="#334155"/>
+  <circle cx="520" cy="180" r="90" fill="#1f2937" stroke="#334155"/>
+  <circle cx="820" cy="220" r="90" fill="#1f2937" stroke="#334155"/>
+  <circle cx="930" cy="470" r="90" fill="#1f2937" stroke="#334155"/>
+  <circle cx="560" cy="470" r="90" fill="#1f2937" stroke="#334155"/>
+  <text x="210" y="325" fill="#e2e8f0" font-size="24" font-family="Arial" font-weight="700">Trigger</text>
+  <text x="478" y="185" fill="#e2e8f0" font-size="24" font-family="Arial" font-weight="700">Run</text>
+  <text x="772" y="225" fill="#e2e8f0" font-size="24" font-family="Arial" font-weight="700">Output</text>
+  <text x="875" y="475" fill="#e2e8f0" font-size="24" font-family="Arial" font-weight="700">Review</text>
+  <text x="505" y="475" fill="#e2e8f0" font-size="24" font-family="Arial" font-weight="700">Improve</text>
+  <path d="M340 285 L440 220" stroke="#60a5fa" stroke-width="4"/>
+  <path d="M605 190 L730 210" stroke="#60a5fa" stroke-width="4"/>
+  <path d="M876 300 L908 380" stroke="#60a5fa" stroke-width="4"/>
+  <path d="M840 500 L650 485" stroke="#60a5fa" stroke-width="4"/>
+  <path d="M485 430 L315 355" stroke="#60a5fa" stroke-width="4"/>
+  <text x="60" y="585" fill="#93c5fd" font-size="20" font-family="Arial">Automate recurring tasks but always keep review and improvement in the loop.</text>
+</svg>

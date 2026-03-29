@@ -1,0 +1,141 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Drop Shadow Filter -->
+    <filter id="dropshadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3"/>
+      <feOffset dx="2" dy="2"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.3"/>
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Arrowhead Marker for end of path -->
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
+    </marker>
+    <!-- Arrowhead Marker for start of path (reversed) -->
+    <marker id="arrowhead-rev" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+      <polygon points="10 0, 0 3.5, 10 7" fill="#333"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect x="0" y="0" width="800" height="600" fill="#f8f9fa"/>
+
+  <!-- Styles for elements -->
+  <style>
+    .box {
+      font-family: "Arial, sans-serif";
+      font-size: 14px;
+      fill: #fff; /* Default fill, overridden by specific colors */
+      stroke: #ccc;
+      stroke-width: 1;
+      filter: url(#dropshadow);
+      rx: 8; /* Rounded corners */
+      ry: 8;
+    }
+    .text {
+      font-family: "Arial, sans-serif";
+      font-size: 14px;
+      fill: #333;
+      text-anchor: middle;
+      dominant-baseline: middle;
+    }
+    .label-small {
+      font-size: 12px;
+    }
+    .arrow {
+      stroke: #333;
+      stroke-width: 2;
+      fill: none;
+    }
+  </style>
+
+  <!-- Developer/Team -->
+  <rect x="300" y="50" width="200" height="50" class="box" fill="#6C5CE7"/>
+  <text x="400" y="75" class="text" fill="#fff">개발자/팀</text>
+
+  <!-- SDLC Phases -->
+  <g id="sdlc-phases">
+    <!-- 요구사항 분석 (Requirements Analysis) -->
+    <rect x="50" y="200" width="160" height="80" class="box" fill="#4A90D9"/>
+    <text x="130" y="240" class="text" fill="#fff">요구사항 분석</text>
+
+    <!-- 설계 및 기획 (Design & Planning) -->
+    <rect x="230" y="200" width="160" height="80" class="box" fill="#4A90D9"/>
+    <text x="310" y="240" class="text" fill="#fff">설계 및 기획</text>
+
+    <!-- 코드 개발 (Code Development) -->
+    <rect x="410" y="200" width="160" height="80" class="box" fill="#4A90D9"/>
+    <text x="490" y="240" class="text" fill="#fff">코드 개발</text>
+
+    <!-- 테스트 및 검증 (Testing & Verification) -->
+    <rect x="590" y="200" width="160" height="80" class="box" fill="#4A90D9"/>
+    <text x="670" y="240" class="text" fill="#fff">테스트 및 검증</text>
+  </g>
+
+  <!-- AI Tools -->
+  <g id="ai-tools">
+    <!-- AI 에이전트 (AI Agent) -->
+    <rect x="100" y="350" width="140" height="60" class="box" fill="#50C878"/>
+    <text x="170" y="380" class="text label-small" fill="#fff">AI 에이전트</text>
+
+    <!-- 프롬프트 엔지니어링 프레임워크 (Prompt Engineering Framework) -->
+    <rect x="260" y="350" width="140" height="60" class="box" fill="#FFD93D"/>
+    <text x="330" y="372" class="text label-small">프롬프트 엔지니어링<tspan x="330" dy="18">프레임워크</tspan></text>
+
+    <!-- LLM 코드 어시스턴트 (LLM Code Assistant) -->
+    <rect x="420" y="350" width="140" height="60" class="box" fill="#50C878"/>
+    <text x="490" y="380" class="text label-small" fill="#fff">LLM 코드 어시스턴트</text>
+
+    <!-- AI 코드 분석기 (AI Code Analyzer) -->
+    <rect x="500" y="430" width="140" height="60" class="box" fill="#FFD93D"/>
+    <text x="570" y="460" class="text label-small">AI 코드 분석기</text>
+
+    <!-- AI 테스트 자동화 (AI Test Automation) -->
+    <rect x="650" y="350" width="140" height="60" class="box" fill="#50C878"/>
+    <text x="720" y="380" class="text label-small" fill="#fff">AI 테스트 자동화</text>
+  </g>
+
+  <!-- Arrows: Developer/Team to SDLC Phases (Initiation) -->
+  <path d="M400 100 V170 H130 V200" class="arrow" marker-end="url(#arrowhead)"/>
+  <path d="M400 100 V170 H310 V200" class="arrow" marker-end="url(#arrowhead)"/>
+  <path d="M400 100 V170 H490 V200" class="arrow" marker-end="url(#arrowhead)"/>
+  <path d="M400 100 V170 H670 V200" class="arrow" marker-end="url(#arrowhead)"/>
+
+  <!-- Arrows: SDLC Phase Flow (Sequential) -->
+  <path d="M210 240 H230" class="arrow" marker-end="url(#arrowhead)"/>
+  <path d="M390 240 H410" class="arrow" marker-end="url(#arrowhead)"/>
+  <path d="M570 240 H590" class="arrow" marker-end="url(#arrowhead)"/>
+
+  <!-- Arrows: SDLC Phases <-> AI Tools (Bi-directional Interaction) -->
+  <!-- 요구사항 분석 <-> AI 에이전트 -->
+  <path d="M130 280 V350" class="arrow" marker-end="url(#arrowhead)" marker-start="url(#arrowhead-rev)"/>
+  <!-- 설계 및 기획 <-> 프롬프트 엔지니어링 프레임워크 -->
+  <path d="M310 280 V350" class="arrow" marker-end="url(#arrowhead)" marker-start="url(#arrowhead-rev)"/>
+  <!-- 요구사항 분석 <-> 프롬프트 엔지니어링 프레임워크 (Cross-phase interaction) -->
+  <path d="M130 280 V310 H330 V350" class="arrow" marker-end="url(#arrowhead)" marker-start="url(#arrowhead-rev)"/>
+  <!-- 설계 및 기획 <-> AI 에이전트 (Cross-phase interaction) -->
+  <path d="M310 280 V310 H170 V350" class="arrow" marker-end="url(#arrowhead)" marker-start="url(#arrowhead-rev)"/>
+
+  <!-- 코드 개발 <-> LLM 코드 어시스턴트 -->
+  <path d="M490 280 V350" class="arrow" marker-end="url(#arrowhead)" marker-start="url(#arrowhead-rev)"/>
+  <!-- 코드 개발 <-> AI 코드 분석기 -->
+  <path d="M490 280 V310 H570 V430" class="arrow" marker-end="url(#arrowhead)" marker-start="url(#arrowhead-rev)"/>
+  <!-- 테스트 및 검증 <-> AI 테스트 자동화 -->
+  <path d="M670 280 V350" class="arrow" marker-end="url(#arrowhead)" marker-start="url(#arrowhead-rev)"/>
+  <!-- 테스트 및 검증 <-> AI 코드 분석기 -->
+  <path d="M670 280 V310 H570 V430" class="arrow" marker-end="url(#arrowhead)" marker-start="url(#arrowhead-rev)"/>
+
+  <!-- Arrows: AI Tools to Developer/Team (Feedback/Results) -->
+  <path d="M170 410 V530 H400 V100" class="arrow" marker-end="url(#arrowhead)"/> <!-- AI 에이전트 to Dev -->
+  <path d="M330 410 V530 H400 V100" class="arrow" marker-end="url(#arrowhead)"/> <!-- 프롬프트 엔지니어링 to Dev -->
+  <path d="M490 410 V530 H400 V100" class="arrow" marker-end="url(#arrowhead)"/> <!-- LLM 코드 어시스턴트 to Dev -->
+  <path d="M570 490 V530 H400 V100" class="arrow" marker-end="url(#arrowhead)"/> <!-- AI 코드 분석기 to Dev -->
+  <path d="M720 410 V530 H400 V100" class="arrow" marker-end="url(#arrowhead)"/> <!-- AI 테스트 자동화 to Dev -->
+
+</svg>

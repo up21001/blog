@@ -1,0 +1,86 @@
+<svg viewBox="0 0 800 1000" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+    <defs>
+        <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+            <feDropShadow dx="2" dy="2" stdDeviation="3" flood-color="#000" flood-opacity="0.2"/>
+        </filter>
+    </defs>
+
+    <style>
+        .title { font-size: 36px; font-weight: bold; fill: #333; }
+        .category-title { font-size: 28px; font-weight: bold; fill: #fff; }
+        .subtitle { font-size: 22px; font-weight: bold; fill: #fff; }
+        .feature-item { font-size: 18px; fill: #eee; }
+        .icon { fill: #fff; }
+    </style>
+
+    <!-- Title -->
+    <text x="400" y="70" text-anchor="middle" class="title">Task Scheduling Methods Classification</text>
+
+    <!-- Category 1: OS Level Scheduling -->
+    <g filter="url(#shadow)">
+        <rect x="40" y="120" width="720" height="200" rx="15" fill="#4CAF50"/>
+        <text x="70" y="160" class="category-title">1. OS Level Scheduling</text>
+        <!-- Icon: Clock -->
+        <circle cx="100" cy="230" r="30" class="icon" stroke-width="3" stroke="#fff" fill="none"/>
+        <line x1="100" y1="230" x2="100" y2="210" stroke="#fff" stroke-width="3"/>
+        <line x1="100" y1="230" x2="118" y2="230" stroke="#fff" stroke-width="3"/>
+
+        <text x="200" y="200" class="subtitle">Tool: <tspan font-weight="normal">Cron</tspan></text>
+        <text x="200" y="230" class="feature-item">
+            <tspan x="200" dy="0">• System-level automation</tspan>
+            <tspan x="200" dy="25">• Simple, reliable</tspan>
+            <tspan x="200" dy="25">• Limited to single machine</tspan>
+        </text>
+    </g>
+
+    <!-- Category 2: Application Level Scheduling -->
+    <g filter="url(#shadow)">
+        <rect x="40" y="340" width="720" height="200" rx="15" fill="#2196F3"/>
+        <text x="70" y="380" class="category-title">2. Application Level Scheduling</text>
+        <!-- Icon: Code Brackets -->
+        <path d="M120 410 L100 430 L120 450 M80 410 L100 430 L80 450" stroke="#fff" stroke-width="5" fill="none"/>
+
+        <text x="200" y="420" class="subtitle">Tools: <tspan font-weight="normal">node-cron, APScheduler</tspan></text>
+        <text x="200" y="450" class="feature-item">
+            <tspan x="200" dy="0">• Integrated within app code</tspan>
+            <tspan x="200" dy="25">• Language-specific libraries</tspan>
+            <tspan x="200" dy="25">• More control over app context</tspan>
+        </text>
+    </g>
+
+    <!-- Category 3: Distributed System Scheduling -->
+    <g filter="url(#shadow)">
+        <rect x="40" y="560" width="720" height="200" rx="15" fill="#FF9800"/>
+        <text x="70" y="600" class="category-title">3. Distributed System Scheduling</text>
+        <!-- Icon: Network/Multiple Nodes -->
+        <circle cx="100" cy="630" r="15" class="icon"/>
+        <circle cx="140" cy="650" r="15" class="icon"/>
+        <circle cx="60" cy="650" r="15" class="icon"/>
+        <line x1="100" y1="630" x2="140" y2="650" stroke="#fff" stroke-width="2"/>
+        <line x1="100" y1="630" x2="60" y2="650" stroke="#fff" stroke-width="2"/>
+        <line x1="60" y1="650" x2="140" y2="650" stroke="#fff" stroke-width="2"/>
+
+        <text x="200" y="640" class="subtitle">Tool: <tspan font-weight="normal">Celery</tspan></text>
+        <text x="200" y="670" class="feature-item">
+            <tspan x="200" dy="0">• Scalable task queues</tspan>
+            <tspan x="200" dy="25">• Handles large workloads</tspan>
+            <tspan x="200" dy="25">• Fault tolerance, retries</tspan>
+        </text>
+    </g>
+
+    <!-- Category 4: Cloud Managed Scheduling -->
+    <g filter="url(#shadow)">
+        <rect x="40" y="780" width="720" height="200" rx="15" fill="#9C27B0"/>
+        <text x="70" y="820" class="category-title">4. Cloud Managed Scheduling</text>
+        <!-- Icon: Cloud -->
+        <path d="M140 860 Q150 840 130 840 Q110 840 100 850 Q90 830 70 840 Q50 840 60 860 Q40 860 40 880 Q60 880 140 880 Q160 880 160 860 Z" class="icon"/>
+
+        <text x="200" y="860" class="subtitle">Tool: <tspan font-weight="normal">AWS EventBridge</tspan></text>
+        <text x="200" y="890" class="feature-item">
+            <tspan x="200" dy="0">• Serverless, fully managed</tspan>
+            <tspan x="200" dy="25">• Event-driven architecture</tspan>
+            <tspan x="200" dy="25">• Integrates with cloud services</tspan>
+        </text>
+    </g>
+
+</svg>

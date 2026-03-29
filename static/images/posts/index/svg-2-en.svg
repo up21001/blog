@@ -1,0 +1,97 @@
+<svg viewBox="0 0 800 700" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .title { font-family: "Arial, sans-serif"; font-size: 24px; font-weight: bold; fill: #2D3748; text-anchor: middle; }
+    .header { font-family: "Arial, sans-serif"; font-size: 18px; font-weight: bold; fill: #2D3748; text-anchor: middle; }
+    .feature-label { font-family: "Arial, sans-serif"; font-size: 15px; font-weight: bold; fill: #2D3748; text-anchor: start; }
+    .feature-text { font-family: "Arial, sans-serif"; font-size: 14px; fill: #2D3748; text-anchor: middle; }
+    .checkmark { font-family: "Arial, sans-serif"; font-size: 20px; fill: #2D3748; text-anchor: middle; }
+    .cross { font-family: "Arial, sans-serif"; font-size: 20px; fill: #2D3748; text-anchor: middle; }
+    .row-bg-alt { fill: #f0f0f0; }
+    .row-bg-normal { fill: #ffffff; }
+    .ai-column-highlight { fill: #e8e8e8; } /* Subtle highlight for the AI column */
+  </style>
+
+  <!-- Title -->
+  <text x="400" y="40" class="title">Comparison: Manual vs. Generative AI-based Harness Design</text>
+
+  <!-- Column Headers Backgrounds -->
+  <rect x="20" y="70" width="370" height="50" fill="#dcdcdc"/>
+  <rect x="410" y="70" width="370" height="50" class="ai-column-highlight"/>
+
+  <!-- Column Headers -->
+  <text x="200" y="100" class="header">Traditional Manual Design</text>
+  <text x="600" y="100" class="header">Generative AI-based Design</text>
+
+  <!-- Feature Rows -->
+  <!-- Row 1: Input / Method -->
+  <rect x="20" y="120" width="370" height="70" class="row-bg-normal"/>
+  <rect x="410" y="120" width="370" height="70" class="ai-column-highlight"/>
+  <text x="30" y="150" class="feature-label">Input / Method</text>
+  <text x="200" y="145" class="feature-text">2D Schematic-based</text>
+  <text x="200" y="165" class="feature-text">Manual Work</text>
+  <text x="600" y="145" class="feature-text">System Requirements-based</text>
+  <text x="600" y="165" class="feature-text">AI Automation</text>
+
+  <!-- Row 2: Design Process -->
+  <rect x="20" y="190" width="370" height="60" class="row-bg-alt"/>
+  <rect x="410" y="190" width="370" height="60" class="ai-column-highlight"/>
+  <text x="30" y="220" class="feature-label">Design Process</text>
+  <text x="200" y="220" class="feature-text">Iterative, Human-driven</text>
+  <text x="600" y="220" class="feature-text">Automated, Data-driven</text>
+
+  <!-- Row 3: Time Consumption -->
+  <rect x="20" y="250" width="370" height="60" class="row-bg-normal"/>
+  <rect x="410" y="250" width="370" height="60" class="ai-column-highlight"/>
+  <text x="30" y="280" class="feature-label">Time Consumption</text>
+  <text x="200" y="280" class="feature-text">Long, Labor-intensive</text>
+  <text x="600" y="280" class="feature-text">Significantly Reduced</text>
+
+  <!-- Row 4: Optimization Level -->
+  <rect x="20" y="310" width="370" height="70" class="row-bg-alt"/>
+  <rect x="410" y="310" width="370" height="70" class="ai-column-highlight"/>
+  <text x="30" y="340" class="feature-label">Optimization Level</text>
+  <text x="200" y="335" class="feature-text">Sub-optimal,</text>
+  <text x="200" y="355" class="feature-text">Experience-dependent</text>
+  <text x="600" y="335" class="feature-text">Highly Optimized (Weight,</text>
+  <text x="600" y="355" class="feature-text">Cost, Performance)</text>
+
+  <!-- Row 5: Error Rate -->
+  <rect x="20" y="380" width="370" height="60" class="row-bg-normal"/>
+  <rect x="410" y="380" width="370" height="60" class="ai-column-highlight"/>
+  <text x="30" y="410" class="feature-label">Error Rate</text>
+  <text x="200" y="410" class="feature-text">Higher, Prone to Human Error</text>
+  <text x="600" y="410" class="feature-text">Lower, Consistent Accuracy</text>
+
+  <!-- Row 6: Design Complexity -->
+  <rect x="20" y="440" width="370" height="70" class="row-bg-alt"/>
+  <rect x="410" y="440" width="370" height="70" class="ai-column-highlight"/>
+  <text x="30" y="470" class="feature-label">Design Complexity</text>
+  <text x="200" y="465" class="feature-text">Challenging for</text>
+  <text x="200" y="485" class="feature-text">Complex Systems</text>
+  <text x="600" y="465" class="feature-text">Handles High Complexity</text>
+  <text x="600" y="485" class="feature-text">Efficiently</text>
+
+  <!-- Row 7: Innovation Potential -->
+  <rect x="20" y="510" width="370" height="60" class="row-bg-normal"/>
+  <rect x="410" y="510" width="370" height="60" class="ai-column-highlight"/>
+  <text x="30" y="540" class="feature-label">Innovation Potential</text>
+  <text x="200" y="540" class="feature-text">Limited by Human Creativity</text>
+  <text x="600" y="540" class="feature-text">Explores Novel, Optimal Solutions</text>
+
+  <!-- Row 8: Scalability -->
+  <rect x="20" y="570" width="370" height="60" class="row-bg-alt"/>
+  <rect x="410" y="570" width="370" height="60" class="ai-column-highlight"/>
+  <text x="30" y="600" class="feature-label">Scalability</text>
+  <text x="200" y="600" class="feature-text">Low, Resource-intensive</text>
+  <text x="600" y="600" class="feature-text">High, Adaptable to Growth</text>
+
+  <!-- Row 9: Cost Efficiency -->
+  <rect x="20" y="630" width="370" height="60" class="row-bg-normal"/>
+  <rect x="410" y="630" width="370" height="60" class="ai-column-highlight"/>
+  <text x="30" y="660" class="feature-label">Cost Efficiency</text>
+  <text x="200" y="660" class="feature-text">Higher Operational Costs</text>
+  <text x="600" y="660" class="feature-text">Reduced Overall Costs</text>
+
+  <!-- Vertical Separator Line -->
+  <line x1="390" y1="70" x2="390" y2="690" stroke="#cccccc" stroke-width="1"/>
+</svg>

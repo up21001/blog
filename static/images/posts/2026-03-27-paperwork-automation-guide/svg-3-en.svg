@@ -1,0 +1,56 @@
+<svg viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect x="0" y="0" width="800" height="800" fill="#f8f9fa"/>
+
+  <!-- Shapes and Text -->
+
+  <!-- 1. Start Oval -->
+  <ellipse cx="400" cy="100" rx="100" ry="30" fill="#50C878" stroke="#333" stroke-width="1"/>
+  <text x="400" y="105" font-family="Arial, sans-serif" font-size="14" fill="#fff" text-anchor="middle">Start: Make Automation</text>
+
+  <!-- 2. Process: Google Forms Submission (Trigger) -->
+  <rect x="275" y="200" width="250" height="60" rx="8" ry="8" fill="#4A90D9" stroke="#333" stroke-width="1"/>
+  <text x="400" y="225" font-family="Arial, sans-serif" font-size="14" fill="#fff" text-anchor="middle">Google Forms Submission</text>
+  <text x="400" y="245" font-family="Arial, sans-serif" font-size="14" fill="#fff" text-anchor="middle">(Trigger)</text>
+
+  <!-- 3. Process: Generate Google Docs Contract -->
+  <rect x="275" y="320" width="250" height="60" rx="8" ry="8" fill="#4A90D9" stroke="#333" stroke-width="1"/>
+  <text x="400" y="345" font-family="Arial, sans-serif" font-size="14" fill="#fff" text-anchor="middle">Generate Google Docs</text>
+  <text x="400" y="365" font-family="Arial, sans-serif" font-size="14" fill="#fff" text-anchor="middle">Contract</text>
+
+  <!-- 4. Process: Convert to PDF &amp; Request E-signature -->
+  <rect x="275" y="440" width="250" height="60" rx="8" ry="8" fill="#4A90D9" stroke="#333" stroke-width="1"/>
+  <text x="400" y="465" font-family="Arial, sans-serif" font-size="14" fill="#fff" text-anchor="middle">Convert to PDF &amp;</text>
+  <text x="400" y="485" font-family="Arial, sans-serif" font-size="14" fill="#fff" text-anchor="middle">Request E-signature</text>
+
+  <!-- 5. Process: Send Slack Notification -->
+  <rect x="275" y="560" width="250" height="60" rx="8" ry="8" fill="#4A90D9" stroke="#333" stroke-width="1"/>
+  <text x="400" y="585" font-family="Arial, sans-serif" font-size="14" fill="#fff" text-anchor="middle">Send Slack Notification</text>
+
+  <!-- 6. End Oval -->
+  <ellipse cx="400" cy="680" rx="100" ry="30" fill="#50C878" stroke="#333" stroke-width="1"/>
+  <text x="400" y="685" font-family="Arial, sans-serif" font-size="14" fill="#fff" text-anchor="middle">End: Onboarding Complete</text>
+
+  <!-- Arrows (LAST in rendering order) -->
+  <!-- Arrow 1: Start -> Google Forms -->
+  <line x1="400" y1="130" x2="400" y2="185" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <!-- Arrow 2: Google Forms -> Google Docs -->
+  <line x1="400" y1="260" x2="400" y2="305" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <!-- Arrow 3: Google Docs -> PDF/E-sign -->
+  <line x1="400" y1="380" x2="400" y2="425" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <!-- Arrow 4: PDF/E-sign -> Slack -->
+  <line x1="400" y1="500" x2="400" y2="545" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <!-- Arrow 5: Slack -> End -->
+  <line x1="400" y1="620" x2="400" y2="665" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+</svg>

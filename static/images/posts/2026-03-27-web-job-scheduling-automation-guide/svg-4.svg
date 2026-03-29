@@ -1,0 +1,82 @@
+<svg width="800" height="500" viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#2D3748" />
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect x="0" y="0" width="800" height="500" fill="#f8f9fa"/>
+
+  <!-- Global Text Styles -->
+  <style>
+    .stage-label {
+      font-family: "Arial, sans-serif";
+      font-weight: bold;
+      font-size: 16px;
+      fill: white;
+      text-anchor: middle;
+    }
+    .stage-sublabel {
+      font-family: "Arial, sans-serif";
+      font-size: 12px;
+      fill: white;
+      text-anchor: middle;
+    }
+    .stage-icon {
+      font-family: "Arial, sans-serif";
+      font-size: 28px;
+      fill: white;
+      text-anchor: middle;
+    }
+    .arrow-label {
+      font-family: "Arial, sans-serif";
+      font-size: 12px;
+      fill: #2D3748;
+      text-anchor: middle;
+    }
+    .progress-number {
+      font-family: "Arial, sans-serif";
+      font-size: 14px;
+      fill: white;
+      text-anchor: middle;
+      dominant-baseline: central;
+    }
+  </style>
+
+  <!-- Stage 1: Celery Beat -->
+  <rect x="80" y="190" width="180" height="120" rx="10" ry="10" fill="#4A90D9"/>
+  <text x="170" y="220" class="stage-icon">⏰</text>
+  <text x="170" y="245" class="stage-sublabel">Scheduler</text>
+  <text x="170" y="275" class="stage-label">Celery Beat</text>
+  <circle cx="60" cy="200" r="12" fill="#2D3748"/>
+  <text x="60" y="200" class="progress-number">1</text>
+
+  <!-- Stage 2: Message Broker -->
+  <rect x="310" y="190" width="180" height="120" rx="10" ry="10" fill="#50C878"/>
+  <text x="400" y="220" class="stage-icon">📥</text>
+  <text x="400" y="245" class="stage-sublabel">Queue</text>
+  <text x="400" y="275" class="stage-label">Message Broker</text>
+  <circle cx="290" cy="200" r="12" fill="#2D3748"/>
+  <text x="290" y="200" class="progress-number">2</text>
+
+  <!-- Stage 3: Celery Worker -->
+  <rect x="540" y="190" width="180" height="120" rx="10" ry="10" fill="#6C5CE7"/>
+  <text x="630" y="220" class="stage-icon">🚀</text>
+  <text x="630" y="245" class="stage-sublabel">Executor</text>
+  <text x="630" y="275" class="stage-label">Celery Worker</text>
+  <circle cx="520" cy="200" r="12" fill="#2D3748"/>
+  <text x="520" y="200" class="progress-number">3</text>
+
+  <!-- Arrows and Labels -->
+  <!-- Arrow 1: Celery Beat to Message Broker -->
+  <path d="M 260 250 H 310" stroke="#2D3748" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  <text x="285" y="235" class="arrow-label">Task Message (JSON)</text>
+  <text x="285" y="265" class="arrow-label" font-weight="bold">Scheduled Tasks</text>
+
+  <!-- Arrow 2: Message Broker to Celery Worker -->
+  <path d="M 490 250 H 540" stroke="#2D3748" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  <text x="515" y="235" class="arrow-label">Task Message</text>
+  <text x="515" y="265" class="arrow-label" font-weight="bold">Asynchronous Execution</text>
+
+</svg>

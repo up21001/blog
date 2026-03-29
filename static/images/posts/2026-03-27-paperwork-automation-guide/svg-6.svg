@@ -1,0 +1,133 @@
+<svg viewBox="0 0 800 700" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+  <style>
+    .title { font-size: 28px; font-weight: bold; fill: #2D3748; }
+    .column-header { font-size: 20px; font-weight: bold; fill: #FFFFFF; }
+    .feature-label { font-size: 16px; font-weight: bold; fill: #2D3748; }
+    .feature-value { font-size: 16px; fill: #2D3748; }
+    .checkmark { fill: #50C878; font-size: 20px; font-weight: bold; }
+    .cross { fill: #FF6B6B; font-size: 20px; font-weight: bold; }
+    .column-bg-before { fill: #4A90D9; }
+    .column-bg-after { fill: #50C878; }
+    .row-bg-odd { fill: #f8f9fa; }
+    .row-bg-even { fill: #ffffff; }
+    .highlight-border { stroke: #50C878; stroke-width: 3px; fill: none; }
+    .person-skin { fill: #FFDDC1; stroke: #A9A9A9; stroke-width: 1px; }
+    .person-body-before { fill: #4A90D9; }
+    .person-body-after { fill: #50C878; }
+    .paper-color { fill: #D3D3D3; stroke: #A9A9A9; stroke-width: 1px; }
+    .digital-screen-bg { fill: #4A4A4A; }
+    .digital-screen-content { fill: #FFFFFF; }
+  </style>
+
+  <!-- Overall Title -->
+  <text x="400" y="40" text-anchor="middle" class="title">Document Processing Comparison</text>
+
+  <!-- Column 1: Before Technology Adoption -->
+  <rect x="50" y="70" width="340" height="580" rx="10" ry="10" fill="#E0E0E0"/> <!-- Main column background -->
+  <rect x="50" y="70" width="340" height="50" rx="10" ry="10" class="column-bg-before"/> <!-- Header background -->
+  <text x="220" y="100" text-anchor="middle" class="column-header">Before Technology Adoption</text>
+
+  <!-- Visual for Before: Stack of papers and tired person -->
+  <!-- Stack of papers -->
+  <rect x="150" y="150" width="100" height="80" class="paper-color"/>
+  <rect x="160" y="140" width="100" height="80" class="paper-color" transform="rotate(5 160 140)"/>
+  <rect x="140" y="160" width="100" height="80" class="paper-color" transform="rotate(-3 140 160)"/>
+  <rect x="155" y="130" width="90" height="70" fill="#FFFFFF" stroke="#A9A9A9" stroke-width="1"/>
+  <rect x="165" y="120" width="80" height="60" fill="#FFFFFF" stroke="#A9A9A9" stroke-width="1"/>
+  <text x="200" y="200" text-anchor="middle" font-size="12" fill="#666">Paperwork</text>
+
+  <!-- Tired person icon -->
+  <circle cx="200" cy="270" r="15" class="person-skin"/> <!-- Head -->
+  <path d="M190 280 L210 280 M195 275 L205 275" stroke="#A9A9A9" stroke-width="1"/> <!-- Eyes -->
+  <path d="M190 290 Q200 285 210 290" stroke="#A9A9A9" stroke-width="1"/> <!-- Frown -->
+  <rect x="190" y="285" width="20" height="30" class="person-body-before"/> <!-- Body -->
+  <line x1="185" y1="295" x2="170" y2="310" stroke="#4A90D9" stroke-width="3"/> <!-- Left arm -->
+  <line x1="215" y1="295" x2="230" y2="310" stroke="#4A90D9" stroke-width="3"/> <!-- Right arm -->
+  <line x1="195" y1="315" x2="180" y2="330" stroke="#4A90D9" stroke-width="3"/> <!-- Left leg -->
+  <line x1="205" y1="315" x2="220" y2="330" stroke="#4A90D9" stroke-width="3"/> <!-- Right leg -->
+  <path d="M205 260 Q208 255 210 260" fill="none" stroke="#FF6B6B" stroke-width="1"/> <!-- Sweat drop -->
+
+
+  <!-- Column 2: After Technology Adoption -->
+  <rect x="410" y="70" width="340" height="580" rx="10" ry="10" fill="#E0E0E0"/> <!-- Main column background -->
+  <rect x="410" y="70" width="340" height="50" rx="10" ry="10" class="column-bg-after"/> <!-- Header background -->
+  <text x="580" y="100" text-anchor="middle" class="column-header">After Technology Adoption</text>
+  <!-- Highlight border for winner -->
+  <rect x="410" y="70" width="340" height="580" rx="10" ry="10" class="highlight-border"/>
+
+  <!-- Visual for After: Digital document on screen and relaxed person -->
+  <!-- Digital document on screen -->
+  <rect x="510" y="150" width="120" height="90" rx="5" ry="5" class="digital-screen-bg"/> <!-- Monitor body -->
+  <rect x="520" y="160" width="100" height="70" rx="3" ry="3" class="digital-screen-content"/> <!-- Screen -->
+  <path d="M530 175 L545 190 L565 170 M530 185 L545 200 L565 180" stroke="#50C878" stroke-width="2" fill="none"/> <!-- Document lines -->
+  <path d="M575 185 L585 195 L600 175" stroke="#50C878" stroke-width="3" fill="none"/> <!-- Checkmark -->
+  <text x="570" y="220" text-anchor="middle" font-size="12" fill="#666">Digital Docs</text>
+
+  <!-- Relaxed person icon -->
+  <circle cx="580" cy="270" r="15" class="person-skin"/> <!-- Head -->
+  <path d="M570 275 L575 280 L585 280 L590 275" stroke="#A9A9A9" stroke-width="1"/> <!-- Eyes -->
+  <path d="M570 290 Q580 295 590 290" stroke="#A9A9A9" stroke-width="1"/> <!-- Smile -->
+  <rect x="570" y="285" width="20" height="30" class="person-body-after"/> <!-- Body -->
+  <line x1="565" y1="295" x2="550" y2="310" stroke="#50C878" stroke-width="3"/> <!-- Left arm -->
+  <line x1="595" y1="295" x2="610" y2="310" stroke="#50C878" stroke-width="3"/> <!-- Right arm -->
+  <line x1="575" y1="315" x2="560" y2="330" stroke="#50C878" stroke-width="3"/> <!-- Left leg -->
+  <line x1="585" y1="315" x2="600" y2="330" stroke="#50C878" stroke-width="3"/> <!-- Right leg -->
+  <circle cx="580" cy="270" r="2" fill="#A9A9A9"/> <!-- Nose -->
+
+
+  <!-- Feature Rows -->
+  <!-- Row 1: Process -->
+  <rect x="50" y="350" width="340" height="50" class="row-bg-odd"/>
+  <text x="70" y="380" class="feature-label">Process:</text>
+  <text x="220" y="380" text-anchor="middle" class="feature-value">Manual</text>
+
+  <rect x="410" y="350" width="340" height="50" class="row-bg-odd"/>
+  <text x="430" y="380" class="feature-label">Process:</text>
+  <text x="580" y="380" text-anchor="middle" class="feature-value">Automated</text>
+
+  <!-- Row 2: Complexity -->
+  <rect x="50" y="400" width="340" height="50" class="row-bg-even"/>
+  <text x="70" y="430" class="feature-label">Complexity:</text>
+  <text x="220" y="430" text-anchor="middle" class="feature-value">High</text>
+
+  <rect x="410" y="400" width="340" height="50" class="row-bg-even"/>
+  <text x="430" y="430" class="feature-label">Complexity:</text>
+  <text x="580" y="430" text-anchor="middle" class="feature-value">Low</text>
+
+  <!-- Row 3: Time -->
+  <rect x="50" y="450" width="340" height="50" class="row-bg-odd"/>
+  <text x="70" y="480" class="feature-label">Time:</text>
+  <text x="220" y="480" text-anchor="middle" class="feature-value">Time-Consuming</text>
+
+  <rect x="410" y="450" width="340" height="50" class="row-bg-odd"/>
+  <text x="430" y="480" class="feature-label">Time:</text>
+  <text x="580" y="480" text-anchor="middle" class="feature-value">Efficient</text>
+
+  <!-- Row 4: Effort -->
+  <rect x="50" y="500" width="340" height="50" class="row-bg-even"/>
+  <text x="70" y="530" class="feature-label">Effort:</text>
+  <text x="220" y="530" text-anchor="middle" class="feature-value">Exhausting</text>
+
+  <rect x="410" y="500" width="340" height="50" class="row-bg-even"/>
+  <text x="430" y="530" class="feature-label">Effort:</text>
+  <text x="580" y="530" text-anchor="middle" class="feature-value">Relaxed</text>
+
+  <!-- Row 5: Overall Outcome -->
+  <rect x="50" y="550" width="340" height="50" class="row-bg-odd"/>
+  <text x="70" y="580" class="feature-label">Outcome:</text>
+  <text x="220" y="580" text-anchor="middle" class="cross">✗ Inefficient</text>
+
+  <rect x="410" y="550" width="340" height="50" class="row-bg-odd"/>
+  <text x="430" y="580" class="feature-label">Outcome:</text>
+  <text x="580" y="580" text-anchor="middle" class="checkmark">✓ Highly Efficient</text>
+
+  <!-- Row 6: Visual Summary -->
+  <rect x="50" y="600" width="340" height="50" class="row-bg-even"/>
+  <text x="70" y="630" class="feature-label">Summary:</text>
+  <text x="220" y="630" text-anchor="middle" class="feature-value">Stressed &amp; Slow</text>
+
+  <rect x="410" y="600" width="340" height="50" class="row-bg-even"/>
+  <text x="430" y="630" class="feature-label">Summary:</text>
+  <text x="580" y="630" text-anchor="middle" class="feature-value">Calm &amp; Fast</text>
+
+</svg>

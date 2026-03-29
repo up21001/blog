@@ -1,0 +1,71 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+  <defs>
+    <marker id="arrowhead" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#4A90D9" />
+    </marker>
+    <marker id="arrowhead-feedback" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#6C5CE7" />
+    </marker>
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-color="#000000" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect x="0" y="0" width="800" height="600" fill="#f8f9fa"/>
+
+  <!-- External Labels (Input/Output) -->
+  <text x="190" y="100" font-size="22" fill="#333" text-anchor="middle">Input Data</text>
+  <text x="190" y="130" font-size="16" fill="#555" text-anchor="middle">CAD Models, Requirements</text>
+
+  <text x="610" y="100" font-size="22" fill="#333" text-anchor="middle">Output Design</text>
+  <text x="610" y="130" font-size="16" fill="#555" text-anchor="middle">3D Model, BOM</text>
+
+  <!-- Main Components -->
+  <rect id="data-rep" x="100" y="200" width="180" height="80" rx="10" ry="10" fill="#4A90D9" filter="url(#shadow)"/>
+  <text x="190" y="235" font-size="18" fill="#fff" text-anchor="middle">Data</text>
+  <text x="190" y="255" font-size="18" fill="#fff" text-anchor="middle">Representation</text>
+
+  <rect id="topo-gen" x="310" y="200" width="180" height="80" rx="10" ry="10" fill="#4A90D9" filter="url(#shadow)"/>
+  <text x="400" y="235" font-size="18" fill="#fff" text-anchor="middle">Topology</text>
+  <text x="400" y="255" font-size="18" fill="#fff" text-anchor="middle">Generation</text>
+
+  <rect id="3d-routing" x="520" y="200" width="180" height="80" rx="10" ry="10" fill="#4A90D9" filter="url(#shadow)"/>
+  <text x="610" y="235" font-size="18" fill="#fff" text-anchor="middle">3D Space</text>
+  <text x="610" y="255" font-size="18" fill="#fff" text-anchor="middle">Routing</text>
+
+  <!-- Feedback Loop Component -->
+  <rect id="verify-opt" x="310" y="400" width="180" height="80" rx="10" ry="10" fill="#6C5CE7" filter="url(#shadow)"/>
+  <text x="400" y="435" font-size="18" fill="#fff" text-anchor="middle">Verification &amp;</text>
+  <text x="400" y="455" font-size="18" fill="#fff" text-anchor="middle">Optimization</text>
+
+  <!-- Arrows -->
+  <g stroke="#4A90D9" stroke-width="2" fill="none" marker-end="url(#arrowhead)">
+    <!-- Arrow 1: Input Data -> Data Representation -->
+    <path d="M 190 140 L 190 185" />
+    <text x="190" y="160" font-size="13" fill="#333" text-anchor="middle">CAD Models, Requirements</text>
+
+    <!-- Arrow 2: Data Representation -> Topology Generation -->
+    <path d="M 280 240 L 295 240" />
+    <text x="287.5" y="225" font-size="13" fill="#333" text-anchor="middle">Structured Harness Data</text>
+
+    <!-- Arrow 3: Topology Generation -> 3D Space Routing -->
+    <path d="M 490 240 L 505 240" />
+    <text x="497.5" y="225" font-size="13" fill="#333" text-anchor="middle">Harness Topology Graph</text>
+
+    <!-- Arrow 4: 3D Space Routing -> Verification &amp; Optimization -->
+    <path d="M 610 280 L 610 385" />
+    <text x="610" y="335" font-size="13" fill="#333" text-anchor="middle">Proposed Harness Design</text>
+
+    <!-- Arrow 6: 3D Space Routing -> Output Design -->
+    <path d="M 610 200 L 610 145" />
+    <text x="610" y="170" font-size="13" fill="#333" text-anchor="middle">3D Routed Harness Design</text>
+  </g>
+
+  <!-- Feedback Arrow (different color for marker) -->
+  <g stroke="#6C5CE7" stroke-width="2" fill="none" marker-end="url(#arrowhead-feedback)">
+    <!-- Arrow 5: Verification &amp; Optimization -> Topology Generation (Feedback) -->
+    <path d="M 355 400 L 355 385 L 280 385 L 280 185 L 400 185" />
+    <text x="260" y="285" font-size="13" fill="#333" text-anchor="end">Optimization Feedback</text>
+  </g>
+</svg>

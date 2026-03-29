@@ -1,0 +1,80 @@
+<svg viewBox="0 0 800 1000" xmlns="http://www.w3.org/2000/svg">
+  <rect x="0" y="0" width="800" height="1000" fill="#f8f8f8"/>
+
+  <!-- Title -->
+  <text x="400" y="80" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="#2c3e50" text-anchor="middle">
+    CodeSpeak의 6가지 주요 목표
+  </text>
+  <line x1="200" y1="105" x2="600" y2="105" stroke="#3498db" stroke-width="5" stroke-linecap="round"/>
+
+  <!-- Goal 1: 개발 생산성 향상 (Improve development productivity) -->
+  <g transform="translate(0, 150)">
+    <circle cx="150" cy="100" r="60" fill="#2ecc71"/>
+    <!-- Icon: Upward trend line (simple line chart) -->
+    <polyline points="120 110, 135 90, 150 105, 165 85, 180 100" fill="none" stroke="#fff" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M180 100 L170 90 L170 110 Z" fill="#fff"/> <!-- Arrowhead -->
+    <text x="250" y="105" font-family="Arial, sans-serif" font-size="30" font-weight="bold" fill="#2c3e50" alignment-baseline="middle">
+      개발 생산성 향상
+    </text>
+  </g>
+
+  <!-- Goal 2: 코드 품질 개선 (Improve code quality) -->
+  <g transform="translate(0, 280)">
+    <circle cx="150" cy="100" r="60" fill="#f1c40f"/>
+    <!-- Icon: Star -->
+    <path d="M150 60 L160 85 L185 85 L165 100 L175 125 L150 110 L125 125 L135 100 L115 85 L140 85 Z" fill="#fff"/>
+    <text x="250" y="105" font-family="Arial, sans-serif" font-size="30" font-weight="bold" fill="#2c3e50" alignment-baseline="middle">
+      코드 품질 개선
+    </text>
+  </g>
+
+  <!-- Goal 3: 개발 속도 가속화 (Accelerate development speed) -->
+  <g transform="translate(0, 410)">
+    <circle cx="150" cy="100" r="60" fill="#e74c3c"/>
+    <!-- Icon: Lightning bolt -->
+    <path d="M140 60 L120 100 L140 100 L130 140 L170 80 L150 80 Z" fill="#fff"/>
+    <text x="250" y="105" font-family="Arial, sans-serif" font-size="30" font-weight="bold" fill="#2c3e50" alignment-baseline="middle">
+      개발 속도 가속화
+    </text>
+  </g>
+
+  <!-- Goal 4: 기술 부채 감소 (Reduce technical debt) -->
+  <g transform="translate(0, 540)">
+    <circle cx="150" cy="100" r="60" fill="#9b59b6"/>
+    <!-- Icon: Stack of blocks with downward arrow -->
+    <rect x="120" y="105" width="60" height="15" fill="#fff"/>
+    <rect x="120" y="90" width="60" height="15" fill="#fff"/>
+    <rect x="120" y="75" width="60" height="15" fill="#fff"/>
+    <path d="M150 65 L140 80 L160 80 Z" fill="#fff"/> <!-- Downward arrow head -->
+    <path d="M150 65 L150 45" stroke="#fff" stroke-width="8" stroke-linecap="round"/> <!-- Downward arrow shaft -->
+    <text x="250" y="105" font-family="Arial, sans-serif" font-size="30" font-weight="bold" fill="#2c3e50" alignment-baseline="middle">
+      기술 부채 감소
+    </text>
+  </g>
+
+  <!-- Goal 5: 개발자 학습 및 성장 지원 (Support developer learning and growth) -->
+  <g transform="translate(0, 670)">
+    <circle cx="150" cy="100" r="60" fill="#3498db"/>
+    <!-- Icon: Open book -->
+    <path d="M120 70 L180 70 L180 130 L150 110 L120 130 Z" fill="#fff"/>
+    <path d="M120 70 L150 90 L180 70" fill="none" stroke="#fff" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="250" y="105" font-family="Arial, sans-serif" font-size="30" font-weight="bold" fill="#2c3e50" alignment-baseline="middle">
+      개발자 학습 및 성장 지원
+    </text>
+  </g>
+
+  <!-- Goal 6: 균일한 코드 스타일 및 표준 유지 (Maintain uniform code style and standards) -->
+  <g transform="translate(0, 800)">
+    <circle cx="150" cy="100" r="60" fill="#1abc9c"/>
+    <!-- Icon: Grid pattern -->
+    <rect x="110" y="70" width="80" height="60" fill="none" stroke="#fff" stroke-width="5"/>
+    <line x1="110" y1="90" x2="190" y2="90" stroke="#fff" stroke-width="5"/>
+    <line x1="110" y1="110" x2="190" y2="110" stroke="#fff" stroke-width="5"/>
+    <line x1="135" y1="70" x2="135" y2="130" stroke="#fff" stroke-width="5"/>
+    <line x1="160" y1="70" x2="160" y2="130" stroke="#fff" stroke-width="5"/>
+    <text x="250" y="105" font-family="Arial, sans-serif" font-size="30" font-weight="bold" fill="#2c3e50" alignment-baseline="middle">
+      균일한 코드 스타일 및 표준 유지
+    </text>
+  </g>
+
+</svg>

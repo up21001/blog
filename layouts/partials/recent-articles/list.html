@@ -1,0 +1,9 @@
+{{ $n := .Site.Params.homepage.showRecentItems | default 50 }}
+{{/* Lastmod 미지정 시 Hugo가 Date와 동일하게 쓰므로, lastmod만 최신으로 올리면 홈 상단에 노출하기 쉬움 */}}
+{{ $pages := sort (where .Site.RegularPages "Type" "in" .Site.Params.mainSections) "Lastmod" "desc" }}
+
+<section class="space-y-10 w-full">
+  {{ range first $n $pages }}
+    {{ partial "article-link/simple.html" . }}
+  {{ end }}
+</section>

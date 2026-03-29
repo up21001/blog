@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="560" viewBox="0 0 1200 560" role="img" aria-label="Chat vs delegation">
+  <rect width="1200" height="560" fill="#111827"/>
+  <text x="60" y="80" fill="#e5e7eb" font-size="40" font-family="Arial" font-weight="700">Chat Mode vs Delegation Mode</text>
+  <rect x="60" y="130" width="500" height="360" rx="14" fill="#1f2937" stroke="#374151"/>
+  <rect x="640" y="130" width="500" height="360" rx="14" fill="#0f172a" stroke="#334155"/>
+  <text x="90" y="180" fill="#fca5a5" font-size="30" font-family="Arial" font-weight="700">Chat Mode</text>
+  <text x="90" y="225" fill="#d1d5db" font-size="21" font-family="Arial">- One request at a time</text>
+  <text x="90" y="260" fill="#d1d5db" font-size="21" font-family="Arial">- Context repeated every session</text>
+  <text x="90" y="295" fill="#d1d5db" font-size="21" font-family="Arial">- Output stays in conversation</text>
+  <text x="90" y="330" fill="#d1d5db" font-size="21" font-family="Arial">- Hard to standardize as team</text>
+  <text x="670" y="180" fill="#86efac" font-size="30" font-family="Arial" font-weight="700">Delegation Mode</text>
+  <text x="670" y="225" fill="#d1d5db" font-size="21" font-family="Arial">- Goal driven workflow</text>
+  <text x="670" y="260" fill="#d1d5db" font-size="21" font-family="Arial">- Persistent instruction baseline</text>
+  <text x="670" y="295" fill="#d1d5db" font-size="21" font-family="Arial">- File based deliverables</text>
+  <text x="670" y="330" fill="#d1d5db" font-size="21" font-family="Arial">- Repeatable team execution</text>
+  <text x="60" y="530" fill="#93c5fd" font-size="20" font-family="Arial">Core shift: from asking questions to designing repeatable execution.</text>
+</svg>

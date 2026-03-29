@@ -1,0 +1,5 @@
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M5 16 A3 3 0 0 1 8 13 A4 4 0 0 1 12 9 A4 4 0 0 1 16 13 A3 3 0 0 1 19 16 H5 Z"/>
+  <polyline points="7 14, 11 11, 15 10"/>
+  <circle cx="15" cy="10" r="1.5" fill="currentColor" stroke="none"/>
+</svg>

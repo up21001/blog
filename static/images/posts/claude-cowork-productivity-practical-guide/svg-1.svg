@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="640" viewBox="0 0 1200 640" role="img" aria-label="Cowork overview">
+  <rect width="1200" height="640" fill="#0f172a"/>
+  <text x="60" y="90" fill="#e5e7eb" font-size="44" font-family="Arial" font-weight="700">Claude Cowork Execution System</text>
+  <text x="60" y="130" fill="#94a3b8" font-size="22" font-family="Arial">From chat style usage to repeatable operations</text>
+  <rect x="60" y="190" width="330" height="320" rx="16" fill="#1e293b" stroke="#334155"/>
+  <rect x="435" y="190" width="330" height="320" rx="16" fill="#1e293b" stroke="#334155"/>
+  <rect x="810" y="190" width="330" height="320" rx="16" fill="#1e293b" stroke="#334155"/>
+  <text x="90" y="250" fill="#e2e8f0" font-size="30" font-family="Arial" font-weight="700">1. Instruction</text>
+  <text x="90" y="290" fill="#cbd5e1" font-size="20" font-family="Arial">Role and format baseline</text>
+  <text x="90" y="320" fill="#cbd5e1" font-size="20" font-family="Arial">Quality and policy rules</text>
+  <text x="465" y="250" fill="#e2e8f0" font-size="30" font-family="Arial" font-weight="700">2. Plugins</text>
+  <text x="465" y="290" fill="#cbd5e1" font-size="20" font-family="Arial">Package domain workflows</text>
+  <text x="465" y="320" fill="#cbd5e1" font-size="20" font-family="Arial">Customize to team templates</text>
+  <text x="840" y="250" fill="#e2e8f0" font-size="30" font-family="Arial" font-weight="700">3. Schedules</text>
+  <text x="840" y="290" fill="#cbd5e1" font-size="20" font-family="Arial">Run repetitive tasks weekly</text>
+  <text x="840" y="320" fill="#cbd5e1" font-size="20" font-family="Arial">Build operating rhythm</text>
+  <path d="M390 350 L430 350" stroke="#60a5fa" stroke-width="4"/>
+  <polygon points="430,350 418,344 418,356" fill="#60a5fa"/>
+  <path d="M765 350 L805 350" stroke="#60a5fa" stroke-width="4"/>
+  <polygon points="805,350 793,344 793,356" fill="#60a5fa"/>
+</svg>

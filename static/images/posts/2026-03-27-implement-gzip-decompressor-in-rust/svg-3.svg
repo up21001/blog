@@ -1,0 +1,170 @@
+<svg viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
+  <rect x="0" y="0" width="800" height="800" fill="#f8f9fa"/>
+
+  <defs>
+    <style>
+      .shape {
+        stroke="#333";
+        stroke-width="2";
+        fill="#4A90D9"; /* Default process color */
+      }
+      .start-end { fill="#50C878"; }
+      .decision { fill="#FFD93D"; }
+      .io { fill="#FFD93D"; } /* Parallelogram for I/O */
+      .text {
+        font-family="Arial, sans-serif";
+        font-size="14px";
+        fill="#333";
+        text-anchor="middle";
+        dominant-baseline="middle";
+      }
+      .arrow {
+        stroke="#333";
+        stroke-width="2";
+        fill="none";
+        marker-end="url(#arrowhead)";
+      }
+      .arrow-label {
+        font-family="Arial, sans-serif";
+        font-size="12px";
+        fill="#333";
+        text-anchor="middle";
+      }
+    </style>
+    <marker id="arrowhead" markerWidth="15" markerHeight="7" refX="15" refY="3.5" orient="auto">
+      <polygon points="0 0, 15 3.5, 0 7" fill="#333" />
+    </marker>
+  </defs>
+
+  <!-- Shapes and Text (Rendering Order: Shapes first, then Arrows) -->
+
+  <!-- 1. Start -->
+  <ellipse id="start" cx="400" cy="70" rx="90" ry="35" class="shape start-end" />
+  <text x="400" y="70" class="text">Start: Read Compressed Data</text>
+
+  <!-- 2. Read Block Header -->
+  <rect id="read-header" x="300" y="130" width="200" height="60" rx="10" ry="10" class="shape" />
+  <text x="400" y="160" class="text">Read Block Header</text>
+
+  <!-- 3. Is Last Block? -->
+  <polygon id="is-last-block" points="400,220 500,250 400,280 300,250" class="shape decision" />
+  <text x="400" y="250" class="text">Is This the Last Block?</text>
+
+  <!-- 4. Determine Block Type -->
+  <rect id="determine-type" x="300" y="310" width="200" height="60" rx="10" ry="10" class="shape" />
+  <text x="400" y="340" class="text">Determine Block Type</text>
+
+  <!-- 5. Is "No Compression"? -->
+  <polygon id="is-no-comp" points="400,400 500,430 400,460 300,430" class="shape decision" />
+  <text x="400" y="430" class="text">Block Type: "No Compression"?</text>
+
+  <!-- 6. Read Uncompressed Data (Parallelogram for I/O) -->
+  <polygon id="read-uncomp" points="150,420 350,420 330,480 130,480" class="shape io" />
+  <text x="240" y="450" class="text">Read Uncompressed Data</text>
+
+  <!-- 7. Build Huffman Trees -->
+  <rect id="build-huffman" x="550" y="400" width="200" height="60" rx="10" ry="10" class="shape" />
+  <text x="650" y="423" class="text">Build Huffman Trees</text>
+  <text x="650" y="437" class="text">(Literal/Length &amp; Distance)</text>
+
+  <!-- 8. Decode Next Symbol -->
+  <rect id="decode-symbol" x="550" y="500" width="200" height="60" rx="10" ry="10" class="shape" />
+  <text x="650" y="523" class="text">Decode Next Symbol</text>
+  <text x="650" y="537" class="text">(Literal/Length Tree)</text>
+
+  <!-- 9. Is Symbol a Literal? -->
+  <polygon id="is-literal" points="650,590 750,620 650,650 550,620" class="shape decision" />
+  <text x="650" y="620" class="text">Symbol is Literal?</text>
+
+  <!-- 10. Append Literal -->
+  <rect id="append-literal" x="550" y="680" width="200" height="60" rx="10" ry="10" class="shape" />
+  <text x="650" y="710" class="text">Append Literal to Output</text>
+
+  <!-- 11. Decode Length and Distance -->
+  <rect id="decode-len-dist" x="300" y="500" width="200" height="60" rx="10" ry="10" class="shape" />
+  <text x="400" y="523" class="text">Decode Length &amp; Distance</text>
+  <text x="400" y="537" class="text">(Distance Tree)</text>
+
+  <!-- 12. Copy Bytes -->
+  <rect id="copy-bytes" x="300" y="590" width="200" height="60" rx="10" ry="10" class="shape" />
+  <text x="400" y="613" class="text">Copy Length Bytes from</text>
+  <text x="400" y="627" class="text">Distance in Output Buffer</text>
+
+  <!-- 13. Is EOB Marker? -->
+  <polygon id="is-eob" points="400,680 500,710 400,740 300,710" class="shape decision" />
+  <text x="400" y="710" class="text">Symbol is EOB Marker?</text>
+
+  <!-- 14. Append to Output (for uncompressed path) -->
+  <rect id="append-output-uncomp" x="150" y="510" width="200" height="60" rx="10" ry="10" class="shape" />
+  <text x="250" y="540" class="text">Append to Output Buffer</text>
+
+  <!-- 15. End -->
+  <ellipse id="end" cx="100" cy="710" rx="90" ry="35" class="shape start-end" />
+  <text x="100" y="710" class="text">End: Output Decompressed Data</text>
+
+
+  <!-- Arrows (Rendering Order: Last) -->
+
+  <!-- Start to Read Block Header -->
+  <path d="M400,105 L400,115" class="arrow" />
+
+  <!-- Read Block Header to Is Last Block? -->
+  <path d="M400,190 L400,205" class="arrow" />
+
+  <!-- Is Last Block? (Yes) to End -->
+  <path d="M300,250 L100,250 L100,695" class="arrow" />
+  <text x="250" y="240" class="arrow-label">Yes</text>
+
+  <!-- Is Last Block? (No) to Determine Block Type -->
+  <path d="M400,280 L400,295" class="arrow" />
+  <text x="415" y="295" class="arrow-label">No</text>
+
+  <!-- Determine Block Type to Is "No Compression"? -->
+  <path d="M400,370 L400,385" class="arrow" />
+
+  <!-- Is "No Compression"? (Yes) to Read Uncompressed Data -->
+  <path d="M300,430 L335,430" class="arrow" />
+  <text x="270" y="415" class="arrow-label">Yes</text>
+
+  <!-- Read Uncompressed Data to Append to Output (uncomp) -->
+  <path d="M240,480 L240,495" class="arrow" />
+
+  <!-- Append to Output (uncomp) to Read Block Header (loop) -->
+  <path d="M150,540 L115,540 L115,160 L285,160" class="arrow" />
+
+  <!-- Is "No Compression"? (No) to Build Huffman Trees -->
+  <path d="M500,430 L535,430" class="arrow" />
+  <text x="525" y="415" class="arrow-label">No</text>
+
+  <!-- Build Huffman Trees to Decode Next Symbol -->
+  <path d="M650,460 L650,485" class="arrow" />
+
+  <!-- Decode Next Symbol to Is Symbol a Literal? -->
+  <path d="M650,560 L650,575" class="arrow" />
+
+  <!-- Is Symbol a Literal? (Yes) to Append Literal -->
+  <path d="M650,650 L650,665" class="arrow" />
+  <text x="665" y="665" class="arrow-label">Yes</text>
+
+  <!-- Append Literal to Decode Next Symbol (loop) -->
+  <path d="M750,710 L770,710 L770,530 L665,530" class="arrow" />
+
+  <!-- Is Symbol a Literal? (No) to Decode Length and Distance -->
+  <path d="M550,620 L485,620" class="arrow" />
+  <text x="525" y="605" class="arrow-label">No</text>
+
+  <!-- Decode Length and Distance to Copy Bytes -->
+  <path d="M400,560 L400,575" class="arrow" />
+
+  <!-- Copy Bytes to Is EOB Marker? -->
+  <path d="M400,650 L400,665" class="arrow" />
+
+  <!-- Is EOB Marker? (No) to Decode Next Symbol (loop) -->
+  <path d="M300,710 L280,710 L280,530 L535,530" class="arrow" />
+  <text x="270" y="695" class="arrow-label">No</text>
+
+  <!-- Is EOB Marker? (Yes) to Read Block Header (loop) -->
+  <path d="M500,710 L520,710 L520,160 L315,160" class="arrow" />
+  <text x="515" y="695" class="arrow-label">Yes</text>
+
+</svg>

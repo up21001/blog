@@ -1,0 +1,100 @@
+<svg viewBox="0 0 800 1000" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .title { font: bold 36px Arial, sans-serif; fill: #333; text-anchor: middle; }
+      .subtitle { font: 20px Arial, sans-serif; fill: #555; text-anchor: middle; }
+      
+      .field-box { stroke: #ccc; stroke-width: 1; rx: 8; ry: 8; }
+      .field-name { font: bold 22px Arial, sans-serif; text-anchor: middle; }
+      .field-range { font: 16px Arial, sans-serif; text-anchor: middle; }
+
+      .minute-bg { fill: #6BB9F0; } /* Light Blue */
+      .hour-bg { fill: #8BC34A; } /* Light Green */
+      .day-of-month-bg { fill: #FFC107; } /* Amber */
+      .month-bg { fill: #9C27B0; } /* Purple */
+      .day-of-week-bg { fill: #E91E63; } /* Pink/Red */
+
+      .field-text-light { fill: white; }
+      .field-text-dark { fill: #333; }
+
+      .example-box { fill: #E0F7FA; stroke: #00BCD4; stroke-width: 2; rx: 10; ry: 10; }
+      .example-expression { font: bold 36px monospace, sans-serif; fill: #00796B; }
+      .example-field-label { font: 14px Arial, sans-serif; fill: #00796B; text-anchor: middle; }
+      .example-desc { font: 20px Arial, sans-serif; fill: #333; text-anchor: middle; }
+      
+      .arrow { stroke: #607D8B; stroke-width: 2; fill: none; marker-end: url(#arrowhead); }
+    </style>
+
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#607D8B" />
+    </marker>
+  </defs>
+
+  <!-- Title Section -->
+  <text x="400" y="60" class="title">Understanding Cron Expressions</text>
+  <text x="400" y="95" class="subtitle">Schedule automated tasks with precision</text>
+
+  <!-- Cron Field Boxes -->
+  <g class="field-boxes">
+    <!-- Minute Field -->
+    <rect x="60" y="150" width="120" height="100" class="field-box minute-bg" />
+    <text x="120" y="190" class="field-name field-text-dark">Minute</text>
+    <text x="120" y="215" class="field-range field-text-dark">0-59</text>
+
+    <!-- Hour Field -->
+    <rect x="200" y="150" width="120" height="100" class="field-box hour-bg" />
+    <text x="260" y="190" class="field-name field-text-dark">Hour</text>
+    <text x="260" y="215" class="field-range field-text-dark">0-23</text>
+
+    <!-- Day of Month Field -->
+    <rect x="340" y="150" width="120" height="100" class="field-box day-of-month-bg" />
+    <text x="400" y="190" class="field-name field-text-dark">Day of Month</text>
+    <text x="400" y="215" class="field-range field-text-dark">1-31</text>
+
+    <!-- Month Field -->
+    <rect x="480" y="150" width="120" height="100" class="field-box month-bg" />
+    <text x="540" y="190" class="field-name field-text-light">Month</text>
+    <text x="540" y="215" class="field-range field-text-light">1-12</text>
+
+    <!-- Day of Week Field -->
+    <rect x="620" y="150" width="120" height="100" class="field-box day-of-week-bg" />
+    <text x="680" y="190" class="field-name field-text-light">Day of Week</text>
+    <text x="680" y="215" class="field-range field-text-light">0-6 (Sun-Sat)</text>
+  </g>
+
+  <!-- Example Section -->
+  <g class="example-section">
+    <rect x="150" y="400" width="500" height="80" class="example-box" />
+    
+    <!-- Example Expression Labels -->
+    <text x="230" y="420" class="example-field-label">Minute</text>
+    <text x="310" y="420" class="example-field-label">Hour</text>
+    <text x="390" y="420" class="example-field-label">Day of Month</text>
+    <text x="470" y="420" class="example-field-label">Month</text>
+    <text x="550" y="420" class="example-field-label">Day of Week</text>
+
+    <!-- Example Expression Values -->
+    <text x="230" y="455" class="example-expression">0</text>
+    <text x="310" y="455" class="example-expression">0</text>
+    <text x="390" y="455" class="example-expression">*</text>
+    <text x="470" y="455" class="example-expression">*</text>
+    <text x="550" y="455" class="example-expression">*</text>
+
+    <text x="400" y="510" class="example-desc">Represents: Every day at midnight</text>
+  </g>
+
+  <!-- Arrows connecting example to fields -->
+  <g class="arrows">
+    <!-- Minute Arrow -->
+    <path d="M 230 460 L 230 580 L 120 580 L 120 250" class="arrow" />
+    <!-- Hour Arrow -->
+    <path d="M 310 460 L 310 580 L 260 580 L 260 250" class="arrow" />
+    <!-- Day of Month Arrow -->
+    <path d="M 390 460 L 390 580 L 400 580 L 400 250" class="arrow" />
+    <!-- Month Arrow -->
+    <path d="M 470 460 L 470 580 L 540 580 L 540 250" class="arrow" />
+    <!-- Day of Week Arrow -->
+    <path d="M 550 460 L 550 580 L 680 580 L 680 250" class="arrow" />
+  </g>
+
+</svg>

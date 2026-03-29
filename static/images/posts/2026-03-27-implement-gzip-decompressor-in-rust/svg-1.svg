@@ -1,0 +1,76 @@
+<svg viewBox="0 0 800 700" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect x="0" y="0" width="800" height="700" fill="#f8f9fa"/>
+
+  <!-- Title -->
+  <text x="400" y="30" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="#2D3748">Gzip File Structure</text>
+
+  <!-- Legend -->
+  <g transform="translate(600, 50)">
+    <rect x="0" y="0" width="15" height="15" fill="#4A90D9" stroke="#e2e8f0" stroke-width="1"/>
+    <text x="20" y="12" font-family="Arial, sans-serif" font-size="14" fill="#2D3748">Gzip Header</text>
+    <rect x="0" y="25" width="15" height="15" fill="#50C878" stroke="#e2e8f0" stroke-width="1"/>
+    <text x="20" y="37" font-family="Arial, sans-serif" font-size="14" fill="#2D3748">DEFLATE Data</text>
+    <rect x="0" y="50" width="15" height="15" fill="#FFD93D" stroke="#e2e8f0" stroke-width="1"/>
+    <text x="20" y="62" font-family="Arial, sans-serif" font-size="14" fill="#2D3748">Gzip Footer</text>
+  </g>
+
+  <!-- Gzip Header Fields -->
+  <g>
+    <!-- ID1, ID2 (Magic Bytes) -->
+    <rect x="100" y="70" width="600" height="40" fill="#4A90D9" stroke="#e2e8f0" stroke-width="1"/>
+    <text x="40" y="95" font-family="Courier New, monospace" font-size="14" fill="#2D3748">0x00</text>
+    <text x="110" y="95" font-family="Arial, sans-serif" font-size="16" fill="#f8f9fa">ID1, ID2 (Magic Bytes)</text>
+
+    <!-- CM (Compression Method) -->
+    <rect x="100" y="110" width="600" height="20" fill="#4A90D9" stroke="#e2e8f0" stroke-width="1"/>
+    <text x="40" y="125" font-family="Courier New, monospace" font-size="14" fill="#2D3748">0x02</text>
+    <text x="110" y="125" font-family="Arial, sans-serif" font-size="16" fill="#f8f9fa">CM (Compression Method)</text>
+
+    <!-- FLG (Flags) -->
+    <rect x="100" y="130" width="600" height="20" fill="#4A90D9" stroke="#e2e8f0" stroke-width="1"/>
+    <text x="40" y="145" font-family="Courier New, monospace" font-size="14" fill="#2D3748">0x03</text>
+    <text x="110" y="145" font-family="Arial, sans-serif" font-size="16" fill="#f8f9fa">FLG (Flags)</text>
+
+    <!-- MTIME (Modification Time) -->
+    <rect x="100" y="150" width="600" height="80" fill="#4A90D9" stroke="#e2e8f0" stroke-width="1"/>
+    <text x="40" y="195" font-family="Courier New, monospace" font-size="14" fill="#2D3748">0x04</text>
+    <text x="110" y="195" font-family="Arial, sans-serif" font-size="16" fill="#f8f9fa">MTIME (Modification Time)</text>
+
+    <!-- XFL (Extra Flags) -->
+    <rect x="100" y="230" width="600" height="20" fill="#4A90D9" stroke="#e2e8f0" stroke-width="1"/>
+    <text x="40" y="245" font-family="Courier New, monospace" font-size="14" fill="#2D3748">0x08</text>
+    <text x="110" y="245" font-family="Arial, sans-serif" font-size="16" fill="#f8f9fa">XFL (Extra Flags)</text>
+
+    <!-- OS (Operating System) -->
+    <rect x="100" y="250" width="600" height="20" fill="#4A90D9" stroke="#e2e8f0" stroke-width="1"/>
+    <text x="40" y="265" font-family="Courier New, monospace" font-size="14" fill="#2D3748">0x09</text>
+    <text x="110" y="265" font-family="Arial, sans-serif" font-size="16" fill="#f8f9fa">OS (Operating System)</text>
+
+    <!-- Optional Header Fields -->
+    <rect x="100" y="270" width="600" height="60" fill="#4A90D9" stroke="#e2e8f0" stroke-width="1"/>
+    <text x="40" y="305" font-family="Courier New, monospace" font-size="14" fill="#2D3748">0x0A</text>
+    <text x="110" y="295" font-family="Arial, sans-serif" font-size="16" fill="#f8f9fa">Optional Header Fields</text>
+    <text x="110" y="315" font-family="Arial, sans-serif" font-size="14" fill="#f8f9fa">(FEXTRA, FNAME, FCOMMENT, FHCRC - if flags set)</text>
+  </g>
+
+  <!-- DEFLATE Compressed Data Blocks -->
+  <g>
+    <rect x="100" y="350" width="600" height="160" fill="#50C878" stroke="#e2e8f0" stroke-width="1"/>
+    <text x="40" y="430" font-family="Courier New, monospace" font-size="14" fill="#2D3748">...</text>
+    <text x="400" y="440" font-family="Arial, sans-serif" font-size="18" text-anchor="middle" fill="#f8f9fa">DEFLATE Compressed Data Blocks</text>
+  </g>
+
+  <!-- Gzip Footer Fields -->
+  <g>
+    <!-- CRC32 (Checksum of Uncompressed Data) -->
+    <rect x="100" y="530" width="600" height="80" fill="#FFD93D" stroke="#e2e8f0" stroke-width="1"/>
+    <text x="40" y="575" font-family="Courier New, monospace" font-size="14" fill="#2D3748">...</text>
+    <text x="110" y="575" font-family="Arial, sans-serif" font-size="16" fill="#2D3748">CRC32 (Checksum of Uncompressed Data)</text>
+
+    <!-- ISIZE (Uncompressed Data Size) -->
+    <rect x="100" y="610" width="600" height="80" fill="#FFD93D" stroke="#e2e8f0" stroke-width="1"/>
+    <text x="40" y="655" font-family="Courier New, monospace" font-size="14" fill="#2D3748">...</text>
+    <text x="110" y="655" font-family="Arial, sans-serif" font-size="16" fill="#2D3748">ISIZE (Uncompressed Data Size)</text>
+  </g>
+</svg>

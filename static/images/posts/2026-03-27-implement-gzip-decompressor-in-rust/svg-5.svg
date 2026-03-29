@@ -1,0 +1,138 @@
+<svg viewBox="0 0 800 1000" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .title { font: bold 32px Arial, sans-serif; fill: #333; }
+    .subtitle { font: bold 22px Arial, sans-serif; fill: #333; }
+    .text { font: 18px Arial, sans-serif; fill: #333; }
+    .bold-text { font: bold 18px Arial, sans-serif; fill: #333; }
+    .char { font: bold 24px Arial, sans-serif; fill: #333; text-anchor: middle; }
+    .box { fill: #EEE; stroke: #666; stroke-width: 2; }
+    .highlight-box { fill: #CCC; stroke: #666; stroke-width: 2; }
+    .output-box { fill: #F0F0F0; stroke: #666; stroke-width: 1; }
+    .step-number { font: bold 24px Arial, sans-serif; fill: #666; }
+    .arrow { stroke: #666; stroke-width: 3; fill: none; marker-end: url(#arrowhead); }
+    .dashed-box { fill: none; stroke: #666; stroke-width: 2; stroke-dasharray: 5 5; }
+  </style>
+
+  <!-- Arrowhead definition -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#666" />
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="400" y="60" text-anchor="middle" class="title">LZ77 Sliding Window Explained</text>
+
+  <!-- Main Sliding Window Container -->
+  <rect x="50" y="100" width="700" height="150" class="box" />
+  <text x="400" y="90" text-anchor="middle" class="subtitle">Sliding Window</text>
+
+  <!-- Dictionary (Search Buffer) -->
+  <rect x="50" y="100" width="350" height="150" class="box" />
+  <text x="225" y="130" text-anchor="middle" class="subtitle">Dictionary</text>
+  <text x="225" y="155" text-anchor="middle" class="text">(Search Buffer)</text>
+
+  <!-- Look-ahead Buffer -->
+  <rect x="400" y="100" width="350" height="150" class="box" />
+  <text x="575" y="130" text-anchor="middle" class="subtitle">Look-ahead Buffer</text>
+
+  <!-- Sample Data String - Dictionary Data -->
+  <g>
+    <rect x="80" y="180" width="30" height="40" fill="#FFF" stroke="#AAA" stroke-width="1"/>
+    <text x="95" y="210" class="char">A</text>
+    <rect x="115" y="180" width="30" height="40" fill="#FFF" stroke="#AAA" stroke-width="1"/>
+    <text x="130" y="210" class="char">B</text>
+    <rect x="150" y="180" width="30" height="40" class="highlight-box"/>
+    <text x="165" y="210" class="char">C</text>
+    <rect x="185" y="180" width="30" height="40" class="highlight-box"/>
+    <text x="200" y="210" class="char">D</text>
+    <rect x="220" y="180" width="30" height="40" class="highlight-box"/>
+    <text x="235" y="210" class="char">E</text>
+    <rect x="255" y="180" width="30" height="40" fill="#FFF" stroke="#AAA" stroke-width="1"/>
+    <text x="270" y="210" class="char">F</text>
+    <rect x="290" y="180" width="30" height="40" fill="#FFF" stroke="#AAA" stroke-width="1"/>
+    <text x="305" y="210" class="char">G</text>
+    <rect x="325" y="180" width="30" height="40" fill="#FFF" stroke="#AAA" stroke-width="1"/>
+    <text x="340" y="210" class="char">H</text>
+  </g>
+
+  <!-- Sample Data String - Look-ahead Buffer Data -->
+  <g>
+    <rect x="430" y="180" width="30" height="40" class="highlight-box"/>
+    <text x="445" y="210" class="char">C</text>
+    <rect x="465" y="180" width="30" height="40" class="highlight-box"/>
+    <text x="480" y="210" class="char">D</text>
+    <rect x="500" y="180" width="30" height="40" class="highlight-box"/>
+    <text x="515" y="210" class="char">E</text>
+    <rect x="535" y="180" width="30" height="40" fill="#FFF" stroke="#AAA" stroke-width="1"/>
+    <text x="550" y="210" class="char">I</text>
+    <rect x="570" y="180" width="30" height="40" fill="#FFF" stroke="#AAA" stroke-width="1"/>
+    <text x="585" y="210" class="char">J</text>
+    <rect x="605" y="180" width="30" height="40" fill="#FFF" stroke="#AAA" stroke-width="1"/>
+    <text x="620" y="210" class="char">K</text>
+    <rect x="640" y="180" width="30" height="40" fill="#FFF" stroke="#AAA" stroke-width="1"/>
+    <text x="655" y="210" class="char">L</text>
+    <rect x="675" y="180" width="30" height="40" fill="#FFF" stroke="#AAA" stroke-width="1"/>
+    <text x="690" y="210" class="char">M</text>
+  </g>
+
+  <!-- Matching Arrow -->
+  <path d="M 470 230 C 470 270, 200 270, 200 230" class="arrow" />
+  <text x="335" y="280" text-anchor="middle" class="bold-text">Longest Match: "CDE"</text>
+
+  <!-- Output Box -->
+  <rect x="250" y="320" width="300" height="70" class="output-box" />
+  <text x="400" y="345" text-anchor="middle" class="subtitle">Output Token:</text>
+  <text x="400" y="375" text-anchor="middle" class="bold-text">(Offset: 6, Length: 3)</text>
+
+  <!-- Explanation Steps -->
+  <text x="50" y="450" class="subtitle">How it Works:</text>
+
+  <g transform="translate(0, 40)">
+    <text x="60" y="450" class="step-number">1.</text>
+    <text x="90" y="450" class="bold-text">Initialize Window:</text>
+    <text x="90" y="475" class="text">The sliding window is divided into a Dictionary (Search Buffer) and a Look-ahead Buffer.</text>
+  </g>
+
+  <g transform="translate(0, 100)">
+    <text x="60" y="450" class="step-number">2.</text>
+    <text x="90" y="450" class="bold-text">Find Longest Match:</text>
+    <text x="90" y="475" class="text">Search for the longest sequence from the Look-ahead Buffer that already exists in the Dictionary.</text>
+  </g>
+
+  <g transform="translate(0, 160)">
+    <text x="60" y="450" class="step-number">3.</text>
+    <text x="90" y="450" class="bold-text">Generate Output Token:</text>
+    <text x="90" y="485" class="text">If a match is found, output a token: (Offset, Length).</text>
+    <text x="90" y="505" class="text">Offset: Distance back to the start of the match in the Dictionary.</text>
+    <text x="90" y="525" class="text">Length: The length of the matched sequence.</text>
+    <text x="90" y="545" class="text">If no match, output (0, 0, next_character).</text>
+  </g>
+
+  <g transform="translate(0, 280)">
+    <text x="60" y="450" class="step-number">4.</text>
+    <text x="90" y="450" class="bold-text">Slide the Window:</text>
+    <text x="90" y="475" class="text">The window advances by the 'Length' of the match (or 1 if no match).</text>
+    <text x="90" y="495" class="text">Matched characters move from Look-ahead to Dictionary, new data enters Look-ahead.</text>
+  </g>
+
+  <!-- Visualizing Window Slide -->
+  <text x="400" y="800" text-anchor="middle" class="subtitle">Window Sliding Concept</text>
+
+  <!-- Data Stream -->
+  <rect x="50" y="830" width="700" height="50" fill="#F0F0F0" stroke="#666" stroke-width="1"/>
+  <text x="400" y="860" text-anchor="middle" class="text">D A T A S T R E A M . . .</text>
+
+  <!-- Initial Window Position -->
+  <rect x="100" y="820" width="300" height="70" class="dashed-box"/>
+  <text x="250" y="810" text-anchor="middle" class="bold-text">Window (Initial)</text>
+
+  <!-- Arrow indicating slide -->
+  <path d="M 250 900 L 450 900" class="arrow" />
+  <text x="350" y="920" text-anchor="middle" class="bold-text">Slides by Length</text>
+
+  <!-- Final Window Position (conceptual) -->
+  <rect x="400" y="820" width="300" height="70" class="dashed-box"/>
+  <text x="550" y="810" text-anchor="middle" class="bold-text">Window (After Slide)</text>
+
+</svg>

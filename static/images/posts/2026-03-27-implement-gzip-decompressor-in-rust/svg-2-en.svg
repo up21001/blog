@@ -1,0 +1,37 @@
+<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+  <!-- Background -->
+  <rect x="0" y="0" width="800" height="500" fill="#f8f9fa"/>
+
+  <!-- Stage 1: Input Byte Buffer -->
+  <rect x="80" y="180" width="180" height="80" rx="8" ry="8" fill="#e0e0e0" stroke="#cccccc" stroke-width="1"/>
+  <text x="170" y="225" text-anchor="middle" font-size="16" font-weight="bold" fill="#000000">Input Byte Buffer</text>
+
+  <!-- Stage 2: Bit Reader Logic -->
+  <rect x="340" y="180" width="180" height="80" rx="8" ry="8" fill="#e0e0e0" stroke="#cccccc" stroke-width="1"/>
+  <text x="430" y="225" text-anchor="middle" font-size="16" font-weight="bold" fill="#000000">Bit Reader Logic</text>
+
+  <!-- Associated element: Current Bit Position -->
+  <rect x="370" y="90" width="120" height="60" rx="6" ry="6" fill="#f0f0f0" stroke="#bbbbbb" stroke-width="1"/>
+  <text x="430" y="125" text-anchor="middle" font-size="14" fill="#000000">Current Bit Position</text>
+
+  <!-- Stage 3: Output Bit Stream -->
+  <rect x="600" y="180" width="180" height="80" rx="8" ry="8" fill="#e0e0e0" stroke="#cccccc" stroke-width="1"/>
+  <text x="690" y="225" text-anchor="middle" font-size="16" font-weight="bold" fill="#000000">Output Bit Stream</text>
+
+  <!-- Arrows -->
+  <!-- Arrow 1: Input Byte Buffer to Bit Reader Logic -->
+  <path d="M260 220 H340" stroke="#444444" stroke-width="2" fill="none"/>
+  <polygon points="335,215 345,220 335,225" fill="#444444"/>
+  <text x="300" y="210" text-anchor="middle" font-size="12" fill="#000000">Bytes</text>
+
+  <!-- Arrow 2: Bit Reader Logic to Output Bit Stream -->
+  <path d="M520 220 H600" stroke="#444444" stroke-width="2" fill="none"/>
+  <polygon points="595,215 605,220 595,225" fill="#444444"/>
+  <text x="560" y="210" text-anchor="middle" font-size="12" fill="#000000">Single Bit</text>
+
+  <!-- Arrow for Current Bit Position influencing Bit Reader Logic -->
+  <path d="M430 150 V180" stroke="#666666" stroke-width="1" stroke-dasharray="4 2" fill="none"/>
+  <polygon points="427,175 430,180 433,175" fill="#666666"/>
+  <text x="430" y="165" text-anchor="middle" font-size="12" fill="#000000">Updates</text>
+
+</svg>

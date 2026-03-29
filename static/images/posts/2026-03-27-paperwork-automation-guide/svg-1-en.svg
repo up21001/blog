@@ -1,0 +1,128 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+  <style>
+    .box {
+      stroke: #ccc;
+      stroke-width: 1;
+      rx: 8;
+      ry: 8;
+      filter: url(#drop-shadow);
+    }
+    .text-title {
+      font-size: 18px;
+      font-weight: bold;
+      fill: #333;
+      text-anchor: middle;
+    }
+    .text-subtitle {
+      font-size: 14px;
+      fill: #555;
+      text-anchor: middle;
+    }
+    .text-description {
+      font-size: 13px;
+      fill: #666;
+      text-anchor: middle;
+    }
+    .arrow-label {
+      font-size: 13px;
+      fill: #333;
+      text-anchor: middle;
+    }
+    .main-title {
+      font-size: 28px;
+      font-weight: bold;
+      fill: #333;
+      text-anchor: middle;
+    }
+    .footer-text {
+      font-size: 16px;
+      fill: #444;
+      text-anchor: middle;
+    }
+  </style>
+
+  <defs>
+    <filter id="drop-shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="2"/>
+      <feOffset dx="0" dy="2" result="offsetblur"/>
+      <feFlood flood-color="#000" flood-opacity="0.2"/>
+      <feComposite in2="offsetblur" operator="in"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <marker id="arrowhead" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#4A90D9" />
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect x="0" y="0" width="800" height="600" fill="#f8f9fa"/>
+
+  <!-- Main Title -->
+  <text x="400" y="60" class="main-title">Document Automation Pipeline</text>
+
+  <!-- Boxes -->
+  <!-- Box 1: Various Document Inputs -->
+  <rect x="45" y="165" width="140" height="180" fill="#FFD93D" class="box"/>
+  <!-- Box 2: OCR/AI Analysis -->
+  <rect x="235" y="165" width="140" height="180" fill="#4A90D9" class="box"/>
+  <!-- Box 3: RPA/Script Processing -->
+  <rect x="425" y="165" width="140" height="180" fill="#6C5CE7" class="box"/>
+  <!-- Box 4: Organized Data/Document Output -->
+  <rect x="615" y="165" width="140" height="180" fill="#50C878" class="box"/>
+
+  <!-- Text Labels for Boxes -->
+  <!-- Box 1 Text -->
+  <text x="115" y="195" class="text-title">Various Document Inputs</text>
+  <text x="115" y="230" class="text-description">Unstructured documents</text>
+  <text x="115" y="245" class="text-description">from various sources</text>
+  <text x="115" y="260" class="text-description">(scans, PDFs, emails,</text>
+  <text x="115" y="275" class="text-description">images).</text>
+
+  <!-- Box 2 Text -->
+  <text x="305" y="195" class="text-title">OCR/AI Analysis</text>
+  <text x="305" y="230" class="text-subtitle">OCR: Extracts text</text>
+  <text x="305" y="245" class="text-subtitle">from images.</text>
+  <text x="305" y="265" class="text-subtitle">NLP: Understands content,</text>
+  <text x="305" y="280" class="text-subtitle">extracts entities.</text>
+  <text x="305" y="300" class="text-subtitle">AI: Classifies documents,</text>
+  <text x="305" y="315" class="text-subtitle">identifies patterns.</text>
+
+  <!-- Box 3 Text -->
+  <text x="495" y="195" class="text-title">RPA/Script Processing</text>
+  <text x="495" y="230" class="text-subtitle">RPA: Automates repetitive</text>
+  <text x="495" y="245" class="text-subtitle">tasks, interacts with systems.</text>
+  <text x="495" y="265" class="text-subtitle">Scripts: Handles specific</text>
+  <text x="495" y="280" class="text-subtitle">logic and integrations.</text>
+
+  <!-- Box 4 Text -->
+  <text x="685" y="195" class="text-title">Organized Data /</text>
+  <text x="685" y="215" class="text-title">Document Output</text>
+  <text x="685" y="245" class="text-description">Structured data,</text>
+  <text x="685" y="260" class="text-description">updated databases,</text>
+  <text x="685" y="275" class="text-description">processed documents,</text>
+  <text x="685" y="290" class="text-description">reports.</text>
+
+  <!-- Footer Description Box -->
+  <rect x="45" y="400" width="710" height="100" fill="#f0f0f0" class="box"/>
+  <text x="400" y="430" class="footer-text">This pipeline streamlines complex document workflows by integrating key technologies.</text>
+  <text x="400" y="455" class="footer-text">It transforms unstructured inputs into organized, actionable data and documents.</text>
+  <text x="400" y="480" class="footer-text">The goal is to reduce manual effort and improve data accuracy.</text>
+
+  <!-- Arrows -->
+  <!-- Arrow 1: Input -> OCR/AI Analysis -->
+  <polyline points="185 255, 220 255" stroke="#4A90D9" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  <text x="202.5" y="240" class="arrow-label">Analyze</text>
+
+  <!-- Arrow 2: OCR/AI Analysis -> RPA/Script Processing -->
+  <polyline points="375 255, 410 255" stroke="#4A90D9" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  <text x="392.5" y="240" class="arrow-label">Process</text>
+
+  <!-- Arrow 3: RPA/Script Processing -> Organized Data/Document Output -->
+  <polyline points="565 255, 600 255" stroke="#4A90D9" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  <text x="582.5" y="240" class="arrow-label">Generate</text>
+
+</svg>

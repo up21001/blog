@@ -1,0 +1,66 @@
+<svg viewBox="0 0 800 1000" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+    <style>
+        .title { font-size: 36px; font-weight: bold; fill: #333; }
+        .milestone-num { font-size: 28px; font-weight: bold; fill: #555; }
+        .milestone-title { font-size: 24px; font-weight: bold; fill: #333; }
+        .milestone-desc { font-size: 18px; fill: #666; }
+        .timeline-line { stroke: #CCC; stroke-width: 4; }
+        .timeline-dot { fill: #888; }
+        .info-box { fill: #F8F8F8; stroke: #DDD; stroke-width: 1; }
+        .icon { fill: #888; }
+    </style>
+
+    <!-- Title -->
+    <text x="400" y="70" text-anchor="middle" class="title">AI 기술 발전의 4가지 주요 이정표</text>
+
+    <!-- Timeline Axis -->
+    <line x1="100" y1="150" x2="100" y2="900" class="timeline-line"/>
+
+    <!-- Milestone 1: 코드 생성 모델 -->
+    <circle cx="100" cy="220" r="10" class="timeline-dot"/>
+    <rect x="150" y="170" width="600" height="120" rx="10" ry="10" class="info-box"/>
+    <text x="170" y="210" class="milestone-num">1.</text>
+    <text x="210" y="210" class="milestone-title">코드 생성 모델</text>
+    <text x="210" y="245" class="milestone-desc">AI가 코드를 자동으로 생성하여 개발 생산성 향상</text>
+    <text x="210" y="270" class="milestone-desc">대표 도구: GitHub Copilot</text>
+    <!-- Simple Icon: Code Brackets -->
+    <path d="M700 210 L710 200 L700 190 L690 200 Z M730 210 L720 200 L730 190 L740 200 Z" transform="scale(1.5) translate(-100, -10)" class="icon"/>
+
+
+    <!-- Milestone 2: AI 기반 코드 분석 및 최적화 -->
+    <circle cx="100" cy="420" r="10" class="timeline-dot"/>
+    <rect x="150" y="370" width="600" height="120" rx="10" ry="10" class="info-box"/>
+    <text x="170" y="410" class="milestone-num">2.</text>
+    <text x="210" y="410" class="milestone-title">AI 기반 코드 분석 및 최적화</text>
+    <text x="210" y="445" class="milestone-desc">코드 오류, 취약점 발견 및 성능 최적화 제안</text>
+    <text x="210" y="470" class="milestone-desc">대표 도구: DeepCode</text>
+    <!-- Simple Icon: Magnifying Glass -->
+    <circle cx="710" cy="420" r="15" stroke="#888" stroke-width="3" fill="none"/>
+    <line x1="720" y1="430" x2="740" y2="450" stroke="#888" stroke-width="3"/>
+
+    <!-- Milestone 3: 자율 에이전트 -->
+    <circle cx="100" cy="620" r="10" class="timeline-dot"/>
+    <rect x="150" y="570" width="600" height="120" rx="10" ry="10" class="info-box"/>
+    <text x="170" y="610" class="milestone-num">3.</text>
+    <text x="210" y="610" class="milestone-title">자율 에이전트</text>
+    <text x="210" y="645" class="milestone-desc">스스로 목표를 설정하고 작업을 계획, 실행하는 AI</text>
+    <text x="210" y="670" class="milestone-desc">예: Auto-GPT와 같은 자율 작업 수행 AI</text>
+    <!-- Simple Icon: Robot Head -->
+    <rect x="690" y="600" width="40" height="30" rx="5" ry="5" class="icon"/>
+    <circle cx="700" cy="610" r="3" fill="white"/>
+    <circle cx="720" cy="610" r="3" fill="white"/>
+    <line x1="700" y1="630" x2="720" y2="630" stroke="#888" stroke-width="2"/>
+
+
+    <!-- Milestone 4: 프롬프트 엔지니어링 -->
+    <circle cx="100" cy="820" r="10" class="timeline-dot"/>
+    <rect x="150" y="770" width="600" height="120" rx="10" ry="10" class="info-box"/>
+    <text x="170" y="810" class="milestone-num">4.</text>
+    <text x="210" y="810" class="milestone-title">프롬프트 엔지니어링</text>
+    <text x="210" y="845" class="milestone-desc">AI 모델의 성능을 극대화하기 위한 입력 지시어 설계</text>
+    <text x="210" y="870" class="milestone-desc">AI와의 효과적인 소통을 위한 핵심 기술</text>
+    <!-- Simple Icon: Speech Bubble -->
+    <path d="M710 800 Q730 790 730 810 Q730 830 710 820 Q690 830 690 810 Q690 790 710 800 Z" class="icon"/>
+    <circle cx="710" cy="810" r="3" fill="white"/>
+
+</svg>

@@ -1,0 +1,98 @@
+<svg viewBox="0 0 800 550" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#4A90D9" />
+    </marker>
+  </defs>
+
+  <style>
+    .title {
+      font-family: "Arial, sans-serif";
+      font-size: 24px;
+      font-weight: bold;
+      fill: #2D3748;
+      text-anchor: middle;
+    }
+    .column-header {
+      font-family: "Arial, sans-serif";
+      font-size: 18px;
+      font-weight: bold;
+      fill: #2D3748;
+      text-anchor: middle;
+    }
+    .step-box {
+      fill: #f0f0f0;
+      stroke: #ccc;
+      stroke-width: 1;
+      rx: 8;
+      ry: 8;
+    }
+    .step-text {
+      font-family: "Arial, sans-serif";
+      font-size: 14px;
+      fill: #2D3748;
+      text-anchor: middle;
+      dominant-baseline: middle;
+    }
+    .arrow {
+      stroke: #4A90D9;
+      stroke-width: 2;
+      fill: none;
+      marker-end: url(#arrowhead);
+    }
+  </style>
+
+  <!-- Title -->
+  <text x="400" y="40" class="title">Comparison of Web Request vs. Task Scheduling Flows</text>
+
+  <!-- Column Headers -->
+  <text x="200" y="90" class="column-header">General Web Request Flow</text>
+  <text x="600" y="90" class="column-header">Task Scheduling Flow</text>
+
+  <!-- Flow 1: General Web Request Flow -->
+  <!-- Step 1 -->
+  <rect x="50" y="140" width="300" height="60" class="step-box" />
+  <text x="200" y="170" class="step-text">User Click</text>
+  <!-- Arrow 1 -->
+  <line x1="200" y1="200" x2="200" y2="240" class="arrow" />
+
+  <!-- Step 2 -->
+  <rect x="50" y="240" width="300" height="60" class="step-box" />
+  <text x="200" y="270" class="step-text">Server API Call</text>
+  <!-- Arrow 2 -->
+  <line x1="200" y1="300" x2="200" y2="340" class="arrow" />
+
+  <!-- Step 3 -->
+  <rect x="50" y="340" width="300" height="60" class="step-box" />
+  <text x="200" y="370" class="step-text">Data Processing</text>
+  <!-- Arrow 3 -->
+  <line x1="200" y1="400" x2="200" y2="440" class="arrow" />
+
+  <!-- Step 4 -->
+  <rect x="50" y="440" width="300" height="60" class="step-box" />
+  <text x="200" y="470" class="step-text">Result Response</text>
+
+  <!-- Flow 2: Task Scheduling Flow -->
+  <!-- Step 1 -->
+  <rect x="450" y="140" width="300" height="60" class="step-box" />
+  <text x="600" y="170" class="step-text">Scheduler Waiting</text>
+  <!-- Arrow 1 -->
+  <line x1="600" y1="200" x2="600" y2="240" class="arrow" />
+
+  <!-- Step 2 -->
+  <rect x="450" y="240" width="300" height="60" class="step-box" />
+  <text x="600" y="270" class="step-text">Specified Time Reached</text>
+  <!-- Arrow 2 -->
+  <line x1="600" y1="300" x2="600" y2="340" class="arrow" />
+
+  <!-- Step 3 -->
+  <rect x="450" y="340" width="300" height="60" class="step-box" />
+  <text x="600" y="370" class="step-text">Background Task Execution</text>
+  <!-- Arrow 3 -->
+  <line x1="600" y1="400" x2="600" y2="440" class="arrow" />
+
+  <!-- Step 4 -->
+  <rect x="450" y="440" width="300" height="60" class="step-box" />
+  <text x="600" y="470" class="step-text">Log Recording &amp; Termination</text>
+
+</svg>

@@ -1,0 +1,102 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Arrow marker -->
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#333333" />
+    </marker>
+    <!-- Subtle Drop Shadow Filter -->
+    <filter id="dropshadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3"/>
+      <feOffset dx="2" dy="2" result="offsetblur"/>
+      <feFlood flood-color="#000" flood-opacity="0.15"/>
+      <feComposite in2="offsetblur" operator="in"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect x="0" y="0" width="800" height="600" fill="#f8f9fa"/>
+
+  <!-- Component Styles -->
+  <style>
+    .box {
+      fill: #e0e0e0; /* Light grey */
+      stroke: #cccccc; /* Slightly darker border */
+      stroke-width: 1;
+      filter: url(#dropshadow);
+      rx: 10;
+      ry: 10;
+    }
+    .text-label {
+      font-family: "Arial, sans-serif";
+      font-size: 16px;
+      fill: #333333; /* Dark grey */
+      text-anchor: middle;
+    }
+    .arrow-line {
+      stroke: #333333;
+      stroke-width: 2;
+      fill: none;
+      marker-end: url(#arrowhead);
+    }
+    .description-text {
+      font-family: "Arial, sans-serif";
+      font-size: 14px;
+      fill: #555555; /* Medium grey */
+      text-anchor: middle;
+    }
+    .title-text {
+      font-family: "Arial, sans-serif";
+      font-size: 24px;
+      font-weight: bold;
+      fill: #333333;
+      text-anchor: middle;
+    }
+  </style>
+
+  <!-- Title -->
+  <text x="400" y="50" class="title-text">하네스 CI의 GitOps 기반 워크플로우</text>
+
+  <!-- Components -->
+  <rect x="100" y="150" width="150" height="80" class="box" />
+  <text x="175" y="195" class="text-label">개발자</text>
+
+  <rect x="325" y="150" width="150" height="80" class="box" />
+  <text x="400" y="195" class="text-label">Git 리포지토리</text>
+  <text x="400" y="215" class="description-text">(코드형 인프라)</text>
+
+  <rect x="550" y="150" width="150" height="80" class="box" />
+  <text x="625" y="195" class="text-label">하네스 CI</text>
+
+  <rect x="550" y="300" width="150" height="80" class="box" />
+  <text x="625" y="345" class="text-label">빌드/배포 파이프라인</text>
+
+  <rect x="550" y="450" width="150" height="80" class="box" />
+  <text x="625" y="495" class="text-label">대상 환경</text>
+
+  <!-- Arrows and Descriptions -->
+
+  <!-- Developer to Git -->
+  <line x1="250" y1="190" x2="325" y2="190" class="arrow-line" />
+  <text x="287.5" y="175" class="description-text">파이프라인 정의 커밋</text>
+
+  <!-- Git to Harness CI (Detection) -->
+  <line x1="475" y1="190" x2="550" y2="190" class="arrow-line" />
+  <text x="512.5" y="175" class="description-text">변경 감지</text>
+
+  <!-- Harness CI to Pipeline (Trigger & Execute) -->
+  <line x1="625" y1="230" x2="625" y2="300" class="arrow-line" />
+  <text x="625" y="270" class="description-text">파이프라인 트리거 및 실행</text>
+
+  <!-- Pipeline to Target Environment (Deployment) -->
+  <line x1="625" y1="380" x2="625" y2="450" class="arrow-line" />
+  <text x="625" y="420" class="description-text">배포</text>
+
+  <!-- IaC concept visual: Git as source for pipeline definition -->
+  <path d="M400,230 C400,260 580,260 580,300" class="arrow-line" marker-end="url(#arrowhead)"/>
+  <text x="490" y="265" class="description-text">파이프라인 정의</text>
+
+</svg>

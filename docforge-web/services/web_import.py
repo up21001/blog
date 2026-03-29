@@ -12,6 +12,7 @@ from bs4 import BeautifulSoup
 from google import genai
 from google.genai import types
 
+from .gemini_thinking import text_thinking_config
 from .text_gen import TEXT_MODEL
 
 logger = logging.getLogger(__name__)
@@ -162,7 +163,7 @@ async def rewrite_text(text: str, api_key: str, url: str = "") -> str:
             system_instruction=REWRITE_SYSTEM,
             max_output_tokens=65536,
             temperature=0.5,
-            thinking_config=types.ThinkingConfig(thinking_budget=0),
+            thinking_config=text_thinking_config(),
         ),
         contents=user_msg,
     )

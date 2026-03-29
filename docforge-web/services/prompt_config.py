@@ -35,10 +35,18 @@ def _built_in_defaults() -> dict[str, str]:
         "weekly": prompts_defaults.WEEKLY,
         "news": prompts_defaults.NEWS,
         "prompt_eng": prompts_defaults.PROMPT_ENG,
-        "document_user": "주제: {topic}\n위 주제로 모듈형 블로그 문서를 작성하라. 각 섹션은 독립적으로 편집·재생성 가능한 블록 구조로 만들어라.",
+        "document_user": (
+            "주제·요구사항(사용자 입력):\n{topic}\n\n"
+            "위 내용을 바탕으로 시스템 템플릿 형식에 맞는 완성형 글을 작성하라.\n"
+            "- 사용자가 톤(칼럼/튜토리얼/회고 등), 분량, 금지 항목을 명시했으면 최우선으로 따른다.\n"
+            "- 외부 매체·영상·강의를 '참고했다'고 밝히거나 링크·제목을 쓰지 않는다(사용자가 명시한 경우만 예외).\n"
+            "- Hugo 프론트매터는 유효한 YAML이어야 한다(categories는 단일 문자열 1개 배열, slug는 영문·하이픈 권장).\n"
+            "- 코드 블록은 반드시 언어 태그를 붙인다(```python 등). 마크다운 표는 헤더 행과 구분선(|---|)을 빠뜨리지 않는다.\n"
+            "- 각 섹션은 독립적으로 편집·재생성하기 쉬운 블록 구조로 유지한다."
+        ),
         "image_prompt_generator": """Topic (Korean): {topic}
 
-Article excerpt (for context — match diagrams to these sections):
+Article excerpt (may start with user image hints, then article — honor hints first):
 {excerpt}
 
 Generate exactly {count} separate lines. Each line is ONE English prompt for an AI image generator.
@@ -53,8 +61,9 @@ Rules:
 - No readable text, letters, or numbers in the image
 - No logos, faces, or celebrities
 - Use flat design or isometric 3D — avoid photorealistic people
-- Each prompt must match a specific section concept from the article excerpt
-- Prefer diagram/schematic style over generic tech photos
+- Each prompt must match a specific section concept from the excerpt; if hints appear at the top, align at least one prompt with each major hint
+- Keep a consistent visual style (palette, flat vs isometric) across all prompts when they belong to the same article
+- Prefer diagram/schematic style over generic stock tech photos; avoid stereotypes and sensitive depictions
 
 Output only the prompts, one per line, no numbering or bullets.""",
     }

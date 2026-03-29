@@ -1,0 +1,64 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Subtle drop shadow filter -->
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-color="#000000" flood-opacity="0.2"/>
+    </filter>
+
+    <!-- Arrowhead marker -->
+    <marker id="arrowhead" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#333" />
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect x="0" y="0" width="800" height="600" fill="#f8f9fa"/>
+
+  <!-- Main Title -->
+  <text x="400" y="60" font-family="Arial, sans-serif" font-size="28" fill="#333" text-anchor="middle" font-weight="bold">
+    Harness Engineering AI Generation System
+  </text>
+
+  <!-- Components (Rectangles with shadow) -->
+  <g filter="url(#shadow)">
+    <rect x="80" y="200" width="180" height="100" rx="10" ry="10" fill="#4A90D9"/>
+    <rect x="310" y="200" width="180" height="100" rx="10" ry="10" fill="#4A90D9"/>
+    <rect x="540" y="200" width="180" height="100" rx="10" ry="10" fill="#4A90D9"/>
+    <rect x="310" y="400" width="180" height="100" rx="10" ry="10" fill="#6C5CE7"/>
+  </g>
+
+  <!-- Component Labels -->
+  <text x="170" y="255" font-family="Arial, sans-serif" font-size="18" fill="#f8f9fa" text-anchor="middle" font-weight="bold">
+    Data Representation
+  </text>
+  <text x="400" y="255" font-family="Arial, sans-serif" font-size="18" fill="#f8f9fa" text-anchor="middle" font-weight="bold">
+    Topology Generation
+  </text>
+  <text x="630" y="255" font-family="Arial, sans-serif" font-size="18" fill="#f8f9fa" text-anchor="middle" font-weight="bold">
+    3D Space Routing
+  </text>
+  <text x="400" y="455" font-family="Arial, sans-serif" font-size="18" fill="#f8f9fa" text-anchor="middle" font-weight="bold">
+    Verification &amp;
+  </text>
+  <text x="400" y="478" font-family="Arial, sans-serif" font-size="18" fill="#f8f9fa" text-anchor="middle" font-weight="bold">
+    Optimization
+  </text>
+
+  <!-- Arrows -->
+  <!-- Data Representation -> Topology Generation -->
+  <polyline points="260 250, 310 250" fill="none" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="285" y="230" font-family="Arial, sans-serif" font-size="13" fill="#333" text-anchor="middle">Harness Specs &amp; Constraints</text>
+
+  <!-- Topology Generation -> 3D Space Routing -->
+  <polyline points="490 250, 540 250" fill="none" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="515" y="230" font-family="Arial, sans-serif" font-size="13" fill="#333" text-anchor="middle">Logical Harness Topology</text>
+
+  <!-- 3D Space Routing -> Verification &amp; Optimization -->
+  <polyline points="630 300, 630 365, 400 365, 400 400" fill="none" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="515" y="380" font-family="Arial, sans-serif" font-size="13" fill="#333" text-anchor="middle">Physical Route</text>
+
+  <!-- Verification &amp; Optimization -> Topology Generation (Feedback Loop) -->
+  <polyline points="400 400, 400 150, 290 150, 290 250, 310 250" fill="none" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="345" y="130" font-family="Arial, sans-serif" font-size="13" fill="#333" text-anchor="middle">Optimization Feedback</text>
+
+</svg>

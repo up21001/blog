@@ -1,0 +1,74 @@
+<svg width="800" height="1000" viewBox="0 0 800 1000" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .title { font-family: "Arial, sans-serif"; font-size: 36px; font-weight: bold; fill: #2C3E50; text-anchor: middle; }
+    .section-title { font-family: "Arial, sans-serif"; font-size: 24px; font-weight: bold; fill: #2C3E50; }
+    .description { font-family: "Arial, sans-serif"; font-size: 18px; fill: #555; }
+    .icon-bg { fill: #ECF0F1; }
+    .card-bg-1 { fill: #E8F8F5; } /* Light Teal */
+    .card-bg-2 { fill: #F8F9F9; } /* Light Grey */
+    .card-bg-3 { fill: #FDF2E9; } /* Light Orange */
+    .icon-color-1 { fill: #1ABC9C; } /* Teal */
+    .icon-color-2 { fill: #8E44AD; } /* Purple */
+    .icon-color-3 { fill: #F39C12; } /* Orange */
+    .text-color { fill: #34495E; }
+  </style>
+
+  <!-- Background -->
+  <rect x="0" y="0" width="800" height="1000" fill="#FFFFFF"/>
+
+  <!-- Main Title -->
+  <text x="400" y="70" class="title">Key Benefits of AI in Harness Engineering</text>
+
+  <!-- Benefit 1: Breaking Limits in Weight &amp; Cost Reduction -->
+  <g transform="translate(40, 150)">
+    <rect x="0" y="0" width="720" height="250" rx="15" ry="15" class="card-bg-1" stroke="#D1F2EB" stroke-width="2"/>
+    <circle cx="120" cy="125" r="50" class="icon-bg"/>
+    <path d="M100 90 L140 90 L140 100 L125 100 L125 140 L140 140 L140 150 L100 150 L100 140 L115 140 L115 100 L100 100 Z" class="icon-color-1"/>
+    <path d="M160 160 L120 160 L120 170 L160 170 L160 160 Z" class="icon-color-1"/>
+    <path d="M130 155 L120 165 L140 165 Z" class="icon-color-1"/>
+    <path d="M130 165 L120 155 L140 155 Z" class="icon-color-1"/>
+
+    <text x="200" y="100" class="section-title text-color">Breaking Limits in Weight &amp; Cost Reduction</text>
+    <text x="200" y="140" class="description text-color" style="max-width: 500px;">
+      <tspan x="200" dy="0">AI optimizes harness designs, significantly reducing material usage</tspan>
+      <tspan x="200" dy="25">and manufacturing costs beyond traditional methods.</tspan>
+    </text>
+  </g>
+
+  <!-- Benefit 2: Automating Complexity Management -->
+  <g transform="translate(40, 420)">
+    <rect x="0" y="0" width="720" height="250" rx="15" ry="15" class="card-bg-2" stroke="#D6EAF8" stroke-width="2"/>
+    <circle cx="120" cy="125" r="50" class="icon-bg"/>
+    <!-- Gear icon -->
+    <path d="M120 80 C115 80 110 85 110 90 L110 100 C105 100 100 105 100 110 L100 120 C95 120 90 125 90 130 L90 140 C95 140 100 145 100 150 L100 160 C105 160 110 165 110 170 L110 180 C115 180 120 175 120 170 L120 160 C125 160 130 155 130 150 L130 140 C135 140 140 135 140 130 L140 120 C145 120 150 115 150 110 L150 100 C145 100 140 95 140 90 L140 80 C135 80 130 85 130 90 L130 100 C125 100 120 105 120 110 L120 120 C115 120 110 125 110 130 L110 140 C105 140 100 145 100 150 L100 160 C105 160 110 165 110 170 L110 180 C115 180 120 175 120 170 L120 160 C125 160 130 155 130 150 L130 140 C135 140 140 135 140 130 L140 120 C145 120 150 115 150 110 L150 100 C145 100 140 95 140 90 L140 80 Z" class="icon-color-2"/>
+    <circle cx="120" cy="125" r="20" fill="#FFFFFF"/>
+    <path d="M120 110 C128.284 110 135 116.716 135 125 C135 133.284 128.284 140 120 140 C111.716 140 105 133.284 105 125 C105 116.716 111.716 110 120 110 Z" class="icon-color-2"/>
+
+    <text x="200" y="100" class="section-title text-color">Automating Complexity Management</text>
+    <text x="200" y="140" class="description text-color" style="max-width: 500px;">
+      <tspan x="200" dy="0">AI-driven tools streamline the design process, effortlessly handling</tspan>
+      <tspan x="200" dy="25">intricate wiring configurations and system integrations.</tspan>
+    </text>
+  </g>
+
+  <!-- Benefit 3: Shifting Engineering Software Paradigm -->
+  <g transform="translate(40, 690)">
+    <rect x="0" y="0" width="720" height="250" rx="15" ry="15" class="card-bg-3" stroke="#FAD7A0" stroke-width="2"/>
+    <circle cx="120" cy="125" r="50" class="icon-bg"/>
+    <!-- Lightbulb with arrow icon -->
+    <path d="M120 80 C105 80 95 90 95 105 C95 115 100 125 105 135 L110 145 C110 150 115 155 120 155 C125 155 130 150 130 145 L135 135 C140 125 145 115 145 105 C145 90 135 80 120 80 Z" class="icon-color-3"/>
+    <rect x="110" y="155" width="20" height="10" rx="3" ry="3" class="icon-color-3"/>
+    <rect x="115" y="165" width="10" height="5" rx="2" ry="2" class="icon-color-3"/>
+    <path d="M135 100 L145 100 L140 90 Z" class="icon-color-3"/>
+    <path d="M105 100 L95 100 L100 90 Z" class="icon-color-3"/>
+    <path d="M120 85 L120 75 L110 80 Z" class="icon-color-3"/>
+    <path d="M120 85 L120 75 L130 80 Z" class="icon-color-3"/>
+
+    <text x="200" y="100" class="section-title text-color">Shifting Engineering Software Paradigm</text>
+    <text x="200" y="140" class="description text-color" style="max-width: 500px;">
+      <tspan x="200" dy="0">AI transforms engineering software from passive tools to proactive,</tspan>
+      <tspan x="200" dy="25">intelligent design partners, fostering innovation.</tspan>
+    </text>
+  </g>
+
+</svg>

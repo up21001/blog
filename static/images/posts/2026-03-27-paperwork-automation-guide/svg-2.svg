@@ -1,0 +1,118 @@
+<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .stage-box {
+      stroke: none; /* Flat design, no border */
+      rx: 10;
+      ry: 10;
+    }
+    .icon-area {
+      fill: rgba(0,0,0,0.1); /* Subtle darker shade */
+      /* Specific border-radius for top corners only */
+    }
+    .icon {
+      fill: white;
+    }
+    .stage-label {
+      font-family: "Arial, sans-serif";
+      font-size: 16px;
+      font-weight: bold;
+      fill: #2D3748;
+      text-anchor: middle;
+    }
+    .tech-label {
+      font-family: "Arial, sans-serif";
+      font-size: 12px;
+      fill: #4A5568;
+      text-anchor: middle;
+    }
+    .progress-number {
+      font-family: "Arial, sans-serif";
+      font-size: 18px;
+      font-weight: bold;
+      fill: #2D3748;
+      text-anchor: middle;
+    }
+    .arrow-label {
+      font-family: "Arial, sans-serif";
+      font-size: 12px;
+      fill: #2D3748;
+      text-anchor: middle;
+    }
+    .arrow-annotation {
+      font-family: "Arial, sans-serif";
+      font-size: 10px;
+      fill: #666;
+      text-anchor: middle;
+    }
+  </style>
+
+  <!-- Background -->
+  <rect x="0" y="0" width="800" height="500" fill="#f8f9fa"/>
+
+  <!-- Arrowhead Marker Definition -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#2D3748" />
+    </marker>
+  </defs>
+
+  <!-- Stage 1: Document Collection (Input) -->
+  <rect class="stage-box" x="25" y="190" width="150" height="120" fill="#4A90D9"/>
+  <path class="icon-area" d="M25 190 h150 v30 a10 10 0 0 1 -10 10 h-130 a10 10 0 0 1 -10 -10 v-30 Z" fill="rgba(0,0,0,0.1)"/>
+  <!-- Icon: Document -->
+  <path class="icon" d="M90 200 L105 200 L105 215 L90 215 Z M100 200 L100 205 L105 205 Z M90 200 L90 215 L105 215 L105 205 L100 200 Z" transform="translate(0, -5)" />
+  <text class="stage-label" x="100" y="248">Document Collection</text>
+  <text class="stage-label" x="100" y="268">(Input)</text>
+  <text class="tech-label" x="100" y="290">Scanned Docs, PDFs</text>
+  <text class="progress-number" x="100" y="170">1</text>
+
+  <!-- Stage 2: Preprocessing &amp; OCR -->
+  <rect class="stage-box" x="225" y="190" width="150" height="120" fill="#50C878"/>
+  <path class="icon-area" d="M225 190 h150 v30 a10 10 0 0 1 -10 10 h-130 a10 10 0 0 1 -10 -10 v-30 Z" fill="rgba(0,0,0,0.1)"/>
+  <!-- Icon: Gear -->
+  <path class="icon" d="M295 200 a10 10 0 1 0 0 10 a10 10 0 1 0 0 -10 M300 205 a5 5 0 1 1 -10 0 a5 5 0 1 1 10 0 Z M295 195 L295 190 L290 190 L290 195 L285 195 L285 200 L280 200 L280 205 L285 205 L285 210 L290 210 L290 215 L295 215 L295 210 L300 210 L300 205 L305 205 L305 200 L300 200 L300 195 Z" transform="translate(0, -5)" />
+  <text class="stage-label" x="300" y="248">Preprocessing</text>
+  <text class="stage-label" x="300" y="268">&amp; OCR</text>
+  <text class="tech-label" x="300" y="290">OpenCV, Tesseract/</text>
+  <text class="tech-label" x="300" y="302">Cloud Vision API</text>
+  <text class="progress-number" x="300" y="170">2</text>
+
+  <!-- Stage 3: AI Semantic Analysis &amp; Structuring -->
+  <rect class="stage-box" x="425" y="190" width="150" height="120" fill="#6C5CE7"/>
+  <path class="icon-area" d="M425 190 h150 v30 a10 10 0 0 1 -10 10 h-130 a10 10 0 0 1 -10 -10 v-30 Z" fill="rgba(0,0,0,0.1)"/>
+  <!-- Icon: Brain -->
+  <path class="icon" d="M495 200 C490 190, 480 190, 475 200 C470 210, 480 220, 495 220 C510 220, 520 210, 515 200 C510 190, 500 190, 495 200 Z M485 205 C485 200, 490 195, 495 195 C500 195, 505 200, 505 205 M495 205 C495 210, 490 215, 485 215 M495 205 C495 210, 500 215, 505 215" transform="translate(0, -5)" />
+  <text class="stage-label" x="500" y="248">AI Semantic Analysis</text>
+  <text class="stage-label" x="500" y="268">&amp; Structuring</text>
+  <text class="tech-label" x="500" y="290">OpenAI API,</text>
+  <text class="tech-label" x="500" y="302">Custom ML Models</text>
+  <text class="progress-number" x="500" y="170">3</text>
+
+  <!-- Stage 4: Validation &amp; Storage (Output) -->
+  <rect class="stage-box" x="625" y="190" width="150" height="120" fill="#E0BBE4"/>
+  <path class="icon-area" d="M625 190 h150 v30 a10 10 0 0 1 -10 10 h-130 a10 10 0 0 1 -10 -10 v-30 Z" fill="rgba(0,0,0,0.1)"/>
+  <!-- Icon: Database -->
+  <path class="icon" d="M700 200 C700 195, 690 195, 690 200 C690 205, 700 205, 700 200 Z M690 200 L690 210 C690 215, 700 215, 700 210 L700 200 M690 210 L690 220 C690 225, 700 225, 700 220 L700 210" transform="translate(0, -5)" />
+  <text class="stage-label" x="700" y="248">Validation &amp; Storage</text>
+  <text class="stage-label" x="700" y="268">(Output)</text>
+  <text class="tech-label" x="700" y="290">Database</text>
+  <text class="tech-label" x="700" y="302">(SQL/NoSQL)</text>
+  <text class="progress-number" x="700" y="170">4</text>
+
+  <!-- Arrows -->
+  <path d="M175 250 H225" stroke="#2D3748" stroke-width="2" fill="none" marker-end="url(#arrowhead)" />
+  <path d="M375 250 H425" stroke="#2D3748" stroke-width="2" fill="none" marker-end="url(#arrowhead)" />
+  <path d="M575 250 H625" stroke="#2D3748" stroke-width="2" fill="none" marker-end="url(#arrowhead)" />
+
+  <!-- Arrow Labels -->
+  <text class="arrow-label" x="200" y="235">Raw Documents</text>
+  <text class="arrow-annotation" x="200" y="265">e.g., 1000 docs/day</text>
+
+  <text class="arrow-label" x="400" y="235">OCR Text &amp; Image Data</text>
+  <text class="arrow-annotation" x="400" y="265">Text Extraction</text>
+
+  <text class="arrow-label" x="600" y="235">Structured Data</text>
+  <text class="arrow-label" x="600" y="248">(JSON/XML)</text>
+  <text class="arrow-annotation" x="600" y="278">Semantic Understanding</text>
+
+</svg>

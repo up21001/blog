@@ -1,0 +1,135 @@
+<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <rect x="0" y="0" width="800" height="500" fill="#f8f9fa"/>
+
+  <style>
+    .stage-box {
+      fill: #ffffff;
+      stroke: #e0e0e0;
+      stroke-width: 1;
+      rx: 10;
+      ry: 10;
+    }
+    .stage-header {
+      rx: 10;
+      ry: 10;
+      /* The bottom corners should not be rounded as it connects to the main box */
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+    .stage-label {
+      font-family: "Arial, sans-serif";
+      font-size: 16px;
+      font-weight: bold;
+      fill: #2D3748;
+      text-anchor: middle;
+    }
+    .tech-label {
+      font-family: "Arial, sans-serif";
+      font-size: 12px;
+      fill: #555;
+      text-anchor: middle;
+    }
+    .arrow-label {
+      font-family: "Arial, sans-serif";
+      font-size: 12px;
+      fill: #2D3748;
+      text-anchor: middle;
+    }
+    .progress-circle {
+      fill: #4A90D9; /* Default, overridden per stage */
+      stroke: #ffffff;
+      stroke-width: 2;
+    }
+    .progress-text {
+      font-family: "Arial, sans-serif";
+      font-size: 14px;
+      font-weight: bold;
+      fill: #ffffff;
+      text-anchor: middle;
+      dominant-baseline: central;
+    }
+    .icon-path {
+      fill: #ffffff;
+    }
+    .arrow {
+      stroke: #2D3748;
+      stroke-width: 2;
+      fill: none;
+      marker-end: url(#arrowhead);
+    }
+  </style>
+
+  <!-- Arrowhead definition -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#2D3748" />
+    </marker>
+  </defs>
+
+  <!-- Stage 1: Document Collection (Input) -->
+  <g transform="translate(20, 150)">
+    <rect x="0" y="0" width="160" height="180" class="stage-box"/>
+    <rect x="0" y="0" width="160" height="60" class="stage-header" fill="#4A90D9" rx="10" ry="10"/>
+    <!-- Icon: Document -->
+    <path class="icon-path" d="M80 20 L120 20 L120 50 L80 50 Z M110 20 L110 30 L120 30 Z M70 10 L70 60 L130 60 L130 10 L70 10 Z M70 10 L70 60 L130 60 L130 10 L70 10 Z M80 20 L80 50 L120 50 L120 20 Z M110 20 L110 30 L120 30 Z" transform="translate(-30, 0) scale(0.8)"/>
+    <text x="80" y="85" class="stage-label">Document Collection</text>
+    <text x="80" y="105" class="stage-label">(Input)</text>
+    <text x="80" y="135" class="tech-label">Scanned Documents</text>
+    <text x="80" y="150" class="tech-label">(Receipts, PDFs)</text>
+  </g>
+  <circle cx="100" cy="120" r="15" class="progress-circle" fill="#4A90D9"/>
+  <text x="100" y="120" class="progress-text">1</text>
+
+  <!-- Stage 2: Preprocessing &amp; OCR -->
+  <g transform="translate(220, 150)">
+    <rect x="0" y="0" width="160" height="180" class="stage-box"/>
+    <rect x="0" y="0" width="160" height="60" class="stage-header" fill="#50C878" rx="10" ry="10"/>
+    <!-- Icon: Gears -->
+    <path class="icon-path" d="M80 35 A15 15 0 1 1 80 34.9 Z M80 15 L80 25 M80 45 L80 55 M60 35 L70 35 M90 35 L100 35 M65 20 L72 27 M88 43 L95 50 M65 50 L72 43 M88 27 L95 20" transform="translate(-20, 0) scale(0.8)"/>
+    <text x="80" y="85" class="stage-label">Preprocessing &amp;</text>
+    <text x="80" y="105" class="stage-label">OCR</text>
+    <text x="80" y="135" class="tech-label">OpenCV</text>
+    <text x="80" y="150" class="tech-label">Tesseract/Cloud Vision API</text>
+  </g>
+  <circle cx="300" cy="120" r="15" class="progress-circle" fill="#50C878"/>
+  <text x="300" y="120" class="progress-text">2</text>
+
+  <!-- Stage 3: AI Semantic Analysis &amp; Structuring -->
+  <g transform="translate(420, 150)">
+    <rect x="0" y="0" width="160" height="180" class="stage-box"/>
+    <rect x="0" y="0" width="160" height="60" class="stage-header" fill="#6C5CE7" rx="10" ry="10"/>
+    <!-- Icon: Brain / AI Chip -->
+    <path class="icon-path" d="M80 20 C65 20 60 30 60 35 C60 40 65 50 80 50 C95 50 100 40 100 35 C100 30 95 20 80 20 Z M70 30 L75 30 M85 30 L90 30 M70 40 L75 40 M85 40 L90 40" transform="translate(-20, 0) scale(0.8)"/>
+    <text x="80" y="85" class="stage-label">AI Semantic Analysis</text>
+    <text x="80" y="105" class="stage-label">&amp; Structuring</text>
+    <text x="80" y="135" class="tech-label">OpenAI API</text>
+    <text x="80" y="150" class="tech-label">Custom ML Models</text>
+  </g>
+  <circle cx="500" cy="120" r="15" class="progress-circle" fill="#6C5CE7"/>
+  <text x="500" y="120" class="progress-text">3</text>
+
+  <!-- Stage 4: Validation &amp; Storage (Output) -->
+  <g transform="translate(620, 150)">
+    <rect x="0" y="0" width="160" height="180" class="stage-box"/>
+    <rect x="0" y="0" width="160" height="60" class="stage-header" fill="#7CC6FE" rx="10" ry="10"/>
+    <!-- Icon: Database -->
+    <path class="icon-path" d="M80 15 A30 10 0 0 1 80 35 A30 10 0 0 1 80 15 Z M50 25 L50 45 A30 10 0 0 0 80 55 A30 10 0 0 0 110 45 L110 25 A30 10 0 0 1 80 35 A30 10 0 0 1 50 25 Z M50 35 L50 55 A30 10 0 0 0 80 65 A30 10 0 0 0 110 55 L110 35" transform="translate(-30, -5) scale(0.8)"/>
+    <text x="80" y="85" class="stage-label">Validation &amp; Storage</text>
+    <text x="80" y="105" class="stage-label">(Output)</text>
+    <text x="80" y="135" class="tech-label">Database (SQL/NoSQL)</text>
+    <text x="80" y="150" class="tech-label">Data Lake</text>
+  </g>
+  <circle cx="700" cy="120" r="15" class="progress-circle" fill="#7CC6FE"/>
+  <text x="700" y="120" class="progress-text">4</text>
+
+  <!-- Arrows -->
+  <path d="M180 240 H220" class="arrow"/>
+  <text x="200" y="225" class="arrow-label">Raw Documents</text>
+
+  <path d="M380 240 H420" class="arrow"/>
+  <text x="400" y="225" class="arrow-label">OCR Text &amp; Images</text>
+
+  <path d="M580 240 H620" class="arrow"/>
+  <text x="600" y="225" class="arrow-label">Structured Data</text>
+
+</svg>

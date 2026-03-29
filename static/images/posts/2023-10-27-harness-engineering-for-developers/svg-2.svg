@@ -1,0 +1,109 @@
+<svg width="800" height="1000" viewBox="0 0 800 1000" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+  <defs>
+    <style>
+      .title { font-size: 40px; font-weight: bold; fill: #333; text-anchor: middle; }
+      .benefit-title { font-size: 22px; font-weight: bold; fill: #333; }
+      .benefit-desc { font-size: 16px; fill: #555; line-height: 1.4; }
+      .icon-color-1 { fill: #4A90E2; } /* Blue */
+      .icon-color-2 { fill: #50E3C2; } /* Teal */
+      .icon-color-3 { fill: #F5A623; } /* Orange */
+      .icon-color-4 { fill: #9B59B6; } /* Purple */
+      .icon-color-5 { fill: #2ECC71; } /* Emerald Green */
+      .icon-color-6 { fill: #E84A5F; } /* Coral Red */
+      .block-bg-1 { fill: #EBF5FF; }
+      .block-bg-2 { fill: #E6FFFB; }
+      .block-bg-3 { fill: #FFF8EB; }
+      .block-bg-4 { fill: #F6EBFF; }
+      .block-bg-5 { fill: #E9FFF3; }
+      .block-bg-6 { fill: #FFEBED; }
+    </style>
+  </defs>
+
+  <!-- Main Title -->
+  <text x="400" y="80" class="title">하네스 사용의 6가지 핵심 이점</text>
+
+  <!-- Benefit 1: 배포 속도 및 안정성 향상 -->
+  <g transform="translate(70, 150)">
+    <rect x="0" y="0" width="320" height="250" rx="15" ry="15" class="block-bg-1"/>
+    <!-- Icon: Rocket + Shield -->
+    <g transform="translate(110, 30)">
+      <path d="M40 0L40 20L50 20L50 0L40 0ZM30 20L30 30L60 30L60 20L30 20ZM20 30L20 40L70 40L70 30L20 30ZM10 40L10 50L80 50L80 40L10 40ZM0 50L0 60L90 60L90 50L0 50ZM35 60L35 70L55 70L55 60L35 60ZM40 70L40 80L50 80L50 70L40 70Z" class="icon-color-1"/>
+      <path d="M45 85L25 105L65 105L45 85Z" class="icon-color-1"/>
+      <path d="M70 100C70 110 60 120 45 120C30 120 20 110 20 100L45 80L70 100Z" class="icon-color-1" opacity="0.7"/>
+    </g>
+    <text x="160" y="160" text-anchor="middle" class="benefit-title">배포 속도 및 안정성 향상</text>
+    <text x="160" y="195" text-anchor="middle" class="benefit-desc" width="280">빠르고 안정적인 배포로 소프트웨어</text>
+    <text x="160" y="215" text-anchor="middle" class="benefit-desc" width="280">딜리버리 파이프라인을 가속화합니다.</text>
+  </g>
+
+  <!-- Benefit 2: 개발 생산성 극대화 -->
+  <g transform="translate(410, 150)">
+    <rect x="0" y="0" width="320" height="250" rx="15" ry="15" class="block-bg-2"/>
+    <!-- Icon: Gear + Up arrow -->
+    <g transform="translate(110, 30)">
+      <path d="M45 0L45 20L55 20L55 0L45 0ZM20 25L30 35L20 45L10 35L20 25ZM70 25L80 35L70 45L60 35L70 25ZM0 50L20 50L20 60L0 60L0 50ZM80 50L100 50L100 60L80 60L80 50ZM20 75L30 65L20 55L10 65L20 75ZM70 75L80 65L70 55L60 65L70 75ZM45 80L45 100L55 100L55 80L45 80Z" class="icon-color-2"/>
+      <path d="M50 20L70 40L50 60L30 40L50 20Z" class="icon-color-2" opacity="0.7"/>
+    </g>
+    <text x="160" y="160" text-anchor="middle" class="benefit-title">개발 생산성 극대화</text>
+    <text x="160" y="195" text-anchor="middle" class="benefit-desc" width="280">자동화된 워크플로우와 직관적인</text>
+    <text x="160" y="215" text-anchor="middle" class="benefit-desc" width="280">도구로 개발자의 업무 효율을 높입니다.</text>
+  </g>
+
+  <!-- Benefit 3: 클라우드 비용 최적화 -->
+  <g transform="translate(70, 430)">
+    <rect x="0" y="0" width="320" height="250" rx="15" ry="15" class="block-bg-3"/>
+    <!-- Icon: Cloud + Money bag with down arrow -->
+    <g transform="translate(100, 30)">
+      <path d="M80 40C90 40 95 50 90 60C95 70 90 80 80 80L20 80C10 80 5 70 10 60C5 50 10 40 20 40L80 40Z" class="icon-color-3"/>
+      <path d="M45 50L45 70L55 70L55 50L45 50ZM40 70L40 80L60 80L60 70L40 70Z" class="icon-color-3" opacity="0.7"/>
+      <path d="M50 100L30 80L70 80L50 100Z" class="icon-color-3"/>
+    </g>
+    <text x="160" y="160" text-anchor="middle" class="benefit-title">클라우드 비용 최적화</text>
+    <text x="160" y="195" text-anchor="middle" class="benefit-desc" width="280">클라우드 리소스 사용량을 분석하고</text>
+    <text x="160" y="215" text-anchor="middle" class="benefit-desc" width="280">최적화하여 불필요한 비용을 절감합니다.</text>
+  </g>
+
+  <!-- Benefit 4: 릴리스 관리 유연성 -->
+  <g transform="translate(410, 430)">
+    <rect x="0" y="0" width="320" height="250" rx="15" ry="15" class="block-bg-4"/>
+    <!-- Icon: Flowchart/Arrows looping -->
+    <g transform="translate(100, 30)">
+      <path d="M20 20L80 20L80 40L20 40L20 20ZM20 60L80 60L80 80L20 80L20 60Z" class="icon-color-4"/>
+      <path d="M50 40L50 60L50 40Z" class="icon-color-4" stroke="#9B59B6" stroke-width="5" fill="none"/>
+      <path d="M40 30L20 30L20 70L40 70L40 90L60 90L60 70L80 70L80 30L60 30L60 10L40 10L40 30Z" class="icon-color-4" opacity="0.7"/>
+    </g>
+    <text x="160" y="160" text-anchor="middle" class="benefit-title">릴리스 관리 유연성</text>
+    <text x="160" y="195" text-anchor="middle" class="benefit-desc" width="280">다양한 배포 전략과 환경에 맞춰</text>
+    <text x="160" y="215" text-anchor="middle" class="benefit-desc" width="280">유연하게 릴리스를 관리할 수 있습니다.</text>
+  </g>
+
+  <!-- Benefit 5: 보안 및 규정 준수 강화 -->
+  <g transform="translate(70, 710)">
+    <rect x="0" y="0" width="320" height="250" rx="15" ry="15" class="block-bg-5"/>
+    <!-- Icon: Lock + Checkmark/Document -->
+    <g transform="translate(110, 30)">
+      <path d="M45 0C30 0 20 10 20 25L20 40L10 40L10 80L80 80L80 40L70 40L70 25C70 10 60 0 45 0Z" class="icon-color-5"/>
+      <path d="M35 50L35 70L55 70L55 50L35 50Z" class="icon-color-5" opacity="0.7"/>
+      <path d="M40 90L20 110L60 110L40 90Z" class="icon-color-5"/>
+    </g>
+    <text x="160" y="160" text-anchor="middle" class="benefit-title">보안 및 규정 준수 강화</text>
+    <text x="160" y="195" text-anchor="middle" class="benefit-desc" width="280">내장된 보안 기능과 규정 준수 검사로</text>
+    <text x="160" y="215" text-anchor="middle" class="benefit-desc" width="280">안전하고 신뢰할 수 있는 운영을 보장합니다.</text>
+  </g>
+
+  <!-- Benefit 6: 통합된 DevOps 경험 -->
+  <g transform="translate(410, 710)">
+    <rect x="0" y="0" width="320" height="250" rx="15" ry="15" class="block-bg-6"/>
+    <!-- Icon: Infinity symbol/Connected gears -->
+    <g transform="translate(100, 30)">
+      <path d="M20 40C0 40 0 60 20 60L80 60C100 60 100 40 80 40L20 40Z" class="icon-color-6"/>
+      <path d="M40 20L60 20L60 80L40 80L40 20Z" class="icon-color-6" opacity="0.7"/>
+      <path d="M50 0L70 20L50 40L30 20L50 0Z" class="icon-color-6"/>
+      <path d="M50 60L70 80L50 100L30 80L50 60Z" class="icon-color-6"/>
+    </g>
+    <text x="160" y="160" text-anchor="middle" class="benefit-title">통합된 DevOps 경험</text>
+    <text x="160" y="195" text-anchor="middle" class="benefit-desc" width="280">개발부터 운영까지 모든 DevOps 단계를</text>
+    <text x="160" y="215" text-anchor="middle" class="benefit-desc" width="280">하나의 플랫폼에서 통합 관리합니다.</text>
+  </g>
+
+</svg>

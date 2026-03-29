@@ -1,0 +1,109 @@
+<svg viewBox="0 0 800 1000" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .title { font-family: "Arial, sans-serif"; font-size: 32px; font-weight: bold; fill: #000000; text-anchor: middle; }
+    .section-title { font-family: "Arial, sans-serif"; font-size: 24px; font-weight: bold; fill: #333333; text-anchor: middle; }
+    .label { font-family: "Arial, sans-serif"; font-size: 18px; fill: #333333; text-anchor: middle; }
+    .data-char { font-family: "Arial, sans-serif"; font-size: 20px; fill: #000000; text-anchor: middle; }
+    .box-border { stroke: #000000; stroke-width: 2; fill: none; }
+    .dictionary-fill { fill: #E0E0E0; }
+    .lookahead-fill { fill: #F0F0F0; }
+    .match-highlight { fill: #666666; opacity: 0.5; }
+    .arrow { stroke: #666666; stroke-width: 3; fill: none; marker-end: url(#arrowhead); }
+    .dashed-box { stroke: #666666; stroke-width: 2; fill: none; stroke-dasharray: 5 5; }
+  </style>
+
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#666666" />
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="400" y="60" class="title">LZ77 Sliding Window Explained</text>
+
+  <!-- Section 1: Data Stream -->
+  <text x="400" y="100" class="section-title">1. The Data Stream</text>
+  <rect x="50" y="120" width="700" height="40" fill="#CCCCCC" stroke="#000000" stroke-width="1"/>
+  <text x="400" y="147" class="data-char">A B B C A B B C D E F G H I J K L M N O P Q R S T U V W X Y Z</text>
+  <text x="400" y="180" class="label">Raw Data Sequence</text>
+
+  <!-- Section 2: Sliding Window Concept -->
+  <text x="400" y="230" class="section-title">2. The Sliding Window</text>
+  <rect x="50" y="250" width="700" height="40" fill="#CCCCCC" stroke="#000000" stroke-width="1"/>
+  <text x="400" y="277" class="data-char">A B B C A B B C D E F G H I J K L M N O P Q R S T U V W X Y Z</text>
+  <rect x="100" y="240" width="300" height="60" class="box-border" stroke="#333333"/>
+  <text x="250" y="225" class="label">Sliding Window</text>
+  <text x="100" y="310" class="label" text-anchor="start">Current Position</text>
+  <path d="M100 300 L100 320 L110 310" stroke="#333333" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+
+  <!-- Section 3: Window Components (Detailed View) -->
+  <text x="400" y="370" class="section-title">3. Dictionary &amp; Look-ahead Buffer</text>
+  <rect x="100" y="400" width="600" height="100" class="box-border"/>
+  <rect x="100" y="400" width="400" height="100" class="dictionary-fill" stroke="#000000" stroke-width="1"/>
+  <rect x="500" y="400" width="200" height="100" class="lookahead-fill" stroke="#000000" stroke-width="1"/>
+  <path d="M500 400 L500 500" stroke="#000000" stroke-width="2"/>
+  <text x="300" y="385" class="label">Dictionary (Search Buffer)</text>
+  <text x="600" y="385" class="label">Look-ahead Buffer</text>
+
+  <!-- Data within buffers -->
+  <text x="125" y="455" class="data-char">A</text>
+  <text x="175" y="455" class="data-char">B</text>
+  <text x="225" y="455" class="data-char">B</text>
+  <text x="275" y="455" class="data-char">C</text>
+  <text x="325" y="455" class="data-char">A</text>
+  <text x="375" y="455" class="data-char">B</text>
+  <text x="425" y="455" class="data-char">B</text>
+  <text x="475" y="455" class="data-char">C</text>
+
+  <text x="525" y="455" class="data-char">D</text>
+  <text x="575" y="455" class="data-char">E</text>
+  <text x="625" y="455" class="data-char">F</text>
+  <text x="675" y="455" class="data-char">G</text>
+
+  <!-- Section 4: Matching Process -->
+  <text x="400" y="560" class="section-title">4. Finding a Match</text>
+  <rect x="100" y="590" width="600" height="100" class="box-border"/>
+  <rect x="100" y="590" width="400" height="100" class="dictionary-fill" stroke="#000000" stroke-width="1"/>
+  <rect x="500" y="590" width="200" height="100" class="lookahead-fill" stroke="#000000" stroke-width="1"/>
+  <path d="M500 590 L500 690" stroke="#000000" stroke-width="2"/>
+
+  <!-- Data within buffers (for match example) -->
+  <text x="125" y="645" class="data-char">A</text>
+  <text x="175" y="645" class="data-char">B</text>
+  <text x="225" y="645" class="data-char">B</text>
+  <text x="275" y="645" class="data-char">C</text>
+  <text x="325" y="645" class="data-char">A</text>
+  <text x="375" y="645" class="data-char">B</text>
+  <text x="425" y="645" class="data-char">B</text>
+  <text x="475" y="645" class="data-char">C</text>
+
+  <text x="525" y="645" class="data-char">A</text>
+  <text x="575" y="645" class="data-char">B</text>
+  <text x="625" y="645" class="data-char">B</text>
+  <text x="675" y="645" class="data-char">C</text>
+
+  <!-- Match Highlight -->
+  <rect x="300" y="590" width="200" height="100" class="match-highlight"/>
+  <rect x="500" y="590" width="200" height="100" class="match-highlight"/>
+  <text x="400" y="575" class="label" font-weight="bold">Match Found!</text>
+
+  <!-- Section 5: Output -->
+  <text x="400" y="750" class="section-title">5. Output (Offset, Length)</text>
+  <rect x="275" y="770" width="250" height="80" fill="#FFFFFF" stroke="#000000" stroke-width="2"/>
+  <text x="400" y="800" class="label" font-weight="bold">Output:</text>
+  <text x="400" y="825" class="label">(Offset: 4, Length: 4)</text>
+
+  <!-- Section 6: Window Movement -->
+  <text x="400" y="900" class="section-title">6. Window Slides</text>
+  <rect x="100" y="920" width="300" height="60" class="box-border"/>
+  <text x="250" y="910" class="label">Old Position</text>
+  <rect x="250" y="920" width="300" height="60" class="dashed-box"/>
+  <text x="400" y="910" class="label">New Position</text>
+
+  <!-- Arrows (placed after boxes to avoid crossing) -->
+  <path d="M400 690 L400 770" class="arrow"/>
+  <path d="M300 690 L300 720 L400 720 L400 770" class="arrow"/>
+  <path d="M600 690 L600 720 L400 720 L400 770" class="arrow"/>
+
+  <path d="M250 950 L350 950" class="arrow"/>
+</svg>

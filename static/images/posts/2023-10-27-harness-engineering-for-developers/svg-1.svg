@@ -1,0 +1,146 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <!-- Arrowhead marker -->
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#4A90D9" />
+    </marker>
+    <marker id="arrowhead-green" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#50C878" />
+    </marker>
+    <marker id="arrowhead-purple" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#6C5CE7" />
+    </marker>
+
+    <!-- Subtle Drop Shadow Filter -->
+    <filter id="dropshadow" height="130%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3"/>
+      <feOffset dx="2" dy="2" result="offsetblur"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.2"/>
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+    .box {
+      stroke: #ccc;
+      stroke-width: 1;
+      fill: #fff;
+      filter: url(#dropshadow);
+      rx: 8;
+      ry: 8;
+    }
+    .text-label {
+      font-family: "Arial, sans-serif";
+      font-size: 14px;
+      fill: #333;
+      text-anchor: middle;
+    }
+    .large-label {
+      font-size: 16px;
+      font-weight: bold;
+    }
+    .small-label {
+      font-size: 12px;
+      fill: #666;
+    }
+    .line {
+      stroke: #4A90D9;
+      stroke-width: 2;
+      fill: none;
+      marker-end: url(#arrowhead);
+    }
+    .line-green {
+      stroke: #50C878;
+      stroke-width: 2;
+      fill: none;
+      marker-end: url(#arrowhead-green);
+    }
+    .line-purple {
+      stroke: #6C5CE7;
+      stroke-width: 2;
+      fill: none;
+      marker-end: url(#arrowhead-purple);
+    }
+    .dashed-box {
+      fill: none;
+      stroke: #999;
+      stroke-width: 2;
+      stroke-dasharray: 5 5;
+      rx: 10;
+      ry: 10;
+    }
+    .control-plane-box { fill: #4A90D9; stroke: #3a7ac9; }
+    .delegate-box { fill: #50C878; stroke: #40a060; }
+    .repo-box { fill: #FFD93D; stroke: #ccad30; }
+    .build-box { fill: #6C5CE7; stroke: #5a4ac0; }
+    .white-text { fill: #fff; }
+  </style>
+
+  <!-- Background -->
+  <rect x="0" y="0" width="800" height="600" fill="#f8f9fa"/>
+
+  <!-- Components -->
+
+  <!-- Harness Control Plane (SaaS) -->
+  <rect x="250" y="40" width="300" height="60" class="box control-plane-box"/>
+  <text x="400" y="75" class="text-label large-label white-text">Harness Control Plane (SaaS)</text>
+
+  <!-- 고객 인프라 (Customer Infrastructure) Boundary -->
+  <rect x="50" y="130" width="700" height="420" class="dashed-box"/>
+  <text x="400" y="155" class="text-label large-label" fill="#666">고객 인프라 (Customer Infrastructure)</text>
+
+  <!-- Harness Delegate -->
+  <rect x="275" y="200" width="250" height="150" class="box delegate-box"/>
+  <text x="400" y="235" class="text-label large-label white-text">Harness Delegate</text>
+  <text x="400" y="260" class="text-label small-label white-text">(Kubernetes 클러스터, VM 등)</text>
+
+  <!-- 빌드 실행 (Build Execution) -->
+  <rect x="300" y="290" width="200" height="40" class="box build-box"/>
+  <text x="400" y="315" class="text-label large-label white-text">빌드 실행</text>
+
+  <!-- 코드 리포지토리 (Code Repository) -->
+  <rect x="100" y="450" width="200" height="60" class="box repo-box"/>
+  <text x="200" y="485" class="text-label large-label">코드 리포지토리</text>
+
+  <!-- 아티팩트 저장소 (Artifact Repository) -->
+  <rect x="500" y="450" width="200" height="60" class="box repo-box"/>
+  <text x="600" y="485" class="text-label large-label">아티팩트 저장소</text>
+
+  <!-- Connections -->
+
+  <!-- Control Plane <-> Delegate -->
+  <path d="M400 100 V 170 H 260" class="line" marker-end="url(#arrowhead)"/>
+  <path d="M400 100 V 170 H 540" class="line" marker-end="url(#arrowhead)"/>
+  <text x="400" y="125" class="text-label small-label" fill="#4A90D9">명령/구성</text>
+
+  <path d="M260 200 V 170 H 400 V 100" class="line" marker-end="url(#arrowhead)"/>
+  <path d="M540 200 V 170 H 400 V 100" class="line" marker-end="url(#arrowhead)"/>
+  <text x="400" y="185" class="text-label small-label" fill="#4A90D9">상태/로그</text>
+  <text x="400" y="160" class="text-label small-label" fill="#4A90D9">안전한 통신</text>
+
+
+  <!-- Delegate -> Build Execution -->
+  <path d="M400 265 V 290" class="line-purple"/>
+  <text x="400" y="280" class="text-label small-label" fill="#6C5CE7">빌드 트리거</text>
+
+  <!-- Build Execution -> Code Repository -->
+  <path d="M300 310 H 180 V 450" class="line-purple"/>
+  <text x="240" y="380" class="text-label small-label" fill="#6C5CE7">소스 코드 가져오기</text>
+
+  <!-- Build Execution -> Artifact Repository -->
+  <path d="M500 310 H 620 V 450" class="line-purple"/>
+  <text x="560" y="380" class="text-label small-label" fill="#6C5CE7">아티팩트 저장/가져오기</text>
+
+  <!-- Build Execution -> Delegate (implied results/status) -->
+  <path d="M400 330 V 345" class="line-purple" marker-end="url(#arrowhead-purple)"/>
+  <text x="400" y="340" class="text-label small-label" fill="#6C5CE7">빌드 결과</text>
+
+</svg>

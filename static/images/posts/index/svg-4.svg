@@ -1,0 +1,93 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect x="0" y="0" width="800" height="600" fill="#f8f9fa"/>
+
+  <!-- Title -->
+  <text x="400" y="40" font-family="Arial, sans-serif" font-size="24" fill="#2D3748" text-anchor="middle" font-weight="bold">
+    Vehicle 3D Model as a Graph for AI Analysis
+  </text>
+
+  <!-- Legend -->
+  <g transform="translate(40, 70)">
+    <text x="0" y="0" font-family="Arial, sans-serif" font-size="16" fill="#2D3748" font-weight="bold">Legend</text>
+    <rect x="0" y="20" width="20" height="20" fill="#4A90D9" stroke="#2D3748" stroke-width="1"/>
+    <text x="30" y="36" font-family="Arial, sans-serif" font-size="14" fill="#2D3748">Component Node</text>
+    <rect x="0" y="50" width="20" height="20" fill="#50C878" stroke="#2D3748" stroke-width="1"/>
+    <text x="30" y="66" font-family="Arial, sans-serif" font-size="14" fill="#2D3748">Connector Node</text>
+    <rect x="0" y="80" width="20" height="20" fill="#FFD93D" stroke="#2D3748" stroke-width="1"/>
+    <text x="30" y="96" font-family="Arial, sans-serif" font-size="14" fill="#2D3748">Mounting Point Node</text>
+    <line x1="0" y1="125" x2="20" y2="125" stroke="#2D3748" stroke-width="2"/>
+    <text x="30" y="130" font-family="Arial, sans-serif" font-size="14" fill="#2D3748">Potential Wiring Path (Edge)</text>
+  </g>
+
+  <!-- Node Attributes Box -->
+  <g transform="translate(560, 100)">
+    <rect x="0" y="0" width="200" height="250" fill="#f8f9fa" stroke="#e2e8f0" stroke-width="2"/>
+    <text x="100" y="25" font-family="Arial, sans-serif" font-size="16" fill="#2D3748" text-anchor="middle" font-weight="bold">Node Attributes</text>
+
+    <text x="10" y="55" font-family="Arial, sans-serif" font-size="14" fill="#2D3748" font-weight="bold">Electrical:</text>
+    <text x="20" y="75" font-family="Courier New, monospace" font-size="14" fill="#2D3748">  - Voltage (V)</text>
+    <text x="20" y="95" font-family="Courier New, monospace" font-size="14" fill="#2D3748">  - Current (A)</text>
+
+    <text x="10" y="125" font-family="Arial, sans-serif" font-size="14" fill="#2D3748" font-weight="bold">Mechanical:</text>
+    <text x="20" y="145" font-family="Courier New, monospace" font-size="14" fill="#2D3748">  - Bending Radius (mm)</text>
+    <text x="20" y="165" font-family="Courier New, monospace" font-size="14" fill="#2D3748">  - Clamping Points (XYZ)</text>
+
+    <text x="10" y="195" font-family="Arial, sans-serif" font-size="14" fill="#2D3748" font-weight="bold">Environmental:</text>
+    <text x="20" y="215" font-family="Courier New, monospace" font-size="14" fill="#2D3748">  - Temperature (°C)</text>
+    <text x="20" y="235" font-family="Courier New, monospace" font-size="14" fill="#2D3748">  - Vibration (Hz)</text>
+  </g>
+
+  <!-- Edge Attributes Box -->
+  <g transform="translate(560, 360)">
+    <rect x="0" y="0" width="200" height="200" fill="#f8f9fa" stroke="#e2e8f0" stroke-width="2"/>
+    <text x="100" y="25" font-family="Arial, sans-serif" font-size="16" fill="#2D3748" text-anchor="middle" font-weight="bold">Edge Attributes</text>
+
+    <text x="10" y="55" font-family="Arial, sans-serif" font-size="14" fill="#2D3748" font-weight="bold">Electrical:</text>
+    <text x="20" y="75" font-family="Courier New, monospace" font-size="14" fill="#2D3748">  - Resistance (Ohm)</text>
+    <text x="20" y="95" font-family="Courier New, monospace" font-size="14" fill="#2D3748">  - Capacitance (F)</text>
+
+    <text x="10" y="125" font-family="Arial, sans-serif" font-size="14" fill="#2D3748" font-weight="bold">Mechanical:</text>
+    <text x="20" y="145" font-family="Courier New, monospace" font-size="14" fill="#2D3748">  - Length (mm)</text>
+    <text x="20" y="165" font-family="Courier New, monospace" font-size="14" fill="#2D3748">  - Material Type</text>
+  </g>
+
+  <!-- Graph Nodes (Circles and their text labels) -->
+  <g transform="translate(180, 180)">
+    <!-- Component A -->
+    <circle id="compA_node" cx="100" cy="100" r="30" fill="#4A90D9" stroke="#2D3748" stroke-width="1"/>
+    <text x="100" y="105" font-family="Arial, sans-serif" font-size="14" fill="#f8f9fa" text-anchor="middle">Comp A</text>
+
+    <!-- Connector 1 -->
+    <circle id="conn1_node" cx="250" cy="50" r="30" fill="#50C878" stroke="#2D3748" stroke-width="1"/>
+    <text x="250" y="55" font-family="Arial, sans-serif" font-size="14" fill="#2D3748" text-anchor="middle">Conn 1</text>
+
+    <!-- Component B -->
+    <circle id="compB_node" cx="400" cy="100" r="30" fill="#4A90D9" stroke="#2D3748" stroke-width="1"/>
+    <text x="400" y="105" font-family="Arial, sans-serif" font-size="14" fill="#f8f9fa" text-anchor="middle">Comp B</text>
+
+    <!-- Mounting Point 1 -->
+    <circle id="mount1_node" cx="250" cy="250" r="30" fill="#FFD93D" stroke="#2D3748" stroke-width="1"/>
+    <text x="250" y="255" font-family="Arial, sans-serif" font-size="14" fill="#2D3748" text-anchor="middle">Mount 1</text>
+
+    <!-- Connector 2 -->
+    <circle id="conn2_node" cx="100" cy="200" r="30" fill="#50C878" stroke="#2D3748" stroke-width="1"/>
+    <text x="100" y="205" font-family="Arial, sans-serif" font-size="14" fill="#2D3748" text-anchor="middle">Conn 2</text>
+  </g>
+
+  <!-- Graph Edges (Lines connecting node centers) - Drawn last as per rendering order rules -->
+  <g transform="translate(180, 180)">
+    <!-- Comp A - Conn 1 -->
+    <line x1="100" y1="100" x2="250" y2="50" stroke="#2D3748" stroke-width="2"/>
+    <!-- Conn 1 - Comp B -->
+    <line x1="250" y1="50" x2="400" y2="100" stroke="#2D3748" stroke-width="2"/>
+    <!-- Comp B - Conn 2 -->
+    <line x1="400" y1="100" x2="100" y2="200" stroke="#2D3748" stroke-width="2"/>
+    <!-- Conn 2 - Mount 1 -->
+    <line x1="100" y1="200" x2="250" y2="250" stroke="#2D3748" stroke-width="2"/>
+    <!-- Mount 1 - Comp A (direct path) -->
+    <line x1="250" y1="250" x2="100" y2="100" stroke="#2D3748" stroke-width="2"/>
+    <!-- Comp A - Conn 2 (another potential path) -->
+    <line x1="100" y1="100" x2="100" y2="200" stroke="#2D3748" stroke-width="2"/>
+  </g>
+</svg>

@@ -1,0 +1,90 @@
+<svg viewBox="0 0 800 700" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .title { font-family: "Arial, sans-serif"; font-size: 28px; font-weight: bold; fill: #2D3748; text-anchor: middle; }
+    .header-bg { fill: #f8f9fa; }
+    .header-text { font-family: "Arial, sans-serif"; font-size: 18px; font-weight: bold; text-anchor: middle; }
+    .feature-name { font-family: "Arial, sans-serif"; font-size: 16px; font-weight: bold; fill: #2D3748; text-anchor: start; }
+    .cell-text { font-family: "Arial, sans-serif"; font-size: 14px; fill: #2D3748; text-anchor: middle; }
+    .checkmark { font-family: "Arial, sans-serif"; font-size: 28px; fill: #50C878; text-anchor: middle; }
+    .cross { font-family: "Arial, sans-serif"; font-size: 28px; fill: #FF6B6B; text-anchor: middle; }
+    .row-bg-even { fill: #ffffff; }
+    .row-bg-odd { fill: #f8f9fa; }
+    .ai-column-highlight { fill: #F0FFF4; } <!-- Very light green for AI column -->
+  </style>
+
+  <!-- Title -->
+  <text x="400" y="40" class="title">Harness Design Methodologies Comparison</text>
+
+  <!-- Column Headers Background -->
+  <rect x="20" y="70" width="760" height="60" class="header-bg"/>
+  <rect x="400" y="70" width="380" height="60" class="ai-column-highlight"/> <!-- Highlight for AI column header -->
+
+  <!-- Column Headers -->
+  <text x="110" y="100" class="header-text" fill="#2D3748">Feature</text>
+  <text x="290" y="100" class="header-text" fill="#4A90D9">Manual Design</text>
+  <text x="590" y="90" class="header-text" fill="#50C878">Generative AI-based</text>
+  <text x="590" y="115" class="header-text" fill="#50C878">Design</text>
+
+  <!-- Rows -->
+  <!-- Row 1: Design Input -->
+  <rect x="20" y="130" width="760" height="70" class="row-bg-even"/>
+  <rect x="400" y="130" width="380" height="70" class="ai-column-highlight"/>
+  <text x="30" y="165" class="feature-name">Design Input</text>
+  <text x="290" y="165" class="cell-text">2D Schematics, BOMs</text>
+  <text x="590" y="165" class="cell-text">System Requirements, Specs</text>
+
+  <!-- Row 2: Design Process -->
+  <rect x="20" y="200" width="760" height="70" class="row-bg-odd"/>
+  <rect x="400" y="200" width="380" height="70" class="ai-column-highlight"/>
+  <text x="30" y="235" class="feature-name">Design Process</text>
+  <text x="290" y="225" class="cell-text">Manual Routing,</text>
+  <text x="290" y="245" class="cell-text">Human Interpretation</text>
+  <text x="590" y="225" class="cell-text">Automated Generation,</text>
+  <text x="590" y="245" class="cell-text">AI Optimization</text>
+
+  <!-- Row 3: Time to Design -->
+  <rect x="20" y="270" width="760" height="70" class="row-bg-even"/>
+  <rect x="400" y="270" width="380" height="70" class="ai-column-highlight"/>
+  <text x="30" y="305" class="feature-name">Time to Design</text>
+  <text x="290" y="305" class="cell-text">Days to Weeks</text>
+  <text x="350" y="310" class="cross">✗</text>
+  <text x="590" y="305" class="cell-text">Hours to Days</text>
+  <text x="650" y="310" class="checkmark">✓</text>
+
+  <!-- Row 4: Optimization Level -->
+  <rect x="20" y="340" width="760" height="70" class="row-bg-odd"/>
+  <rect x="400" y="340" width="380" height="70" class="ai-column-highlight"/>
+  <text x="30" y="375" class="feature-name">Optimization Level</text>
+  <text x="290" y="375" class="cell-text">Sub-optimal</text>
+  <text x="350" y="380" class="cross">✗</text>
+  <text x="590" y="375" class="cell-text">Highly Optimized</text>
+  <text x="650" y="380" class="checkmark">✓</text>
+
+  <!-- Row 5: Error Rate -->
+  <rect x="20" y="410" width="760" height="70" class="row-bg-even"/>
+  <rect x="400" y="410" width="380" height="70" class="ai-column-highlight"/>
+  <text x="30" y="445" class="feature-name">Error Rate</text>
+  <text x="290" y="445" class="cell-text">Higher</text>
+  <text x="350" y="450" class="cross">✗</text>
+  <text x="590" y="445" class="cell-text">Lower</text>
+  <text x="650" y="450" class="checkmark">✓</text>
+
+  <!-- Row 6: Design Iterations -->
+  <rect x="20" y="480" width="760" height="70" class="row-bg-odd"/>
+  <rect x="400" y="480" width="380" height="70" class="ai-column-highlight"/>
+  <text x="30" y="515" class="feature-name">Design Iterations</text>
+  <text x="290" y="515" class="cell-text">Slow, Costly</text>
+  <text x="350" y="520" class="cross">✗</text>
+  <text x="590" y="515" class="cell-text">Fast, On-demand</text>
+  <text x="650" y="520" class="checkmark">✓</text>
+
+  <!-- Row 7: Complexity Handling -->
+  <rect x="20" y="550" width="760" height="70" class="row-bg-even"/>
+  <rect x="400" y="550" width="380" height="70" class="ai-column-highlight"/>
+  <text x="30" y="585" class="feature-name">Complexity Handling</text>
+  <text x="290" y="585" class="cell-text">Challenging</text>
+  <text x="350" y="590" class="cross">✗</text>
+  <text x="590" y="585" class="cell-text">Excellent</text>
+  <text x="650" y="590" class="checkmark">✓</text>
+
+</svg>
