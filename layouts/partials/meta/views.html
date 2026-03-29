@@ -13,15 +13,52 @@
   data-lang="{{ $lang }}"
   data-api-base="{{ $apiBase }}">
   <span
+    data-docforge-view-sep
+    class="hidden text-neutral-500 dark:text-neutral-400">-</span>
+  <span
     data-docforge-view-value
     class="inline-block min-w-[2ch] rounded-full bg-neutral-200 px-2 py-[1px] text-xs text-neutral-700 dark:bg-neutral-700 dark:text-neutral-200"
     title="views">...</span>
-  <span class="inline-block align-text-bottom">{{ partial "icon.html" "eye" }}</span>
+  <span data-docforge-view-icon class="inline-block align-text-bottom">{{ partial "icon.html" "eye" }}</span>
 </span>
 <script>
   (() => {
     if (window.__docforgeViewCounterInit) return;
     window.__docforgeViewCounterInit = true;
+
+    const VIEW_WINDOW_MS = 60 * 60 * 1000;
+
+    const storageKey = (slug, lang) => `docforge:viewed:${slug}:${lang}`;
+
+    const isViewedRecently = (slug, lang) => {
+      try {
+        const raw = localStorage.getItem(storageKey(slug, lang));
+        if (!raw) return false;
+        const ts = Number(raw);
+        return Number.isFinite(ts) && (Date.now() - ts) < VIEW_WINDOW_MS;
+      } catch (_err) {
+        return false;
+      }
+    };
+
+    const markViewedNow = (slug, lang) => {
+      try {
+        localStorage.setItem(storageKey(slug, lang), String(Date.now()));
+      } catch (_err) {}
+    };
+
+    const renderViewedState = (el, viewed) => {
+      const iconEl = el.querySelector("[data-docforge-view-icon]");
+      const sepEl = el.querySelector("[data-docforge-view-sep]");
+      if (!iconEl || !sepEl) return;
+      if (viewed) {
+        iconEl.classList.add("hidden");
+        sepEl.classList.remove("hidden");
+      } else {
+        iconEl.classList.remove("hidden");
+        sepEl.classList.add("hidden");
+      }
+    };
 
     const updateCounter = async (el) => {
       const slug = el.dataset.slug;
@@ -29,6 +66,8 @@
       const apiBase = (el.dataset.apiBase || "").replace(/\/$/, "");
       const valueEl = el.querySelector("[data-docforge-view-value]");
       if (!slug || !apiBase || !valueEl) return;
+
+      renderViewedState(el, isViewedRecently(slug, lang));
 
       try {
         const res = await fetch(`${apiBase}/api/views/hit`, {
@@ -46,6 +85,10 @@
         const data = await res.json();
         const count = Number(data.count || 0);
         valueEl.textContent = count.toLocaleString();
+        if (data.counted || isViewedRecently(slug, lang)) {
+          markViewedNow(slug, lang);
+          renderViewedState(el, true);
+        }
       } catch (_err) {
         valueEl.textContent = "-";
       }

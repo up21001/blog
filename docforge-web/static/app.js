@@ -1053,16 +1053,25 @@
         return { filename: `image-${i + 1}.${ext}`, mime: img.mime, data_base64: img.data_base64 };
       });
       currentSvgs.forEach((svg, i) => {
-        const svgB64 = btoa(unescape(encodeURIComponent(svg.svg || "")));
+        const svgContent = svg.svg || "";
+        // 빈 SVG 또는 플레이스홀더(240x56) 필터링
+        if (!svgContent || svgContent.length < 200 || svgContent.includes('viewBox="0 0 240 56"')) {
+          console.warn(`SVG ${i + 1} 건너뜀 (빈/플레이스홀더)`);
+          return;
+        }
+        const svgB64 = btoa(unescape(encodeURIComponent(svgContent)));
         imagesToSave.push({ filename: `svg-${i + 1}.svg`, mime: "image/svg+xml", data_base64: svgB64 });
       });
       // 영문 SVG도 저장
       if (window._currentSvgsEn && window._currentSvgsEn.length) {
         window._currentSvgsEn.forEach((svg, i) => {
-          if (svg.svg) {
-            const svgB64 = btoa(unescape(encodeURIComponent(svg.svg)));
-            imagesToSave.push({ filename: `svg-${i + 1}-en.svg`, mime: "image/svg+xml", data_base64: svgB64 });
+          const svgContent = svg.svg || "";
+          if (!svgContent || svgContent.length < 200 || svgContent.includes('viewBox="0 0 240 56"')) {
+            console.warn(`SVG-EN ${i + 1} 건너뜀 (빈/플레이스홀더)`);
+            return;
           }
+          const svgB64 = btoa(unescape(encodeURIComponent(svgContent)));
+          imagesToSave.push({ filename: `svg-${i + 1}-en.svg`, mime: "image/svg+xml", data_base64: svgB64 });
         });
       }
 
