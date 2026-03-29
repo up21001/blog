@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400">
+  <defs>
+    <filter id="shadow3" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="2" dy="2" stdDeviation="4" flood-color="#00000033"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="400" fill="#F8F9FA" rx="12"/>
+  <text x="400" y="38" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#2D3436" text-anchor="middle">3 Core Benefits of AI Adoption</text>
+
+  <!-- Card 1: Weight/Cost Reduction -->
+  <rect x="40" y="60" width="220" height="300" rx="14" fill="#4A90D9" filter="url(#shadow3)"/>
+  <!-- Icon area -->
+  <circle cx="150" cy="130" r="45" fill="white" fill-opacity="0.2"/>
+  <text x="150" y="145" font-family="Arial, sans-serif" font-size="40" text-anchor="middle" fill="white">⚖</text>
+  <!-- Title -->
+  <text x="150" y="200" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white" text-anchor="middle">Weight &amp; Cost</text>
+  <text x="150" y="218" font-family="Arial, sans-serif" font-size="11" fill="#DDEEFF" text-anchor="middle">Reduction</text>
+  <!-- Divider -->
+  <line x1="65" y1="232" x2="235" y2="232" stroke="white" stroke-opacity="0.4" stroke-width="1"/>
+  <!-- Body text -->
+  <text x="150" y="255" font-family="Arial, sans-serif" font-size="11" fill="#E8F4FF" text-anchor="middle">Searches millions of path</text>
+  <text x="150" y="272" font-family="Arial, sans-serif" font-size="11" fill="#E8F4FF" text-anchor="middle">combinations for best route</text>
+  <text x="150" y="295" font-family="Arial, sans-serif" font-size="11" fill="#FFD93D" text-anchor="middle" font-weight="bold">Reduced copper usage</text>
+  <text x="150" y="312" font-family="Arial, sans-serif" font-size="11" fill="#FFD93D" text-anchor="middle" font-weight="bold">→ Lower cost + lighter weight</text>
+  <!-- Badge -->
+  <rect x="75" y="330" width="150" height="24" rx="12" fill="white" fill-opacity="0.25"/>
+  <text x="150" y="347" font-family="Arial, sans-serif" font-size="11" fill="white" text-anchor="middle" font-weight="bold">Improved EV Range</text>
+
+  <!-- Card 2: Complexity Management -->
+  <rect x="290" y="60" width="220" height="300" rx="14" fill="#50C878" filter="url(#shadow3)"/>
+  <circle cx="400" cy="130" r="45" fill="white" fill-opacity="0.2"/>
+  <text x="400" y="145" font-family="Arial, sans-serif" font-size="40" text-anchor="middle" fill="white">🔗</text>
+  <text x="400" y="200" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white" text-anchor="middle">Complexity</text>
+  <text x="400" y="218" font-family="Arial, sans-serif" font-size="11" fill="#E8FFF0" text-anchor="middle">Management</text>
+  <line x1="315" y1="232" x2="485" y2="232" stroke="white" stroke-opacity="0.4" stroke-width="1"/>
+  <text x="400" y="255" font-family="Arial, sans-serif" font-size="11" fill="#E8FFF0" text-anchor="middle">Automatic EMI avoidance</text>
+  <text x="400" y="272" font-family="Arial, sans-serif" font-size="11" fill="#E8FFF0" text-anchor="middle">Thermal · vibration handling</text>
+  <text x="400" y="295" font-family="Arial, sans-serif" font-size="11" fill="#FFD93D" text-anchor="middle" font-weight="bold">Power · signal line separation</text>
+  <text x="400" y="312" font-family="Arial, sans-serif" font-size="11" fill="#FFD93D" text-anchor="middle" font-weight="bold">→ Signal integrity guaranteed</text>
+  <rect x="325" y="330" width="150" height="24" rx="12" fill="white" fill-opacity="0.25"/>
+  <text x="400" y="347" font-family="Arial, sans-serif" font-size="11" fill="white" text-anchor="middle" font-weight="bold">Autonomous-Ready</text>
+
+  <!-- Card 3: SW Paradigm Shift -->
+  <rect x="540" y="60" width="220" height="300" rx="14" fill="#6C5CE7" filter="url(#shadow3)"/>
+  <circle cx="650" cy="130" r="45" fill="white" fill-opacity="0.2"/>
+  <text x="650" y="145" font-family="Arial, sans-serif" font-size="40" text-anchor="middle" fill="white">🔄</text>
+  <text x="650" y="200" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white" text-anchor="middle">SW Paradigm</text>
+  <text x="650" y="218" font-family="Arial, sans-serif" font-size="11" fill="#E8E4FF" text-anchor="middle">Shift</text>
+  <line x1="565" y1="232" x2="735" y2="232" stroke="white" stroke-opacity="0.4" stroke-width="1"/>
+  <text x="650" y="255" font-family="Arial, sans-serif" font-size="11" fill="#E8E4FF" text-anchor="middle">Rule-based → Generative</text>
+  <text x="650" y="272" font-family="Arial, sans-serif" font-size="11" fill="#E8E4FF" text-anchor="middle">Deterministic → Probabilistic</text>
+  <text x="650" y="295" font-family="Arial, sans-serif" font-size="11" fill="#FFD93D" text-anchor="middle" font-weight="bold">Design expertise → Model</text>
+  <text x="650" y="312" font-family="Arial, sans-serif" font-size="11" fill="#FFD93D" text-anchor="middle" font-weight="bold">weights as company assets</text>
+  <rect x="575" y="330" width="150" height="24" rx="12" fill="white" fill-opacity="0.25"/>
+  <text x="650" y="347" font-family="Arial, sans-serif" font-size="11" fill="white" text-anchor="middle" font-weight="bold">Competitive Advantage</text>
+</svg>

@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="800" height="420">
+  <defs>
+    <filter id="shadow1" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-color="#00000033"/>
+    </filter>
+    <marker id="arrow1" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
+    </marker>
+    <marker id="arrow-feedback" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#FF6B6B"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="420" fill="#F8F9FA" rx="12"/>
+  <text x="400" y="38" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#2D3436" text-anchor="middle">Harness AI Generation System — Full Architecture</text>
+
+  <!-- Step 1: Data Representation -->
+  <rect x="40" y="70" width="160" height="90" rx="10" fill="#4A90D9" filter="url(#shadow1)"/>
+  <text x="120" y="105" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="white" text-anchor="middle">Data Representation</text>
+  <text x="120" y="123" font-family="Arial, sans-serif" font-size="11" fill="#DDEEFF" text-anchor="middle">Data Representation</text>
+  <text x="120" y="143" font-family="Arial, sans-serif" font-size="10" fill="#DDEEFF" text-anchor="middle">GNN · Graph Structure</text>
+
+  <!-- Arrow 1→2 -->
+  <line x1="202" y1="115" x2="248" y2="115" stroke="#555" stroke-width="2" marker-end="url(#arrow1)"/>
+
+  <!-- Step 2: Topology Generation -->
+  <rect x="250" y="70" width="160" height="90" rx="10" fill="#50C878" filter="url(#shadow1)"/>
+  <text x="330" y="105" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="white" text-anchor="middle">Topology Generation</text>
+  <text x="330" y="123" font-family="Arial, sans-serif" font-size="11" fill="#E8FFF0" text-anchor="middle">Topology Generation</text>
+  <text x="330" y="143" font-family="Arial, sans-serif" font-size="10" fill="#E8FFF0" text-anchor="middle">Logic Circuit · Optimal Links</text>
+
+  <!-- Arrow 2→3 -->
+  <line x1="412" y1="115" x2="458" y2="115" stroke="#555" stroke-width="2" marker-end="url(#arrow1)"/>
+
+  <!-- Step 3: 3D Routing -->
+  <rect x="460" y="70" width="160" height="90" rx="10" fill="#6C5CE7" filter="url(#shadow1)"/>
+  <text x="540" y="105" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="white" text-anchor="middle">3D Spatial Routing</text>
+  <text x="540" y="123" font-family="Arial, sans-serif" font-size="11" fill="#E8E4FF" text-anchor="middle">3D Spatial Routing</text>
+  <text x="540" y="143" font-family="Arial, sans-serif" font-size="10" fill="#E8E4FF" text-anchor="middle">DRL · Path Search</text>
+
+  <!-- Arrow 3→4 -->
+  <line x1="622" y1="115" x2="668" y2="115" stroke="#555" stroke-width="2" marker-end="url(#arrow1)"/>
+
+  <!-- Step 4: Validation/Optimization -->
+  <rect x="670" y="70" width="90" height="90" rx="10" fill="#FFD93D" filter="url(#shadow1)"/>
+  <text x="715" y="105" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#2D3436" text-anchor="middle">Validation /</text>
+  <text x="715" y="121" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#2D3436" text-anchor="middle">Optimize</text>
+  <text x="715" y="143" font-family="Arial, sans-serif" font-size="9" fill="#5D4037" text-anchor="middle">PINN · EMI</text>
+
+  <!-- Feedback loop arrow (bottom) -->
+  <path d="M 715 162 Q 715 230 400 230 Q 85 230 85 162" stroke="#FF6B6B" stroke-width="2" fill="none" stroke-dasharray="6,3" marker-end="url(#arrow-feedback)"/>
+  <text x="400" y="222" font-family="Arial, sans-serif" font-size="11" fill="#FF6B6B" text-anchor="middle" font-weight="bold">Validation failure → Feedback loop (regenerate)</text>
+
+  <!-- Input/Output labels -->
+  <rect x="40" y="270" width="720" height="120" rx="10" fill="white" filter="url(#shadow1)"/>
+  <text x="400" y="295" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#2D3436" text-anchor="middle">Stage Inputs / Outputs</text>
+
+  <!-- Column headers -->
+  <text x="120" y="318" font-family="Arial, sans-serif" font-size="11" fill="#4A90D9" text-anchor="middle" font-weight="bold">In: Design DB · Sensor List</text>
+  <text x="120" y="334" font-family="Arial, sans-serif" font-size="11" fill="#555" text-anchor="middle">Out: Node/Edge Graph</text>
+
+  <text x="330" y="318" font-family="Arial, sans-serif" font-size="11" fill="#50C878" text-anchor="middle" font-weight="bold">In: Graph + Requirements</text>
+  <text x="330" y="334" font-family="Arial, sans-serif" font-size="11" fill="#555" text-anchor="middle">Out: Logical Connection Topology</text>
+
+  <text x="540" y="318" font-family="Arial, sans-serif" font-size="11" fill="#6C5CE7" text-anchor="middle" font-weight="bold">In: Topology + 3D CAD</text>
+  <text x="540" y="334" font-family="Arial, sans-serif" font-size="11" fill="#555" text-anchor="middle">Out: Optimal 3D Routing Path</text>
+
+  <text x="715" y="318" font-family="Arial, sans-serif" font-size="11" fill="#C8A000" text-anchor="middle" font-weight="bold">In: Generated Path</text>
+  <text x="715" y="334" font-family="Arial, sans-serif" font-size="11" fill="#555" text-anchor="middle">Out: Final Design Approval</text>
+
+  <line x1="220" y1="305" x2="220" y2="365" stroke="#E0E0E0" stroke-width="1"/>
+  <line x1="430" y1="305" x2="430" y2="365" stroke="#E0E0E0" stroke-width="1"/>
+  <line x1="635" y1="305" x2="635" y2="365" stroke="#E0E0E0" stroke-width="1"/>
+
+  <text x="120" y="360" font-family="Arial, sans-serif" font-size="10" fill="#888" text-anchor="middle">Tech: GNN</text>
+  <text x="330" y="360" font-family="Arial, sans-serif" font-size="10" fill="#888" text-anchor="middle">Tech: Transformer · VAE</text>
+  <text x="540" y="360" font-family="Arial, sans-serif" font-size="10" fill="#888" text-anchor="middle">Tech: DRL (PPO · SAC)</text>
+  <text x="715" y="360" font-family="Arial, sans-serif" font-size="10" fill="#888" text-anchor="middle">Tech: PINN · FEA</text>
+</svg>

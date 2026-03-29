@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 440" width="800" height="440">
+  <defs>
+    <filter id="shadow4" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-color="#00000033"/>
+    </filter>
+    <marker id="arr4" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#4A90D9"/>
+    </marker>
+    <marker id="arr4g" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#50C878"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="440" fill="#F8F9FA" rx="12"/>
+  <text x="400" y="35" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#2D3436" text-anchor="middle">Vehicle 3D Model → Graph Representation</text>
+
+  <!-- Left: Vehicle 3D Model -->
+  <rect x="40" y="55" width="200" height="200" rx="12" fill="#4A90D9" filter="url(#shadow4)"/>
+  <text x="140" y="82" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="white" text-anchor="middle">Vehicle 3D Model</text>
+  <text x="140" y="98" font-family="Arial, sans-serif" font-size="10" fill="#DDEEFF" text-anchor="middle">Digital Twin</text>
+  <!-- Car icon representation -->
+  <rect x="65" y="110" width="150" height="80" rx="8" fill="white" fill-opacity="0.15"/>
+  <rect x="80" y="120" width="120" height="50" rx="6" fill="white" fill-opacity="0.2"/>
+  <circle cx="95" cy="180" r="10" fill="#FFD93D"/>
+  <circle cx="185" cy="180" r="10" fill="#FFD93D"/>
+  <rect x="90" y="128" width="100" height="34" rx="4" fill="white" fill-opacity="0.3"/>
+  <text x="140" y="150" font-family="Arial, sans-serif" font-size="22" text-anchor="middle" fill="white">🚗</text>
+  <text x="140" y="205" font-family="Arial, sans-serif" font-size="10" fill="#DDEEFF" text-anchor="middle">Body · Chassis · Components</text>
+  <text x="140" y="220" font-family="Arial, sans-serif" font-size="10" fill="#DDEEFF" text-anchor="middle">3D geometry included</text>
+  <text x="140" y="240" font-family="Arial, sans-serif" font-size="10" fill="#DDEEFF" text-anchor="middle">Mount points · Clamp positions</text>
+
+  <!-- Arrow -->
+  <line x1="243" y1="155" x2="285" y2="155" stroke="#4A90D9" stroke-width="3" marker-end="url(#arr4)"/>
+  <text x="264" y="145" font-family="Arial, sans-serif" font-size="10" fill="#4A90D9" text-anchor="middle">GNN</text>
+  <text x="264" y="170" font-family="Arial, sans-serif" font-size="10" fill="#4A90D9" text-anchor="middle">Convert</text>
+
+  <!-- Center: Graph Representation -->
+  <rect x="288" y="55" width="220" height="200" rx="12" fill="white" filter="url(#shadow4)"/>
+  <text x="398" y="80" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#2D3436" text-anchor="middle">Graph Representation</text>
+  <text x="398" y="96" font-family="Arial, sans-serif" font-size="10" fill="#888" text-anchor="middle">Graph Representation</text>
+
+  <!-- Graph nodes and edges visualization -->
+  <!-- Node A (Connector) -->
+  <circle cx="340" cy="140" r="18" fill="#4A90D9" filter="url(#shadow4)"/>
+  <text x="340" y="145" font-family="Arial, sans-serif" font-size="9" fill="white" text-anchor="middle">Conn A</text>
+  <!-- Node B (Splice) -->
+  <circle cx="400" cy="115" r="18" fill="#50C878" filter="url(#shadow4)"/>
+  <text x="400" y="120" font-family="Arial, sans-serif" font-size="9" fill="white" text-anchor="middle">Splice</text>
+  <!-- Node C (Connector) -->
+  <circle cx="460" cy="140" r="18" fill="#4A90D9" filter="url(#shadow4)"/>
+  <text x="460" y="145" font-family="Arial, sans-serif" font-size="9" fill="white" text-anchor="middle">Conn B</text>
+  <!-- Node D (Mount point) -->
+  <circle cx="398" cy="185" r="18" fill="#FFD93D" filter="url(#shadow4)"/>
+  <text x="398" y="190" font-family="Arial, sans-serif" font-size="9" fill="#333" text-anchor="middle">Mount</text>
+  <!-- Edges -->
+  <line x1="357" y1="133" x2="383" y2="122" stroke="#6C5CE7" stroke-width="2.5"/>
+  <line x1="417" y1="122" x2="443" y2="133" stroke="#6C5CE7" stroke-width="2.5"/>
+  <line x1="340" y1="158" x2="382" y2="178" stroke="#FF6B6B" stroke-width="2.5" stroke-dasharray="5,3"/>
+  <line x1="460" y1="158" x2="415" y2="178" stroke="#FF6B6B" stroke-width="2.5" stroke-dasharray="5,3"/>
+  <line x1="400" y1="133" x2="400" y2="168" stroke="#555" stroke-width="1.5" stroke-dasharray="3,2"/>
+
+  <text x="398" y="222" font-family="Arial, sans-serif" font-size="9" fill="#555" text-anchor="middle">Solid: wire bundle | Dashed: routing candidate</text>
+  <text x="398" y="238" font-family="Arial, sans-serif" font-size="9" fill="#555" text-anchor="middle">Node: connector/mount | Edge: routing path</text>
+
+  <!-- Arrow to properties -->
+  <line x1="511" y1="155" x2="553" y2="155" stroke="#50C878" stroke-width="3" marker-end="url(#arr4g)"/>
+  <text x="532" y="145" font-family="Arial, sans-serif" font-size="10" fill="#50C878" text-anchor="middle">Assign</text>
+  <text x="532" y="170" font-family="Arial, sans-serif" font-size="10" fill="#50C878" text-anchor="middle">Attrs</text>
+
+  <!-- Right: Attribute Info -->
+  <rect x="556" y="55" width="204" height="200" rx="12" fill="#2D3436" filter="url(#shadow4)"/>
+  <text x="658" y="80" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="white" text-anchor="middle">Node · Edge Attributes</text>
+
+  <!-- Node attrs -->
+  <rect x="568" y="90" width="180" height="70" rx="8" fill="#4A90D9" fill-opacity="0.3"/>
+  <text x="658" y="107" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#DDEEFF" text-anchor="middle">Node Attributes</text>
+  <text x="578" y="122" font-family="Arial, sans-serif" font-size="10" fill="#AAD4FF">• Voltage / Current rating</text>
+  <text x="578" y="137" font-family="Arial, sans-serif" font-size="10" fill="#AAD4FF">• Position coords (x, y, z)</text>
+  <text x="578" y="152" font-family="Arial, sans-serif" font-size="10" fill="#AAD4FF">• Thermal limit · Pin count</text>
+
+  <!-- Edge attrs -->
+  <rect x="568" y="168" width="180" height="75" rx="8" fill="#50C878" fill-opacity="0.3"/>
+  <text x="658" y="185" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#C8FFD8" text-anchor="middle">Edge Attributes</text>
+  <text x="578" y="200" font-family="Arial, sans-serif" font-size="10" fill="#A0F0B0">• Wire gauge (AWG)</text>
+  <text x="578" y="215" font-family="Arial, sans-serif" font-size="10" fill="#A0F0B0">• Shielding status</text>
+  <text x="578" y="230" font-family="Arial, sans-serif" font-size="10" fill="#A0F0B0">• Length · Flexibility · Temp</text>
+
+  <!-- Bottom: Environmental Attribute Cards -->
+  <text x="400" y="283" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#2D3436" text-anchor="middle">Environmental Attribute Layers</text>
+
+  <rect x="40" y="296" width="220" height="116" rx="10" fill="white" filter="url(#shadow4)"/>
+  <rect x="40" y="296" width="220" height="30" rx="10" fill="#FF6B6B"/>
+  <text x="150" y="317" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white" text-anchor="middle">Electrical Properties</text>
+  <text x="55" y="345" font-family="Arial, sans-serif" font-size="11" fill="#333">• Voltage Drop</text>
+  <text x="55" y="362" font-family="Arial, sans-serif" font-size="11" fill="#333">• EMI Clearance Distance</text>
+  <text x="55" y="379" font-family="Arial, sans-serif" font-size="11" fill="#333">• Signal Integrity</text>
+  <text x="55" y="400" font-family="Arial, sans-serif" font-size="11" fill="#333">• Ground Path</text>
+
+  <rect x="290" y="296" width="220" height="116" rx="10" fill="white" filter="url(#shadow4)"/>
+  <rect x="290" y="296" width="220" height="30" rx="10" fill="#FFD93D"/>
+  <text x="400" y="317" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#333" text-anchor="middle">Mechanical Properties</text>
+  <text x="305" y="345" font-family="Arial, sans-serif" font-size="11" fill="#333">• Minimum Bend Radius</text>
+  <text x="305" y="362" font-family="Arial, sans-serif" font-size="11" fill="#333">• Clamping Points</text>
+  <text x="305" y="379" font-family="Arial, sans-serif" font-size="11" fill="#333">• Tension Limit</text>
+  <text x="305" y="400" font-family="Arial, sans-serif" font-size="11" fill="#333">• Vibration Durability</text>
+
+  <rect x="540" y="296" width="220" height="116" rx="10" fill="white" filter="url(#shadow4)"/>
+  <rect x="540" y="296" width="220" height="30" rx="10" fill="#50C878"/>
+  <text x="650" y="317" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white" text-anchor="middle">Environmental Properties</text>
+  <text x="555" y="345" font-family="Arial, sans-serif" font-size="11" fill="#333">• Ambient Temperature</text>
+  <text x="555" y="362" font-family="Arial, sans-serif" font-size="11" fill="#333">• Heat Source Location</text>
+  <text x="555" y="379" font-family="Arial, sans-serif" font-size="11" fill="#333">• Moisture · Chemical Exposure</text>
+  <text x="555" y="400" font-family="Arial, sans-serif" font-size="11" fill="#333">• Vibration Frequency Profile</text>
+</svg>

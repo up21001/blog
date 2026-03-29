@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400">
+  <defs>
+    <filter id="shadow6" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-color="#00000033"/>
+    </filter>
+    <marker id="arr6" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
+    </marker>
+    <marker id="arr6r" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#FF6B6B"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="400" fill="#F8F9FA" rx="12"/>
+  <text x="400" y="35" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#2D3436" text-anchor="middle">AI Wiring Route Generation Pipeline</text>
+
+  <!-- Step boxes Y=80, height=100 -->
+  <!-- Step 1: Requirements Input -->
+  <rect x="40" y="65" width="145" height="110" rx="10" fill="#4A90D9" filter="url(#shadow6)"/>
+  <text x="112" y="92" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white" text-anchor="middle">STEP 1</text>
+  <text x="112" y="112" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white" text-anchor="middle">Requirements</text>
+  <text x="112" y="128" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white" text-anchor="middle">Input</text>
+  <text x="112" y="148" font-family="Arial, sans-serif" font-size="10" fill="#DDEEFF" text-anchor="middle">Sensor connectivity</text>
+  <text x="112" y="163" font-family="Arial, sans-serif" font-size="10" fill="#DDEEFF" text-anchor="middle">Current / comm specs</text>
+
+  <!-- Arrow 1→2 -->
+  <line x1="187" y1="120" x2="213" y2="120" stroke="#555" stroke-width="2.5" marker-end="url(#arr6)"/>
+
+  <!-- Step 2: GNN Topology -->
+  <rect x="215" y="65" width="145" height="110" rx="10" fill="#50C878" filter="url(#shadow6)"/>
+  <text x="287" y="92" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white" text-anchor="middle">STEP 2</text>
+  <text x="287" y="112" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white" text-anchor="middle">GNN Topology</text>
+  <text x="287" y="128" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white" text-anchor="middle">Generation</text>
+  <text x="287" y="148" font-family="Arial, sans-serif" font-size="10" fill="#E8FFF0" text-anchor="middle">Logic circuit layout</text>
+  <text x="287" y="163" font-family="Arial, sans-serif" font-size="10" fill="#E8FFF0" text-anchor="middle">Optimal link inference</text>
+
+  <!-- Arrow 2→3 -->
+  <line x1="362" y1="120" x2="388" y2="120" stroke="#555" stroke-width="2.5" marker-end="url(#arr6)"/>
+
+  <!-- Step 3: DRL 3D Routing -->
+  <rect x="390" y="65" width="145" height="110" rx="10" fill="#6C5CE7" filter="url(#shadow6)"/>
+  <text x="462" y="92" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white" text-anchor="middle">STEP 3</text>
+  <text x="462" y="112" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white" text-anchor="middle">DRL 3D</text>
+  <text x="462" y="128" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white" text-anchor="middle">Routing</text>
+  <text x="462" y="148" font-family="Arial, sans-serif" font-size="10" fill="#E8E4FF" text-anchor="middle">Spatial path search</text>
+  <text x="462" y="163" font-family="Arial, sans-serif" font-size="10" fill="#E8E4FF" text-anchor="middle">Obstacle avoidance</text>
+
+  <!-- Arrow 3→4 -->
+  <line x1="537" y1="120" x2="563" y2="120" stroke="#555" stroke-width="2.5" marker-end="url(#arr6)"/>
+
+  <!-- Step 4: EMI/Thermal Validation -->
+  <rect x="565" y="65" width="145" height="110" rx="10" fill="#FFD93D" filter="url(#shadow6)"/>
+  <text x="637" y="92" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#333" text-anchor="middle">STEP 4</text>
+  <text x="637" y="112" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#333" text-anchor="middle">EMI / Thermal</text>
+  <text x="637" y="128" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#333" text-anchor="middle">Validation</text>
+  <text x="637" y="148" font-family="Arial, sans-serif" font-size="10" fill="#5D4037" text-anchor="middle">Physical constraint check</text>
+  <text x="637" y="163" font-family="Arial, sans-serif" font-size="10" fill="#5D4037" text-anchor="middle">PINN · FEA analysis</text>
+
+  <!-- Pass/Fail paths -->
+  <!-- PASS arrow down-right -->
+  <path d="M 710 175 L 750 175 L 750 300 L 400 300" stroke="#50C878" stroke-width="2.5" fill="none" marker-end="url(#arr6)"/>
+  <text x="752" y="240" font-family="Arial, sans-serif" font-size="11" fill="#50C878" font-weight="bold">PASS</text>
+
+  <!-- FAIL feedback arrow -->
+  <path d="M 565 175 L 565 240 Q 565 260 545 260 L 255 260 Q 235 260 235 240 L 235 177" stroke="#FF6B6B" stroke-width="2.5" fill="none" stroke-dasharray="6,3" marker-end="url(#arr6r)"/>
+  <text x="400" y="278" font-family="Arial, sans-serif" font-size="11" fill="#FF6B6B" text-anchor="middle" font-weight="bold">Validation failed → Regenerate topology/routing (feedback loop)</text>
+
+  <!-- Final output box -->
+  <rect x="40" y="295" width="340" height="80" rx="10" fill="#2D3436" filter="url(#shadow6)"/>
+  <text x="210" y="325" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white" text-anchor="middle">Final Output</text>
+  <text x="210" y="346" font-family="Arial, sans-serif" font-size="11" fill="#AAD4FF" text-anchor="middle">Optimal 3D routing path + Nailboard 2D drawing</text>
+  <text x="210" y="362" font-family="Arial, sans-serif" font-size="11" fill="#A0F0B0" text-anchor="middle">Bill of Materials (BOM) + CAD auto-update</text>
+
+  <!-- Tech labels below steps -->
+  <text x="112" y="198" font-family="Arial, sans-serif" font-size="10" fill="#888" text-anchor="middle">Input: Text · Block diagram</text>
+  <text x="287" y="198" font-family="Arial, sans-serif" font-size="10" fill="#888" text-anchor="middle">Model: GNN (Transformer)</text>
+  <text x="462" y="198" font-family="Arial, sans-serif" font-size="10" fill="#888" text-anchor="middle">Algorithm: PPO · SAC</text>
+  <text x="637" y="198" font-family="Arial, sans-serif" font-size="10" fill="#888" text-anchor="middle">Validation: PINN · real-time FEA</text>
+
+  <!-- Right side note -->
+  <rect x="565" y="295" width="195" height="80" rx="10" fill="white" filter="url(#shadow6)"/>
+  <text x="662" y="320" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#2D3436" text-anchor="middle">Correct-by-Construction</text>
+  <text x="662" y="340" font-family="Arial, sans-serif" font-size="10" fill="#555" text-anchor="middle">Constraints embedded during generation</text>
+  <text x="662" y="357" font-family="Arial, sans-serif" font-size="10" fill="#555" text-anchor="middle">→ Minimizes post-processing cost</text>
+  <text x="662" y="370" font-family="Arial, sans-serif" font-size="10" fill="#50C878" text-anchor="middle" font-weight="bold">Design Quality Assured</text>
+</svg>
