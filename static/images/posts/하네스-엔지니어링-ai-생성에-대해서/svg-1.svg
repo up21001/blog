@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="800" height="420">
+  <defs>
+    <filter id="shadow1" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-color="#00000033"/>
+    </filter>
+    <marker id="arrow1" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
+    </marker>
+    <marker id="arrow-feedback" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#FF6B6B"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="420" fill="#F8F9FA" rx="12"/>
+  <text x="400" y="38" font-family="'Malgun Gothic', sans-serif" font-size="18" font-weight="bold" fill="#2D3436" text-anchor="middle">하네스 AI 생성 시스템 전체 아키텍처</text>
+
+  <!-- Step 1: 데이터 표현 -->
+  <rect x="40" y="70" width="160" height="90" rx="10" fill="#4A90D9" filter="url(#shadow1)"/>
+  <text x="120" y="105" font-family="'Malgun Gothic', sans-serif" font-size="13" font-weight="bold" fill="white" text-anchor="middle">데이터 표현</text>
+  <text x="120" y="123" font-family="'Malgun Gothic', sans-serif" font-size="11" fill="#DDEEFF" text-anchor="middle">Data Representation</text>
+  <text x="120" y="143" font-family="'Malgun Gothic', sans-serif" font-size="10" fill="#DDEEFF" text-anchor="middle">GNN · 그래프 구조</text>
+
+  <!-- Arrow 1→2 -->
+  <line x1="202" y1="115" x2="248" y2="115" stroke="#555" stroke-width="2" marker-end="url(#arrow1)"/>
+
+  <!-- Step 2: 토폴로지 생성 -->
+  <rect x="250" y="70" width="160" height="90" rx="10" fill="#50C878" filter="url(#shadow1)"/>
+  <text x="330" y="105" font-family="'Malgun Gothic', sans-serif" font-size="13" font-weight="bold" fill="white" text-anchor="middle">토폴로지 생성</text>
+  <text x="330" y="123" font-family="'Malgun Gothic', sans-serif" font-size="11" fill="#E8FFF0" text-anchor="middle">Topology Generation</text>
+  <text x="330" y="143" font-family="'Malgun Gothic', sans-serif" font-size="10" fill="#E8FFF0" text-anchor="middle">논리 회로 · 최적 연결</text>
+
+  <!-- Arrow 2→3 -->
+  <line x1="412" y1="115" x2="458" y2="115" stroke="#555" stroke-width="2" marker-end="url(#arrow1)"/>
+
+  <!-- Step 3: 3D 라우팅 -->
+  <rect x="460" y="70" width="160" height="90" rx="10" fill="#6C5CE7" filter="url(#shadow1)"/>
+  <text x="540" y="105" font-family="'Malgun Gothic', sans-serif" font-size="13" font-weight="bold" fill="white" text-anchor="middle">3D 공간 라우팅</text>
+  <text x="540" y="123" font-family="'Malgun Gothic', sans-serif" font-size="11" fill="#E8E4FF" text-anchor="middle">3D Spatial Routing</text>
+  <text x="540" y="143" font-family="'Malgun Gothic', sans-serif" font-size="10" fill="#E8E4FF" text-anchor="middle">DRL · 경로 탐색</text>
+
+  <!-- Arrow 3→4 -->
+  <line x1="622" y1="115" x2="668" y2="115" stroke="#555" stroke-width="2" marker-end="url(#arrow1)"/>
+
+  <!-- Step 4: 검증/최적화 -->
+  <rect x="670" y="70" width="90" height="90" rx="10" fill="#FFD93D" filter="url(#shadow1)"/>
+  <text x="715" y="105" font-family="'Malgun Gothic', sans-serif" font-size="12" font-weight="bold" fill="#2D3436" text-anchor="middle">검증 /</text>
+  <text x="715" y="121" font-family="'Malgun Gothic', sans-serif" font-size="12" font-weight="bold" fill="#2D3436" text-anchor="middle">최적화</text>
+  <text x="715" y="143" font-family="'Malgun Gothic', sans-serif" font-size="9" fill="#5D4037" text-anchor="middle">PINN · EMI</text>
+
+  <!-- Feedback loop arrow (bottom) -->
+  <path d="M 715 162 Q 715 230 400 230 Q 85 230 85 162" stroke="#FF6B6B" stroke-width="2" fill="none" stroke-dasharray="6,3" marker-end="url(#arrow-feedback)"/>
+  <text x="400" y="222" font-family="'Malgun Gothic', sans-serif" font-size="11" fill="#FF6B6B" text-anchor="middle" font-weight="bold">검증 실패 시 피드백 루프 (재생성)</text>
+
+  <!-- Input/Output labels -->
+  <rect x="40" y="270" width="720" height="120" rx="10" fill="white" filter="url(#shadow1)"/>
+  <text x="400" y="295" font-family="'Malgun Gothic', sans-serif" font-size="13" font-weight="bold" fill="#2D3436" text-anchor="middle">각 단계 입력 / 출력</text>
+
+  <!-- Column headers -->
+  <text x="120" y="318" font-family="'Malgun Gothic', sans-serif" font-size="11" fill="#4A90D9" text-anchor="middle" font-weight="bold">입력: 설계 DB · 센서 목록</text>
+  <text x="120" y="334" font-family="'Malgun Gothic', sans-serif" font-size="11" fill="#555" text-anchor="middle">출력: 노드/엣지 그래프</text>
+
+  <text x="330" y="318" font-family="'Malgun Gothic', sans-serif" font-size="11" fill="#50C878" text-anchor="middle" font-weight="bold">입력: 그래프 + 요구사항</text>
+  <text x="330" y="334" font-family="'Malgun Gothic', sans-serif" font-size="11" fill="#555" text-anchor="middle">출력: 논리 연결 토폴로지</text>
+
+  <text x="540" y="318" font-family="'Malgun Gothic', sans-serif" font-size="11" fill="#6C5CE7" text-anchor="middle" font-weight="bold">입력: 토폴로지 + 3D CAD</text>
+  <text x="540" y="334" font-family="'Malgun Gothic', sans-serif" font-size="11" fill="#555" text-anchor="middle">출력: 최적 3D 배선 경로</text>
+
+  <text x="715" y="318" font-family="'Malgun Gothic', sans-serif" font-size="11" fill="#C8A000" text-anchor="middle" font-weight="bold">입력: 생성된 경로</text>
+  <text x="715" y="334" font-family="'Malgun Gothic', sans-serif" font-size="11" fill="#555" text-anchor="middle">출력: 최종 설계 승인</text>
+
+  <line x1="220" y1="305" x2="220" y2="365" stroke="#E0E0E0" stroke-width="1"/>
+  <line x1="430" y1="305" x2="430" y2="365" stroke="#E0E0E0" stroke-width="1"/>
+  <line x1="635" y1="305" x2="635" y2="365" stroke="#E0E0E0" stroke-width="1"/>
+
+  <text x="120" y="360" font-family="'Malgun Gothic', sans-serif" font-size="10" fill="#888" text-anchor="middle">기술: GNN</text>
+  <text x="330" y="360" font-family="'Malgun Gothic', sans-serif" font-size="10" fill="#888" text-anchor="middle">기술: Transformer · VAE</text>
+  <text x="540" y="360" font-family="'Malgun Gothic', sans-serif" font-size="10" fill="#888" text-anchor="middle">기술: DRL (PPO · SAC)</text>
+  <text x="715" y="360" font-family="'Malgun Gothic', sans-serif" font-size="10" fill="#888" text-anchor="middle">기술: PINN · FEA</text>
+</svg>

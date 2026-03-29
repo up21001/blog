@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400">
+  <defs>
+    <filter id="shadow5" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="2" dy="2" stdDeviation="4" flood-color="#00000033"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="400" fill="#F8F9FA" rx="12"/>
+  <text x="400" y="38" font-family="'Malgun Gothic', sans-serif" font-size="18" font-weight="bold" fill="#2D3436" text-anchor="middle">개발자 과제 3가지</text>
+
+  <!-- Card 1: CAD API 연동 -->
+  <rect x="40" y="58" width="220" height="310" rx="14" fill="white" filter="url(#shadow5)"/>
+  <!-- Top accent bar -->
+  <rect x="40" y="58" width="220" height="8" rx="7" fill="#4A90D9"/>
+  <!-- Number badge -->
+  <circle cx="150" cy="100" r="30" fill="#EBF4FF"/>
+  <text x="150" y="107" font-family="'Malgun Gothic', sans-serif" font-size="28" font-weight="bold" fill="#4A90D9" text-anchor="middle">01</text>
+  <!-- Title -->
+  <text x="150" y="150" font-family="'Malgun Gothic', sans-serif" font-size="14" font-weight="bold" fill="#2D3436" text-anchor="middle">CAD API 연동</text>
+  <text x="150" y="167" font-family="'Malgun Gothic', sans-serif" font-size="11" fill="#4A90D9" text-anchor="middle">플러그인 개발 역량</text>
+  <!-- Divider -->
+  <line x1="60" y1="180" x2="240" y2="180" stroke="#E0E0E0" stroke-width="1"/>
+  <!-- Content -->
+  <text x="58" y="200" font-family="'Malgun Gothic', sans-serif" font-size="11" fill="#555">• CATIA · NX · AutoCAD</text>
+  <text x="58" y="218" font-family="'Malgun Gothic', sans-serif" font-size="11" fill="#555">  Electrical API 연동</text>
+  <text x="58" y="238" font-family="'Malgun Gothic', sans-serif" font-size="11" fill="#555">• C++ · C# · Python</text>
+  <text x="58" y="256" font-family="'Malgun Gothic', sans-serif" font-size="11" fill="#555">  플러그인 아키텍처</text>
+  <text x="58" y="276" font-family="'Malgun Gothic', sans-serif" font-size="11" fill="#555">• AI 백엔드 ↔ CAD</text>
+  <text x="58" y="294" font-family="'Malgun Gothic', sans-serif" font-size="11" fill="#555">  프론트엔드 브릿지</text>
+  <!-- Challenge badge -->
+  <rect x="55" y="315" width="190" height="40" rx="8" fill="#EBF4FF"/>
+  <text x="150" y="331" font-family="'Malgun Gothic', sans-serif" font-size="10" fill="#4A90D9" text-anchor="middle" font-weight="bold">핵심 난점</text>
+  <text x="150" y="347" font-family="'Malgun Gothic', sans-serif" font-size="10" fill="#555" text-anchor="middle">벤더별 독자 API 파편화</text>
+
+  <!-- Card 2: 기하학적 제약 수치화 -->
+  <rect x="290" y="58" width="220" height="310" rx="14" fill="white" filter="url(#shadow5)"/>
+  <rect x="290" y="58" width="220" height="8" rx="7" fill="#FF6B6B"/>
+  <circle cx="400" cy="100" r="30" fill="#FFF0F0"/>
+  <text x="400" y="107" font-family="'Malgun Gothic', sans-serif" font-size="28" font-weight="bold" fill="#FF6B6B" text-anchor="middle">02</text>
+  <text x="400" y="150" font-family="'Malgun Gothic', sans-serif" font-size="14" font-weight="bold" fill="#2D3436" text-anchor="middle">기하학적 제약</text>
+  <text x="400" y="167" font-family="'Malgun Gothic', sans-serif" font-size="11" fill="#FF6B6B" text-anchor="middle">수치화 모델링</text>
+  <line x1="310" y1="180" x2="490" y2="180" stroke="#E0E0E0" stroke-width="1"/>
+  <text x="308" y="200" font-family="'Malgun Gothic', sans-serif" font-size="11" fill="#555">• 3D 복셀(Voxel) 환경</text>
+  <text x="308" y="218" font-family="'Malgun Gothic', sans-serif" font-size="11" fill="#555">  구성 및 충돌 감지</text>
+  <text x="308" y="238" font-family="'Malgun Gothic', sans-serif" font-size="11" fill="#555">• 곡률 반경 · 장력을</text>
+  <text x="308" y="256" font-family="'Malgun Gothic', sans-serif" font-size="11" fill="#555">  보상 함수로 변환</text>
+  <text x="308" y="276" font-family="'Malgun Gothic', sans-serif" font-size="11" fill="#555">• EMI 이격 거리를</text>
+  <text x="308" y="294" font-family="'Malgun Gothic', sans-serif" font-size="11" fill="#555">  페널티로 인코딩</text>
+  <rect x="305" y="315" width="190" height="40" rx="8" fill="#FFF0F0"/>
+  <text x="400" y="331" font-family="'Malgun Gothic', sans-serif" font-size="10" fill="#FF6B6B" text-anchor="middle" font-weight="bold">핵심 난점</text>
+  <text x="400" y="347" font-family="'Malgun Gothic', sans-serif" font-size="10" fill="#555" text-anchor="middle">물리 수식 → AI 손실함수 변환</text>
+
+  <!-- Card 3: 레거시 데이터 AI 모델 -->
+  <rect x="540" y="58" width="220" height="310" rx="14" fill="white" filter="url(#shadow5)"/>
+  <rect x="540" y="58" width="220" height="8" rx="7" fill="#50C878"/>
+  <circle cx="650" cy="100" r="30" fill="#EDFFF4"/>
+  <text x="650" y="107" font-family="'Malgun Gothic', sans-serif" font-size="28" font-weight="bold" fill="#50C878" text-anchor="middle">03</text>
+  <text x="650" y="150" font-family="'Malgun Gothic', sans-serif" font-size="14" font-weight="bold" fill="#2D3436" text-anchor="middle">레거시 데이터</text>
+  <text x="650" y="167" font-family="'Malgun Gothic', sans-serif" font-size="11" fill="#50C878" text-anchor="middle">AI 모델 구축</text>
+  <line x1="560" y1="180" x2="740" y2="180" stroke="#E0E0E0" stroke-width="1"/>
+  <text x="558" y="200" font-family="'Malgun Gothic', sans-serif" font-size="11" fill="#555">• XML · PLMXML · STEP</text>
+  <text x="558" y="218" font-family="'Malgun Gothic', sans-serif" font-size="11" fill="#555">  IGES 파싱 파이프라인</text>
+  <text x="558" y="238" font-family="'Malgun Gothic', sans-serif" font-size="11" fill="#555">• 이기종 데이터 정규화</text>
+  <text x="558" y="256" font-family="'Malgun Gothic', sans-serif" font-size="11" fill="#555">  및 노이즈 제거</text>
+  <text x="558" y="276" font-family="'Malgun Gothic', sans-serif" font-size="11" fill="#555">• 도메인 특화 GNN/DRL</text>
+  <text x="558" y="294" font-family="'Malgun Gothic', sans-serif" font-size="11" fill="#555">  학습 데이터셋 구축</text>
+  <rect x="555" y="315" width="190" height="40" rx="8" fill="#EDFFF4"/>
+  <text x="650" y="331" font-family="'Malgun Gothic', sans-serif" font-size="10" fill="#50C878" text-anchor="middle" font-weight="bold">핵심 난점</text>
+  <text x="650" y="347" font-family="'Malgun Gothic', sans-serif" font-size="10" fill="#555" text-anchor="middle">휴먼 에러 포함 레거시 정제</text>
+</svg>
