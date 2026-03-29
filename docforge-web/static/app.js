@@ -728,10 +728,15 @@
 
     // 영문 마크다운 저장 및 언어 탭 표시
     currentMarkdownEn = j.markdown_en || "";
+    if (j.en_error) {
+      $("meta").textContent += ` · ⚠️ 영문 생성 실패: ${j.en_error}`;
+    }
     currentLang = "ko";
     const langTabs = $("langTabs");
     if (langTabs) {
-      langTabs.hidden = !currentMarkdownEn;
+      // with_english 요청했으면 영문 실패해도 탭 표시 (재번역 버튼 접근 가능)
+      const requestedEnglish = lastGenerateParams && lastGenerateParams.with_english;
+      langTabs.hidden = !(currentMarkdownEn || requestedEnglish);
       document.querySelectorAll(".lang-tab").forEach(b => {
         b.classList.toggle("active", b.dataset.lang === "ko");
       });

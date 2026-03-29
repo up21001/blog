@@ -939,11 +939,15 @@ async def generate(body: GenerateBody):
 
     # 영문 생성 (순차 번역 — 이미 완성된 한글 마크다운 기반)
     markdown_en = ""
+    en_error = ""
     if body.with_english:
         try:
             markdown_en = await translate_to_english_async(markdown, key)
+            if not markdown_en or not markdown_en.strip():
+                en_error = "번역 결과가 비어있습니다."
         except Exception as e:
             logger.warning("영문 번역 실패: %s", e)
+            en_error = str(e)
             markdown_en = ""
 
         # 영문 마크다운의 SVG 참조를 -en 버전으로 변경
@@ -963,6 +967,7 @@ async def generate(body: GenerateBody):
         "length": body.length,
         "markdown": markdown,
         "markdown_en": markdown_en,
+        "en_error": en_error,
         "images": images_out,
         "image_prompts": image_prompts_used,
         "svgs": svgs_out,
