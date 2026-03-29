@@ -60,6 +60,16 @@ enableRobotsTXT = true
   relatedContentLimit = 0
   showEdit = false
   showHeadingAnchors = true
+  showLikes = true
+
+[params.firebase]
+  apiKey = "AIzaSyA2Ci5sVCQNyoBcnVZ4ayKJGdajLCeLfj0"
+  authDomain = "blog-8ye.firebaseapp.com"
+  projectId = "blog-8ye"
+  storageBucket = "blog-8ye.firebasestorage.app"
+  messagingSenderId = "384171290916"
+  appId = "1:384171290916:web:58d10dace2974befc083b1"
+  measurementId = "G-PQNPM2YDSE"
 
 [params.footer]
   showCopyright = true
