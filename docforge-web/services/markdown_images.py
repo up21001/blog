@@ -50,6 +50,55 @@ def inject_images_into_markdown(markdown: str, images: list[dict]) -> str:
     return pattern.sub(repl, markdown)
 
 
+def inject_svgs_into_markdown(markdown: str, svgs: list[dict], slug: str) -> str:
+    """SVG 참조를 마크다운 H2 섹션별로 분산 삽입.
+
+    프론트매터 바로 뒤에 첫 SVG, 이후 H2 섹션 앞에 1개씩 배치.
+    """
+    if not svgs or not markdown:
+        return markdown
+
+    # SVG 참조 생성
+    svg_refs = []
+    for i, svg in enumerate(svgs):
+        desc = svg.get("description", f"svg-{i + 1}")
+        # alt를 짧게 (50자)
+        alt = desc[:50] if len(desc) > 50 else desc
+        path = f"/images/posts/{slug}/svg-{i + 1}.svg"
+        svg_refs.append(f"![{alt}]({path})")
+
+    # H2 섹션 위치 찾기
+    h2_positions = [m.start() for m in re.finditer(r"(?m)^## ", markdown)]
+
+    # 프론트매터 끝 위치 찾기
+    fm_end = 0
+    if markdown.startswith("---"):
+        second_fence = markdown.index("---", 3)
+        fm_end = markdown.index("\n", second_fence) + 1
+
+    # 삽입 위치 결정: 프론트매터 뒤 + H2 섹션 사이
+    insert_points = []
+    if fm_end > 0:
+        insert_points.append(fm_end)  # 첫 SVG: 프론트매터 바로 뒤
+    insert_points.extend(h2_positions)
+
+    # SVG 수가 삽입 포인트보다 많으면 마지막 포인트에 여러 개
+    result = markdown
+    offset = 0
+    for i, svg_ref in enumerate(svg_refs):
+        if i < len(insert_points):
+            pos = insert_points[i] + offset
+        else:
+            # 남은 SVG는 마지막 섹션 앞에
+            pos = insert_points[-1] + offset if insert_points else len(result)
+
+        insert_text = f"\n{svg_ref}\n\n"
+        result = result[:pos] + insert_text + result[pos:]
+        offset += len(insert_text)
+
+    return result
+
+
 def strip_placeholder_images(markdown: str) -> str:
     """삽화 없을 때 합성 URL 이미지를 제거하고 alt는 인용으로 유지."""
 

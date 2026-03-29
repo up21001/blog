@@ -47,7 +47,7 @@ from services.text_gen import (
     translate_series_to_english,
     translate_to_english_async,
 )
-from services.markdown_images import inject_images_into_markdown, strip_placeholder_images
+from services.markdown_images import inject_images_into_markdown, inject_svgs_into_markdown, strip_placeholder_images
 from services.prompt_config import get_builtin_defaults, get_for_api, reset_to_defaults, save_prompts
 from services.publish import (
     content_target_info, delete_static_image, extract_slug, has_data_images, list_posts,
@@ -910,6 +910,13 @@ async def generate(body: GenerateBody):
                     "description": spec.get("description", ""),
                     "svg": _SVG_FAIL_PLACEHOLDER,
                 })
+
+    # SVG 참조를 마크다운 섹션별로 분산 삽입
+    if svgs_out:
+        valid_svgs = [s for s in svgs_out if s.get("svg", "").startswith("<svg")]
+        if valid_svgs:
+            slug = _slug_from_topic(topic)
+            markdown = inject_svgs_into_markdown(markdown, valid_svgs, slug)
 
     # 영문 SVG 자동 생성 (한글 SVG가 있고 with_english인 경우)
     svgs_en_out: list[dict] = []
