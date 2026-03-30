@@ -273,7 +273,6 @@ For each asset output one JSON object per line (no array brackets, no markdown):
 Rules:
 - type "architecture": system diagrams, component relationships, service maps
 - type "infographic": data visualizations, step lists, statistics, key numbers
-- type "icon": single concept icons (small, symbolic, 24x24)
 - type "data_structure": binary layouts, memory maps, packet formats, byte-level diagrams
 - type "timing": signal waveforms, protocol timing, sequence of events over time
 - type "class_diagram": UML class diagrams, inheritance trees, interface relationships
@@ -281,7 +280,10 @@ Rules:
 - type "flowchart": decision trees, algorithm steps, process flows with yes/no branches
 - type "comparison": side-by-side feature comparisons, vs tables, option matrices
 - type "hierarchy": org charts, tree structures, category taxonomies, nested groupings
+- type "icon": AVOID this type. Only use for standalone icon sets, NOT for blog content illustrations.
+- IMPORTANT: For blog posts, prefer architecture, infographic, flowchart, comparison, pipeline types. These are full-size diagrams (800px wide) that add real value to articles. Do NOT use "icon" type unless the article is specifically about icon design.
 - Match each asset to a specific section or concept in the article
+- Each SVG should illustrate a DIFFERENT concept — no duplicate topics
 - Write descriptions in Korean, be specific and detailed
 - Output only JSON lines, nothing else"""
 
