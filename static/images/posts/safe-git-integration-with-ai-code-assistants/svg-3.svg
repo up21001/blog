@@ -1,106 +1,83 @@
-<svg width="800" height="800" viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
-    <!-- Background -->
-    <rect width="100%" height="100%" fill="#f8f9fa"/>
+<svg viewBox="0 0 800 750" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="750" fill="#f8f9fa"/>
 
-    <!-- Arrowhead Definition -->
-    <defs>
-        <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
-            <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
-        </marker>
-    </defs>
+  <defs>
+    <marker id="arrowhead" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#2D3748"/>
+    </marker>
+    <filter id="shadow" x="-2%" y="-2%" width="104%" height="104%">
+      <feDropShadow dx="1" dy="2" stdDeviation="2" flood-opacity="0.1"/>
+    </filter>
+  </defs>
 
-    <!-- Styles -->
-    <style>
-        .flow-shape {
-            stroke: #333;
-            stroke-width: 2;
-        }
-        .start-end { fill: #50C878; } /* Green for start/end */
-        .process { fill: #4A90D9; } /* Blue for process steps */
-        .decision { fill: #FFD93D; } /* Yellow for decision */
-        .error-process { fill: #FF6B6B; } /* Red for error path process */
-        .error-end { fill: #FF6B6B; } /* Red for error path end */
+  <style>
+    .title { font-family: Arial, sans-serif; font-size: 22px; font-weight: bold; fill: #2D3748; text-anchor: middle; }
+    .label { font-family: Arial, sans-serif; font-size: 14px; fill: #fff; text-anchor: middle; dominant-baseline: middle; }
+    .label-dark { font-family: Arial, sans-serif; font-size: 14px; fill: #2D3748; text-anchor: middle; dominant-baseline: middle; }
+    .branch-label { font-family: Arial, sans-serif; font-size: 13px; font-weight: bold; fill: #2D3748; }
+    .arrow { stroke: #2D3748; stroke-width: 2; fill: none; marker-end: url(#arrowhead); }
+  </style>
 
-        .flow-text {
-            font-family: "Arial, sans-serif";
-            font-size: 14px;
-            fill: #333;
-            text-anchor: middle;
-            dominant-baseline: middle;
-        }
-        .decision-label {
-            font-family: "Arial, sans-serif";
-            font-size: 12px;
-            fill: #333;
-            text-anchor: middle;
-            dominant-baseline: middle;
-        }
-        .arrow {
-            stroke: #333;
-            stroke-width: 2;
-            fill: none;
-            marker-end: url(#arrowhead);
-        }
-    </style>
+  <!-- 제목 -->
+  <text x="400" y="40" class="title">Pre-commit 훅 동작 흐름</text>
 
-    <!-- Shapes and Text -->
+  <!-- 1. 개발자 git commit 시도 (시작) -->
+  <ellipse cx="400" cy="90" rx="130" ry="28" fill="#50C878" filter="url(#shadow)"/>
+  <text x="400" y="90" class="label">개발자 git commit 시도</text>
 
-    <!-- Start: 개발자 git commit 시도 -->
-    <ellipse class="flow-shape start-end" cx="400" cy="80" rx="100" ry="30"/>
-    <text class="flow-text" x="400" y="80">개발자 git commit 시도</text>
+  <!-- 화살표: 시작 → pre-commit -->
+  <path class="arrow" d="M 400 118 L 400 155"/>
 
-    <!-- Process 1: pre-commit 훅 작동 -->
-    <rect class="flow-shape process" x="300" y="170" width="200" height="60"/>
-    <text class="flow-text" x="400" y="200">pre-commit 훅 작동</text>
+  <!-- 2. pre-commit 훅 작동 -->
+  <rect x="290" y="155" width="220" height="55" rx="8" fill="#4A90D9" filter="url(#shadow)"/>
+  <text x="400" y="183" class="label">pre-commit 훅 작동</text>
 
-    <!-- Process 2: 스테이징된 파일 검사 -->
-    <rect class="flow-shape process" x="300" y="280" width="200" height="60"/>
-    <text class="flow-text" x="400" y="310">스테이징된 파일 검사</text>
+  <!-- 화살표: pre-commit → 스테이징 검사 -->
+  <path class="arrow" d="M 400 210 L 400 245"/>
 
-    <!-- Decision: 민감 정보 패턴 발견? -->
-    <polygon class="flow-shape decision" points="400,340 500,400 400,460 300,400"/>
-    <text class="flow-text" x="400" y="400">민감 정보 패턴 발견?</text>
+  <!-- 3. 스테이징된 파일 검사 -->
+  <rect x="290" y="245" width="220" height="55" rx="8" fill="#4A90D9" filter="url(#shadow)"/>
+  <text x="400" y="273" class="label">스테이징된 파일 검사</text>
 
-    <!-- Process 3 (아니오 path): 커밋 진행 -->
-    <rect class="flow-shape process" x="550" y="370" width="200" height="60"/>
-    <text class="flow-text" x="650" y="400">커밋 진행</text>
+  <!-- 화살표: 스테이징 검사 → 판단 -->
+  <path class="arrow" d="M 400 300 L 400 345"/>
 
-    <!-- End 1 (아니오 path): 커밋 성공 -->
-    <ellipse class="flow-shape start-end" cx="650" cy="510" rx="100" ry="30"/>
-    <text class="flow-text" x="650" y="510">커밋 성공</text>
+  <!-- 4. 민감 정보 패턴 발견? (다이아몬드) -->
+  <polygon points="400,345 510,410 400,475 290,410" fill="#FFD93D" stroke="#e6c235" stroke-width="1" filter="url(#shadow)"/>
+  <text x="400" y="403" class="label-dark" font-size="13">민감 정보</text>
+  <text x="400" y="420" class="label-dark" font-size="13">패턴 발견?</text>
 
-    <!-- Process 4 (예 path): 커밋 중단 -->
-    <rect class="flow-shape error-process" x="300" y="510" width="200" height="60"/>
-    <text class="flow-text" x="400" y="540">커밋 중단</text>
+  <!-- 분기: 아니오 (오른쪽) -->
+  <path class="arrow" d="M 510 410 L 570 410"/>
+  <text x="540" y="398" class="branch-label">아니오</text>
 
-    <!-- Process 5 (예 path): 경고 메시지 출력 -->
-    <rect class="flow-shape error-process" x="300" y="620" width="200" height="60"/>
-    <text class="flow-text" x="400" y="650">경고 메시지 출력</text>
+  <!-- 5a. 커밋 진행 -->
+  <rect x="570" y="383" width="180" height="55" rx="8" fill="#4A90D9" filter="url(#shadow)"/>
+  <text x="660" y="411" class="label">커밋 진행</text>
 
-    <!-- End 2 (예 path): 커밋 중단 -->
-    <ellipse class="flow-shape error-end" cx="400" cy="740" rx="100" ry="30"/>
-    <text class="flow-text" x="400" y="740">커밋 중단</text>
+  <!-- 화살표: 커밋 진행 → 커밋 성공 -->
+  <path class="arrow" d="M 660 438 L 660 480"/>
 
-    <!-- Arrows -->
+  <!-- 6a. 커밋 성공 (종료) -->
+  <ellipse cx="660" cy="510" rx="110" ry="28" fill="#50C878" filter="url(#shadow)"/>
+  <text x="660" y="510" class="label">커밋 성공</text>
 
-    <!-- Start to Process 1 -->
-    <path class="arrow" d="M 400 110 L 400 155"/>
-    <!-- Process 1 to Process 2 -->
-    <path class="arrow" d="M 400 230 L 400 265"/>
-    <!-- Process 2 to Decision -->
-    <path class="arrow" d="M 400 340 L 400 325"/>
+  <!-- 분기: 예 (아래) -->
+  <path class="arrow" d="M 400 475 L 400 520"/>
+  <text x="418" y="500" class="branch-label">예</text>
 
-    <!-- Decision (Right - 아니오) to Process 3 -->
-    <path class="arrow" d="M 500 400 L 535 400"/>
-    <text class="decision-label" x="515" y="380">아니오</text>
-    <!-- Process 3 to End 1 -->
-    <path class="arrow" d="M 650 430 L 650 465"/>
+  <!-- 5b. 커밋 중단 + 경고 -->
+  <rect x="290" y="520" width="220" height="55" rx="8" fill="#FF6B6B" filter="url(#shadow)"/>
+  <text x="400" y="548" class="label">커밋 중단 + 경고 출력</text>
 
-    <!-- Decision (Bottom - 예) to Process 4 -->
-    <path class="arrow" d="M 400 460 L 400 495"/>
-    <text class="decision-label" x="420" y="480">예</text>
-    <!-- Process 4 to Process 5 -->
-    <path class="arrow" d="M 400 570 L 400 605"/>
-    <!-- Process 5 to End 2 -->
-    <path class="arrow" d="M 400 680 L 400 695"/>
+  <!-- 화살표: 경고 → 개발자 수정 -->
+  <path class="arrow" d="M 400 575 L 400 615"/>
+
+  <!-- 6b. 개발자 민감 정보 제거 -->
+  <rect x="280" y="615" width="240" height="55" rx="8" fill="#6C5CE7" filter="url(#shadow)"/>
+  <text x="400" y="643" class="label">개발자: 민감 정보 제거</text>
+
+  <!-- 화살표: 수정 → 재시도 (위로 되돌림) -->
+  <path class="arrow" d="M 280 643 L 200 643 L 200 90 L 270 90"/>
+  <text x="188" y="400" class="branch-label" text-anchor="end">재시도</text>
 </svg>

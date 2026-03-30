@@ -1,123 +1,78 @@
-<svg viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
-  <style>
-    /* General shape styling */
-    .shape {
-      stroke: #333;
-      stroke-width: 2;
-      fill: #f8f9fa; /* Background color for shapes */
-    }
-    /* Specific shape colors */
-    .start-end { fill: #50C878; } /* Green */
-    .process { fill: #4A90D9; } /* Blue */
-    .decision { fill: #FFD93D; } /* Yellow */
-    .error-path { fill: #FF6B6B; } /* Red for error/abort */
-
-    /* Text styling */
-    .text {
-      font-family: "Arial, sans-serif";
-      font-size: 14px;
-      fill: #333;
-      text-anchor: middle;
-      dominant-baseline: middle;
-    }
-    .decision-label {
-      font-family: "Arial, sans-serif";
-      font-size: 12px;
-      fill: #333;
-      text-anchor: middle;
-      dominant-baseline: middle;
-    }
-
-    /* Arrow styling */
-    .arrow {
-      stroke: #333;
-      stroke-width: 2;
-      fill: none;
-      marker-end: url(#arrowhead);
-    }
-  </style>
+<svg viewBox="0 0 800 750" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="750" fill="#f8f9fa"/>
 
   <defs>
-    <!-- Arrowhead definition -->
-    <marker id="arrowhead" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
-      <path d="M 0 0 L 10 5 L 0 10 z" fill="#333" />
+    <marker id="arrowhead" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#2D3748"/>
     </marker>
+    <filter id="shadow" x="-2%" y="-2%" width="104%" height="104%">
+      <feDropShadow dx="1" dy="2" stdDeviation="2" flood-opacity="0.1"/>
+    </filter>
   </defs>
 
-  <!-- Flowchart Shapes and Text Labels (Rendering Order: Shapes then Arrows) -->
+  <style>
+    .title { font-family: Arial, sans-serif; font-size: 22px; font-weight: bold; fill: #2D3748; text-anchor: middle; }
+    .label { font-family: Arial, sans-serif; font-size: 14px; fill: #fff; text-anchor: middle; dominant-baseline: middle; }
+    .label-dark { font-family: Arial, sans-serif; font-size: 14px; fill: #2D3748; text-anchor: middle; dominant-baseline: middle; }
+    .branch-label { font-family: Arial, sans-serif; font-size: 13px; font-weight: bold; fill: #2D3748; }
+    .arrow { stroke: #2D3748; stroke-width: 2; fill: none; marker-end: url(#arrowhead); }
+  </style>
 
-  <!-- Start Node -->
-  <ellipse cx="400" cy="50" rx="60" ry="30" class="shape start-end" />
-  <text x="400" y="50" class="text">Start</text>
+  <!-- Title -->
+  <text x="400" y="40" class="title">Pre-commit Hook Workflow</text>
 
-  <!-- Process: Developer attempts git commit -->
-  <rect x="300" y="100" width="200" height="60" rx="5" ry="5" class="shape process" />
-  <text x="400" y="130" class="text">Developer attempts</text>
-  <text x="400" y="148" class="text">`git commit`</text>
+  <!-- 1. Developer runs git commit -->
+  <ellipse cx="400" cy="90" rx="130" ry="28" fill="#50C878" filter="url(#shadow)"/>
+  <text x="400" y="90" class="label">Developer runs git commit</text>
 
-  <!-- Process: pre-commit hook activates -->
-  <rect x="300" y="200" width="200" height="60" rx="5" ry="5" class="shape process" />
-  <text x="400" y="230" class="text">`pre-commit` hook</text>
-  <text x="400" y="248" class="text">activates</text>
+  <path class="arrow" d="M 400 118 L 400 155"/>
 
-  <!-- Process: Scan staged files for sensitive data -->
-  <rect x="270" y="300" width="260" height="80" rx="5" ry="5" class="shape process" />
-  <text x="400" y="330" class="text">Scan staged files for</text>
-  <text x="400" y="350" class="text">sensitive data patterns</text>
+  <!-- 2. Pre-commit hook triggers -->
+  <rect x="290" y="155" width="220" height="55" rx="8" fill="#4A90D9" filter="url(#shadow)"/>
+  <text x="400" y="183" class="label">Pre-commit hook triggers</text>
 
-  <!-- Decision: Sensitive data found? -->
-  <polygon points="400,410 500,460 400,510 300,460" class="shape decision" />
-  <text x="400" y="450" class="text">Sensitive data</text>
-  <text x="400" y="470" class="text">found?</text>
+  <path class="arrow" d="M 400 210 L 400 245"/>
 
-  <!-- Process (No path): Allow commit -->
-  <rect x="350" y="580" width="150" height="60" rx="5" ry="5" class="shape process" />
-  <text x="425" y="610" class="text">Allow commit</text>
+  <!-- 3. Scan staged files -->
+  <rect x="290" y="245" width="220" height="55" rx="8" fill="#4A90D9" filter="url(#shadow)"/>
+  <text x="400" y="273" class="label">Scan staged files</text>
 
-  <!-- Process (Yes path): Abort commit -->
-  <rect x="150" y="580" width="150" height="60" rx="5" ry="5" class="shape error-path" />
-  <text x="225" y="610" class="text">Abort commit</text>
+  <path class="arrow" d="M 400 300 L 400 345"/>
 
-  <!-- Process (Yes path): Notify developer -->
-  <rect x="150" y="680" width="150" height="60" rx="5" ry="5" class="shape error-path" />
-  <!-- Wrapped text into three lines to fit within the box -->
-  <text x="225" y="692" class="text">Notify developer</text>
-  <text x="225" y="710" class="text">of sensitive</text>
-  <text x="225" y="728" class="text">data</text>
+  <!-- 4. Sensitive data found? -->
+  <polygon points="400,345 510,410 400,475 290,410" fill="#FFD93D" stroke="#e6c235" stroke-width="1" filter="url(#shadow)"/>
+  <text x="400" y="403" class="label-dark" font-size="13">Sensitive data</text>
+  <text x="400" y="420" class="label-dark" font-size="13">pattern found?</text>
 
-  <!-- End Node -->
-  <ellipse cx="400" cy="770" rx="60" ry="30" class="shape start-end" />
-  <text x="400" y="770" class="text">End</text>
+  <!-- Branch: No (right) -->
+  <path class="arrow" d="M 510 410 L 570 410"/>
+  <text x="540" y="398" class="branch-label">No</text>
 
-  <!-- Arrows (Must be rendered last) -->
+  <!-- 5a. Proceed with commit -->
+  <rect x="570" y="383" width="180" height="55" rx="8" fill="#4A90D9" filter="url(#shadow)"/>
+  <text x="660" y="411" class="label">Proceed with commit</text>
 
-  <!-- Start to Developer attempts commit -->
-  <path d="M 400 80 L 400 85" class="arrow" />
+  <path class="arrow" d="M 660 438 L 660 480"/>
 
-  <!-- Developer attempts commit to pre-commit hook -->
-  <path d="M 400 160 L 400 185" class="arrow" />
+  <!-- 6a. Commit successful -->
+  <ellipse cx="660" cy="510" rx="110" ry="28" fill="#50C878" filter="url(#shadow)"/>
+  <text x="660" y="510" class="label">Commit successful</text>
 
-  <!-- pre-commit hook to Scan staged files -->
-  <path d="M 400 260 L 400 285" class="arrow" />
+  <!-- Branch: Yes (down) -->
+  <path class="arrow" d="M 400 475 L 400 520"/>
+  <text x="418" y="500" class="branch-label">Yes</text>
 
-  <!-- Scan staged files to Decision -->
-  <path d="M 400 380 L 400 395" class="arrow" />
+  <!-- 5b. Abort + warning -->
+  <rect x="290" y="520" width="220" height="55" rx="8" fill="#FF6B6B" filter="url(#shadow)"/>
+  <text x="400" y="548" class="label">Abort commit + warning</text>
 
-  <!-- Decision (No) to Allow commit -->
-  <path d="M 400 510 L 400 565" class="arrow" />
-  <text x="450" y="545" class="decision-label">No</text>
+  <path class="arrow" d="M 400 575 L 400 615"/>
 
-  <!-- Decision (Yes) to Abort commit -->
-  <path d="M 300 460 L 225 460 L 225 565" class="arrow" />
-  <text x="260" y="475" class="decision-label">Yes</text>
+  <!-- 6b. Developer removes sensitive data -->
+  <rect x="270" y="615" width="260" height="55" rx="8" fill="#6C5CE7" filter="url(#shadow)"/>
+  <text x="400" y="643" class="label">Remove sensitive data</text>
 
-  <!-- Abort commit to Notify developer -->
-  <path d="M 225 640 L 225 665" class="arrow" />
-
-  <!-- Allow commit to End -->
-  <path d="M 425 640 L 425 725 L 400 725" class="arrow" />
-
-  <!-- Notify developer to End -->
-  <path d="M 225 740 L 225 725 L 400 725" class="arrow" />
-
+  <!-- Retry arrow -->
+  <path class="arrow" d="M 270 643 L 200 643 L 200 90 L 270 90"/>
+  <text x="188" y="400" class="branch-label" text-anchor="end">Retry</text>
 </svg>

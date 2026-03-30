@@ -1,110 +1,97 @@
-<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
-  <rect x="0" y="0" width="800" height="500" fill="#f8f9fa"/>
+<svg viewBox="0 0 800 550" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="550" fill="#f8f9fa"/>
 
-  <!-- Global Styles -->
+  <defs>
+    <marker id="arrowhead" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#2D3748"/>
+    </marker>
+    <filter id="shadow" x="-2%" y="-2%" width="104%" height="104%">
+      <feDropShadow dx="1" dy="2" stdDeviation="2" flood-opacity="0.1"/>
+    </filter>
+  </defs>
+
   <style>
-    .stage-box {
-      stroke: #2D3748;
-      stroke-width: 1;
-      rx: 10;
-      ry: 10;
-    }
-    .stage-icon-area {
-      fill: rgba(255, 255, 255, 0.2); /* Subtle highlight for icon area */
-      rx: 10;
-      ry: 10;
-    }
-    .stage-text {
-      font-family: "Arial, sans-serif";
-      font-size: 14px;
-      font-weight: bold;
-      fill: #2D3748;
-      text-anchor: middle;
-    }
-    .arrow-label {
-      font-family: "Arial, sans-serif";
-      font-size: 12px;
-      fill: #2D3748;
-      text-anchor: middle;
-    }
-    .title {
-      font-family: "Arial, sans-serif";
-      font-size: 20px;
-      font-weight: bold;
-      fill: #2D3748;
-      text-anchor: middle;
-    }
-    .arrow {
-      stroke: #2D3748;
-      stroke-width: 2;
-      fill: none;
-      marker-end: url(#arrowhead);
-    }
+    .title { font-family: Arial, sans-serif; font-size: 22px; font-weight: bold; fill: #2D3748; text-anchor: middle; }
+    .label { font-family: Arial, sans-serif; font-size: 14px; fill: #fff; text-anchor: middle; dominant-baseline: middle; }
+    .label-dark { font-family: Arial, sans-serif; font-size: 14px; fill: #2D3748; text-anchor: middle; dominant-baseline: middle; }
+    .label-sm { font-family: Arial, sans-serif; font-size: 12px; fill: #2D3748; text-anchor: middle; dominant-baseline: middle; }
+    .arrow { stroke: #2D3748; stroke-width: 2; fill: none; marker-end: url(#arrowhead); }
+    .arrow-red { stroke: #FF6B6B; stroke-width: 2; fill: none; marker-end: url(#arrowhead-red); }
+    .file-box { fill: #fff; stroke: #D3DCE6; stroke-width: 1; rx: 6; }
   </style>
 
-  <!-- Markers for arrows -->
   <defs>
-    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#2D3748" />
+    <marker id="arrowhead-red" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#FF6B6B"/>
     </marker>
   </defs>
 
-  <!-- Title -->
-  <text x="400" y="50" class="title">AI 어시스턴트 파일 처리 흐름</text>
+  <!-- 제목 -->
+  <text x="400" y="40" class="title">AI 어시스턴트의 파일 접근 제어 (.cursorignore)</text>
 
-  <!-- Stages (Rectangles and Text) -->
+  <!-- 프로젝트 파일들 영역 -->
+  <rect x="30" y="80" width="180" height="200" rx="10" fill="#E8F4FD" stroke="#4A90D9" stroke-width="2" filter="url(#shadow)"/>
+  <text x="120" y="105" class="label-dark" font-weight="bold">프로젝트 파일</text>
 
-  <!-- Stage 1: 프로젝트 파일 -->
-  <rect x="20" y="150" width="160" height="80" class="stage-box" style="fill:#4A90D9;"/>
-  <rect x="20" y="150" width="160" height="20" class="stage-icon-area"/>
-  <text x="100" y="195" class="stage-text">프로젝트 파일</text>
+  <rect x="50" y="120" width="140" height="28" class="file-box"/>
+  <text x="120" y="134" class="label-sm">src/main.py</text>
+  <rect x="50" y="155" width="140" height="28" class="file-box"/>
+  <text x="120" y="169" class="label-sm">config/settings.yaml</text>
+  <rect x="50" y="190" width="140" height="28" class="file-box"/>
+  <text x="120" y="204" class="label-sm">.env (비밀키)</text>
+  <rect x="50" y="225" width="140" height="28" class="file-box"/>
+  <text x="120" y="239" class="label-sm">credentials.json</text>
 
-  <!-- Stage 2: .cursorignore 파일 확인 -->
-  <rect x="220" y="150" width="160" height="80" class="stage-box" style="fill:#50C878;"/>
-  <rect x="220" y="150" width="160" height="20" class="stage-icon-area"/>
-  <text x="300" y="185" class="stage-text">.cursorignore</text>
-  <text x="300" y="205" class="stage-text">파일 확인</text>
+  <!-- 화살표: 프로젝트 → .cursorignore 필터 -->
+  <path class="arrow" d="M 210 180 L 280 180"/>
 
-  <!-- Stage 3a: 제외된 파일 -->
-  <rect x="220" y="280" width="160" height="80" class="stage-box" style="fill:#B0BEC5;"/> <!-- Distinct color for excluded -->
-  <rect x="220" y="280" width="160" height="20" class="stage-icon-area"/>
-  <text x="300" y="325" class="stage-text">제외된 파일</text>
+  <!-- .cursorignore 필터 -->
+  <rect x="280" y="120" width="200" height="120" rx="10" fill="#50C878" stroke="#3da864" stroke-width="2" filter="url(#shadow)"/>
+  <text x="380" y="155" class="label" font-weight="bold">.cursorignore</text>
+  <text x="380" y="175" class="label" font-size="12">필터링</text>
+  <line x1="300" y1="195" x2="460" y2="195" stroke="#fff" stroke-width="1" stroke-opacity="0.5"/>
+  <text x="380" y="215" class="label" font-size="11">.env</text>
+  <text x="380" y="230" class="label" font-size="11">credentials.json</text>
 
-  <!-- Stage 3b: 분석 대상 파일 -->
-  <rect x="420" y="150" width="160" height="80" class="stage-box" style="fill:#50C878;"/>
-  <rect x="420" y="150" width="160" height="20" class="stage-icon-area"/>
-  <text x="500" y="195" class="stage-text">분석 대상 파일</text>
+  <!-- 화살표: 필터 → 허용된 파일 (오른쪽) -->
+  <path class="arrow" d="M 480 160 L 560 160"/>
+  <rect x="505" y="138" width="40" height="20" fill="#f8f9fa" rx="3"/>
+  <text x="525" y="152" class="label-sm" fill="#50C878" font-weight="bold">허용</text>
 
-  <!-- Stage 4: AI 분석 -->
-  <rect x="620" y="150" width="160" height="80" class="stage-box" style="fill:#6C5CE7;"/>
-  <rect x="620" y="150" width="160" height="20" class="stage-icon-area"/>
-  <text x="700" y="195" class="stage-text">AI 분석</text>
+  <!-- 화살표: 필터 → 차단된 파일 (아래) -->
+  <path d="M 380 240 L 380 330" stroke="#FF6B6B" stroke-width="2" fill="none" marker-end="url(#arrowhead-red)"/>
+  <rect x="355" y="275" width="50" height="20" fill="#f8f9fa" rx="3"/>
+  <text x="380" y="289" class="label-sm" fill="#FF6B6B" font-weight="bold">차단</text>
 
-  <!-- Stage 5: 컨텍스트 구성 -->
-  <rect x="620" y="280" width="160" height="80" class="stage-box" style="fill:#6C5CE7;"/>
-  <rect x="620" y="280" width="160" height="20" class="stage-icon-area"/>
-  <text x="700" y="325" class="stage-text">컨텍스트 구성</text>
+  <!-- 허용된 파일 → AI 어시스턴트 -->
+  <rect x="560" y="100" width="200" height="120" rx="10" fill="#4A90D9" stroke="#3a7bc0" stroke-width="2" filter="url(#shadow)"/>
+  <text x="660" y="140" class="label" font-weight="bold">AI 어시스턴트</text>
+  <text x="660" y="162" class="label" font-size="12">컨텍스트 구성</text>
+  <line x1="580" y1="180" x2="740" y2="180" stroke="#fff" stroke-width="1" stroke-opacity="0.5"/>
+  <text x="660" y="200" class="label" font-size="11">src/main.py ✓</text>
+  <text x="660" y="215" class="label" font-size="11">config/settings.yaml ✓</text>
 
-  <!-- Arrows (Paths and Labels) - MUST BE LAST -->
+  <!-- 차단된 파일 -->
+  <rect x="280" y="330" width="200" height="90" rx="10" fill="#FFE0E0" stroke="#FF6B6B" stroke-width="2" filter="url(#shadow)"/>
+  <text x="380" y="360" class="label-dark" font-weight="bold" fill="#FF6B6B">접근 차단</text>
+  <text x="380" y="385" class="label-sm">.env (비밀키) ✗</text>
+  <text x="380" y="403" class="label-sm">credentials.json ✗</text>
 
-  <!-- Arrow 1: 프로젝트 파일 -> .cursorignore 파일 확인 -->
-  <path d="M180 190 H220" class="arrow"/>
-  <text x="200" y="180" class="arrow-label">전체 파일</text>
+  <!-- AI 어시스턴트 → 코드 제안 -->
+  <path class="arrow" d="M 660 220 L 660 310"/>
 
-  <!-- Arrow 2: .cursorignore 파일 확인 -> 제외된 파일 -->
-  <path d="M300 230 V280" class="arrow"/>
-  <text x="300" y="265" class="arrow-label">차단</text>
+  <rect x="560" y="310" width="200" height="70" rx="10" fill="#6C5CE7" filter="url(#shadow)"/>
+  <text x="660" y="340" class="label" font-weight="bold">코드 제안 생성</text>
+  <text x="660" y="358" class="label" font-size="11">민감 정보 없이 안전하게</text>
 
-  <!-- Arrow 3: .cursorignore 파일 확인 -> 분석 대상 파일 -->
-  <path d="M380 190 H420" class="arrow"/>
-  <text x="400" y="180" class="arrow-label">허용</text>
-
-  <!-- Arrow 4: 분석 대상 파일 -> AI 분석 -->
-  <path d="M580 190 H620" class="arrow"/>
-  <text x="600" y="180" class="arrow-label">처리</text>
-
-  <!-- Arrow 5: AI 분석 -> 컨텍스트 구성 -->
-  <path d="M700 230 V280" class="arrow"/>
-  <text x="700" y="265" class="arrow-label">결과</text>
-
+  <!-- 범례 -->
+  <rect x="30" y="470" width="740" height="50" rx="8" fill="#fff" stroke="#D3DCE6" stroke-width="1"/>
+  <rect x="50" y="485" width="16" height="16" rx="3" fill="#50C878"/>
+  <text x="75" y="497" class="label-sm" text-anchor="start">허용된 파일</text>
+  <rect x="200" y="485" width="16" height="16" rx="3" fill="#FF6B6B"/>
+  <text x="225" y="497" class="label-sm" text-anchor="start">차단된 파일</text>
+  <rect x="370" y="485" width="16" height="16" rx="3" fill="#4A90D9"/>
+  <text x="395" y="497" class="label-sm" text-anchor="start">AI 처리 영역</text>
+  <rect x="540" y="485" width="16" height="16" rx="3" fill="#6C5CE7"/>
+  <text x="565" y="497" class="label-sm" text-anchor="start">결과 출력</text>
 </svg>
