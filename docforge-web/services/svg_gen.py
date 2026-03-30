@@ -399,6 +399,51 @@ def _fix_common_svg_issues(svg: str) -> str:
     svg = svg.replace('fill="currentColor"', 'fill="#4A90D9"')
     svg = re.sub(r'&(?!amp;|lt;|gt;|quot;|apos;|#\d+;|#x[0-9a-fA-F]+;)', '&amp;', svg)
     svg = _fix_style_block_css(svg)
+    svg = _fix_border_fill_none(svg)
+    svg = _fix_path_fill_none(svg)
+    return svg
+
+
+def _fix_border_fill_none(svg: str) -> str:
+    """CSS 클래스에 stroke만 있고 fill이 없으면 fill: none 추가 (검은 박스 방지)."""
+    def _add_fill_none(match: re.Match[str]) -> str:
+        css = match.group(1)
+        # stroke가 있지만 fill이 없는 CSS 규칙에 fill: none 추가
+        def _fix_rule(rule_match: re.Match[str]) -> str:
+            selector = rule_match.group(1)
+            body = rule_match.group(2)
+            has_stroke = re.search(r'\bstroke\s*:', body)
+            has_fill = re.search(r'\bfill\s*:', body)
+            # border/outline/connector 류 클래스이거나 stroke만 있고 fill 없는 경우
+            is_border_class = any(kw in selector.lower() for kw in
+                                  ['border', 'outline', 'connector', 'line', 'separator', 'divider'])
+            if has_stroke and not has_fill and is_border_class:
+                body = body.rstrip()
+                if not body.endswith(';'):
+                    body += ';'
+                body += ' fill: none;'
+            return f"{selector} {{{body}}}"
+        css = re.sub(r'([^{}]+)\{([^{}]+)\}', _fix_rule, css)
+        return f"<style>{css}</style>"
+    return re.sub(r"<style\b[^>]*>([\s\S]*?)</style>", _add_fill_none, svg, flags=re.IGNORECASE)
+
+
+def _fix_path_fill_none(svg: str) -> str:
+    """stroke가 있지만 fill이 없는 <path>/<line>/<polyline>에 fill='none' 추가."""
+    def _fix_element(match: re.Match[str]) -> str:
+        tag_content = match.group(0)
+        has_stroke = 'stroke=' in tag_content or 'stroke:' in tag_content
+        has_fill = 'fill=' in tag_content
+        if has_stroke and not has_fill:
+            # 자기 닫는 태그인 경우
+            if tag_content.rstrip().endswith('/>'):
+                return tag_content.replace('/>', ' fill="none"/>')
+            # 여는 태그인 경우
+            return tag_content[:-1] + ' fill="none">'
+        return tag_content
+    svg = re.sub(r'<path\b[^>]*/?>', _fix_element, svg)
+    svg = re.sub(r'<line\b[^>]*/?>', _fix_element, svg)
+    svg = re.sub(r'<polyline\b[^>]*/?>', _fix_element, svg)
     return svg
 
 
@@ -498,6 +543,17 @@ def _lint_svg_quality(svg: str) -> list[str]:
         return issues
 
     _, _, viewbox_width, viewbox_height = _parse_viewbox(root)
+
+    # stroke가 있지만 fill이 없는 rect 검출 (검은 박스 위험)
+    for el in root.iter():
+        tag = el.tag.rsplit("}", 1)[-1]
+        if tag == "rect":
+            has_stroke = el.get("stroke") is not None
+            has_fill = el.get("fill") is not None
+            has_class = el.get("class", "")
+            # stroke가 있고 fill이 없는 rect (CSS 클래스로 fill 설정된 경우 제외 가능)
+            if has_stroke and not has_fill and not has_class:
+                issues.append(f'rect with stroke but no fill attribute — may render as black box')
 
     for el in root.iter():
         if el.tag.rsplit("}", 1)[-1] != "text":
