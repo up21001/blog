@@ -1,100 +1,66 @@
-<svg viewBox="0 0 800 1000" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 800 480" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="sh"><feDropShadow dx="1" dy="2" stdDeviation="2" flood-opacity="0.1"/></filter>
+    <marker id="arr" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0,8 3,0 6" fill="#2D3748"/>
+    </marker>
+  </defs>
   <style>
-    .title {
-      font-family: "Arial, sans-serif";
-      font-size: 32px;
-      font-weight: bold;
-      fill: #333;
-      text-anchor: middle;
-    }
-    .section-title {
-      font-family: "Arial, sans-serif";
-      font-size: 24px;
-      font-weight: bold;
-      fill: #333;
-      text-anchor: middle;
-    }
-    .description {
-      font-family: "Arial, sans-serif";
-      font-size: 18px;
-      fill: #333;
-      text-anchor: middle;
-    }
-    .icon-stroke {
-      stroke: #333;
-      stroke-width: 4;
-      fill: none;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-    }
-    .icon-fill {
-      fill: #333;
-    }
+    .title { font-family: Arial, sans-serif; font-size: 20px; font-weight: bold; fill: #2D3748; text-anchor: middle; }
+    .box { rx: 10; filter: url(#sh); }
+    .lbl { font-family: Arial, sans-serif; font-size: 14px; font-weight: bold; fill: #fff; text-anchor: middle; dominant-baseline: middle; }
+    .al { font-family: Arial, sans-serif; font-size: 11px; fill: #2D3748; text-anchor: middle; }
+    .ar { stroke: #2D3748; stroke-width: 2; fill: none; marker-end: url(#arr); }
   </style>
 
-  <!-- Title -->
-  <text x="400" y="80" class="title">Three Fundamental Limitations of AI Coding Assistants</text>
+  <rect width="800" height="480" fill="#f8f9fa"/>
+  <text x="400" y="35" class="title">Security Vulnerabilities AI Can Introduce</text>
 
-  <!-- Section 1: 의미론적 이해 부재 -->
-  <g transform="translate(0, 180)">
-    <!-- Icon: Brain with X -->
-    <g transform="translate(400, 0)">
-      <!-- Brain outline -->
-      <path class="icon-stroke" d="M-50,0 C-70,-60 -30,-80 0,-70 C30,-80 70,-60 50,0 C60,40 30,70 0,60 C-30,70 -60,40 -50,0 Z"/>
-      <path class="icon-stroke" d="M-10,-50 C-25,-40 -25,20 -10,30"/>
-      <path class="icon-stroke" d="M10,-50 C25,-40 25,20 10,30"/>
-      <!-- X mark -->
-      <line class="icon-stroke" x1="-30" y1="-30" x2="30" y2="30"/>
-      <line class="icon-stroke" x1="30" y1="-30" x2="-30" y2="30"/>
-    </g>
-    <text x="400" y="120" class="section-title">1. Lack of Semantic Understanding</text>
-    <text x="400" y="160" class="description">Code may be syntactically correct,</text>
-    <text x="400" y="185" class="description">but it lacks deep understanding of actual intent or context.</text>
-  </g>
+  <rect x="280" y="55" width="240" height="50" class="box" fill="#4A90D9"/>
+  <text x="400" y="80" class="lbl">AI Generated Code</text>
 
-  <!-- Section 2: 과거 데이터 의존성 -->
-  <g transform="translate(0, 420)">
-    <!-- Icon: Old Calendar -->
-    <g transform="translate(400, 0)">
-      <!-- Calendar body -->
-      <rect class="icon-stroke" x="-40" y="-50" width="80" height="100" rx="8" ry="8"/>
-      <!-- Top bar -->
-      <rect class="icon-fill" x="-40" y="-50" width="80" height="20" rx="8" ry="8"/>
-      <!-- Calendar month text (e.g., "OCT") -->
-      <text x="0" y="-35" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white" text-anchor="middle">OCT</text>
-      <!-- Date number (e.g., "24") -->
-      <text x="0" y="20" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="#333" text-anchor="middle">24</text>
-      <!-- Folded corner -->
-      <path class="icon-fill" d="M40,-50 L10,-50 L40,-20 Z"/>
-    </g>
-    <text x="400" y="120" class="section-title">2. Dependence on Past Data</text>
-    <text x="400" y="160" class="description">Generates code based on learned past data,</text>
-    <text x="400" y="185" class="description">weak in adopting latest technologies or innovative solutions.</text>
-  </g>
+  <path class="ar" d="M 160 105 L 160 150"/>
+  <path class="ar" d="M 400 105 L 400 150"/>
+  <path class="ar" d="M 640 105 L 640 150"/>
 
-  <!-- Section 3: 제한된 컨텍스트 윈도우 -->
-  <g transform="translate(0, 660)">
-    <!-- Icon: Magnifying glass showing only a part -->
-    <g transform="translate(400, 0)">
-      <!-- Full context rectangle -->
-      <rect x="-60" y="-40" width="120" height="80" fill="#EEE" stroke="#333" stroke-width="2" rx="5" ry="5"/>
-      <!-- Magnifying glass lens -->
-      <circle class="icon-stroke" cx="0" cy="0" r="35"/>
-      <!-- Magnifying glass handle -->
-      <line class="icon-stroke" x1="25" y1="25" x2="55" y2="55"/>
-      <!-- Highlighted part inside the lens -->
-      <rect x="-20" y="-15" width="40" height="30" fill="#333" opacity="0.1"/>
-      <!-- Small text/pattern inside the context -->
-      <text x="-40" y="-20" font-family="Arial, sans-serif" font-size="10" fill="#666">Code Block 1</text>
-      <text x="-40" y="0" font-family="Arial, sans-serif" font-size="10" fill="#666">Code Block 2</text>
-      <text x="-40" y="20" font-family="Arial, sans-serif" font-size="10" fill="#666">Code Block 3</text>
-      <text x="20" y="-20" font-family="Arial, sans-serif" font-size="10" fill="#666">...</text>
-      <text x="20" y="0" font-family="Arial, sans-serif" font-size="10" fill="#666">...</text>
-      <text x="20" y="20" font-family="Arial, sans-serif" font-size="10" fill="#666">...</text>
-    </g>
-    <text x="400" y="120" class="section-title">3. Limited Context Window</text>
-    <text x="400" y="160" class="description">Due to a limited amount of code it can process,</text>
-    <text x="400" y="185" class="description">it struggles to grasp complex interactions in large projects.</text>
-  </g>
+  <rect x="60" y="150" width="200" height="70" class="box" fill="#FF6B6B"/>
+  <text x="160" y="180" class="lbl">Hardcoded</text>
+  <text x="160" y="198" class="lbl">Credentials</text>
 
+  <rect x="300" y="150" width="200" height="70" class="box" fill="#FF6B6B"/>
+  <text x="400" y="180" class="lbl">SQL Injection</text>
+  <text x="400" y="198" class="lbl">Vulnerability</text>
+
+  <rect x="540" y="150" width="200" height="70" class="box" fill="#FF6B6B"/>
+  <text x="640" y="180" class="lbl">XSS Cross-Site</text>
+  <text x="640" y="198" class="lbl">Scripting</text>
+
+  <path class="ar" d="M 160 220 L 160 265"/>
+  <path class="ar" d="M 400 220 L 400 265"/>
+  <path class="ar" d="M 640 220 L 640 265"/>
+
+  <rect x="120" y="237" width="80" height="16" fill="#f8f9fa" rx="3"/>
+  <text x="160" y="248" class="al">Replace with</text>
+  <rect x="360" y="237" width="80" height="16" fill="#f8f9fa" rx="3"/>
+  <text x="400" y="248" class="al">Replace with</text>
+  <rect x="600" y="237" width="80" height="16" fill="#f8f9fa" rx="3"/>
+  <text x="640" y="248" class="al">Replace with</text>
+
+  <rect x="60" y="265" width="200" height="70" class="box" fill="#50C878"/>
+  <text x="160" y="295" class="lbl">Environment</text>
+  <text x="160" y="313" class="lbl">Variables</text>
+
+  <rect x="300" y="265" width="200" height="70" class="box" fill="#50C878"/>
+  <text x="400" y="295" class="lbl">Parameterized</text>
+  <text x="400" y="313" class="lbl">Queries</text>
+
+  <rect x="540" y="265" width="200" height="70" class="box" fill="#50C878"/>
+  <text x="640" y="295" class="lbl">Input Sanitization</text>
+  <text x="640" y="313" class="lbl">&amp; Escaping</text>
+
+  <path class="ar" d="M 400 335 L 400 385"/>
+
+  <rect x="150" y="385" width="500" height="55" class="box" fill="#6C5CE7"/>
+  <text x="400" y="407" class="lbl">Developer Security Review Required</text>
+  <text x="400" y="427" class="lbl" font-size="12">Static analysis + Code review + Penetration testing</text>
 </svg>
