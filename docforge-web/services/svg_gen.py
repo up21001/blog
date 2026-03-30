@@ -555,6 +555,51 @@ def _lint_svg_quality(svg: str) -> list[str]:
             if has_stroke and not has_fill and not has_class:
                 issues.append(f'rect with stroke but no fill attribute — may render as black box')
 
+    # 박스(rect) 영역 수집 — 화살표 겹침 감지용
+    boxes: list[tuple[float, float, float, float]] = []
+    for el in root.iter():
+        tag = el.tag.rsplit("}", 1)[-1]
+        if tag == "rect":
+            bx = _parse_num(el.get("x"))
+            by = _parse_num(el.get("y"))
+            bw = _parse_num(el.get("width"))
+            bh = _parse_num(el.get("height"))
+            if bw > 30 and bh > 20:  # 라벨 배경 제외, 실제 박스만
+                boxes.append((bx, by, bx + bw, by + bh))
+
+    # 화살표 경로의 중간점이 비연결 박스를 관통하는지 검사
+    for el in root.iter():
+        tag = el.tag.rsplit("}", 1)[-1]
+        if tag not in ("path", "polyline", "line"):
+            continue
+        # 경로의 좌표 추출
+        d_attr = el.get("d", "") or ""
+        points_attr = el.get("points", "") or ""
+        coords_str = d_attr + " " + points_attr
+        coord_pairs = re.findall(r"(-?\d+(?:\.\d+)?)[,\s]+(-?\d+(?:\.\d+)?)", coords_str)
+        if len(coord_pairs) < 2:
+            continue
+        # 시작점과 끝점
+        start = (float(coord_pairs[0][0]), float(coord_pairs[0][1]))
+        end = (float(coord_pairs[-1][0]), float(coord_pairs[-1][1]))
+        # 중간점들이 연결 대상이 아닌 박스를 관통하는지 검사
+        for px_s, py_s in coord_pairs[1:-1]:
+            px, py = float(px_s), float(py_s)
+            for bx1, by1, bx2, by2 in boxes:
+                # 시작/끝점이 이 박스 안에 있으면 연결 대상이므로 건너뜀
+                start_in = bx1 <= start[0] <= bx2 and by1 <= start[1] <= by2
+                end_in = bx1 <= end[0] <= bx2 and by1 <= end[1] <= by2
+                if start_in or end_in:
+                    continue
+                # 중간점이 박스 내부에 있으면 관통
+                if bx1 + 5 < px < bx2 - 5 and by1 + 5 < py < by2 - 5:
+                    issues.append(f'arrow/path passes through a box it is not connected to (midpoint {px:.0f},{py:.0f})')
+                    break
+
+    # viewBox가 24x24이면 아이콘 — 블로그용으로 부적절
+    if viewbox_width <= 48 or viewbox_height <= 48:
+        issues.append(f'viewBox is too small ({viewbox_width}x{viewbox_height}) — likely an icon, not a diagram')
+
     for el in root.iter():
         if el.tag.rsplit("}", 1)[-1] != "text":
             continue
