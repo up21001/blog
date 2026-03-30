@@ -39,6 +39,24 @@
     return (...a) => { clearTimeout(t); t = setTimeout(() => fn(...a), ms); };
   }
 
+  /** 밀리초 → 한국어 시·분·초 (1초 미만은 ms 그대로) */
+  function formatElapsedMs(msVal) {
+    const n = Number(msVal);
+    if (!Number.isFinite(n) || n < 0) return String(msVal);
+    const ms = Math.floor(n);
+    if (ms < 1000) return `${ms}ms`;
+    const h = Math.floor(ms / 3600000);
+    const m = Math.floor((ms % 3600000) / 60000);
+    const s = Math.floor((ms % 60000) / 1000);
+    const r = ms % 1000;
+    let out = "";
+    if (h) out += `${h}시간 `;
+    if (m || h) out += `${m}분 `;
+    out += `${s}초`;
+    if (r) out += ` ${r}ms`;
+    return out.trim();
+  }
+
   function getMarkdown() {
     if (activeTab === "split") {
       const s = $("mdEditorSplit");
@@ -126,6 +144,55 @@
     } finally {
       btn.disabled = false;
       btn.textContent = "🔄 영문 재번역";
+    }
+  });
+
+  // SEO 최적화 버튼
+  $("btnSeoOptimize").addEventListener("click", async () => {
+    const btn = $("btnSeoOptimize");
+    setMarkdownForLang(currentLang, getMarkdown());
+    const md = getMarkdownForLang(currentLang);
+    if (!md.trim()) { alert("본문이 없습니다."); return; }
+
+    btn.disabled = true;
+    btn.textContent = "최적화 중…";
+    try {
+      const r = await fetch(apiUrl("/api/optimize-seo"), {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ markdown: md }),
+      });
+      const j = await r.json();
+      if (!r.ok) throw new Error(j.detail || "SEO 최적화 실패");
+
+      const msg = `SEO 최적화 제안:\n\n` +
+        `제목: ${j.title}\n\n` +
+        `설명: ${j.description}\n\n` +
+        `태그: ${(j.tags || []).join(", ")}\n\n` +
+        `이유: ${j.reasoning || ""}\n\n` +
+        `적용하시겠습니까?`;
+
+      if (confirm(msg)) {
+        let updated = md;
+        // title 교체
+        updated = updated.replace(/^title:\s*"[^"]*"/m, `title: "${j.title}"`);
+        updated = updated.replace(/^title:\s*'[^']*'/m, `title: '${j.title}'`);
+        // description 교체
+        updated = updated.replace(/^description:\s*"[^"]*"/m, `description: "${j.description}"`);
+        updated = updated.replace(/^description:\s*'[^']*'/m, `description: '${j.description}'`);
+        // tags 교체
+        const tagsYaml = `tags: [${j.tags.map(t => `"${t}"`).join(", ")}]`;
+        updated = updated.replace(/^tags:\s*\[.*\]/m, tagsYaml);
+
+        setMarkdownForLang(currentLang, updated);
+        setMarkdown(updated);
+        alert("SEO 최적화가 적용되었습니다.");
+      }
+    } catch (e) {
+      alert("SEO 최적화 실패: " + e.message);
+    } finally {
+      btn.disabled = false;
+      btn.textContent = "SEO 최적화";
     }
   });
 
@@ -689,7 +756,9 @@
 
     const imgCount = (j.images || []).length;
     const svgCount = (j.svgs || []).length;
-    $("meta").textContent = `소요 ${j.manifest.elapsed_ms}ms · 이미지 ${imgCount}장 · SVG ${svgCount}개 · 템플릿 ${j.template}`;
+    const elapsed =
+      j.manifest && j.manifest.elapsed_ms != null ? formatElapsedMs(j.manifest.elapsed_ms) : "—";
+    $("meta").textContent = `소요 ${elapsed} · 이미지 ${imgCount}장 · SVG ${svgCount}개 · 템플릿 ${j.template}`;
 
     const fn = $("publishFilename");
     if (fn && j.suggested_filename) fn.value = j.suggested_filename;

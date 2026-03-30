@@ -605,6 +605,25 @@ def api_hit_views(body: ViewHitBody, request: Request):
     return {"ok": True, **result}
 
 
+class OptimizeSeoBody(BaseModel):
+    markdown: str = Field(..., min_length=10, max_length=50000)
+
+
+@app.post("/api/optimize-seo")
+async def optimize_seo(body: OptimizeSeoBody):
+    """기존 마크다운의 title, description, tags를 SEO 최적화."""
+    key = _api_key()
+    if not key:
+        raise HTTPException(503, "GEMINI_API_KEY가 설정되지 않았습니다.")
+    try:
+        from services.text_gen import optimize_seo_async
+        result = await optimize_seo_async(body.markdown, key)
+        return {"ok": True, **result}
+    except Exception as e:
+        logger.exception("SEO 최적화 실패")
+        raise HTTPException(500, f"SEO 최적화 실패: {e}") from e
+
+
 class ImportUrlBody(BaseModel):
     url: str = Field(..., min_length=1, max_length=2000)
 

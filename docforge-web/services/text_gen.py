@@ -393,6 +393,71 @@ async def translate_to_english_async(
     return await asyncio.to_thread(translate_to_english, korean_markdown, api_key)
 
 
+def optimize_seo(
+    markdown: str,
+    api_key: str,
+    max_retries: int = 3,
+) -> dict:
+    """기존 마크다운의 title, description, tags를 SEO 최적화하여 반환."""
+    key = api_key or os.environ.get("GEMINI_API_KEY")
+    if not key:
+        raise ValueError("GEMINI_API_KEY가 설정되지 않았습니다.")
+
+    client = genai.Client(api_key=key)
+    prompt = f"""아래 블로그 마크다운의 SEO를 최적화해라.
+
+━━━ 작업 ━━━
+1. **title 최적화**: 검색자가 실제로 Google에 입력할 법한 롱테일 키워드로 제목 재작성 (50-60자)
+   - 공식: [구체적 도구/기술] + [문제/목적] + [방법/가이드/비교]
+   - 예: "Python FastAPI로 REST API 만드는 방법 (2026 최신)"
+   - 예: "Cursor vs Copilot 비교 — 어떤 AI 코드 어시스턴트가 좋을까"
+2. **description 최적화**: 검색 결과 스니펫에 보일 클릭 유도 문구 (150자 이내)
+   - "~방법을 정리합니다", "~비교해봤습니다" 형태
+3. **tags 최적화**: 사람들이 실제로 검색할 구체적 키워드 5개
+   - 좋은 예: ["FastAPI 튜토리얼", "Python REST API", "비동기 웹서버"]
+   - 나쁜 예: ["기술", "개발", "프로그래밍"]
+
+━━━ 출력 형식 (JSON만, 다른 텍스트 금지) ━━━
+{{
+  "title": "최적화된 제목",
+  "description": "최적화된 설명",
+  "tags": ["태그1", "태그2", "태그3", "태그4", "태그5"],
+  "reasoning": "왜 이렇게 바꿨는지 한 줄 설명"
+}}
+
+━━━ 원본 마크다운 ━━━
+{markdown[:3000]}"""
+
+    last_err: Exception | None = None
+    for attempt in range(1, max_retries + 1):
+        try:
+            response = client.models.generate_content(
+                model=TEXT_MODEL,
+                config=types.GenerateContentConfig(
+                    max_output_tokens=4096,
+                    temperature=0.4,
+                    thinking_config=text_thinking_config(),
+                ),
+                contents=prompt,
+            )
+            import json
+            text = response.text.strip()
+            # JSON 코드블록 제거
+            text = re.sub(r"^```(?:json)?\s*", "", text)
+            text = re.sub(r"\s*```\s*$", "", text)
+            return json.loads(text)
+        except Exception as e:
+            last_err = e
+            if attempt < max_retries:
+                time.sleep(2**attempt)
+            else:
+                raise RuntimeError(f"SEO 최적화 실패 ({max_retries}회): {last_err}") from last_err
+
+
+async def optimize_seo_async(markdown: str, api_key: str) -> dict:
+    return await asyncio.to_thread(optimize_seo, markdown, api_key)
+
+
 async def generate_image_prompts_async(
     topic: str,
     markdown_excerpt: str,
