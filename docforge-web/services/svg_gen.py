@@ -64,13 +64,27 @@ ARROW GEOMETRY (zero tolerance for overlap):
 
 ARROW LABELS:
 - Place labels in empty space NEAR the arrow midpoint
-- Labels must NEVER overlap any box or other label
+- Labels must NEVER overlap any box, other label, or other arrow
 - Use small font (12-13px), offset 10px from the arrow path
+- CRITICAL: Add a white background rectangle behind EVERY arrow label text:
+  → <rect x="..." y="..." width="..." height="..." fill="white" rx="3"/>
+  → Place the rect BEFORE the text element so it acts as a backdrop
+  → This ensures labels are always readable even near boxes
+
+ARROW-BOX CLEARANCE:
+- All arrows must maintain at least 20px clearance from any box they are not connected to
+- Arrow paths that run parallel to a box edge must be at least 25px away from that edge
+- Vertical arrows between stacked boxes: center on box, keep labels to the side (not on the line)
+- For feedback/return arrows (going back up or left): route them at least 40px OUTSIDE the outermost box edge
+  → e.g., a left-side feedback arrow should have x < (leftmost_box_x - 40)
+  → e.g., a bottom return arrow should have y > (bottom_box_y + bottom_box_height + 30)
 
 SELF-CHECK before outputting:
 For each arrow, mentally trace its full path pixel by pixel.
 Ask: "Does this path cross any rectangle boundary it shouldn't?"
 If YES → add waypoints to route around it.
+For each arrow label, check: "Does this text overlap any box or other text?"
+If YES → move it to clear space or add a white background rect.
 If you skip this check, the diagram WILL have overlapping arrows.""",
 
     "infographic": """You are an expert SVG infographic generator.
@@ -87,7 +101,7 @@ Rules:
 - Include a clear title at the top
 - No external resources, no JavaScript
 - Korean text overflow prevention: viewBox width is 800, usable text area x=40 to x=760. Korean chars are ~1.2× wider than Latin. At font-size 18 max ~35 chars/line, at 22 max ~28, at 28 max ~22. Never place long text beside icons in narrow columns — use full width below icons. Split long lines into multiple <text> elements.
-- If using arrows/connectors: ABSOLUTE BAN on crossing through any box. Route arrows through empty space only (above/below all boxes). Place all arrow elements AFTER all box elements. Self-check each path for overlap before output.""",
+- If using arrows/connectors: ABSOLUTE BAN on crossing through any box. Route arrows through empty space only (above/below all boxes, with at least 20px clearance). Place all arrow elements AFTER all box elements. Add white background rects behind all arrow labels. For feedback/return arrows, route at least 40px outside the outermost box edge. Self-check each path for overlap before output.""",
 
     "icon": """You are an expert SVG icon generator.
 Generate clean, scalable, manually-editable SVG icon code.
@@ -652,6 +666,9 @@ Global SVG quality requirements:
 - For long labels, wrap into multiple lines using <tspan> or separate <text> elements.
 - If a label cannot fit, enlarge the containing box or diamond instead of letting text overflow.
 - Keep at least 12px padding between text and shape borders.
+- All CSS classes for borders/outlines MUST include "fill: none;" to prevent black fill.
+- Arrow/connector labels must have a white background rect behind them for readability.
+- Arrows must maintain at least 20px clearance from boxes they are not connected to.
 """
         if language == "en":
             system_prompt = system_prompt.replace(
