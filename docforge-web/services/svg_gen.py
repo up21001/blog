@@ -739,15 +739,30 @@ Global SVG quality requirements:
     last_err = None
     t_start = _time.monotonic()
     total_deadline = 180.0  # 전체 최대 3분
+    was_truncated = False  # MAX_TOKENS 잘림 발생 여부
 
     async with httpx.AsyncClient(timeout=90.0) as client:
         for attempt in range(1, max_retries + 1):
             if _time.monotonic() - t_start > total_deadline:
                 break
 
+            # 이전 시도에서 잘렸으면 단순화 지시 추가
+            current_user_prompt = user_prompt
+            if was_truncated:
+                current_user_prompt += (
+                    "\n\nCRITICAL: Previous attempt was truncated (too long). "
+                    "You MUST simplify the SVG significantly:\n"
+                    "- Use fewer elements (max 15-20 shapes)\n"
+                    "- Shorter text labels\n"
+                    "- No decorative elements (shadows, gradients)\n"
+                    "- Simple flat colors only\n"
+                    "- Reduce viewBox height if possible\n"
+                    "- Keep the SVG under 3000 characters total"
+                )
+
             payload = {
                 "system_instruction": {"parts": [{"text": system_prompt}]},
-                "contents": [{"role": "user", "parts": [{"text": user_prompt}]}],
+                "contents": [{"role": "user", "parts": [{"text": current_user_prompt}]}],
                 "generationConfig": {
                     "temperature": 0.4,
                     "maxOutputTokens": 65536,
@@ -764,11 +779,11 @@ Global SVG quality requirements:
             except Exception as e:
                 last_err = e
                 logger.warning("SVG HTTP 요청 실패: %s — 재시도 %d/%d", e, attempt, max_retries)
-                await _aio.sleep(min(5 * (2 ** (attempt - 1)), 30))
+                await _aio.sleep(min(8 * (2 ** (attempt - 1)), 40))
                 continue
 
             if resp.status_code == 429:
-                delay = min(5 * (2 ** (attempt - 1)), 30)
+                delay = min(10 * (2 ** (attempt - 1)), 40)
                 logger.warning("SVG 429 rate limit, %ds 후 재시도 (%d/%d)", delay, attempt, max_retries)
                 await _aio.sleep(delay)
                 last_err = ValueError("429 rate limit")
@@ -781,8 +796,10 @@ Global SVG quality requirements:
             candidate = data["candidates"][0]
             finish_reason = candidate.get("finishReason", "")
             if finish_reason == "MAX_TOKENS":
-                logger.warning("SVG 출력 잘림 (MAX_TOKENS) 시도 %d/%d — 재시도", attempt, max_retries)
+                logger.warning("SVG 출력 잘림 (MAX_TOKENS) 시도 %d/%d — 단순화 후 재시도", attempt, max_retries)
                 last_err = ValueError("SVG output truncated (MAX_TOKENS)")
+                was_truncated = True
+                await _aio.sleep(3)
                 continue
             if finish_reason == "SAFETY":
                 raise ValueError("SVG 콘텐츠가 안전 필터에 의해 차단됨")
