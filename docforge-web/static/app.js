@@ -185,7 +185,6 @@
         updated = updated.replace(/^tags:\s*\[.*\]/m, tagsYaml);
 
         setMarkdownForLang(currentLang, updated);
-        setMarkdown(updated);
         alert("SEO 최적화가 적용되었습니다.");
       }
     } catch (e) {
