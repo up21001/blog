@@ -321,6 +321,7 @@ def load_post(rel_path: str) -> dict:
             slug = legacy_slug
     images = []
     svgs = []
+    svgs_en = []
     if img_dir.is_dir():
         img_exts = {".png", ".jpg", ".jpeg", ".webp", ".gif"}
         for f in sorted(img_dir.iterdir()):
@@ -337,14 +338,19 @@ def load_post(rel_path: str) -> dict:
                 })
             elif f.suffix.lower() == ".svg":
                 svg_code = f.read_text(encoding="utf-8")
-                svgs.append({
+                svg_entry = {
                     "filename": f.name,
                     "description": f.stem,
                     "type": "architecture",
                     "style": "modern",
                     "svg": svg_code,
                     "url": f"/images/posts/{slug}/{f.name}",
-                })
+                }
+                # 영문 SVG(-en.svg)는 별도 리스트로 분리
+                if "-en.svg" in f.name.lower():
+                    svgs_en.append(svg_entry)
+                else:
+                    svgs.append(svg_entry)
 
     # 영문 버전 로드
     en_path = target.parent / filename.replace(".md", ".en.md")
@@ -360,6 +366,7 @@ def load_post(rel_path: str) -> dict:
         "slug": slug,
         "images": images,
         "svgs": svgs,
+        "svgs_en": svgs_en,
     }
 
 

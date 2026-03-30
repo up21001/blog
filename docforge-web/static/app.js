@@ -1627,8 +1627,15 @@
         mime: img.mime,
         data_base64: img.data_base64,
       }));
-      // SVG 로드
+      // SVG 로드 (한글/영문 분리)
       currentSvgs = (j.svgs || []).map((svg, i) => ({
+        index: i,
+        type: svg.type || "architecture",
+        style: svg.style || "modern",
+        description: svg.description || svg.filename || "",
+        svg: svg.svg || "",
+      }));
+      window._currentSvgsEn = (j.svgs_en || []).map((svg, i) => ({
         index: i,
         type: svg.type || "architecture",
         style: svg.style || "modern",
