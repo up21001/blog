@@ -23,7 +23,6 @@ enableRobotsTXT = true
   enableSearch = true
   enableCodeCopy = true
   mainSections = ["posts"]
-  docforgeApiBase = "http://127.0.0.1:8765"
 
 [params.verification]
   google = "dUlA-mHlZxD1WkU1NXY2THAW5fT5Oa0Kmw6IM6jF1Bw"
