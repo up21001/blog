@@ -1,0 +1,103 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0,8 3,0 6" fill="#2D3748"/>
+    </marker>
+    <filter id="sh"><feDropShadow dx="1" dy="2" stdDeviation="2" flood-opacity="0.1"/></filter>
+  </defs>
+  <style>
+    .box { stroke-width:1; rx:10; filter:url(#sh); }
+    .lbl { font-family:Arial,sans-serif; font-size:17px; font-weight:bold; fill:#fff; text-anchor:middle; dominant-baseline:middle; }
+    .lbl-d { font-family:Arial,sans-serif; font-size:17px; font-weight:bold; fill:#2D3748; text-anchor:middle; dominant-baseline:middle; }
+    .al { font-family:Arial,sans-serif; font-size:11px; fill:#2D3748; text-anchor:middle; }
+    .ar { stroke:#2D3748; stroke-width:2; fill:none; marker-end:url(#arr); }
+  </style>
+
+  <rect width="800" height="600" fill="#f8f9fa"/>
+
+  <!-- 클라이언트 -->
+  <rect x="60" y="30" width="160" height="50" class="box" fill="#4A90D9"/>
+  <text x="140" y="55" class="lbl">클라이언트</text>
+
+  <!-- 로드 밸런서 -->
+  <rect x="300" y="30" width="180" height="50" class="box" fill="#FFD93D"/>
+  <text x="390" y="55" class="lbl-d">로드 밸런서</text>
+
+  <!-- 웹서버 1 -->
+  <rect x="160" y="150" width="160" height="55" class="box" fill="#4A90D9"/>
+  <text x="240" y="178" class="lbl">웹 서버</text>
+
+  <!-- 웹서버 2 -->
+  <rect x="420" y="150" width="160" height="55" class="box" fill="#4A90D9"/>
+  <text x="500" y="178" class="lbl">웹 서버</text>
+
+  <!-- 앱 서버 -->
+  <rect x="280" y="280" width="200" height="60" class="box" fill="#50C878"/>
+  <text x="380" y="305" class="lbl">애플리케이션</text>
+  <text x="380" y="325" class="lbl">서버</text>
+
+  <!-- DB -->
+  <rect x="280" y="430" width="160" height="55" class="box" fill="#FF6B6B"/>
+  <text x="360" y="458" class="lbl">데이터베이스</text>
+
+  <!-- 외부서비스 -->
+  <rect x="580" y="280" width="150" height="60" class="box" fill="#FFD93D"/>
+  <text x="655" y="305" class="lbl-d">외부 서비스</text>
+  <text x="655" y="325" class="lbl-d" font-size="13">인증/결제</text>
+
+  <!-- 캐시 -->
+  <rect x="580" y="430" width="150" height="55" class="box" fill="#50C878"/>
+  <text x="655" y="458" class="lbl">캐시 서버</text>
+
+  <!-- 화살표 (요청 경로) -->
+  <!-- 클라이언트 → 로드밸런서 -->
+  <path class="ar" d="M 220 55 L 300 55"/>
+  <rect x="240" y="35" width="40" height="16" fill="#f8f9fa" rx="3"/>
+  <text x="260" y="46" class="al">요청</text>
+
+  <!-- 로드밸런서 → 웹서버1 -->
+  <path class="ar" d="M 350 80 L 260 150"/>
+  <rect x="275" y="100" width="55" height="16" fill="#f8f9fa" rx="3"/>
+  <text x="303" y="111" class="al">분산 요청</text>
+
+  <!-- 로드밸런서 → 웹서버2 -->
+  <path class="ar" d="M 430 80 L 480 150"/>
+  <rect x="430" y="100" width="55" height="16" fill="#f8f9fa" rx="3"/>
+  <text x="458" y="111" class="al">분산 요청</text>
+
+  <!-- 웹서버1 → 앱서버 -->
+  <path class="ar" d="M 280 205 L 340 280"/>
+  <rect x="275" y="232" width="55" height="16" fill="#f8f9fa" rx="3"/>
+  <text x="303" y="243" class="al">처리 요청</text>
+
+  <!-- 웹서버2 → 앱서버 -->
+  <path class="ar" d="M 460 205 L 420 280"/>
+  <rect x="415" y="232" width="55" height="16" fill="#f8f9fa" rx="3"/>
+  <text x="443" y="243" class="al">처리 요청</text>
+
+  <!-- 앱서버 → DB -->
+  <path class="ar" d="M 360 340 L 360 430"/>
+  <rect x="305" y="375" width="65" height="16" fill="#f8f9fa" rx="3"/>
+  <text x="338" y="386" class="al">데이터 질의</text>
+
+  <!-- 앱서버 → 외부서비스 -->
+  <path class="ar" d="M 480 300 L 580 300"/>
+  <rect x="505" y="282" width="55" height="16" fill="#f8f9fa" rx="3"/>
+  <text x="533" y="293" class="al">API 호출</text>
+
+  <!-- 앱서버 → 캐시 -->
+  <path class="ar" d="M 480 330 L 540 330 L 540 450 L 580 450"/>
+  <rect x="495" y="380" width="55" height="16" fill="#f8f9fa" rx="3"/>
+  <text x="523" y="391" class="al">캐시 조회</text>
+
+  <!-- 응답 경로 (왼쪽으로 오프셋) -->
+  <!-- DB → 앱서버 -->
+  <path class="ar" d="M 400 430 L 400 340"/>
+  <rect x="403" y="375" width="55" height="16" fill="#f8f9fa" rx="3"/>
+  <text x="431" y="386" class="al">결과 반환</text>
+
+  <!-- 로드밸런서 → 클라이언트 (응답) -->
+  <path class="ar" d="M 300 65 L 220 65"/>
+  <rect x="240" y="66" width="40" height="16" fill="#f8f9fa" rx="3"/>
+  <text x="260" y="77" class="al">응답</text>
+</svg>

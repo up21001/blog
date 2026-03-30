@@ -1,0 +1,139 @@
+<svg viewBox="0 0 800 700" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .title-bg { fill: #2D3748; }
+    .title-text { font-family: "Arial, sans-serif"; font-size: 24px; font-weight: bold; fill: #ffffff; text-anchor: middle; }
+    .column-bg { fill: #f8f9fa; }
+    .column-header-text { font-family: "Arial, sans-serif"; font-size: 18px; font-weight: bold; fill: #2D3748; text-anchor: middle; }
+    .description-text { font-family: "Arial, sans-serif"; font-size: 14px; fill: #2D3748; }
+    .code-block-bg { fill: #ffffff; stroke: #D9E2EC; stroke-width: 1; }
+    .code-text { font-family: "Courier New", monospace; font-size: 13px; fill: #2D3748; }
+    .code-highlight { fill: #E0F2F7; } /* Lighter blue for code highlight */
+    .magnifying-glass-circle { fill: none; stroke: #4A90D9; stroke-width: 2; }
+    .magnifying-glass-handle { stroke: #4A90D9; stroke-width: 2; stroke-linecap: round; }
+    .component-box { fill: #D9E2EC; stroke: #AAB8C2; stroke-width: 1; rx: 5; ry: 5; }
+    .component-text { font-family: "Arial, sans-serif"; font-size: 13px; font-weight: bold; fill: #2D3748; text-anchor: middle; }
+    .arrow { stroke: #2D3748; stroke-width: 2; marker-end: url(#arrowhead); }
+    .local-context-color { fill: #4A90D9; } /* Blue for local */
+    .global-context-color { fill: #FF6B6B; } /* Red for global limitation */
+    .label-bg { fill: #ffffff; stroke: #D9E2EC; stroke-width: 0.5; } /* For arrow labels */
+    .label-text { font-family: "Arial, sans-serif"; font-size: 12px; fill: #2D3748; text-anchor: middle; }
+  </style>
+
+  <!-- Arrowhead definition -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#2D3748" />
+    </marker>
+  </defs>
+
+  <!-- Main Title -->
+  <rect x="0" y="0" width="800" height="60" class="title-bg"/>
+  <text x="400" y="38" class="title-text">AI 코딩 도우미의 컨텍스트 이해 한계 비교</text>
+
+  <!-- Left Column: Local Context -->
+  <rect x="20" y="80" width="370" height="610" class="column-bg"/>
+  <text x="205" y="110" class="column-header-text">AI 코딩 도우미의 지역적 컨텍스트 이해</text>
+
+  <!-- Left Column Visual: Code Block -->
+  <rect x="40" y="140" width="330" height="220" class="code-block-bg"/>
+  <text x="50" y="165" class="code-text">function calculateTotal(items) {</text>
+  <text x="50" y="185" class="code-text">  let total = 0;</text>
+  <text x="50" y="205" class="code-text">  for (const item of items) {</text>
+  <rect x="50" y="210" width="310" height="40" class="code-highlight"/>
+  <text x="70" y="225" class="code-text">    total += item.price * item.quantity;</text>
+  <text x="70" y="240" class="code-text">    // 현재 커서 위치</text>
+  <text x="50" y="265" class="code-text">  }</text>
+  <text x="50" y="285" class="code-text">  return total;</text>
+  <text x="50" y="305" class="code-text">}</text>
+
+  <!-- Magnifying Glass Icon -->
+  <circle cx="310" cy="180" r="30" class="magnifying-glass-circle"/>
+  <line x1="330" y1="200" x2="350" y2="220" class="magnifying-glass-handle"/>
+  <circle cx="310" cy="180" r="15" fill="#4A90D9" opacity="0.1"/>
+  <text x="310" y="185" font-family="Arial, sans-serif" font-size="10px" fill="#4A90D9" text-anchor="middle">확대</text>
+
+
+  <!-- Left Column Descriptions -->
+  <text x="50" y="390" class="description-text">
+    <tspan x="50" dy="0">✓ 현재 파일 및 주변 코드 블록에</tspan>
+    <tspan x="65" dy="18">  집중하여 이해</tspan>
+    <tspan x="50" dy="20">✓ 변수, 함수 정의 등 구문 및 의미론적 맥락 파악</tspan>
+    <tspan x="50" dy="20">✓ 로컬 스코프 내의 오류 감지 및 자동 완성 지원</tspan>
+  </text>
+  
+  <rect x="40" y="530" width="330" height="100" fill="#4A90D9" opacity="0.05" rx="5" ry="5" stroke="#4A90D9" stroke-width="1"/>
+  <text x="205" y="560" class="description-text" text-anchor="middle" font-weight="bold">
+    <tspan x="205" dy="-10" fill="#4A90D9">AI의 강점: 지역적,</tspan>
+    <tspan x="205" dy="18" fill="#4A90D9">구체적 코드 분석</tspan>
+    <tspan x="205" dy="20" font-size="12px" fill="#2D3748">작은 범위의 코드에 대한 높은 이해도</tspan>
+  </text>
+
+
+  <!-- Right Column: Global Context -->
+  <rect x="410" y="80" width="370" height="610" class="column-bg"/>
+  <text x="595" y="100" class="column-header-text">
+    <tspan x="595" dy="0">AI 코딩 도우미의</tspan>
+    <tspan x="595" dy="20">전역적 컨텍스트 한계</tspan>
+  </text>
+
+  <!-- Right Column Visual: Architecture Diagram -->
+  <!-- Components -->
+  <rect x="450" y="150" width="100" height="50" class="component-box"/>
+  <text x="500" y="180" class="component-text">프론트엔드</text>
+
+  <rect x="650" y="150" width="100" height="50" class="component-box"/>
+  <text x="700" y="180" class="component-text">백엔드 API</text>
+
+  <rect x="550" y="250" width="100" height="50" class="component-box"/>
+  <text x="600" y="280" class="component-text">데이터베이스</text>
+
+  <rect x="450" y="350" width="100" height="50" class="component-box"/>
+  <text x="500" y="380" class="component-text">인증 서비스</text>
+
+  <rect x="650" y="350" width="100" height="50" class="component-box"/>
+  <text x="700" y="380" class="component-text">외부 결제</text>
+
+  <!-- Arrows -->
+  <line x1="550" y1="175" x2="650" y2="175" class="arrow"/>
+  <rect x="575" y="165" width="50" height="20" class="label-bg"/>
+  <text x="600" y="178" class="label-text">요청</text>
+
+  <line x1="600" y1="200" x2="600" y2="250" class="arrow"/>
+  <rect x="575" y="215" width="50" height="20" class="label-bg"/>
+  <text x="600" y="228" class="label-text">데이터</text>
+
+  <line x1="550" y1="275" x2="450" y2="375" class="arrow"/>
+  <rect x="465" y="315" width="70" height="20" class="label-bg"/>
+  <text x="500" y="328" class="label-text">인증 정보</text>
+
+  <line x1="650" y1="275" x2="700" y2="350" class="arrow"/>
+  <rect x="640" y="302.5" width="70" height="20" class="label-bg"/>
+  <text x="675" y="315.5" class="label-text">결제 요청</text>
+
+  <line x1="500" y1="200" x2="500" y2="350" class="arrow"/>
+  <rect x="475" y="265" width="50" height="20" class="label-bg"/>
+  <text x="500" y="278" class="label-text">사용자</text>
+  
+  <line x1="650" y1="175" x2="550" y2="275" class="arrow"/>
+  <rect x="610" y="230" width="50" height="20" class="label-bg"/>
+  <text x="635" y="243" class="label-text">쿼리</text>
+
+  <!-- Right Column Descriptions -->
+  <text x="420" y="440" class="description-text">
+    <tspan x="420" dy="0">✗ 전체 시스템 아키텍처 및</tspan>
+    <tspan x="435" dy="18">  컴포넌트 간 복잡한 의존성</tspan>
+    <tspan x="435" dy="18">  파악 어려움</tspan>
+    <tspan x="420" dy="20">✗ 비즈니스 로직, 데이터 흐름 등</tspan>
+    <tspan x="435" dy="18">  시스템 전반의 영향 이해 부족</tspan>
+    <tspan x="420" dy="20">✗ 여러 파일에 걸친 변경의</tspan>
+    <tspan x="435" dy="18">  파급 효과 예측 불가</tspan>
+  </text>
+  
+  <rect x="440" y="590" width="330" height="100" fill="#FF6B6B" opacity="0.05" rx="5" ry="5" stroke="#FF6B6B" stroke-width="1"/>
+  <text x="595" y="620" class="description-text" text-anchor="middle" font-weight="bold">
+    <tspan x="595" dy="-10" fill="#FF6B6B">AI의 한계: 전역적,</tspan>
+    <tspan x="595" dy="18" fill="#FF6B6B">추상적 시스템 이해 부족</tspan>
+    <tspan x="595" dy="20" font-size="12px" fill="#2D3748">시스템 전체 맥락에 대한 낮은 이해도</tspan>
+  </text>
+
+</svg>

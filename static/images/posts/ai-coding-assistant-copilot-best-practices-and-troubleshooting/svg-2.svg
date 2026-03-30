@@ -1,0 +1,137 @@
+<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    /* General styles */
+    .bg { fill: #f8f9fa; }
+    .stage-box {
+      fill: #ffffff;
+      stroke: #e0e0e0;
+      stroke-width: 1;
+      rx: 8; ry: 8;
+      filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.1));
+    }
+    /* Stage fill colors - gradient progression */
+    .stage-fill-1 { fill: #4A90D9; } /* Blue */
+    .stage-fill-2 { fill: #4DACA8; } /* Interpolated Blue-Green */
+    .stage-fill-3 { fill: #50C878; } /* Green */
+    .stage-fill-4 { fill: #5E92AF; } /* Interpolated Green-Purple */
+    .stage-fill-5 { fill: #6C5CE7; } /* Purple */
+
+    .stage-icon-area {
+      fill: none; /* This rect is just for positioning the number, actual fill comes from stage-fill-* */
+      stroke: none;
+    }
+    .stage-text {
+      font-family: "Arial, sans-serif";
+      font-size: 14px;
+      font-weight: bold;
+      fill: #2D3748;
+      text-anchor: middle;
+    }
+    .stage-number {
+      font-family: "Arial, sans-serif";
+      font-size: 12px;
+      font-weight: bold;
+      fill: #ffffff;
+      text-anchor: middle;
+    }
+    .arrow {
+      stroke: #2D3748;
+      stroke-width: 2;
+      fill: none;
+      marker-end: url(#arrowhead);
+    }
+    .arrow-label-bg {
+      fill: #ffffff;
+      stroke: #e0e0e0;
+      stroke-width: 0.5;
+      rx: 4; ry: 4;
+    }
+    .arrow-label-text {
+      font-family: "Arial, sans-serif";
+      font-size: 12px;
+      fill: #2D3748;
+      text-anchor: middle;
+    }
+  </style>
+
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#2D3748" />
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect x="0" y="0" width="800" height="500" class="bg"/>
+
+  <!-- Stage 1: 컨텍스트 수집 -->
+  <g class="stage" transform="translate(40, 200)">
+    <rect x="0" y="0" width="120" height="100" class="stage-box"/>
+    <rect x="0" y="0" width="120" height="30" class="stage-icon-area stage-fill-1"/>
+    <text x="60" y="20" class="stage-number">1</text>
+    <text x="60" y="60" class="stage-text">컨텍스트</text>
+    <text x="60" y="78" class="stage-text">수집</text>
+  </g>
+
+  <!-- Stage 2: 프롬프트 구성 -->
+  <g class="stage" transform="translate(190, 200)">
+    <rect x="0" y="0" width="120" height="100" class="stage-box"/>
+    <rect x="0" y="0" width="120" height="30" class="stage-icon-area stage-fill-2"/>
+    <text x="60" y="20" class="stage-number">2</text>
+    <text x="60" y="60" class="stage-text">프롬프트</text>
+    <text x="60" y="78" class="stage-text">구성</text>
+  </g>
+
+  <!-- Stage 3: LLM 추론 요청 -->
+  <g class="stage" transform="translate(340, 200)">
+    <rect x="0" y="0" width="120" height="100" class="stage-box"/>
+    <rect x="0" y="0" width="120" height="30" class="stage-icon-area stage-fill-3"/>
+    <text x="60" y="20" class="stage-number">3</text>
+    <text x="60" y="60" class="stage-text">LLM 추론</text>
+    <text x="60" y="78" class="stage-text">요청</text>
+  </g>
+
+  <!-- Stage 4: 코드 스니펫 반환 (고스트 텍스트) -->
+  <g class="stage" transform="translate(490, 200)">
+    <rect x="0" y="0" width="120" height="100" class="stage-box"/>
+    <rect x="0" y="0" width="120" height="30" class="stage-icon-area stage-fill-4"/>
+    <text x="60" y="20" class="stage-number">4</text>
+    <text x="60" y="51" class="stage-text">코드 스니펫</text>
+    <text x="60" y="69" class="stage-text">반환</text>
+    <text x="60" y="87" class="stage-text">(고스트 텍스트)</text>
+  </g>
+
+  <!-- Stage 5: 사용자 수락/무시 -->
+  <g class="stage" transform="translate(640, 200)">
+    <rect x="0" y="0" width="120" height="100" class="stage-box"/>
+    <rect x="0" y="0" width="120" height="30" class="stage-icon-area stage-fill-5"/>
+    <text x="60" y="20" class="stage-number">5</text>
+    <text x="60" y="60" class="stage-text">사용자 수락/</text>
+    <text x="60" y="78" class="stage-text">무시</text>
+  </g>
+
+  <!-- Arrows and Labels (must be rendered last) -->
+  <!-- Arrow 1-2 -->
+  <line x1="160" y1="250" x2="190" y2="250" class="arrow"/>
+  <!-- Adjusted width and x position for label background and text to prevent clipping -->
+  <rect x="150" y="225" width="50" height="20" class="arrow-label-bg"/>
+  <text x="175" y="240" class="arrow-label-text">데이터</text>
+
+  <!-- Arrow 2-3 -->
+  <line x1="310" y1="250" x2="340" y2="250" class="arrow"/>
+  <!-- Adjusted width and x position for label background and text to prevent clipping -->
+  <rect x="300" y="225" width="50" height="20" class="arrow-label-bg"/>
+  <text x="325" y="240" class="arrow-label-text">요청</text>
+
+  <!-- Arrow 3-4 -->
+  <line x1="460" y1="250" x2="490" y2="250" class="arrow"/>
+  <!-- Adjusted width and x position for label background and text to prevent clipping -->
+  <rect x="450" y="225" width="50" height="20" class="arrow-label-bg"/>
+  <text x="475" y="240" class="arrow-label-text">응답</text>
+
+  <!-- Arrow 4-5 -->
+  <line x1="610" y1="250" x2="640" y2="250" class="arrow"/>
+  <!-- Adjusted width and x position for label background and text to prevent clipping -->
+  <rect x="600" y="225" width="50" height="20" class="arrow-label-bg"/>
+  <text x="625" y="240" class="arrow-label-text">제안</text>
+
+</svg>

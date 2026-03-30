@@ -1,0 +1,150 @@
+<svg viewBox="0 0 800 700" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .title-bg { fill: #2D3748; }
+    .title-text { font-family: "Arial", sans-serif; font-size: 24px; font-weight: bold; fill: #ffffff; text-anchor: middle; }
+    .column-bg { fill: #f8f9fa; }
+    .column-header-text { font-family: "Arial", sans-serif; font-size: 18px; font-weight: bold; fill: #2D3748; text-anchor: middle; }
+    .description-text { font-family: "Arial", sans-serif; font-size: 14px; fill: #2D3748; }
+    .code-block-bg { fill: #ffffff; stroke: #D9E2EC; stroke-width: 1; }
+    .code-text { font-family: "Courier New", monospace; font-size: 13px; fill: #2D3748; }
+    .code-highlight { fill: #E0F2F7; } /* Lighter blue for code highlight */
+    .magnifying-glass-circle { fill: none; stroke: #4A90D9; stroke-width: 2; }
+    .magnifying-glass-handle { stroke: #4A90D9; stroke-width: 2; stroke-linecap: round; }
+    .component-box { fill: #D9E2EC; stroke: #AAB8C2; stroke-width: 1; rx: 5; ry: 5; }
+    .component-text { font-family: "Arial", sans-serif; font-size: 13px; font-weight: bold; fill: #2D3748; text-anchor: middle; }
+    .arrow { stroke: #2D3748; stroke-width: 2; marker-end: url(#arrowhead); }
+    .local-context-color { fill: #4A90D9; } /* Blue for local */
+    .global-context-color { fill: #FF6B6B; } /* Red for global limitation */
+    .label-bg { fill: #ffffff; stroke: #D9E2EC; stroke-width: 0.5; } /* For arrow labels */
+    .label-text { font-family: "Arial", sans-serif; font-size: 12px; fill: #2D3748; text-anchor: middle; }
+  </style>
+
+  <!-- Arrowhead definition -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#2D3748" />
+    </marker>
+  </defs>
+
+  <!-- Main Title -->
+  <rect x="0" y="0" width="800" height="60" class="title-bg"/>
+  <text x="400" y="30" class="title-text">
+    <tspan x="400" dy="0">Comparison of AI Coding Assistant's</tspan>
+    <tspan x="400" dy="28">Context Understanding Limitations</tspan>
+  </text>
+
+  <!-- Left Column: Local Context -->
+  <rect x="20" y="80" width="370" height="610" class="column-bg"/>
+  <text x="205" y="100" class="column-header-text">
+    <tspan x="205" dy="0">AI Coding Assistant's</tspan>
+    <tspan x="205" dy="22">Local Context Understanding</tspan>
+  </text>
+
+  <!-- Left Column Visual: Code Block -->
+  <rect x="40" y="140" width="330" height="220" class="code-block-bg"/>
+  <text x="50" y="165" class="code-text">function calculateTotal(items) {</text>
+  <text x="50" y="185" class="code-text">  let total = 0;</text>
+  <text x="50" y="205" class="code-text">  for (const item of items) {</text>
+  <rect x="50" y="210" width="310" height="40" class="code-highlight"/>
+  <text x="70" y="225" class="code-text">    total += item.price * item.quantity;</text>
+  <text x="70" y="240" class="code-text">    // Current cursor position</text>
+  <text x="50" y="265" class="code-text">  }</text>
+  <text x="50" y="285" class="code-text">  return total;</text>
+  <text x="50" y="305" class="code-text">}</text>
+
+  <!-- Magnifying Glass Icon -->
+  <circle cx="310" cy="180" r="30" class="magnifying-glass-circle"/>
+  <line x1="330" y1="200" x2="350" y2="220" class="magnifying-glass-handle"/>
+  <circle cx="310" cy="180" r="15" fill="#4A90D9" opacity="0.1"/>
+  <text x="310" y="185" font-family="Arial, sans-serif" font-size="10px" fill="#4A90D9" text-anchor="middle">Zoom</text>
+
+  <!-- Left Column Descriptions -->
+  <text x="50" y="390" class="description-text">
+    <tspan x="50" dy="0">✓ Understands by focusing on the current file</tspan>
+    <tspan x="65" dy="18">  and surrounding code blocks.</tspan>
+    <tspan x="50" dy="20">✓ Grasping syntactic and semantic context like</tspan>
+    <tspan x="65" dy="18">  variable and function definitions.</tspan>
+    <tspan x="50" dy="20">✓ Error detection and auto-completion support</tspan>
+    <tspan x="65" dy="18">  within local scope.</tspan>
+  </text>
+  
+  <rect x="40" y="530" width="330" height="100" fill="#4A90D9" opacity="0.05" rx="5" ry="5" stroke="#4A90D9" stroke-width="1"/>
+  <text x="205" y="550" class="description-text" text-anchor="middle" font-weight="bold">
+    <tspan x="205" dy="0" fill="#4A90D9">AI's Strength: Local,</tspan>
+    <tspan x="205" dy="18" fill="#4A90D9">Specific Code Analysis</tspan>
+    <tspan x="205" dy="20" font-size="12px" fill="#2D3748">High understanding of small-scope code</tspan>
+  </text>
+
+  <!-- Right Column: Global Context -->
+  <rect x="410" y="80" width="370" height="610" class="column-bg"/>
+  <text x="595" y="90" class="column-header-text">
+    <tspan x="595" dy="0">AI Coding Assistant's</tspan>
+    <tspan x="595" dy="22">Global Context</tspan>
+    <tspan x="595" dy="22">Limitations</tspan>
+  </text>
+
+  <!-- Right Column Visual: Architecture Diagram -->
+  <!-- Components -->
+  <rect x="450" y="150" width="100" height="50" class="component-box"/>
+  <text x="500" y="180" class="component-text">Frontend</text>
+
+  <rect x="640" y="150" width="120" height="50" class="component-box"/>
+  <text x="700" y="180" class="component-text">Backend API</text>
+
+  <rect x="550" y="250" width="100" height="50" class="component-box"/>
+  <text x="600" y="280" class="component-text">Database</text>
+
+  <rect x="450" y="350" width="100" height="60" class="component-box"/>
+  <text x="500" y="375" class="component-text">
+    <tspan x="500" dy="0">Authentication</tspan>
+    <tspan x="500" dy="15">Service</tspan>
+  </text>
+
+  <rect x="640" y="350" width="120" height="50" class="component-box"/>
+  <text x="700" y="380" class="component-text">External Payment</text>
+
+  <!-- Arrows -->
+  <line x1="550" y1="175" x2="640" y2="175" class="arrow"/>
+  <rect x="570" y="165" width="60" height="20" class="label-bg"/>
+  <text x="600" y="178" class="label-text">Request</text>
+
+  <line x1="600" y1="200" x2="600" y2="250" class="arrow"/>
+  <rect x="575" y="215" width="50" height="20" class="label-bg"/>
+  <text x="600" y="228" class="label-text">Data</text>
+
+  <line x1="550" y1="275" x2="450" y2="380" class="arrow"/>
+  <rect x="460" y="315" width="80" height="20" class="label-bg"/>
+  <text x="500" y="328" class="label-text">Auth Info</text>
+
+  <line x1="650" y1="275" x2="700" y2="350" class="arrow"/>
+  <rect x="640" y="302.5" width="70" height="20" class="label-bg"/>
+  <text x="675" y="315.5" class="label-text">Payment Request</text>
+
+  <line x1="500" y1="200" x2="500" y2="350" class="arrow"/>
+  <rect x="475" y="265" width="50" height="20" class="label-bg"/>
+  <text x="500" y="278" class="label-text">User</text>
+  
+  <line x1="650" y1="175" x2="550" y2="275" class="arrow"/>
+  <rect x="610" y="230" width="50" height="20" class="label-bg"/>
+  <text x="635" y="243" class="label-text">Query</text>
+
+  <!-- Right Column Descriptions -->
+  <text x="420" y="440" class="description-text">
+    <tspan x="420" dy="0">✗ Entire system architecture and complex</tspan>
+    <tspan x="435" dy="18">  dependencies between components difficult</tspan>
+    <tspan x="435" dy="18">  to grasp.</tspan>
+    <tspan x="420" dy="20">✗ Business logic, data flow, etc. lack of</tspan>
+    <tspan x="435" dy="18">  understanding of system-wide impact.</tspan>
+    <tspan x="420" dy="20">✗ Changes spanning multiple files, leading to</tspan>
+    <tspan x="435" dy="18">  unpredictable ripple effects.</tspan>
+  </text>
+  
+  <rect x="440" y="590" width="330" height="100" fill="#FF6B6B" opacity="0.05" rx="5" ry="5" stroke="#FF6B6B" stroke-width="1"/>
+  <text x="595" y="610" class="description-text" text-anchor="middle" font-weight="bold">
+    <tspan x="595" dy="0" fill="#FF6B6B">AI's Limitation: Global,</tspan>
+    <tspan x="595" dy="18" fill="#FF6B6B">Lack of Abstract System</tspan>
+    <tspan x="595" dy="18" fill="#FF6B6B">Understanding</tspan>
+    <tspan x="595" dy="20" font-size="12px" fill="#2D3748">Low understanding of the overall system context</tspan>
+  </text>
+
+</svg>
