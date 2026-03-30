@@ -1,0 +1,110 @@
+<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <rect x="0" y="0" width="800" height="500" fill="#f8f9fa"/>
+
+  <!-- Global Styles -->
+  <style>
+    .stage-box {
+      stroke: #2D3748;
+      stroke-width: 1;
+      rx: 10;
+      ry: 10;
+    }
+    .stage-icon-area {
+      fill: rgba(255, 255, 255, 0.2); /* Subtle highlight for icon area */
+      rx: 10;
+      ry: 10;
+    }
+    .stage-text {
+      font-family: "Arial, sans-serif";
+      font-size: 14px;
+      font-weight: bold;
+      fill: #2D3748;
+      text-anchor: middle;
+    }
+    .arrow-label {
+      font-family: "Arial, sans-serif";
+      font-size: 12px;
+      fill: #2D3748;
+      text-anchor: middle;
+    }
+    .title {
+      font-family: "Arial, sans-serif";
+      font-size: 20px;
+      font-weight: bold;
+      fill: #2D3748;
+      text-anchor: middle;
+    }
+    .arrow {
+      stroke: #2D3748;
+      stroke-width: 2;
+      fill: none;
+      marker-end: url(#arrowhead);
+    }
+  </style>
+
+  <!-- Markers for arrows -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#2D3748" />
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="400" y="50" class="title">AI 어시스턴트 파일 처리 흐름</text>
+
+  <!-- Stages (Rectangles and Text) -->
+
+  <!-- Stage 1: 프로젝트 파일 -->
+  <rect x="20" y="150" width="160" height="80" class="stage-box" style="fill:#4A90D9;"/>
+  <rect x="20" y="150" width="160" height="20" class="stage-icon-area"/>
+  <text x="100" y="195" class="stage-text">프로젝트 파일</text>
+
+  <!-- Stage 2: .cursorignore 파일 확인 -->
+  <rect x="220" y="150" width="160" height="80" class="stage-box" style="fill:#50C878;"/>
+  <rect x="220" y="150" width="160" height="20" class="stage-icon-area"/>
+  <text x="300" y="185" class="stage-text">.cursorignore</text>
+  <text x="300" y="205" class="stage-text">파일 확인</text>
+
+  <!-- Stage 3a: 제외된 파일 -->
+  <rect x="220" y="280" width="160" height="80" class="stage-box" style="fill:#B0BEC5;"/> <!-- Distinct color for excluded -->
+  <rect x="220" y="280" width="160" height="20" class="stage-icon-area"/>
+  <text x="300" y="325" class="stage-text">제외된 파일</text>
+
+  <!-- Stage 3b: 분석 대상 파일 -->
+  <rect x="420" y="150" width="160" height="80" class="stage-box" style="fill:#50C878;"/>
+  <rect x="420" y="150" width="160" height="20" class="stage-icon-area"/>
+  <text x="500" y="195" class="stage-text">분석 대상 파일</text>
+
+  <!-- Stage 4: AI 분석 -->
+  <rect x="620" y="150" width="160" height="80" class="stage-box" style="fill:#6C5CE7;"/>
+  <rect x="620" y="150" width="160" height="20" class="stage-icon-area"/>
+  <text x="700" y="195" class="stage-text">AI 분석</text>
+
+  <!-- Stage 5: 컨텍스트 구성 -->
+  <rect x="620" y="280" width="160" height="80" class="stage-box" style="fill:#6C5CE7;"/>
+  <rect x="620" y="280" width="160" height="20" class="stage-icon-area"/>
+  <text x="700" y="325" class="stage-text">컨텍스트 구성</text>
+
+  <!-- Arrows (Paths and Labels) - MUST BE LAST -->
+
+  <!-- Arrow 1: 프로젝트 파일 -> .cursorignore 파일 확인 -->
+  <path d="M180 190 H220" class="arrow"/>
+  <text x="200" y="180" class="arrow-label">전체 파일</text>
+
+  <!-- Arrow 2: .cursorignore 파일 확인 -> 제외된 파일 -->
+  <path d="M300 230 V280" class="arrow"/>
+  <text x="300" y="265" class="arrow-label">차단</text>
+
+  <!-- Arrow 3: .cursorignore 파일 확인 -> 분석 대상 파일 -->
+  <path d="M380 190 H420" class="arrow"/>
+  <text x="400" y="180" class="arrow-label">허용</text>
+
+  <!-- Arrow 4: 분석 대상 파일 -> AI 분석 -->
+  <path d="M580 190 H620" class="arrow"/>
+  <text x="600" y="180" class="arrow-label">처리</text>
+
+  <!-- Arrow 5: AI 분석 -> 컨텍스트 구성 -->
+  <path d="M700 230 V280" class="arrow"/>
+  <text x="700" y="265" class="arrow-label">결과</text>
+
+</svg>

@@ -1,0 +1,223 @@
+<svg viewBox="0 0 800 700" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .title {
+      font-family: "Arial, sans-serif";
+      font-size: 24px;
+      font-weight: bold;
+      fill: #2D3748;
+      text-anchor: middle;
+    }
+    .header-text {
+      font-family: "Arial, sans-serif";
+      font-size: 16px;
+      font-weight: bold;
+      fill: #2D3748;
+    }
+    .feature-text {
+      font-family: "Arial, sans-serif";
+      font-size: 15px;
+      font-weight: bold;
+      fill: #2D3748;
+    }
+    .description-text {
+      font-family: "Arial, sans-serif";
+      font-size: 14px;
+      fill: #2D3748;
+    }
+    .ai-intervention-text {
+      font-family: "Arial, sans-serif";
+      font-size: 12px;
+      font-weight: bold;
+      fill: #4A90D9; /* Blue */
+    }
+    .risk-text {
+      font-family: "Arial, sans-serif";
+      font-size: 12px;
+      font-weight: bold;
+      fill: #FF6B6B; /* Red */
+    }
+    .ai-column-highlight {
+      fill: #e0f2f7; /* Lighter blue for highlight background */
+      stroke: #4A90D9; /* Blue border */
+      stroke-width: 2;
+    }
+    .header-bg {
+      fill: #E2E8F0;
+    }
+    .row-bg-even {
+      fill: #f8f9fa;
+    }
+    .row-bg-odd {
+      fill: #ffffff;
+    }
+    .cell-border {
+      stroke: #D3DCE6;
+      stroke-width: 1;
+      fill: none;
+    }
+  </style>
+
+  <!-- Title -->
+  <text x="400" y="40" class="title">AI-based vs. Traditional Git Workflow</text>
+
+  <!-- AI Column Highlight (background and border for the entire column) -->
+  <!-- Adjusted height to cover all rows with new 140px height -->
+  <rect x="180" y="70" width="300" height="610" class="ai-column-highlight"/>
+
+  <!-- Column Headers Backgrounds -->
+  <rect x="20" y="70" width="150" height="50" class="header-bg"/>
+  <rect x="180" y="70" width="300" height="50" class="header-bg"/>
+  <rect x="500" y="70" width="280" height="50" class="header-bg"/>
+
+  <!-- Column Headers Text -->
+  <text x="95" y="100" class="header-text" text-anchor="middle">Feature</text>
+  <text x="330" y="90" class="header-text" text-anchor="middle">AI-based Git Workflow</text>
+  <text x="330" y="108" class="header-text" text-anchor="middle">(Recommended)</text>
+  <!-- Split "Traditional Git Workflow" into two lines -->
+  <text x="640" y="90" class="header-text" text-anchor="middle">Traditional Git</text>
+  <text x="640" y="108" class="header-text" text-anchor="middle">Workflow</text>
+
+  <!-- Row 1: Code Writing -->
+  <!-- Adjusted transform Y and rect height -->
+  <g transform="translate(0, 120)">
+    <rect x="20" y="0" width="150" height="140" class="row-bg-even"/>
+    <text x="95" y="70" class="feature-text" text-anchor="middle">Code Writing</text>
+
+    <rect x="180" y="0" width="300" height="140" class="row-bg-even"/>
+    <text x="190" y="25" class="description-text">AI assists with code generation,</text>
+    <text x="190" y="43" class="description-text">auto-completion, and suggestions.</text>
+    <!-- Wrapped text for AI Assisted -->
+    <text x="190" y="61" class="ai-intervention-text">
+      <tspan x="190" dy="0">✓ AI Assisted: Code generation,</tspan>
+      <tspan x="190" dy="14">suggestions</tspan>
+    </text>
+    <!-- Wrapped text for Risks -->
+    <text x="190" y="91" class="risk-text">
+      <tspan x="190" dy="0">✗ Risks: Over-reliance,</tspan>
+      <tspan x="190" dy="14">suboptimal code,</tspan>
+      <tspan x="190" dy="14">security vulnerabilities.</tspan>
+    </text>
+
+    <rect x="500" y="0" width="280" height="140" class="row-bg-even"/>
+    <text x="510" y="35" class="description-text">Developers write code manually,</text>
+    <!-- Wrapped text for using IDEs -->
+    <text x="510" y="53" class="description-text">
+      <tspan x="510" dy="0">using IDEs and</tspan>
+      <tspan x="510" dy="18">existing libraries.</tspan>
+    </text>
+    <text x="510" y="91" class="description-text">Relies on developer's expertise.</text>
+  </g>
+
+  <!-- Row 2: Commit Messages -->
+  <!-- Adjusted transform Y and rect height -->
+  <g transform="translate(0, 260)">
+    <rect x="20" y="0" width="150" height="140" class="row-bg-odd"/>
+    <text x="95" y="70" class="feature-text" text-anchor="middle">Commit Messages</text>
+
+    <rect x="180" y="0" width="300" height="140" class="row-bg-odd"/>
+    <text x="190" y="25" class="description-text">AI generates commit messages based</text>
+    <!-- Wrapped text for code changes -->
+    <text x="190" y="43" class="description-text">
+      <tspan x="190" dy="0">on code changes,</tspan>
+      <tspan x="190" dy="18">adheres to conventions.</tspan>
+    </text>
+    <!-- Wrapped text for AI Assisted -->
+    <text x="190" y="81" class="ai-intervention-text">
+      <tspan x="190" dy="0">✓ AI Assisted: Auto-generated</tspan>
+      <tspan x="190" dy="14">messages</tspan>
+    </text>
+    <!-- Wrapped text for Risks -->
+    <text x="190" y="111" class="risk-text">
+      <tspan x="190" dy="0">✗ Risks: Generic messages,</tspan>
+      <tspan x="190" dy="14">loss of human context,</tspan>
+      <tspan x="190" dy="14">misleading summaries.</tspan>
+    </text>
+
+    <rect x="500" y="0" width="280" height="140" class="row-bg-odd"/>
+    <!-- Wrapped text for Developers manually -->
+    <text x="510" y="35" class="description-text">
+      <tspan x="510" dy="0">Developers manually</tspan>
+      <tspan x="510" dy="18">write descriptive</tspan>
+    </text>
+    <!-- Wrapped text for commit messages -->
+    <text x="510" y="71" class="description-text">
+      <tspan x="510" dy="0">commit messages,</tspan>
+      <tspan x="510" dy="18">providing context</tspan>
+    </text>
+    <text x="510" y="107" class="description-text">and intent.</text>
+  </g>
+
+  <!-- Row 3: Code Review -->
+  <!-- Adjusted transform Y and rect height -->
+  <g transform="translate(0, 400)">
+    <rect x="20" y="0" width="150" height="140" class="row-bg-even"/>
+    <text x="95" y="70" class="feature-text" text-anchor="middle">Code Review</text>
+
+    <rect x="180" y="0" width="300" height="140" class="row-bg-even"/>
+    <text x="190" y="25" class="description-text">AI tools analyze code for bugs, style</text>
+    <text x="190" y="43" class="description-text">violations, and suggest improvements.</text>
+    <!-- Wrapped text for AI Assisted -->
+    <text x="190" y="61" class="ai-intervention-text">
+      <tspan x="190" dy="0">✓ AI Assisted: Automated analysis,</tspan>
+      <tspan x="190" dy="14">suggestions</tspan>
+    </text>
+    <!-- Wrapped text for Risks -->
+    <text x="190" y="91" class="risk-text">
+      <tspan x="190" dy="0">✗ Risks: False positives/negatives,</tspan>
+      <tspan x="190" dy="14">missing complex errors, bias.</tspan>
+    </text>
+
+    <rect x="500" y="0" width="280" height="140" class="row-bg-even"/>
+    <text x="510" y="35" class="description-text">Human developers review code for</text>
+    <text x="510" y="53" class="description-text">quality, correctness, and standards.</text>
+    <text x="510" y="71" class="description-text">Peer review, human insight.</text>
+  </g>
+
+  <!-- Row 4: Conflict Resolution -->
+  <!-- Adjusted transform Y and rect height -->
+  <g transform="translate(0, 540)">
+    <rect x="20" y="0" width="150" height="140" class="row-bg-odd"/>
+    <text x="95" y="70" class="feature-text" text-anchor="middle">Conflict Resolution</text>
+
+    <rect x="180" y="0" width="300" height="140" class="row-bg-odd"/>
+    <text x="190" y="25" class="description-text">AI assists in identifying merge conflicts</text>
+    <text x="190" y="43" class="description-text">and suggests resolutions, auto-merges.</text>
+    <!-- Wrapped text for AI Assisted -->
+    <text x="190" y="61" class="ai-intervention-text">
+      <tspan x="190" dy="0">✓ AI Assisted: Conflict detection,</tspan>
+      <tspan x="190" dy="14">suggestions</tspan>
+    </text>
+    <!-- Wrapped text for Risks -->
+    <text x="190" y="91" class="risk-text">
+      <tspan x="190" dy="0">✗ Risks: Incorrect merges, data loss,</tspan>
+      <tspan x="190" dy="14">complex conflicts need human oversight.</tspan>
+    </text>
+
+    <rect x="500" y="0" width="280" height="140" class="row-bg-odd"/>
+    <text x="510" y="35" class="description-text">Developers manually resolve merge</text>
+    <text x="510" y="53" class="description-text">conflicts, understanding context</text>
+    <text x="510" y="71" class="description-text">and intent.</text>
+  </g>
+
+  <!-- Cell Borders (drawn last to be on top of backgrounds) -->
+  <rect x="20" y="70" width="150" height="50" class="cell-border"/>
+  <rect x="180" y="70" width="300" height="50" class="cell-border"/>
+  <rect x="500" y="70" width="280" height="50" class="cell-border"/>
+
+  <!-- Adjusted Y and height for row borders -->
+  <rect x="20" y="120" width="150" height="140" class="cell-border"/>
+  <rect x="180" y="120" width="300" height="140" class="cell-border"/>
+  <rect x="500" y="120" width="280" height="140" class="cell-border"/>
+
+  <rect x="20" y="260" width="150" height="140" class="cell-border"/>
+  <rect x="180" y="260" width="300" height="140" class="cell-border"/>
+  <rect x="500" y="260" width="280" height="140" class="cell-border"/>
+
+  <rect x="20" y="400" width="150" height="140" class="cell-border"/>
+  <rect x="180" y="400" width="300" height="140" class="cell-border"/>
+  <rect x="500" y="400" width="280" height="140" class="cell-border"/>
+
+  <rect x="20" y="540" width="150" height="140" class="cell-border"/>
+  <rect x="180" y="540" width="300" height="140" class="cell-border"/>
+  <rect x="500" y="540" width="280" height="140" class="cell-border"/>
+</svg>

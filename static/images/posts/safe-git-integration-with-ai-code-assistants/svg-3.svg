@@ -1,0 +1,106 @@
+<svg width="800" height="800" viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
+    <!-- Background -->
+    <rect width="100%" height="100%" fill="#f8f9fa"/>
+
+    <!-- Arrowhead Definition -->
+    <defs>
+        <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
+        </marker>
+    </defs>
+
+    <!-- Styles -->
+    <style>
+        .flow-shape {
+            stroke: #333;
+            stroke-width: 2;
+        }
+        .start-end { fill: #50C878; } /* Green for start/end */
+        .process { fill: #4A90D9; } /* Blue for process steps */
+        .decision { fill: #FFD93D; } /* Yellow for decision */
+        .error-process { fill: #FF6B6B; } /* Red for error path process */
+        .error-end { fill: #FF6B6B; } /* Red for error path end */
+
+        .flow-text {
+            font-family: "Arial, sans-serif";
+            font-size: 14px;
+            fill: #333;
+            text-anchor: middle;
+            dominant-baseline: middle;
+        }
+        .decision-label {
+            font-family: "Arial, sans-serif";
+            font-size: 12px;
+            fill: #333;
+            text-anchor: middle;
+            dominant-baseline: middle;
+        }
+        .arrow {
+            stroke: #333;
+            stroke-width: 2;
+            fill: none;
+            marker-end: url(#arrowhead);
+        }
+    </style>
+
+    <!-- Shapes and Text -->
+
+    <!-- Start: 개발자 git commit 시도 -->
+    <ellipse class="flow-shape start-end" cx="400" cy="80" rx="100" ry="30"/>
+    <text class="flow-text" x="400" y="80">개발자 git commit 시도</text>
+
+    <!-- Process 1: pre-commit 훅 작동 -->
+    <rect class="flow-shape process" x="300" y="170" width="200" height="60"/>
+    <text class="flow-text" x="400" y="200">pre-commit 훅 작동</text>
+
+    <!-- Process 2: 스테이징된 파일 검사 -->
+    <rect class="flow-shape process" x="300" y="280" width="200" height="60"/>
+    <text class="flow-text" x="400" y="310">스테이징된 파일 검사</text>
+
+    <!-- Decision: 민감 정보 패턴 발견? -->
+    <polygon class="flow-shape decision" points="400,340 500,400 400,460 300,400"/>
+    <text class="flow-text" x="400" y="400">민감 정보 패턴 발견?</text>
+
+    <!-- Process 3 (아니오 path): 커밋 진행 -->
+    <rect class="flow-shape process" x="550" y="370" width="200" height="60"/>
+    <text class="flow-text" x="650" y="400">커밋 진행</text>
+
+    <!-- End 1 (아니오 path): 커밋 성공 -->
+    <ellipse class="flow-shape start-end" cx="650" cy="510" rx="100" ry="30"/>
+    <text class="flow-text" x="650" y="510">커밋 성공</text>
+
+    <!-- Process 4 (예 path): 커밋 중단 -->
+    <rect class="flow-shape error-process" x="300" y="510" width="200" height="60"/>
+    <text class="flow-text" x="400" y="540">커밋 중단</text>
+
+    <!-- Process 5 (예 path): 경고 메시지 출력 -->
+    <rect class="flow-shape error-process" x="300" y="620" width="200" height="60"/>
+    <text class="flow-text" x="400" y="650">경고 메시지 출력</text>
+
+    <!-- End 2 (예 path): 커밋 중단 -->
+    <ellipse class="flow-shape error-end" cx="400" cy="740" rx="100" ry="30"/>
+    <text class="flow-text" x="400" y="740">커밋 중단</text>
+
+    <!-- Arrows -->
+
+    <!-- Start to Process 1 -->
+    <path class="arrow" d="M 400 110 L 400 155"/>
+    <!-- Process 1 to Process 2 -->
+    <path class="arrow" d="M 400 230 L 400 265"/>
+    <!-- Process 2 to Decision -->
+    <path class="arrow" d="M 400 340 L 400 325"/>
+
+    <!-- Decision (Right - 아니오) to Process 3 -->
+    <path class="arrow" d="M 500 400 L 535 400"/>
+    <text class="decision-label" x="515" y="380">아니오</text>
+    <!-- Process 3 to End 1 -->
+    <path class="arrow" d="M 650 430 L 650 465"/>
+
+    <!-- Decision (Bottom - 예) to Process 4 -->
+    <path class="arrow" d="M 400 460 L 400 495"/>
+    <text class="decision-label" x="420" y="480">예</text>
+    <!-- Process 4 to Process 5 -->
+    <path class="arrow" d="M 400 570 L 400 605"/>
+    <!-- Process 5 to End 2 -->
+    <path class="arrow" d="M 400 680 L 400 695"/>
+</svg>

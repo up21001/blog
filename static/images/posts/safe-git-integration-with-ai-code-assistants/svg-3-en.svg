@@ -1,0 +1,123 @@
+<svg viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    /* General shape styling */
+    .shape {
+      stroke: #333;
+      stroke-width: 2;
+      fill: #f8f9fa; /* Background color for shapes */
+    }
+    /* Specific shape colors */
+    .start-end { fill: #50C878; } /* Green */
+    .process { fill: #4A90D9; } /* Blue */
+    .decision { fill: #FFD93D; } /* Yellow */
+    .error-path { fill: #FF6B6B; } /* Red for error/abort */
+
+    /* Text styling */
+    .text {
+      font-family: "Arial, sans-serif";
+      font-size: 14px;
+      fill: #333;
+      text-anchor: middle;
+      dominant-baseline: middle;
+    }
+    .decision-label {
+      font-family: "Arial, sans-serif";
+      font-size: 12px;
+      fill: #333;
+      text-anchor: middle;
+      dominant-baseline: middle;
+    }
+
+    /* Arrow styling */
+    .arrow {
+      stroke: #333;
+      stroke-width: 2;
+      fill: none;
+      marker-end: url(#arrowhead);
+    }
+  </style>
+
+  <defs>
+    <!-- Arrowhead definition -->
+    <marker id="arrowhead" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#333" />
+    </marker>
+  </defs>
+
+  <!-- Flowchart Shapes and Text Labels (Rendering Order: Shapes then Arrows) -->
+
+  <!-- Start Node -->
+  <ellipse cx="400" cy="50" rx="60" ry="30" class="shape start-end" />
+  <text x="400" y="50" class="text">Start</text>
+
+  <!-- Process: Developer attempts git commit -->
+  <rect x="300" y="100" width="200" height="60" rx="5" ry="5" class="shape process" />
+  <text x="400" y="130" class="text">Developer attempts</text>
+  <text x="400" y="148" class="text">`git commit`</text>
+
+  <!-- Process: pre-commit hook activates -->
+  <rect x="300" y="200" width="200" height="60" rx="5" ry="5" class="shape process" />
+  <text x="400" y="230" class="text">`pre-commit` hook</text>
+  <text x="400" y="248" class="text">activates</text>
+
+  <!-- Process: Scan staged files for sensitive data -->
+  <rect x="270" y="300" width="260" height="80" rx="5" ry="5" class="shape process" />
+  <text x="400" y="330" class="text">Scan staged files for</text>
+  <text x="400" y="350" class="text">sensitive data patterns</text>
+
+  <!-- Decision: Sensitive data found? -->
+  <polygon points="400,410 500,460 400,510 300,460" class="shape decision" />
+  <text x="400" y="450" class="text">Sensitive data</text>
+  <text x="400" y="470" class="text">found?</text>
+
+  <!-- Process (No path): Allow commit -->
+  <rect x="350" y="580" width="150" height="60" rx="5" ry="5" class="shape process" />
+  <text x="425" y="610" class="text">Allow commit</text>
+
+  <!-- Process (Yes path): Abort commit -->
+  <rect x="150" y="580" width="150" height="60" rx="5" ry="5" class="shape error-path" />
+  <text x="225" y="610" class="text">Abort commit</text>
+
+  <!-- Process (Yes path): Notify developer -->
+  <rect x="150" y="680" width="150" height="60" rx="5" ry="5" class="shape error-path" />
+  <!-- Wrapped text into three lines to fit within the box -->
+  <text x="225" y="692" class="text">Notify developer</text>
+  <text x="225" y="710" class="text">of sensitive</text>
+  <text x="225" y="728" class="text">data</text>
+
+  <!-- End Node -->
+  <ellipse cx="400" cy="770" rx="60" ry="30" class="shape start-end" />
+  <text x="400" y="770" class="text">End</text>
+
+  <!-- Arrows (Must be rendered last) -->
+
+  <!-- Start to Developer attempts commit -->
+  <path d="M 400 80 L 400 85" class="arrow" />
+
+  <!-- Developer attempts commit to pre-commit hook -->
+  <path d="M 400 160 L 400 185" class="arrow" />
+
+  <!-- pre-commit hook to Scan staged files -->
+  <path d="M 400 260 L 400 285" class="arrow" />
+
+  <!-- Scan staged files to Decision -->
+  <path d="M 400 380 L 400 395" class="arrow" />
+
+  <!-- Decision (No) to Allow commit -->
+  <path d="M 400 510 L 400 565" class="arrow" />
+  <text x="450" y="545" class="decision-label">No</text>
+
+  <!-- Decision (Yes) to Abort commit -->
+  <path d="M 300 460 L 225 460 L 225 565" class="arrow" />
+  <text x="260" y="475" class="decision-label">Yes</text>
+
+  <!-- Abort commit to Notify developer -->
+  <path d="M 225 640 L 225 665" class="arrow" />
+
+  <!-- Allow commit to End -->
+  <path d="M 425 640 L 425 725 L 400 725" class="arrow" />
+
+  <!-- Notify developer to End -->
+  <path d="M 225 740 L 225 725 L 400 725" class="arrow" />
+
+</svg>

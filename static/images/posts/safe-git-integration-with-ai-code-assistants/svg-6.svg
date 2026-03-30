@@ -1,0 +1,95 @@
+<svg viewBox="0 0 800 700" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .node-rect {
+      rx: 8;
+      ry: 8;
+      stroke: #ced4da;
+      stroke-width: 1;
+    }
+    .text-label {
+      font-family: "Arial, sans-serif"; /* Consider adding Korean font like "Malgun Gothic" for better rendering */
+      font-size: 14px;
+      fill: #343a40;
+      text-anchor: middle;
+      dominant-baseline: central;
+    }
+    .text-label.root {
+      font-size: 16px;
+      font-weight: bold;
+    }
+    .level1 { fill: #4A90D9; } /* Blue */
+    .level2 { fill: #50C878; } /* Green */
+    .level3 { fill: #6C5CE7; } /* Purple */
+    .level4 { fill: #FFD93D; } /* Yellow */
+    .action-node { fill: #FFD93D; } /* Yellow for actions/leaves */
+    .connector {
+      stroke: #6c757d;
+      stroke-width: 2;
+      fill: none;
+    }
+    .arrow {
+      marker-end: url(#arrowhead);
+    }
+  </style>
+
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#6c757d" />
+    </marker>
+  </defs>
+
+  <!-- Node Definitions -->
+  <!-- Node 1: 메인 브랜치 (Root) -->
+  <rect x="310" y="50" width="180" height="60" class="node-rect level1" />
+  <text x="400" y="80" class="text-label root">메인 브랜치</text>
+
+  <!-- Node 2: feature/* 브랜치 -->
+  <rect x="170" y="190" width="180" height="60" class="node-rect level2" />
+  <text x="260" y="220" class="text-label">feature/* 브랜치</text>
+
+  <!-- Node 3: ai-draft/* 브랜치 -->
+  <rect x="400" y="330" width="180" height="60" class="node-rect level3" />
+  <text x="490" y="360" class="text-label">ai-draft/* 브랜치</text>
+
+  <!-- Node 4: AI 코드 실험 및 개발 -->
+  <rect x="400" y="470" width="180" height="60" class="node-rect level4" />
+  <text x="490" y="500" class="text-label">AI 코드 실험 및 개발</text>
+
+  <!-- Node 5: 스쿼시 병합 (feature/*) - Action Node -->
+  <!-- Adjusted position and text wrapping to prevent overflow -->
+  <rect x="590" y="460" width="200" height="80" class="node-rect action-node" />
+  <text x="690" y="485" class="text-label">AI 코드</text>
+  <text x="690" y="505" class="text-label">실험 결과</text>
+  <text x="690" y="525" class="text-label">스쿼시 병합</text>
+
+  <!-- Node 6: 메인 브랜치로 병합 - Action Node -->
+  <rect x="400" y="180" width="200" height="80" class="node-rect level2" />
+  <text x="500" y="210" class="text-label">feature/*</text>
+  <text x="500" y="235" class="text-label">메인 브랜치로 병합</text>
+
+  <!-- Connector Lines (rendered last) -->
+  <!-- 1. 메인 브랜치 (N1) -> feature/* 브랜치 (N2) -->
+  <path d="M 400 110 L 400 150 L 260 150 L 260 190" class="connector arrow" />
+
+  <!-- 2. feature/* 브랜치 (N2) -> ai-draft/* 브랜치 (N3) -->
+  <path d="M 260 250 L 260 290 L 490 290 L 490 330" class="connector arrow" />
+
+  <!-- 3. ai-draft/* 브랜치 (N3) -> AI 코드 실험 및 개발 (N4) -->
+  <path d="M 490 390 L 490 470" class="connector arrow" />
+
+  <!-- 4. AI 코드 실험 및 개발 (N4) -> 스쿼시 병합 (N5) -->
+  <!-- Adjusted path to connect to the new position of Node 5 -->
+  <path d="M 580 500 L 590 500" class="connector arrow" />
+
+  <!-- 5. 스쿼시 병합 (N5) -> feature/* 브랜치 (N2) -->
+  <!-- Adjusted path to start from the new bottom-center of Node 5 -->
+  <path d="M 690 540 L 690 600 L 100 600 L 100 150 L 260 150 L 260 190" class="connector arrow" />
+
+  <!-- 6. feature/* 브랜치 (N2) -> 메인 브랜치로 병합 (N6) -->
+  <path d="M 350 220 L 400 220" class="connector arrow" />
+
+  <!-- 7. 메인 브랜치로 병합 (N6) -> 메인 브랜치 (N1) -->
+  <!-- Path: N6 bottom-center -> right -> up (above N1) -> left -> N1 top-center -->
+  <path d="M 500 260 L 500 300 L 700 300 L 700 20 L 400 20 L 400 50" class="connector arrow" />
+
+</svg>

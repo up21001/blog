@@ -303,7 +303,7 @@ CONNECTOR GEOMETRY:
 }
 
 
-def _build_prompt(svg_type: str, description: str, style: str, language: str = "ko") -> str:
+def _build_prompt(svg_type: str, description: str, style: str, language: str = "ko", reference_svg: str = "") -> str:
     style_hints = {
         "modern": "modern flat design, clean lines",
         "minimal": "minimal, monochrome, simple shapes only",
@@ -311,6 +311,16 @@ def _build_prompt(svg_type: str, description: str, style: str, language: str = "
         "dark": "dark background (#1a1a2e), light elements, neon accents",
     }
     style_desc = style_hints.get(style, style_hints["modern"])
+
+    # 한글 SVG 참조가 있으면 번역 모드
+    if reference_svg and language == "en":
+        return (
+            f"Translate the following Korean SVG to English. "
+            f"ONLY translate text content (labels, titles, descriptions) to English. "
+            f"Keep the EXACT same SVG structure, CSS styles, viewBox, coordinates, colors, and all attributes. "
+            f"Do NOT restructure, redesign, or regenerate the SVG — only change Korean text to English equivalents.\n\n"
+            f"Korean SVG:\n{reference_svg}"
+        )
 
     lang_instruction = ""
     if language == "en":
@@ -618,10 +628,21 @@ async def generate_svg_async(
     style: str = "modern",
     max_retries: int = 3,
     language: str = "ko",
+    reference_svg: str = "",
 ) -> str:
     """SVG 코드 생성 후 유효성 검사까지 수행. 실패 시 재시도."""
     system_prompt = SYSTEM_PROMPTS.get(svg_type, SYSTEM_PROMPTS["architecture"])
-    system_prompt += """
+
+    # 참조 SVG가 있으면 번역 전용 시스템 프롬프트 사용
+    if reference_svg and language == "en":
+        system_prompt = (
+            "You are an SVG translator. Given a Korean SVG, translate ONLY the text content to English. "
+            "Preserve the EXACT same SVG structure, CSS styles, viewBox, coordinates, colors, classes, "
+            "and all attributes. Do NOT restructure, redesign, add, or remove any SVG elements. "
+            "Output valid XML SVG only."
+        )
+    else:
+        system_prompt += """
 
 Global SVG quality requirements:
 - Output valid XML SVG only.
@@ -632,13 +653,12 @@ Global SVG quality requirements:
 - If a label cannot fit, enlarge the containing box or diamond instead of letting text overflow.
 - Keep at least 12px padding between text and shape borders.
 """
-    if language == "en":
-        # Override Korean text rules to English
-        system_prompt = system_prompt.replace(
-            "All text must be in Korean if the prompt is Korean",
-            "All text MUST be in English. Do NOT use Korean text."
-        )
-    user_prompt = _build_prompt(svg_type, description, style, language)
+        if language == "en":
+            system_prompt = system_prompt.replace(
+                "All text must be in Korean if the prompt is Korean",
+                "All text MUST be in English. Do NOT use Korean text."
+            )
+    user_prompt = _build_prompt(svg_type, description, style, language, reference_svg)
 
     import asyncio as _aio
     import time as _time

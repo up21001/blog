@@ -918,11 +918,12 @@ async def generate(body: GenerateBody):
             slug = _slug_from_topic(topic)
             markdown = inject_svgs_into_markdown(markdown, valid_svgs, slug)
 
-    # 영문 SVG 자동 생성 (한글 SVG가 있고 with_english인 경우)
+    # 영문 SVG 자동 생성 (한글 SVG를 참조하여 텍스트만 번역)
     svgs_en_out: list[dict] = []
     if body.with_english and svgs_out:
         for i, spec in enumerate(svgs_out):
-            if spec.get("svg", "").startswith("<svg"):
+            ko_svg = spec.get("svg", "")
+            if ko_svg.startswith("<svg"):
                 try:
                     if i > 0:
                         await asyncio.sleep(8)
@@ -932,6 +933,7 @@ async def generate(body: GenerateBody):
                         spec.get("type", "architecture"),
                         spec.get("style", "modern"),
                         language="en",
+                        reference_svg=ko_svg,
                     )
                     svgs_en_out.append({**spec, "svg": svg_en, "index": i})
                 except Exception as e:

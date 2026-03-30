@@ -1,0 +1,137 @@
+<svg viewBox="0 0 800 850" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .title {
+      font-family: "Arial, sans-serif";
+      font-size: 24px;
+      font-weight: bold;
+      fill: #2D3748;
+      text-anchor: middle;
+    }
+    .header-text {
+      font-family: "Arial, sans-serif";
+      font-size: 18px;
+      font-weight: bold;
+      fill: #2D3748;
+      text-anchor: middle;
+    }
+    .feature-name {
+      font-family: "Arial, sans-serif";
+      font-size: 16px;
+      font-weight: bold;
+      fill: #2D3748;
+    }
+    .description-text {
+      font-family: "Arial, sans-serif";
+      font-size: 14px;
+      fill: #2D3748;
+    }
+    .ai-color {
+      fill: #4A90D9;
+    }
+    .traditional-color {
+      fill: #50C878;
+    }
+    .risk-color {
+      fill: #FF6B6B;
+    }
+    .bg-light {
+      fill: #f8f9fa;
+    }
+    .bg-white {
+      fill: #ffffff;
+    }
+    .ai-column-border {
+      stroke: #4A90D9;
+      stroke-width: 2px;
+      fill: none;
+    }
+  </style>
+
+  <!-- Title -->
+  <text x="400" y="40" class="title">AI 기반 Git 워크플로우 vs 전통적인 Git 워크플로우</text>
+
+  <!-- Column Headers Background -->
+  <rect x="20" y="60" width="370" height="50" fill="#E0E0E0" rx="8" ry="8"/>
+  <rect x="410" y="60" width="370" height="50" fill="#E0E0E0" rx="8" ry="8"/>
+
+  <!-- AI Column Highlight -->
+  <rect x="20" y="60" width="370" height="770" class="ai-column-border" rx="8" ry="8"/>
+
+  <!-- Column Headers Text -->
+  <text x="205" y="90" class="header-text">AI 기반 Git 워크플로우</text>
+  <text x="595" y="90" class="header-text">전통적인 Git 워크플로우</text>
+
+  <!-- Row 1: 코드 작성 (Code Writing) -->
+  <rect x="20" y="110" width="760" height="180" class="bg-light" rx="8" ry="8"/>
+  <text x="40" y="140" class="feature-name">코드 작성</text>
+
+  <!-- AI Column 1 Content -->
+  <!-- AI Icon (Brain) -->
+  <path d="M 120 160 C 116 160 114 164 114 168 C 114 172 116 176 120 176 C 124 176 126 172 126 168 C 126 164 124 160 120 160 Z M 118 168 C 118 166 119 164 120 164 C 121 164 122 166 122 168 C 122 170 121 172 120 172 C 119 172 118 170 118 168 Z" class="ai-color" transform="translate(40, 0) scale(1.2)"/>
+  <text x="170" y="170" class="description-text">AI가 코드 스니펫 제안 및 자동 완성</text>
+  <!-- Risk Icon (Warning Triangle) -->
+  <path d="M 120 200 L 110 220 H 130 Z M 119 205 V 213 H 121 V 205 Z M 119 215 V 217 H 121 V 215 Z" class="risk-color" transform="translate(40, 0) scale(1.2)"/>
+  <text x="170" y="210" class="description-text">리스크: 부정확한 코드, 보안 취약점 발생 가능</text>
+
+  <!-- Traditional Column 1 Content -->
+  <text x="430" y="170" class="description-text">개발자가 직접 로직 설계 및 코드 작성</text>
+  <text x="430" y="190" class="description-text">수동 검토 및 테스트를 통해 품질 확보</text>
+
+  <!-- Row 2: 커밋 메시지 (Commit Message) -->
+  <rect x="20" y="290" width="760" height="180" class="bg-white" rx="8" ry="8"/>
+  <text x="40" y="320" class="feature-name">커밋 메시지</text>
+
+  <!-- AI Column 2 Content -->
+  <!-- AI Icon (Brain) -->
+  <path d="M 120 340 C 116 340 114 344 114 348 C 114 352 116 356 120 356 C 124 356 126 352 126 348 C 126 344 124 340 120 340 Z M 118 348 C 118 346 119 344 120 344 C 121 344 122 346 122 348 C 122 350 121 352 120 352 C 119 352 118 350 118 348 Z" class="ai-color" transform="translate(40, 0) scale(1.2)"/>
+  <text x="170" y="350" class="description-text">AI가 변경 사항 기반으로</text>
+  <text x="170" y="370" class="description-text">커밋 메시지 자동 생성</text>
+  <!-- Risk Icon (Warning Triangle) -->
+  <path d="M 120 380 L 110 400 H 130 Z M 119 385 V 393 H 121 V 385 Z M 119 395 V 397 H 121 V 395 Z" class="risk-color" transform="translate(40, 0) scale(1.2)"/>
+  <text x="170" y="390" class="description-text">리스크: 변경 의도 불명확,</text>
+  <text x="170" y="410" class="description-text">핵심 정보 누락 가능</text>
+
+  <!-- Traditional Column 2 Content -->
+  <text x="430" y="350" class="description-text">개발자가 변경 내용과 의도를 명확히 작성</text>
+  <text x="430" y="370" class="description-text">팀의 컨벤션 준수 및 상세한 기록</text>
+
+  <!-- Row 3: 코드 리뷰 (Code Review) -->
+  <rect x="20" y="470" width="760" height="180" class="bg-light" rx="8" ry="8"/>
+  <text x="40" y="500" class="feature-name">코드 리뷰</text>
+
+  <!-- AI Column 3 Content -->
+  <!-- AI Icon (Brain) -->
+  <path d="M 120 520 C 116 520 114 524 114 528 C 114 532 116 536 120 536 C 124 536 126 532 126 528 C 126 524 124 520 120 520 Z M 118 528 C 118 526 119 524 120 524 C 121 524 122 526 122 528 C 122 530 121 532 120 532 C 119 532 118 530 118 528 Z" class="ai-color" transform="translate(40, 0) scale(1.2)"/>
+  <text x="170" y="530" class="description-text">AI가 잠재적 버그,</text>
+  <text x="170" y="550" class="description-text">취약점, 스타일 위반 검토</text>
+  <!-- Risk Icon (Warning Triangle) -->
+  <path d="M 120 560 L 110 580 H 130 Z M 119 565 V 573 H 121 V 565 Z M 119 575 V 577 H 121 V 575 Z" class="risk-color" transform="translate(40, 0) scale(1.2)"/>
+  <text x="170" y="570" class="description-text">리스크: 문맥 이해 부족,</text>
+  <text x="170" y="590" class="description-text">피상적인 피드백 제공</text>
+
+  <!-- Traditional Column 3 Content -->
+  <text x="430" y="530" class="description-text">동료 개발자가 코드 논리,</text>
+  <text x="430" y="550" class="description-text">효율성, 디자인 패턴 검토</text>
+  <text x="430" y="570" class="description-text">심층적인 피드백 및</text>
+  <text x="430" y="590" class="description-text">지식 공유를 통한 품질 향상</text>
+
+  <!-- Row 4: 충돌 해결 (Conflict Resolution) -->
+  <rect x="20" y="650" width="760" height="180" class="bg-white" rx="8" ry="8"/>
+  <text x="40" y="680" class="feature-name">충돌 해결</text>
+
+  <!-- AI Column 4 Content -->
+  <!-- AI Icon (Brain) -->
+  <path d="M 120 700 C 116 700 114 704 114 708 C 114 712 116 716 120 716 C 124 716 126 712 126 708 C 126 704 124 700 120 700 Z M 118 708 C 118 706 119 704 120 704 C 121 704 122 706 122 708 C 122 710 121 712 120 712 C 119 712 118 710 118 708 Z" class="ai-color" transform="translate(40, 0) scale(1.2)"/>
+  <text x="170" y="710" class="description-text">AI가 충돌 지점 분석 및</text>
+  <text x="170" y="730" class="description-text">병합 솔루션 제안</text>
+  <!-- Risk Icon (Warning Triangle) -->
+  <path d="M 120 740 L 110 760 H 130 Z M 119 745 V 753 H 121 V 745 Z M 119 755 V 757 H 121 V 755 Z" class="risk-color" transform="translate(40, 0) scale(1.2)"/>
+  <text x="170" y="750" class="description-text">리스크: 잘못된 병합으로 인한</text>
+  <text x="170" y="770" class="description-text">기능 오류, 데이터 손실</text>
+
+  <!-- Traditional Column 4 Content -->
+  <text x="430" y="710" class="description-text">개발자가 수동으로 충돌 지점 파악 및 해결</text>
+  <text x="430" y="730" class="description-text">신중한 검토와 테스트를 통해</text>
+  <text x="430" y="750" class="description-text">안정적인 병합</text>
+
+</svg>

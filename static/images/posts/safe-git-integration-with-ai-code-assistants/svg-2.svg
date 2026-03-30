@@ -1,0 +1,96 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Arrow marker -->
+    <marker id="arrowhead" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#4A90D9" />
+    </marker>
+    <!-- Drop shadow filter -->
+    <filter id="dropshadow" height="130%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3"/>
+      <feOffset dx="2" dy="2" result="offsetblur"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.2"/>
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect x="0" y="0" width="800" height="600" fill="#f8f9fa"/>
+
+  <!-- Main Title -->
+  <!-- Adjusted font-size to prevent overflow -->
+  <text x="400" y="40" font-family="Arial, sans-serif" font-size="26" fill="#333" text-anchor="middle" font-weight="bold">
+    안전한 AI-Git 연동 워크플로우
+  </text>
+
+  <!-- Section Titles -->
+  <text x="210" y="100" font-family="Arial, sans-serif" font-size="22" fill="#333" text-anchor="middle" font-weight="bold">
+    로컬 환경
+  </text>
+  <text x="590" y="100" font-family="Arial, sans-serif" font-size="22" fill="#333" text-anchor="middle" font-weight="bold">
+    원격 저장소
+  </text>
+
+  <!-- Local Environment Boxes -->
+  <rect x="100" y="150" width="220" height="70" rx="10" ry="10" fill="#FFD93D" filter="url(#dropshadow)"/>
+  <text x="210" y="192" font-family="Arial, sans-serif" font-size="18" fill="#333" text-anchor="middle">AI 어시스턴트</text>
+
+  <rect x="100" y="260" width="220" height="70" rx="10" ry="10" fill="#4A90D9" filter="url(#dropshadow)"/>
+  <text x="210" y="302" font-family="Arial, sans-serif" font-size="18" fill="#fff" text-anchor="middle">개발자 검토</text>
+
+  <rect x="100" y="370" width="220" height="70" rx="10" ry="10" fill="#6C5CE7" filter="url(#dropshadow)"/>
+  <text x="210" y="412" font-family="Arial, sans-serif" font-size="18" fill="#fff" text-anchor="middle">Git Hooks</text>
+
+  <!-- Remote Repository Boxes -->
+  <rect x="480" y="150" width="220" height="70" rx="10" ry="10" fill="#6C5CE7" filter="url(#dropshadow)"/>
+  <text x="590" y="175" font-family="Arial, sans-serif" font-size="18" fill="#fff" text-anchor="middle">원격 저장소</text>
+  <text x="590" y="195" font-family="Arial, sans-serif" font-size="15" fill="#fff" text-anchor="middle">(GitHub/GitLab)</text>
+
+  <rect x="480" y="260" width="220" height="70" rx="10" ry="10" fill="#50C878" filter="url(#dropshadow)"/>
+  <text x="590" y="302" font-family="Arial, sans-serif" font-size="18" fill="#fff" text-anchor="middle">CI/CD</text>
+
+  <rect x="480" y="370" width="220" height="70" rx="10" ry="10" fill="#4A90D9" filter="url(#dropshadow)"/>
+  <text x="590" y="412" font-family="Arial, sans-serif" font-size="18" fill="#fff" text-anchor="middle">PR 검토</text>
+
+  <!-- Overall Validation Description -->
+  <rect x="40" y="480" width="720" height="80" rx="10" ry="10" fill="#E0E0E0" filter="url(#dropshadow)"/>
+  <!-- Adjusted y position and tspan lines to prevent overflow and wrap text -->
+  <text x="400" y="500" font-family="Arial, sans-serif" font-size="18" fill="#333" text-anchor="middle">
+    <tspan x="400" dy="0">AI-Git 연동의 각 단계에서</tspan>
+    <tspan x="400" dy="20">코드 품질, 보안, 정책 준수를 위한</tspan>
+    <tspan x="400" dy="20">다단계 검증이 이루어집니다.</tspan>
+  </text>
+
+  <!-- Arrows and Labels (MUST BE LAST) -->
+  <!-- AI 어시스턴트 -> 개발자 검토 -->
+  <path d="M 210 220 V 245" stroke="#4A90D9" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  <text x="210" y="232" font-family="Arial, sans-serif" font-size="13" fill="#333" text-anchor="middle">코드 생성 및 제안</text>
+
+  <!-- 개발자 검토 -> Git Hooks -->
+  <path d="M 210 330 V 355" stroke="#4A90D9" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  <text x="210" y="342" font-family="Arial, sans-serif" font-size="13" fill="#333" text-anchor="middle">코드 검토 및 승인</text>
+
+  <!-- Git Hooks -> 원격 저장소 (GitHub/GitLab) -->
+  <path d="M 320 405 H 400 V 185 H 465" stroke="#4A90D9" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  <text x="360" y="420" font-family="Arial, sans-serif" font-size="13" fill="#333" text-anchor="middle">푸시 (Push)</text>
+  <text x="440" y="170" font-family="Arial, sans-serif" font-size="13" fill="#333" text-anchor="middle">로컬 검증 완료</text>
+
+  <!-- 원격 저장소 (GitHub/GitLab) -> CI/CD -->
+  <path d="M 590 220 V 245" stroke="#4A90D9" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  <text x="590" y="232" font-family="Arial, sans-serif" font-size="13" fill="#333" text-anchor="middle">코드 변경 감지</text>
+
+  <!-- CI/CD -> PR 검토 -->
+  <path d="M 590 330 V 355" stroke="#4A90D9" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  <text x="590" y="342" font-family="Arial, sans-serif" font-size="13" fill="#333" text-anchor="middle">자동 검증 완료</text>
+
+  <!-- PR 검토 -> 원격 저장소 (GitHub/GitLab) (Merge back) -->
+  <path d="M 700 405 H 740 V 130 H 465" stroke="#4A90D9" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  <!-- Adjusted x position to prevent overflow -->
+  <text x="710" y="380" font-family="Arial, sans-serif" font-size="13" fill="#333" text-anchor="middle">PR 승인 및 병합</text>
+  <text x="600" y="120" font-family="Arial, sans-serif" font-size="13" fill="#333" text-anchor="middle">메인 브랜치로</text>
+
+</svg>

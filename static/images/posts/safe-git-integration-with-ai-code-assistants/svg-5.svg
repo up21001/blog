@@ -1,0 +1,107 @@
+<svg viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <marker id="arrowhead" markerWidth="15" markerHeight="7" refX="15" refY="3.5" orient="auto">
+            <polygon points="0 0, 15 3.5, 0 7" fill="#333"/>
+        </marker>
+    </defs>
+
+    <!-- Background -->
+    <rect x="0" y="0" width="800" height="800" fill="#f8f9fa"/>
+
+    <!-- Styles -->
+    <style>
+        .shape {
+            stroke: #333;
+            stroke-width: 2;
+        }
+        .start-end { fill: #50C878; } /* Green */
+        .process { fill: #4A90D9; } /* Blue */
+        .decision { fill: #FFD93D; } /* Yellow */
+        .error { fill: #FF6B6B; } /* Red */
+        .text {
+            font-family: "Arial, sans-serif";
+            font-size: 14px;
+            fill: #333;
+            text-anchor: middle;
+            dominant-baseline: middle;
+        }
+        .arrow-label {
+            font-family: "Arial, sans-serif";
+            font-size: 12px;
+            fill: #333;
+            text-anchor: middle;
+            dominant-baseline: middle;
+        }
+        .arrow {
+            stroke: #333;
+            stroke-width: 2;
+            fill: none;
+            marker-end: url(#arrowhead);
+        }
+    </style>
+
+    <!-- Shapes and Text Labels -->
+
+    <!-- 1. Start: 커밋 메시지 생성/작성 (Oval) -->
+    <ellipse id="start1" cx="400" cy="80" rx="100" ry="30" class="shape start-end"/>
+    <text x="400" y="72" class="text">커밋 메시지</text>
+    <text x="400" y="92" class="text">생성/작성</text>
+
+    <!-- 2. Process: commit-msg 훅 실행 (Rectangle) -->
+    <rect id="process1" x="300" y="180" width="200" height="80" class="shape process"/>
+    <text x="400" y="202" class="text">commit-msg</text>
+    <text x="400" y="222" class="text">훅 실행</text>
+
+    <!-- 3. Decision: Conventional Commits 규칙 준수 여부? (Diamond) -->
+    <polygon id="decision1" points="400,300 500,350 400,400 300,350" class="shape decision"/>
+    <text x="400" y="332" class="text">Conventional Commits</text>
+    <text x="400" y="352" class="text">규칙 준수 여부?</text>
+
+    <!-- 4. Process (Yes): 커밋 승인 및 저장 (Rectangle) -->
+    <rect id="process2_yes" x="550" y="450" width="200" height="80" class="shape process"/>
+    <text x="650" y="472" class="text">커밋 승인</text>
+    <text x="650" y="492" class="text">및 저장</text>
+
+    <!-- 5. End (Yes): 종료 (Oval) -->
+    <ellipse id="end1_yes" cx="650" cy="560" rx="100" ry="30" class="shape start-end"/>
+    <text x="650" y="564" class="text">종료</text>
+
+    <!-- 4. Process (No): 규칙 위반 메시지 표시 (Rectangle, Red) -->
+    <rect id="process3_no" x="50" y="450" width="200" height="80" class="shape error"/>
+    <text x="150" y="472" class="text">규칙 위반</text>
+    <text x="150" y="492" class="text">메시지 표시</text>
+
+    <!-- 5. Process (No): 커밋 거부 (Rectangle, Red) -->
+    <rect id="process4_no" x="50" y="580" width="200" height="80" class="shape error"/>
+    <text x="150" y="612" class="text">커밋 거부</text>
+
+    <!-- 6. End (No): 종료 (Oval) -->
+    <ellipse id="end2_no" cx="150" cy="740" rx="100" ry="30" class="shape start-end"/>
+    <text x="150" y="744" class="text">종료</text>
+
+    <!-- Arrows and Arrow Labels (LAST elements) -->
+
+    <!-- Arrow 1: start1 -> process1 -->
+    <path d="M 400 110 V 165" class="arrow"/>
+
+    <!-- Arrow 2: process1 -> decision1 -->
+    <path d="M 400 260 V 285" class="arrow"/>
+
+    <!-- Arrow 3: decision1 (right) -> process2_yes (left) -->
+    <path d="M 500 350 H 535 V 490" class="arrow"/>
+    <text x="515" y="340" class="arrow-label">예</text>
+
+    <!-- Arrow 4: decision1 (left) -> process3_no (right) -->
+    <path d="M 300 350 H 265 V 490" class="arrow"/>
+    <text x="285" y="340" class="arrow-label">아니오</text>
+
+    <!-- Arrow 5: process2_yes -> end1_yes -->
+    <path d="M 650 530 V 545" class="arrow"/>
+
+    <!-- Arrow 6: process3_no -> process4_no -->
+    <path d="M 150 530 V 565" class="arrow"/>
+
+    <!-- Arrow 7: process4_no -> end2_no -->
+    <path d="M 150 660 V 695" class="arrow"/>
+
+</svg>
