@@ -937,6 +937,38 @@
         throw new Error(msg || "요청 실패");
       }
       if (j.models) renderModelsPanel(j.models);
+
+      // SEO 최적화 옵션이 켜져 있으면 생성된 마크다운을 자동 최적화
+      const withSeo = $("withSeoOptimize") && $("withSeoOptimize").checked;
+      if (withSeo && j.markdown) {
+        try {
+          load.querySelector("p").textContent = "SEO 키워드 최적화 중…";
+          const seoR = await fetch(apiUrl("/api/optimize-seo"), {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ markdown: j.markdown }),
+          });
+          const seoJ = await seoR.json();
+          if (seoR.ok && seoJ.title) {
+            let md = j.markdown;
+            md = md.replace(/^title:\s*"[^"]*"/m, `title: "${seoJ.title}"`);
+            md = md.replace(/^description:\s*"[^"]*"/m, `description: "${seoJ.description}"`);
+            if (seoJ.tags) {
+              const tagsYaml = `tags: [${seoJ.tags.map(t => `"${t}"`).join(", ")}]`;
+              md = md.replace(/^tags:\s*\[.*\]/m, tagsYaml);
+            }
+            j.markdown = md;
+            // 영문도 있으면 태그만 동기화
+            if (j.markdown_en && seoJ.tags) {
+              const tagsYaml = `tags: [${seoJ.tags.map(t => `"${t}"`).join(", ")}]`;
+              j.markdown_en = j.markdown_en.replace(/^tags:\s*\[.*\]/m, tagsYaml);
+            }
+          }
+        } catch (_seoErr) {
+          console.warn("SEO 최적화 건너뜀:", _seoErr);
+        }
+      }
+
       applyPayload(j);
       res.hidden = false;
       setActiveTab("split");
