@@ -33,7 +33,7 @@
   </style>
 
   <!-- Title -->
-  <text x="400" y="80" class="title">Three Fundamental Limitations of AI Coding Assistants</text>
+  <text x="400" y="80" class="title">AI 코딩 도우미의 세 가지 근본적인 한계</text>
 
   <!-- Section 1: 의미론적 이해 부재 -->
   <g transform="translate(0, 180)">
@@ -47,9 +47,9 @@
       <line class="icon-stroke" x1="-30" y1="-30" x2="30" y2="30"/>
       <line class="icon-stroke" x1="30" y1="-30" x2="-30" y2="30"/>
     </g>
-    <text x="400" y="120" class="section-title">1. Lack of Semantic Understanding</text>
-    <text x="400" y="160" class="description">Code may be syntactically correct,</text>
-    <text x="400" y="185" class="description">but it lacks deep understanding of actual intent or context.</text>
+    <text x="400" y="120" class="section-title">1. 의미론적 이해 부재</text>
+    <text x="400" y="160" class="description">코드는 문법적으로 올바르지만,</text>
+    <text x="400" y="185" class="description">실제 의도나 맥락을 깊이 이해하지 못합니다.</text>
   </g>
 
   <!-- Section 2: 과거 데이터 의존성 -->
@@ -67,9 +67,9 @@
       <!-- Folded corner -->
       <path class="icon-fill" d="M40,-50 L10,-50 L40,-20 Z"/>
     </g>
-    <text x="400" y="120" class="section-title">2. Dependence on Past Data</text>
-    <text x="400" y="160" class="description">Generates code based on learned past data,</text>
-    <text x="400" y="185" class="description">weak in adopting latest technologies or innovative solutions.</text>
+    <text x="400" y="120" class="section-title">2. 과거 데이터 의존성</text>
+    <text x="400" y="160" class="description">학습된 과거 데이터에 기반하여 코드를 생성하므로,</text>
+    <text x="400" y="185" class="description">최신 기술이나 독창적인 해결책에 약합니다.</text>
   </g>
 
   <!-- Section 3: 제한된 컨텍스트 윈도우 -->
@@ -85,16 +85,16 @@
       <!-- Highlighted part inside the lens -->
       <rect x="-20" y="-15" width="40" height="30" fill="#333" opacity="0.1"/>
       <!-- Small text/pattern inside the context -->
-      <text x="-40" y="-20" font-family="Arial, sans-serif" font-size="10" fill="#666">Code Block 1</text>
-      <text x="-40" y="0" font-family="Arial, sans-serif" font-size="10" fill="#666">Code Block 2</text>
-      <text x="-40" y="20" font-family="Arial, sans-serif" font-size="10" fill="#666">Code Block 3</text>
+      <text x="-40" y="-20" font-family="Arial, sans-serif" font-size="10" fill="#666">코드 블록 1</text>
+      <text x="-40" y="0" font-family="Arial, sans-serif" font-size="10" fill="#666">코드 블록 2</text>
+      <text x="-40" y="20" font-family="Arial, sans-serif" font-size="10" fill="#666">코드 블록 3</text>
       <text x="20" y="-20" font-family="Arial, sans-serif" font-size="10" fill="#666">...</text>
       <text x="20" y="0" font-family="Arial, sans-serif" font-size="10" fill="#666">...</text>
       <text x="20" y="20" font-family="Arial, sans-serif" font-size="10" fill="#666">...</text>
     </g>
-    <text x="400" y="120" class="section-title">3. Limited Context Window</text>
-    <text x="400" y="160" class="description">Due to a limited amount of code it can process,</text>
-    <text x="400" y="185" class="description">it struggles to grasp complex interactions in large projects.</text>
+    <text x="400" y="120" class="section-title">3. 제한된 컨텍스트 윈도우</text>
+    <text x="400" y="160" class="description">처리할 수 있는 코드의 양이 제한되어 있어,</text>
+    <text x="400" y="185" class="description">대규모 프로젝트의 복잡한 상호작용을 파악하기 어렵습니다.</text>
   </g>
 
 </svg>

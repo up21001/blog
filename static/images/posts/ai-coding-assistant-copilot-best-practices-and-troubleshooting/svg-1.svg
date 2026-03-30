@@ -63,73 +63,75 @@
   <!-- Background -->
   <rect x="0" y="0" width="800" height="500" class="bg"/>
 
-  <!-- Stage 1: Context Collection -->
+  <!-- Stage 1: 컨텍스트 수집 -->
   <g class="stage" transform="translate(40, 200)">
     <rect x="0" y="0" width="120" height="100" class="stage-box"/>
     <rect x="0" y="0" width="120" height="30" class="stage-icon-area stage-fill-1"/>
     <text x="60" y="20" class="stage-number">1</text>
-    <text x="60" y="60" class="stage-text">Context</text>
-    <text x="60" y="78" class="stage-text">Collection</text>
+    <text x="60" y="60" class="stage-text">컨텍스트</text>
+    <text x="60" y="78" class="stage-text">수집</text>
   </g>
 
-  <!-- Stage 2: Prompt Generation -->
+  <!-- Stage 2: 프롬프트 구성 -->
   <g class="stage" transform="translate(190, 200)">
     <rect x="0" y="0" width="120" height="100" class="stage-box"/>
     <rect x="0" y="0" width="120" height="30" class="stage-icon-area stage-fill-2"/>
     <text x="60" y="20" class="stage-number">2</text>
-    <text x="60" y="60" class="stage-text">Prompt</text>
-    <text x="60" y="78" class="stage-text">Generation</text>
+    <text x="60" y="60" class="stage-text">프롬프트</text>
+    <text x="60" y="78" class="stage-text">구성</text>
   </g>
 
-  <!-- Stage 3: LLM Inference Request -->
+  <!-- Stage 3: LLM 추론 요청 -->
   <g class="stage" transform="translate(340, 200)">
     <rect x="0" y="0" width="120" height="100" class="stage-box"/>
     <rect x="0" y="0" width="120" height="30" class="stage-icon-area stage-fill-3"/>
     <text x="60" y="20" class="stage-number">3</text>
-    <text x="60" y="51" class="stage-text">LLM</text>
-    <text x="60" y="69" class="stage-text">Inference</text>
-    <text x="60" y="87" class="stage-text">Request</text>
+    <text x="60" y="60" class="stage-text">LLM 추론</text>
+    <text x="60" y="78" class="stage-text">요청</text>
   </g>
 
-  <!-- Stage 4: Code Snippet Return (Ghost Text) -->
+  <!-- Stage 4: 코드 스니펫 반환 (고스트 텍스트) -->
   <g class="stage" transform="translate(490, 200)">
     <rect x="0" y="0" width="120" height="100" class="stage-box"/>
     <rect x="0" y="0" width="120" height="30" class="stage-icon-area stage-fill-4"/>
     <text x="60" y="20" class="stage-number">4</text>
-    <text x="60" y="51" class="stage-text">Code Snippet</text>
-    <text x="60" y="69" class="stage-text">Return</text>
-    <text x="60" y="87" class="stage-text">(Ghost Text)</text>
+    <text x="60" y="51" class="stage-text">코드 스니펫</text>
+    <text x="60" y="69" class="stage-text">반환</text>
+    <text x="60" y="87" class="stage-text">(고스트 텍스트)</text>
   </g>
 
-  <!-- Stage 5: User Accept/Ignore -->
+  <!-- Stage 5: 사용자 수락/무시 -->
   <g class="stage" transform="translate(640, 200)">
     <rect x="0" y="0" width="120" height="100" class="stage-box"/>
     <rect x="0" y="0" width="120" height="30" class="stage-icon-area stage-fill-5"/>
     <text x="60" y="20" class="stage-number">5</text>
-    <text x="60" y="51" class="stage-text">User</text>
-    <text x="60" y="69" class="stage-text">Accept/</text>
-    <text x="60" y="87" class="stage-text">Ignore</text>
+    <text x="60" y="60" class="stage-text">사용자 수락/</text>
+    <text x="60" y="78" class="stage-text">무시</text>
   </g>
 
   <!-- Arrows and Labels (must be rendered last) -->
   <!-- Arrow 1-2 -->
   <line x1="160" y1="250" x2="190" y2="250" class="arrow"/>
+  <!-- Adjusted width and x position for label background and text to prevent clipping -->
   <rect x="150" y="225" width="50" height="20" class="arrow-label-bg"/>
-  <text x="175" y="240" class="arrow-label-text">Data</text>
+  <text x="175" y="240" class="arrow-label-text">데이터</text>
 
   <!-- Arrow 2-3 -->
   <line x1="310" y1="250" x2="340" y2="250" class="arrow"/>
-  <rect x="285" y="225" width="80" height="20" class="arrow-label-bg"/>
-  <text x="325" y="240" class="arrow-label-text">Request</text>
+  <!-- Adjusted width and x position for label background and text to prevent clipping -->
+  <rect x="300" y="225" width="50" height="20" class="arrow-label-bg"/>
+  <text x="325" y="240" class="arrow-label-text">요청</text>
 
   <!-- Arrow 3-4 -->
   <line x1="460" y1="250" x2="490" y2="250" class="arrow"/>
-  <rect x="435" y="225" width="80" height="20" class="arrow-label-bg"/>
-  <text x="475" y="240" class="arrow-label-text">Response</text>
+  <!-- Adjusted width and x position for label background and text to prevent clipping -->
+  <rect x="450" y="225" width="50" height="20" class="arrow-label-bg"/>
+  <text x="475" y="240" class="arrow-label-text">응답</text>
 
   <!-- Arrow 4-5 -->
   <line x1="610" y1="250" x2="640" y2="250" class="arrow"/>
-  <rect x="585" y="225" width="80" height="20" class="arrow-label-bg"/>
-  <text x="625" y="240" class="arrow-label-text">Suggestion</text>
+  <!-- Adjusted width and x position for label background and text to prevent clipping -->
+  <rect x="600" y="225" width="50" height="20" class="arrow-label-bg"/>
+  <text x="625" y="240" class="arrow-label-text">제안</text>
 
 </svg>
