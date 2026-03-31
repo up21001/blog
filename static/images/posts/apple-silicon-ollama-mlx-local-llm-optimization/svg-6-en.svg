@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500" font-family="'Segoe UI', sans-serif">
+  <defs>
+    <linearGradient id="bg6" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f0c29"/>
+      <stop offset="100%" style="stop-color:#1a1a3e"/>
+    </linearGradient>
+    <marker id="arr6" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#4facfe"/>
+    </marker>
+    <marker id="arr6p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#f093fb"/>
+    </marker>
+  </defs>
+  <rect width="900" height="500" fill="url(#bg6)" rx="16"/>
+  <text x="450" y="38" text-anchor="middle" fill="#e0e0ff" font-size="20" font-weight="bold">Local LLM Development Workflow Integration Pipeline</text>
+
+  <rect x="50" y="70" width="140" height="80" rx="14" fill="#1a1a2e" stroke="#4facfe" stroke-width="2"/>
+  <text x="120" y="100" text-anchor="middle" fill="#4facfe" font-size="24">&#128104;&#8205;&#128187;</text>
+  <text x="120" y="130" text-anchor="middle" fill="#80c0ff" font-size="13" font-weight="bold">Developer</text>
+
+  <rect x="240" y="70" width="170" height="80" rx="14" fill="#1a1a2e" stroke="#667eea" stroke-width="2"/>
+  <text x="325" y="100" text-anchor="middle" fill="#a8b4ff" font-size="14" font-weight="bold">VS Code + IDE</text>
+  <text x="325" y="122" text-anchor="middle" fill="#7a88cc" font-size="11">Continue.dev Extension</text>
+  <text x="325" y="140" text-anchor="middle" fill="#7a88cc" font-size="11">Code Autocomplete</text>
+
+  <line x1="190" y1="110" x2="235" y2="110" stroke="#4facfe" stroke-width="2" marker-end="url(#arr6)"/>
+
+  <rect x="460" y="60" width="190" height="100" rx="14" fill="#1a1a2e" stroke="#764ba2" stroke-width="2"/>
+  <text x="555" y="90" text-anchor="middle" fill="#c9a8ff" font-size="14" font-weight="bold">Ollama Server</text>
+  <text x="555" y="112" text-anchor="middle" fill="#9a7acc" font-size="11">localhost:11434</text>
+  <text x="555" y="130" text-anchor="middle" fill="#9a7acc" font-size="11">OpenAI-Compatible API</text>
+  <text x="555" y="148" text-anchor="middle" fill="#9a7acc" font-size="11">Streaming Responses</text>
+
+  <line x1="410" y1="110" x2="455" y2="110" stroke="#4facfe" stroke-width="2" marker-end="url(#arr6)"/>
+
+  <rect x="700" y="60" width="160" height="100" rx="14" fill="#1a1a2e" stroke="#f093fb" stroke-width="2"/>
+  <text x="780" y="90" text-anchor="middle" fill="#f0a0ff" font-size="14" font-weight="bold">MLX Server</text>
+  <text x="780" y="112" text-anchor="middle" fill="#c080d0" font-size="11">Max Performance</text>
+  <text x="780" y="130" text-anchor="middle" fill="#c080d0" font-size="11">LoRA Fine-tuning</text>
+  <text x="780" y="148" text-anchor="middle" fill="#c080d0" font-size="11">Direct Metal GPU</text>
+
+  <line x1="650" y1="110" x2="695" y2="110" stroke="#f093fb" stroke-width="2" marker-end="url(#arr6p)"/>
+  <text x="672" y="102" fill="#9a7acc" font-size="9">or</text>
+
+  <text x="450" y="200" text-anchor="middle" fill="#8888cc" font-size="14" font-weight="bold">--- Use Cases ---</text>
+
+  <rect x="30" y="220" width="195" height="120" rx="12" fill="#1a1a2e" stroke="#4facfe" stroke-width="1.5"/>
+  <text x="127" y="248" text-anchor="middle" fill="#80c0ff" font-size="13" font-weight="bold">AI Coding Assistant</text>
+  <text x="127" y="272" text-anchor="middle" fill="#6090cc" font-size="11">Code Autocomplete</text>
+  <text x="127" y="292" text-anchor="middle" fill="#6090cc" font-size="11">Bug Detection &amp; Fix</text>
+  <text x="127" y="312" text-anchor="middle" fill="#6090cc" font-size="11">Refactoring Suggestions</text>
+  <rect x="45" y="326" width="165" height="6" rx="3" fill="#4facfe" opacity="0.4"/>
+
+  <rect x="240" y="220" width="195" height="120" rx="12" fill="#1a1a2e" stroke="#667eea" stroke-width="1.5"/>
+  <text x="337" y="248" text-anchor="middle" fill="#a8b4ff" font-size="13" font-weight="bold">Local RAG Pipeline</text>
+  <text x="337" y="272" text-anchor="middle" fill="#7a88cc" font-size="11">Internal Doc Search</text>
+  <text x="337" y="292" text-anchor="middle" fill="#7a88cc" font-size="11">Ollama Embeddings</text>
+  <text x="337" y="312" text-anchor="middle" fill="#7a88cc" font-size="11">ChromaDB Vector Store</text>
+  <rect x="255" y="326" width="165" height="6" rx="3" fill="#667eea" opacity="0.4"/>
+
+  <rect x="450" y="220" width="195" height="120" rx="12" fill="#1a1a2e" stroke="#764ba2" stroke-width="1.5"/>
+  <text x="547" y="248" text-anchor="middle" fill="#c9a8ff" font-size="13" font-weight="bold">Custom Chatbot</text>
+  <text x="547" y="272" text-anchor="middle" fill="#9a7acc" font-size="11">Modelfile-based</text>
+  <text x="547" y="292" text-anchor="middle" fill="#9a7acc" font-size="11">Domain-specific</text>
+  <text x="547" y="312" text-anchor="middle" fill="#9a7acc" font-size="11">Privacy Guaranteed</text>
+  <rect x="465" y="326" width="165" height="6" rx="3" fill="#764ba2" opacity="0.4"/>
+
+  <rect x="660" y="220" width="200" height="120" rx="12" fill="#1a1a2e" stroke="#f093fb" stroke-width="1.5"/>
+  <text x="760" y="248" text-anchor="middle" fill="#f0a0ff" font-size="13" font-weight="bold">On-Device Fine-tuning</text>
+  <text x="760" y="272" text-anchor="middle" fill="#c080d0" font-size="11">MLX LoRA/QLoRA</text>
+  <text x="760" y="292" text-anchor="middle" fill="#c080d0" font-size="11">Train on Your Data</text>
+  <text x="760" y="312" text-anchor="middle" fill="#c080d0" font-size="11">No Cloud GPU Needed</text>
+  <rect x="675" y="326" width="170" height="6" rx="3" fill="#f093fb" opacity="0.4"/>
+
+  <rect x="50" y="370" width="800" height="110" rx="14" fill="#1a1a2e" stroke="#f5576c" stroke-width="1.5"/>
+  <text x="450" y="398" text-anchor="middle" fill="#ff8090" font-size="15" font-weight="bold">3 Key Benefits of Local LLM</text>
+
+  <rect x="80" y="412" width="220" height="50" rx="10" fill="#0f0c29" stroke="#4facfe" stroke-width="1"/>
+  <text x="190" y="435" text-anchor="middle" fill="#80c0ff" font-size="13" font-weight="bold">Cost Savings</text>
+  <text x="190" y="453" text-anchor="middle" fill="#6090cc" font-size="11">Zero API Call Costs</text>
+
+  <rect x="340" y="412" width="220" height="50" rx="10" fill="#0f0c29" stroke="#764ba2" stroke-width="1"/>
+  <text x="450" y="435" text-anchor="middle" fill="#c9a8ff" font-size="13" font-weight="bold">Data Privacy</text>
+  <text x="450" y="453" text-anchor="middle" fill="#9a7acc" font-size="11">No Sensitive Data Leaves Device</text>
+
+  <rect x="600" y="412" width="220" height="50" rx="10" fill="#0f0c29" stroke="#f093fb" stroke-width="1"/>
+  <text x="710" y="435" text-anchor="middle" fill="#f0a0ff" font-size="13" font-weight="bold">Offline Operation</text>
+  <text x="710" y="453" text-anchor="middle" fill="#c080d0" font-size="11">Fully Independent, No Internet</text>
+</svg>

@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 480" font-family="'Segoe UI', sans-serif">
+  <defs>
+    <linearGradient id="bg5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f0c29"/>
+      <stop offset="100%" style="stop-color:#24243e"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="480" fill="url(#bg5)" rx="16"/>
+  <text x="450" y="38" text-anchor="middle" fill="#e0e0ff" font-size="20" font-weight="bold">Ollama vs MLX 벤치마크 비교 (M4 Pro 48GB)</text>
+
+  <!-- Legend -->
+  <rect x="300" y="55" width="16" height="16" rx="3" fill="#4facfe"/>
+  <text x="322" y="68" fill="#80c0ff" font-size="12">Ollama (Q4_K_M)</text>
+  <rect x="470" y="55" width="16" height="16" rx="3" fill="#f093fb"/>
+  <text x="492" y="68" fill="#f0a0ff" font-size="12">MLX (4bit)</text>
+
+  <!-- Y axis label -->
+  <text x="30" y="260" text-anchor="middle" fill="#8888aa" font-size="12" transform="rotate(-90,30,260)">토큰 생성 속도 (tokens/s)</text>
+
+  <!-- Y axis lines -->
+  <line x1="80" y1="90" x2="80" y2="400" stroke="#2a2a4e" stroke-width="1"/>
+  <line x1="80" y1="100" x2="840" y2="100" stroke="#2a2a4e" stroke-width="0.5" stroke-dasharray="4,4"/>
+  <text x="70" y="105" text-anchor="end" fill="#6666aa" font-size="11">70</text>
+  <line x1="80" y1="157" x2="840" y2="157" stroke="#2a2a4e" stroke-width="0.5" stroke-dasharray="4,4"/>
+  <text x="70" y="162" text-anchor="end" fill="#6666aa" font-size="11">55</text>
+  <line x1="80" y1="214" x2="840" y2="214" stroke="#2a2a4e" stroke-width="0.5" stroke-dasharray="4,4"/>
+  <text x="70" y="219" text-anchor="end" fill="#6666aa" font-size="11">40</text>
+  <line x1="80" y1="271" x2="840" y2="271" stroke="#2a2a4e" stroke-width="0.5" stroke-dasharray="4,4"/>
+  <text x="70" y="276" text-anchor="end" fill="#6666aa" font-size="11">25</text>
+  <line x1="80" y1="328" x2="840" y2="328" stroke="#2a2a4e" stroke-width="0.5" stroke-dasharray="4,4"/>
+  <text x="70" y="333" text-anchor="end" fill="#6666aa" font-size="11">10</text>
+  <line x1="80" y1="385" x2="840" y2="385" stroke="#2a2a4e" stroke-width="0.5" stroke-dasharray="4,4"/>
+  <text x="70" y="390" text-anchor="end" fill="#6666aa" font-size="11">0</text>
+
+  <!-- Llama 3.1 8B -->
+  <rect x="120" y="214" width="60" height="171" rx="4" fill="#4facfe" opacity="0.8"/>
+  <text x="150" y="208" text-anchor="middle" fill="#80c0ff" font-size="12" font-weight="bold">42</text>
+  <rect x="190" y="165" width="60" height="220" rx="4" fill="#f093fb" opacity="0.8"/>
+  <text x="220" y="159" text-anchor="middle" fill="#f0a0ff" font-size="12" font-weight="bold">58</text>
+  <text x="185" y="415" text-anchor="middle" fill="#c0c8e0" font-size="12">Llama 3.1 8B</text>
+
+  <!-- Mistral 7B -->
+  <rect x="310" y="199" width="60" height="186" rx="4" fill="#4facfe" opacity="0.8"/>
+  <text x="340" y="193" text-anchor="middle" fill="#80c0ff" font-size="12" font-weight="bold">45</text>
+  <rect x="380" y="148" width="60" height="237" rx="4" fill="#f093fb" opacity="0.8"/>
+  <text x="410" y="142" text-anchor="middle" fill="#f0a0ff" font-size="12" font-weight="bold">62</text>
+  <text x="375" y="415" text-anchor="middle" fill="#c0c8e0" font-size="12">Mistral 7B</text>
+
+  <!-- Llama 3.1 70B -->
+  <rect x="500" y="350" width="60" height="35" rx="4" fill="#4facfe" opacity="0.8"/>
+  <text x="530" y="344" text-anchor="middle" fill="#80c0ff" font-size="12" font-weight="bold">8.5</text>
+  <rect x="570" y="335" width="60" height="50" rx="4" fill="#f093fb" opacity="0.8"/>
+  <text x="600" y="329" text-anchor="middle" fill="#f0a0ff" font-size="12" font-weight="bold">12</text>
+  <text x="565" y="415" text-anchor="middle" fill="#c0c8e0" font-size="12">Llama 3.1 70B</text>
+
+  <!-- Qwen2.5 72B -->
+  <rect x="690" y="354" width="60" height="31" rx="4" fill="#4facfe" opacity="0.8"/>
+  <text x="720" y="348" text-anchor="middle" fill="#80c0ff" font-size="12" font-weight="bold">7.8</text>
+  <rect x="760" y="339" width="60" height="46" rx="4" fill="#f093fb" opacity="0.8"/>
+  <text x="790" y="333" text-anchor="middle" fill="#f0a0ff" font-size="12" font-weight="bold">11</text>
+  <text x="755" y="415" text-anchor="middle" fill="#c0c8e0" font-size="12">Qwen2.5 72B</text>
+
+  <!-- Performance delta labels -->
+  <rect x="130" y="440" width="120" height="26" rx="8" fill="#2d4a2d" opacity="0.8"/>
+  <text x="190" y="458" text-anchor="middle" fill="#80e0a0" font-size="11" font-weight="bold">MLX +38%</text>
+  <rect x="320" y="440" width="120" height="26" rx="8" fill="#2d4a2d" opacity="0.8"/>
+  <text x="380" y="458" text-anchor="middle" fill="#80e0a0" font-size="11" font-weight="bold">MLX +37%</text>
+  <rect x="510" y="440" width="120" height="26" rx="8" fill="#2d4a2d" opacity="0.8"/>
+  <text x="570" y="458" text-anchor="middle" fill="#80e0a0" font-size="11" font-weight="bold">MLX +41%</text>
+  <rect x="700" y="440" width="120" height="26" rx="8" fill="#2d4a2d" opacity="0.8"/>
+  <text x="760" y="458" text-anchor="middle" fill="#80e0a0" font-size="11" font-weight="bold">MLX +41%</text>
+</svg>
