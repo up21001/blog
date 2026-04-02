@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f0c29"/>
+      <stop offset="50%" style="stop-color:#302b63"/>
+      <stop offset="100%" style="stop-color:#24243e"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="520" fill="url(#bg)"/>
+  <text x="450" y="40" font-family="Segoe UI" font-weight="bold" font-size="24" fill="#ffffff" text-anchor="middle">Phishing Defense Checklist</text>
+  <text x="450" y="62" font-family="Segoe UI" font-size="13" fill="#a0a0c0" text-anchor="middle">Actionable Security Practices for Organizations and Individuals</text>
+  <rect x="40" y="85" width="400" height="410" rx="12" fill="#0d0d2b" stroke="#4facfe" stroke-width="1" opacity="0.8"/>
+  <rect x="40" y="85" width="400" height="40" rx="12" fill="#4facfe" opacity="0.12"/>
+  <text x="240" y="112" font-family="Segoe UI" font-weight="bold" font-size="17" fill="#4facfe" text-anchor="middle">Organization-Level Defense</text>
+  <g font-family="Segoe UI" font-size="12" fill="#e0e0e0">
+    <text x="75" y="152"><tspan fill="#34d399">&#x2713;</tspan>  Configure SPF/DKIM/DMARC with monitoring</text>
+    <text x="75" y="180"><tspan fill="#34d399">&#x2713;</tspan>  Deploy Secure Email Gateway (SEG)</text>
+    <text x="75" y="208"><tspan fill="#34d399">&#x2713;</tspan>  Conduct regular phishing simulations</text>
+    <text x="75" y="236"><tspan fill="#34d399">&#x2713;</tspan>  Enforce MFA company-wide</text>
+    <text x="75" y="264"><tspan fill="#34d399">&#x2713;</tspan>  Implement Zero Trust architecture</text>
+    <text x="75" y="292"><tspan fill="#34d399">&#x2713;</tspan>  Operate phishing report channel + incentives</text>
+    <text x="75" y="320"><tspan fill="#34d399">&#x2713;</tspan>  Display external email warning banners</text>
+    <text x="75" y="348"><tspan fill="#34d399">&#x2713;</tspan>  Deploy EDR/XDR solutions</text>
+    <text x="75" y="376"><tspan fill="#34d399">&#x2713;</tspan>  Establish incident response playbooks</text>
+    <text x="75" y="404"><tspan fill="#34d399">&#x2713;</tspan>  Enable DNS filtering and web isolation</text>
+    <text x="75" y="432"><tspan fill="#34d399">&#x2713;</tspan>  Verify supply chain email security</text>
+    <text x="75" y="460"><tspan fill="#34d399">&#x2713;</tspan>  Maintain cyber insurance coverage</text>
+  </g>
+  <rect x="460" y="85" width="400" height="410" rx="12" fill="#0d0d2b" stroke="#ff416c" stroke-width="1" opacity="0.8"/>
+  <rect x="460" y="85" width="400" height="40" rx="12" fill="#ff416c" opacity="0.12"/>
+  <text x="660" y="112" font-family="Segoe UI" font-weight="bold" font-size="17" fill="#ff416c" text-anchor="middle">Personal Security Practices</text>
+  <g font-family="Segoe UI" font-size="12" fill="#e0e0e0">
+    <text x="495" y="152"><tspan fill="#fbbf24">&#x2713;</tspan>  Carefully verify sender email addresses</text>
+    <text x="495" y="180"><tspan fill="#fbbf24">&#x2713;</tspan>  Hover over links before clicking</text>
+    <text x="495" y="208"><tspan fill="#fbbf24">&#x2713;</tspan>  Never react immediately to urgent threats</text>
+    <text x="495" y="236"><tspan fill="#fbbf24">&#x2713;</tspan>  Verify info requests through separate channel</text>
+    <text x="495" y="264"><tspan fill="#fbbf24">&#x2713;</tspan>  Enable MFA on all accounts</text>
+    <text x="495" y="292"><tspan fill="#fbbf24">&#x2713;</tspan>  Use a password manager</text>
+    <text x="495" y="320"><tspan fill="#fbbf24">&#x2713;</tspan>  Keep OS/browser/apps up to date</text>
+    <text x="495" y="348"><tspan fill="#fbbf24">&#x2713;</tspan>  Avoid financial transactions on public Wi-Fi</text>
+    <text x="495" y="376"><tspan fill="#fbbf24">&#x2713;</tspan>  Report suspicious emails to IT immediately</text>
+    <text x="495" y="404"><tspan fill="#fbbf24">&#x2713;</tspan>  Limit personal info visibility on social media</text>
+    <text x="495" y="432"><tspan fill="#fbbf24">&#x2713;</tspan>  Verify QR code sources before scanning</text>
+    <text x="495" y="460"><tspan fill="#fbbf24">&#x2713;</tspan>  Actively participate in security training</text>
+  </g>
+</svg>

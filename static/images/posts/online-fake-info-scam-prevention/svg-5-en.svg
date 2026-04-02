@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 510">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f0c29"/>
+      <stop offset="50%" style="stop-color:#302b63"/>
+      <stop offset="100%" style="stop-color:#24243e"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="510" fill="url(#bg)"/>
+  <text x="450" y="42" text-anchor="middle" font-family="Segoe UI" font-size="24" font-weight="bold" fill="#ffffff">Fact-Check Tools &amp; Verification Process</text>
+  <line x1="270" y1="56" x2="630" y2="56" stroke="#69f0ae" stroke-width="2"/>
+  <rect x="340" y="75" width="220" height="50" rx="25" fill="#1a1a3e" stroke="#ff416c" stroke-width="2"/>
+  <text x="450" y="105" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#ff416c">Suspicious Info Detected</text>
+  <text x="458" y="143" font-family="Segoe UI" font-size="14" fill="#69f0ae">▼</text>
+  <rect x="310" y="155" width="280" height="50" rx="10" fill="#1a1a3e" stroke="#ffab40" stroke-width="1.5"/>
+  <text x="450" y="177" text-anchor="middle" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#ffab40">Step 1: Verify Source</text>
+  <text x="450" y="196" text-anchor="middle" font-family="Segoe UI" font-size="11" fill="#b0b0d0">Check if original article or official channel exists</text>
+  <text x="458" y="223" font-family="Segoe UI" font-size="14" fill="#69f0ae">▼</text>
+  <rect x="310" y="230" width="280" height="50" rx="10" fill="#1a1a3e" stroke="#e040fb" stroke-width="1.5"/>
+  <text x="450" y="252" text-anchor="middle" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#e040fb">Step 2: Cross-Reference</text>
+  <text x="450" y="271" text-anchor="middle" font-family="Segoe UI" font-size="11" fill="#b0b0d0">Confirm with 2+ trusted media sources</text>
+  <text x="458" y="298" font-family="Segoe UI" font-size="14" fill="#69f0ae">▼</text>
+  <rect x="310" y="305" width="280" height="50" rx="10" fill="#1a1a3e" stroke="#4facfe" stroke-width="1.5"/>
+  <text x="450" y="327" text-anchor="middle" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#4facfe">Step 3: Fact-Check Sites</text>
+  <text x="450" y="346" text-anchor="middle" font-family="Segoe UI" font-size="11" fill="#b0b0d0">Review verdicts from professional fact-checkers</text>
+  <text x="458" y="373" font-family="Segoe UI" font-size="14" fill="#69f0ae">▼</text>
+  <rect x="310" y="380" width="280" height="50" rx="10" fill="#1a1a3e" stroke="#69f0ae" stroke-width="1.5"/>
+  <text x="450" y="402" text-anchor="middle" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#69f0ae">Step 4: Reverse Image/Video</text>
+  <text x="450" y="421" text-anchor="middle" font-family="Segoe UI" font-size="11" fill="#b0b0d0">Reverse image search &amp; metadata analysis</text>
+  <text x="115" y="95" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#69f0ae">Fact-Check Sites</text>
+  <rect x="20" y="110" width="190" height="36" rx="6" fill="#1a1a3e" stroke="#69f0ae" stroke-width="1"/>
+  <text x="115" y="133" text-anchor="middle" font-family="Segoe UI" font-size="12" fill="#e0e0e0">Snopes.com</text>
+  <rect x="20" y="155" width="190" height="36" rx="6" fill="#1a1a3e" stroke="#69f0ae" stroke-width="1"/>
+  <text x="115" y="178" text-anchor="middle" font-family="Segoe UI" font-size="12" fill="#e0e0e0">FactCheck.org</text>
+  <rect x="20" y="200" width="190" height="36" rx="6" fill="#1a1a3e" stroke="#69f0ae" stroke-width="1"/>
+  <text x="115" y="223" text-anchor="middle" font-family="Segoe UI" font-size="12" fill="#e0e0e0">PolitiFact</text>
+  <rect x="20" y="245" width="190" height="36" rx="6" fill="#1a1a3e" stroke="#69f0ae" stroke-width="1"/>
+  <text x="115" y="268" text-anchor="middle" font-family="Segoe UI" font-size="12" fill="#e0e0e0">AFP Fact Check</text>
+  <rect x="20" y="290" width="190" height="36" rx="6" fill="#1a1a3e" stroke="#69f0ae" stroke-width="1"/>
+  <text x="115" y="313" text-anchor="middle" font-family="Segoe UI" font-size="12" fill="#e0e0e0">Full Fact (UK)</text>
+  <rect x="20" y="335" width="190" height="36" rx="6" fill="#1a1a3e" stroke="#69f0ae" stroke-width="1"/>
+  <text x="115" y="358" text-anchor="middle" font-family="Segoe UI" font-size="12" fill="#e0e0e0">Reuters Fact Check</text>
+  <text x="785" y="95" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#4facfe">Image/Video Analysis</text>
+  <rect x="690" y="110" width="190" height="36" rx="6" fill="#1a1a3e" stroke="#4facfe" stroke-width="1"/>
+  <text x="785" y="133" text-anchor="middle" font-family="Segoe UI" font-size="12" fill="#e0e0e0">Google Reverse Image</text>
+  <rect x="690" y="155" width="190" height="36" rx="6" fill="#1a1a3e" stroke="#4facfe" stroke-width="1"/>
+  <text x="785" y="178" text-anchor="middle" font-family="Segoe UI" font-size="12" fill="#e0e0e0">TinEye</text>
+  <rect x="690" y="200" width="190" height="36" rx="6" fill="#1a1a3e" stroke="#4facfe" stroke-width="1"/>
+  <text x="785" y="223" text-anchor="middle" font-family="Segoe UI" font-size="12" fill="#e0e0e0">InVID Verification</text>
+  <rect x="690" y="245" width="190" height="36" rx="6" fill="#1a1a3e" stroke="#4facfe" stroke-width="1"/>
+  <text x="785" y="268" text-anchor="middle" font-family="Segoe UI" font-size="12" fill="#e0e0e0">FotoForensics</text>
+  <rect x="690" y="290" width="190" height="36" rx="6" fill="#1a1a3e" stroke="#4facfe" stroke-width="1"/>
+  <text x="785" y="313" text-anchor="middle" font-family="Segoe UI" font-size="12" fill="#e0e0e0">Deepware Scanner</text>
+  <rect x="690" y="335" width="190" height="36" rx="6" fill="#1a1a3e" stroke="#4facfe" stroke-width="1"/>
+  <text x="785" y="358" text-anchor="middle" font-family="Segoe UI" font-size="12" fill="#e0e0e0">Sensity AI</text>
+  <rect x="130" y="450" width="200" height="45" rx="10" fill="#1a1a3e" stroke="#69f0ae" stroke-width="2"/>
+  <text x="230" y="478" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#69f0ae">✓ Verified True</text>
+  <rect x="350" y="450" width="200" height="45" rx="10" fill="#1a1a3e" stroke="#ffab40" stroke-width="2"/>
+  <text x="450" y="478" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#ffab40">△ Partially True</text>
+  <rect x="570" y="450" width="200" height="45" rx="10" fill="#1a1a3e" stroke="#ff416c" stroke-width="2"/>
+  <text x="670" y="478" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#ff416c">✗ Misinformation</text>
+</svg>

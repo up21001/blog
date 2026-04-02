@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f0c29"/>
+      <stop offset="50%" style="stop-color:#302b63"/>
+      <stop offset="100%" style="stop-color:#24243e"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="520" fill="url(#bg)"/>
+  <text x="450" y="42" text-anchor="middle" font-family="Segoe UI" font-size="24" font-weight="bold" fill="#ffffff">개인 &amp; 조직 보안 수칙 체크리스트</text>
+  <line x1="260" y1="56" x2="640" y2="56" stroke="#4facfe" stroke-width="2"/>
+  <!-- Personal section -->
+  <text x="225" y="90" text-anchor="middle" font-family="Segoe UI" font-size="18" font-weight="bold" fill="#69f0ae">개인 보안 수칙</text>
+  <rect x="30" y="105" width="390" height="42" rx="8" fill="#1a1a3e" stroke="#69f0ae" stroke-width="1"/>
+  <text x="55" y="131" font-family="Segoe UI" font-size="16" fill="#69f0ae">☑</text>
+  <text x="80" y="131" font-family="Segoe UI" font-size="13" fill="#e0e0e0">의심스러운 링크 클릭 전 URL 확인하기</text>
+  <rect x="30" y="155" width="390" height="42" rx="8" fill="#1a1a3e" stroke="#69f0ae" stroke-width="1"/>
+  <text x="55" y="181" font-family="Segoe UI" font-size="16" fill="#69f0ae">☑</text>
+  <text x="80" y="181" font-family="Segoe UI" font-size="13" fill="#e0e0e0">2단계 인증(2FA) 모든 계정에 활성화</text>
+  <rect x="30" y="205" width="390" height="42" rx="8" fill="#1a1a3e" stroke="#69f0ae" stroke-width="1"/>
+  <text x="55" y="231" font-family="Segoe UI" font-size="16" fill="#69f0ae">☑</text>
+  <text x="80" y="231" font-family="Segoe UI" font-size="13" fill="#e0e0e0">공유 전 출처 확인 및 팩트체크 습관화</text>
+  <rect x="30" y="255" width="390" height="42" rx="8" fill="#1a1a3e" stroke="#69f0ae" stroke-width="1"/>
+  <text x="55" y="281" font-family="Segoe UI" font-size="16" fill="#69f0ae">☑</text>
+  <text x="80" y="281" font-family="Segoe UI" font-size="13" fill="#e0e0e0">비밀번호 관리자 사용 (고유 비밀번호)</text>
+  <rect x="30" y="305" width="390" height="42" rx="8" fill="#1a1a3e" stroke="#69f0ae" stroke-width="1"/>
+  <text x="55" y="331" font-family="Segoe UI" font-size="16" fill="#69f0ae">☑</text>
+  <text x="80" y="331" font-family="Segoe UI" font-size="13" fill="#e0e0e0">SNS 개인정보 공개 범위 최소화</text>
+  <rect x="30" y="355" width="390" height="42" rx="8" fill="#1a1a3e" stroke="#69f0ae" stroke-width="1"/>
+  <text x="55" y="381" font-family="Segoe UI" font-size="16" fill="#69f0ae">☑</text>
+  <text x="80" y="381" font-family="Segoe UI" font-size="13" fill="#e0e0e0">긴급·공포 유발 메시지에 즉시 반응하지 않기</text>
+  <rect x="30" y="405" width="390" height="42" rx="8" fill="#1a1a3e" stroke="#69f0ae" stroke-width="1"/>
+  <text x="55" y="431" font-family="Segoe UI" font-size="16" fill="#69f0ae">☑</text>
+  <text x="80" y="431" font-family="Segoe UI" font-size="13" fill="#e0e0e0">소프트웨어 및 OS 최신 상태 유지</text>
+  <!-- Organization section -->
+  <text x="670" y="90" text-anchor="middle" font-family="Segoe UI" font-size="18" font-weight="bold" fill="#4facfe">조직 보안 수칙</text>
+  <rect x="480" y="105" width="390" height="42" rx="8" fill="#1a1a3e" stroke="#4facfe" stroke-width="1"/>
+  <text x="505" y="131" font-family="Segoe UI" font-size="16" fill="#4facfe">☑</text>
+  <text x="530" y="131" font-family="Segoe UI" font-size="13" fill="#e0e0e0">정기적 보안 인식 교육 실시</text>
+  <rect x="480" y="155" width="390" height="42" rx="8" fill="#1a1a3e" stroke="#4facfe" stroke-width="1"/>
+  <text x="505" y="181" font-family="Segoe UI" font-size="16" fill="#4facfe">☑</text>
+  <text x="530" y="181" font-family="Segoe UI" font-size="13" fill="#e0e0e0">피싱 시뮬레이션 훈련 분기별 실시</text>
+  <rect x="480" y="205" width="390" height="42" rx="8" fill="#1a1a3e" stroke="#4facfe" stroke-width="1"/>
+  <text x="505" y="231" font-family="Segoe UI" font-size="16" fill="#4facfe">☑</text>
+  <text x="530" y="231" font-family="Segoe UI" font-size="13" fill="#e0e0e0">이메일 보안 게이트웨이 구축</text>
+  <rect x="480" y="255" width="390" height="42" rx="8" fill="#1a1a3e" stroke="#4facfe" stroke-width="1"/>
+  <text x="505" y="281" font-family="Segoe UI" font-size="16" fill="#4facfe">☑</text>
+  <text x="530" y="281" font-family="Segoe UI" font-size="13" fill="#e0e0e0">제로 트러스트 보안 모델 도입</text>
+  <rect x="480" y="305" width="390" height="42" rx="8" fill="#1a1a3e" stroke="#4facfe" stroke-width="1"/>
+  <text x="505" y="331" font-family="Segoe UI" font-size="16" fill="#4facfe">☑</text>
+  <text x="530" y="331" font-family="Segoe UI" font-size="13" fill="#e0e0e0">사고 대응 계획(IRP) 수립 및 업데이트</text>
+  <rect x="480" y="355" width="390" height="42" rx="8" fill="#1a1a3e" stroke="#4facfe" stroke-width="1"/>
+  <text x="505" y="381" font-family="Segoe UI" font-size="16" fill="#4facfe">☑</text>
+  <text x="530" y="381" font-family="Segoe UI" font-size="13" fill="#e0e0e0">딥페이크 탐지 솔루션 도입 검토</text>
+  <rect x="480" y="405" width="390" height="42" rx="8" fill="#1a1a3e" stroke="#4facfe" stroke-width="1"/>
+  <text x="505" y="431" font-family="Segoe UI" font-size="16" fill="#4facfe">☑</text>
+  <text x="530" y="431" font-family="Segoe UI" font-size="13" fill="#e0e0e0">공식 커뮤니케이션 채널 명확화</text>
+  <!-- Bottom -->
+  <rect x="100" y="468" width="700" height="38" rx="8" fill="#1a1a3e" stroke="#ffab40" stroke-width="1.2"/>
+  <text x="450" y="492" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#ffab40">핵심 원칙: 의심하고 → 확인하고 → 공유하라 (Think Before You Share)</text>
+</svg>

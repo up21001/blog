@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f0c29"/>
+      <stop offset="50%" style="stop-color:#302b63"/>
+      <stop offset="100%" style="stop-color:#24243e"/>
+    </linearGradient>
+    <linearGradient id="red1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff416c"/>
+      <stop offset="100%" style="stop-color:#ff4b2b"/>
+    </linearGradient>
+    <linearGradient id="blue1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4facfe"/>
+      <stop offset="100%" style="stop-color:#00f2fe"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="900" height="500" fill="url(#bg)"/>
+  <g opacity="0.08" stroke="#4facfe">
+    <line x1="0" y1="100" x2="900" y2="100" stroke-width="0.5"/>
+    <line x1="0" y1="200" x2="900" y2="200" stroke-width="0.5"/>
+    <line x1="0" y1="300" x2="900" y2="300" stroke-width="0.5"/>
+    <line x1="0" y1="400" x2="900" y2="400" stroke-width="0.5"/>
+    <line x1="150" y1="0" x2="150" y2="500" stroke-width="0.5"/>
+    <line x1="300" y1="0" x2="300" y2="500" stroke-width="0.5"/>
+    <line x1="450" y1="0" x2="450" y2="500" stroke-width="0.5"/>
+    <line x1="600" y1="0" x2="600" y2="500" stroke-width="0.5"/>
+    <line x1="750" y1="0" x2="750" y2="500" stroke-width="0.5"/>
+  </g>
+  <g transform="translate(450,195)" filter="url(#glow)">
+    <path d="M0,-60 C30,-60 50,-40 50,-10 C50,20 30,40 0,55 C-30,40 -50,20 -50,-10 C-50,-40 -30,-60 0,-60Z" fill="none" stroke="url(#red1)" stroke-width="2.5" opacity="0.8"/>
+    <text x="0" y="8" font-family="Segoe UI" font-size="50" fill="url(#red1)" text-anchor="middle" dominant-baseline="middle">&#x1F3A3;</text>
+  </g>
+  <text x="450" y="310" font-family="Segoe UI" font-weight="bold" font-size="30" fill="#ffffff" text-anchor="middle">Phishing Threat Landscape</text>
+  <text x="450" y="345" font-family="Segoe UI" font-size="16" fill="#a0a0c0" text-anchor="middle">Evolving Tactics and Comprehensive Defense Strategies</text>
+  <g opacity="0.9">
+    <circle cx="120" cy="120" r="42" fill="none" stroke="#ff416c" stroke-width="1.5" opacity="0.7"/>
+    <text x="120" y="115" font-family="Segoe UI" font-size="22" fill="#ff416c" text-anchor="middle">&#x2709;</text>
+    <text x="120" y="140" font-family="Segoe UI" font-size="12" fill="#e0e0e0" text-anchor="middle">Email Phishing</text>
+    <circle cx="780" cy="120" r="42" fill="none" stroke="#ff9a44" stroke-width="1.5" opacity="0.7"/>
+    <text x="780" y="115" font-family="Segoe UI" font-size="22" fill="#ff9a44" text-anchor="middle">&#x1F4F1;</text>
+    <text x="780" y="140" font-family="Segoe UI" font-size="12" fill="#e0e0e0" text-anchor="middle">Smishing</text>
+    <circle cx="120" cy="390" r="42" fill="none" stroke="#a78bfa" stroke-width="1.5" opacity="0.7"/>
+    <text x="120" y="385" font-family="Segoe UI" font-size="22" fill="#a78bfa" text-anchor="middle">&#x1F4DE;</text>
+    <text x="120" y="410" font-family="Segoe UI" font-size="12" fill="#e0e0e0" text-anchor="middle">Vishing</text>
+    <circle cx="780" cy="390" r="42" fill="none" stroke="#34d399" stroke-width="1.5" opacity="0.7"/>
+    <text x="780" y="385" font-family="Segoe UI" font-size="22" fill="#34d399" text-anchor="middle">&#x25A3;</text>
+    <text x="780" y="410" font-family="Segoe UI" font-size="12" fill="#e0e0e0" text-anchor="middle">Quishing</text>
+    <circle cx="450" cy="90" r="42" fill="none" stroke="#4facfe" stroke-width="1.5" opacity="0.7"/>
+    <text x="450" y="85" font-family="Segoe UI" font-size="22" fill="#4facfe" text-anchor="middle">&#x1F916;</text>
+    <text x="450" y="110" font-family="Segoe UI" font-size="12" fill="#e0e0e0" text-anchor="middle">AI Phishing</text>
+    <circle cx="270" cy="430" r="42" fill="none" stroke="#f472b6" stroke-width="1.5" opacity="0.7"/>
+    <text x="270" y="425" font-family="Segoe UI" font-size="22" fill="#f472b6" text-anchor="middle">&#x1F4BC;</text>
+    <text x="270" y="450" font-family="Segoe UI" font-size="12" fill="#e0e0e0" text-anchor="middle">BEC Fraud</text>
+    <circle cx="630" cy="430" r="42" fill="none" stroke="#fbbf24" stroke-width="1.5" opacity="0.7"/>
+    <text x="630" y="425" font-family="Segoe UI" font-size="22" fill="#fbbf24" text-anchor="middle">&#x1F512;</text>
+    <text x="630" y="450" font-family="Segoe UI" font-size="12" fill="#e0e0e0" text-anchor="middle">Ransomware</text>
+  </g>
+  <g stroke="#ffffff" stroke-width="0.5" opacity="0.15">
+    <line x1="160" y1="140" x2="400" y2="200"/>
+    <line x1="740" y1="140" x2="500" y2="200"/>
+    <line x1="160" y1="370" x2="400" y2="240"/>
+    <line x1="740" y1="370" x2="500" y2="240"/>
+    <line x1="450" y1="130" x2="450" y2="170"/>
+    <line x1="310" y1="415" x2="420" y2="260"/>
+    <line x1="590" y1="415" x2="480" y2="260"/>
+  </g>
+</svg>

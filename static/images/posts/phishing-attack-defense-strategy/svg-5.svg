@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f0c29"/>
+      <stop offset="50%" style="stop-color:#302b63"/>
+      <stop offset="100%" style="stop-color:#24243e"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="500" fill="url(#bg)"/>
+  <text x="450" y="40" font-family="Segoe UI" font-weight="bold" font-size="24" fill="#ffffff" text-anchor="middle">이메일 보안 기술 스택</text>
+  <text x="450" y="62" font-family="Segoe UI" font-size="13" fill="#a0a0c0" text-anchor="middle">다층 방어를 통한 피싱 차단 아키텍처</text>
+  <!-- Layer 1: SPF -->
+  <rect x="100" y="90" width="700" height="80" rx="10" fill="#1a1a3e" stroke="#ff416c" stroke-width="1.5" opacity="0.9"/>
+  <text x="160" y="120" font-family="Segoe UI" font-weight="bold" font-size="20" fill="#ff416c">SPF</text>
+  <text x="160" y="145" font-family="Segoe UI" font-size="11" fill="#b0b0d0">Sender Policy Framework</text>
+  <text x="500" y="120" font-family="Segoe UI" font-size="12" fill="#e0e0e0">발신 서버 IP 검증</text>
+  <text x="500" y="142" font-family="Segoe UI" font-size="11" fill="#808090">허가된 메일 서버에서 발송되었는지 확인</text>
+  <rect x="720" y="108" width="60" height="24" rx="12" fill="#ff416c" opacity="0.2"/>
+  <text x="750" y="124" font-family="Segoe UI" font-weight="bold" font-size="11" fill="#ff416c" text-anchor="middle">1단계</text>
+  <!-- Layer 2: DKIM -->
+  <rect x="100" y="185" width="700" height="80" rx="10" fill="#1a1a3e" stroke="#fbbf24" stroke-width="1.5" opacity="0.9"/>
+  <text x="160" y="215" font-family="Segoe UI" font-weight="bold" font-size="20" fill="#fbbf24">DKIM</text>
+  <text x="160" y="240" font-family="Segoe UI" font-size="11" fill="#b0b0d0">DomainKeys Identified Mail</text>
+  <text x="500" y="215" font-family="Segoe UI" font-size="12" fill="#e0e0e0">이메일 무결성 서명 검증</text>
+  <text x="500" y="237" font-family="Segoe UI" font-size="11" fill="#808090">전송 중 변조 여부를 암호학적으로 확인</text>
+  <rect x="720" y="203" width="60" height="24" rx="12" fill="#fbbf24" opacity="0.2"/>
+  <text x="750" y="219" font-family="Segoe UI" font-weight="bold" font-size="11" fill="#fbbf24" text-anchor="middle">2단계</text>
+  <!-- Layer 3: DMARC -->
+  <rect x="100" y="280" width="700" height="80" rx="10" fill="#1a1a3e" stroke="#34d399" stroke-width="1.5" opacity="0.9"/>
+  <text x="160" y="310" font-family="Segoe UI" font-weight="bold" font-size="20" fill="#34d399">DMARC</text>
+  <text x="160" y="335" font-family="Segoe UI" font-size="11" fill="#b0b0d0">Domain-based Message Authentication</text>
+  <text x="500" y="310" font-family="Segoe UI" font-size="12" fill="#e0e0e0">SPF+DKIM 결과 기반 정책 적용</text>
+  <text x="500" y="332" font-family="Segoe UI" font-size="11" fill="#808090">실패 시 격리/차단 + 리포팅 제공</text>
+  <rect x="720" y="298" width="60" height="24" rx="12" fill="#34d399" opacity="0.2"/>
+  <text x="750" y="314" font-family="Segoe UI" font-weight="bold" font-size="11" fill="#34d399" text-anchor="middle">3단계</text>
+  <!-- Layer 4: Zero Trust -->
+  <rect x="100" y="375" width="700" height="100" rx="10" fill="#1a1a3e" stroke="#4facfe" stroke-width="1.5" opacity="0.9"/>
+  <text x="160" y="408" font-family="Segoe UI" font-weight="bold" font-size="20" fill="#4facfe">Zero Trust</text>
+  <text x="160" y="433" font-family="Segoe UI" font-size="11" fill="#b0b0d0">Never Trust, Always Verify</text>
+  <text x="500" y="400" font-family="Segoe UI" font-size="12" fill="#e0e0e0">모든 접근에 대한 지속적 검증</text>
+  <text x="500" y="422" font-family="Segoe UI" font-size="11" fill="#808090">MFA + 최소 권한 원칙 + 마이크로 세그멘테이션</text>
+  <text x="500" y="444" font-family="Segoe UI" font-size="11" fill="#808090">피싱 성공 후에도 횡적 이동 차단</text>
+  <rect x="720" y="396" width="60" height="24" rx="12" fill="#4facfe" opacity="0.2"/>
+  <text x="750" y="412" font-family="Segoe UI" font-weight="bold" font-size="11" fill="#4facfe" text-anchor="middle">4단계</text>
+  <!-- Arrows -->
+  <g fill="#ffffff" opacity="0.3">
+    <polygon points="450,172 445,180 455,180"/>
+    <polygon points="450,267 445,275 455,275"/>
+    <polygon points="450,362 445,370 455,370"/>
+  </g>
+</svg>

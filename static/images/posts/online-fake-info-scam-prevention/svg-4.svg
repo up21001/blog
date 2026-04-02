@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 480">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f0c29"/>
+      <stop offset="50%" style="stop-color:#302b63"/>
+      <stop offset="100%" style="stop-color:#24243e"/>
+    </linearGradient>
+    <linearGradient id="spread" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ff416c"/>
+      <stop offset="50%" style="stop-color:#e040fb"/>
+      <stop offset="100%" style="stop-color:#ff4b2b"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="480" fill="url(#bg)"/>
+  <text x="450" y="42" text-anchor="middle" font-family="Segoe UI" font-size="24" font-weight="bold" fill="#ffffff">SNS 가짜정보 확산 메커니즘</text>
+  <line x1="280" y1="56" x2="620" y2="56" stroke="#e040fb" stroke-width="2"/>
+  <!-- Stage 1: Creation -->
+  <rect x="30" y="85" width="170" height="200" rx="12" fill="#1a1a3e" stroke="#ff416c" stroke-width="1.5"/>
+  <text x="115" y="112" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#ff416c">1단계: 생성</text>
+  <line x1="45" y1="122" x2="185" y2="122" stroke="#ff416c" stroke-width="0.5" opacity="0.5"/>
+  <text x="115" y="148" text-anchor="middle" font-family="Segoe UI" font-size="28" fill="#ff416c">🏭</text>
+  <text x="115" y="178" text-anchor="middle" font-family="Segoe UI" font-size="11" fill="#e0e0e0">자극적 제목 작성</text>
+  <text x="115" y="198" text-anchor="middle" font-family="Segoe UI" font-size="11" fill="#e0e0e0">감정 유발 콘텐츠</text>
+  <text x="115" y="218" text-anchor="middle" font-family="Segoe UI" font-size="11" fill="#e0e0e0">가짜 전문가 인용</text>
+  <text x="115" y="238" text-anchor="middle" font-family="Segoe UI" font-size="11" fill="#e0e0e0">AI 대량 생산</text>
+  <text x="115" y="270" text-anchor="middle" font-family="Segoe UI" font-size="10" fill="#ff8a80">도달 범위: 1~10명</text>
+  <!-- Arrow 1 -->
+  <text x="215" y="190" font-family="Segoe UI" font-size="28" fill="#e040fb">→</text>
+  <!-- Stage 2: Seeding -->
+  <rect x="245" y="85" width="170" height="200" rx="12" fill="#1a1a3e" stroke="#ffab40" stroke-width="1.5"/>
+  <text x="330" y="112" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#ffab40">2단계: 확산</text>
+  <line x1="260" y1="122" x2="400" y2="122" stroke="#ffab40" stroke-width="0.5" opacity="0.5"/>
+  <text x="330" y="148" text-anchor="middle" font-family="Segoe UI" font-size="28" fill="#ffab40">📢</text>
+  <text x="330" y="178" text-anchor="middle" font-family="Segoe UI" font-size="11" fill="#e0e0e0">봇 네트워크 공유</text>
+  <text x="330" y="198" text-anchor="middle" font-family="Segoe UI" font-size="11" fill="#e0e0e0">커뮤니티 게시</text>
+  <text x="330" y="218" text-anchor="middle" font-family="Segoe UI" font-size="11" fill="#e0e0e0">인플루언서 태그</text>
+  <text x="330" y="238" text-anchor="middle" font-family="Segoe UI" font-size="11" fill="#e0e0e0">해시태그 조작</text>
+  <text x="330" y="270" text-anchor="middle" font-family="Segoe UI" font-size="10" fill="#ffab40">도달 범위: 100~1,000명</text>
+  <!-- Arrow 2 -->
+  <text x="430" y="190" font-family="Segoe UI" font-size="28" fill="#e040fb">→</text>
+  <!-- Stage 3: Amplification -->
+  <rect x="460" y="85" width="170" height="200" rx="12" fill="#1a1a3e" stroke="#e040fb" stroke-width="1.5"/>
+  <text x="545" y="112" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#e040fb">3단계: 증폭</text>
+  <line x1="475" y1="122" x2="615" y2="122" stroke="#e040fb" stroke-width="0.5" opacity="0.5"/>
+  <text x="545" y="148" text-anchor="middle" font-family="Segoe UI" font-size="28" fill="#e040fb">📈</text>
+  <text x="545" y="178" text-anchor="middle" font-family="Segoe UI" font-size="11" fill="#e0e0e0">알고리즘 추천</text>
+  <text x="545" y="198" text-anchor="middle" font-family="Segoe UI" font-size="11" fill="#e0e0e0">에코챔버 효과</text>
+  <text x="545" y="218" text-anchor="middle" font-family="Segoe UI" font-size="11" fill="#e0e0e0">감정적 반응 폭발</text>
+  <text x="545" y="238" text-anchor="middle" font-family="Segoe UI" font-size="11" fill="#e0e0e0">언론 보도 전이</text>
+  <text x="545" y="270" text-anchor="middle" font-family="Segoe UI" font-size="10" fill="#e040fb">도달 범위: 만~십만 명</text>
+  <!-- Arrow 3 -->
+  <text x="645" y="190" font-family="Segoe UI" font-size="28" fill="#e040fb">→</text>
+  <!-- Stage 4: Viral -->
+  <rect x="675" y="85" width="195" height="200" rx="12" fill="#1a1a3e" stroke="#4facfe" stroke-width="1.5"/>
+  <text x="772" y="112" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#4facfe">4단계: 바이럴</text>
+  <line x1="690" y1="122" x2="855" y2="122" stroke="#4facfe" stroke-width="0.5" opacity="0.5"/>
+  <text x="772" y="148" text-anchor="middle" font-family="Segoe UI" font-size="28" fill="#4facfe">🌐</text>
+  <text x="772" y="178" text-anchor="middle" font-family="Segoe UI" font-size="11" fill="#e0e0e0">크로스 플랫폼 확산</text>
+  <text x="772" y="198" text-anchor="middle" font-family="Segoe UI" font-size="11" fill="#e0e0e0">메신저·카톡 공유</text>
+  <text x="772" y="218" text-anchor="middle" font-family="Segoe UI" font-size="11" fill="#e0e0e0">"사실"로 굳어짐</text>
+  <text x="772" y="238" text-anchor="middle" font-family="Segoe UI" font-size="11" fill="#e0e0e0">정정 기사 무시됨</text>
+  <text x="772" y="270" text-anchor="middle" font-family="Segoe UI" font-size="10" fill="#4facfe">도달 범위: 백만 명+</text>
+  <!-- Feedback loop and key factors -->
+  <rect x="50" y="310" width="800" height="80" rx="10" fill="#1a1a3e" stroke="#ff416c" stroke-width="1" opacity="0.8"/>
+  <text x="450" y="335" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#ff416c">확산을 가속하는 핵심 요인</text>
+  <text x="160" y="365" text-anchor="middle" font-family="Segoe UI" font-size="12" fill="#e0e0e0">확증 편향</text>
+  <text x="160" y="380" text-anchor="middle" font-family="Segoe UI" font-size="10" fill="#8888bb">믿고 싶은 것만 수용</text>
+  <text x="340" y="365" text-anchor="middle" font-family="Segoe UI" font-size="12" fill="#e0e0e0">감정적 반응</text>
+  <text x="340" y="380" text-anchor="middle" font-family="Segoe UI" font-size="10" fill="#8888bb">분노·공포가 공유율 높임</text>
+  <text x="540" y="365" text-anchor="middle" font-family="Segoe UI" font-size="12" fill="#e0e0e0">알고리즘 편향</text>
+  <text x="540" y="380" text-anchor="middle" font-family="Segoe UI" font-size="10" fill="#8888bb">참여도 높은 콘텐츠 우선</text>
+  <text x="730" y="365" text-anchor="middle" font-family="Segoe UI" font-size="12" fill="#e0e0e0">정보 과부하</text>
+  <text x="730" y="380" text-anchor="middle" font-family="Segoe UI" font-size="10" fill="#8888bb">검증 없이 즉시 공유</text>
+  <!-- Bottom stat -->
+  <rect x="150" y="415" width="600" height="45" rx="8" fill="#1a1a3e" stroke="#e040fb" stroke-width="1" opacity="0.6"/>
+  <text x="450" y="435" text-anchor="middle" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#e040fb">MIT 연구 결과</text>
+  <text x="450" y="453" text-anchor="middle" font-family="Segoe UI" font-size="11" fill="#b0b0d0">거짓 뉴스는 진실보다 6배 빠르게 확산되며, 70% 더 많이 리트윗됩니다</text>
+</svg>

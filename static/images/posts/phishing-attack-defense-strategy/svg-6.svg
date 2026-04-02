@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f0c29"/>
+      <stop offset="50%" style="stop-color:#302b63"/>
+      <stop offset="100%" style="stop-color:#24243e"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="520" fill="url(#bg)"/>
+  <text x="450" y="40" font-family="Segoe UI" font-weight="bold" font-size="24" fill="#ffffff" text-anchor="middle">피싱 방어 체크리스트</text>
+  <text x="450" y="62" font-family="Segoe UI" font-size="13" fill="#a0a0c0" text-anchor="middle">조직과 개인이 지금 바로 실행할 수 있는 보안 수칙</text>
+  <!-- Organization column -->
+  <rect x="40" y="85" width="400" height="410" rx="12" fill="#0d0d2b" stroke="#4facfe" stroke-width="1" opacity="0.8"/>
+  <rect x="40" y="85" width="400" height="40" rx="12" fill="#4facfe" opacity="0.12"/>
+  <text x="240" y="112" font-family="Segoe UI" font-weight="bold" font-size="17" fill="#4facfe" text-anchor="middle">조직 차원 방어</text>
+  <g font-family="Segoe UI" font-size="12" fill="#e0e0e0">
+    <text x="75" y="152"><tspan fill="#34d399">&#x2713;</tspan>  SPF/DKIM/DMARC 인증 설정 및 모니터링</text>
+    <text x="75" y="180"><tspan fill="#34d399">&#x2713;</tspan>  이메일 보안 게이트웨이(SEG) 도입</text>
+    <text x="75" y="208"><tspan fill="#34d399">&#x2713;</tspan>  정기적 피싱 시뮬레이션 훈련 실시</text>
+    <text x="75" y="236"><tspan fill="#34d399">&#x2713;</tspan>  다중 인증(MFA) 전사 적용</text>
+    <text x="75" y="264"><tspan fill="#34d399">&#x2713;</tspan>  제로 트러스트 아키텍처 구현</text>
+    <text x="75" y="292"><tspan fill="#34d399">&#x2713;</tspan>  피싱 신고 채널 운영 및 인센티브</text>
+    <text x="75" y="320"><tspan fill="#34d399">&#x2713;</tspan>  외부 메일 경고 배너 표시</text>
+    <text x="75" y="348"><tspan fill="#34d399">&#x2713;</tspan>  EDR/XDR 솔루션 배포</text>
+    <text x="75" y="376"><tspan fill="#34d399">&#x2713;</tspan>  인시던트 대응 플레이북 수립</text>
+    <text x="75" y="404"><tspan fill="#34d399">&#x2713;</tspan>  DNS 필터링 및 웹 격리</text>
+    <text x="75" y="432"><tspan fill="#34d399">&#x2713;</tspan>  공급망 이메일 보안 검증</text>
+    <text x="75" y="460"><tspan fill="#34d399">&#x2713;</tspan>  사이버 보험 가입 및 갱신</text>
+  </g>
+  <!-- Individual column -->
+  <rect x="460" y="85" width="400" height="410" rx="12" fill="#0d0d2b" stroke="#ff416c" stroke-width="1" opacity="0.8"/>
+  <rect x="460" y="85" width="400" height="40" rx="12" fill="#ff416c" opacity="0.12"/>
+  <text x="660" y="112" font-family="Segoe UI" font-weight="bold" font-size="17" fill="#ff416c" text-anchor="middle">개인 보안 수칙</text>
+  <g font-family="Segoe UI" font-size="12" fill="#e0e0e0">
+    <text x="495" y="152"><tspan fill="#fbbf24">&#x2713;</tspan>  발신자 이메일 주소 꼼꼼히 확인</text>
+    <text x="495" y="180"><tspan fill="#fbbf24">&#x2713;</tspan>  링크 클릭 전 URL 호버링으로 확인</text>
+    <text x="495" y="208"><tspan fill="#fbbf24">&#x2713;</tspan>  긴급/위협성 메시지에 즉시 반응 금지</text>
+    <text x="495" y="236"><tspan fill="#fbbf24">&#x2713;</tspan>  개인정보 요청 시 별도 채널로 확인</text>
+    <text x="495" y="264"><tspan fill="#fbbf24">&#x2713;</tspan>  모든 계정에 MFA 활성화</text>
+    <text x="495" y="292"><tspan fill="#fbbf24">&#x2713;</tspan>  비밀번호 관리자 사용</text>
+    <text x="495" y="320"><tspan fill="#fbbf24">&#x2713;</tspan>  OS/브라우저/앱 항상 최신 업데이트</text>
+    <text x="495" y="348"><tspan fill="#fbbf24">&#x2713;</tspan>  공용 Wi-Fi에서 금융 거래 자제</text>
+    <text x="495" y="376"><tspan fill="#fbbf24">&#x2713;</tspan>  의심 메일 즉시 IT팀에 신고</text>
+    <text x="495" y="404"><tspan fill="#fbbf24">&#x2713;</tspan>  SNS 개인정보 공개 범위 제한</text>
+    <text x="495" y="432"><tspan fill="#fbbf24">&#x2713;</tspan>  QR 코드 스캔 전 출처 확인</text>
+    <text x="495" y="460"><tspan fill="#fbbf24">&#x2713;</tspan>  보안 인식 교육 적극 참여</text>
+  </g>
+</svg>

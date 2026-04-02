@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 480">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f0c29"/>
+      <stop offset="50%" style="stop-color:#302b63"/>
+      <stop offset="100%" style="stop-color:#24243e"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="480" fill="url(#bg)"/>
+  <text x="450" y="42" text-anchor="middle" font-family="Segoe UI" font-size="24" font-weight="bold" fill="#ffffff">SNS Misinformation Spread Mechanism</text>
+  <line x1="280" y1="56" x2="620" y2="56" stroke="#e040fb" stroke-width="2"/>
+  <rect x="30" y="85" width="170" height="200" rx="12" fill="#1a1a3e" stroke="#ff416c" stroke-width="1.5"/>
+  <text x="115" y="112" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#ff416c">Stage 1: Creation</text>
+  <line x1="45" y1="122" x2="185" y2="122" stroke="#ff416c" stroke-width="0.5" opacity="0.5"/>
+  <text x="115" y="148" text-anchor="middle" font-family="Segoe UI" font-size="28" fill="#ff416c">🏭</text>
+  <text x="115" y="178" text-anchor="middle" font-family="Segoe UI" font-size="11" fill="#e0e0e0">Sensational headlines</text>
+  <text x="115" y="198" text-anchor="middle" font-family="Segoe UI" font-size="11" fill="#e0e0e0">Emotion-triggering content</text>
+  <text x="115" y="218" text-anchor="middle" font-family="Segoe UI" font-size="11" fill="#e0e0e0">Fake expert citations</text>
+  <text x="115" y="238" text-anchor="middle" font-family="Segoe UI" font-size="11" fill="#e0e0e0">AI mass production</text>
+  <text x="115" y="270" text-anchor="middle" font-family="Segoe UI" font-size="10" fill="#ff8a80">Reach: 1-10 people</text>
+  <text x="215" y="190" font-family="Segoe UI" font-size="28" fill="#e040fb">→</text>
+  <rect x="245" y="85" width="170" height="200" rx="12" fill="#1a1a3e" stroke="#ffab40" stroke-width="1.5"/>
+  <text x="330" y="112" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#ffab40">Stage 2: Seeding</text>
+  <line x1="260" y1="122" x2="400" y2="122" stroke="#ffab40" stroke-width="0.5" opacity="0.5"/>
+  <text x="330" y="148" text-anchor="middle" font-family="Segoe UI" font-size="28" fill="#ffab40">📢</text>
+  <text x="330" y="178" text-anchor="middle" font-family="Segoe UI" font-size="11" fill="#e0e0e0">Bot network sharing</text>
+  <text x="330" y="198" text-anchor="middle" font-family="Segoe UI" font-size="11" fill="#e0e0e0">Community posting</text>
+  <text x="330" y="218" text-anchor="middle" font-family="Segoe UI" font-size="11" fill="#e0e0e0">Influencer tagging</text>
+  <text x="330" y="238" text-anchor="middle" font-family="Segoe UI" font-size="11" fill="#e0e0e0">Hashtag manipulation</text>
+  <text x="330" y="270" text-anchor="middle" font-family="Segoe UI" font-size="10" fill="#ffab40">Reach: 100-1,000</text>
+  <text x="430" y="190" font-family="Segoe UI" font-size="28" fill="#e040fb">→</text>
+  <rect x="460" y="85" width="170" height="200" rx="12" fill="#1a1a3e" stroke="#e040fb" stroke-width="1.5"/>
+  <text x="545" y="112" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#e040fb">Stage 3: Amplification</text>
+  <line x1="475" y1="122" x2="615" y2="122" stroke="#e040fb" stroke-width="0.5" opacity="0.5"/>
+  <text x="545" y="148" text-anchor="middle" font-family="Segoe UI" font-size="28" fill="#e040fb">📈</text>
+  <text x="545" y="178" text-anchor="middle" font-family="Segoe UI" font-size="11" fill="#e0e0e0">Algorithm promotion</text>
+  <text x="545" y="198" text-anchor="middle" font-family="Segoe UI" font-size="11" fill="#e0e0e0">Echo chamber effect</text>
+  <text x="545" y="218" text-anchor="middle" font-family="Segoe UI" font-size="11" fill="#e0e0e0">Emotional reaction surge</text>
+  <text x="545" y="238" text-anchor="middle" font-family="Segoe UI" font-size="11" fill="#e0e0e0">Media coverage spillover</text>
+  <text x="545" y="270" text-anchor="middle" font-family="Segoe UI" font-size="10" fill="#e040fb">Reach: 10K-100K</text>
+  <text x="645" y="190" font-family="Segoe UI" font-size="28" fill="#e040fb">→</text>
+  <rect x="675" y="85" width="195" height="200" rx="12" fill="#1a1a3e" stroke="#4facfe" stroke-width="1.5"/>
+  <text x="772" y="112" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#4facfe">Stage 4: Viral</text>
+  <line x1="690" y1="122" x2="855" y2="122" stroke="#4facfe" stroke-width="0.5" opacity="0.5"/>
+  <text x="772" y="148" text-anchor="middle" font-family="Segoe UI" font-size="28" fill="#4facfe">🌐</text>
+  <text x="772" y="178" text-anchor="middle" font-family="Segoe UI" font-size="11" fill="#e0e0e0">Cross-platform spread</text>
+  <text x="772" y="198" text-anchor="middle" font-family="Segoe UI" font-size="11" fill="#e0e0e0">Messenger sharing</text>
+  <text x="772" y="218" text-anchor="middle" font-family="Segoe UI" font-size="11" fill="#e0e0e0">Accepted as "fact"</text>
+  <text x="772" y="238" text-anchor="middle" font-family="Segoe UI" font-size="11" fill="#e0e0e0">Corrections ignored</text>
+  <text x="772" y="270" text-anchor="middle" font-family="Segoe UI" font-size="10" fill="#4facfe">Reach: 1M+</text>
+  <rect x="50" y="310" width="800" height="80" rx="10" fill="#1a1a3e" stroke="#ff416c" stroke-width="1" opacity="0.8"/>
+  <text x="450" y="335" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#ff416c">Key Factors Accelerating Spread</text>
+  <text x="160" y="365" text-anchor="middle" font-family="Segoe UI" font-size="12" fill="#e0e0e0">Confirmation Bias</text>
+  <text x="160" y="380" text-anchor="middle" font-family="Segoe UI" font-size="10" fill="#8888bb">Accept only what fits beliefs</text>
+  <text x="340" y="365" text-anchor="middle" font-family="Segoe UI" font-size="12" fill="#e0e0e0">Emotional Reactions</text>
+  <text x="340" y="380" text-anchor="middle" font-family="Segoe UI" font-size="10" fill="#8888bb">Anger &amp; fear boost sharing</text>
+  <text x="540" y="365" text-anchor="middle" font-family="Segoe UI" font-size="12" fill="#e0e0e0">Algorithm Bias</text>
+  <text x="540" y="380" text-anchor="middle" font-family="Segoe UI" font-size="10" fill="#8888bb">High-engagement prioritized</text>
+  <text x="730" y="365" text-anchor="middle" font-family="Segoe UI" font-size="12" fill="#e0e0e0">Info Overload</text>
+  <text x="730" y="380" text-anchor="middle" font-family="Segoe UI" font-size="10" fill="#8888bb">Share without verifying</text>
+  <rect x="150" y="415" width="600" height="45" rx="8" fill="#1a1a3e" stroke="#e040fb" stroke-width="1" opacity="0.6"/>
+  <text x="450" y="435" text-anchor="middle" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#e040fb">MIT Research Finding</text>
+  <text x="450" y="453" text-anchor="middle" font-family="Segoe UI" font-size="11" fill="#b0b0d0">False news spreads 6x faster than truth and is retweeted 70% more often</text>
+</svg>

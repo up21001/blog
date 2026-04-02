@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 450">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f0c29"/>
+      <stop offset="50%" style="stop-color:#302b63"/>
+      <stop offset="100%" style="stop-color:#24243e"/>
+    </linearGradient>
+    <linearGradient id="chain" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ff416c"/>
+      <stop offset="50%" style="stop-color:#fbbf24"/>
+      <stop offset="100%" style="stop-color:#34d399"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="450" fill="url(#bg)"/>
+  <text x="450" y="40" font-family="Segoe UI" font-weight="bold" font-size="24" fill="#ffffff" text-anchor="middle">Phishing Attack Kill Chain</text>
+  <text x="450" y="62" font-family="Segoe UI" font-size="13" fill="#a0a0c0" text-anchor="middle">Cyber Kill Chain - 7 Stages of a Phishing Attack Lifecycle</text>
+  <line x1="65" y1="170" x2="835" y2="170" stroke="url(#chain)" stroke-width="3" opacity="0.4"/>
+  <g>
+    <circle cx="65" cy="170" r="28" fill="#1a1a3e" stroke="#ff416c" stroke-width="2"/>
+    <text x="65" y="168" font-family="Segoe UI" font-weight="bold" font-size="18" fill="#ff416c" text-anchor="middle">1</text>
+    <text x="65" y="218" font-family="Segoe UI" font-weight="bold" font-size="13" fill="#ff416c" text-anchor="middle">Recon</text>
+    <text x="65" y="238" font-family="Segoe UI" font-size="10" fill="#b0b0d0" text-anchor="middle">Target info</text>
+    <text x="65" y="253" font-family="Segoe UI" font-size="10" fill="#b0b0d0" text-anchor="middle">gathering</text>
+  </g>
+  <g>
+    <circle cx="193" cy="170" r="28" fill="#1a1a3e" stroke="#ff6b44" stroke-width="2"/>
+    <text x="193" y="168" font-family="Segoe UI" font-weight="bold" font-size="18" fill="#ff6b44" text-anchor="middle">2</text>
+    <text x="193" y="218" font-family="Segoe UI" font-weight="bold" font-size="13" fill="#ff6b44" text-anchor="middle">Weaponize</text>
+    <text x="193" y="238" font-family="Segoe UI" font-size="10" fill="#b0b0d0" text-anchor="middle">Craft phishing</text>
+    <text x="193" y="253" font-family="Segoe UI" font-size="10" fill="#b0b0d0" text-anchor="middle">email/site</text>
+  </g>
+  <g>
+    <circle cx="321" cy="170" r="28" fill="#1a1a3e" stroke="#fbbf24" stroke-width="2"/>
+    <text x="321" y="168" font-family="Segoe UI" font-weight="bold" font-size="18" fill="#fbbf24" text-anchor="middle">3</text>
+    <text x="321" y="218" font-family="Segoe UI" font-weight="bold" font-size="13" fill="#fbbf24" text-anchor="middle">Delivery</text>
+    <text x="321" y="238" font-family="Segoe UI" font-size="10" fill="#b0b0d0" text-anchor="middle">Send via</text>
+    <text x="321" y="253" font-family="Segoe UI" font-size="10" fill="#b0b0d0" text-anchor="middle">email/SMS</text>
+  </g>
+  <g>
+    <circle cx="449" cy="170" r="28" fill="#1a1a3e" stroke="#a3e635" stroke-width="2"/>
+    <text x="449" y="168" font-family="Segoe UI" font-weight="bold" font-size="18" fill="#a3e635" text-anchor="middle">4</text>
+    <text x="449" y="218" font-family="Segoe UI" font-weight="bold" font-size="13" fill="#a3e635" text-anchor="middle">Exploitation</text>
+    <text x="449" y="238" font-family="Segoe UI" font-size="10" fill="#b0b0d0" text-anchor="middle">Trick user to</text>
+    <text x="449" y="253" font-family="Segoe UI" font-size="10" fill="#b0b0d0" text-anchor="middle">click/execute</text>
+  </g>
+  <g>
+    <circle cx="577" cy="170" r="28" fill="#1a1a3e" stroke="#34d399" stroke-width="2"/>
+    <text x="577" y="168" font-family="Segoe UI" font-weight="bold" font-size="18" fill="#34d399" text-anchor="middle">5</text>
+    <text x="577" y="218" font-family="Segoe UI" font-weight="bold" font-size="13" fill="#34d399" text-anchor="middle">Installation</text>
+    <text x="577" y="238" font-family="Segoe UI" font-size="10" fill="#b0b0d0" text-anchor="middle">Deploy malware</text>
+    <text x="577" y="253" font-family="Segoe UI" font-size="10" fill="#b0b0d0" text-anchor="middle">or backdoor</text>
+  </g>
+  <g>
+    <circle cx="705" cy="170" r="28" fill="#1a1a3e" stroke="#4facfe" stroke-width="2"/>
+    <text x="705" y="168" font-family="Segoe UI" font-weight="bold" font-size="18" fill="#4facfe" text-anchor="middle">6</text>
+    <text x="705" y="218" font-family="Segoe UI" font-weight="bold" font-size="13" fill="#4facfe" text-anchor="middle">C2</text>
+    <text x="705" y="238" font-family="Segoe UI" font-size="10" fill="#b0b0d0" text-anchor="middle">Establish remote</text>
+    <text x="705" y="253" font-family="Segoe UI" font-size="10" fill="#b0b0d0" text-anchor="middle">control channel</text>
+  </g>
+  <g>
+    <circle cx="835" cy="170" r="28" fill="#1a1a3e" stroke="#a78bfa" stroke-width="2"/>
+    <text x="835" y="168" font-family="Segoe UI" font-weight="bold" font-size="18" fill="#a78bfa" text-anchor="middle">7</text>
+    <text x="835" y="218" font-family="Segoe UI" font-weight="bold" font-size="13" fill="#a78bfa" text-anchor="middle">Objective</text>
+    <text x="835" y="238" font-family="Segoe UI" font-size="10" fill="#b0b0d0" text-anchor="middle">Data exfiltration</text>
+    <text x="835" y="253" font-family="Segoe UI" font-size="10" fill="#b0b0d0" text-anchor="middle">or ransom</text>
+  </g>
+  <rect x="50" y="300" width="800" height="120" rx="10" fill="#0d0d2b" stroke="#34d399" stroke-width="1" stroke-dasharray="6,3" opacity="0.8"/>
+  <text x="450" y="330" font-family="Segoe UI" font-weight="bold" font-size="15" fill="#34d399" text-anchor="middle">Defense Points</text>
+  <text x="130" y="360" font-family="Segoe UI" font-size="11" fill="#e0e0e0" text-anchor="middle">Threat Intelligence</text>
+  <text x="130" y="380" font-family="Segoe UI" font-size="10" fill="#808090" text-anchor="middle">(Block stage 1-2)</text>
+  <text x="320" y="360" font-family="Segoe UI" font-size="11" fill="#e0e0e0" text-anchor="middle">Email Filtering</text>
+  <text x="320" y="380" font-family="Segoe UI" font-size="10" fill="#808090" text-anchor="middle">(Block stage 3)</text>
+  <text x="500" y="360" font-family="Segoe UI" font-size="11" fill="#e0e0e0" text-anchor="middle">Security Training</text>
+  <text x="500" y="380" font-family="Segoe UI" font-size="10" fill="#808090" text-anchor="middle">(Block stage 4)</text>
+  <text x="670" y="360" font-family="Segoe UI" font-size="11" fill="#e0e0e0" text-anchor="middle">EDR / MFA</text>
+  <text x="670" y="380" font-family="Segoe UI" font-size="10" fill="#808090" text-anchor="middle">(Block stage 5-6)</text>
+  <text x="800" y="360" font-family="Segoe UI" font-size="11" fill="#e0e0e0" text-anchor="middle">DLP</text>
+  <text x="800" y="380" font-family="Segoe UI" font-size="10" fill="#808090" text-anchor="middle">(Block stage 7)</text>
+  <g stroke="#34d399" stroke-width="0.8" opacity="0.3" stroke-dasharray="3,3">
+    <line x1="130" y1="300" x2="130" y2="270"/>
+    <line x1="320" y1="300" x2="320" y2="270"/>
+    <line x1="500" y1="300" x2="449" y2="270"/>
+    <line x1="670" y1="300" x2="640" y2="270"/>
+    <line x1="800" y1="300" x2="835" y2="270"/>
+  </g>
+</svg>
