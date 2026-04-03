@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 540" width="900" height="540" font-family="'Segoe UI', Arial, sans-serif">
+  <!-- Background -->
+  <rect width="900" height="540" fill="#F8F9FF" rx="12"/>
+
+  <!-- Title -->
+  <text x="450" y="42" text-anchor="middle" font-size="22" font-weight="700" fill="#1E1B4B">3계층 브라우저 데몬 아키텍처</text>
+  <text x="450" y="66" text-anchor="middle" font-size="13" fill="#6B7280">CLI → HTTP 서버 → Chromium 브라우저 제어 파이프라인</text>
+
+  <!-- Layer 1: CLI -->
+  <g transform="translate(60, 120)">
+    <rect x="0" y="0" width="200" height="130" rx="12" fill="#4F46E5" opacity="0.1" stroke="#4F46E5" stroke-width="2"/>
+    <rect x="0" y="0" width="200" height="36" rx="12" fill="#4F46E5"/>
+    <rect x="0" y="24" width="200" height="12" fill="#4F46E5"/>
+    <text x="100" y="22" text-anchor="middle" font-size="13" font-weight="700" fill="white">LAYER 1 — CLI</text>
+    <text x="100" y="58" text-anchor="middle" font-size="20">🖥️</text>
+    <text x="100" y="84" text-anchor="middle" font-size="12" font-weight="700" fill="#4F46E5">Bun 바이너리</text>
+    <text x="100" y="102" text-anchor="middle" font-size="11" fill="#6B7280">/browse, /connect-chrome</text>
+    <text x="100" y="118" text-anchor="middle" font-size="11" fill="#6B7280">/setup-browser-cookies</text>
+  </g>
+
+  <!-- Arrow 1→2 with latency -->
+  <g transform="translate(270, 155)">
+    <line x1="0" y1="30" x2="70" y2="30" stroke="#4F46E5" stroke-width="2.5" marker-end="url(#arrow-indigo)"/>
+    <rect x="5" y="8" width="60" height="18" rx="4" fill="#4F46E5"/>
+    <text x="35" y="21" text-anchor="middle" font-size="10" font-weight="700" fill="white">HTTP 요청</text>
+    <text x="35" y="52" text-anchor="middle" font-size="10" fill="#6B7280">Bearer 토큰</text>
+  </g>
+
+  <!-- Layer 2: HTTP Server -->
+  <g transform="translate(340, 100)">
+    <rect x="0" y="0" width="220" height="170" rx="12" fill="#10B981" opacity="0.1" stroke="#10B981" stroke-width="2"/>
+    <rect x="0" y="0" width="220" height="36" rx="12" fill="#10B981"/>
+    <rect x="0" y="24" width="220" height="12" fill="#10B981"/>
+    <text x="110" y="22" text-anchor="middle" font-size="13" font-weight="700" fill="white">LAYER 2 — HTTP SERVER</text>
+    <text x="110" y="60" text-anchor="middle" font-size="18">⚡</text>
+    <text x="110" y="84" text-anchor="middle" font-size="12" font-weight="700" fill="#059669">localhost:랜덤 포트</text>
+    <text x="110" y="102" text-anchor="middle" font-size="11" fill="#6B7280">포트 범위: 10,000–60,000</text>
+    <rect x="20" y="112" width="180" height="22" rx="6" fill="#D1FAE5"/>
+    <text x="110" y="127" text-anchor="middle" font-size="11" font-weight="700" fill="#065F46">최초 시작: ~3초</text>
+    <rect x="20" y="138" width="180" height="22" rx="6" fill="#A7F3D0"/>
+    <text x="110" y="153" text-anchor="middle" font-size="11" font-weight="700" fill="#065F46">이후 응답: ~100–200ms</text>
+  </g>
+
+  <!-- Arrow 2→3 with latency -->
+  <g transform="translate(570, 155)">
+    <line x1="0" y1="30" x2="70" y2="30" stroke="#10B981" stroke-width="2.5" marker-end="url(#arrow-emerald)"/>
+    <rect x="5" y="8" width="60" height="18" rx="4" fill="#10B981"/>
+    <text x="35" y="21" text-anchor="middle" font-size="10" font-weight="700" fill="white">DevTools</text>
+    <text x="35" y="52" text-anchor="middle" font-size="10" fill="#6B7280">Protocol</text>
+  </g>
+
+  <!-- Layer 3: Chromium -->
+  <g transform="translate(640, 120)">
+    <rect x="0" y="0" width="200" height="130" rx="12" fill="#F59E0B" opacity="0.1" stroke="#F59E0B" stroke-width="2"/>
+    <rect x="0" y="0" width="200" height="36" rx="12" fill="#F59E0B"/>
+    <rect x="0" y="24" width="200" height="12" fill="#F59E0B"/>
+    <text x="100" y="22" text-anchor="middle" font-size="13" font-weight="700" fill="white">LAYER 3 — CHROMIUM</text>
+    <text x="100" y="58" text-anchor="middle" font-size="20">🌐</text>
+    <text x="100" y="84" text-anchor="middle" font-size="12" font-weight="700" fill="#D97706">실제 브라우저 엔진</text>
+    <text x="100" y="102" text-anchor="middle" font-size="11" fill="#6B7280">Playwright 제어</text>
+    <text x="100" y="118" text-anchor="middle" font-size="11" fill="#6B7280">헤드리스 / 헤드 모드</text>
+  </g>
+
+  <!-- State file section -->
+  <g transform="translate(100, 310)">
+    <rect x="0" y="0" width="700" height="80" rx="10" fill="#EEF2FF" stroke="#6366F1" stroke-width="1.5" stroke-dasharray="6,3"/>
+    <text x="350" y="24" text-anchor="middle" font-size="13" font-weight="700" fill="#4338CA">상태 파일: .gstack/browse.json</text>
+    <g transform="translate(40, 38)">
+      <rect x="0" y="0" width="130" height="24" rx="5" fill="#C7D2FE"/>
+      <text x="65" y="16" text-anchor="middle" font-size="10" fill="#3730A3">pid (프로세스 ID)</text>
+    </g>
+    <g transform="translate(185, 38)">
+      <rect x="0" y="0" width="130" height="24" rx="5" fill="#C7D2FE"/>
+      <text x="65" y="16" text-anchor="middle" font-size="10" fill="#3730A3">port (랜덤 포트)</text>
+    </g>
+    <g transform="translate(330, 38)">
+      <rect x="0" y="0" width="130" height="24" rx="5" fill="#C7D2FE"/>
+      <text x="65" y="16" text-anchor="middle" font-size="10" fill="#3730A3">token (Bearer)</text>
+    </g>
+    <g transform="translate(475, 38)">
+      <rect x="0" y="0" width="185" height="24" rx="5" fill="#C7D2FE"/>
+      <text x="92" y="16" text-anchor="middle" font-size="10" fill="#3730A3">binaryVersion (자동 재시작)</text>
+    </g>
+  </g>
+
+  <!-- Idle timeout badge -->
+  <g transform="translate(100, 420)">
+    <rect x="0" y="0" width="200" height="50" rx="8" fill="#FEF3C7" stroke="#F59E0B" stroke-width="1.5"/>
+    <text x="100" y="20" text-anchor="middle" font-size="11" font-weight="700" fill="#92400E">유휴 타임아웃</text>
+    <text x="100" y="38" text-anchor="middle" font-size="14" font-weight="700" fill="#D97706">30분 자동 종료</text>
+  </g>
+
+  <!-- Version mismatch badge -->
+  <g transform="translate(340, 420)">
+    <rect x="0" y="0" width="220" height="50" rx="8" fill="#FEE2E2" stroke="#EF4444" stroke-width="1.5"/>
+    <text x="110" y="20" text-anchor="middle" font-size="11" font-weight="700" fill="#7F1D1D">버전 불일치 감지</text>
+    <text x="110" y="38" text-anchor="middle" font-size="12" font-weight="700" fill="#DC2626">자동 재시작 (binaryVersion)</text>
+  </g>
+
+  <!-- Security badge -->
+  <g transform="translate(600, 420)">
+    <rect x="0" y="0" width="200" height="50" rx="8" fill="#ECFDF5" stroke="#10B981" stroke-width="1.5"/>
+    <text x="100" y="20" text-anchor="middle" font-size="11" font-weight="700" fill="#064E3B">보안</text>
+    <text x="100" y="38" text-anchor="middle" font-size="12" font-weight="700" fill="#059669">127.0.0.1 전용</text>
+  </g>
+
+  <!-- Arrow markers -->
+  <defs>
+    <marker id="arrow-indigo" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#4F46E5"/>
+    </marker>
+    <marker id="arrow-emerald" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#10B981"/>
+    </marker>
+  </defs>
+</svg>

@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" width="900" height="520" font-family="'Segoe UI', Arial, sans-serif">
+  <!-- Background -->
+  <rect width="900" height="520" fill="#F8F9FF" rx="12"/>
+
+  <!-- Title -->
+  <text x="450" y="40" text-anchor="middle" font-size="21" font-weight="700" fill="#1E1B4B">기존 AI 코딩 vs gstack 비교</text>
+  <text x="450" y="62" text-anchor="middle" font-size="12" fill="#6B7280">단순 코드 보조 도구에서 완전한 소프트웨어 팩토리로의 전환</text>
+
+  <!-- Divider -->
+  <line x1="450" y1="80" x2="450" y2="490" stroke="#E5E7EB" stroke-width="2" stroke-dasharray="6,4"/>
+
+  <!-- Left header: Traditional -->
+  <rect x="30" y="80" width="400" height="52" rx="8" fill="#EF4444"/>
+  <text x="230" y="108" text-anchor="middle" font-size="16" font-weight="700" fill="white">기존 AI 코딩 도구</text>
+  <text x="230" y="126" text-anchor="middle" font-size="11" fill="#FECACA">GitHub Copilot · ChatGPT · 단순 Claude</text>
+
+  <!-- Right header: gstack -->
+  <rect x="470" y="80" width="400" height="52" rx="8" fill="#4F46E5"/>
+  <text x="670" y="108" text-anchor="middle" font-size="16" font-weight="700" fill="white">gstack + Claude Code</text>
+  <text x="670" y="126" text-anchor="middle" font-size="11" fill="#C7D2FE">Garry Tan · Y Combinator · 62.6K stars</text>
+
+  <!-- Row 1: Scope -->
+  <rect x="30" y="148" width="400" height="56" rx="6" fill="white" stroke="#FEE2E2" stroke-width="1"/>
+  <text x="50" y="170" font-size="11" font-weight="700" fill="#9CA3AF">작업 범위</text>
+  <text x="50" y="190" font-size="13" fill="#374151">단일 파일 · 단일 함수 자동완성</text>
+  <text x="50" y="206" font-size="11" fill="#EF4444">컨텍스트 단절, 반복 지시 필요</text>
+
+  <rect x="470" y="148" width="400" height="56" rx="6" fill="white" stroke="#DBEAFE" stroke-width="1"/>
+  <text x="490" y="170" font-size="11" font-weight="700" fill="#9CA3AF">작업 범위</text>
+  <text x="490" y="190" font-size="13" fill="#374151">전체 프로젝트 · 엔드투엔드 개발</text>
+  <text x="490" y="206" font-size="11" fill="#10B981">Think→Ship 전체 생명주기 관리</text>
+
+  <!-- Row 2: Review -->
+  <rect x="30" y="214" width="400" height="56" rx="6" fill="white" stroke="#FEE2E2" stroke-width="1"/>
+  <text x="50" y="236" font-size="11" font-weight="700" fill="#9CA3AF">코드 리뷰</text>
+  <text x="50" y="256" font-size="13" fill="#374151">동일 모델이 생성 &amp; 검토</text>
+  <text x="50" y="272" font-size="11" fill="#EF4444">자기 오류 발견 불가, 편향 발생</text>
+
+  <rect x="470" y="214" width="400" height="56" rx="6" fill="white" stroke="#DBEAFE" stroke-width="1"/>
+  <text x="490" y="236" font-size="11" font-weight="700" fill="#9CA3AF">코드 리뷰</text>
+  <text x="490" y="256" font-size="13" fill="#374151">크로스 모델 리뷰 (다중 AI 검토)</text>
+  <text x="490" y="272" font-size="11" fill="#10B981">독립 모델이 교차 검증, 품질 향상</text>
+
+  <!-- Row 3: Testing -->
+  <rect x="30" y="280" width="400" height="56" rx="6" fill="white" stroke="#FEE2E2" stroke-width="1"/>
+  <text x="50" y="302" font-size="11" font-weight="700" fill="#9CA3AF">테스팅</text>
+  <text x="50" y="322" font-size="13" fill="#374151">모의(Mock) 환경에서만 테스트</text>
+  <text x="50" y="338" font-size="11" fill="#EF4444">실제 브라우저 동작 검증 불가</text>
+
+  <rect x="470" y="280" width="400" height="56" rx="6" fill="white" stroke="#DBEAFE" stroke-width="1"/>
+  <text x="490" y="302" font-size="11" font-weight="700" fill="#9CA3AF">테스팅</text>
+  <text x="490" y="322" font-size="13" fill="#374151">실제 브라우저 E2E 자동 테스트</text>
+  <text x="490" y="338" font-size="11" fill="#10B981">Playwright 기반 실제 환경 검증</text>
+
+  <!-- Row 4: Output -->
+  <rect x="30" y="346" width="400" height="56" rx="6" fill="white" stroke="#FEE2E2" stroke-width="1"/>
+  <text x="50" y="368" font-size="11" font-weight="700" fill="#9CA3AF">생산성</text>
+  <text x="50" y="388" font-size="13" fill="#374151">수백~수천 라인/일</text>
+  <text x="50" y="404" font-size="11" fill="#EF4444">개발자 직접 통합 · 검토 필요</text>
+
+  <rect x="470" y="346" width="400" height="56" rx="6" fill="white" stroke="#DBEAFE" stroke-width="1"/>
+  <text x="490" y="368" font-size="11" font-weight="700" fill="#9CA3AF">생산성</text>
+  <text x="490" y="388" font-size="13" fill="#374151">10,000~20,000 라인/일</text>
+  <text x="490" y="404" font-size="11" fill="#10B981">60일 60만 라인 실증 기록</text>
+
+  <!-- VS badge -->
+  <circle cx="450" cy="300" r="22" fill="#1E1B4B"/>
+  <text x="450" y="307" text-anchor="middle" font-size="13" font-weight="800" fill="white">VS</text>
+
+  <!-- Bottom summary -->
+  <rect x="30" y="415" width="840" height="80" rx="10" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.5"/>
+  <text x="450" y="440" text-anchor="middle" font-size="14" font-weight="700" fill="#4F46E5">결론: gstack은 단순한 코드 보조가 아닌 완전한 소프트웨어 팩토리</text>
+  <text x="230" y="465" text-anchor="middle" font-size="12" fill="#374151">혼자서도 팀 수준의 개발 속도 달성</text>
+  <text x="450" y="465" text-anchor="middle" font-size="20" fill="#4F46E5">→</text>
+  <text x="670" y="465" text-anchor="middle" font-size="12" fill="#374151">엔터프라이즈급 품질 보증 프로세스</text>
+  <text x="450" y="486" text-anchor="middle" font-size="11" fill="#6B7280">MIT 라이선스 · 무료 · GitHub 62.6K stars</text>
+</svg>

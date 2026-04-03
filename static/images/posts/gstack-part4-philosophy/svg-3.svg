@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 540" width="900" height="540" font-family="'Segoe UI', Arial, sans-serif">
+  <!-- Background -->
+  <rect width="900" height="540" fill="#0F172A" rx="12"/>
+
+  <!-- Title -->
+  <text x="450" y="44" text-anchor="middle" font-size="22" font-weight="700" fill="white">gstack 임팩트 통계</text>
+  <text x="450" y="68" text-anchor="middle" font-size="13" fill="#94A3B8">Garry Tan의 실전 검증 데이터 — 2026년 기준</text>
+
+  <!-- Stat 1: GitHub Stars -->
+  <g transform="translate(60, 100)">
+    <rect x="0" y="0" width="240" height="160" rx="14" fill="#1E293B" stroke="#4F46E5" stroke-width="2"/>
+    <rect x="0" y="0" width="240" height="6" rx="14" fill="#4F46E5"/>
+    <rect x="0" y="6" width="240" height="0" fill="#4F46E5"/>
+    <text x="120" y="52" text-anchor="middle" font-size="32">⭐</text>
+    <text x="120" y="98" text-anchor="middle" font-size="36" font-weight="700" fill="#4F46E5">62,600+</text>
+    <text x="120" y="126" text-anchor="middle" font-size="14" fill="#94A3B8">GitHub Stars</text>
+    <text x="120" y="148" text-anchor="middle" font-size="11" fill="#64748B">오픈소스 커뮤니티 신뢰도</text>
+  </g>
+
+  <!-- Stat 2: Lines of Code -->
+  <g transform="translate(330, 100)">
+    <rect x="0" y="0" width="240" height="160" rx="14" fill="#1E293B" stroke="#10B981" stroke-width="2"/>
+    <rect x="0" y="0" width="240" height="6" rx="14" fill="#10B981"/>
+    <text x="120" y="52" text-anchor="middle" font-size="32">📦</text>
+    <text x="120" y="98" text-anchor="middle" font-size="36" font-weight="700" fill="#10B981">600,000</text>
+    <text x="120" y="126" text-anchor="middle" font-size="14" fill="#94A3B8">프로덕션 코드 라인</text>
+    <text x="120" y="148" text-anchor="middle" font-size="11" fill="#64748B">Garry Tan · YC 운영 중 60일</text>
+  </g>
+
+  <!-- Stat 3: Daily LOC -->
+  <g transform="translate(600, 100)">
+    <rect x="0" y="0" width="240" height="160" rx="14" fill="#1E293B" stroke="#F59E0B" stroke-width="2"/>
+    <rect x="0" y="0" width="240" height="6" rx="14" fill="#F59E0B"/>
+    <text x="120" y="52" text-anchor="middle" font-size="32">⚡</text>
+    <text x="120" y="98" text-anchor="middle" font-size="36" font-weight="700" fill="#F59E0B">10K-20K</text>
+    <text x="120" y="126" text-anchor="middle" font-size="14" fill="#94A3B8">LOC / day (파트타임)</text>
+    <text x="120" y="148" text-anchor="middle" font-size="11" fill="#64748B">솔로 빌더 기준 최고 수준</text>
+  </g>
+
+  <!-- Stat 4: Contributions -->
+  <g transform="translate(60, 290)">
+    <rect x="0" y="0" width="240" height="130" rx="14" fill="#1E293B" stroke="#8B5CF6" stroke-width="2"/>
+    <rect x="0" y="0" width="240" height="6" rx="14" fill="#8B5CF6"/>
+    <text x="120" y="46" text-anchor="middle" font-size="28">🔁</text>
+    <text x="120" y="84" text-anchor="middle" font-size="32" font-weight="700" fill="#8B5CF6">1,237</text>
+    <text x="120" y="108" text-anchor="middle" font-size="13" fill="#94A3B8">2026년 기여 횟수</text>
+  </g>
+
+  <!-- Stat 5: Main commits -->
+  <g transform="translate(330, 290)">
+    <rect x="0" y="0" width="240" height="130" rx="14" fill="#1E293B" stroke="#EF4444" stroke-width="2"/>
+    <rect x="0" y="0" width="240" height="6" rx="14" fill="#EF4444"/>
+    <text x="120" y="46" text-anchor="middle" font-size="28">🎯</text>
+    <text x="120" y="84" text-anchor="middle" font-size="32" font-weight="700" fill="#EF4444">181</text>
+    <text x="120" y="108" text-anchor="middle" font-size="13" fill="#94A3B8">main 브랜치 커밋</text>
+  </g>
+
+  <!-- Stat 6: Free Forever -->
+  <g transform="translate(600, 290)">
+    <rect x="0" y="0" width="240" height="130" rx="14" fill="#1E293B" stroke="#10B981" stroke-width="2"/>
+    <rect x="0" y="0" width="240" height="6" rx="14" fill="#10B981"/>
+    <text x="120" y="46" text-anchor="middle" font-size="28">🆓</text>
+    <text x="120" y="78" text-anchor="middle" font-size="22" font-weight="700" fill="#10B981">MIT 라이선스</text>
+    <text x="120" y="102" text-anchor="middle" font-size="13" fill="#94A3B8">프리미엄 없음 · 영원히 무료</text>
+    <text x="120" y="120" text-anchor="middle" font-size="11" fill="#64748B">옵트인 텔레메트리만</text>
+  </g>
+
+  <!-- Bottom quote -->
+  <rect x="60" y="448" width="780" height="70" rx="10" fill="#1E293B" stroke="#4F46E5" stroke-width="1.5"/>
+  <text x="450" y="472" text-anchor="middle" font-size="13" font-weight="700" fill="#E2E8F0">"YC를 풀타임으로 운영하면서 60일 만에 60만 라인 이상의 프로덕션 코드를 작성했다"</text>
+  <text x="450" y="496" text-anchor="middle" font-size="12" fill="#94A3B8">— Garry Tan, Y Combinator 대표</text>
+  <text x="450" y="512" text-anchor="middle" font-size="11" fill="#64748B">gstack 실전 사용 증언</text>
+</svg>

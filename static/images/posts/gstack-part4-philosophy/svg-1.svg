@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 540" width="900" height="540" font-family="'Segoe UI', Arial, sans-serif">
+  <defs>
+    <marker id="arrow-indigo" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#4F46E5"/>
+    </marker>
+    <marker id="arrow-emerald" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#10B981"/>
+    </marker>
+    <marker id="arrow-amber" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#F59E0B"/>
+    </marker>
+    <radialGradient id="centerGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#EEF2FF"/>
+      <stop offset="100%" stop-color="#F8F9FF"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="540" fill="#F8F9FF" rx="12"/>
+
+  <!-- Title -->
+  <text x="450" y="44" text-anchor="middle" font-size="22" font-weight="700" fill="#1E1B4B">gstack의 세 가지 핵심 철학</text>
+  <text x="450" y="68" text-anchor="middle" font-size="13" fill="#6B7280">AI 시대 개발을 재정의하는 철학적 기반</text>
+
+  <!-- Center hub -->
+  <circle cx="450" cy="295" r="68" fill="url(#centerGlow)" stroke="#4F46E5" stroke-width="2.5"/>
+  <text x="450" y="287" text-anchor="middle" font-size="13" font-weight="700" fill="#4F46E5">gstack</text>
+  <text x="450" y="305" text-anchor="middle" font-size="11" fill="#6B7280">ETHOS</text>
+  <text x="450" y="322" text-anchor="middle" font-size="11" fill="#6B7280">철학</text>
+
+  <!-- Connector lines -->
+  <line x1="397" y1="255" x2="276" y2="178" stroke="#4F46E5" stroke-width="1.8" stroke-dasharray="5,3" opacity="0.5"/>
+  <line x1="503" y1="255" x2="624" y2="178" stroke="#10B981" stroke-width="1.8" stroke-dasharray="5,3" opacity="0.5"/>
+  <line x1="450" y1="363" x2="450" y2="432" stroke="#F59E0B" stroke-width="1.8" stroke-dasharray="5,3" opacity="0.5"/>
+
+  <!-- Principle 1: Boil the Lake -->
+  <g transform="translate(100, 95)">
+    <rect x="0" y="0" width="230" height="155" rx="14" fill="white" stroke="#4F46E5" stroke-width="2" filter="drop-shadow(0 4px 12px rgba(79,70,229,0.15))"/>
+    <rect x="0" y="0" width="230" height="42" rx="14" fill="#4F46E5"/>
+    <rect x="0" y="28" width="230" height="14" fill="#4F46E5"/>
+    <text x="115" y="26" text-anchor="middle" font-size="13" font-weight="700" fill="white">Boil the Lake</text>
+    <text x="115" y="62" text-anchor="middle" font-size="22" fill="#4F46E5">🏔️</text>
+    <text x="115" y="88" text-anchor="middle" font-size="12" font-weight="700" fill="#1E1B4B">완결성은 저렴하다</text>
+    <text x="115" y="108" text-anchor="middle" font-size="11" fill="#6B7280">AI 시대에 완전한 구현의</text>
+    <text x="115" y="124" text-anchor="middle" font-size="11" fill="#6B7280">비용은 몇 분에 불과</text>
+    <rect x="16" y="134" width="198" height="14" rx="4" fill="#EEF2FF"/>
+    <text x="115" y="145" text-anchor="middle" font-size="10" font-weight="700" fill="#4F46E5">100% 커버리지 · 모든 엣지 케이스</text>
+  </g>
+
+  <!-- Principle 2: Search Before Building -->
+  <g transform="translate(570, 95)">
+    <rect x="0" y="0" width="230" height="155" rx="14" fill="white" stroke="#10B981" stroke-width="2" filter="drop-shadow(0 4px 12px rgba(16,185,129,0.15))"/>
+    <rect x="0" y="0" width="230" height="42" rx="14" fill="#10B981"/>
+    <rect x="0" y="28" width="230" height="14" fill="#10B981"/>
+    <text x="115" y="26" text-anchor="middle" font-size="12" font-weight="700" fill="white">Search Before Building</text>
+    <text x="115" y="62" text-anchor="middle" font-size="22" fill="#10B981">🔍</text>
+    <text x="115" y="88" text-anchor="middle" font-size="12" font-weight="700" fill="#1E1B4B">3개 지식 레이어</text>
+    <text x="115" y="108" text-anchor="middle" font-size="11" fill="#6B7280">Tried &amp; True → New &amp; Popular</text>
+    <text x="115" y="124" text-anchor="middle" font-size="11" fill="#6B7280">→ First Principles (최고가치)</text>
+    <rect x="16" y="134" width="198" height="14" rx="4" fill="#D1FAE5"/>
+    <text x="115" y="145" text-anchor="middle" font-size="10" font-weight="700" fill="#065F46">유레카 순간 · 재발명 방지</text>
+  </g>
+
+  <!-- Principle 3: User Sovereignty -->
+  <g transform="translate(285, 432)">
+    <rect x="0" y="0" width="330" height="90" rx="14" fill="white" stroke="#F59E0B" stroke-width="2" filter="drop-shadow(0 4px 12px rgba(245,158,11,0.15))"/>
+    <rect x="0" y="0" width="330" height="38" rx="14" fill="#F59E0B"/>
+    <rect x="0" y="24" width="330" height="14" fill="#F59E0B"/>
+    <text x="165" y="25" text-anchor="middle" font-size="13" font-weight="700" fill="white">User Sovereignty — 사용자 주권</text>
+    <text x="165" y="58" text-anchor="middle" font-size="12" font-weight="700" fill="#1E1B4B">AI는 추천하고, 인간이 결정한다</text>
+    <text x="165" y="76" text-anchor="middle" font-size="11" fill="#6B7280">두 모델의 동의 ≠ 명령 · Iron Man suit 철학</text>
+  </g>
+
+  <!-- Knowledge layer badges -->
+  <g transform="translate(112, 395)">
+    <rect x="0" y="0" width="68" height="24" rx="6" fill="#EEF2FF"/>
+    <text x="34" y="16" text-anchor="middle" font-size="10" font-weight="700" fill="#4F46E5">Layer 1</text>
+  </g>
+  <g transform="translate(185, 395)">
+    <rect x="0" y="0" width="68" height="24" rx="6" fill="#D1FAE5"/>
+    <text x="34" y="16" text-anchor="middle" font-size="10" font-weight="700" fill="#065F46">Layer 2</text>
+  </g>
+  <g transform="translate(258, 395)">
+    <rect x="0" y="0" width="68" height="24" rx="6" fill="#FEF3C7"/>
+    <text x="34" y="16" text-anchor="middle" font-size="10" font-weight="700" fill="#92400E">Layer 3</text>
+  </g>
+</svg>

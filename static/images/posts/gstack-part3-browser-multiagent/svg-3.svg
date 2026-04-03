@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" width="900" height="560" font-family="'Segoe UI', Arial, sans-serif">
+  <!-- Background -->
+  <rect width="900" height="560" fill="#F8F9FF" rx="12"/>
+
+  <!-- Title -->
+  <text x="450" y="42" text-anchor="middle" font-size="22" font-weight="700" fill="#1E1B4B">멀티에이전트 병렬 실행 — Conductor 아키텍처</text>
+  <text x="450" y="66" text-anchor="middle" font-size="13" fill="#6B7280">Conductor가 10–15개 전문 에이전트를 동시 조율</text>
+
+  <!-- Conductor (center top) -->
+  <g transform="translate(325, 90)">
+    <rect x="0" y="0" width="250" height="80" rx="14" fill="#4F46E5" stroke="#3730A3" stroke-width="2"/>
+    <text x="125" y="28" text-anchor="middle" font-size="16" font-weight="700" fill="white">CONDUCTOR</text>
+    <text x="125" y="48" text-anchor="middle" font-size="11" fill="#C7D2FE">오케스트레이션 엔진</text>
+    <text x="125" y="65" text-anchor="middle" font-size="11" fill="#A5B4FC">최대 10–15개 에이전트 동시 실행</text>
+  </g>
+
+  <!-- Connector lines from conductor -->
+  <!-- Left agents -->
+  <line x1="370" y1="170" x2="100" y2="240" stroke="#6366F1" stroke-width="1.5" stroke-dasharray="5,3" opacity="0.7"/>
+  <line x1="390" y1="170" x2="220" y2="240" stroke="#6366F1" stroke-width="1.5" stroke-dasharray="5,3" opacity="0.7"/>
+  <line x1="410" y1="170" x2="340" y2="240" stroke="#6366F1" stroke-width="1.5" stroke-dasharray="5,3" opacity="0.7"/>
+  <!-- Center agents -->
+  <line x1="450" y1="170" x2="450" y2="240" stroke="#6366F1" stroke-width="1.5" stroke-dasharray="5,3" opacity="0.7"/>
+  <!-- Right agents -->
+  <line x1="490" y1="170" x2="560" y2="240" stroke="#6366F1" stroke-width="1.5" stroke-dasharray="5,3" opacity="0.7"/>
+  <line x1="510" y1="170" x2="680" y2="240" stroke="#6366F1" stroke-width="1.5" stroke-dasharray="5,3" opacity="0.7"/>
+  <line x1="530" y1="170" x2="800" y2="240" stroke="#6366F1" stroke-width="1.5" stroke-dasharray="5,3" opacity="0.7"/>
+
+  <!-- Agent boxes row 1 -->
+  <!-- Agent 1: CEO -->
+  <g transform="translate(30, 240)">
+    <rect x="0" y="0" width="140" height="80" rx="10" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.5"/>
+    <text x="70" y="22" text-anchor="middle" font-size="11" font-weight="700" fill="#4F46E5">CEO 에이전트</text>
+    <text x="70" y="40" text-anchor="middle" font-size="10" fill="#6B7280">전략 결정</text>
+    <text x="70" y="56" text-anchor="middle" font-size="10" fill="#6B7280">인프라 건너뜀</text>
+    <rect x="10" y="64" width="120" height="10" rx="3" fill="#C7D2FE"/>
+  </g>
+
+  <!-- Agent 2: 백엔드 -->
+  <g transform="translate(185, 240)">
+    <rect x="0" y="0" width="140" height="80" rx="10" fill="#ECFDF5" stroke="#10B981" stroke-width="1.5"/>
+    <text x="70" y="22" text-anchor="middle" font-size="11" font-weight="700" fill="#059669">백엔드 에이전트</text>
+    <text x="70" y="40" text-anchor="middle" font-size="10" fill="#6B7280">API 구현</text>
+    <text x="70" y="56" text-anchor="middle" font-size="10" fill="#6B7280">DB 스키마</text>
+    <rect x="10" y="64" width="120" height="10" rx="3" fill="#A7F3D0"/>
+  </g>
+
+  <!-- Agent 3: 프론트엔드 -->
+  <g transform="translate(340, 240)">
+    <rect x="0" y="0" width="140" height="80" rx="10" fill="#FEF3C7" stroke="#F59E0B" stroke-width="1.5"/>
+    <text x="70" y="22" text-anchor="middle" font-size="11" font-weight="700" fill="#D97706">프론트 에이전트</text>
+    <text x="70" y="40" text-anchor="middle" font-size="10" fill="#6B7280">UI 컴포넌트</text>
+    <text x="70" y="56" text-anchor="middle" font-size="10" fill="#6B7280">디자인 건너뜀</text>
+    <rect x="10" y="64" width="120" height="10" rx="3" fill="#FDE68A"/>
+  </g>
+
+  <!-- Agent 4: 디자인 -->
+  <g transform="translate(495, 240)">
+    <rect x="0" y="0" width="140" height="80" rx="10" fill="#FDF4FF" stroke="#A855F7" stroke-width="1.5"/>
+    <text x="70" y="22" text-anchor="middle" font-size="11" font-weight="700" fill="#9333EA">디자인 에이전트</text>
+    <text x="70" y="40" text-anchor="middle" font-size="10" fill="#6B7280">CSS/스타일링</text>
+    <text x="70" y="56" text-anchor="middle" font-size="10" fill="#6B7280">백엔드 건너뜀</text>
+    <rect x="10" y="64" width="120" height="10" rx="3" fill="#E9D5FF"/>
+  </g>
+
+  <!-- Agent 5: 테스트 -->
+  <g transform="translate(650, 240)">
+    <rect x="0" y="0" width="140" height="80" rx="10" fill="#FFF1F2" stroke="#EF4444" stroke-width="1.5"/>
+    <text x="70" y="22" text-anchor="middle" font-size="11" font-weight="700" fill="#DC2626">테스트 에이전트</text>
+    <text x="70" y="40" text-anchor="middle" font-size="10" fill="#6B7280">QA / 검증</text>
+    <text x="70" y="56" text-anchor="middle" font-size="10" fill="#6B7280">자동 리뷰</text>
+    <rect x="10" y="64" width="120" height="10" rx="3" fill="#FECACA"/>
+  </g>
+
+  <!-- More agents indicator -->
+  <g transform="translate(390, 345)">
+    <text x="60" y="14" text-anchor="middle" font-size="11" fill="#6B7280">... 최대 15개 동시 실행 ...</text>
+  </g>
+
+  <!-- Special features row -->
+  <g transform="translate(30, 390)">
+    <!-- Codex -->
+    <rect x="0" y="0" width="200" height="100" rx="10" fill="white" stroke="#6366F1" stroke-width="1.5"/>
+    <text x="100" y="24" text-anchor="middle" font-size="13" font-weight="700" fill="#4F46E5">/codex</text>
+    <text x="100" y="44" text-anchor="middle" font-size="11" fill="#374151">OpenAI 크로스 모델 리뷰</text>
+    <text x="100" y="62" text-anchor="middle" font-size="10" fill="#6B7280">Claude + Codex 교차 검증</text>
+    <text x="100" y="80" text-anchor="middle" font-size="10" fill="#6B7280">코드 품질 보증</text>
+  </g>
+
+  <g transform="translate(260, 390)">
+    <!-- Sidebar Agent -->
+    <rect x="0" y="0" width="200" height="100" rx="10" fill="white" stroke="#10B981" stroke-width="1.5"/>
+    <text x="100" y="24" text-anchor="middle" font-size="13" font-weight="700" fill="#059669">Sidebar Agent</text>
+    <text x="100" y="44" text-anchor="middle" font-size="11" fill="#374151">Chrome 사이드패널 확장</text>
+    <text x="100" y="62" text-anchor="middle" font-size="10" fill="#6B7280">5분 태스크 제한</text>
+    <text x="100" y="80" text-anchor="middle" font-size="10" fill="#6B7280">실시간 브라우저 모니터링</text>
+  </g>
+
+  <g transform="translate(490, 390)">
+    <!-- Smart Routing -->
+    <rect x="0" y="0" width="200" height="100" rx="10" fill="white" stroke="#F59E0B" stroke-width="1.5"/>
+    <text x="100" y="24" text-anchor="middle" font-size="13" font-weight="700" fill="#D97706">스마트 라우팅</text>
+    <text x="100" y="44" text-anchor="middle" font-size="11" fill="#374151">역할 기반 리뷰 분배</text>
+    <text x="100" y="62" text-anchor="middle" font-size="10" fill="#6B7280">CEO: 인프라 스킵</text>
+    <text x="100" y="80" text-anchor="middle" font-size="10" fill="#6B7280">디자인: 백엔드 스킵</text>
+  </g>
+
+  <g transform="translate(720, 390)">
+    <!-- Ring buffers -->
+    <rect x="0" y="0" width="150" height="100" rx="10" fill="white" stroke="#EF4444" stroke-width="1.5"/>
+    <text x="75" y="24" text-anchor="middle" font-size="12" font-weight="700" fill="#DC2626">로그 버퍼</text>
+    <text x="75" y="44" text-anchor="middle" font-size="10" fill="#374151">링 버퍼 3개</text>
+    <text x="75" y="60" text-anchor="middle" font-size="10" fill="#6B7280">각 50,000 엔트리</text>
+    <text x="75" y="76" text-anchor="middle" font-size="10" fill="#6B7280">O(1) 푸시 성능</text>
+    <text x="75" y="92" text-anchor="middle" font-size="10" fill="#6B7280">1초 비동기 플러시</text>
+  </g>
+
+  <!-- Bottom stat bar -->
+  <g transform="translate(30, 510)">
+    <rect x="0" y="0" width="840" height="30" rx="8" fill="#EEF2FF"/>
+    <text x="140" y="20" text-anchor="middle" font-size="11" font-weight="700" fill="#4F46E5">동시 에이전트: 10–15개</text>
+    <line x1="280" y1="5" x2="280" y2="25" stroke="#C7D2FE" stroke-width="1"/>
+    <text x="420" y="20" text-anchor="middle" font-size="11" font-weight="700" fill="#059669">로그 손실: 최대 1초 (크래시 시)</text>
+    <line x1="560" y1="5" x2="560" y2="25" stroke="#C7D2FE" stroke-width="1"/>
+    <text x="700" y="20" text-anchor="middle" font-size="11" font-weight="700" fill="#D97706">태스크 제한: 5분 (Sidebar)</text>
+  </g>
+</svg>

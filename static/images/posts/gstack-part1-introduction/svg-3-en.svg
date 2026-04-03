@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" width="900" height="520" font-family="'Segoe UI', Arial, sans-serif">
+  <!-- Background -->
+  <rect width="900" height="520" fill="#F8F9FF" rx="12"/>
+
+  <!-- Title -->
+  <text x="450" y="40" text-anchor="middle" font-size="21" font-weight="700" fill="#1E1B4B">Traditional AI Coding vs gstack</text>
+  <text x="450" y="62" text-anchor="middle" font-size="12" fill="#6B7280">From simple code assistant to a full software factory</text>
+
+  <!-- Divider -->
+  <line x1="450" y1="80" x2="450" y2="490" stroke="#E5E7EB" stroke-width="2" stroke-dasharray="6,4"/>
+
+  <!-- Left header -->
+  <rect x="30" y="80" width="400" height="52" rx="8" fill="#EF4444"/>
+  <text x="230" y="108" text-anchor="middle" font-size="16" font-weight="700" fill="white">Traditional AI Coding Tools</text>
+  <text x="230" y="126" text-anchor="middle" font-size="11" fill="#FECACA">GitHub Copilot · ChatGPT · Bare Claude</text>
+
+  <!-- Right header -->
+  <rect x="470" y="80" width="400" height="52" rx="8" fill="#4F46E5"/>
+  <text x="670" y="108" text-anchor="middle" font-size="16" font-weight="700" fill="white">gstack + Claude Code</text>
+  <text x="670" y="126" text-anchor="middle" font-size="11" fill="#C7D2FE">Garry Tan · Y Combinator · 62.6K stars</text>
+
+  <!-- Row 1: Scope -->
+  <rect x="30" y="148" width="400" height="56" rx="6" fill="white" stroke="#FEE2E2" stroke-width="1"/>
+  <text x="50" y="170" font-size="11" font-weight="700" fill="#9CA3AF">SCOPE</text>
+  <text x="50" y="190" font-size="13" fill="#374151">Single file · Single function autocomplete</text>
+  <text x="50" y="206" font-size="11" fill="#EF4444">Context breaks, repeated instructions needed</text>
+
+  <rect x="470" y="148" width="400" height="56" rx="6" fill="white" stroke="#DBEAFE" stroke-width="1"/>
+  <text x="490" y="170" font-size="11" font-weight="700" fill="#9CA3AF">SCOPE</text>
+  <text x="490" y="190" font-size="13" fill="#374151">Entire project · End-to-end development</text>
+  <text x="490" y="206" font-size="11" fill="#10B981">Full lifecycle: Think → Ship managed</text>
+
+  <!-- Row 2: Review -->
+  <rect x="30" y="214" width="400" height="56" rx="6" fill="white" stroke="#FEE2E2" stroke-width="1"/>
+  <text x="50" y="236" font-size="11" font-weight="700" fill="#9CA3AF">CODE REVIEW</text>
+  <text x="50" y="256" font-size="13" fill="#374151">Same model generates &amp; reviews code</text>
+  <text x="50" y="272" font-size="11" fill="#EF4444">Cannot catch own errors, bias exists</text>
+
+  <rect x="470" y="214" width="400" height="56" rx="6" fill="white" stroke="#DBEAFE" stroke-width="1"/>
+  <text x="490" y="236" font-size="11" font-weight="700" fill="#9CA3AF">CODE REVIEW</text>
+  <text x="490" y="256" font-size="13" fill="#374151">Cross-model review (multiple AI validators)</text>
+  <text x="490" y="272" font-size="11" fill="#10B981">Independent models cross-validate quality</text>
+
+  <!-- Row 3: Testing -->
+  <rect x="30" y="280" width="400" height="56" rx="6" fill="white" stroke="#FEE2E2" stroke-width="1"/>
+  <text x="50" y="302" font-size="11" font-weight="700" fill="#9CA3AF">TESTING</text>
+  <text x="50" y="322" font-size="13" fill="#374151">Mock environments only</text>
+  <text x="50" y="338" font-size="11" fill="#EF4444">Real browser behavior unverified</text>
+
+  <rect x="470" y="280" width="400" height="56" rx="6" fill="white" stroke="#DBEAFE" stroke-width="1"/>
+  <text x="490" y="302" font-size="11" font-weight="700" fill="#9CA3AF">TESTING</text>
+  <text x="490" y="322" font-size="13" fill="#374151">Real browser E2E automated testing</text>
+  <text x="490" y="338" font-size="11" fill="#10B981">Playwright-based real-environment validation</text>
+
+  <!-- Row 4: Output -->
+  <rect x="30" y="346" width="400" height="56" rx="6" fill="white" stroke="#FEE2E2" stroke-width="1"/>
+  <text x="50" y="368" font-size="11" font-weight="700" fill="#9CA3AF">PRODUCTIVITY</text>
+  <text x="50" y="388" font-size="13" fill="#374151">Hundreds to thousands of lines/day</text>
+  <text x="50" y="404" font-size="11" fill="#EF4444">Developer must integrate &amp; review manually</text>
+
+  <rect x="470" y="346" width="400" height="56" rx="6" fill="white" stroke="#DBEAFE" stroke-width="1"/>
+  <text x="490" y="368" font-size="11" font-weight="700" fill="#9CA3AF">PRODUCTIVITY</text>
+  <text x="490" y="388" font-size="13" fill="#374151">10,000–20,000 lines/day</text>
+  <text x="490" y="404" font-size="11" fill="#10B981">600K lines in 60 days — proven record</text>
+
+  <!-- VS badge -->
+  <circle cx="450" cy="300" r="22" fill="#1E1B4B"/>
+  <text x="450" y="307" text-anchor="middle" font-size="13" font-weight="800" fill="white">VS</text>
+
+  <!-- Bottom summary -->
+  <rect x="30" y="415" width="840" height="80" rx="10" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.5"/>
+  <text x="450" y="440" text-anchor="middle" font-size="14" font-weight="700" fill="#4F46E5">Bottom line: gstack is not a code assistant — it's a full software factory</text>
+  <text x="230" y="465" text-anchor="middle" font-size="12" fill="#374151">Solo builder, team-level velocity</text>
+  <text x="450" y="465" text-anchor="middle" font-size="20" fill="#4F46E5">→</text>
+  <text x="670" y="465" text-anchor="middle" font-size="12" fill="#374151">Enterprise-grade quality assurance</text>
+  <text x="450" y="486" text-anchor="middle" font-size="11" fill="#6B7280">MIT License · Free forever · 62.6K GitHub Stars</text>
+</svg>

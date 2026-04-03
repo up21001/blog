@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" width="900" height="520" font-family="'Segoe UI', Arial, sans-serif">
+  <defs>
+    <marker id="arr-right" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#8B5CF6"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="520" fill="#F8F9FF" rx="12"/>
+
+  <!-- Title -->
+  <text x="450" y="44" text-anchor="middle" font-size="22" font-weight="700" fill="#1E1B4B">AI 시대 개발자의 역할 진화</text>
+  <text x="450" y="68" text-anchor="middle" font-size="13" fill="#6B7280">코더(Coder) → 오케스트레이터(Orchestrator)로의 패러다임 전환</text>
+
+  <!-- Stage 1: Traditional Coder -->
+  <g transform="translate(50, 105)">
+    <rect x="0" y="0" width="220" height="340" rx="14" fill="white" stroke="#9CA3AF" stroke-width="1.5" filter="drop-shadow(0 2px 8px rgba(0,0,0,0.08))"/>
+    <rect x="0" y="0" width="220" height="44" rx="14" fill="#9CA3AF"/>
+    <rect x="0" y="30" width="220" height="14" fill="#9CA3AF"/>
+    <text x="110" y="27" text-anchor="middle" font-size="13" font-weight="700" fill="white">과거 — 전통적 개발자</text>
+    <text x="110" y="72" text-anchor="middle" font-size="28">👨‍💻</text>
+    <text x="110" y="100" text-anchor="middle" font-size="13" font-weight="700" fill="#374151">직접 코딩</text>
+    <line x1="20" y1="112" x2="200" y2="112" stroke="#E5E7EB" stroke-width="1"/>
+    <text x="18" y="132" font-size="11" fill="#6B7280">• 한 번에 한 파일</text>
+    <text x="18" y="152" font-size="11" fill="#6B7280">• 수백 라인/일</text>
+    <text x="18" y="172" font-size="11" fill="#6B7280">• 기억에 의존한 패턴</text>
+    <text x="18" y="192" font-size="11" fill="#6B7280">• 단일 언어/프레임워크</text>
+    <text x="18" y="212" font-size="11" fill="#6B7280">• 디버깅에 시간 대부분</text>
+    <line x1="20" y1="228" x2="200" y2="228" stroke="#E5E7EB" stroke-width="1"/>
+    <rect x="16" y="238" width="188" height="30" rx="8" fill="#F3F4F6"/>
+    <text x="110" y="257" text-anchor="middle" font-size="12" font-weight="700" fill="#6B7280">~수백 LOC / day</text>
+    <rect x="16" y="278" width="188" height="50" rx="8" fill="#FEF2F2"/>
+    <text x="110" y="296" text-anchor="middle" font-size="11" fill="#DC2626">병목: 인간의 타이핑 속도</text>
+    <text x="110" y="314" text-anchor="middle" font-size="11" fill="#DC2626">컨텍스트 스위칭 비용</text>
+  </g>
+
+  <!-- Arrow 1 -->
+  <g transform="translate(276, 260)">
+    <line x1="0" y1="0" x2="58" y2="0" stroke="#8B5CF6" stroke-width="2.5" marker-end="url(#arr-right)"/>
+    <text x="29" y="-10" text-anchor="middle" font-size="10" fill="#8B5CF6" font-weight="700">AI 등장</text>
+  </g>
+
+  <!-- Stage 2: AI-Assisted -->
+  <g transform="translate(340, 105)">
+    <rect x="0" y="0" width="220" height="340" rx="14" fill="white" stroke="#8B5CF6" stroke-width="2" filter="drop-shadow(0 4px 12px rgba(139,92,246,0.15))"/>
+    <rect x="0" y="0" width="220" height="44" rx="14" fill="#8B5CF6"/>
+    <rect x="0" y="30" width="220" height="14" fill="#8B5CF6"/>
+    <text x="110" y="27" text-anchor="middle" font-size="13" font-weight="700" fill="white">현재 — AI 보조 개발자</text>
+    <text x="110" y="72" text-anchor="middle" font-size="28">🤝</text>
+    <text x="110" y="100" text-anchor="middle" font-size="13" font-weight="700" fill="#374151">AI와 협업</text>
+    <line x1="20" y1="112" x2="200" y2="112" stroke="#E5E7EB" stroke-width="1"/>
+    <text x="18" y="132" font-size="11" fill="#6B7280">• Copilot, Claude 활용</text>
+    <text x="18" y="152" font-size="11" fill="#6B7280">• 수천 라인/일</text>
+    <text x="18" y="172" font-size="11" fill="#6B7280">• AI 제안 → 인간 검토</text>
+    <text x="18" y="192" font-size="11" fill="#6B7280">• 다중 도구 오케스트레이션</text>
+    <text x="18" y="212" font-size="11" fill="#6B7280">• 프롬프트 엔지니어링</text>
+    <line x1="20" y1="228" x2="200" y2="228" stroke="#E5E7EB" stroke-width="1"/>
+    <rect x="16" y="238" width="188" height="30" rx="8" fill="#EDE9FE"/>
+    <text x="110" y="257" text-anchor="middle" font-size="12" font-weight="700" fill="#7C3AED">~수천 LOC / day</text>
+    <rect x="16" y="278" width="188" height="50" rx="8" fill="#F5F3FF"/>
+    <text x="110" y="296" text-anchor="middle" font-size="11" fill="#7C3AED">병목: 컨텍스트 관리</text>
+    <text x="110" y="314" text-anchor="middle" font-size="11" fill="#7C3AED">에이전트 조율 능력</text>
+  </g>
+
+  <!-- Arrow 2 -->
+  <g transform="translate(566, 260)">
+    <line x1="0" y1="0" x2="58" y2="0" stroke="#10B981" stroke-width="2.5" marker-end="url(#arr-right)"/>
+    <text x="29" y="-10" text-anchor="middle" font-size="10" fill="#10B981" font-weight="700">gstack</text>
+  </g>
+
+  <!-- Stage 3: Orchestrator -->
+  <g transform="translate(630, 105)">
+    <rect x="0" y="0" width="220" height="340" rx="14" fill="white" stroke="#10B981" stroke-width="2.5" filter="drop-shadow(0 4px 16px rgba(16,185,129,0.2))"/>
+    <rect x="0" y="0" width="220" height="44" rx="14" fill="#10B981"/>
+    <rect x="0" y="30" width="220" height="14" fill="#10B981"/>
+    <text x="110" y="27" text-anchor="middle" font-size="13" font-weight="700" fill="white">미래 — 솔로 빌더</text>
+    <text x="110" y="72" text-anchor="middle" font-size="28">🚀</text>
+    <text x="110" y="100" text-anchor="middle" font-size="13" font-weight="700" fill="#374151">오케스트레이터</text>
+    <line x1="20" y1="112" x2="200" y2="112" stroke="#E5E7EB" stroke-width="1"/>
+    <text x="18" y="132" font-size="11" fill="#6B7280">• 10-15개 에이전트 병렬</text>
+    <text x="18" y="152" font-size="11" fill="#6B7280">• 10K-20K LOC / day</text>
+    <text x="18" y="172" font-size="11" fill="#6B7280">• 아키텍처 결정에 집중</text>
+    <text x="18" y="192" font-size="11" fill="#6B7280">• gstack으로 전체 자동화</text>
+    <text x="18" y="212" font-size="11" fill="#6B7280">• 검증과 방향 설정</text>
+    <line x1="20" y1="228" x2="200" y2="228" stroke="#E5E7EB" stroke-width="1"/>
+    <rect x="16" y="238" width="188" height="30" rx="8" fill="#D1FAE5"/>
+    <text x="110" y="257" text-anchor="middle" font-size="12" font-weight="700" fill="#065F46">10,000-20,000 LOC / day</text>
+    <rect x="16" y="278" width="188" height="50" rx="8" fill="#ECFDF5"/>
+    <text x="110" y="296" text-anchor="middle" font-size="11" fill="#065F46">Garry Tan 실증:</text>
+    <text x="110" y="314" text-anchor="middle" font-size="11" fill="#065F46">60일 × 60만 라인</text>
+  </g>
+
+  <!-- Bottom note -->
+  <rect x="50" y="462" width="800" height="40" rx="8" fill="#EEF2FF"/>
+  <text x="450" y="477" text-anchor="middle" font-size="11" fill="#4F46E5" font-weight="700">핵심 통찰: 개발자의 역할은 "코드를 작성하는 것"에서 "AI가 올바른 코드를 작성하도록 안내하는 것"으로 전환된다</text>
+  <text x="450" y="494" text-anchor="middle" font-size="11" fill="#6B7280">User Sovereignty 원칙 — AI는 추천하고, 인간이 최종 결정</text>
+</svg>

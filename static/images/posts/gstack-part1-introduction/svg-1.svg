@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" width="900" height="520" font-family="'Segoe UI', Arial, sans-serif">
+  <!-- Background -->
+  <rect width="900" height="520" fill="#F8F9FF" rx="12"/>
+
+  <!-- Title -->
+  <text x="450" y="42" text-anchor="middle" font-size="22" font-weight="700" fill="#1E1B4B">gstack 스프린트 프레임워크</text>
+  <text x="450" y="66" text-anchor="middle" font-size="13" fill="#6B7280">Claude Code를 가상 엔지니어링 팀으로 변환하는 7단계 워크플로우</text>
+
+  <!-- Connector line -->
+  <line x1="90" y1="260" x2="810" y2="260" stroke="#E0E7FF" stroke-width="3" stroke-dasharray="6,4"/>
+
+  <!-- Step 1: Think -->
+  <g transform="translate(60, 160)">
+    <circle cx="45" cy="100" r="42" fill="#4F46E5" opacity="0.12"/>
+    <circle cx="45" cy="100" r="34" fill="#4F46E5"/>
+    <text x="45" y="94" text-anchor="middle" font-size="18" fill="white">💡</text>
+    <text x="45" y="112" text-anchor="middle" font-size="9" font-weight="700" fill="white">THINK</text>
+    <text x="45" y="154" text-anchor="middle" font-size="12" font-weight="700" fill="#4F46E5">생각</text>
+    <text x="45" y="170" text-anchor="middle" font-size="10" fill="#6B7280">요구사항</text>
+    <text x="45" y="184" text-anchor="middle" font-size="10" fill="#6B7280">분석</text>
+  </g>
+
+  <!-- Arrow 1→2 -->
+  <polygon points="175,253 185,260 175,267" fill="#4F46E5" opacity="0.5"/>
+
+  <!-- Step 2: Plan -->
+  <g transform="translate(185, 160)">
+    <circle cx="45" cy="100" r="42" fill="#7C3AED" opacity="0.12"/>
+    <circle cx="45" cy="100" r="34" fill="#7C3AED"/>
+    <text x="45" y="94" text-anchor="middle" font-size="18" fill="white">📋</text>
+    <text x="45" y="112" text-anchor="middle" font-size="9" font-weight="700" fill="white">PLAN</text>
+    <text x="45" y="154" text-anchor="middle" font-size="12" font-weight="700" fill="#7C3AED">계획</text>
+    <text x="45" y="170" text-anchor="middle" font-size="10" fill="#6B7280">태스크</text>
+    <text x="45" y="184" text-anchor="middle" font-size="10" fill="#6B7280">분해</text>
+  </g>
+
+  <!-- Arrow 2→3 -->
+  <polygon points="300,253 310,260 300,267" fill="#4F46E5" opacity="0.5"/>
+
+  <!-- Step 3: Build -->
+  <g transform="translate(310, 160)">
+    <circle cx="45" cy="100" r="42" fill="#10B981" opacity="0.12"/>
+    <circle cx="45" cy="100" r="34" fill="#10B981"/>
+    <text x="45" y="94" text-anchor="middle" font-size="18" fill="white">⚙️</text>
+    <text x="45" y="112" text-anchor="middle" font-size="9" font-weight="700" fill="white">BUILD</text>
+    <text x="45" y="154" text-anchor="middle" font-size="12" font-weight="700" fill="#10B981">빌드</text>
+    <text x="45" y="170" text-anchor="middle" font-size="10" fill="#6B7280">코드</text>
+    <text x="45" y="184" text-anchor="middle" font-size="10" fill="#6B7280">생성</text>
+  </g>
+
+  <!-- Arrow 3→4 -->
+  <polygon points="425,253 435,260 425,267" fill="#4F46E5" opacity="0.5"/>
+
+  <!-- Step 4: Review -->
+  <g transform="translate(435, 160)">
+    <circle cx="45" cy="100" r="42" fill="#F59E0B" opacity="0.12"/>
+    <circle cx="45" cy="100" r="34" fill="#F59E0B"/>
+    <text x="45" y="94" text-anchor="middle" font-size="18" fill="white">🔍</text>
+    <text x="45" y="112" text-anchor="middle" font-size="9" font-weight="700" fill="white">REVIEW</text>
+    <text x="45" y="154" text-anchor="middle" font-size="12" font-weight="700" fill="#F59E0B">리뷰</text>
+    <text x="45" y="170" text-anchor="middle" font-size="10" fill="#6B7280">크로스 모델</text>
+    <text x="45" y="184" text-anchor="middle" font-size="10" fill="#6B7280">코드 검토</text>
+  </g>
+
+  <!-- Arrow 4→5 -->
+  <polygon points="550,253 560,260 550,267" fill="#4F46E5" opacity="0.5"/>
+
+  <!-- Step 5: Test -->
+  <g transform="translate(560, 160)">
+    <circle cx="45" cy="100" r="42" fill="#EF4444" opacity="0.12"/>
+    <circle cx="45" cy="100" r="34" fill="#EF4444"/>
+    <text x="45" y="94" text-anchor="middle" font-size="18" fill="white">🧪</text>
+    <text x="45" y="112" text-anchor="middle" font-size="9" font-weight="700" fill="white">TEST</text>
+    <text x="45" y="154" text-anchor="middle" font-size="12" font-weight="700" fill="#EF4444">테스트</text>
+    <text x="45" y="170" text-anchor="middle" font-size="10" fill="#6B7280">실제 브라우저</text>
+    <text x="45" y="184" text-anchor="middle" font-size="10" fill="#6B7280">E2E 검증</text>
+  </g>
+
+  <!-- Arrow 5→6 -->
+  <polygon points="675,253 685,260 675,267" fill="#4F46E5" opacity="0.5"/>
+
+  <!-- Step 6: Ship -->
+  <g transform="translate(685, 160)">
+    <circle cx="45" cy="100" r="42" fill="#0EA5E9" opacity="0.12"/>
+    <circle cx="45" cy="100" r="34" fill="#0EA5E9"/>
+    <text x="45" y="94" text-anchor="middle" font-size="18" fill="white">🚀</text>
+    <text x="45" y="112" text-anchor="middle" font-size="9" font-weight="700" fill="white">SHIP</text>
+    <text x="45" y="154" text-anchor="middle" font-size="12" font-weight="700" fill="#0EA5E9">배포</text>
+    <text x="45" y="170" text-anchor="middle" font-size="10" fill="#6B7280">자동</text>
+    <text x="45" y="184" text-anchor="middle" font-size="10" fill="#6B7280">릴리스</text>
+  </g>
+
+  <!-- Reflect arc back -->
+  <path d="M 730 370 Q 450 450 100 370" stroke="#6366F1" stroke-width="2" fill="none" stroke-dasharray="5,4"/>
+  <polygon points="104,362 98,372 112,374" fill="#6366F1"/>
+  <rect x="340" y="430" width="220" height="34" rx="17" fill="#EEF2FF" stroke="#6366F1" stroke-width="1.5"/>
+  <text x="450" y="451" text-anchor="middle" font-size="12" font-weight="700" fill="#4F46E5">🔄 REFLECT — 회고 &amp; 개선</text>
+
+  <!-- Bottom stats -->
+  <rect x="60" y="490" width="780" height="22" rx="6" fill="#EEF2FF"/>
+  <text x="450" y="505" text-anchor="middle" font-size="11" fill="#4F46E5" font-weight="600">23개 전문 스킬 · 하루 1만~2만 라인 출력 · MIT 라이선스 오픈소스</text>
+</svg>

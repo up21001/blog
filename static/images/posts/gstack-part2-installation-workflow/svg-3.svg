@@ -1,0 +1,159 @@
+<svg viewBox="0 0 900 580" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', Arial, sans-serif">
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#6B7280"/>
+    </marker>
+  </defs>
+
+  <rect width="900" height="580" fill="#F8FAFC" rx="12"/>
+
+  <text x="450" y="40" text-anchor="middle" font-size="20" font-weight="700" fill="#1E1B4B">스킬별 입력 / 출력 플로우</text>
+  <text x="450" y="62" text-anchor="middle" font-size="12" fill="#6B7280">각 gstack 스킬의 입력값과 산출물 한눈에 보기</text>
+
+  <!-- Column headers -->
+  <text x="100" y="90" text-anchor="middle" font-size="12" font-weight="700" fill="#6B7280">스킬</text>
+  <text x="340" y="90" text-anchor="middle" font-size="12" font-weight="700" fill="#6B7280">입력 (Input)</text>
+  <text x="570" y="90" text-anchor="middle" font-size="12" font-weight="700" fill="#6B7280">처리 과정</text>
+  <text x="790" y="90" text-anchor="middle" font-size="12" font-weight="700" fill="#6B7280">출력 (Output)</text>
+
+  <!-- Divider line -->
+  <line x1="20" y1="97" x2="880" y2="97" stroke="#E5E7EB" stroke-width="1"/>
+
+  <!-- ROW 1: office-hours -->
+  <rect x="20" y="108" width="160" height="64" rx="8" fill="#4F46E5" opacity="0.12" stroke="#4F46E5" stroke-width="1.5"/>
+  <text x="100" y="133" text-anchor="middle" font-size="12" font-weight="700" fill="#4F46E5">/office-hours</text>
+  <text x="100" y="150" text-anchor="middle" font-size="10" fill="#374151">제품 프레이밍 세션</text>
+  <text x="100" y="164" text-anchor="middle" font-size="10" fill="#6B7280">기획 단계</text>
+
+  <path d="M180 140 L210 140" stroke="#6B7280" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <rect x="213" y="108" width="240" height="64" rx="8" fill="white" stroke="#E5E7EB" stroke-width="1.5"/>
+  <text x="333" y="130" text-anchor="middle" font-size="10" fill="#374151">· 제품 아이디어 설명 (자유 형식)</text>
+  <text x="333" y="147" text-anchor="middle" font-size="10" fill="#374151">· 현재 고민 중인 기능 목록</text>
+  <text x="333" y="163" text-anchor="middle" font-size="10" fill="#374151">· 타겟 사용자 및 문제 정의</text>
+
+  <path d="M453 140 L483 140" stroke="#6B7280" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <rect x="486" y="108" width="160" height="64" rx="8" fill="#EDE9FE" stroke="#7C3AED" stroke-width="1"/>
+  <text x="566" y="130" text-anchor="middle" font-size="10" fill="#4F46E5">강제 질문 생성</text>
+  <text x="566" y="147" text-anchor="middle" font-size="10" fill="#4F46E5">범위 검증</text>
+  <text x="566" y="163" text-anchor="middle" font-size="10" fill="#4F46E5">우선순위 정렬</text>
+
+  <path d="M646 140 L676 140" stroke="#6B7280" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <rect x="679" y="108" width="200" height="64" rx="8" fill="white" stroke="#E5E7EB" stroke-width="1.5"/>
+  <text x="779" y="130" text-anchor="middle" font-size="10" fill="#374151">· 검증된 제품 비전 문서</text>
+  <text x="779" y="147" text-anchor="middle" font-size="10" fill="#374151">· 핵심 기능 우선순위 목록</text>
+  <text x="779" y="163" text-anchor="middle" font-size="10" fill="#374151">· plan 단계 진입 준비 완료</text>
+
+  <!-- ROW 2: plan -->
+  <rect x="20" y="188" width="160" height="64" rx="8" fill="#7C3AED" opacity="0.12" stroke="#7C3AED" stroke-width="1.5"/>
+  <text x="100" y="208" text-anchor="middle" font-size="11" font-weight="700" fill="#7C3AED">/plan-ceo-review</text>
+  <text x="100" y="225" text-anchor="middle" font-size="10" fill="#374151">+</text>
+  <text x="100" y="241" text-anchor="middle" font-size="11" font-weight="700" fill="#059669">/plan-eng-review</text>
+
+  <path d="M180 220 L210 220" stroke="#6B7280" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <rect x="213" y="188" width="240" height="64" rx="8" fill="white" stroke="#E5E7EB" stroke-width="1.5"/>
+  <text x="333" y="210" text-anchor="middle" font-size="10" fill="#374151">· office-hours 결과물</text>
+  <text x="333" y="227" text-anchor="middle" font-size="10" fill="#374151">· 기존 코드베이스 컨텍스트</text>
+  <text x="333" y="243" text-anchor="middle" font-size="10" fill="#374151">· 기술 스택 및 제약 조건</text>
+
+  <path d="M453 220 L483 220" stroke="#6B7280" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <rect x="486" y="188" width="160" height="64" rx="8" fill="#D1FAE5" stroke="#10B981" stroke-width="1"/>
+  <text x="566" y="210" text-anchor="middle" font-size="10" fill="#065F46">범위 축소 검토</text>
+  <text x="566" y="227" text-anchor="middle" font-size="10" fill="#065F46">아키텍처 패턴 결정</text>
+  <text x="566" y="243" text-anchor="middle" font-size="10" fill="#065F46">TDD 전략 수립</text>
+
+  <path d="M646 220 L676 220" stroke="#6B7280" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <rect x="679" y="188" width="200" height="64" rx="8" fill="white" stroke="#E5E7EB" stroke-width="1.5"/>
+  <text x="779" y="210" text-anchor="middle" font-size="10" fill="#374151">· 상세 구현 계획서 (plan.md)</text>
+  <text x="779" y="227" text-anchor="middle" font-size="10" fill="#374151">· 테스트 케이스 명세서</text>
+  <text x="779" y="243" text-anchor="middle" font-size="10" fill="#374151">· 파일 구조 및 의존성 맵</text>
+
+  <!-- ROW 3: review -->
+  <rect x="20" y="268" width="160" height="64" rx="8" fill="#F59E0B" opacity="0.12" stroke="#F59E0B" stroke-width="1.5"/>
+  <text x="100" y="293" text-anchor="middle" font-size="12" font-weight="700" fill="#92400E">/review</text>
+  <text x="100" y="311" text-anchor="middle" font-size="10" fill="#374151">코드 리뷰</text>
+  <text x="100" y="325" text-anchor="middle" font-size="10" fill="#6B7280">개발 후 단계</text>
+
+  <path d="M180 300 L210 300" stroke="#6B7280" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <rect x="213" y="268" width="240" height="64" rx="8" fill="white" stroke="#E5E7EB" stroke-width="1.5"/>
+  <text x="333" y="290" text-anchor="middle" font-size="10" fill="#374151">· 생성된 소스 코드</text>
+  <text x="333" y="307" text-anchor="middle" font-size="10" fill="#374151">· 테스트 파일</text>
+  <text x="333" y="323" text-anchor="middle" font-size="10" fill="#374151">· plan.md (원본 명세)</text>
+
+  <path d="M453 300 L483 300" stroke="#6B7280" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <rect x="486" y="268" width="160" height="64" rx="8" fill="#FEF3C7" stroke="#F59E0B" stroke-width="1"/>
+  <text x="566" y="290" text-anchor="middle" font-size="10" fill="#92400E">버그 탐지</text>
+  <text x="566" y="307" text-anchor="middle" font-size="10" fill="#92400E">패턴 검증</text>
+  <text x="566" y="323" text-anchor="middle" font-size="10" fill="#92400E">자동 수정 적용</text>
+
+  <path d="M646 300 L676 300" stroke="#6B7280" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <rect x="679" y="268" width="200" height="64" rx="8" fill="white" stroke="#E5E7EB" stroke-width="1.5"/>
+  <text x="779" y="290" text-anchor="middle" font-size="10" fill="#374151">· 리뷰 코멘트 목록</text>
+  <text x="779" y="307" text-anchor="middle" font-size="10" fill="#374151">· 자동 수정된 코드 diff</text>
+  <text x="779" y="323" text-anchor="middle" font-size="10" fill="#374151">· 보안/성능 이슈 리포트</text>
+
+  <!-- ROW 4: qa -->
+  <rect x="20" y="348" width="160" height="64" rx="8" fill="#EF4444" opacity="0.1" stroke="#EF4444" stroke-width="1.5"/>
+  <text x="100" y="373" text-anchor="middle" font-size="12" font-weight="700" fill="#B91C1C">/qa [url]</text>
+  <text x="100" y="391" text-anchor="middle" font-size="10" fill="#374151">브라우저 테스트</text>
+  <text x="100" y="405" text-anchor="middle" font-size="10" fill="#6B7280">검증 단계</text>
+
+  <path d="M180 380 L210 380" stroke="#6B7280" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <rect x="213" y="348" width="240" height="64" rx="8" fill="white" stroke="#E5E7EB" stroke-width="1.5"/>
+  <text x="333" y="370" text-anchor="middle" font-size="10" fill="#374151">· 스테이징 URL</text>
+  <text x="333" y="387" text-anchor="middle" font-size="10" fill="#374151">· 테스트 시나리오 (자연어)</text>
+  <text x="333" y="403" text-anchor="middle" font-size="10" fill="#374151">· 사용자 플로우 기술서</text>
+
+  <path d="M453 380 L483 380" stroke="#6B7280" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <rect x="486" y="348" width="160" height="64" rx="8" fill="#FEE2E2" stroke="#EF4444" stroke-width="1"/>
+  <text x="566" y="370" text-anchor="middle" font-size="10" fill="#B91C1C">Chromium 실행</text>
+  <text x="566" y="387" text-anchor="middle" font-size="10" fill="#B91C1C">클릭/입력/탐색</text>
+  <text x="566" y="403" text-anchor="middle" font-size="10" fill="#B91C1C">스크린샷 캡처</text>
+
+  <path d="M646 380 L676 380" stroke="#6B7280" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <rect x="679" y="348" width="200" height="64" rx="8" fill="white" stroke="#E5E7EB" stroke-width="1.5"/>
+  <text x="779" y="370" text-anchor="middle" font-size="10" fill="#374151">· 통과/실패 테스트 결과</text>
+  <text x="779" y="387" text-anchor="middle" font-size="10" fill="#374151">· UI 버그 스크린샷</text>
+  <text x="779" y="403" text-anchor="middle" font-size="10" fill="#374151">· 수정 필요 항목 목록</text>
+
+  <!-- ROW 5: ship + land -->
+  <rect x="20" y="428" width="160" height="64" rx="8" fill="#4F46E5" opacity="0.12" stroke="#4F46E5" stroke-width="1.5"/>
+  <text x="100" y="450" text-anchor="middle" font-size="11" font-weight="700" fill="#4338CA">/ship</text>
+  <text x="100" y="466" text-anchor="middle" font-size="10" fill="#374151">+</text>
+  <text x="100" y="481" text-anchor="middle" font-size="11" font-weight="700" fill="#991B1B">/land-and-deploy</text>
+
+  <path d="M180 460 L210 460" stroke="#6B7280" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <rect x="213" y="428" width="240" height="64" rx="8" fill="white" stroke="#E5E7EB" stroke-width="1.5"/>
+  <text x="333" y="450" text-anchor="middle" font-size="10" fill="#374151">· QA 통과된 코드베이스</text>
+  <text x="333" y="467" text-anchor="middle" font-size="10" fill="#374151">· 커밋 히스토리</text>
+  <text x="333" y="483" text-anchor="middle" font-size="10" fill="#374151">· 배포 타겟 환경 정보</text>
+
+  <path d="M453 460 L483 460" stroke="#6B7280" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <rect x="486" y="428" width="160" height="64" rx="8" fill="#EDE9FE" stroke="#4F46E5" stroke-width="1"/>
+  <text x="566" y="450" text-anchor="middle" font-size="10" fill="#4338CA">테스트 동기화</text>
+  <text x="566" y="467" text-anchor="middle" font-size="10" fill="#4338CA">PR 자동 생성</text>
+  <text x="566" y="483" text-anchor="middle" font-size="10" fill="#4338CA">배포 + 헬스체크</text>
+
+  <path d="M646 460 L676 460" stroke="#6B7280" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <rect x="679" y="428" width="200" height="64" rx="8" fill="white" stroke="#E5E7EB" stroke-width="1.5"/>
+  <text x="779" y="450" text-anchor="middle" font-size="10" fill="#374151">· 머지된 PR URL</text>
+  <text x="779" y="467" text-anchor="middle" font-size="10" fill="#374151">· 커버리지 감사 리포트</text>
+  <text x="779" y="483" text-anchor="middle" font-size="10" fill="#374151">· 프로덕션 헬스 대시보드</text>
+
+  <!-- Bottom note -->
+  <text x="450" y="520" text-anchor="middle" font-size="11" fill="#6B7280">각 스킬은 이전 단계 출력을 입력으로 받아 파이프라인을 자동 구성합니다</text>
+</svg>

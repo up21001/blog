@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 540" width="900" height="540" font-family="'Segoe UI', Arial, sans-serif">
+  <!-- Background -->
+  <rect width="900" height="540" fill="#F8F9FF" rx="12"/>
+
+  <!-- Title -->
+  <text x="450" y="40" text-anchor="middle" font-size="21" font-weight="700" fill="#1E1B4B">gstack 23 Specialized Skill Categories</text>
+  <text x="450" y="62" text-anchor="middle" font-size="12" fill="#6B7280">6 categories, 23 slash commands powering Claude Code</text>
+
+  <!-- Category 1: Planning -->
+  <rect x="30" y="85" width="260" height="140" rx="10" fill="#4F46E5"/>
+  <text x="160" y="112" text-anchor="middle" font-size="14" font-weight="700" fill="white">📐 Planning</text>
+  <text x="160" y="132" text-anchor="middle" font-size="11" fill="#C7D2FE">/think · /plan · /architect</text>
+  <text x="160" y="150" text-anchor="middle" font-size="11" fill="#C7D2FE">/roadmap · /breakdown</text>
+  <rect x="50" y="165" width="220" height="28" rx="6" fill="white" fill-opacity="0.15"/>
+  <text x="160" y="184" text-anchor="middle" font-size="10" fill="white">Requirements · Architecture · Roadmap</text>
+  <text x="160" y="218" text-anchor="middle" font-size="20" font-weight="800" fill="white" opacity="0.3">5</text>
+
+  <!-- Category 2: Design -->
+  <rect x="310" y="85" width="200" height="140" rx="10" fill="#7C3AED"/>
+  <text x="410" y="112" text-anchor="middle" font-size="14" font-weight="700" fill="white">🎨 Design</text>
+  <text x="410" y="132" text-anchor="middle" font-size="11" fill="#DDD6FE">/design · /wireframe</text>
+  <text x="410" y="150" text-anchor="middle" font-size="11" fill="#DDD6FE">/prototype · /style</text>
+  <rect x="328" y="165" width="164" height="28" rx="6" fill="white" fill-opacity="0.15"/>
+  <text x="410" y="184" text-anchor="middle" font-size="10" fill="white">UI/UX · Prototyping</text>
+  <text x="410" y="218" text-anchor="middle" font-size="20" font-weight="800" fill="white" opacity="0.3">4</text>
+
+  <!-- Category 3: Development -->
+  <rect x="530" y="85" width="340" height="140" rx="10" fill="#10B981"/>
+  <text x="700" y="112" text-anchor="middle" font-size="14" font-weight="700" fill="white">⚙️ Development</text>
+  <text x="700" y="132" text-anchor="middle" font-size="11" fill="#A7F3D0">/build · /implement · /refactor</text>
+  <text x="700" y="150" text-anchor="middle" font-size="11" fill="#A7F3D0">/debug · /optimize · /document</text>
+  <rect x="550" y="165" width="300" height="28" rx="6" fill="white" fill-opacity="0.15"/>
+  <text x="700" y="184" text-anchor="middle" font-size="10" fill="white">Code Gen · Refactor · Debug · Optimize</text>
+  <text x="700" y="218" text-anchor="middle" font-size="20" font-weight="800" fill="white" opacity="0.3">6</text>
+
+  <!-- Category 4: Testing -->
+  <rect x="30" y="245" width="240" height="130" rx="10" fill="#EF4444"/>
+  <text x="150" y="272" text-anchor="middle" font-size="14" font-weight="700" fill="white">🧪 Testing</text>
+  <text x="150" y="292" text-anchor="middle" font-size="11" fill="#FECACA">/test · /e2e · /coverage</text>
+  <text x="150" y="310" text-anchor="middle" font-size="11" fill="#FECACA">/benchmark</text>
+  <rect x="50" y="322" width="200" height="28" rx="6" fill="white" fill-opacity="0.15"/>
+  <text x="150" y="341" text-anchor="middle" font-size="10" fill="white">Unit · Integration · E2E · Perf</text>
+  <text x="150" y="368" text-anchor="middle" font-size="20" font-weight="800" fill="white" opacity="0.3">4</text>
+
+  <!-- Category 5: Release -->
+  <rect x="290" y="245" width="260" height="130" rx="10" fill="#F59E0B"/>
+  <text x="420" y="272" text-anchor="middle" font-size="14" font-weight="700" fill="white">🚀 Release</text>
+  <text x="420" y="292" text-anchor="middle" font-size="11" fill="#FEF3C7">/ship · /deploy · /changelog</text>
+  <text x="420" y="310" text-anchor="middle" font-size="11" fill="#FEF3C7">/tag · /rollback</text>
+  <rect x="308" y="322" width="224" height="28" rx="6" fill="white" fill-opacity="0.15"/>
+  <text x="420" y="341" text-anchor="middle" font-size="10" fill="white">Deploy Automation · Release Notes</text>
+  <text x="420" y="368" text-anchor="middle" font-size="20" font-weight="800" fill="white" opacity="0.3">5</text>
+
+  <!-- Category 6: Utilities -->
+  <rect x="570" y="245" width="300" height="130" rx="10" fill="#0EA5E9"/>
+  <text x="720" y="272" text-anchor="middle" font-size="14" font-weight="700" fill="white">🔧 Utilities</text>
+  <text x="720" y="292" text-anchor="middle" font-size="11" fill="#BAE6FD">/search · /summarize · /review</text>
+  <text x="720" y="310" text-anchor="middle" font-size="11" fill="#BAE6FD">/explain · /ask</text>
+  <rect x="588" y="322" width="264" height="28" rx="6" fill="white" fill-opacity="0.15"/>
+  <text x="720" y="341" text-anchor="middle" font-size="10" fill="white">Search · Summarize · Q&amp;A · Explain</text>
+  <text x="720" y="368" text-anchor="middle" font-size="20" font-weight="800" fill="white" opacity="0.3">4</text>
+
+  <!-- Smart Routing Banner -->
+  <rect x="30" y="400" width="840" height="58" rx="10" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.5"/>
+  <text x="450" y="424" text-anchor="middle" font-size="13" font-weight="700" fill="#4F46E5">Smart Routing — Auto-selects optimal model based on task complexity</text>
+  <text x="180" y="448" text-anchor="middle" font-size="11" fill="#6B7280">Haiku (fast lookups)</text>
+  <text x="450" y="448" text-anchor="middle" font-size="11" fill="#6B7280">Sonnet (standard tasks)</text>
+  <text x="720" y="448" text-anchor="middle" font-size="11" fill="#6B7280">Opus (architecture · analysis)</text>
+
+  <!-- Total count -->
+  <rect x="30" y="475" width="840" height="50" rx="10" fill="#1E1B4B"/>
+  <text x="450" y="505" text-anchor="middle" font-size="15" font-weight="700" fill="white">23 Specialized Agent Skills · Built-in Sprint Workflow</text>
+</svg>

@@ -1,0 +1,138 @@
+<svg viewBox="0 0 900 560" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', Arial, sans-serif">
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#6B7280"/>
+    </marker>
+    <marker id="arr-green" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#10B981"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="560" fill="#F8FAFC" rx="12"/>
+
+  <!-- Title -->
+  <text x="450" y="40" text-anchor="middle" font-size="20" font-weight="700" fill="#1E1B4B">핵심 스프린트 워크플로우</text>
+  <text x="450" y="62" text-anchor="middle" font-size="12" fill="#6B7280">아이디어 → 프로덕션 배포까지의 전체 사이클</text>
+
+  <!-- Phase labels -->
+  <rect x="20" y="80" width="120" height="26" rx="6" fill="#EDE9FE"/>
+  <text x="80" y="98" text-anchor="middle" font-size="11" font-weight="600" fill="#4F46E5">기획 단계</text>
+
+  <rect x="310" y="80" width="120" height="26" rx="6" fill="#D1FAE5"/>
+  <text x="370" y="98" text-anchor="middle" font-size="11" font-weight="600" fill="#065F46">개발 단계</text>
+
+  <rect x="600" y="80" width="120" height="26" rx="6" fill="#FEF3C7"/>
+  <text x="660" y="98" text-anchor="middle" font-size="11" font-weight="600" fill="#92400E">검증 단계</text>
+
+  <rect x="770" y="80" width="110" height="26" rx="6" fill="#FEE2E2"/>
+  <text x="825" y="98" text-anchor="middle" font-size="11" font-weight="600" fill="#991B1B">배포 단계</text>
+
+  <!-- Node 1: office-hours -->
+  <rect x="20" y="120" width="150" height="80" rx="10" fill="#4F46E5" opacity="0.12" stroke="#4F46E5" stroke-width="2"/>
+  <text x="95" y="148" text-anchor="middle" font-size="13" font-weight="700" fill="#4F46E5">/office-hours</text>
+  <text x="95" y="166" text-anchor="middle" font-size="10" fill="#374151">제품 아이디어 검증</text>
+  <text x="95" y="181" text-anchor="middle" font-size="10" fill="#374151">강제 질문으로 정제</text>
+
+  <!-- Arrow 1→2 -->
+  <path d="M170 160 L195 160" stroke="#6B7280" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- Node 2: plan-ceo-review -->
+  <rect x="198" y="120" width="150" height="80" rx="10" fill="#4F46E5" opacity="0.08" stroke="#7C3AED" stroke-width="2"/>
+  <text x="273" y="145" text-anchor="middle" font-size="12" font-weight="700" fill="#7C3AED">/plan-ceo-review</text>
+  <text x="273" y="163" text-anchor="middle" font-size="10" fill="#374151">범위 검토 &amp; 정제</text>
+  <text x="273" y="178" text-anchor="middle" font-size="10" fill="#374151">"정말 이게 필요한가?"</text>
+
+  <!-- Downward arrow to plan-eng-review -->
+  <path d="M273 200 L273 220" stroke="#6B7280" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- Node 3: plan-eng-review -->
+  <rect x="198" y="222" width="150" height="80" rx="10" fill="#10B981" opacity="0.1" stroke="#10B981" stroke-width="2"/>
+  <text x="273" y="247" text-anchor="middle" font-size="12" font-weight="700" fill="#059669">/plan-eng-review</text>
+  <text x="273" y="265" text-anchor="middle" font-size="10" fill="#374151">아키텍처 설계</text>
+  <text x="273" y="280" text-anchor="middle" font-size="10" fill="#374151">TDD 플랜 생성</text>
+
+  <!-- Arrow from plan-eng-review to code -->
+  <path d="M348 262 L378 262" stroke="#6B7280" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- Node 4: Code Generation -->
+  <rect x="380" y="222" width="150" height="80" rx="10" fill="#10B981" opacity="0.12" stroke="#10B981" stroke-width="2"/>
+  <text x="455" y="250" text-anchor="middle" font-size="13" font-weight="700" fill="#065F46">Claude Code</text>
+  <text x="455" y="268" text-anchor="middle" font-size="10" fill="#374151">네이티브 코드 생성</text>
+  <text x="455" y="283" text-anchor="middle" font-size="10" fill="#374151">테스트 자동 작성</text>
+
+  <!-- Arrow 4→5 -->
+  <path d="M530 262 L560 262" stroke="#6B7280" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- Node 5: review -->
+  <rect x="562" y="222" width="150" height="80" rx="10" fill="#F59E0B" opacity="0.12" stroke="#F59E0B" stroke-width="2"/>
+  <text x="637" y="250" text-anchor="middle" font-size="13" font-weight="700" fill="#92400E">/review</text>
+  <text x="637" y="268" text-anchor="middle" font-size="10" fill="#374151">스태프 엔지니어급</text>
+  <text x="637" y="283" text-anchor="middle" font-size="10" fill="#374151">코드 리뷰 + 자동 수정</text>
+
+  <!-- Arrow 5→6 -->
+  <path d="M712 262 L742 262" stroke="#6B7280" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- Node 6: qa -->
+  <rect x="744" y="222" width="136" height="80" rx="10" fill="#EF4444" opacity="0.1" stroke="#EF4444" stroke-width="2"/>
+  <text x="812" y="250" text-anchor="middle" font-size="13" font-weight="700" fill="#B91C1C">/qa [url]</text>
+  <text x="812" y="268" text-anchor="middle" font-size="10" fill="#374151">실제 Chromium 브라우저</text>
+  <text x="812" y="283" text-anchor="middle" font-size="10" fill="#374151">~100ms 명령 실행</text>
+
+  <!-- Down arrow from qa -->
+  <path d="M812 302 L812 332" stroke="#6B7280" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- Node 7: ship -->
+  <rect x="744" y="334" width="136" height="80" rx="10" fill="#4F46E5" opacity="0.12" stroke="#4F46E5" stroke-width="2"/>
+  <text x="812" y="362" text-anchor="middle" font-size="13" font-weight="700" fill="#4338CA">/ship</text>
+  <text x="812" y="380" text-anchor="middle" font-size="10" fill="#374151">테스트 동기화</text>
+  <text x="812" y="395" text-anchor="middle" font-size="10" fill="#374151">PR 생성 + 커버리지 감사</text>
+
+  <!-- Arrow ship → land-and-deploy (left) -->
+  <path d="M744 374 L714 374" stroke="#6B7280" stroke-width="1.5" marker-end="url(#arr2)"/>
+
+  <!-- Node 8: land-and-deploy -->
+  <rect x="562" y="334" width="150" height="80" rx="10" fill="#EF4444" opacity="0.12" stroke="#EF4444" stroke-width="2"/>
+  <text x="637" y="358" text-anchor="middle" font-size="12" font-weight="700" fill="#991B1B">/land-and-deploy</text>
+  <text x="637" y="376" text-anchor="middle" font-size="10" fill="#374151">머지 + 배포 검증</text>
+  <text x="637" y="391" text-anchor="middle" font-size="10" fill="#374151">프로덕션 상태 체크</text>
+
+  <!-- Arrow to canary -->
+  <path d="M562 374 L532 374" stroke="#6B7280" stroke-width="1.5" marker-end="url(#arr2)"/>
+
+  <!-- Node 9: canary -->
+  <rect x="380" y="334" width="150" height="80" rx="10" fill="#10B981" opacity="0.12" stroke="#10B981" stroke-width="2"/>
+  <text x="455" y="362" text-anchor="middle" font-size="13" font-weight="700" fill="#065F46">/canary</text>
+  <text x="455" y="380" text-anchor="middle" font-size="10" fill="#374151">배포 후 모니터링</text>
+  <text x="455" y="395" text-anchor="middle" font-size="10" fill="#374151">이상 탐지 자동화</text>
+
+  <!-- Review feedback loop -->
+  <path d="M637 334 Q637 310 560 310 Q480 310 455 310 L455 302" stroke="#F59E0B" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arr-fix)" fill="none"/>
+  <text x="548" y="305" text-anchor="middle" font-size="9" fill="#92400E">수정 필요시 재검토</text>
+
+  <!-- Bottom: retro -->
+  <rect x="198" y="446" width="150" height="60" rx="10" fill="#6B7280" opacity="0.12" stroke="#6B7280" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <text x="273" y="474" text-anchor="middle" font-size="12" font-weight="700" fill="#374151">/retro</text>
+  <text x="273" y="491" text-anchor="middle" font-size="10" fill="#6B7280">주간 팀 메트릭 리뷰</text>
+
+  <!-- Legend -->
+  <rect x="20" y="470" width="150" height="70" rx="8" fill="white" stroke="#E5E7EB" stroke-width="1"/>
+  <text x="95" y="490" text-anchor="middle" font-size="11" font-weight="700" fill="#374151">범례</text>
+  <circle cx="36" cy="506" r="5" fill="#4F46E5"/>
+  <text x="48" y="510" font-size="10" fill="#374151">기획/배포 스킬</text>
+  <circle cx="36" cy="524" r="5" fill="#10B981"/>
+  <text x="48" y="528" font-size="10" fill="#374151">개발 스킬</text>
+  <circle cx="100" cy="506" r="5" fill="#F59E0B"/>
+  <text x="112" y="510" font-size="10" fill="#374151">리뷰 스킬</text>
+  <circle cx="100" cy="524" r="5" fill="#EF4444"/>
+  <text x="112" y="528" font-size="10" fill="#374151">QA/배포 스킬</text>
+
+  <defs>
+    <marker id="arr2" markerWidth="8" markerHeight="8" refX="2" refY="3" orient="auto">
+      <path d="M8,0 L8,6 L0,3 z" fill="#6B7280"/>
+    </marker>
+    <marker id="arr-fix" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#F59E0B"/>
+    </marker>
+  </defs>
+</svg>

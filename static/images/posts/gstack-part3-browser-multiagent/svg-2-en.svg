@@ -1,0 +1,144 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" width="900" height="560" font-family="'Segoe UI', Arial, sans-serif">
+  <!-- Background -->
+  <rect width="900" height="560" fill="#F8F9FF" rx="12"/>
+
+  <!-- Title -->
+  <text x="450" y="42" text-anchor="middle" font-size="22" font-weight="700" fill="#1E1B4B">Ref System — ARIA-Based UI Automation</text>
+  <text x="450" y="66" text-anchor="middle" font-size="13" fill="#6B7280">Identify and interact with UI elements via accessibility tree — no CSS selectors</text>
+
+  <!-- Step 1 -->
+  <g transform="translate(30, 100)">
+    <rect x="0" y="0" width="230" height="300" rx="12" fill="#EEF2FF" stroke="#4F46E5" stroke-width="2"/>
+    <rect x="0" y="0" width="230" height="36" rx="12" fill="#4F46E5"/>
+    <rect x="0" y="24" width="230" height="12" fill="#4F46E5"/>
+    <text x="115" y="22" text-anchor="middle" font-size="13" font-weight="700" fill="white">Step 1: ARIA Tree Snapshot</text>
+    <text x="115" y="58" text-anchor="middle" font-size="11" fill="#4338CA">Run: snapshot -i</text>
+
+    <g transform="translate(15, 72)">
+      <rect x="0" y="0" width="200" height="26" rx="5" fill="#C7D2FE"/>
+      <text x="10" y="17" font-size="10" fill="#3730A3">role=button  name="Login"</text>
+    </g>
+    <g transform="translate(15, 104)">
+      <rect x="0" y="0" width="200" height="26" rx="5" fill="#C7D2FE"/>
+      <text x="10" y="17" font-size="10" fill="#3730A3">role=textbox  name="Email"</text>
+    </g>
+    <g transform="translate(15, 136)">
+      <rect x="0" y="0" width="200" height="26" rx="5" fill="#C7D2FE"/>
+      <text x="10" y="17" font-size="10" fill="#3730A3">role=link  name="Sign up"</text>
+    </g>
+    <g transform="translate(15, 168)">
+      <rect x="0" y="0" width="200" height="26" rx="5" fill="#DDD6FE"/>
+      <text x="10" y="17" font-size="10" fill="#5B21B6">role=checkbox  name="Remember"</text>
+    </g>
+    <g transform="translate(15, 200)">
+      <rect x="0" y="0" width="200" height="26" rx="5" fill="#DDD6FE"/>
+      <text x="10" y="17" font-size="10" fill="#5B21B6">role=img  name="Logo"</text>
+    </g>
+    <text x="115" y="248" text-anchor="middle" font-size="10" fill="#6B7280">Framework-agnostic</text>
+    <text x="115" y="264" text-anchor="middle" font-size="10" fill="#6B7280">React / Vue / Angular all supported</text>
+    <text x="115" y="280" text-anchor="middle" font-size="10" fill="#6B7280">CSP-safe (no script injection)</text>
+  </g>
+
+  <!-- Arrow 1→2 -->
+  <g transform="translate(265, 220)">
+    <line x1="0" y1="0" x2="65" y2="0" stroke="#4F46E5" stroke-width="2.5" marker-end="url(#arr1-en)"/>
+    <text x="32" y="-8" text-anchor="middle" font-size="10" fill="#4F46E5" font-weight="700">assign ref</text>
+  </g>
+
+  <!-- Step 2 -->
+  <g transform="translate(335, 100)">
+    <rect x="0" y="0" width="230" height="300" rx="12" fill="#ECFDF5" stroke="#10B981" stroke-width="2"/>
+    <rect x="0" y="0" width="230" height="36" rx="12" fill="#10B981"/>
+    <rect x="0" y="24" width="230" height="12" fill="#10B981"/>
+    <text x="115" y="22" text-anchor="middle" font-size="13" font-weight="700" fill="white">Step 2: Sequential Ref Assignment</text>
+    <text x="115" y="58" text-anchor="middle" font-size="11" fill="#065F46">@e1, @e2, @e3 ... in order</text>
+
+    <g transform="translate(15, 72)">
+      <rect x="0" y="0" width="200" height="26" rx="5" fill="#A7F3D0"/>
+      <text x="10" y="17" font-size="11" font-weight="700" fill="#064E3B">@e1  →  button "Login"</text>
+    </g>
+    <g transform="translate(15, 104)">
+      <rect x="0" y="0" width="200" height="26" rx="5" fill="#A7F3D0"/>
+      <text x="10" y="17" font-size="11" font-weight="700" fill="#064E3B">@e2  →  textbox "Email"</text>
+    </g>
+    <g transform="translate(15, 136)">
+      <rect x="0" y="0" width="200" height="26" rx="5" fill="#A7F3D0"/>
+      <text x="10" y="17" font-size="11" font-weight="700" fill="#064E3B">@e3  →  link "Sign up"</text>
+    </g>
+    <g transform="translate(15, 168)">
+      <rect x="0" y="0" width="200" height="26" rx="5" fill="#D1FAE5"/>
+      <text x="10" y="17" font-size="11" font-weight="700" fill="#064E3B">@e4  →  checkbox "Remember"</text>
+    </g>
+    <g transform="translate(15, 200)">
+      <rect x="0" y="0" width="200" height="26" rx="5" fill="#D1FAE5"/>
+      <text x="10" y="17" font-size="11" font-weight="700" fill="#064E3B">@e5  →  img "Logo"</text>
+    </g>
+    <text x="115" y="248" text-anchor="middle" font-size="10" fill="#6B7280">Maps to Playwright Locator</text>
+    <text x="115" y="264" text-anchor="middle" font-size="10" fill="#6B7280">Identified by role + name</text>
+    <text x="115" y="280" text-anchor="middle" font-size="10" fill="#6B7280">Staleness auto-detected</text>
+  </g>
+
+  <!-- Arrow 2→3 -->
+  <g transform="translate(570, 220)">
+    <line x1="0" y1="0" x2="65" y2="0" stroke="#10B981" stroke-width="2.5" marker-end="url(#arr2-en)"/>
+    <text x="32" y="-8" text-anchor="middle" font-size="10" fill="#10B981" font-weight="700">execute</text>
+  </g>
+
+  <!-- Step 3 -->
+  <g transform="translate(640, 100)">
+    <rect x="0" y="0" width="230" height="300" rx="12" fill="#FEF3C7" stroke="#F59E0B" stroke-width="2"/>
+    <rect x="0" y="0" width="230" height="36" rx="12" fill="#F59E0B"/>
+    <rect x="0" y="24" width="230" height="12" fill="#F59E0B"/>
+    <text x="115" y="22" text-anchor="middle" font-size="13" font-weight="700" fill="white">Step 3: Action Execution</text>
+    <text x="115" y="58" text-anchor="middle" font-size="11" fill="#92400E">ref → resolve Locator → run</text>
+
+    <g transform="translate(15, 72)">
+      <rect x="0" y="0" width="200" height="26" rx="5" fill="#FDE68A"/>
+      <text x="10" y="17" font-size="10" font-weight="700" fill="#78350F">click @e1</text>
+    </g>
+    <g transform="translate(15, 104)">
+      <rect x="0" y="0" width="200" height="26" rx="5" fill="#FDE68A"/>
+      <text x="10" y="17" font-size="10" font-weight="700" fill="#78350F">type @e2 "user@mail.com"</text>
+    </g>
+    <g transform="translate(15, 136)">
+      <rect x="0" y="0" width="200" height="26" rx="5" fill="#FDE68A"/>
+      <text x="10" y="17" font-size="10" font-weight="700" fill="#78350F">check @e4</text>
+    </g>
+    <g transform="translate(15, 168)">
+      <rect x="0" y="0" width="200" height="26" rx="5" fill="#FEF9C3"/>
+      <text x="10" y="17" font-size="10" font-weight="600" fill="#78350F">-C flag: non-ARIA elements</text>
+    </g>
+    <g transform="translate(15, 200)">
+      <rect x="0" y="0" width="200" height="26" rx="5" fill="#FEF9C3"/>
+      <text x="10" y="17" font-size="10" font-weight="600" fill="#78350F">cursor coordinate click</text>
+    </g>
+    <text x="115" y="248" text-anchor="middle" font-size="10" fill="#6B7280">Stale ref → throws immediately</text>
+    <text x="115" y="264" text-anchor="middle" font-size="10" fill="#6B7280">Actionable error output</text>
+    <text x="115" y="280" text-anchor="middle" font-size="10" fill="#6B7280">Re-resolves before action</text>
+  </g>
+
+  <!-- Bottom comparison -->
+  <g transform="translate(30, 430)">
+    <rect x="0" y="0" width="840" height="100" rx="10" fill="white" stroke="#E5E7EB" stroke-width="1.5"/>
+    <text x="420" y="24" text-anchor="middle" font-size="13" font-weight="700" fill="#1E1B4B">Legacy vs Ref System Comparison</text>
+    <g transform="translate(20, 36)">
+      <rect x="0" y="0" width="380" height="50" rx="8" fill="#FEE2E2"/>
+      <text x="190" y="18" text-anchor="middle" font-size="11" font-weight="700" fill="#7F1D1D">Legacy: CSS Selectors / XPath</text>
+      <text x="190" y="36" text-anchor="middle" font-size="10" fill="#991B1B">#login-btn, .form input[type=email], //button[@id='x']</text>
+    </g>
+    <g transform="translate(440, 36)">
+      <rect x="0" y="0" width="380" height="50" rx="8" fill="#DCFCE7"/>
+      <text x="190" y="18" text-anchor="middle" font-size="11" font-weight="700" fill="#14532D">Ref System: ARIA role + name</text>
+      <text x="190" y="36" text-anchor="middle" font-size="10" fill="#166534">click @e1  /  type @e2 "value"  /  check @e4</text>
+    </g>
+  </g>
+
+  <defs>
+    <marker id="arr1-en" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#4F46E5"/>
+    </marker>
+    <marker id="arr2-en" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#10B981"/>
+    </marker>
+  </defs>
+</svg>

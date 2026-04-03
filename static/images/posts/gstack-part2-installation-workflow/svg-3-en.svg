@@ -1,0 +1,157 @@
+<svg viewBox="0 0 900 580" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', Arial, sans-serif">
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#6B7280"/>
+    </marker>
+  </defs>
+
+  <rect width="900" height="580" fill="#F8FAFC" rx="12"/>
+
+  <text x="450" y="40" text-anchor="middle" font-size="20" font-weight="700" fill="#1E1B4B">Skill Input / Output Flow</text>
+  <text x="450" y="62" text-anchor="middle" font-size="12" fill="#6B7280">What each gstack skill takes in and produces at a glance</text>
+
+  <!-- Column headers -->
+  <text x="100" y="90" text-anchor="middle" font-size="12" font-weight="700" fill="#6B7280">Skill</text>
+  <text x="340" y="90" text-anchor="middle" font-size="12" font-weight="700" fill="#6B7280">Input</text>
+  <text x="570" y="90" text-anchor="middle" font-size="12" font-weight="700" fill="#6B7280">Processing</text>
+  <text x="790" y="90" text-anchor="middle" font-size="12" font-weight="700" fill="#6B7280">Output</text>
+
+  <line x1="20" y1="97" x2="880" y2="97" stroke="#E5E7EB" stroke-width="1"/>
+
+  <!-- ROW 1: office-hours -->
+  <rect x="20" y="108" width="160" height="64" rx="8" fill="#4F46E5" opacity="0.12" stroke="#4F46E5" stroke-width="1.5"/>
+  <text x="100" y="133" text-anchor="middle" font-size="12" font-weight="700" fill="#4F46E5">/office-hours</text>
+  <text x="100" y="150" text-anchor="middle" font-size="10" fill="#374151">Product framing session</text>
+  <text x="100" y="164" text-anchor="middle" font-size="10" fill="#6B7280">Planning phase</text>
+
+  <path d="M180 140 L210 140" stroke="#6B7280" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <rect x="213" y="108" width="240" height="64" rx="8" fill="white" stroke="#E5E7EB" stroke-width="1.5"/>
+  <text x="333" y="130" text-anchor="middle" font-size="10" fill="#374151">· Product idea description (freeform)</text>
+  <text x="333" y="147" text-anchor="middle" font-size="10" fill="#374151">· List of features being considered</text>
+  <text x="333" y="163" text-anchor="middle" font-size="10" fill="#374151">· Target users &amp; problem definition</text>
+
+  <path d="M453 140 L483 140" stroke="#6B7280" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <rect x="486" y="108" width="160" height="64" rx="8" fill="#EDE9FE" stroke="#7C3AED" stroke-width="1"/>
+  <text x="566" y="130" text-anchor="middle" font-size="10" fill="#4F46E5">Forcing questions</text>
+  <text x="566" y="147" text-anchor="middle" font-size="10" fill="#4F46E5">Scope validation</text>
+  <text x="566" y="163" text-anchor="middle" font-size="10" fill="#4F46E5">Priority sorting</text>
+
+  <path d="M646 140 L676 140" stroke="#6B7280" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <rect x="679" y="108" width="200" height="64" rx="8" fill="white" stroke="#E5E7EB" stroke-width="1.5"/>
+  <text x="779" y="130" text-anchor="middle" font-size="10" fill="#374151">· Validated product vision doc</text>
+  <text x="779" y="147" text-anchor="middle" font-size="10" fill="#374151">· Prioritized core features list</text>
+  <text x="779" y="163" text-anchor="middle" font-size="10" fill="#374151">· Ready to enter plan phase</text>
+
+  <!-- ROW 2: plan -->
+  <rect x="20" y="188" width="160" height="64" rx="8" fill="#7C3AED" opacity="0.12" stroke="#7C3AED" stroke-width="1.5"/>
+  <text x="100" y="208" text-anchor="middle" font-size="11" font-weight="700" fill="#7C3AED">/plan-ceo-review</text>
+  <text x="100" y="225" text-anchor="middle" font-size="10" fill="#374151">+</text>
+  <text x="100" y="241" text-anchor="middle" font-size="11" font-weight="700" fill="#059669">/plan-eng-review</text>
+
+  <path d="M180 220 L210 220" stroke="#6B7280" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <rect x="213" y="188" width="240" height="64" rx="8" fill="white" stroke="#E5E7EB" stroke-width="1.5"/>
+  <text x="333" y="210" text-anchor="middle" font-size="10" fill="#374151">· office-hours output</text>
+  <text x="333" y="227" text-anchor="middle" font-size="10" fill="#374151">· Existing codebase context</text>
+  <text x="333" y="243" text-anchor="middle" font-size="10" fill="#374151">· Tech stack &amp; constraints</text>
+
+  <path d="M453 220 L483 220" stroke="#6B7280" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <rect x="486" y="188" width="160" height="64" rx="8" fill="#D1FAE5" stroke="#10B981" stroke-width="1"/>
+  <text x="566" y="210" text-anchor="middle" font-size="10" fill="#065F46">Scope reduction review</text>
+  <text x="566" y="227" text-anchor="middle" font-size="10" fill="#065F46">Architecture decisions</text>
+  <text x="566" y="243" text-anchor="middle" font-size="10" fill="#065F46">TDD strategy setup</text>
+
+  <path d="M646 220 L676 220" stroke="#6B7280" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <rect x="679" y="188" width="200" height="64" rx="8" fill="white" stroke="#E5E7EB" stroke-width="1.5"/>
+  <text x="779" y="210" text-anchor="middle" font-size="10" fill="#374151">· Detailed implementation plan</text>
+  <text x="779" y="227" text-anchor="middle" font-size="10" fill="#374151">· Test case specifications</text>
+  <text x="779" y="243" text-anchor="middle" font-size="10" fill="#374151">· File structure &amp; dependency map</text>
+
+  <!-- ROW 3: review -->
+  <rect x="20" y="268" width="160" height="64" rx="8" fill="#F59E0B" opacity="0.12" stroke="#F59E0B" stroke-width="1.5"/>
+  <text x="100" y="293" text-anchor="middle" font-size="12" font-weight="700" fill="#92400E">/review</text>
+  <text x="100" y="311" text-anchor="middle" font-size="10" fill="#374151">Code review</text>
+  <text x="100" y="325" text-anchor="middle" font-size="10" fill="#6B7280">Post-development phase</text>
+
+  <path d="M180 300 L210 300" stroke="#6B7280" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <rect x="213" y="268" width="240" height="64" rx="8" fill="white" stroke="#E5E7EB" stroke-width="1.5"/>
+  <text x="333" y="290" text-anchor="middle" font-size="10" fill="#374151">· Generated source code</text>
+  <text x="333" y="307" text-anchor="middle" font-size="10" fill="#374151">· Test files</text>
+  <text x="333" y="323" text-anchor="middle" font-size="10" fill="#374151">· plan.md (original spec)</text>
+
+  <path d="M453 300 L483 300" stroke="#6B7280" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <rect x="486" y="268" width="160" height="64" rx="8" fill="#FEF3C7" stroke="#F59E0B" stroke-width="1"/>
+  <text x="566" y="290" text-anchor="middle" font-size="10" fill="#92400E">Bug detection</text>
+  <text x="566" y="307" text-anchor="middle" font-size="10" fill="#92400E">Pattern validation</text>
+  <text x="566" y="323" text-anchor="middle" font-size="10" fill="#92400E">Auto-fix application</text>
+
+  <path d="M646 300 L676 300" stroke="#6B7280" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <rect x="679" y="268" width="200" height="64" rx="8" fill="white" stroke="#E5E7EB" stroke-width="1.5"/>
+  <text x="779" y="290" text-anchor="middle" font-size="10" fill="#374151">· Review comment list</text>
+  <text x="779" y="307" text-anchor="middle" font-size="10" fill="#374151">· Auto-fixed code diff</text>
+  <text x="779" y="323" text-anchor="middle" font-size="10" fill="#374151">· Security/perf issue report</text>
+
+  <!-- ROW 4: qa -->
+  <rect x="20" y="348" width="160" height="64" rx="8" fill="#EF4444" opacity="0.1" stroke="#EF4444" stroke-width="1.5"/>
+  <text x="100" y="373" text-anchor="middle" font-size="12" font-weight="700" fill="#B91C1C">/qa [url]</text>
+  <text x="100" y="391" text-anchor="middle" font-size="10" fill="#374151">Browser testing</text>
+  <text x="100" y="405" text-anchor="middle" font-size="10" fill="#6B7280">Validation phase</text>
+
+  <path d="M180 380 L210 380" stroke="#6B7280" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <rect x="213" y="348" width="240" height="64" rx="8" fill="white" stroke="#E5E7EB" stroke-width="1.5"/>
+  <text x="333" y="370" text-anchor="middle" font-size="10" fill="#374151">· Staging URL</text>
+  <text x="333" y="387" text-anchor="middle" font-size="10" fill="#374151">· Test scenarios (natural language)</text>
+  <text x="333" y="403" text-anchor="middle" font-size="10" fill="#374151">· User flow description</text>
+
+  <path d="M453 380 L483 380" stroke="#6B7280" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <rect x="486" y="348" width="160" height="64" rx="8" fill="#FEE2E2" stroke="#EF4444" stroke-width="1"/>
+  <text x="566" y="370" text-anchor="middle" font-size="10" fill="#B91C1C">Chromium launch</text>
+  <text x="566" y="387" text-anchor="middle" font-size="10" fill="#B91C1C">Click/type/navigate</text>
+  <text x="566" y="403" text-anchor="middle" font-size="10" fill="#B91C1C">Screenshot capture</text>
+
+  <path d="M646 380 L676 380" stroke="#6B7280" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <rect x="679" y="348" width="200" height="64" rx="8" fill="white" stroke="#E5E7EB" stroke-width="1.5"/>
+  <text x="779" y="370" text-anchor="middle" font-size="10" fill="#374151">· Pass/fail test results</text>
+  <text x="779" y="387" text-anchor="middle" font-size="10" fill="#374151">· UI bug screenshots</text>
+  <text x="779" y="403" text-anchor="middle" font-size="10" fill="#374151">· List of items needing fixes</text>
+
+  <!-- ROW 5: ship + land -->
+  <rect x="20" y="428" width="160" height="64" rx="8" fill="#4F46E5" opacity="0.12" stroke="#4F46E5" stroke-width="1.5"/>
+  <text x="100" y="450" text-anchor="middle" font-size="11" font-weight="700" fill="#4338CA">/ship</text>
+  <text x="100" y="466" text-anchor="middle" font-size="10" fill="#374151">+</text>
+  <text x="100" y="481" text-anchor="middle" font-size="11" font-weight="700" fill="#991B1B">/land-and-deploy</text>
+
+  <path d="M180 460 L210 460" stroke="#6B7280" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <rect x="213" y="428" width="240" height="64" rx="8" fill="white" stroke="#E5E7EB" stroke-width="1.5"/>
+  <text x="333" y="450" text-anchor="middle" font-size="10" fill="#374151">· QA-passed codebase</text>
+  <text x="333" y="467" text-anchor="middle" font-size="10" fill="#374151">· Commit history</text>
+  <text x="333" y="483" text-anchor="middle" font-size="10" fill="#374151">· Deployment target environment</text>
+
+  <path d="M453 460 L483 460" stroke="#6B7280" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <rect x="486" y="428" width="160" height="64" rx="8" fill="#EDE9FE" stroke="#4F46E5" stroke-width="1"/>
+  <text x="566" y="450" text-anchor="middle" font-size="10" fill="#4338CA">Test sync</text>
+  <text x="566" y="467" text-anchor="middle" font-size="10" fill="#4338CA">Auto PR creation</text>
+  <text x="566" y="483" text-anchor="middle" font-size="10" fill="#4338CA">Deploy + health check</text>
+
+  <path d="M646 460 L676 460" stroke="#6B7280" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <rect x="679" y="428" width="200" height="64" rx="8" fill="white" stroke="#E5E7EB" stroke-width="1.5"/>
+  <text x="779" y="450" text-anchor="middle" font-size="10" fill="#374151">· Merged PR URL</text>
+  <text x="779" y="467" text-anchor="middle" font-size="10" fill="#374151">· Coverage audit report</text>
+  <text x="779" y="483" text-anchor="middle" font-size="10" fill="#374151">· Production health dashboard</text>
+
+  <text x="450" y="520" text-anchor="middle" font-size="11" fill="#6B7280">Each skill uses the previous step's output as input, automatically forming a pipeline</text>
+</svg>
