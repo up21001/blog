@@ -1,0 +1,107 @@
+<svg viewBox="0 0 800 480" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', Arial, sans-serif">
+  <defs>
+    <radialGradient id="bg2" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#1a1f2e"/>
+      <stop offset="100%" stop-color="#0d1117"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="480" fill="url(#bg2)" rx="16"/>
+
+  <!-- Title -->
+  <text x="400" y="40" text-anchor="middle" fill="#e2e8f0" font-size="20" font-weight="700">Best Language by Domain (2026)</text>
+
+  <!-- Header row -->
+  <rect x="30" y="60" width="740" height="36" rx="6" fill="#1e293b"/>
+  <text x="120" y="83" text-anchor="middle" fill="#94a3b8" font-size="13" font-weight="600">Domain</text>
+  <text x="255" y="83" text-anchor="middle" fill="#3b82f6" font-size="13" font-weight="700">Python</text>
+  <text x="355" y="83" text-anchor="middle" fill="#f59e0b" font-size="13" font-weight="700">JS/TS</text>
+  <text x="450" y="83" text-anchor="middle" fill="#f97316" font-size="13" font-weight="700">Rust</text>
+  <text x="540" y="83" text-anchor="middle" fill="#06b6d4" font-size="13" font-weight="700">Go</text>
+  <text x="635" y="83" text-anchor="middle" fill="#a855f7" font-size="13" font-weight="700">Java/Kotlin</text>
+  <text x="730" y="83" text-anchor="middle" fill="#10b981" font-size="13" font-weight="700">C++</text>
+
+  <!-- AI / ML -->
+  <rect x="30" y="102" width="740" height="44" rx="4" fill="#0f172a"/>
+  <text x="120" y="129" text-anchor="middle" fill="#e2e8f0" font-size="13">🤖 AI / ML</text>
+  <rect x="215" y="112" width="80" height="24" rx="4" fill="#22c55e" fill-opacity="0.25"/>
+  <text x="255" y="129" text-anchor="middle" fill="#22c55e" font-size="12" font-weight="700">Best ★★★</text>
+  <rect x="315" y="112" width="80" height="24" rx="4" fill="#64748b" fill-opacity="0.2"/>
+  <text x="355" y="129" text-anchor="middle" fill="#64748b" font-size="12">Fair ★☆☆</text>
+  <rect x="410" y="112" width="80" height="24" rx="4" fill="#64748b" fill-opacity="0.2"/>
+  <text x="450" y="129" text-anchor="middle" fill="#64748b" font-size="12">Fair ★☆☆</text>
+  <text x="540" y="129" text-anchor="middle" fill="#374151" font-size="12">—</text>
+  <text x="635" y="129" text-anchor="middle" fill="#374151" font-size="12">—</text>
+  <text x="730" y="129" text-anchor="middle" fill="#374151" font-size="12">—</text>
+
+  <!-- Web Frontend -->
+  <rect x="30" y="152" width="740" height="44" rx="4" fill="#111827"/>
+  <text x="120" y="179" text-anchor="middle" fill="#e2e8f0" font-size="13">🌐 Web Frontend</text>
+  <text x="255" y="179" text-anchor="middle" fill="#374151" font-size="12">—</text>
+  <rect x="315" y="162" width="80" height="24" rx="4" fill="#22c55e" fill-opacity="0.25"/>
+  <text x="355" y="179" text-anchor="middle" fill="#22c55e" font-size="12" font-weight="700">Best ★★★</text>
+  <text x="450" y="179" text-anchor="middle" fill="#374151" font-size="12">—</text>
+  <text x="540" y="179" text-anchor="middle" fill="#374151" font-size="12">—</text>
+  <text x="635" y="179" text-anchor="middle" fill="#374151" font-size="12">—</text>
+  <text x="730" y="179" text-anchor="middle" fill="#374151" font-size="12">—</text>
+
+  <!-- Backend / API -->
+  <rect x="30" y="202" width="740" height="44" rx="4" fill="#0f172a"/>
+  <text x="120" y="229" text-anchor="middle" fill="#e2e8f0" font-size="13">⚙️ Backend / API</text>
+  <rect x="215" y="212" width="80" height="24" rx="4" fill="#f59e0b" fill-opacity="0.2"/>
+  <text x="255" y="229" text-anchor="middle" fill="#f59e0b" font-size="12">Good ★★☆</text>
+  <rect x="315" y="212" width="80" height="24" rx="4" fill="#f59e0b" fill-opacity="0.2"/>
+  <text x="355" y="229" text-anchor="middle" fill="#f59e0b" font-size="12">Good ★★☆</text>
+  <rect x="410" y="212" width="80" height="24" rx="4" fill="#f59e0b" fill-opacity="0.2"/>
+  <text x="450" y="229" text-anchor="middle" fill="#f59e0b" font-size="12">Good ★★☆</text>
+  <rect x="500" y="212" width="80" height="24" rx="4" fill="#22c55e" fill-opacity="0.25"/>
+  <text x="540" y="229" text-anchor="middle" fill="#22c55e" font-size="12" font-weight="700">Best ★★★</text>
+  <rect x="595" y="212" width="80" height="24" rx="4" fill="#f59e0b" fill-opacity="0.2"/>
+  <text x="635" y="229" text-anchor="middle" fill="#f59e0b" font-size="12">Good ★★☆</text>
+  <text x="730" y="229" text-anchor="middle" fill="#374151" font-size="12">—</text>
+
+  <!-- Systems / Embedded -->
+  <rect x="30" y="252" width="740" height="44" rx="4" fill="#111827"/>
+  <text x="120" y="279" text-anchor="middle" fill="#e2e8f0" font-size="13">🔧 Systems / Embedded</text>
+  <text x="255" y="279" text-anchor="middle" fill="#374151" font-size="12">—</text>
+  <text x="355" y="279" text-anchor="middle" fill="#374151" font-size="12">—</text>
+  <rect x="410" y="262" width="80" height="24" rx="4" fill="#22c55e" fill-opacity="0.25"/>
+  <text x="450" y="279" text-anchor="middle" fill="#22c55e" font-size="12" font-weight="700">Best ★★★</text>
+  <text x="540" y="279" text-anchor="middle" fill="#374151" font-size="12">—</text>
+  <text x="635" y="279" text-anchor="middle" fill="#374151" font-size="12">—</text>
+  <rect x="690" y="262" width="80" height="24" rx="4" fill="#22c55e" fill-opacity="0.25"/>
+  <text x="730" y="279" text-anchor="middle" fill="#22c55e" font-size="12" font-weight="700">Best ★★★</text>
+
+  <!-- Mobile -->
+  <rect x="30" y="302" width="740" height="44" rx="4" fill="#0f172a"/>
+  <text x="120" y="329" text-anchor="middle" fill="#e2e8f0" font-size="13">📱 Mobile Apps</text>
+  <text x="255" y="329" text-anchor="middle" fill="#374151" font-size="12">—</text>
+  <text x="355" y="329" text-anchor="middle" fill="#374151" font-size="12">—</text>
+  <text x="450" y="329" text-anchor="middle" fill="#374151" font-size="12">—</text>
+  <text x="540" y="329" text-anchor="middle" fill="#374151" font-size="12">—</text>
+  <rect x="595" y="312" width="80" height="24" rx="4" fill="#22c55e" fill-opacity="0.25"/>
+  <text x="635" y="329" text-anchor="middle" fill="#22c55e" font-size="12" font-weight="700">Best ★★★</text>
+  <text x="730" y="329" text-anchor="middle" fill="#374151" font-size="12">—</text>
+
+  <!-- DevOps / Cloud -->
+  <rect x="30" y="352" width="740" height="44" rx="4" fill="#111827"/>
+  <text x="120" y="379" text-anchor="middle" fill="#e2e8f0" font-size="13">☁️ DevOps / Cloud</text>
+  <rect x="215" y="362" width="80" height="24" rx="4" fill="#f59e0b" fill-opacity="0.2"/>
+  <text x="255" y="379" text-anchor="middle" fill="#f59e0b" font-size="12">Good ★★☆</text>
+  <text x="355" y="379" text-anchor="middle" fill="#374151" font-size="12">—</text>
+  <text x="450" y="379" text-anchor="middle" fill="#374151" font-size="12">—</text>
+  <rect x="500" y="362" width="80" height="24" rx="4" fill="#22c55e" fill-opacity="0.25"/>
+  <text x="540" y="379" text-anchor="middle" fill="#22c55e" font-size="12" font-weight="700">Best ★★★</text>
+  <text x="635" y="379" text-anchor="middle" fill="#374151" font-size="12">—</text>
+  <text x="730" y="379" text-anchor="middle" fill="#374151" font-size="12">—</text>
+
+  <!-- Legend -->
+  <rect x="30" y="412" width="740" height="52" rx="8" fill="#1e293b" fill-opacity="0.6"/>
+  <rect x="50" y="426" width="80" height="20" rx="3" fill="#22c55e" fill-opacity="0.25"/>
+  <text x="90" y="440" text-anchor="middle" fill="#22c55e" font-size="12">Best ★★★</text>
+  <rect x="160" y="426" width="80" height="20" rx="3" fill="#f59e0b" fill-opacity="0.2"/>
+  <text x="200" y="440" text-anchor="middle" fill="#f59e0b" font-size="12">Good ★★☆</text>
+  <rect x="270" y="426" width="80" height="20" rx="3" fill="#64748b" fill-opacity="0.2"/>
+  <text x="310" y="440" text-anchor="middle" fill="#64748b" font-size="12">Fair ★☆☆</text>
+  <text x="430" y="440" fill="#374151" font-size="12">— : Not recommended / N/A</text>
+  <text x="400" y="457" text-anchor="middle" fill="#475569" font-size="11">※ Relative assessment based on 2026 industry trends, not absolute rankings</text>
+</svg>

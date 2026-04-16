@@ -1,0 +1,89 @@
+<svg viewBox="0 0 800 480" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', Arial, sans-serif">
+  <defs>
+    <radialGradient id="bg3" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#1a1f2e"/>
+      <stop offset="100%" stop-color="#0d1117"/>
+    </radialGradient>
+    <marker id="arrowX" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#475569"/>
+    </marker>
+    <marker id="arrowY" markerWidth="8" markerHeight="8" refX="3" refY="0" orient="auto">
+      <path d="M0,8 L6,8 L3,0 z" fill="#475569"/>
+    </marker>
+  </defs>
+  <rect width="800" height="480" fill="url(#bg3)" rx="16"/>
+
+  <!-- Title -->
+  <text x="400" y="36" text-anchor="middle" fill="#e2e8f0" font-size="20" font-weight="700">Learning Curve vs Productivity</text>
+  <text x="400" y="55" text-anchor="middle" fill="#64748b" font-size="12">2D comparison of entry barrier and real-world productivity per language</text>
+
+  <!-- Chart area background -->
+  <rect x="90" y="70" width="620" height="340" rx="8" fill="#0f172a" fill-opacity="0.6"/>
+
+  <!-- Grid lines -->
+  <line x1="90" y1="170" x2="710" y2="170" stroke="#1e293b" stroke-width="1" stroke-dasharray="4,4"/>
+  <line x1="90" y1="240" x2="710" y2="240" stroke="#1e293b" stroke-width="1" stroke-dasharray="4,4"/>
+  <line x1="90" y1="310" x2="710" y2="310" stroke="#1e293b" stroke-width="1" stroke-dasharray="4,4"/>
+  <line x1="245" y1="70" x2="245" y2="410" stroke="#1e293b" stroke-width="1" stroke-dasharray="4,4"/>
+  <line x1="400" y1="70" x2="400" y2="410" stroke="#1e293b" stroke-width="1" stroke-dasharray="4,4"/>
+  <line x1="555" y1="70" x2="555" y2="410" stroke="#1e293b" stroke-width="1" stroke-dasharray="4,4"/>
+
+  <!-- Axes -->
+  <line x1="90" y1="410" x2="715" y2="410" stroke="#475569" stroke-width="2" marker-end="url(#arrowX)"/>
+  <line x1="90" y1="410" x2="90" y2="62" stroke="#475569" stroke-width="2" marker-end="url(#arrowY)"/>
+
+  <!-- Axis labels -->
+  <text x="400" y="445" text-anchor="middle" fill="#64748b" font-size="13">Learning Difficulty →  (Easy ~ Hard)</text>
+  <text x="35" y="240" text-anchor="middle" fill="#64748b" font-size="13" transform="rotate(-90, 35, 240)">Productivity →  (Low ~ High)</text>
+
+  <!-- Axis ticks -->
+  <text x="90" y="427" text-anchor="middle" fill="#374151" font-size="10">Very Easy</text>
+  <text x="400" y="427" text-anchor="middle" fill="#374151" font-size="10">Moderate</text>
+  <text x="700" y="427" text-anchor="middle" fill="#374151" font-size="10">Very Hard</text>
+  <text x="80" y="413" text-anchor="end" fill="#374151" font-size="10">Low</text>
+  <text x="80" y="100" text-anchor="end" fill="#374151" font-size="10">High</text>
+
+  <!-- Quadrant labels -->
+  <text x="180" y="150" text-anchor="middle" fill="#1e3a5f" font-size="11" font-style="italic">Easy &amp; Productive</text>
+  <text x="600" y="150" text-anchor="middle" fill="#1e3a5f" font-size="11" font-style="italic">Hard &amp; Productive</text>
+  <text x="180" y="390" text-anchor="middle" fill="#1e293b" font-size="11" font-style="italic">Easy &amp; Low Output</text>
+  <text x="600" y="390" text-anchor="middle" fill="#1e293b" font-size="11" font-style="italic">Hard &amp; Low Output</text>
+
+  <!-- Python -->
+  <circle cx="160" cy="120" r="22" fill="#3b82f6" fill-opacity="0.25" stroke="#3b82f6" stroke-width="2"/>
+  <text x="160" y="115" text-anchor="middle" fill="#93c5fd" font-size="13" font-weight="700">Python</text>
+  <text x="160" y="130" text-anchor="middle" fill="#60a5fa" font-size="10">AI / Automation</text>
+
+  <!-- TypeScript -->
+  <circle cx="310" cy="155" r="20" fill="#f59e0b" fill-opacity="0.25" stroke="#f59e0b" stroke-width="2"/>
+  <text x="310" y="149" text-anchor="middle" fill="#fcd34d" font-size="13" font-weight="700">TypeScript</text>
+  <text x="310" y="163" text-anchor="middle" fill="#f59e0b" font-size="10">Web / Full-Stack</text>
+
+  <!-- Go -->
+  <circle cx="410" cy="185" r="19" fill="#06b6d4" fill-opacity="0.25" stroke="#06b6d4" stroke-width="2"/>
+  <text x="410" y="179" text-anchor="middle" fill="#22d3ee" font-size="13" font-weight="700">Go</text>
+  <text x="410" y="193" text-anchor="middle" fill="#06b6d4" font-size="10">Backend</text>
+
+  <!-- Java -->
+  <circle cx="510" cy="235" r="19" fill="#a855f7" fill-opacity="0.25" stroke="#a855f7" stroke-width="2"/>
+  <text x="510" y="229" text-anchor="middle" fill="#d8b4fe" font-size="13" font-weight="700">Java</text>
+  <text x="510" y="244" text-anchor="middle" fill="#a855f7" font-size="10">Enterprise</text>
+
+  <!-- Rust -->
+  <circle cx="620" cy="130" r="21" fill="#f97316" fill-opacity="0.25" stroke="#f97316" stroke-width="2"/>
+  <text x="620" y="123" text-anchor="middle" fill="#fb923c" font-size="13" font-weight="700">Rust</text>
+  <text x="620" y="138" text-anchor="middle" fill="#f97316" font-size="10">Systems</text>
+
+  <!-- C++ -->
+  <circle cx="670" cy="255" r="17" fill="#10b981" fill-opacity="0.25" stroke="#10b981" stroke-width="2"/>
+  <text x="670" y="249" text-anchor="middle" fill="#6ee7b7" font-size="12" font-weight="700">C++</text>
+  <text x="670" y="263" text-anchor="middle" fill="#10b981" font-size="9">Game / Embedded</text>
+
+  <!-- Sweet spot annotation -->
+  <path d="M 200 90 Q 300 80 420 105" stroke="#22c55e" stroke-width="1.5" stroke-dasharray="5,3" fill="none"/>
+  <text x="290" y="78" text-anchor="middle" fill="#22c55e" font-size="11">Ideal productivity curve</text>
+
+  <!-- Rust annotation -->
+  <path d="M 620 108 L 620 85" stroke="#f97316" stroke-width="1" stroke-dasharray="3,2" fill="none"/>
+  <text x="620" y="80" text-anchor="middle" fill="#f97316" font-size="10">Long-term productivity ↑↑</text>
+</svg>
