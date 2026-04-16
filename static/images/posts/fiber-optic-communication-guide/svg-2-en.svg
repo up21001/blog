@@ -1,0 +1,42 @@
+<svg viewBox="0 0 800 440" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', Arial, sans-serif">
+  <rect width="800" height="440" fill="#f0fdf4" rx="16"/>
+  <rect x="1" y="1" width="798" height="438" fill="none" stroke="#86efac" stroke-width="2" rx="16"/>
+
+  <text x="400" y="38" text-anchor="middle" fill="#14532d" font-size="20" font-weight="700">Fiber Optic Cable Cross-Section Structure</text>
+  <text x="400" y="58" text-anchor="middle" fill="#64748b" font-size="13">A fiber optic cable consists of four concentric layers: Core · Cladding · Buffer Coating · Jacket</text>
+
+  <!-- Jacket (outermost) -->
+  <circle cx="220" cy="240" r="110" fill="#fca5a5" stroke="#ef4444" stroke-width="2.5"/>
+  <!-- Buffer -->
+  <circle cx="220" cy="240" r="82" fill="#fde68a" stroke="#f59e0b" stroke-width="2"/>
+  <!-- Cladding -->
+  <circle cx="220" cy="240" r="58" fill="#93c5fd" stroke="#3b82f6" stroke-width="2"/>
+  <!-- Core -->
+  <circle cx="220" cy="240" r="25" fill="#1d4ed8" stroke="#1e40af" stroke-width="2"/>
+  <text x="220" y="244" text-anchor="middle" fill="white" font-size="11" font-weight="700">Core</text>
+
+  <!-- Labels with lines -->
+  <line x1="245" y1="225" x2="310" y2="190" stroke="#1d4ed8" stroke-width="1.5" stroke-dasharray="4,2"/>
+  <text x="315" y="188" fill="#1d4ed8" font-size="13" font-weight="600">① Core</text>
+  <text x="315" y="202" fill="#64748b" font-size="11">Diameter: 9μm (SM) / 50μm (MM)</text>
+  <text x="315" y="215" fill="#64748b" font-size="11">Silica glass (SiO₂) · High refractive index</text>
+
+  <line x1="278" y1="240" x2="340" y2="240" stroke="#3b82f6" stroke-width="1.5" stroke-dasharray="4,2"/>
+  <text x="345" y="238" fill="#2563eb" font-size="13" font-weight="600">② Cladding</text>
+  <text x="345" y="253" fill="#64748b" font-size="11">Diameter: 125μm · Lower refractive index</text>
+  <text x="345" y="266" fill="#64748b" font-size="11">Creates total internal reflection condition</text>
+
+  <line x1="290" y1="280" x2="345" y2="300" stroke="#d97706" stroke-width="1.5" stroke-dasharray="4,2"/>
+  <text x="350" y="298" fill="#d97706" font-size="13" font-weight="600">③ Buffer Coating</text>
+  <text x="350" y="313" fill="#64748b" font-size="11">Diameter: 250μm · UV-cured acrylate</text>
+  <text x="350" y="326" fill="#64748b" font-size="11">Protects against mechanical stress &amp; moisture</text>
+
+  <line x1="250" y1="340" x2="350" y2="360" stroke="#dc2626" stroke-width="1.5" stroke-dasharray="4,2"/>
+  <text x="355" y="358" fill="#dc2626" font-size="13" font-weight="600">④ Outer Jacket</text>
+  <text x="355" y="373" fill="#64748b" font-size="11">PVC / PE outer sheath for protection</text>
+  <text x="355" y="386" fill="#64748b" font-size="11">Color-coded for cable identification</text>
+
+  <rect x="30" y="390" width="760" height="38" rx="8" fill="white" stroke="#bbf7d0" stroke-width="1.5"/>
+  <text x="400" y="406" text-anchor="middle" fill="#166534" font-size="12" font-weight="600">Size Comparison</text>
+  <text x="400" y="421" text-anchor="middle" fill="#64748b" font-size="11">Core 9μm ≈ 1/8 of a human hair (70μm) · Cladding 125μm ≈ 2 hairs · Full cable 3–10mm</text>
+</svg>

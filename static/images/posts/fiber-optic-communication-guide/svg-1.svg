@@ -1,0 +1,61 @@
+<svg viewBox="0 0 800 440" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', Arial, sans-serif">
+  <!-- Light background -->
+  <rect width="800" height="440" fill="#f0f7ff" rx="16"/>
+  <rect x="1" y="1" width="798" height="438" fill="none" stroke="#bfdbfe" stroke-width="2" rx="16"/>
+
+  <!-- Title -->
+  <text x="400" y="38" text-anchor="middle" fill="#1e3a5f" font-size="20" font-weight="700">광통신의 핵심 원리: 빛의 전반사</text>
+  <text x="400" y="58" text-anchor="middle" fill="#64748b" font-size="13">광섬유는 빛이 코어와 클래딩의 경계에서 반사되며 전파되는 '전반사(Total Internal Reflection)' 현상을 이용합니다</text>
+
+  <!-- Fiber cross-section illustration -->
+  <!-- Fiber tube -->
+  <rect x="60" y="160" width="680" height="80" rx="40" fill="#dbeafe" stroke="#3b82f6" stroke-width="2"/>
+  <!-- Core -->
+  <rect x="60" y="185" width="680" height="30" rx="15" fill="#93c5fd" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="400" y="205" text-anchor="middle" fill="#1e3a5f" font-size="13" font-weight="600">코어 (Core) — 굴절률 높음 (n₁ ≈ 1.48)</text>
+
+  <!-- Cladding label -->
+  <text x="400" y="155" text-anchor="middle" fill="#3b82f6" font-size="12">클래딩 (Cladding) — 굴절률 낮음 (n₂ ≈ 1.46)</text>
+  <text x="400" y="262" text-anchor="middle" fill="#3b82f6" font-size="12">클래딩 (Cladding)</text>
+
+  <!-- Light ray bouncing -->
+  <polyline points="90,200 170,187 250,200 330,187 410,200 490,187 570,200 650,187 720,200"
+    fill="none" stroke="#f59e0b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Glow effect on light ray -->
+  <polyline points="90,200 170,187 250,200 330,187 410,200 490,187 570,200 650,187 720,200"
+    fill="none" stroke="#fde68a" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
+
+  <!-- Reflection angle arcs -->
+  <path d="M 170,187 A 15,15 0 0,1 195,195" fill="none" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="3,2"/>
+  <text x="195" y="183" fill="#ef4444" font-size="11">θ</text>
+  <path d="M 250,200 A 15,15 0 0,0 275,193" fill="none" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="3,2"/>
+  <text x="272" y="210" fill="#ef4444" font-size="11">θ</text>
+
+  <!-- Arrow showing direction -->
+  <defs>
+    <marker id="arrowYellow" markerWidth="8" markerHeight="6" refX="6" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#f59e0b"/>
+    </marker>
+  </defs>
+  <line x1="700" y1="194" x2="740" y2="200" stroke="#f59e0b" stroke-width="3" marker-end="url(#arrowYellow)"/>
+  <text x="755" y="204" fill="#92400e" font-size="12" font-weight="600">빛 →</text>
+
+  <!-- Labels below -->
+  <rect x="60" y="310" width="200" height="60" rx="8" fill="white" stroke="#bfdbfe" stroke-width="1.5"/>
+  <text x="160" y="332" text-anchor="middle" fill="#1e3a5f" font-size="13" font-weight="600">입사각 &gt; 임계각</text>
+  <text x="160" y="350" text-anchor="middle" fill="#64748b" font-size="11">빛이 코어 내부에서</text>
+  <text x="160" y="364" text-anchor="middle" fill="#64748b" font-size="11">완전히 반사됨 ✓</text>
+
+  <rect x="300" y="310" width="200" height="60" rx="8" fill="white" stroke="#bfdbfe" stroke-width="1.5"/>
+  <text x="400" y="332" text-anchor="middle" fill="#1e3a5f" font-size="13" font-weight="600">손실 거의 없음</text>
+  <text x="400" y="350" text-anchor="middle" fill="#64748b" font-size="11">수십 km를 전파해도</text>
+  <text x="400" y="364" text-anchor="middle" fill="#64748b" font-size="11">신호 감쇠 0.2 dB/km</text>
+
+  <rect x="540" y="310" width="200" height="60" rx="8" fill="white" stroke="#bfdbfe" stroke-width="1.5"/>
+  <text x="640" y="332" text-anchor="middle" fill="#1e3a5f" font-size="13" font-weight="600">고속 전송</text>
+  <text x="640" y="350" text-anchor="middle" fill="#64748b" font-size="11">빛의 속도(c)의</text>
+  <text x="640" y="364" text-anchor="middle" fill="#64748b" font-size="11">약 2/3 = ~200,000 km/s</text>
+
+  <!-- Bottom note -->
+  <text x="400" y="405" text-anchor="middle" fill="#94a3b8" font-size="11">※ 임계각(Critical Angle) θc = arcsin(n₂/n₁) — 이 각도 이상에서 전반사 발생</text>
+</svg>

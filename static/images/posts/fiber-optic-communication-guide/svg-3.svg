@@ -1,0 +1,98 @@
+<svg viewBox="0 0 800 440" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', Arial, sans-serif">
+  <defs>
+    <marker id="arrBlue" markerWidth="8" markerHeight="6" refX="6" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#3b82f6"/>
+    </marker>
+    <marker id="arrOrange" markerWidth="8" markerHeight="6" refX="6" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#f97316"/>
+    </marker>
+    <linearGradient id="fiberGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#93c5fd"/>
+      <stop offset="50%" stop-color="#dbeafe"/>
+      <stop offset="100%" stop-color="#93c5fd"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="440" fill="#fffbeb" rx="16"/>
+  <rect x="1" y="1" width="798" height="438" fill="none" stroke="#fde68a" stroke-width="2" rx="16"/>
+
+  <text x="400" y="38" text-anchor="middle" fill="#78350f" font-size="20" font-weight="700">광통신 시스템 전체 구성도</text>
+  <text x="400" y="58" text-anchor="middle" fill="#64748b" font-size="13">전기 신호 → 빛 변환 → 광섬유 전송 → 빛 수신 → 전기 신호 복원</text>
+
+  <!-- Transmitter block -->
+  <rect x="30" y="150" width="130" height="120" rx="12" fill="#fef3c7" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="95" y="178" text-anchor="middle" fill="#92400e" font-size="13" font-weight="700">📡 송신부</text>
+  <text x="95" y="196" text-anchor="middle" fill="#78350f" font-size="12">(Transmitter)</text>
+  <rect x="50" y="205" width="90" height="24" rx="5" fill="#fbbf24" fill-opacity="0.5"/>
+  <text x="95" y="221" text-anchor="middle" fill="#92400e" font-size="11">레이저 다이오드</text>
+  <rect x="50" y="233" width="90" height="24" rx="5" fill="#fbbf24" fill-opacity="0.5"/>
+  <text x="95" y="249" text-anchor="middle" fill="#92400e" font-size="11">LED (단거리)</text>
+
+  <!-- Arrow 1 -->
+  <line x1="160" y1="210" x2="195" y2="210" stroke="#3b82f6" stroke-width="2.5" marker-end="url(#arrBlue)"/>
+  <text x="177" y="200" text-anchor="middle" fill="#2563eb" font-size="10">전기→빛</text>
+
+  <!-- Coupler/Connector -->
+  <rect x="197" y="193" width="50" height="34" rx="6" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="222" y="207" text-anchor="middle" fill="#1e40af" font-size="10" font-weight="600">커넥터</text>
+  <text x="222" y="220" text-anchor="middle" fill="#1e40af" font-size="10">LC/SC</text>
+
+  <!-- Arrow 2 -->
+  <line x1="247" y1="210" x2="272" y2="210" stroke="#3b82f6" stroke-width="2.5" marker-end="url(#arrBlue)"/>
+
+  <!-- Fiber cable -->
+  <rect x="274" y="185" width="252" height="50" rx="25" fill="url(#fiberGrad)" stroke="#3b82f6" stroke-width="2"/>
+  <text x="400" y="208" text-anchor="middle" fill="#1e3a5f" font-size="13" font-weight="700">광섬유 케이블</text>
+  <text x="400" y="224" text-anchor="middle" fill="#1e40af" font-size="11">단일모드 · 최대 80km 이상</text>
+
+  <!-- Amplifier (EDFA) in middle -->
+  <rect x="375" y="248" width="50" height="28" rx="6" fill="#a7f3d0" stroke="#059669" stroke-width="1.5"/>
+  <text x="400" y="260" text-anchor="middle" fill="#065f46" font-size="10" font-weight="600">EDFA</text>
+  <text x="400" y="271" text-anchor="middle" fill="#065f46" font-size="9">광증폭기</text>
+  <line x1="400" y1="235" x2="400" y2="248" stroke="#059669" stroke-width="1.5" stroke-dasharray="3,2"/>
+
+  <!-- Arrow 3 -->
+  <line x1="526" y1="210" x2="551" y2="210" stroke="#3b82f6" stroke-width="2.5" marker-end="url(#arrBlue)"/>
+
+  <!-- Coupler/Connector right -->
+  <rect x="553" y="193" width="50" height="34" rx="6" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="578" y="207" text-anchor="middle" fill="#1e40af" font-size="10" font-weight="600">커넥터</text>
+  <text x="578" y="220" text-anchor="middle" fill="#1e40af" font-size="10">LC/SC</text>
+
+  <!-- Arrow 4 -->
+  <line x1="603" y1="210" x2="638" y2="210" stroke="#f97316" stroke-width="2.5" marker-end="url(#arrOrange)"/>
+  <text x="620" y="200" text-anchor="middle" fill="#ea580c" font-size="10">빛→전기</text>
+
+  <!-- Receiver block -->
+  <rect x="640" y="150" width="130" height="120" rx="12" fill="#fff7ed" stroke="#f97316" stroke-width="2.5"/>
+  <text x="705" y="178" text-anchor="middle" fill="#7c2d12" font-size="13" font-weight="700">📺 수신부</text>
+  <text x="705" y="196" text-anchor="middle" fill="#7c2d12" font-size="12">(Receiver)</text>
+  <rect x="660" y="205" width="90" height="24" rx="5" fill="#fed7aa" fill-opacity="0.7"/>
+  <text x="705" y="221" text-anchor="middle" fill="#7c2d12" font-size="11">포토 다이오드</text>
+  <rect x="660" y="233" width="90" height="24" rx="5" fill="#fed7aa" fill-opacity="0.7"/>
+  <text x="705" y="249" text-anchor="middle" fill="#7c2d12" font-size="11">신호 증폭/복원</text>
+
+  <!-- Wavelength info box -->
+  <rect x="30" y="305" width="230" height="70" rx="8" fill="white" stroke="#fde68a" stroke-width="1.5"/>
+  <text x="145" y="324" text-anchor="middle" fill="#78350f" font-size="12" font-weight="700">주요 동작 파장</text>
+  <text x="145" y="341" text-anchor="middle" fill="#64748b" font-size="11">850nm — 단거리 멀티모드</text>
+  <text x="145" y="356" text-anchor="middle" fill="#64748b" font-size="11">1310nm / 1550nm — 장거리 싱글모드</text>
+  <text x="145" y="371" text-anchor="middle" fill="#64748b" font-size="11">1625nm — 모니터링용</text>
+
+  <!-- WDM info box -->
+  <rect x="285" y="305" width="230" height="70" rx="8" fill="white" stroke="#fde68a" stroke-width="1.5"/>
+  <text x="400" y="324" text-anchor="middle" fill="#78350f" font-size="12" font-weight="700">WDM (파장분할다중화)</text>
+  <text x="400" y="341" text-anchor="middle" fill="#64748b" font-size="11">하나의 광섬유에 여러 파장 동시 전송</text>
+  <text x="400" y="356" text-anchor="middle" fill="#64748b" font-size="11">DWDM: 80개 이상 채널</text>
+  <text x="400" y="371" text-anchor="middle" fill="#64748b" font-size="11">용량: 수십 Tbps/fiber</text>
+
+  <!-- Speed info box -->
+  <rect x="540" y="305" width="230" height="70" rx="8" fill="white" stroke="#fde68a" stroke-width="1.5"/>
+  <text x="655" y="324" text-anchor="middle" fill="#78350f" font-size="12" font-weight="700">전송 속도</text>
+  <text x="655" y="341" text-anchor="middle" fill="#64748b" font-size="11">일반 SMF: 10~400 Gbps</text>
+  <text x="655" y="356" text-anchor="middle" fill="#64748b" font-size="11">해저 케이블: ~Pbps급</text>
+  <text x="655" y="371" text-anchor="middle" fill="#64748b" font-size="11">지연: 약 5ms/1,000km</text>
+
+  <!-- Decorative light beam -->
+  <line x1="160" y1="210" x2="640" y2="210" stroke="#fbbf24" stroke-width="1" stroke-dasharray="6,3" opacity="0.4"/>
+</svg>

@@ -1,0 +1,48 @@
+<svg viewBox="0 0 800 440" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', Arial, sans-serif">
+  <rect width="800" height="440" fill="#f0fdf4" rx="16"/>
+  <rect x="1" y="1" width="798" height="438" fill="none" stroke="#86efac" stroke-width="2" rx="16"/>
+
+  <text x="400" y="38" text-anchor="middle" fill="#14532d" font-size="20" font-weight="700">광섬유 케이블 단면 구조</text>
+  <text x="400" y="58" text-anchor="middle" fill="#64748b" font-size="13">광섬유는 코어·클래딩·버퍼·재킷의 4층 구조로 이루어져 있습니다</text>
+
+  <!-- Cross section circles (left side) -->
+  <!-- Jacket (outermost) -->
+  <circle cx="220" cy="240" r="110" fill="#fca5a5" stroke="#ef4444" stroke-width="2.5"/>
+  <!-- Buffer -->
+  <circle cx="220" cy="240" r="82" fill="#fde68a" stroke="#f59e0b" stroke-width="2"/>
+  <!-- Cladding -->
+  <circle cx="220" cy="240" r="58" fill="#93c5fd" stroke="#3b82f6" stroke-width="2"/>
+  <!-- Core -->
+  <circle cx="220" cy="240" r="25" fill="#1d4ed8" stroke="#1e40af" stroke-width="2"/>
+  <text x="220" y="244" text-anchor="middle" fill="white" font-size="11" font-weight="700">코어</text>
+
+  <!-- Labels with lines -->
+  <!-- Core label -->
+  <line x1="245" y1="225" x2="310" y2="190" stroke="#1d4ed8" stroke-width="1.5" stroke-dasharray="4,2"/>
+  <text x="315" y="188" fill="#1d4ed8" font-size="13" font-weight="600">① 코어 (Core)</text>
+  <text x="315" y="202" fill="#64748b" font-size="11">직경 9μm(SM) / 50μm(MM)</text>
+  <text x="315" y="215" fill="#64748b" font-size="11">유리(SiO₂) · 굴절률 높음</text>
+
+  <!-- Cladding label -->
+  <line x1="278" y1="240" x2="340" y2="240" stroke="#3b82f6" stroke-width="1.5" stroke-dasharray="4,2"/>
+  <text x="345" y="238" fill="#2563eb" font-size="13" font-weight="600">② 클래딩 (Cladding)</text>
+  <text x="345" y="253" fill="#64748b" font-size="11">직경 125μm · 굴절률 낮음</text>
+  <text x="345" y="266" fill="#64748b" font-size="11">전반사 조건 형성</text>
+
+  <!-- Buffer label -->
+  <line x1="290" y1="280" x2="345" y2="300" stroke="#d97706" stroke-width="1.5" stroke-dasharray="4,2"/>
+  <text x="350" y="298" fill="#d97706" font-size="13" font-weight="600">③ 버퍼 코팅 (Buffer)</text>
+  <text x="350" y="313" fill="#64748b" font-size="11">직경 250μm · 자외선 경화 아크릴</text>
+  <text x="350" y="326" fill="#64748b" font-size="11">외부 충격·습기로부터 보호</text>
+
+  <!-- Jacket label -->
+  <line x1="250" y1="340" x2="350" y2="360" stroke="#dc2626" stroke-width="1.5" stroke-dasharray="4,2"/>
+  <text x="355" y="358" fill="#dc2626" font-size="13" font-weight="600">④ 재킷 (Jacket)</text>
+  <text x="355" y="373" fill="#64748b" font-size="11">PVC · PE 등 외피 보호층</text>
+  <text x="355" y="386" fill="#64748b" font-size="11">색상 코딩으로 케이블 식별</text>
+
+  <!-- Size comparison bar -->
+  <rect x="30" y="390" width="760" height="38" rx="8" fill="white" stroke="#bbf7d0" stroke-width="1.5"/>
+  <text x="400" y="406" text-anchor="middle" fill="#166534" font-size="12" font-weight="600">크기 비교</text>
+  <text x="400" y="421" text-anchor="middle" fill="#64748b" font-size="11">코어 9μm ≈ 머리카락 두께(70μm)의 1/8 · 클래딩 125μm ≈ 머리카락 2가닥 · 전체 케이블 3~10mm</text>
+</svg>
