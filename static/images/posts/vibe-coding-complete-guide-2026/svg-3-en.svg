@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 500" width="820" height="500">
+  <rect width="820" height="500" fill="#FFFFFF"/>
+  <rect x="0" y="0" width="820" height="60" fill="#FDF4FF" rx="0"/>
+  <text x="410" y="22" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#581C87">Top AI Coding Tools Compared — 2026</text>
+  <text x="410" y="46" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#475569">Claude Code · Cursor · GitHub Copilot · Gemini CLI</text>
+
+  <!-- Claude Code -->
+  <rect x="30" y="80" width="180" height="370" rx="12" fill="#FDF4FF" stroke="#A855F7" stroke-width="2"/>
+  <text x="120" y="108" text-anchor="middle" font-family="Arial, sans-serif" font-size="28">🤖</text>
+  <text x="120" y="132" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#7E22CE">Claude Code</text>
+  <text x="120" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#9333EA">by Anthropic</text>
+  <line x1="50" y1="162" x2="190" y2="162" stroke="#E9D5FF" stroke-width="1"/>
+  <text x="120" y="182" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#6B21A8">Interface</text>
+  <text x="120" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#475569">CLI (Terminal)</text>
+  <text x="120" y="228" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#6B21A8">Strengths</text>
+  <text x="120" y="248" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#475569">Multi-step tasks</text>
+  <text x="120" y="266" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#475569">Direct file editing</text>
+  <text x="120" y="284" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#475569">Command execution</text>
+  <text x="120" y="302" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#475569">Large codebases</text>
+  <text x="120" y="328" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#6B21A8">Best For</text>
+  <text x="120" y="348" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#475569">Refactoring, bug tracing</text>
+  <text x="120" y="366" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#475569">Automation scripts</text>
+  <rect x="50" y="390" width="140" height="28" rx="6" fill="#A855F7"/>
+  <text x="120" y="409" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#FFFFFF">Power Users ★★★★★</text>
+
+  <!-- Cursor -->
+  <rect x="225" y="80" width="180" height="370" rx="12" fill="#EFF6FF" stroke="#3B82F6" stroke-width="2"/>
+  <text x="315" y="108" text-anchor="middle" font-family="Arial, sans-serif" font-size="28">⌨️</text>
+  <text x="315" y="132" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1D4ED8">Cursor</text>
+  <text x="315" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#3B82F6">AI-First Editor</text>
+  <line x1="245" y1="162" x2="385" y2="162" stroke="#BFDBFE" stroke-width="1"/>
+  <text x="315" y="182" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#1E40AF">Interface</text>
+  <text x="315" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#475569">VS Code-based GUI</text>
+  <text x="315" y="228" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#1E40AF">Strengths</text>
+  <text x="315" y="248" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#475569">Ctrl+K code generation</text>
+  <text x="315" y="266" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#475569">Composer multi-file edits</text>
+  <text x="315" y="284" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#475569">Intuitive UI</text>
+  <text x="315" y="302" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#475569">Low learning curve</text>
+  <text x="315" y="328" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#1E40AF">Best For</text>
+  <text x="315" y="348" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#475569">Project-wide changes</text>
+  <text x="315" y="366" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#475569">UI/UX development</text>
+  <rect x="245" y="390" width="140" height="28" rx="6" fill="#3B82F6"/>
+  <text x="315" y="409" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#FFFFFF">Beginners ★★★★★</text>
+
+  <!-- GitHub Copilot -->
+  <rect x="420" y="80" width="180" height="370" rx="12" fill="#F0FDF4" stroke="#22C55E" stroke-width="2"/>
+  <text x="510" y="108" text-anchor="middle" font-family="Arial, sans-serif" font-size="28">🐙</text>
+  <text x="510" y="132" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#15803D">GitHub Copilot</text>
+  <text x="510" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#22C55E">by GitHub/Microsoft</text>
+  <line x1="440" y1="162" x2="580" y2="162" stroke="#BBF7D0" stroke-width="1"/>
+  <text x="510" y="182" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#166534">Interface</text>
+  <text x="510" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#475569">IDE Extension</text>
+  <text x="510" y="228" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#166534">Strengths</text>
+  <text x="510" y="248" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#475569">Real-time autocomplete</text>
+  <text x="510" y="266" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#475569">GitHub deep integration</text>
+  <text x="510" y="284" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#475569">PR &amp; issue linking</text>
+  <text x="510" y="302" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#475569">Multi-IDE support</text>
+  <text x="510" y="328" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#166534">Best For</text>
+  <text x="510" y="348" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#475569">Day-to-day coding</text>
+  <text x="510" y="366" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#475569">GitHub workflows</text>
+  <rect x="440" y="390" width="140" height="28" rx="6" fill="#22C55E"/>
+  <text x="510" y="409" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#FFFFFF">General Use ★★★★☆</text>
+
+  <!-- Gemini CLI -->
+  <rect x="615" y="80" width="180" height="370" rx="12" fill="#FFFBEB" stroke="#F59E0B" stroke-width="2"/>
+  <text x="705" y="108" text-anchor="middle" font-family="Arial, sans-serif" font-size="28">✦</text>
+  <text x="705" y="132" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#B45309">Gemini CLI</text>
+  <text x="705" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#F59E0B">by Google</text>
+  <line x1="635" y1="162" x2="775" y2="162" stroke="#FDE68A" stroke-width="1"/>
+  <text x="705" y="182" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#92400E">Interface</text>
+  <text x="705" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#475569">CLI (Open Source)</text>
+  <text x="705" y="228" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#92400E">Strengths</text>
+  <text x="705" y="248" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#475569">1M token context</text>
+  <text x="705" y="266" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#475569">Current doc lookup</text>
+  <text x="705" y="284" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#475569">Google Search grounding</text>
+  <text x="705" y="302" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#475569">Free &amp; open source</text>
+  <text x="705" y="328" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#92400E">Best For</text>
+  <text x="705" y="348" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#475569">Large codebase analysis</text>
+  <text x="705" y="366" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#475569">Library exploration</text>
+  <rect x="635" y="390" width="140" height="28" rx="6" fill="#F59E0B"/>
+  <text x="705" y="409" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#FFFFFF">Cost Efficiency ★★★★☆</text>
+
+  <text x="410" y="470" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#94A3B8">AI Coding Tools Comparison · 2026</text>
+</svg>

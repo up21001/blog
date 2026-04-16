@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 500" width="820" height="500">
+  <rect width="820" height="500" fill="#FFFFFF"/>
+  <rect x="0" y="0" width="820" height="60" fill="#FDF4FF" rx="0"/>
+  <text x="410" y="22" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#581C87">주요 AI 코딩 도구 비교 2026</text>
+  <text x="410" y="46" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#475569">Claude Code · Cursor · GitHub Copilot · Gemini CLI</text>
+
+  <!-- Claude Code -->
+  <rect x="30" y="80" width="180" height="370" rx="12" fill="#FDF4FF" stroke="#A855F7" stroke-width="2"/>
+  <text x="120" y="108" text-anchor="middle" font-family="Arial, sans-serif" font-size="28">🤖</text>
+  <text x="120" y="132" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#7E22CE">Claude Code</text>
+  <text x="120" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#9333EA">by Anthropic</text>
+  <line x1="50" y1="162" x2="190" y2="162" stroke="#E9D5FF" stroke-width="1"/>
+  <text x="120" y="182" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#6B21A8">인터페이스</text>
+  <text x="120" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#475569">CLI (터미널)</text>
+  <text x="120" y="228" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#6B21A8">강점</text>
+  <text x="120" y="248" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#475569">멀티스텝 작업</text>
+  <text x="120" y="266" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#475569">파일 직접 수정</text>
+  <text x="120" y="284" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#475569">명령어 실행</text>
+  <text x="120" y="302" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#475569">대형 코드베이스</text>
+  <text x="120" y="328" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#6B21A8">최적 용도</text>
+  <text x="120" y="348" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#475569">리팩토링, 버그 추적</text>
+  <text x="120" y="366" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#475569">자동화 스크립트</text>
+  <rect x="50" y="390" width="140" height="28" rx="6" fill="#A855F7"/>
+  <text x="120" y="409" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#FFFFFF">파워유저 추천 ★★★★★</text>
+
+  <!-- Cursor -->
+  <rect x="225" y="80" width="180" height="370" rx="12" fill="#EFF6FF" stroke="#3B82F6" stroke-width="2"/>
+  <text x="315" y="108" text-anchor="middle" font-family="Arial, sans-serif" font-size="28">⌨️</text>
+  <text x="315" y="132" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1D4ED8">Cursor</text>
+  <text x="315" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#3B82F6">AI-First Editor</text>
+  <line x1="245" y1="162" x2="385" y2="162" stroke="#BFDBFE" stroke-width="1"/>
+  <text x="315" y="182" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#1E40AF">인터페이스</text>
+  <text x="315" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#475569">VS Code 기반 GUI</text>
+  <text x="315" y="228" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#1E40AF">강점</text>
+  <text x="315" y="248" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#475569">Ctrl+K 코드 생성</text>
+  <text x="315" y="266" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#475569">Composer 멀티파일</text>
+  <text x="315" y="284" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#475569">직관적 UI</text>
+  <text x="315" y="302" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#475569">낮은 진입 장벽</text>
+  <text x="315" y="328" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#1E40AF">최적 용도</text>
+  <text x="315" y="348" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#475569">프로젝트 전체 수정</text>
+  <text x="315" y="366" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#475569">UI/UX 개발</text>
+  <rect x="245" y="390" width="140" height="28" rx="6" fill="#3B82F6"/>
+  <text x="315" y="409" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#FFFFFF">입문자 추천 ★★★★★</text>
+
+  <!-- GitHub Copilot -->
+  <rect x="420" y="80" width="180" height="370" rx="12" fill="#F0FDF4" stroke="#22C55E" stroke-width="2"/>
+  <text x="510" y="108" text-anchor="middle" font-family="Arial, sans-serif" font-size="28">🐙</text>
+  <text x="510" y="132" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#15803D">GitHub Copilot</text>
+  <text x="510" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#22C55E">by GitHub/Microsoft</text>
+  <line x1="440" y1="162" x2="580" y2="162" stroke="#BBF7D0" stroke-width="1"/>
+  <text x="510" y="182" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#166534">인터페이스</text>
+  <text x="510" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#475569">IDE 확장 프로그램</text>
+  <text x="510" y="228" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#166534">강점</text>
+  <text x="510" y="248" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#475569">실시간 자동 완성</text>
+  <text x="510" y="266" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#475569">GitHub 완전 통합</text>
+  <text x="510" y="284" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#475569">PR·이슈 연동</text>
+  <text x="510" y="302" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#475569">다양한 IDE 지원</text>
+  <text x="510" y="328" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#166534">최적 용도</text>
+  <text x="510" y="348" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#475569">일상적인 코딩 보조</text>
+  <text x="510" y="366" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#475569">GitHub 워크플로우</text>
+  <rect x="440" y="390" width="140" height="28" rx="6" fill="#22C55E"/>
+  <text x="510" y="409" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#FFFFFF">범용 추천 ★★★★☆</text>
+
+  <!-- Gemini CLI -->
+  <rect x="615" y="80" width="180" height="370" rx="12" fill="#FFFBEB" stroke="#F59E0B" stroke-width="2"/>
+  <text x="705" y="108" text-anchor="middle" font-family="Arial, sans-serif" font-size="28">✦</text>
+  <text x="705" y="132" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#B45309">Gemini CLI</text>
+  <text x="705" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#F59E0B">by Google</text>
+  <line x1="635" y1="162" x2="775" y2="162" stroke="#FDE68A" stroke-width="1"/>
+  <text x="705" y="182" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#92400E">인터페이스</text>
+  <text x="705" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#475569">CLI (오픈소스)</text>
+  <text x="705" y="228" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#92400E">강점</text>
+  <text x="705" y="248" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#475569">100만 토큰 컨텍스트</text>
+  <text x="705" y="266" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#475569">최신 문서 참조</text>
+  <text x="705" y="284" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#475569">Google 검색 연동</text>
+  <text x="705" y="302" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#475569">무료 오픈소스</text>
+  <text x="705" y="328" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#92400E">최적 용도</text>
+  <text x="705" y="348" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#475569">대용량 코드 분석</text>
+  <text x="705" y="366" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#475569">라이브러리 탐색</text>
+  <rect x="635" y="390" width="140" height="28" rx="6" fill="#F59E0B"/>
+  <text x="705" y="409" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#FFFFFF">비용 효율 ★★★★☆</text>
+
+  <text x="410" y="470" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#94A3B8">AI 코딩 도구 비교 · 2026</text>
+</svg>

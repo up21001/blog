@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 480" width="820" height="480">
+  <rect width="820" height="480" fill="#FFFFFF"/>
+  <rect x="0" y="0" width="820" height="60" fill="#FFF7ED" rx="0"/>
+  <text x="410" y="22" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#7C2D12">Vibe Coding Real-World Use Cases</text>
+  <text x="410" y="46" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#475569">Six Core Areas Where You Can Apply Vibe Coding Right Now</text>
+
+  <!-- Card 1 -->
+  <rect x="30" y="80" width="240" height="160" rx="12" fill="#EFF6FF" stroke="#3B82F6" stroke-width="1.5"/>
+  <text x="150" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="30">🌐</text>
+  <text x="150" y="143" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1D4ED8">Web Prototyping</text>
+  <text x="150" y="165" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#475569">Turn ideas into working apps</text>
+  <text x="150" y="183" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#475569">in hours, not weeks</text>
+  <text x="150" y="203" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#3B82F6">React / Next.js / Svelte</text>
+  <text x="150" y="225" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#64748B">✓ Startup MVP development</text>
+
+  <!-- Card 2 -->
+  <rect x="290" y="80" width="240" height="160" rx="12" fill="#F0FDF4" stroke="#22C55E" stroke-width="1.5"/>
+  <text x="410" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="30">📊</text>
+  <text x="410" y="143" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#15803D">Data Analysis</text>
+  <text x="410" y="165" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#475569">Non-devs write Python scripts</text>
+  <text x="410" y="183" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#475569">for data processing &amp; charts</text>
+  <text x="410" y="203" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#22C55E">pandas / matplotlib / seaborn</text>
+  <text x="410" y="225" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#64748B">✓ Marketing &amp; analytics teams</text>
+
+  <!-- Card 3 -->
+  <rect x="550" y="80" width="240" height="160" rx="12" fill="#FDF4FF" stroke="#A855F7" stroke-width="1.5"/>
+  <text x="670" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="30">🔌</text>
+  <text x="670" y="143" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#7E22CE">API Integration</text>
+  <text x="670" y="165" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#475569">REST APIs, DB connections</text>
+  <text x="670" y="183" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#475569">backend logic fast</text>
+  <text x="670" y="203" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#A855F7">FastAPI / Express / Supabase</text>
+  <text x="670" y="225" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#64748B">✓ Automate backend boilerplate</text>
+
+  <!-- Card 4 -->
+  <rect x="30" y="260" width="240" height="160" rx="12" fill="#FFFBEB" stroke="#F59E0B" stroke-width="1.5"/>
+  <text x="150" y="295" text-anchor="middle" font-family="Arial, sans-serif" font-size="30">⚙️</text>
+  <text x="150" y="323" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#B45309">Automation Scripts</text>
+  <text x="150" y="345" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#475569">Repetitive tasks, file handling</text>
+  <text x="150" y="363" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#475569">web scraping automation</text>
+  <text x="150" y="383" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#F59E0B">Python / Bash / PowerShell</text>
+  <text x="150" y="403" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#64748B">✓ Ops &amp; DevOps teams</text>
+
+  <!-- Card 5 -->
+  <rect x="290" y="260" width="240" height="160" rx="12" fill="#FFF1F2" stroke="#F43F5E" stroke-width="1.5"/>
+  <text x="410" y="295" text-anchor="middle" font-family="Arial, sans-serif" font-size="30">🎨</text>
+  <text x="410" y="323" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#BE123C">UI Component Generation</text>
+  <text x="410" y="345" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#475569">Design to code conversion</text>
+  <text x="410" y="363" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#475569">Responsive layouts instantly</text>
+  <text x="410" y="383" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#F43F5E">Tailwind / shadcn/ui</text>
+  <text x="410" y="403" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#64748B">✓ Designers &amp; publishers</text>
+
+  <!-- Card 6 -->
+  <rect x="550" y="260" width="240" height="160" rx="12" fill="#F0F9FF" stroke="#0EA5E9" stroke-width="1.5"/>
+  <text x="670" y="295" text-anchor="middle" font-family="Arial, sans-serif" font-size="30">🧪</text>
+  <text x="670" y="323" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#0369A1">Test Code Generation</text>
+  <text x="670" y="345" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#475569">Existing code → unit tests</text>
+  <text x="670" y="363" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#475569">Rapid coverage improvement</text>
+  <text x="670" y="383" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#0EA5E9">Jest / pytest / Vitest</text>
+  <text x="670" y="403" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#64748B">✓ QA &amp; dev team productivity</text>
+
+  <text x="410" y="450" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#94A3B8">Vibe Coding Use Cases · 2026</text>
+</svg>

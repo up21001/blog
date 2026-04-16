@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 500" width="820" height="500">
+  <rect width="820" height="500" fill="#FFFFFF"/>
+  <rect x="0" y="0" width="820" height="60" fill="#F0F9FF" rx="0"/>
+  <text x="410" y="22" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#0C4A6E">주요 기업 양자 컴퓨팅 현황 2026</text>
+  <text x="410" y="46" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#475569">구글 · IBM · 마이크로소프트 · IonQ — 접근 방식과 최신 성과 비교</text>
+
+  <!-- Google -->
+  <rect x="30" y="80" width="180" height="370" rx="12" fill="#FFF7ED" stroke="#F97316" stroke-width="2"/>
+  <text x="120" y="108" text-anchor="middle" font-family="Arial, sans-serif" font-size="26">🔵</text>
+  <text x="120" y="132" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#C2410C">Google</text>
+  <text x="120" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#F97316">Quantum AI</text>
+  <line x1="50" y1="162" x2="190" y2="162" stroke="#FED7AA" stroke-width="1"/>
+  <text x="120" y="182" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#9A3412">방식</text>
+  <text x="120" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#475569">초전도 큐비트</text>
+  <text x="120" y="226" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#9A3412">최신 성과</text>
+  <text x="120" y="246" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#475569">윌로우 105큐비트</text>
+  <text x="120" y="264" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#475569">슈퍼컴 10²⁵년 계산</text>
+  <text x="120" y="282" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#475569">5분에 완료 (2024)</text>
+  <text x="120" y="308" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#9A3412">강점</text>
+  <text x="120" y="328" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#475569">큐비트 증가 시</text>
+  <text x="120" y="346" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#475569">오류율 감소 첫 달성</text>
+  <rect x="50" y="380" width="140" height="42" rx="8" fill="#FED7AA"/>
+  <text x="120" y="398" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#C2410C">오류 수정 분야</text>
+  <text x="120" y="414" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#9A3412">선도 기업</text>
+
+  <!-- IBM -->
+  <rect x="225" y="80" width="180" height="370" rx="12" fill="#EFF6FF" stroke="#3B82F6" stroke-width="2"/>
+  <text x="315" y="108" text-anchor="middle" font-family="Arial, sans-serif" font-size="26">🔷</text>
+  <text x="315" y="132" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1D4ED8">IBM</text>
+  <text x="315" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#3B82F6">IBM Quantum</text>
+  <line x1="245" y1="162" x2="385" y2="162" stroke="#BFDBFE" stroke-width="1"/>
+  <text x="315" y="182" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#1E40AF">방식</text>
+  <text x="315" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#475569">초전도 큐비트</text>
+  <text x="315" y="226" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#1E40AF">최신 성과</text>
+  <text x="315" y="246" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#475569">Condor 1000+큐비트</text>
+  <text x="315" y="264" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#475569">Heron 저오류율</text>
+  <text x="315" y="282" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#475569">클라우드 개방 (2024)</text>
+  <text x="315" y="308" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#1E40AF">강점</text>
+  <text x="315" y="328" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#475569">Qiskit 오픈소스</text>
+  <text x="315" y="346" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#475569">최대 생태계 구축</text>
+  <rect x="245" y="380" width="140" height="42" rx="8" fill="#DBEAFE"/>
+  <text x="315" y="398" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#1D4ED8">접근성·생태계</text>
+  <text x="315" y="414" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#1E40AF">선도 기업</text>
+
+  <!-- Microsoft -->
+  <rect x="420" y="80" width="180" height="370" rx="12" fill="#F0FDF4" stroke="#22C55E" stroke-width="2"/>
+  <text x="510" y="108" text-anchor="middle" font-family="Arial, sans-serif" font-size="26">🟩</text>
+  <text x="510" y="132" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#15803D">Microsoft</text>
+  <text x="510" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#22C55E">Azure Quantum</text>
+  <line x1="440" y1="162" x2="580" y2="162" stroke="#BBF7D0" stroke-width="1"/>
+  <text x="510" y="182" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#166534">방식</text>
+  <text x="510" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#475569">위상 큐비트</text>
+  <text x="510" y="226" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#166534">최신 성과</text>
+  <text x="510" y="246" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#475569">마요라나 1 칩</text>
+  <text x="510" y="264" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#475569">위상 큐비트 실증</text>
+  <text x="510" y="282" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#475569">(2025년 발표)</text>
+  <text x="510" y="308" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#166534">강점</text>
+  <text x="510" y="328" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#475569">이론적 최고 안정성</text>
+  <text x="510" y="346" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#475569">Azure 클라우드 통합</text>
+  <rect x="440" y="380" width="140" height="42" rx="8" fill="#DCFCE7"/>
+  <text x="510" y="398" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#15803D">장기 안정성</text>
+  <text x="510" y="414" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#166534">가장 유망한 방향</text>
+
+  <!-- IonQ -->
+  <rect x="615" y="80" width="180" height="370" rx="12" fill="#FDF4FF" stroke="#A855F7" stroke-width="2"/>
+  <text x="705" y="108" text-anchor="middle" font-family="Arial, sans-serif" font-size="26">🟣</text>
+  <text x="705" y="132" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#7E22CE">IonQ</text>
+  <text x="705" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#A855F7">Ion Trap</text>
+  <line x1="635" y1="162" x2="775" y2="162" stroke="#E9D5FF" stroke-width="1"/>
+  <text x="705" y="182" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#6B21A8">방식</text>
+  <text x="705" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#475569">이온 트랩</text>
+  <text x="705" y="226" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#6B21A8">최신 성과</text>
+  <text x="705" y="246" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#475569">높은 양자 볼륨</text>
+  <text x="705" y="264" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#475569">AWS/Azure 클라우드</text>
+  <text x="705" y="282" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#475569">상업 파트너십 확대</text>
+  <text x="705" y="308" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#6B21A8">강점</text>
+  <text x="705" y="328" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#475569">큐비트 품질 균일</text>
+  <text x="705" y="346" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#475569">특정 분야 우위</text>
+  <rect x="635" y="380" width="140" height="42" rx="8" fill="#F3E8FF"/>
+  <text x="705" y="398" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#7E22CE">큐비트 품질</text>
+  <text x="705" y="414" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#6B21A8">이온 트랩 선두</text>
+
+  <text x="410" y="468" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#94A3B8">양자 컴퓨팅 기업 비교 · 2026</text>
+</svg>

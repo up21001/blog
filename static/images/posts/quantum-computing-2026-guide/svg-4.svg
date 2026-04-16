@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 480" width="820" height="480">
+  <rect width="820" height="480" fill="#FFFFFF"/>
+  <rect x="0" y="0" width="820" height="60" fill="#FFFBEB" rx="0"/>
+  <text x="410" y="22" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#78350F">양자 컴퓨팅이 바꿀 4대 산업 분야</text>
+  <text x="410" y="46" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#475569">실용화 시 가장 먼저 혁신이 일어날 핵심 영역</text>
+
+  <!-- Card 1: Drug Discovery -->
+  <rect x="30" y="80" width="370" height="170" rx="14" fill="#EFF6FF" stroke="#3B82F6" stroke-width="2"/>
+  <text x="50" y="116" font-family="Arial, sans-serif" font-size="32">💊</text>
+  <text x="105" y="108" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#1D4ED8">신약 개발 · 분자 설계</text>
+  <text x="105" y="128" font-family="Arial, sans-serif" font-size="12" fill="#475569">현재 가장 기대가 큰 응용 분야</text>
+  <line x1="50" y1="140" x2="380" y2="140" stroke="#BFDBFE" stroke-width="1"/>
+  <text x="50" y="164" font-family="Arial, sans-serif" font-size="12" fill="#334155">• 분자·단백질 상호작용 정밀 시뮬레이션</text>
+  <text x="50" y="184" font-family="Arial, sans-serif" font-size="12" fill="#334155">• 신약 후보 물질 탐색 기간 수십 년→수 년</text>
+  <text x="50" y="204" font-family="Arial, sans-serif" font-size="12" fill="#334155">• 개인 맞춤형 치료제 · 신소재 원자 단위 설계</text>
+  <rect x="50" y="220" width="330" height="22" rx="6" fill="#DBEAFE"/>
+  <text x="215" y="236" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#1E40AF">관련 기업: 화이자, 로슈, BASF, 삼성SDI</text>
+
+  <!-- Card 2: Cryptography -->
+  <rect x="420" y="80" width="370" height="170" rx="14" fill="#FFF1F2" stroke="#F43F5E" stroke-width="2"/>
+  <text x="440" y="116" font-family="Arial, sans-serif" font-size="32">🔐</text>
+  <text x="495" y="108" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#BE123C">암호화 · 사이버 보안</text>
+  <text x="495" y="128" font-family="Arial, sans-serif" font-size="12" fill="#475569">지금 당장 대비가 필요한 분야</text>
+  <line x1="440" y1="140" x2="770" y2="140" stroke="#FECDD3" stroke-width="1"/>
+  <text x="440" y="164" font-family="Arial, sans-serif" font-size="12" fill="#334155">• RSA 암호화를 쇼어 알고리즘으로 해독 가능</text>
+  <text x="440" y="184" font-family="Arial, sans-serif" font-size="12" fill="#334155">• NIST 양자 내성 암호화 표준 이미 제정 완료</text>
+  <text x="440" y="204" font-family="Arial, sans-serif" font-size="12" fill="#334155">• "지금 수집, 나중에 해독" 공격 현실화 위험</text>
+  <rect x="440" y="220" width="330" height="22" rx="6" fill="#FFE4E6"/>
+  <text x="605" y="236" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#BE123C">즉각적 대응 필요 — 전환 계획 수립 시급</text>
+
+  <!-- Card 3: Finance -->
+  <rect x="30" y="270" width="370" height="170" rx="14" fill="#F0FDF4" stroke="#22C55E" stroke-width="2"/>
+  <text x="50" y="306" font-family="Arial, sans-serif" font-size="32">📈</text>
+  <text x="105" y="298" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#15803D">금융 최적화 · 리스크 관리</text>
+  <text x="105" y="318" font-family="Arial, sans-serif" font-size="12" fill="#475569">투자 가장 활발한 분야</text>
+  <line x1="50" y1="330" x2="380" y2="330" stroke="#BBF7D0" stroke-width="1"/>
+  <text x="50" y="354" font-family="Arial, sans-serif" font-size="12" fill="#334155">• 포트폴리오 최적화 · 파생상품 가격 책정</text>
+  <text x="50" y="374" font-family="Arial, sans-serif" font-size="12" fill="#334155">• QAOA로 조합 최적화 문제 고속 처리</text>
+  <text x="50" y="394" font-family="Arial, sans-serif" font-size="12" fill="#334155">• 실시간 리스크 시뮬레이션 정밀도 향상</text>
+  <rect x="50" y="410" width="330" height="22" rx="6" fill="#DCFCE7"/>
+  <text x="215" y="426" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#166534">관련 기업: JP모건, 골드만삭스, 블랙록</text>
+
+  <!-- Card 4: AI/ML -->
+  <rect x="420" y="270" width="370" height="170" rx="14" fill="#FDF4FF" stroke="#A855F7" stroke-width="2"/>
+  <text x="440" y="306" font-family="Arial, sans-serif" font-size="32">🧠</text>
+  <text x="495" y="298" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#7E22CE">인공지능 · 머신러닝</text>
+  <text x="495" y="318" font-family="Arial, sans-serif" font-size="12" fill="#475569">장기적으로 가장 파급력 큰 분야</text>
+  <line x1="440" y1="330" x2="770" y2="330" stroke="#E9D5FF" stroke-width="1"/>
+  <text x="440" y="354" font-family="Arial, sans-serif" font-size="12" fill="#334155">• 양자 머신러닝(QML)으로 학습 속도 향상</text>
+  <text x="440" y="374" font-family="Arial, sans-serif" font-size="12" fill="#334155">• 대규모 신경망 최적화 문제 고속 해결</text>
+  <text x="440" y="394" font-family="Arial, sans-serif" font-size="12" fill="#334155">• AI 훈련 비용·시간 극적 절감 가능성</text>
+  <rect x="440" y="410" width="330" height="22" rx="6" fill="#F3E8FF"/>
+  <text x="605" y="426" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#7E22CE">관련 기업: 구글, IBM, 마이크로소프트, NVIDIA</text>
+
+  <text x="410" y="466" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#94A3B8">양자 컴퓨팅 응용 분야 · 2026</text>
+</svg>

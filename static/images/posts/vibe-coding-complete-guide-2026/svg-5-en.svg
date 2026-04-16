@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 480" width="820" height="480">
+  <rect width="820" height="480" fill="#FFFFFF"/>
+  <rect x="0" y="0" width="820" height="60" fill="#F0FDF4" rx="0"/>
+  <text x="410" y="22" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#14532D">5 Vibe Coding Best Practices</text>
+  <text x="410" y="46" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#475569">Core Principles for Getting Great Results</text>
+
+  <!-- Practice 1 -->
+  <rect x="30" y="80" width="760" height="70" rx="10" fill="#EFF6FF" stroke="#3B82F6" stroke-width="1.5"/>
+  <rect x="30" y="80" width="56" height="70" rx="10" fill="#3B82F6"/>
+  <text x="58" y="122" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#FFFFFF">01</text>
+  <text x="120" y="108" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1D4ED8">Write Specific, Detailed Prompts</text>
+  <text x="120" y="132" font-family="Arial, sans-serif" font-size="12" fill="#475569">Specify your tech stack, feature scope, and constraints. "Make an app" → "Build a Next.js + Prisma + PostgreSQL app with auth and posts."</text>
+
+  <!-- Practice 2 -->
+  <rect x="30" y="165" width="760" height="70" rx="10" fill="#F0FDF4" stroke="#22C55E" stroke-width="1.5"/>
+  <rect x="30" y="165" width="56" height="70" rx="10" fill="#22C55E"/>
+  <text x="58" y="207" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#FFFFFF">02</text>
+  <text x="120" y="193" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#15803D">Break Work into Small, Focused Requests</text>
+  <text x="120" y="217" font-family="Arial, sans-serif" font-size="12" fill="#475569">Asking for a full system at once usually fails. Go step by step: DB schema → API endpoints → frontend. Verify each before moving on.</text>
+
+  <!-- Practice 3 -->
+  <rect x="30" y="250" width="760" height="70" rx="10" fill="#FFFBEB" stroke="#F59E0B" stroke-width="1.5"/>
+  <rect x="30" y="250" width="56" height="70" rx="10" fill="#F59E0B"/>
+  <text x="58" y="292" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#FFFFFF">03</text>
+  <text x="120" y="278" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#B45309">Always Read and Understand the Generated Code</text>
+  <text x="120" y="302" font-family="Arial, sans-serif" font-size="12" fill="#475569">Never run AI code blindly. Ask "explain this code to me," check for security flaws and logic errors before shipping.</text>
+
+  <!-- Practice 4 -->
+  <rect x="30" y="335" width="760" height="70" rx="10" fill="#FDF4FF" stroke="#A855F7" stroke-width="1.5"/>
+  <rect x="30" y="335" width="56" height="70" rx="10" fill="#A855F7"/>
+  <text x="58" y="377" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#FFFFFF">04</text>
+  <text x="120" y="363" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#7E22CE">Commit Often with Git</text>
+  <text x="120" y="387" font-family="Arial, sans-serif" font-size="12" fill="#475569">AI-modified code can introduce unexpected changes. Commit at each milestone so you can roll back cleanly when things go wrong.</text>
+
+  <!-- Practice 5 -->
+  <rect x="30" y="420" width="760" height="38" rx="10" fill="#FFF1F2" stroke="#F43F5E" stroke-width="1.5"/>
+  <rect x="30" y="420" width="56" height="38" rx="10" fill="#F43F5E"/>
+  <text x="58" y="444" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#FFFFFF">05</text>
+  <text x="120" y="436" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#BE123C">Own Security Reviews Personally</text>
+  <text x="430" y="450" font-family="Arial, sans-serif" font-size="12" fill="#475569">Auth, authorization, and input validation must be reviewed by a human before shipping.</text>
+</svg>
