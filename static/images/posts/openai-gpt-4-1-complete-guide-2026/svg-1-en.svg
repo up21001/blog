@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <rect width="800" height="500" fill="#f8f9fa"/>
+  <text x="400" y="38" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" font-weight="bold" fill="#2c3e50">OpenAI GPT-4.1 Model Lineup</text>
+  <text x="400" y="62" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#7f8c8d">Released April 14, 2026 — GPT-4.1 · Mini · Nano</text>
+
+  <!-- GPT-4.1 Card -->
+  <rect x="30" y="85" width="230" height="375" rx="12" fill="#ffffff" stroke="#10a37f" stroke-width="2"/>
+  <rect x="30" y="85" width="230" height="55" rx="12" fill="#10a37f"/>
+  <rect x="30" y="128" width="230" height="12" fill="#10a37f"/>
+  <text x="145" y="118" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#fff">GPT-4.1</text>
+  <text x="145" y="168" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#7f8c8d">Context Window</text>
+  <text x="145" y="190" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#10a37f">1M Tokens</text>
+  <line x1="60" y1="205" x2="230" y2="205" stroke="#ecf0f1" stroke-width="1"/>
+  <text x="145" y="228" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#7f8c8d">Key Strengths</text>
+  <text x="145" y="252" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">Best reasoning capability</text>
+  <text x="145" y="272" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">Major coding improvement</text>
+  <text x="145" y="292" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">High instruction accuracy</text>
+  <line x1="60" y1="308" x2="230" y2="308" stroke="#ecf0f1" stroke-width="1"/>
+  <text x="145" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#7f8c8d">Input (per 1M tokens)</text>
+  <text x="145" y="352" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#2c3e50">$2.00</text>
+  <text x="145" y="375" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#7f8c8d">Output (per 1M tokens)</text>
+  <text x="145" y="397" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#2c3e50">$8.00</text>
+  <text x="145" y="430" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#10a37f">✓ Complex tasks · Professional work</text>
+  <text x="145" y="448" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#10a37f">✓ Agentic pipelines</text>
+
+  <!-- GPT-4.1 Mini Card -->
+  <rect x="285" y="85" width="230" height="375" rx="12" fill="#ffffff" stroke="#3498db" stroke-width="2"/>
+  <rect x="285" y="85" width="230" height="55" rx="12" fill="#3498db"/>
+  <rect x="285" y="128" width="230" height="12" fill="#3498db"/>
+  <text x="400" y="118" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#fff">GPT-4.1 Mini</text>
+  <text x="400" y="168" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#7f8c8d">Context Window</text>
+  <text x="400" y="190" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#3498db">1M Tokens</text>
+  <line x1="315" y1="205" x2="485" y2="205" stroke="#ecf0f1" stroke-width="1"/>
+  <text x="400" y="228" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#7f8c8d">Key Strengths</text>
+  <text x="400" y="252" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">Balanced performance &amp; speed</text>
+  <text x="400" y="272" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">Outperforms GPT-4o</text>
+  <text x="400" y="292" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">Optimal for general apps</text>
+  <line x1="315" y1="308" x2="485" y2="308" stroke="#ecf0f1" stroke-width="1"/>
+  <text x="400" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#7f8c8d">Input (per 1M tokens)</text>
+  <text x="400" y="352" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#2c3e50">$0.40</text>
+  <text x="400" y="375" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#7f8c8d">Output (per 1M tokens)</text>
+  <text x="400" y="397" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#2c3e50">$1.60</text>
+  <text x="400" y="430" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#3498db">✓ General apps · Chatbots</text>
+  <text x="400" y="448" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#3498db">✓ Cost-efficiency priority</text>
+
+  <!-- GPT-4.1 Nano Card -->
+  <rect x="540" y="85" width="230" height="375" rx="12" fill="#ffffff" stroke="#9b59b6" stroke-width="2"/>
+  <rect x="540" y="85" width="230" height="55" rx="12" fill="#9b59b6"/>
+  <rect x="540" y="128" width="230" height="12" fill="#9b59b6"/>
+  <text x="655" y="118" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#fff">GPT-4.1 Nano</text>
+  <text x="655" y="168" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#7f8c8d">Context Window</text>
+  <text x="655" y="190" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#9b59b6">1M Tokens</text>
+  <line x1="570" y1="205" x2="740" y2="205" stroke="#ecf0f1" stroke-width="1"/>
+  <text x="655" y="228" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#7f8c8d">Key Strengths</text>
+  <text x="655" y="252" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">Ultra-low latency</text>
+  <text x="655" y="272" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">Lowest cost model</text>
+  <text x="655" y="292" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">Edge &amp; embedded deployment</text>
+  <line x1="570" y1="308" x2="740" y2="308" stroke="#ecf0f1" stroke-width="1"/>
+  <text x="655" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#7f8c8d">Input (per 1M tokens)</text>
+  <text x="655" y="352" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#2c3e50">$0.10</text>
+  <text x="655" y="375" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#7f8c8d">Output (per 1M tokens)</text>
+  <text x="655" y="397" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#2c3e50">$0.40</text>
+  <text x="655" y="430" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#9b59b6">✓ Bulk automation · Classification</text>
+  <text x="655" y="448" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#9b59b6">✓ Real-time streaming</text>
+
+  <text x="400" y="490" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#95a5a6">All three models share 1M token context · Available via OpenAI API</text>
+</svg>

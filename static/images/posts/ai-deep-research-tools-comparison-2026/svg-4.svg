@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <rect width="800" height="500" fill="#f8f9fa"/>
+  <text x="400" y="38" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#2c3e50">AI Deep Research 활용 사례 TOP 6</text>
+  <text x="400" y="60" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#7f8c8d">실무에서 가장 효과적인 Deep Research 시나리오</text>
+
+  <!-- Card 1 -->
+  <rect x="30" y="80" width="235" height="150" rx="10" fill="#fff" stroke="#6366f1" stroke-width="1.5"/>
+  <rect x="30" y="80" width="235" height="48" rx="10" fill="#6366f1"/>
+  <rect x="30" y="116" width="235" height="12" fill="#6366f1"/>
+  <text x="147" y="108" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#fff">📊 시장 조사</text>
+  <text x="147" y="152" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">경쟁사 분석 · 시장 규모</text>
+  <text x="147" y="172" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">트렌드 · 소비자 인사이트</text>
+  <text x="147" y="202" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#6366f1">추천: Gemini (광범위 탐색)</text>
+
+  <!-- Card 2 -->
+  <rect x="283" y="80" width="235" height="150" rx="10" fill="#fff" stroke="#4285f4" stroke-width="1.5"/>
+  <rect x="283" y="80" width="235" height="48" rx="10" fill="#4285f4"/>
+  <rect x="283" y="116" width="235" height="12" fill="#4285f4"/>
+  <text x="400" y="108" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#fff">🔬 학술 · 기술 조사</text>
+  <text x="400" y="152" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">논문 요약 · 기술 동향</text>
+  <text x="400" y="172" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">특허 · 연구 문헌 탐색</text>
+  <text x="400" y="202" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#4285f4">추천: Gemini + Claude</text>
+
+  <!-- Card 3 -->
+  <rect x="536" y="80" width="234" height="150" rx="10" fill="#fff" stroke="#10a37f" stroke-width="1.5"/>
+  <rect x="536" y="80" width="234" height="48" rx="10" fill="#10a37f"/>
+  <rect x="536" y="116" width="234" height="12" fill="#10a37f"/>
+  <text x="653" y="108" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#fff">💻 기술 스택 비교</text>
+  <text x="653" y="152" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">프레임워크 · 라이브러리 비교</text>
+  <text x="653" y="172" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">성능 벤치마크 · 커뮤니티</text>
+  <text x="653" y="202" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#10a37f">추천: ChatGPT (코드 분석)</text>
+
+  <!-- Card 4 -->
+  <rect x="30" y="248" width="235" height="150" rx="10" fill="#fff" stroke="#e74c3c" stroke-width="1.5"/>
+  <rect x="30" y="248" width="235" height="48" rx="10" fill="#e74c3c"/>
+  <rect x="30" y="284" width="235" height="12" fill="#e74c3c"/>
+  <text x="147" y="276" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#fff">📈 투자 · 산업 분석</text>
+  <text x="147" y="320" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">기업 실적 · 산업 리포트</text>
+  <text x="147" y="340" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">거시경제 지표 분석</text>
+  <text x="147" y="370" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#e74c3c">추천: Perplexity (빠른 업데이트)</text>
+
+  <!-- Card 5 -->
+  <rect x="283" y="248" width="235" height="150" rx="10" fill="#fff" stroke="#f39c12" stroke-width="1.5"/>
+  <rect x="283" y="248" width="235" height="48" rx="10" fill="#f39c12"/>
+  <rect x="283" y="284" width="235" height="12" fill="#f39c12"/>
+  <text x="400" y="276" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#fff">✍️ 콘텐츠 기획</text>
+  <text x="400" y="320" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">블로그 · 보고서 초안</text>
+  <text x="400" y="340" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">SEO 키워드 · 소재 발굴</text>
+  <text x="400" y="370" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#f39c12">추천: Claude (글쓰기 품질)</text>
+
+  <!-- Card 6 -->
+  <rect x="536" y="248" width="234" height="150" rx="10" fill="#fff" stroke="#9b59b6" stroke-width="1.5"/>
+  <rect x="536" y="248" width="234" height="48" rx="10" fill="#9b59b6"/>
+  <rect x="536" y="284" width="234" height="12" fill="#9b59b6"/>
+  <text x="653" y="276" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#fff">⚖️ 법률 · 규제 조사</text>
+  <text x="653" y="320" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">규정 · 법령 최신 동향</text>
+  <text x="653" y="340" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">컴플라이언스 체크리스트</text>
+  <text x="653" y="370" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#9b59b6">추천: Gemini + Claude</text>
+
+  <text x="400" y="432" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#2c3e50">Deep Research ≠ 단순 검색 — 자율 에이전트가 전문 리서처 수준의 보고서 작성</text>
+  <text x="400" y="458" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#95a5a6">평균 5~15분 소요 · 20~100개 소스 종합 · 출처 인용 포함</text>
+</svg>

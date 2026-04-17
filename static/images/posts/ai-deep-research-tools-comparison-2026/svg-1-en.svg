@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <rect width="800" height="500" fill="#f8f9fa"/>
+  <text x="400" y="38" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#2c3e50">What Is AI Deep Research?</text>
+  <text x="400" y="60" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#7f8c8d">Regular AI Search vs AI Deep Research — Complete Comparison</text>
+
+  <rect x="30" y="80" width="350" height="390" rx="12" fill="#ffffff" stroke="#7f8c8d" stroke-width="1.5"/>
+  <rect x="30" y="80" width="350" height="50" rx="12" fill="#7f8c8d"/>
+  <rect x="30" y="118" width="350" height="12" fill="#7f8c8d"/>
+  <text x="205" y="110" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#fff">⚡ Regular AI Search</text>
+
+  <text x="205" y="158" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#7f8c8d">How it works</text>
+  <rect x="60" y="168" width="270" height="38" rx="6" fill="#f8f9fa" stroke="#bdc3c7" stroke-width="1"/>
+  <text x="195" y="192" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">Question → Instant answer (seconds)</text>
+
+  <text x="205" y="228" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#7f8c8d">Research Depth</text>
+  <text x="205" y="250" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#bdc3c7">Shallow</text>
+
+  <text x="205" y="285" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#7f8c8d">Sources Referenced</text>
+  <text x="205" y="307" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#2c3e50">3–5 web pages</text>
+
+  <text x="205" y="338" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#7f8c8d">Output Format</text>
+  <text x="205" y="360" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#2c3e50">Short answer · Link list</text>
+
+  <text x="205" y="395" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#7f8c8d">Time Required</text>
+  <text x="205" y="417" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#2c3e50">~5 sec</text>
+
+  <rect x="60" y="438" width="270" height="22" rx="11" fill="#ecf0f1"/>
+  <text x="195" y="454" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#7f8c8d">Everyday questions · Quick fact checks</text>
+
+  <rect x="420" y="80" width="350" height="390" rx="12" fill="#ffffff" stroke="#6366f1" stroke-width="2"/>
+  <rect x="420" y="80" width="350" height="50" rx="12" fill="#6366f1"/>
+  <rect x="420" y="118" width="350" height="12" fill="#6366f1"/>
+  <text x="595" y="110" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#fff">🔬 AI Deep Research</text>
+
+  <text x="595" y="158" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#7f8c8d">How it works</text>
+  <rect x="450" y="168" width="270" height="38" rx="6" fill="#f0f0ff" stroke="#6366f1" stroke-width="1"/>
+  <text x="585" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">Question → Autonomous search → Multi-step</text>
+  <text x="585" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">analysis → Full report generation</text>
+
+  <text x="595" y="228" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#7f8c8d">Research Depth</text>
+  <text x="595" y="250" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#6366f1">Deep</text>
+
+  <text x="595" y="285" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#7f8c8d">Sources Referenced</text>
+  <text x="595" y="307" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#2c3e50">20–100+ sources auto-explored</text>
+
+  <text x="595" y="338" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#7f8c8d">Output Format</text>
+  <text x="595" y="360" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#2c3e50">Structured in-depth report</text>
+
+  <text x="595" y="395" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#7f8c8d">Time Required</text>
+  <text x="595" y="417" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#6366f1">3–15 min</text>
+
+  <rect x="450" y="438" width="270" height="22" rx="11" fill="#eef2ff" stroke="#6366f1" stroke-width="1"/>
+  <text x="585" y="454" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#6366f1">Complex research · Competitor analysis</text>
+
+  <text x="400" y="490" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#95a5a6">Perplexity · Gemini · ChatGPT · Claude all offer Deep Research features</text>
+</svg>

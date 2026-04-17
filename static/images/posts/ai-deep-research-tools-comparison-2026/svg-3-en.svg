@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <marker id="a" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0,8 3,0 6" fill="#6366f1"/>
+    </marker>
+  </defs>
+  <rect width="800" height="500" fill="#f8f9fa"/>
+  <text x="400" y="36" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#2c3e50">How AI Deep Research Works</text>
+  <text x="400" y="58" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#7f8c8d">Autonomous agent explores dozens of sources and generates a comprehensive report</text>
+
+  <rect x="30" y="80" width="148" height="80" rx="10" fill="#6366f1"/>
+  <text x="104" y="110" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#fff">Step 1</text>
+  <text x="104" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#c7d2fe">User Question</text>
+  <text x="104" y="148" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#c7d2fe">Intent Analysis</text>
+  <line x1="178" y1="120" x2="200" y2="120" stroke="#6366f1" stroke-width="2" marker-end="url(#a)"/>
+
+  <rect x="200" y="80" width="148" height="80" rx="10" fill="#4285f4"/>
+  <text x="274" y="110" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#fff">Step 2</text>
+  <text x="274" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#bfdbfe">Search Planning</text>
+  <text x="274" y="148" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#bfdbfe">Query Generation</text>
+  <line x1="348" y1="120" x2="370" y2="120" stroke="#4285f4" stroke-width="2" marker-end="url(#a)"/>
+
+  <rect x="370" y="80" width="148" height="80" rx="10" fill="#10a37f"/>
+  <text x="444" y="110" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#fff">Step 3</text>
+  <text x="444" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#a7f3d0">Autonomous Search</text>
+  <text x="444" y="148" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#a7f3d0">Source Collection</text>
+  <line x1="518" y1="120" x2="540" y2="120" stroke="#10a37f" stroke-width="2" marker-end="url(#a)"/>
+
+  <rect x="540" y="80" width="148" height="80" rx="10" fill="#f39c12"/>
+  <text x="614" y="110" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#fff">Step 4</text>
+  <text x="614" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#fef3c7">Data Extraction</text>
+  <text x="614" y="148" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#fef3c7">Credibility Check</text>
+
+  <line x1="104" y1="160" x2="104" y2="185" stroke="#6366f1" stroke-width="2" marker-end="url(#a)"/>
+  <line x1="614" y1="160" x2="614" y2="185" stroke="#f39c12" stroke-width="2" marker-end="url(#a)"/>
+
+  <rect x="200" y="185" width="400" height="85" rx="10" fill="#ffffff" stroke="#6366f1" stroke-width="2"/>
+  <text x="400" y="215" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#6366f1">Step 5 — Synthesis &amp; Report Generation</text>
+  <text x="400" y="237" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">Cross-validate sources → Resolve contradictions → Structure findings</text>
+  <text x="400" y="257" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">Attach citations → Generate final report</text>
+  <line x1="104" y1="185" x2="200" y2="228" stroke="#6366f1" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <line x1="614" y1="185" x2="600" y2="228" stroke="#f39c12" stroke-width="1.5" stroke-dasharray="4,3"/>
+
+  <line x1="400" y1="270" x2="400" y2="295" stroke="#6366f1" stroke-width="2" marker-end="url(#a)"/>
+
+  <rect x="100" y="295" width="600" height="90" rx="10" fill="#eef2ff" stroke="#6366f1" stroke-width="1.5"/>
+  <text x="400" y="322" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#6366f1">Final Output: Structured In-Depth Report</text>
+  <text x="220" y="350" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">📋 Table of contents</text>
+  <text x="340" y="350" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">📎 Source citations</text>
+  <text x="460" y="350" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">📊 Data analysis</text>
+  <text x="580" y="350" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">✅ Fact-checked</text>
+  <text x="220" y="372" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#7f8c8d">Organized sections</text>
+  <text x="340" y="372" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#7f8c8d">URL links included</text>
+  <text x="460" y="372" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#7f8c8d">Charts &amp; graphs</text>
+  <text x="580" y="372" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#7f8c8d">Verified</text>
+
+  <rect x="100" y="405" width="600" height="40" rx="8" fill="#fff" stroke="#bdc3c7" stroke-width="1"/>
+  <text x="400" y="422" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#2c3e50">Total time: ~3–15 minutes</text>
+  <text x="400" y="438" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#7f8c8d">Perplexity fastest · Gemini widest coverage · ChatGPT best for data analysis</text>
+
+  <text x="400" y="485" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#95a5a6">Autonomous agent decides its own exploration path — like a human researcher</text>
+</svg>

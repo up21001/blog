@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <rect width="800" height="500" fill="#f8f9fa"/>
+  <text x="400" y="38" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#2c3e50">GPT-4.1 Use Case Guide by Model</text>
+  <text x="400" y="60" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#7f8c8d">Choosing the right model for your task</text>
+
+  <rect x="30" y="78" width="230" height="38" rx="8" fill="#10a37f"/>
+  <text x="145" y="102" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#fff">GPT-4.1</text>
+  <rect x="285" y="78" width="230" height="38" rx="8" fill="#3498db"/>
+  <text x="400" y="102" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#fff">GPT-4.1 Mini</text>
+  <rect x="540" y="78" width="230" height="38" rx="8" fill="#9b59b6"/>
+  <text x="655" y="102" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#fff">GPT-4.1 Nano</text>
+
+  <rect x="30" y="128" width="230" height="60" rx="6" fill="#fff" stroke="#10a37f" stroke-width="1"/>
+  <text x="145" y="152" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#10a37f">Complex Coding</text>
+  <text x="145" y="172" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">Full app design · Bug fixing</text>
+  <rect x="285" y="128" width="230" height="60" rx="6" fill="#fff" stroke="#3498db" stroke-width="1"/>
+  <text x="400" y="152" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#3498db">General Code Assist</text>
+  <text x="400" y="172" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">Autocomplete · Code explain</text>
+  <rect x="540" y="128" width="230" height="60" rx="6" fill="#fff" stroke="#9b59b6" stroke-width="1"/>
+  <text x="655" y="152" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#9b59b6">Simple Snippets</text>
+  <text x="655" y="172" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">Basic function generation</text>
+
+  <rect x="30" y="200" width="230" height="60" rx="6" fill="#fff" stroke="#10a37f" stroke-width="1"/>
+  <text x="145" y="224" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#10a37f">AI Agent Building</text>
+  <text x="145" y="244" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">Multi-step tool calling</text>
+  <rect x="285" y="200" width="230" height="60" rx="6" fill="#fff" stroke="#3498db" stroke-width="1"/>
+  <text x="400" y="224" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#3498db">Conversational Chatbot</text>
+  <text x="400" y="244" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">Customer support · Consultation</text>
+  <rect x="540" y="200" width="230" height="60" rx="6" fill="#fff" stroke="#9b59b6" stroke-width="1"/>
+  <text x="655" y="224" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#9b59b6">Text Classification</text>
+  <text x="655" y="244" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">Sentiment analysis · Tagging</text>
+
+  <rect x="30" y="272" width="230" height="60" rx="6" fill="#fff" stroke="#10a37f" stroke-width="1"/>
+  <text x="145" y="296" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#10a37f">Long Document Analysis</text>
+  <text x="145" y="316" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">Full 1M context utilization</text>
+  <rect x="285" y="272" width="230" height="60" rx="6" fill="#fff" stroke="#3498db" stroke-width="1"/>
+  <text x="400" y="296" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#3498db">Summary &amp; Translation</text>
+  <text x="400" y="316" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">Mid-length document handling</text>
+  <rect x="540" y="272" width="230" height="60" rx="6" fill="#fff" stroke="#9b59b6" stroke-width="1"/>
+  <text x="655" y="296" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#9b59b6">Keyword Extraction</text>
+  <text x="655" y="316" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">Short text processing</text>
+
+  <rect x="30" y="344" width="230" height="60" rx="6" fill="#fff" stroke="#10a37f" stroke-width="1"/>
+  <text x="145" y="368" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#10a37f">Image Analysis</text>
+  <text x="145" y="388" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">Complex visual reasoning</text>
+  <rect x="285" y="344" width="230" height="60" rx="6" fill="#fff" stroke="#3498db" stroke-width="1"/>
+  <text x="400" y="368" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#3498db">Image Description</text>
+  <text x="400" y="388" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">General image understanding</text>
+  <rect x="540" y="344" width="230" height="60" rx="6" fill="#ecf0f1" stroke="#bdc3c7" stroke-width="1"/>
+  <text x="655" y="368" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#95a5a6">Text only</text>
+  <text x="655" y="388" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#95a5a6">No multimodal support</text>
+
+  <rect x="30" y="420" width="230" height="30" rx="6" fill="#10a37f" opacity="0.15"/>
+  <text x="145" y="440" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#10a37f">💰 $2.00/$8.00 per 1M</text>
+  <rect x="285" y="420" width="230" height="30" rx="6" fill="#3498db" opacity="0.15"/>
+  <text x="400" y="440" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#3498db">💰 $0.40/$1.60 per 1M</text>
+  <rect x="540" y="420" width="230" height="30" rx="6" fill="#9b59b6" opacity="0.15"/>
+  <text x="655" y="440" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#9b59b6">💰 $0.10/$0.40 per 1M</text>
+
+  <text x="400" y="490" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#95a5a6">All models available via OpenAI API and ChatGPT Pro</text>
+</svg>

@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <rect width="800" height="500" fill="#f8f9fa"/>
+  <text x="400" y="36" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#2c3e50">나에게 맞는 AI Deep Research 플랫폼 선택 가이드</text>
+  <text x="400" y="58" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#7f8c8d">목적과 상황에 따른 최적 도구 선택법</text>
+
+  <!-- Flow: Start -->
+  <rect x="300" y="75" width="200" height="44" rx="10" fill="#6366f1"/>
+  <text x="400" y="102" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#fff">어떤 작업인가요?</text>
+  <defs>
+    <marker id="x" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0,8 3,0 6" fill="#7f8c8d"/>
+    </marker>
+  </defs>
+
+  <!-- Branch 1: Speed -->
+  <line x1="340" y1="119" x2="150" y2="155" stroke="#7f8c8d" stroke-width="1.5" marker-end="url(#x)"/>
+  <rect x="40" y="155" width="220" height="44" rx="8" fill="#fff" stroke="#20808d" stroke-width="1.5"/>
+  <text x="150" y="172" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#20808d">빠른 답변이 필요해요</text>
+  <text x="150" y="190" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#7f8c8d">최신 정보 · 사실 확인</text>
+  <line x1="150" y1="199" x2="150" y2="225" stroke="#20808d" stroke-width="1.5" marker-end="url(#x)"/>
+  <rect x="50" y="225" width="200" height="55" rx="8" fill="#20808d"/>
+  <text x="150" y="248" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#fff">Perplexity</text>
+  <text x="150" y="268" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#d1faf5">3~5분 · 인용 명확</text>
+
+  <!-- Branch 2: Comprehensive -->
+  <line x1="400" y1="119" x2="400" y2="155" stroke="#7f8c8d" stroke-width="1.5" marker-end="url(#x)"/>
+  <rect x="290" y="155" width="220" height="44" rx="8" fill="#fff" stroke="#4285f4" stroke-width="1.5"/>
+  <text x="400" y="172" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#4285f4">광범위한 조사가 필요해요</text>
+  <text x="400" y="190" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#7f8c8d">시장 조사 · 학술 리서치</text>
+  <line x1="400" y1="199" x2="400" y2="225" stroke="#4285f4" stroke-width="1.5" marker-end="url(#x)"/>
+  <rect x="300" y="225" width="200" height="55" rx="8" fill="#4285f4"/>
+  <text x="400" y="248" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#fff">Gemini</text>
+  <text x="400" y="268" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#dbeafe">가장 많은 소스 · 무료</text>
+
+  <!-- Branch 3: Writing -->
+  <line x1="460" y1="119" x2="650" y2="155" stroke="#7f8c8d" stroke-width="1.5" marker-end="url(#x)"/>
+  <rect x="540" y="155" width="220" height="44" rx="8" fill="#fff" stroke="#c05b27" stroke-width="1.5"/>
+  <text x="650" y="172" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#c05b27">글쓰기 · 문서 분석</text>
+  <text x="650" y="190" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#7f8c8d">보고서 초안 · 콘텐츠</text>
+  <line x1="650" y1="199" x2="650" y2="225" stroke="#c05b27" stroke-width="1.5" marker-end="url(#x)"/>
+  <rect x="550" y="225" width="200" height="55" rx="8" fill="#c05b27"/>
+  <text x="650" y="248" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#fff">Claude</text>
+  <text x="650" y="268" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#fed7c3">최고 글쓰기 품질</text>
+
+  <!-- ChatGPT special case -->
+  <rect x="290" y="310" width="220" height="55" rx="8" fill="#10a37f"/>
+  <text x="400" y="333" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#fff">ChatGPT</text>
+  <text x="400" y="353" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#d1fae5">데이터 분석 · Python 코드</text>
+  <line x1="400" y1="280" x2="400" y2="310" stroke="#10a37f" stroke-width="1.5" marker-end="url(#x)"/>
+  <rect x="290" y="280" width="220" height="30" rx="6" fill="#fff" stroke="#10a37f" stroke-width="1.5"/>
+  <text x="400" y="300" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#10a37f">데이터 분석이 필요해요</text>
+
+  <!-- Pro tip box -->
+  <rect x="40" y="390" width="720" height="60" rx="10" fill="#eef2ff" stroke="#6366f1" stroke-width="1.5"/>
+  <text x="400" y="412" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#6366f1">💡 Pro Tip: 여러 도구를 조합하는 것이 최선</text>
+  <text x="400" y="432" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">Perplexity로 빠른 현황 파악 → Gemini로 심층 탐색 → Claude로 최종 보고서 작성</text>
+  <text x="400" y="450" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#7f8c8d">각 도구의 장점을 조합하면 전문 리서처 수준의 결과물 획득 가능</text>
+</svg>

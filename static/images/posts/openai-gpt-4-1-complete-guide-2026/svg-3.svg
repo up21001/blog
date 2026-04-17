@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <rect width="800" height="500" fill="#f8f9fa"/>
+  <text x="400" y="38" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#2c3e50">GPT-4.1 핵심 기능 개요</text>
+  <text x="400" y="60" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#7f8c8d">이전 GPT-4o 대비 주요 개선 사항</text>
+
+  <!-- Center -->
+  <circle cx="400" cy="255" r="65" fill="#10a37f" stroke="#fff" stroke-width="3"/>
+  <text x="400" y="248" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#fff">GPT-4.1</text>
+  <text x="400" y="266" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#d5f5e3">OpenAI</text>
+  <text x="400" y="282" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#d5f5e3">Apr 2026</text>
+
+  <!-- Feature 1: 코딩 -->
+  <rect x="30" y="90" width="185" height="105" rx="10" fill="#fff" stroke="#10a37f" stroke-width="1.5"/>
+  <text x="122" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">💻</text>
+  <text x="122" y="135" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#10a37f">코딩 성능 향상</text>
+  <text x="122" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">SWE-bench 54.6%</text>
+  <text x="122" y="173" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">GPT-4o 대비 +21.4%p</text>
+  <line x1="215" y1="142" x2="338" y2="210" stroke="#10a37f" stroke-width="1.5" stroke-dasharray="5,3"/>
+
+  <!-- Feature 2: 명령어 준수 -->
+  <rect x="585" y="90" width="185" height="105" rx="10" fill="#fff" stroke="#3498db" stroke-width="1.5"/>
+  <text x="677" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">🎯</text>
+  <text x="677" y="135" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#3498db">명령어 준수</text>
+  <text x="677" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">복잡한 지시 정확 이해</text>
+  <text x="677" y="173" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">포맷 준수율 대폭 향상</text>
+  <line x1="585" y1="142" x2="462" y2="210" stroke="#3498db" stroke-width="1.5" stroke-dasharray="5,3"/>
+
+  <!-- Feature 3: 1M 컨텍스트 -->
+  <rect x="30" y="310" width="185" height="105" rx="10" fill="#fff" stroke="#9b59b6" stroke-width="1.5"/>
+  <text x="122" y="335" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">📚</text>
+  <text x="122" y="355" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#9b59b6">1M 토큰 컨텍스트</text>
+  <text x="122" y="375" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">전 모델 공통 지원</text>
+  <text x="122" y="393" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">대규모 코드베이스 분석</text>
+  <line x1="215" y1="362" x2="338" y2="300" stroke="#9b59b6" stroke-width="1.5" stroke-dasharray="5,3"/>
+
+  <!-- Feature 4: 비용 절감 -->
+  <rect x="585" y="310" width="185" height="105" rx="10" fill="#fff" stroke="#e74c3c" stroke-width="1.5"/>
+  <text x="677" y="335" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">💰</text>
+  <text x="677" y="355" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#e74c3c">비용 최적화</text>
+  <text x="677" y="375" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">Nano: $0.10/1M 토큰</text>
+  <text x="677" y="393" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">Mini: $0.40/1M 토큰</text>
+  <line x1="585" y1="362" x2="462" y2="300" stroke="#e74c3c" stroke-width="1.5" stroke-dasharray="5,3"/>
+
+  <!-- Feature 5: 멀티모달 -->
+  <rect x="215" y="430" width="175" height="58" rx="10" fill="#fff" stroke="#f39c12" stroke-width="1.5"/>
+  <text x="302" y="454" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#f39c12">🖼️ 이미지 입력</text>
+  <text x="302" y="474" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">멀티모달 지원 유지</text>
+
+  <!-- Feature 6: 에이전트 -->
+  <rect x="410" y="430" width="175" height="58" rx="10" fill="#fff" stroke="#1abc9c" stroke-width="1.5"/>
+  <text x="497" y="454" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#1abc9c">🤖 에이전트 최적화</text>
+  <text x="497" y="474" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">도구 호출 정확도 향상</text>
+</svg>

@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <rect width="800" height="500" fill="#f8f9fa"/>
+  <text x="400" y="38" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#2c3e50">GPT-4.1 모델별 최적 활용 시나리오</text>
+  <text x="400" y="60" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#7f8c8d">작업 유형별 GPT-4.1 · Mini · Nano 선택 가이드</text>
+
+  <!-- Column Headers -->
+  <rect x="30" y="78" width="230" height="38" rx="8" fill="#10a37f"/>
+  <text x="145" y="102" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#fff">GPT-4.1</text>
+  <rect x="285" y="78" width="230" height="38" rx="8" fill="#3498db"/>
+  <text x="400" y="102" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#fff">GPT-4.1 Mini</text>
+  <rect x="540" y="78" width="230" height="38" rx="8" fill="#9b59b6"/>
+  <text x="655" y="102" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#fff">GPT-4.1 Nano</text>
+
+  <!-- Row 1 -->
+  <rect x="30" y="128" width="230" height="60" rx="6" fill="#fff" stroke="#10a37f" stroke-width="1"/>
+  <text x="145" y="152" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#10a37f">복잡한 코딩 과제</text>
+  <text x="145" y="172" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">전체 앱 설계 · 버그 수정</text>
+  <rect x="285" y="128" width="230" height="60" rx="6" fill="#fff" stroke="#3498db" stroke-width="1"/>
+  <text x="400" y="152" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#3498db">일반 코드 지원</text>
+  <text x="400" y="172" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">자동완성 · 코드 설명</text>
+  <rect x="540" y="128" width="230" height="60" rx="6" fill="#fff" stroke="#9b59b6" stroke-width="1"/>
+  <text x="655" y="152" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#9b59b6">단순 코드 스니펫</text>
+  <text x="655" y="172" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">간단한 함수 생성</text>
+
+  <!-- Row 2 -->
+  <rect x="30" y="200" width="230" height="60" rx="6" fill="#fff" stroke="#10a37f" stroke-width="1"/>
+  <text x="145" y="224" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#10a37f">AI 에이전트 구축</text>
+  <text x="145" y="244" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">멀티스텝 도구 호출</text>
+  <rect x="285" y="200" width="230" height="60" rx="6" fill="#fff" stroke="#3498db" stroke-width="1"/>
+  <text x="400" y="224" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#3498db">대화형 챗봇</text>
+  <text x="400" y="244" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">고객 지원 · 상담</text>
+  <rect x="540" y="200" width="230" height="60" rx="6" fill="#fff" stroke="#9b59b6" stroke-width="1"/>
+  <text x="655" y="224" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#9b59b6">텍스트 분류</text>
+  <text x="655" y="244" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">감성 분석 · 태깅</text>
+
+  <!-- Row 3 -->
+  <rect x="30" y="272" width="230" height="60" rx="6" fill="#fff" stroke="#10a37f" stroke-width="1"/>
+  <text x="145" y="296" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#10a37f">긴 문서 분석</text>
+  <text x="145" y="316" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">1M 컨텍스트 완전 활용</text>
+  <rect x="285" y="272" width="230" height="60" rx="6" fill="#fff" stroke="#3498db" stroke-width="1"/>
+  <text x="400" y="296" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#3498db">요약 · 번역</text>
+  <text x="400" y="316" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">중간 길이 문서 처리</text>
+  <rect x="540" y="272" width="230" height="60" rx="6" fill="#fff" stroke="#9b59b6" stroke-width="1"/>
+  <text x="655" y="296" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#9b59b6">키워드 추출</text>
+  <text x="655" y="316" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">짧은 텍스트 처리</text>
+
+  <!-- Row 4 -->
+  <rect x="30" y="344" width="230" height="60" rx="6" fill="#fff" stroke="#10a37f" stroke-width="1"/>
+  <text x="145" y="368" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#10a37f">이미지 분석</text>
+  <text x="145" y="388" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">복잡한 시각 추론</text>
+  <rect x="285" y="344" width="230" height="60" rx="6" fill="#fff" stroke="#3498db" stroke-width="1"/>
+  <text x="400" y="368" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#3498db">이미지 설명</text>
+  <text x="400" y="388" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">일반 이미지 이해</text>
+  <rect x="540" y="344" width="230" height="60" rx="6" fill="#ecf0f1" stroke="#bdc3c7" stroke-width="1"/>
+  <text x="655" y="368" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#95a5a6">텍스트 전용</text>
+  <text x="655" y="388" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#95a5a6">멀티모달 미지원</text>
+
+  <!-- Bottom labels -->
+  <rect x="30" y="420" width="230" height="30" rx="6" fill="#10a37f" opacity="0.15"/>
+  <text x="145" y="440" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#10a37f">💰 $2.00/$8.00 per 1M</text>
+  <rect x="285" y="420" width="230" height="30" rx="6" fill="#3498db" opacity="0.15"/>
+  <text x="400" y="440" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#3498db">💰 $0.40/$1.60 per 1M</text>
+  <rect x="540" y="420" width="230" height="30" rx="6" fill="#9b59b6" opacity="0.15"/>
+  <text x="655" y="440" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#9b59b6">💰 $0.10/$0.40 per 1M</text>
+
+  <text x="400" y="490" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#95a5a6">모든 모델은 OpenAI API 및 ChatGPT Pro에서 이용 가능</text>
+</svg>

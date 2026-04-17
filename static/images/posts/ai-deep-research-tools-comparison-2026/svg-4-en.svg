@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <rect width="800" height="500" fill="#f8f9fa"/>
+  <text x="400" y="38" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#2c3e50">Top 6 AI Deep Research Use Cases</text>
+  <text x="400" y="60" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#7f8c8d">Most effective real-world Deep Research scenarios</text>
+
+  <rect x="30" y="80" width="235" height="150" rx="10" fill="#fff" stroke="#6366f1" stroke-width="1.5"/>
+  <rect x="30" y="80" width="235" height="48" rx="10" fill="#6366f1"/>
+  <rect x="30" y="116" width="235" height="12" fill="#6366f1"/>
+  <text x="147" y="108" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#fff">📊 Market Research</text>
+  <text x="147" y="152" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">Competitor analysis · Market sizing</text>
+  <text x="147" y="172" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">Trends · Consumer insights</text>
+  <text x="147" y="202" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#6366f1">Recommended: Gemini</text>
+
+  <rect x="283" y="80" width="235" height="150" rx="10" fill="#fff" stroke="#4285f4" stroke-width="1.5"/>
+  <rect x="283" y="80" width="235" height="48" rx="10" fill="#4285f4"/>
+  <rect x="283" y="116" width="235" height="12" fill="#4285f4"/>
+  <text x="400" y="108" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#fff">🔬 Academic Research</text>
+  <text x="400" y="152" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">Paper summaries · Tech trends</text>
+  <text x="400" y="172" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">Patents · Literature review</text>
+  <text x="400" y="202" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#4285f4">Recommended: Gemini + Claude</text>
+
+  <rect x="536" y="80" width="234" height="150" rx="10" fill="#fff" stroke="#10a37f" stroke-width="1.5"/>
+  <rect x="536" y="80" width="234" height="48" rx="10" fill="#10a37f"/>
+  <rect x="536" y="116" width="234" height="12" fill="#10a37f"/>
+  <text x="653" y="108" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#fff">💻 Tech Stack Comparison</text>
+  <text x="653" y="152" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">Framework · Library comparison</text>
+  <text x="653" y="172" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">Benchmarks · Community health</text>
+  <text x="653" y="202" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#10a37f">Recommended: ChatGPT</text>
+
+  <rect x="30" y="248" width="235" height="150" rx="10" fill="#fff" stroke="#e74c3c" stroke-width="1.5"/>
+  <rect x="30" y="248" width="235" height="48" rx="10" fill="#e74c3c"/>
+  <rect x="30" y="284" width="235" height="12" fill="#e74c3c"/>
+  <text x="147" y="276" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#fff">📈 Investment Analysis</text>
+  <text x="147" y="320" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">Earnings · Industry reports</text>
+  <text x="147" y="340" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">Macroeconomic indicators</text>
+  <text x="147" y="370" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#e74c3c">Recommended: Perplexity</text>
+
+  <rect x="283" y="248" width="235" height="150" rx="10" fill="#fff" stroke="#f39c12" stroke-width="1.5"/>
+  <rect x="283" y="248" width="235" height="48" rx="10" fill="#f39c12"/>
+  <rect x="283" y="284" width="235" height="12" fill="#f39c12"/>
+  <text x="400" y="276" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#fff">✍️ Content Planning</text>
+  <text x="400" y="320" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">Blog · Report drafting</text>
+  <text x="400" y="340" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">SEO keywords · Topic ideas</text>
+  <text x="400" y="370" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#f39c12">Recommended: Claude</text>
+
+  <rect x="536" y="248" width="234" height="150" rx="10" fill="#fff" stroke="#9b59b6" stroke-width="1.5"/>
+  <rect x="536" y="248" width="234" height="48" rx="10" fill="#9b59b6"/>
+  <rect x="536" y="284" width="234" height="12" fill="#9b59b6"/>
+  <text x="653" y="276" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#fff">⚖️ Legal &amp; Compliance</text>
+  <text x="653" y="320" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">Regulations · Latest updates</text>
+  <text x="653" y="340" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">Compliance checklists</text>
+  <text x="653" y="370" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#9b59b6">Recommended: Gemini + Claude</text>
+
+  <text x="400" y="432" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#2c3e50">Deep Research ≠ Simple Search — Autonomous agent produces expert-level reports</text>
+  <text x="400" y="458" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#95a5a6">Average 5–15 min · 20–100+ sources synthesized · Citations included</text>
+</svg>

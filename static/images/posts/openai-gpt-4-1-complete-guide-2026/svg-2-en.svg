@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <rect width="800" height="500" fill="#f8f9fa"/>
+  <text x="400" y="36" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#2c3e50">GPT-4.1 vs Previous Generation — Performance Gains</text>
+  <text x="400" y="58" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#7f8c8d">Key benchmarks comparison (April 2026)</text>
+
+  <line x1="80" y1="80" x2="80" y2="420" stroke="#bdc3c7" stroke-width="1.5"/>
+  <line x1="80" y1="420" x2="760" y2="420" stroke="#bdc3c7" stroke-width="1.5"/>
+  <text x="70" y="424" text-anchor="end" font-family="Arial, sans-serif" font-size="11" fill="#7f8c8d">0</text>
+  <text x="70" y="364" text-anchor="end" font-family="Arial, sans-serif" font-size="11" fill="#7f8c8d">20</text>
+  <text x="70" y="284" text-anchor="end" font-family="Arial, sans-serif" font-size="11" fill="#7f8c8d">40</text>
+  <text x="70" y="204" text-anchor="end" font-family="Arial, sans-serif" font-size="11" fill="#7f8c8d">60</text>
+  <text x="70" y="124" text-anchor="end" font-family="Arial, sans-serif" font-size="11" fill="#7f8c8d">80</text>
+  <text x="70" y="84" text-anchor="end" font-family="Arial, sans-serif" font-size="11" fill="#7f8c8d">90</text>
+  <line x1="80" y1="364" x2="760" y2="364" stroke="#ecf0f1" stroke-width="1"/>
+  <line x1="80" y1="284" x2="760" y2="284" stroke="#ecf0f1" stroke-width="1"/>
+  <line x1="80" y1="204" x2="760" y2="204" stroke="#ecf0f1" stroke-width="1"/>
+  <line x1="80" y1="124" x2="760" y2="124" stroke="#ecf0f1" stroke-width="1"/>
+
+  <!-- SWE-bench -->
+  <text x="185" y="445" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#2c3e50">SWE-bench (Coding)</text>
+  <rect x="105" y="214" width="32" height="206" rx="3" fill="#10a37f"/>
+  <text x="121" y="209" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#10a37f">54.6</text>
+  <rect x="145" y="294" width="32" height="126" rx="3" fill="#f39c12"/>
+  <text x="161" y="289" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#f39c12">33.2</text>
+  <rect x="185" y="257" width="32" height="163" rx="3" fill="#3498db"/>
+  <text x="201" y="252" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#3498db">43.2</text>
+  <rect x="225" y="185" width="32" height="235" rx="3" fill="#e74c3c"/>
+  <text x="241" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#e74c3c">62.3</text>
+
+  <!-- MMLU -->
+  <text x="390" y="445" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#2c3e50">MMLU</text>
+  <rect x="310" y="80" width="32" height="340" rx="3" fill="#10a37f"/>
+  <text x="326" y="75" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#10a37f">90.2</text>
+  <rect x="350" y="92" width="32" height="328" rx="3" fill="#f39c12"/>
+  <text x="366" y="87" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#f39c12">87.2</text>
+  <rect x="390" y="99" width="32" height="321" rx="3" fill="#3498db"/>
+  <text x="406" y="94" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#3498db">85.1</text>
+  <rect x="430" y="88" width="32" height="332" rx="3" fill="#e74c3c"/>
+  <text x="446" y="83" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#e74c3c">88.3</text>
+
+  <!-- Instruction Following -->
+  <text x="600" y="445" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#2c3e50">Instruction Following</text>
+  <rect x="520" y="91" width="32" height="329" rx="3" fill="#10a37f"/>
+  <text x="536" y="86" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#10a37f">87.4</text>
+  <rect x="560" y="133" width="32" height="287" rx="3" fill="#f39c12"/>
+  <text x="576" y="128" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#f39c12">76.0</text>
+  <rect x="600" y="114" width="32" height="306" rx="3" fill="#3498db"/>
+  <text x="616" y="109" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#3498db">81.2</text>
+  <rect x="640" y="107" width="32" height="313" rx="3" fill="#e74c3c"/>
+  <text x="656" y="102" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#e74c3c">83.5</text>
+
+  <rect x="80" y="458" width="14" height="14" rx="2" fill="#10a37f"/>
+  <text x="98" y="470" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">GPT-4.1</text>
+  <rect x="165" y="458" width="14" height="14" rx="2" fill="#f39c12"/>
+  <text x="183" y="470" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">GPT-4o</text>
+  <rect x="248" y="458" width="14" height="14" rx="2" fill="#3498db"/>
+  <text x="266" y="470" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">GPT-4.1 Mini</text>
+  <rect x="375" y="458" width="14" height="14" rx="2" fill="#e74c3c"/>
+  <text x="393" y="470" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">Claude 3.7 Sonnet</text>
+</svg>

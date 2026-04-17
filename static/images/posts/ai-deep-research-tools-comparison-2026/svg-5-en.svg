@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <rect width="800" height="500" fill="#f8f9fa"/>
+  <text x="400" y="36" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#2c3e50">Which AI Deep Research Platform Is Right for You?</text>
+  <text x="400" y="58" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#7f8c8d">Decision guide by purpose and context</text>
+
+  <rect x="300" y="75" width="200" height="44" rx="10" fill="#6366f1"/>
+  <text x="400" y="102" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#fff">What's your task?</text>
+  <defs>
+    <marker id="x" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0,8 3,0 6" fill="#7f8c8d"/>
+    </marker>
+  </defs>
+
+  <line x1="340" y1="119" x2="150" y2="155" stroke="#7f8c8d" stroke-width="1.5" marker-end="url(#x)"/>
+  <rect x="40" y="155" width="220" height="44" rx="8" fill="#fff" stroke="#20808d" stroke-width="1.5"/>
+  <text x="150" y="172" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#20808d">Need a fast answer</text>
+  <text x="150" y="190" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#7f8c8d">Latest news · Fact checking</text>
+  <line x1="150" y1="199" x2="150" y2="225" stroke="#20808d" stroke-width="1.5" marker-end="url(#x)"/>
+  <rect x="50" y="225" width="200" height="55" rx="8" fill="#20808d"/>
+  <text x="150" y="248" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#fff">Perplexity</text>
+  <text x="150" y="268" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#d1faf5">3–5 min · Clear citations</text>
+
+  <line x1="400" y1="119" x2="400" y2="155" stroke="#7f8c8d" stroke-width="1.5" marker-end="url(#x)"/>
+  <rect x="290" y="155" width="220" height="44" rx="8" fill="#fff" stroke="#4285f4" stroke-width="1.5"/>
+  <text x="400" y="172" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#4285f4">Need comprehensive coverage</text>
+  <text x="400" y="190" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#7f8c8d">Market research · Academic</text>
+  <line x1="400" y1="199" x2="400" y2="225" stroke="#4285f4" stroke-width="1.5" marker-end="url(#x)"/>
+  <rect x="300" y="225" width="200" height="55" rx="8" fill="#4285f4"/>
+  <text x="400" y="248" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#fff">Gemini</text>
+  <text x="400" y="268" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#dbeafe">Most sources · Free unlimited</text>
+
+  <line x1="460" y1="119" x2="650" y2="155" stroke="#7f8c8d" stroke-width="1.5" marker-end="url(#x)"/>
+  <rect x="540" y="155" width="220" height="44" rx="8" fill="#fff" stroke="#c05b27" stroke-width="1.5"/>
+  <text x="650" y="172" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#c05b27">Need quality writing</text>
+  <text x="650" y="190" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#7f8c8d">Reports · Content creation</text>
+  <line x1="650" y1="199" x2="650" y2="225" stroke="#c05b27" stroke-width="1.5" marker-end="url(#x)"/>
+  <rect x="550" y="225" width="200" height="55" rx="8" fill="#c05b27"/>
+  <text x="650" y="248" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#fff">Claude</text>
+  <text x="650" y="268" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#fed7c3">Best writing quality</text>
+
+  <rect x="290" y="310" width="220" height="55" rx="8" fill="#10a37f"/>
+  <text x="400" y="333" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#fff">ChatGPT</text>
+  <text x="400" y="353" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#d1fae5">Data analysis · Python code</text>
+  <line x1="400" y1="280" x2="400" y2="310" stroke="#10a37f" stroke-width="1.5" marker-end="url(#x)"/>
+  <rect x="290" y="280" width="220" height="30" rx="6" fill="#fff" stroke="#10a37f" stroke-width="1.5"/>
+  <text x="400" y="300" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#10a37f">Need data analysis</text>
+
+  <rect x="40" y="390" width="720" height="60" rx="10" fill="#eef2ff" stroke="#6366f1" stroke-width="1.5"/>
+  <text x="400" y="412" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#6366f1">💡 Pro Tip: Combining tools is the best strategy</text>
+  <text x="400" y="432" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">Perplexity for quick overview → Gemini for deep exploration → Claude for final report</text>
+  <text x="400" y="450" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#7f8c8d">Combining each tool's strengths produces expert-level research output</text>
+</svg>

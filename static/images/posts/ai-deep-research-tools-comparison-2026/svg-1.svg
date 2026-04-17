@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <rect width="800" height="500" fill="#f8f9fa"/>
+  <text x="400" y="38" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#2c3e50">AI Deep Research란 무엇인가?</text>
+  <text x="400" y="60" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#7f8c8d">일반 AI 검색 vs AI Deep Research 완전 비교</text>
+
+  <!-- Left: Traditional AI Search -->
+  <rect x="30" y="80" width="350" height="390" rx="12" fill="#ffffff" stroke="#7f8c8d" stroke-width="1.5"/>
+  <rect x="30" y="80" width="350" height="50" rx="12" fill="#7f8c8d"/>
+  <rect x="30" y="118" width="350" height="12" fill="#7f8c8d"/>
+  <text x="205" y="110" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#fff">⚡ 일반 AI 검색</text>
+
+  <text x="205" y="158" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#7f8c8d">작동 방식</text>
+  <rect x="60" y="168" width="270" height="38" rx="6" fill="#f8f9fa" stroke="#bdc3c7" stroke-width="1"/>
+  <text x="195" y="192" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">질문 → 즉시 답변 (수초)</text>
+
+  <text x="205" y="228" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#7f8c8d">처리 깊이</text>
+  <text x="205" y="250" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#bdc3c7">얕음</text>
+
+  <text x="205" y="285" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#7f8c8d">참고 소스</text>
+  <text x="205" y="307" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#2c3e50">3~5개 웹페이지</text>
+
+  <text x="205" y="338" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#7f8c8d">출력 형식</text>
+  <text x="205" y="360" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#2c3e50">짧은 답변 · 링크 목록</text>
+
+  <text x="205" y="395" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#7f8c8d">소요 시간</text>
+  <text x="205" y="417" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#2c3e50">~5초</text>
+
+  <rect x="60" y="438" width="270" height="22" rx="11" fill="#ecf0f1"/>
+  <text x="195" y="454" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#7f8c8d">일상적인 질문 · 빠른 사실 확인</text>
+
+  <!-- Right: Deep Research -->
+  <rect x="420" y="80" width="350" height="390" rx="12" fill="#ffffff" stroke="#6366f1" stroke-width="2"/>
+  <rect x="420" y="80" width="350" height="50" rx="12" fill="#6366f1"/>
+  <rect x="420" y="118" width="350" height="12" fill="#6366f1"/>
+  <text x="595" y="110" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#fff">🔬 AI Deep Research</text>
+
+  <text x="595" y="158" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#7f8c8d">작동 방식</text>
+  <rect x="450" y="168" width="270" height="38" rx="6" fill="#f0f0ff" stroke="#6366f1" stroke-width="1"/>
+  <text x="585" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">질문 → 자율 탐색 → 다단계 분석</text>
+  <text x="585" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">→ 보고서 생성</text>
+
+  <text x="595" y="228" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#7f8c8d">처리 깊이</text>
+  <text x="595" y="250" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#6366f1">심층</text>
+
+  <text x="595" y="285" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#7f8c8d">참고 소스</text>
+  <text x="595" y="307" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#2c3e50">20~100개+ 소스 자동 탐색</text>
+
+  <text x="595" y="338" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#7f8c8d">출력 형식</text>
+  <text x="595" y="360" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#2c3e50">구조화된 심층 보고서</text>
+
+  <text x="595" y="395" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#7f8c8d">소요 시간</text>
+  <text x="595" y="417" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#6366f1">3~15분</text>
+
+  <rect x="450" y="438" width="270" height="22" rx="11" fill="#eef2ff" stroke="#6366f1" stroke-width="1"/>
+  <text x="585" y="454" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#6366f1">복잡한 리서치 · 경쟁 분석 · 논문 조사</text>
+
+  <text x="400" y="490" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#95a5a6">Perplexity · Gemini · ChatGPT · Claude 모두 Deep Research 기능 제공</text>
+</svg>

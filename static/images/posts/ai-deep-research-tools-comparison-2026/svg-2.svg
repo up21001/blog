@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <rect width="800" height="500" fill="#f8f9fa"/>
+  <text x="400" y="36" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#2c3e50">AI Deep Research 플랫폼 비교</text>
+  <text x="400" y="58" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#7f8c8d">Perplexity · Gemini · ChatGPT · Claude 핵심 지표 비교</text>
+
+  <!-- Header -->
+  <rect x="30" y="78" width="160" height="36" rx="6" fill="#ecf0f1"/>
+  <text x="110" y="101" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#7f8c8d">항목</text>
+  <rect x="198" y="78" width="138" height="36" rx="6" fill="#20808d"/>
+  <text x="267" y="101" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#fff">Perplexity</text>
+  <rect x="344" y="78" width="138" height="36" rx="6" fill="#4285f4"/>
+  <text x="413" y="101" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#fff">Gemini</text>
+  <rect x="490" y="78" width="138" height="36" rx="6" fill="#10a37f"/>
+  <text x="559" y="101" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#fff">ChatGPT</text>
+  <rect x="636" y="78" width="134" height="36" rx="6" fill="#c05b27"/>
+  <text x="703" y="101" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#fff">Claude</text>
+
+  <!-- Row 1: Model -->
+  <rect x="30" y="122" width="160" height="40" rx="4" fill="#fff" stroke="#ecf0f1" stroke-width="1"/>
+  <text x="110" y="147" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">기반 모델</text>
+  <rect x="198" y="122" width="138" height="40" rx="4" fill="#f0fafb" stroke="#ecf0f1" stroke-width="1"/>
+  <text x="267" y="147" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">자체 모델 + 웹</text>
+  <rect x="344" y="122" width="138" height="40" rx="4" fill="#f0f4ff" stroke="#ecf0f1" stroke-width="1"/>
+  <text x="413" y="147" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">Gemini 2.5 Pro</text>
+  <rect x="490" y="122" width="138" height="40" rx="4" fill="#f0fdf4" stroke="#ecf0f1" stroke-width="1"/>
+  <text x="559" y="147" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">GPT-4.1 + o3</text>
+  <rect x="636" y="122" width="134" height="40" rx="4" fill="#fff8f5" stroke="#ecf0f1" stroke-width="1"/>
+  <text x="703" y="147" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">Claude 3.7 Sonnet</text>
+
+  <!-- Row 2: Speed -->
+  <rect x="30" y="170" width="160" height="40" rx="4" fill="#fff" stroke="#ecf0f1" stroke-width="1"/>
+  <text x="110" y="195" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">소요 시간</text>
+  <rect x="198" y="170" width="138" height="40" rx="4" fill="#f0fafb" stroke="#ecf0f1" stroke-width="1"/>
+  <text x="267" y="195" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#20808d">3~5분 ⚡</text>
+  <rect x="344" y="170" width="138" height="40" rx="4" fill="#f0f4ff" stroke="#ecf0f1" stroke-width="1"/>
+  <text x="413" y="195" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#4285f4">5~10분</text>
+  <rect x="490" y="170" width="138" height="40" rx="4" fill="#f0fdf4" stroke="#ecf0f1" stroke-width="1"/>
+  <text x="559" y="195" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#10a37f">5~15분</text>
+  <rect x="636" y="170" width="134" height="40" rx="4" fill="#fff8f5" stroke="#ecf0f1" stroke-width="1"/>
+  <text x="703" y="195" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#c05b27">5~12분</text>
+
+  <!-- Row 3: Sources -->
+  <rect x="30" y="218" width="160" height="40" rx="4" fill="#fff" stroke="#ecf0f1" stroke-width="1"/>
+  <text x="110" y="243" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">소스 수</text>
+  <rect x="198" y="218" width="138" height="40" rx="4" fill="#f0fafb" stroke="#ecf0f1" stroke-width="1"/>
+  <text x="267" y="243" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#20808d">20~50개</text>
+  <rect x="344" y="218" width="138" height="40" rx="4" fill="#f0f4ff" stroke="#ecf0f1" stroke-width="1"/>
+  <text x="413" y="243" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#4285f4">50~100개 🏆</text>
+  <rect x="490" y="218" width="138" height="40" rx="4" fill="#f0fdf4" stroke="#ecf0f1" stroke-width="1"/>
+  <text x="559" y="243" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#10a37f">30~80개</text>
+  <rect x="636" y="218" width="134" height="40" rx="4" fill="#fff8f5" stroke="#ecf0f1" stroke-width="1"/>
+  <text x="703" y="243" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#c05b27">20~60개</text>
+
+  <!-- Row 4: Free -->
+  <rect x="30" y="266" width="160" height="40" rx="4" fill="#fff" stroke="#ecf0f1" stroke-width="1"/>
+  <text x="110" y="291" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">무료 제공</text>
+  <rect x="198" y="266" width="138" height="40" rx="4" fill="#f0fafb" stroke="#ecf0f1" stroke-width="1"/>
+  <text x="267" y="291" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#20808d">5회/일 무료</text>
+  <rect x="344" y="266" width="138" height="40" rx="4" fill="#f0f4ff" stroke="#ecf0f1" stroke-width="1"/>
+  <text x="413" y="291" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#4285f4">무제한 무료 🏆</text>
+  <rect x="490" y="266" width="138" height="40" rx="4" fill="#f0fdf4" stroke="#ecf0f1" stroke-width="1"/>
+  <text x="559" y="291" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#10a37f">Plus 전용</text>
+  <rect x="636" y="266" width="134" height="40" rx="4" fill="#fff8f5" stroke="#ecf0f1" stroke-width="1"/>
+  <text x="703" y="291" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#c05b27">Pro 전용</text>
+
+  <!-- Row 5: Strength -->
+  <rect x="30" y="314" width="160" height="40" rx="4" fill="#fff" stroke="#ecf0f1" stroke-width="1"/>
+  <text x="110" y="339" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">최대 강점</text>
+  <rect x="198" y="314" width="138" height="40" rx="4" fill="#f0fafb" stroke="#ecf0f1" stroke-width="1"/>
+  <text x="267" y="334" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#20808d">빠른 속도</text>
+  <text x="267" y="350" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#20808d">인용 명확</text>
+  <rect x="344" y="314" width="138" height="40" rx="4" fill="#f0f4ff" stroke="#ecf0f1" stroke-width="1"/>
+  <text x="413" y="334" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#4285f4">광범위한 탐색</text>
+  <text x="413" y="350" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#4285f4">Google 연동</text>
+  <rect x="490" y="314" width="138" height="40" rx="4" fill="#f0fdf4" stroke="#ecf0f1" stroke-width="1"/>
+  <text x="559" y="334" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#10a37f">Python 코드</text>
+  <text x="559" y="350" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#10a37f">데이터 분석</text>
+  <rect x="636" y="314" width="134" height="40" rx="4" fill="#fff8f5" stroke="#ecf0f1" stroke-width="1"/>
+  <text x="703" y="334" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#c05b27">글쓰기 품질</text>
+  <text x="703" y="350" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#c05b27">문서 분석</text>
+
+  <!-- Row 6: Price -->
+  <rect x="30" y="362" width="160" height="40" rx="4" fill="#fff" stroke="#ecf0f1" stroke-width="1"/>
+  <text x="110" y="387" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">유료 플랜</text>
+  <rect x="198" y="362" width="138" height="40" rx="4" fill="#f0fafb" stroke="#ecf0f1" stroke-width="1"/>
+  <text x="267" y="387" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#20808d">$20/월</text>
+  <rect x="344" y="362" width="138" height="40" rx="4" fill="#f0f4ff" stroke="#ecf0f1" stroke-width="1"/>
+  <text x="413" y="387" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#4285f4">$19.99/월</text>
+  <rect x="490" y="362" width="138" height="40" rx="4" fill="#f0fdf4" stroke="#ecf0f1" stroke-width="1"/>
+  <text x="559" y="387" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#10a37f">$20/월</text>
+  <rect x="636" y="362" width="134" height="40" rx="4" fill="#fff8f5" stroke="#ecf0f1" stroke-width="1"/>
+  <text x="703" y="387" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#c05b27">$20/월</text>
+
+  <text x="400" y="430" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#2c3e50">🏆 = 해당 항목 최고 점수</text>
+  <text x="400" y="455" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#95a5a6">각 플랫폼의 강점이 다르므로 작업 유형에 맞게 선택하는 것이 핵심</text>
+  <text x="400" y="475" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#95a5a6">비교 기준: 2026년 4월 기준</text>
+</svg>
