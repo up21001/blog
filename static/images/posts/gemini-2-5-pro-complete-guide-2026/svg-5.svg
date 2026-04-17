@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <marker id="a" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0,8 3,0 6" fill="#7f8c8d"/>
+    </marker>
+    <marker id="b" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0,8 3,0 6" fill="#4285f4"/>
+    </marker>
+  </defs>
+  <rect width="800" height="500" fill="#f8f9fa"/>
+  <text x="400" y="38" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#2c3e50">Gemini 2.5 Pro 빠른 시작 가이드</text>
+  <text x="400" y="60" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#7f8c8d">Google AI Studio (무료) → Gemini API → Vertex AI 순서로 시작</text>
+
+  <!-- Step 1 -->
+  <rect x="40" y="80" width="720" height="68" rx="10" fill="#ffffff" stroke="#4285f4" stroke-width="1.5"/>
+  <rect x="40" y="80" width="80" height="68" rx="10" fill="#4285f4"/>
+  <rect x="108" y="80" width="12" height="68" fill="#4285f4"/>
+  <text x="80" y="109" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#fff">1</text>
+  <text x="80" y="131" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#bbdefb">단계</text>
+  <text x="430" y="108" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#4285f4">Google AI Studio 접속 (aistudio.google.com)</text>
+  <text x="430" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#7f8c8d">Google 계정으로 무료 로그인 → Gemini 2.5 Pro 즉시 사용 가능 · 무료 플랜 제공</text>
+  <line x1="400" y1="148" x2="400" y2="163" stroke="#7f8c8d" stroke-width="1.5" marker-end="url(#a)"/>
+
+  <!-- Step 2 -->
+  <rect x="40" y="163" width="720" height="68" rx="10" fill="#ffffff" stroke="#34a853" stroke-width="1.5"/>
+  <rect x="40" y="163" width="80" height="68" rx="10" fill="#34a853"/>
+  <rect x="108" y="163" width="12" height="68" fill="#34a853"/>
+  <text x="80" y="192" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#fff">2</text>
+  <text x="80" y="214" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#a9dfbf">단계</text>
+  <text x="430" y="191" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#34a853">API 키 발급</text>
+  <text x="430" y="213" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#7f8c8d">AI Studio → "Get API Key" → 키 복사 후 환경변수 GOOGLE_API_KEY에 저장</text>
+  <line x1="400" y1="231" x2="400" y2="246" stroke="#7f8c8d" stroke-width="1.5" marker-end="url(#a)"/>
+
+  <!-- Step 3 -->
+  <rect x="40" y="246" width="720" height="68" rx="10" fill="#ffffff" stroke="#fbbc04" stroke-width="1.5"/>
+  <rect x="40" y="246" width="80" height="68" rx="10" fill="#fbbc04"/>
+  <rect x="108" y="246" width="12" height="68" fill="#fbbc04"/>
+  <text x="80" y="275" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#fff">3</text>
+  <text x="80" y="297" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#fef9e7">단계</text>
+  <text x="430" y="274" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#e67e22">SDK 설치</text>
+  <text x="430" y="296" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#7f8c8d">pip install google-genai  (Python) 또는  npm install @google/genai  (JavaScript)</text>
+  <line x1="400" y1="314" x2="400" y2="329" stroke="#7f8c8d" stroke-width="1.5" marker-end="url(#a)"/>
+
+  <!-- Step 4: Code -->
+  <rect x="40" y="329" width="720" height="105" rx="10" fill="#e8f4fd" stroke="#4285f4" stroke-width="2"/>
+  <rect x="40" y="329" width="80" height="105" rx="10" fill="#4285f4"/>
+  <rect x="108" y="329" width="12" height="105" fill="#4285f4"/>
+  <text x="80" y="373" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#fff">4</text>
+  <text x="80" y="395" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#bbdefb">코드 실행</text>
+  <text x="150" y="355" font-family="Courier New, monospace" font-size="11" fill="#2c3e50">from google import genai</text>
+  <text x="150" y="373" font-family="Courier New, monospace" font-size="11" fill="#2c3e50">client = genai.Client()</text>
+  <text x="150" y="391" font-family="Courier New, monospace" font-size="11" fill="#2c3e50">response = client.models.generate_content(</text>
+  <text x="150" y="409" font-family="Courier New, monospace" font-size="11" fill="#2c3e50">    model="gemini-2.5-pro",  contents="안녕하세요!"</text>
+  <text x="150" y="427" font-family="Courier New, monospace" font-size="11" fill="#2c3e50">)</text>
+
+  <!-- Result box -->
+  <rect x="40" y="448" width="720" height="38" rx="8" fill="#34a853"/>
+  <text x="400" y="472" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#fff">✅ 완료! 무료 티어: 분당 2 요청 · 일 50 요청 제공</text>
+</svg>

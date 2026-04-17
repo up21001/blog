@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <marker id="a" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0,8 3,0 6" fill="#7f8c8d"/>
+    </marker>
+  </defs>
+  <rect width="800" height="500" fill="#f8f9fa"/>
+  <text x="400" y="38" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#2c3e50">Llama 4 시작하기 — API vs 로컬 실행</text>
+  <text x="400" y="60" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#7f8c8d">목적에 맞는 방법 선택 가이드</text>
+
+  <!-- Divider -->
+  <line x1="400" y1="75" x2="400" y2="470" stroke="#ecf0f1" stroke-width="2" stroke-dasharray="6,4"/>
+  <text x="400" y="78" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#95a5a6">── 또는 ──</text>
+
+  <!-- LEFT: API 방식 -->
+  <text x="200" y="92" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#3498db">☁️ API 방식 (클라우드)</text>
+
+  <!-- Step 1 -->
+  <rect x="40" y="105" width="320" height="52" rx="8" fill="#ebf5fb" stroke="#3498db" stroke-width="1.5"/>
+  <text x="60" y="128" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#3498db">1. 서비스 가입</text>
+  <text x="60" y="148" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">Groq · Together AI · Fireworks AI 중 선택</text>
+  <line x1="200" y1="157" x2="200" y2="173" stroke="#7f8c8d" stroke-width="1.5" marker-end="url(#a)"/>
+
+  <!-- Step 2 -->
+  <rect x="40" y="173" width="320" height="52" rx="8" fill="#ebf5fb" stroke="#3498db" stroke-width="1.5"/>
+  <text x="60" y="196" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#3498db">2. API 키 발급</text>
+  <text x="60" y="216" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">대시보드에서 API Key 생성 후 환경변수 설정</text>
+  <line x1="200" y1="225" x2="200" y2="241" stroke="#7f8c8d" stroke-width="1.5" marker-end="url(#a)"/>
+
+  <!-- Step 3 -->
+  <rect x="40" y="241" width="320" height="52" rx="8" fill="#ebf5fb" stroke="#3498db" stroke-width="1.5"/>
+  <text x="60" y="264" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#3498db">3. Python 설치</text>
+  <text x="60" y="284" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">pip install groq  또는  pip install together</text>
+  <line x1="200" y1="293" x2="200" y2="309" stroke="#7f8c8d" stroke-width="1.5" marker-end="url(#a)"/>
+
+  <!-- Step 4 API -->
+  <rect x="40" y="309" width="320" height="80" rx="8" fill="#d6eaf8" stroke="#3498db" stroke-width="1.5"/>
+  <text x="60" y="332" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#3498db">4. 코드 실행</text>
+  <text x="60" y="352" font-family="Arial, sans-serif" font-size="10" fill="#2c3e50" font-family="Courier New, monospace">from groq import Groq</text>
+  <text x="60" y="367" font-family="Arial, sans-serif" font-size="10" fill="#2c3e50" font-family="Courier New, monospace">client = Groq()</text>
+  <text x="60" y="382" font-family="Arial, sans-serif" font-size="10" fill="#2c3e50" font-family="Courier New, monospace">model="llama-4-scout"</text>
+
+  <rect x="50" y="405" width="300" height="32" rx="6" fill="#3498db"/>
+  <text x="200" y="426" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#fff">✅ 즉시 사용 가능!</text>
+  <text x="200" y="460" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#7f8c8d">장점: 설정 없음 · 대용량 가능 | 단점: 비용 발생</text>
+
+  <!-- RIGHT: 로컬 방식 -->
+  <text x="600" y="92" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#27ae60">🖥️ 로컬 방식 (Ollama)</text>
+
+  <!-- Step 1 -->
+  <rect x="440" y="105" width="320" height="52" rx="8" fill="#eafaf1" stroke="#27ae60" stroke-width="1.5"/>
+  <text x="460" y="128" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#27ae60">1. Ollama 설치</text>
+  <text x="460" y="148" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">ollama.com 접속 → OS별 설치 파일 다운로드</text>
+  <line x1="600" y1="157" x2="600" y2="173" stroke="#7f8c8d" stroke-width="1.5" marker-end="url(#a)"/>
+
+  <!-- Step 2 -->
+  <rect x="440" y="173" width="320" height="52" rx="8" fill="#eafaf1" stroke="#27ae60" stroke-width="1.5"/>
+  <text x="460" y="196" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#27ae60">2. 모델 다운로드</text>
+  <text x="460" y="216" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">ollama pull llama4:scout  (약 70GB)</text>
+  <line x1="600" y1="225" x2="600" y2="241" stroke="#7f8c8d" stroke-width="1.5" marker-end="url(#a)"/>
+
+  <!-- Step 3 -->
+  <rect x="440" y="241" width="320" height="52" rx="8" fill="#eafaf1" stroke="#27ae60" stroke-width="1.5"/>
+  <text x="460" y="264" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#27ae60">3. 서버 실행</text>
+  <text x="460" y="284" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">ollama serve  →  localhost:11434 활성화</text>
+  <line x1="600" y1="293" x2="600" y2="309" stroke="#7f8c8d" stroke-width="1.5" marker-end="url(#a)"/>
+
+  <!-- Step 4 Local -->
+  <rect x="440" y="309" width="320" height="80" rx="8" fill="#d5f5e3" stroke="#27ae60" stroke-width="1.5"/>
+  <text x="460" y="332" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#27ae60">4. 채팅 시작</text>
+  <text x="460" y="352" font-family="Arial, sans-serif" font-size="10" fill="#2c3e50" font-family="Courier New, monospace">ollama run llama4:scout</text>
+  <text x="460" y="367" font-family="Arial, sans-serif" font-size="10" fill="#7f8c8d">또는 OpenAI 호환 API 사용</text>
+  <text x="460" y="382" font-family="Arial, sans-serif" font-size="10" fill="#2c3e50" font-family="Courier New, monospace">curl localhost:11434/v1/chat/...</text>
+
+  <rect x="450" y="405" width="300" height="32" rx="6" fill="#27ae60"/>
+  <text x="600" y="426" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#fff">✅ 완전 프라이버시 보장!</text>
+  <text x="600" y="460" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#7f8c8d">장점: 무료 · 오프라인 | 단점: GPU 필요 (24GB+)</text>
+</svg>

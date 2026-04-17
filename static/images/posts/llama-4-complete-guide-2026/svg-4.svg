@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <rect width="800" height="500" fill="#f8f9fa"/>
+  <text x="400" y="38" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#2c3e50">Llama 4 주요 활용 사례</text>
+  <text x="400" y="60" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#7f8c8d">오픈소스 LLM의 강점을 살린 6가지 핵심 시나리오</text>
+
+  <!-- Card 1: 코드 생성 -->
+  <rect x="30" y="80" width="230" height="160" rx="10" fill="#ffffff" stroke="#3498db" stroke-width="1.5"/>
+  <rect x="30" y="80" width="230" height="45" rx="10" fill="#3498db"/>
+  <rect x="30" y="113" width="230" height="12" fill="#3498db"/>
+  <text x="145" y="109" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#fff">💻 코드 생성 · 디버깅</text>
+  <text x="145" y="148" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">Python · JavaScript · Rust</text>
+  <text x="145" y="168" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">코드 리뷰 및 최적화</text>
+  <text x="145" y="188" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">단위 테스트 자동 생성</text>
+  <text x="145" y="218" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#3498db">추천 모델: Maverick</text>
+
+  <!-- Card 2: 멀티모달 -->
+  <rect x="285" y="80" width="230" height="160" rx="10" fill="#ffffff" stroke="#9b59b6" stroke-width="1.5"/>
+  <rect x="285" y="80" width="230" height="45" rx="10" fill="#9b59b6"/>
+  <rect x="285" y="113" width="230" height="12" fill="#9b59b6"/>
+  <text x="400" y="109" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#fff">🖼️ 이미지 · 멀티모달</text>
+  <text x="400" y="148" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">이미지 분석 및 설명</text>
+  <text x="400" y="168" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">차트 · 도표 데이터 추출</text>
+  <text x="400" y="188" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">시각 질의응답 (VQA)</text>
+  <text x="400" y="218" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#9b59b6">추천 모델: Maverick</text>
+
+  <!-- Card 3: 긴 문서 처리 -->
+  <rect x="540" y="80" width="230" height="160" rx="10" fill="#ffffff" stroke="#27ae60" stroke-width="1.5"/>
+  <rect x="540" y="80" width="230" height="45" rx="10" fill="#27ae60"/>
+  <rect x="540" y="113" width="230" height="12" fill="#27ae60"/>
+  <text x="655" y="109" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#fff">📄 긴 문서 처리</text>
+  <text x="655" y="148" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">10M 토큰 컨텍스트 활용</text>
+  <text x="655" y="168" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">계약서 · 논문 분석</text>
+  <text x="655" y="188" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">코드베이스 전체 리뷰</text>
+  <text x="655" y="218" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#27ae60">추천 모델: Scout</text>
+
+  <!-- Card 4: RAG -->
+  <rect x="30" y="265" width="230" height="160" rx="10" fill="#ffffff" stroke="#e74c3c" stroke-width="1.5"/>
+  <rect x="30" y="265" width="230" height="45" rx="10" fill="#e74c3c"/>
+  <rect x="30" y="298" width="230" height="12" fill="#e74c3c"/>
+  <text x="145" y="294" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#fff">🔍 RAG 파이프라인</text>
+  <text x="145" y="333" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">문서 검색 + 생성 결합</text>
+  <text x="145" y="353" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">기업 내부 지식 베이스</text>
+  <text x="145" y="373" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">로컬 완전 자체 호스팅</text>
+  <text x="145" y="403" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#e74c3c">추천 모델: Scout</text>
+
+  <!-- Card 5: AI 에이전트 -->
+  <rect x="285" y="265" width="230" height="160" rx="10" fill="#ffffff" stroke="#f39c12" stroke-width="1.5"/>
+  <rect x="285" y="265" width="230" height="45" rx="10" fill="#f39c12"/>
+  <rect x="285" y="298" width="230" height="12" fill="#f39c12"/>
+  <text x="400" y="294" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#fff">🤖 AI 에이전트</text>
+  <text x="400" y="333" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">도구 호출 (Tool Use)</text>
+  <text x="400" y="353" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">멀티스텝 자동화</text>
+  <text x="400" y="373" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">LangGraph · CrewAI 연동</text>
+  <text x="400" y="403" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#f39c12">추천 모델: Maverick</text>
+
+  <!-- Card 6: 번역·요약 -->
+  <rect x="540" y="265" width="230" height="160" rx="10" fill="#ffffff" stroke="#1abc9c" stroke-width="1.5"/>
+  <rect x="540" y="265" width="230" height="45" rx="10" fill="#1abc9c"/>
+  <rect x="540" y="298" width="230" height="12" fill="#1abc9c"/>
+  <text x="655" y="294" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#fff">🌐 번역 · 요약</text>
+  <text x="655" y="333" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">100+ 언어 번역 지원</text>
+  <text x="655" y="353" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">뉴스·보고서 요약</text>
+  <text x="655" y="373" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">한국어 품질 우수</text>
+  <text x="655" y="403" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#1abc9c">추천 모델: Scout</text>
+
+  <text x="400" y="490" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#95a5a6">Apache 2.0 오픈소스 · 상업적 이용 무료 · 로컬 배포 가능</text>
+</svg>

@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <rect width="800" height="500" fill="#f8f9fa"/>
+  <text x="400" y="38" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#2c3e50">Llama 4 Key Use Cases</text>
+  <text x="400" y="60" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#7f8c8d">6 Core Scenarios Leveraging Open-Source LLM Strengths</text>
+
+  <!-- Card 1 -->
+  <rect x="30" y="80" width="230" height="160" rx="10" fill="#ffffff" stroke="#3498db" stroke-width="1.5"/>
+  <rect x="30" y="80" width="230" height="45" rx="10" fill="#3498db"/>
+  <rect x="30" y="113" width="230" height="12" fill="#3498db"/>
+  <text x="145" y="109" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#fff">💻 Code Generation</text>
+  <text x="145" y="148" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">Python · JavaScript · Rust</text>
+  <text x="145" y="168" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">Code review &amp; optimization</text>
+  <text x="145" y="188" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">Automated unit test generation</text>
+  <text x="145" y="218" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#3498db">Recommended: Maverick</text>
+
+  <!-- Card 2 -->
+  <rect x="285" y="80" width="230" height="160" rx="10" fill="#ffffff" stroke="#9b59b6" stroke-width="1.5"/>
+  <rect x="285" y="80" width="230" height="45" rx="10" fill="#9b59b6"/>
+  <rect x="285" y="113" width="230" height="12" fill="#9b59b6"/>
+  <text x="400" y="109" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#fff">🖼️ Multimodal Analysis</text>
+  <text x="400" y="148" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">Image analysis &amp; description</text>
+  <text x="400" y="168" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">Chart &amp; diagram data extraction</text>
+  <text x="400" y="188" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">Visual Question Answering</text>
+  <text x="400" y="218" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#9b59b6">Recommended: Maverick</text>
+
+  <!-- Card 3 -->
+  <rect x="540" y="80" width="230" height="160" rx="10" fill="#ffffff" stroke="#27ae60" stroke-width="1.5"/>
+  <rect x="540" y="80" width="230" height="45" rx="10" fill="#27ae60"/>
+  <rect x="540" y="113" width="230" height="12" fill="#27ae60"/>
+  <text x="655" y="109" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#fff">📄 Long Document</text>
+  <text x="655" y="148" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">10M token context window</text>
+  <text x="655" y="168" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">Contract &amp; research analysis</text>
+  <text x="655" y="188" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">Full codebase review</text>
+  <text x="655" y="218" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#27ae60">Recommended: Scout</text>
+
+  <!-- Card 4 -->
+  <rect x="30" y="265" width="230" height="160" rx="10" fill="#ffffff" stroke="#e74c3c" stroke-width="1.5"/>
+  <rect x="30" y="265" width="230" height="45" rx="10" fill="#e74c3c"/>
+  <rect x="30" y="298" width="230" height="12" fill="#e74c3c"/>
+  <text x="145" y="294" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#fff">🔍 RAG Pipeline</text>
+  <text x="145" y="333" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">Retrieval-augmented generation</text>
+  <text x="145" y="353" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">Enterprise knowledge bases</text>
+  <text x="145" y="373" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">Fully self-hosted locally</text>
+  <text x="145" y="403" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#e74c3c">Recommended: Scout</text>
+
+  <!-- Card 5 -->
+  <rect x="285" y="265" width="230" height="160" rx="10" fill="#ffffff" stroke="#f39c12" stroke-width="1.5"/>
+  <rect x="285" y="265" width="230" height="45" rx="10" fill="#f39c12"/>
+  <rect x="285" y="298" width="230" height="12" fill="#f39c12"/>
+  <text x="400" y="294" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#fff">🤖 AI Agents</text>
+  <text x="400" y="333" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">Tool calling &amp; function use</text>
+  <text x="400" y="353" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">Multi-step automation</text>
+  <text x="400" y="373" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">LangGraph · CrewAI integration</text>
+  <text x="400" y="403" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#f39c12">Recommended: Maverick</text>
+
+  <!-- Card 6 -->
+  <rect x="540" y="265" width="230" height="160" rx="10" fill="#ffffff" stroke="#1abc9c" stroke-width="1.5"/>
+  <rect x="540" y="265" width="230" height="45" rx="10" fill="#1abc9c"/>
+  <rect x="540" y="298" width="230" height="12" fill="#1abc9c"/>
+  <text x="655" y="294" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#fff">🌐 Translation · Summary</text>
+  <text x="655" y="333" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">100+ language translation</text>
+  <text x="655" y="353" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">News &amp; report summarization</text>
+  <text x="655" y="373" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">Excellent multilingual quality</text>
+  <text x="655" y="403" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#1abc9c">Recommended: Scout</text>
+
+  <text x="400" y="490" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#95a5a6">Apache 2.0 Open Source · Free Commercial Use · Local Deployment Ready</text>
+</svg>

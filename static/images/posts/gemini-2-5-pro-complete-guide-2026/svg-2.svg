@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <rect width="800" height="500" fill="#f8f9fa"/>
+  <text x="400" y="38" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#2c3e50">Gemini 2.5 Pro 추론 모드 비교</text>
+  <text x="400" y="60" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#7f8c8d">일반 모드 vs 사고(Thinking) 모드 — 상황별 최적 선택</text>
+
+  <!-- Left: Standard Mode -->
+  <rect x="30" y="80" width="355" height="390" rx="12" fill="#ffffff" stroke="#4285f4" stroke-width="2"/>
+  <rect x="30" y="80" width="355" height="55" rx="12" fill="#4285f4"/>
+  <rect x="30" y="123" width="355" height="12" fill="#4285f4"/>
+  <text x="207" y="110" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" font-weight="bold" fill="#fff">⚡ 일반 모드 (Standard)</text>
+
+  <text x="207" y="160" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#4285f4">입력 → 즉시 응답</text>
+
+  <!-- Flow -->
+  <rect x="80" y="175" width="255" height="40" rx="8" fill="#ebf5fb" stroke="#4285f4" stroke-width="1"/>
+  <text x="207" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">사용자 입력 수신</text>
+  <line x1="207" y1="215" x2="207" y2="230" stroke="#4285f4" stroke-width="1.5" marker-end="url(#b1)"/>
+  <defs>
+    <marker id="b1" markerWidth="7" markerHeight="5" refX="7" refY="2.5" orient="auto">
+      <polygon points="0 0,7 2.5,0 5" fill="#4285f4"/>
+    </marker>
+    <marker id="b2" markerWidth="7" markerHeight="5" refX="7" refY="2.5" orient="auto">
+      <polygon points="0 0,7 2.5,0 5" fill="#ea4335"/>
+    </marker>
+  </defs>
+  <rect x="80" y="230" width="255" height="40" rx="8" fill="#ebf5fb" stroke="#4285f4" stroke-width="1"/>
+  <text x="207" y="255" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">패턴 매칭 · 지식 활용</text>
+  <line x1="207" y1="270" x2="207" y2="285" stroke="#4285f4" stroke-width="1.5" marker-end="url(#b1)"/>
+  <rect x="80" y="285" width="255" height="40" rx="8" fill="#4285f4"/>
+  <text x="207" y="310" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#fff">빠른 응답 생성</text>
+
+  <text x="207" y="355" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#2c3e50">적합한 작업</text>
+  <text x="207" y="375" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">• 일반 질문 답변 · 번역</text>
+  <text x="207" y="393" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">• 텍스트 요약 · 창작</text>
+  <text x="207" y="411" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">• 간단한 코드 작성</text>
+  <rect x="70" y="430" width="275" height="28" rx="14" fill="#ebf5fb" stroke="#4285f4" stroke-width="1"/>
+  <text x="207" y="449" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#4285f4">응답 속도: ⚡ 빠름 · 비용: 💰 저렴</text>
+
+  <!-- Right: Thinking Mode -->
+  <rect x="415" y="80" width="355" height="390" rx="12" fill="#ffffff" stroke="#ea4335" stroke-width="2"/>
+  <rect x="415" y="80" width="355" height="55" rx="12" fill="#ea4335"/>
+  <rect x="415" y="123" width="355" height="12" fill="#ea4335"/>
+  <text x="592" y="110" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" font-weight="bold" fill="#fff">🧠 사고 모드 (Thinking)</text>
+
+  <text x="592" y="160" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#ea4335">입력 → 내부 추론 → 응답</text>
+
+  <!-- Flow -->
+  <rect x="465" y="175" width="255" height="40" rx="8" fill="#fdf2f2" stroke="#ea4335" stroke-width="1"/>
+  <text x="592" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">사용자 입력 수신</text>
+  <line x1="592" y1="215" x2="592" y2="230" stroke="#ea4335" stroke-width="1.5" marker-end="url(#b2)"/>
+  <rect x="465" y="230" width="255" height="40" rx="8" fill="#fdf2f2" stroke="#ea4335" stroke-width="1.5"/>
+  <text x="592" y="252" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#ea4335">🔄 내부 사고 과정</text>
+  <text x="592" y="265" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#7f8c8d">(사용자에게 비공개)</text>
+  <line x1="592" y1="270" x2="592" y2="285" stroke="#ea4335" stroke-width="1.5" marker-end="url(#b2)"/>
+  <rect x="465" y="285" width="255" height="40" rx="8" fill="#ea4335"/>
+  <text x="592" y="310" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#fff">검증된 최종 답변 출력</text>
+
+  <text x="592" y="355" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#2c3e50">적합한 작업</text>
+  <text x="592" y="375" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">• 수학 · 과학 복잡한 문제</text>
+  <text x="592" y="393" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">• 다단계 코딩 · 알고리즘</text>
+  <text x="592" y="411" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">• 논리 추론 · 계획 수립</text>
+  <rect x="455" y="430" width="275" height="28" rx="14" fill="#fdf2f2" stroke="#ea4335" stroke-width="1"/>
+  <text x="592" y="449" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#ea4335">응답 속도: 🐢 느림 · 비용: 💰💰 더 높음</text>
+
+  <text x="400" y="492" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#95a5a6">API: thinking_budget 파라미터로 사고 토큰 수 조절 가능</text>
+</svg>
