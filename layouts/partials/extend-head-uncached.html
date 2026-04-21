@@ -1,0 +1,10 @@
+{{/* Multilingual hreflang links — per-page, uncached */}}
+{{ if .IsTranslated }}
+  {{ $defaultLang := "ko" }}
+  {{ range .AllTranslations }}
+    <link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}">
+  {{ end }}
+  {{ range where .AllTranslations "Language.Lang" $defaultLang }}
+    <link rel="alternate" hreflang="x-default" href="{{ .Permalink }}">
+  {{ end }}
+{{ end }}
