@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <rect width="800" height="500" fill="#f8f9fa"/>
+  <text x="400" y="36" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" font-weight="bold" fill="#2c3e50">AI 코딩 에이전트 아키텍처 비교</text>
+  <text x="400" y="58" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#7f8c8d">IDE · CLI · 클라우드 3계층</text>
+
+  <!-- IDE layer -->
+  <rect x="40" y="90" width="720" height="115" rx="10" fill="#ffffff" stroke="#3498db" stroke-width="2"/>
+  <text x="60" y="115" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#3498db">IDE 계층</text>
+  <text x="60" y="133" font-family="Arial, sans-serif" font-size="11" fill="#7f8c8d">에디터 내부 · 인라인 편집 · Diff 수락</text>
+
+  <rect x="180" y="140" width="150" height="50" rx="8" fill="#ebf5fb" stroke="#3498db" stroke-width="1.5"/>
+  <text x="255" y="162" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#2c3e50">Cursor</text>
+  <text x="255" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#7f8c8d">Composer · Agent 모드</text>
+
+  <rect x="360" y="140" width="150" height="50" rx="8" fill="#e8f6f3" stroke="#16a085" stroke-width="1.5"/>
+  <text x="435" y="162" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#2c3e50">Windsurf</text>
+  <text x="435" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#7f8c8d">Cascade · 다중 파일 편집</text>
+
+  <rect x="540" y="140" width="150" height="50" rx="8" fill="#fef5e7" stroke="#f39c12" stroke-width="1.5"/>
+  <text x="615" y="162" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#2c3e50">Cline</text>
+  <text x="615" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#7f8c8d">VS Code 확장 · BYO 키</text>
+
+  <!-- CLI layer -->
+  <rect x="40" y="225" width="720" height="105" rx="10" fill="#ffffff" stroke="#9b59b6" stroke-width="2"/>
+  <text x="60" y="250" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#9b59b6">CLI 계층</text>
+  <text x="60" y="268" font-family="Arial, sans-serif" font-size="11" fill="#7f8c8d">터미널 기반 · 훅 · 서브에이전트 · MCP</text>
+
+  <rect x="260" y="278" width="280" height="40" rx="8" fill="#f4ecf7" stroke="#9b59b6" stroke-width="1.5"/>
+  <text x="400" y="295" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#2c3e50">Claude Code</text>
+  <text x="400" y="310" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#7f8c8d">슬래시 커맨드 · 훅 · MCP 서버 · 서브에이전트</text>
+
+  <!-- Cloud layer -->
+  <rect x="40" y="350" width="720" height="110" rx="10" fill="#ffffff" stroke="#e74c3c" stroke-width="2"/>
+  <text x="60" y="375" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#e74c3c">클라우드 계층</text>
+  <text x="60" y="393" font-family="Arial, sans-serif" font-size="11" fill="#7f8c8d">원격 VM · 브라우저 내장 · PR 자동화</text>
+
+  <rect x="260" y="405" width="280" height="45" rx="8" fill="#fdecea" stroke="#e74c3c" stroke-width="1.5"/>
+  <text x="400" y="422" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#2c3e50">Devin (Cognition AI)</text>
+  <text x="400" y="438" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#7f8c8d">격리된 VM · 쉘 · 브라우저 · GitHub 연동</text>
+
+  <text x="400" y="485" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#95a5a6">아래로 갈수록 자율성은 높아지고 실시간 개입 빈도는 낮아진다</text>
+</svg>

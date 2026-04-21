@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <rect width="800" height="500" fill="#f8f9fa"/>
+  <text x="400" y="36" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" font-weight="bold" fill="#2c3e50">Production Roadmap and Industry Impact</text>
+  <text x="400" y="58" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#7f8c8d">Where — and how fast — they arrive</text>
+
+  <line x1="100" y1="170" x2="720" y2="170" stroke="#2c3e50" stroke-width="2"/>
+  <polygon points="720,170 712,166 712,174" fill="#2c3e50"/>
+
+  <g font-family="Arial, sans-serif">
+    <circle cx="150" cy="170" r="8" fill="#2980b9"/>
+    <text x="150" y="155" text-anchor="middle" font-size="12" font-weight="bold" fill="#2c3e50">2024-2025</text>
+    <text x="150" y="195" text-anchor="middle" font-size="11" fill="#7f8c8d">Prototypes</text>
+    <text x="150" y="212" text-anchor="middle" font-size="11" fill="#7f8c8d">Demos</text>
+
+    <circle cx="290" cy="170" r="8" fill="#c0392b"/>
+    <text x="290" y="155" text-anchor="middle" font-size="12" font-weight="bold" fill="#2c3e50">2026</text>
+    <text x="290" y="195" text-anchor="middle" font-size="11" fill="#7f8c8d">Paid pilots</text>
+    <text x="290" y="212" text-anchor="middle" font-size="11" fill="#7f8c8d">100s-1000s units</text>
+
+    <circle cx="430" cy="170" r="10" fill="#8e44ad"/>
+    <text x="430" y="155" text-anchor="middle" font-size="12" font-weight="bold" fill="#2c3e50">2027-2028</text>
+    <text x="430" y="195" text-anchor="middle" font-size="11" fill="#7f8c8d">Factory scale</text>
+    <text x="430" y="212" text-anchor="middle" font-size="11" fill="#7f8c8d">10-50k units/yr</text>
+
+    <circle cx="580" cy="170" r="10" fill="#27ae60"/>
+    <text x="580" y="155" text-anchor="middle" font-size="12" font-weight="bold" fill="#2c3e50">2029-2030</text>
+    <text x="580" y="195" text-anchor="middle" font-size="11" fill="#7f8c8d">Logistics · retail</text>
+    <text x="580" y="212" text-anchor="middle" font-size="11" fill="#7f8c8d">100k+/yr</text>
+
+    <circle cx="700" cy="170" r="10" fill="#e67e22"/>
+    <text x="700" y="155" text-anchor="middle" font-size="12" font-weight="bold" fill="#2c3e50">2030+</text>
+    <text x="700" y="195" text-anchor="middle" font-size="11" fill="#7f8c8d">Mainstream</text>
+  </g>
+
+  <rect x="60" y="250" width="220" height="200" rx="10" fill="#ffffff" stroke="#e74c3c" stroke-width="2"/>
+  <text x="170" y="275" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#e74c3c">Earliest</text>
+  <text x="170" y="295" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#95a5a6">Repetitive physical labor</text>
+  <text x="80" y="325" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">• Warehouse picking / transport</text>
+  <text x="80" y="350" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">• Simple factory assembly</text>
+  <text x="80" y="375" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">• Overnight restocking</text>
+  <text x="80" y="400" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">• Dishwashing / prep work</text>
+  <text x="80" y="425" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">• Hazardous inspection</text>
+
+  <rect x="290" y="250" width="220" height="200" rx="10" fill="#ffffff" stroke="#f39c12" stroke-width="2"/>
+  <text x="400" y="275" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#f39c12">Mid-term</text>
+  <text x="400" y="295" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#95a5a6">Skill + judgment combined</text>
+  <text x="310" y="325" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">• Retail service &amp; sales</text>
+  <text x="310" y="350" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">• Complex sorting</text>
+  <text x="310" y="375" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">• Hotel housekeeping</text>
+  <text x="310" y="400" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">• General home chores</text>
+  <text x="310" y="425" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">• Security / patrol</text>
+
+  <rect x="520" y="250" width="220" height="200" rx="10" fill="#ffffff" stroke="#27ae60" stroke-width="2"/>
+  <text x="630" y="275" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#27ae60">Long-term</text>
+  <text x="630" y="295" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#95a5a6">Dexterity + empathy</text>
+  <text x="540" y="325" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">• Nursing / eldercare assist</text>
+  <text x="540" y="350" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">• Construction multi-role</text>
+  <text x="540" y="375" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">• Precision repair</text>
+  <text x="540" y="400" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">• Medical assistance</text>
+  <text x="540" y="425" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">• Education &amp; interaction</text>
+
+  <text x="400" y="485" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#95a5a6">Entry speed depends on tech × regulation × social acceptance</text>
+</svg>

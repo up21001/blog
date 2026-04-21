@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <rect width="800" height="500" fill="#f8f9fa"/>
+  <text x="400" y="36" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" font-weight="bold" fill="#2c3e50">휴머노이드 로봇 핵심 기술 스택</text>
+  <text x="400" y="58" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#7f8c8d">네 기둥이 모두 성숙해야 쓸모가 생긴다</text>
+
+  <!-- Hardware -->
+  <g>
+    <rect x="60" y="95" width="330" height="170" rx="14" fill="#ffffff" stroke="#2980b9" stroke-width="2"/>
+    <rect x="60" y="95" width="330" height="45" rx="14" fill="#2980b9"/>
+    <rect x="60" y="125" width="330" height="15" fill="#2980b9"/>
+    <text x="225" y="123" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffffff">🔩 하드웨어</text>
+    <text x="80" y="165" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">• 관절 액추에이터 토크·반응 속도</text>
+    <text x="80" y="187" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">• 배터리 밀도·지속 시간</text>
+    <text x="80" y="209" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">• 손 자유도 (다중 손가락)</text>
+    <text x="80" y="231" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">• 시각·촉각 센서 통합</text>
+    <text x="80" y="253" font-family="Arial, sans-serif" font-size="11" fill="#7f8c8d">수직 통합 → 원가·신뢰성 확보</text>
+  </g>
+
+  <!-- Perception -->
+  <g>
+    <rect x="410" y="95" width="330" height="170" rx="14" fill="#ffffff" stroke="#c0392b" stroke-width="2"/>
+    <rect x="410" y="95" width="330" height="45" rx="14" fill="#c0392b"/>
+    <rect x="410" y="125" width="330" height="15" fill="#c0392b"/>
+    <text x="575" y="123" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffffff">👁 인지</text>
+    <text x="430" y="165" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">• 3D 위치·자세 추정</text>
+    <text x="430" y="187" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">• 물체 재질·마찰·무게 예측</text>
+    <text x="430" y="209" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">• 촉각 피드백 (force feedback)</text>
+    <text x="430" y="231" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">• 동적 환경 적응</text>
+    <text x="430" y="253" font-family="Arial, sans-serif" font-size="11" fill="#7f8c8d">카메라+힘센서 멀티모달 결합</text>
+  </g>
+
+  <!-- VLA -->
+  <g>
+    <rect x="60" y="285" width="330" height="170" rx="14" fill="#ffffff" stroke="#8e44ad" stroke-width="2"/>
+    <rect x="60" y="285" width="330" height="45" rx="14" fill="#8e44ad"/>
+    <rect x="60" y="315" width="330" height="15" fill="#8e44ad"/>
+    <text x="225" y="313" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffffff">🧠 VLA 모델</text>
+    <text x="80" y="355" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">• Vision + Language + Action</text>
+    <text x="80" y="377" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">• 자연어 지시 → 팔·다리 궤적</text>
+    <text x="80" y="399" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">• Figure Helix · Google RT 계열</text>
+    <text x="80" y="421" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">• 종단간 학습 구조</text>
+    <text x="80" y="443" font-family="Arial, sans-serif" font-size="11" fill="#7f8c8d">"로봇의 두뇌"</text>
+  </g>
+
+  <!-- Data / Sim -->
+  <g>
+    <rect x="410" y="285" width="330" height="170" rx="14" fill="#ffffff" stroke="#27ae60" stroke-width="2"/>
+    <rect x="410" y="285" width="330" height="45" rx="14" fill="#27ae60"/>
+    <rect x="410" y="315" width="330" height="15" fill="#27ae60"/>
+    <text x="575" y="313" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffffff">📊 데이터·학습</text>
+    <text x="430" y="355" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">• 인간 영상 · 원격 조종 로그</text>
+    <text x="430" y="377" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">• 물리 시뮬레이션 대량 롤아웃</text>
+    <text x="430" y="399" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">• 모방 학습 + 강화 학습</text>
+    <text x="430" y="421" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">• Sim-to-Real 전이</text>
+    <text x="430" y="443" font-family="Arial, sans-serif" font-size="11" fill="#7f8c8d">진짜 해자는 데이터 파이프라인</text>
+  </g>
+
+  <text x="400" y="487" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#95a5a6">네 축 중 하나만 약해도 "데모는 되지만 일은 못 하는" 로봇이 된다</text>
+</svg>

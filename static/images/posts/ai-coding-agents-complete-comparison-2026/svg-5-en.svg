@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <rect width="800" height="500" fill="#f8f9fa"/>
+  <text x="400" y="36" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" font-weight="bold" fill="#2c3e50">The 2026 Three-Layer Workflow</text>
+  <text x="400" y="58" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#7f8c8d">Stack agents by layer — not by brand</text>
+
+  <rect x="60" y="90" width="680" height="105" rx="12" fill="#ebf5fb" stroke="#3498db" stroke-width="2"/>
+  <rect x="60" y="90" width="160" height="105" rx="12" fill="#3498db"/>
+  <rect x="200" y="90" width="20" height="105" fill="#3498db"/>
+  <text x="140" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#ffffff">⚡ Immediate</text>
+  <text x="140" y="152" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#ebf5fb">Response</text>
+  <text x="140" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#ebf5fb">IDE layer</text>
+  <text x="240" y="121" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#2c3e50">Cursor / Windsurf</text>
+  <text x="240" y="143" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">• Component-level edits · bug fixes</text>
+  <text x="240" y="163" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">• Test drafts · rapid diff approval</text>
+  <text x="240" y="183" font-family="Arial, sans-serif" font-size="11" fill="#7f8c8d">Best for: keystroke feedback loop</text>
+
+  <rect x="60" y="210" width="680" height="105" rx="12" fill="#f4ecf7" stroke="#9b59b6" stroke-width="2"/>
+  <rect x="60" y="210" width="160" height="105" rx="12" fill="#9b59b6"/>
+  <rect x="200" y="210" width="20" height="105" fill="#9b59b6"/>
+  <text x="140" y="250" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#ffffff">🎯 Session</text>
+  <text x="140" y="272" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#f4ecf7">Scoped work</text>
+  <text x="140" y="295" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#f4ecf7">CLI layer</text>
+  <text x="240" y="241" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#2c3e50">Claude Code / Cline</text>
+  <text x="240" y="263" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">• PR-scoped tasks · hooks + MCP</text>
+  <text x="240" y="283" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">• CI logs · tests · release notes</text>
+  <text x="240" y="303" font-family="Arial, sans-serif" font-size="11" fill="#7f8c8d">Best for: 1-3 hour focused sessions</text>
+
+  <rect x="60" y="330" width="680" height="105" rx="12" fill="#fdecea" stroke="#e74c3c" stroke-width="2"/>
+  <rect x="60" y="330" width="160" height="105" rx="12" fill="#e74c3c"/>
+  <rect x="200" y="330" width="20" height="105" fill="#e74c3c"/>
+  <text x="140" y="370" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#ffffff">🤖 Async</text>
+  <text x="140" y="392" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#fdecea">Delegation</text>
+  <text x="140" y="415" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#fdecea">Cloud layer</text>
+  <text x="240" y="361" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#2c3e50">Devin</text>
+  <text x="240" y="383" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">• Multi-hour migrations</text>
+  <text x="240" y="403" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">• Dependency upgrades · docs automation</text>
+  <text x="240" y="423" font-family="Arial, sans-serif" font-size="11" fill="#7f8c8d">Best for: clear specs + human final review</text>
+
+  <text x="400" y="475" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50" font-weight="bold">Your most-repeated tedious heavy work</text>
+  <text x="400" y="492" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#95a5a6">→ invest the most expensive agent there, and only there</text>
+</svg>

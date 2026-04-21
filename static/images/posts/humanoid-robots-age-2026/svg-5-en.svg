@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <rect width="800" height="500" fill="#f8f9fa"/>
+  <text x="400" y="36" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" font-weight="bold" fill="#2c3e50">Ethics, Safety, and Regulation Challenges</text>
+  <text x="400" y="58" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#7f8c8d">Three axes as important as the technology</text>
+
+  <g>
+    <rect x="50" y="95" width="230" height="340" rx="14" fill="#ffffff" stroke="#e74c3c" stroke-width="2"/>
+    <rect x="50" y="95" width="230" height="50" rx="14" fill="#e74c3c"/>
+    <rect x="50" y="130" width="230" height="15" fill="#e74c3c"/>
+    <text x="165" y="125" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffffff">⚖ Safety &amp; Liability</text>
+    <text x="165" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#e74c3c">Accident liability</text>
+    <text x="70" y="195" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">• Manufacturer · operator · user</text>
+    <text x="70" y="220" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">• Insurance frameworks needed</text>
+    <text x="70" y="245" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">• Rewrite OSHA-style standards</text>
+
+    <text x="165" y="285" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#e74c3c">Risk surfaces</text>
+    <text x="70" y="310" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">• Bimanual tool use</text>
+    <text x="70" y="335" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">• Irregular-terrain motion</text>
+    <text x="70" y="360" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">• Close human collaboration</text>
+
+    <rect x="70" y="385" width="190" height="35" rx="8" fill="#fdecea" stroke="#e74c3c" stroke-width="1"/>
+    <text x="165" y="407" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#c0392b">New certification required</text>
+  </g>
+
+  <g>
+    <rect x="290" y="95" width="230" height="340" rx="14" fill="#ffffff" stroke="#8e44ad" stroke-width="2"/>
+    <rect x="290" y="95" width="230" height="50" rx="14" fill="#8e44ad"/>
+    <rect x="290" y="130" width="230" height="15" fill="#8e44ad"/>
+    <text x="405" y="125" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffffff">🔒 Data &amp; Privacy</text>
+    <text x="405" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#8e44ad">Surveillance</text>
+    <text x="310" y="195" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">• 24/7 cameras &amp; mics</text>
+    <text x="310" y="220" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">• Factory · retail · home capture</text>
+    <text x="310" y="245" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">• Worker consent scope</text>
+
+    <text x="405" y="285" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#8e44ad">Training data</text>
+    <text x="310" y="310" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">• Video ownership</text>
+    <text x="310" y="335" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">• Retraining transparency</text>
+    <text x="310" y="360" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">• Retention standards</text>
+
+    <rect x="310" y="385" width="190" height="35" rx="8" fill="#f4ecf7" stroke="#8e44ad" stroke-width="1"/>
+    <text x="405" y="407" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#6c3483">Transparent data governance</text>
+  </g>
+
+  <g>
+    <rect x="530" y="95" width="230" height="340" rx="14" fill="#ffffff" stroke="#2980b9" stroke-width="2"/>
+    <rect x="530" y="95" width="230" height="50" rx="14" fill="#2980b9"/>
+    <rect x="530" y="130" width="230" height="15" fill="#2980b9"/>
+    <text x="645" y="125" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffffff">🌏 Social Acceptance</text>
+    <text x="645" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#2980b9">Regional divergence</text>
+    <text x="550" y="195" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">• Korea / Japan: favorable</text>
+    <text x="550" y="220" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">• Europe: labor-protective</text>
+    <text x="550" y="245" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">• US: enterprise-driven</text>
+
+    <text x="645" y="285" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#2980b9">Jobs &amp; society</text>
+    <text x="550" y="310" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">• Reskilling speed</text>
+    <text x="550" y="335" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">• Aging demographics</text>
+    <text x="550" y="360" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">• Income distribution</text>
+
+    <rect x="550" y="385" width="190" height="35" rx="8" fill="#ebf5fb" stroke="#2980b9" stroke-width="1"/>
+    <text x="645" y="407" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#1f618d">Policy must catch technology</text>
+  </g>
+
+  <text x="400" y="475" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50" font-weight="bold">Deployment speed · reskilling speed · regulatory speed</text>
+</svg>

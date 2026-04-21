@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <rect width="800" height="500" fill="#f8f9fa"/>
+  <text x="400" y="36" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" font-weight="bold" fill="#2c3e50">휴머노이드 로봇 시대 2026</text>
+  <text x="400" y="58" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#7f8c8d">Figure 02 · Tesla Optimus · Unitree G1</text>
+
+  <!-- Figure 02 -->
+  <g>
+    <rect x="70" y="100" width="200" height="310" rx="14" fill="#ffffff" stroke="#2980b9" stroke-width="2"/>
+    <rect x="70" y="100" width="200" height="55" rx="14" fill="#2980b9"/>
+    <rect x="70" y="138" width="200" height="17" fill="#2980b9"/>
+    <text x="170" y="132" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffffff">Figure 02</text>
+    <text x="170" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#d6eaf8">Figure AI · USA</text>
+
+    <!-- Robot silhouette -->
+    <circle cx="170" cy="190" r="16" fill="#2980b9"/>
+    <rect x="152" y="208" width="36" height="50" rx="5" fill="#2980b9"/>
+    <rect x="138" y="212" width="14" height="35" rx="4" fill="#2980b9"/>
+    <rect x="188" y="212" width="14" height="35" rx="4" fill="#2980b9"/>
+    <rect x="156" y="262" width="12" height="40" rx="3" fill="#2980b9"/>
+    <rect x="172" y="262" width="12" height="40" rx="3" fill="#2980b9"/>
+
+    <text x="170" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#2c3e50">상업 투입 선두</text>
+    <text x="170" y="348" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#7f8c8d">BMW · Mercedes 라인</text>
+    <text x="170" y="370" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#7f8c8d">VLA 모델 "Helix"</text>
+    <text x="170" y="395" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#2980b9" font-weight="bold">≈170cm · 70kg</text>
+  </g>
+
+  <!-- Tesla Optimus -->
+  <g>
+    <rect x="300" y="100" width="200" height="310" rx="14" fill="#ffffff" stroke="#c0392b" stroke-width="2"/>
+    <rect x="300" y="100" width="200" height="55" rx="14" fill="#c0392b"/>
+    <rect x="300" y="138" width="200" height="17" fill="#c0392b"/>
+    <text x="400" y="132" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffffff">Tesla Optimus</text>
+    <text x="400" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#fadbd8">Tesla · USA</text>
+
+    <circle cx="400" cy="190" r="16" fill="#c0392b"/>
+    <rect x="382" y="208" width="36" height="50" rx="5" fill="#c0392b"/>
+    <rect x="368" y="212" width="14" height="35" rx="4" fill="#c0392b"/>
+    <rect x="418" y="212" width="14" height="35" rx="4" fill="#c0392b"/>
+    <rect x="386" y="262" width="12" height="40" rx="3" fill="#c0392b"/>
+    <rect x="402" y="262" width="12" height="40" rx="3" fill="#c0392b"/>
+
+    <text x="400" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#2c3e50">양산 규모 목표</text>
+    <text x="400" y="348" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#7f8c8d">자사 공장 투입 중</text>
+    <text x="400" y="370" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#7f8c8d">수백만 대 목표</text>
+    <text x="400" y="395" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#c0392b" font-weight="bold">≈173cm · 57kg</text>
+  </g>
+
+  <!-- Unitree G1 -->
+  <g>
+    <rect x="530" y="100" width="200" height="310" rx="14" fill="#ffffff" stroke="#27ae60" stroke-width="2"/>
+    <rect x="530" y="100" width="200" height="55" rx="14" fill="#27ae60"/>
+    <rect x="530" y="138" width="200" height="17" fill="#27ae60"/>
+    <text x="630" y="132" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffffff">Unitree G1</text>
+    <text x="630" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#d5f5e3">Unitree · China</text>
+
+    <circle cx="630" cy="195" r="14" fill="#27ae60"/>
+    <rect x="614" y="210" width="32" height="45" rx="5" fill="#27ae60"/>
+    <rect x="602" y="214" width="12" height="32" rx="4" fill="#27ae60"/>
+    <rect x="646" y="214" width="12" height="32" rx="4" fill="#27ae60"/>
+    <rect x="618" y="259" width="10" height="37" rx="3" fill="#27ae60"/>
+    <rect x="632" y="259" width="10" height="37" rx="3" fill="#27ae60"/>
+
+    <text x="630" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#2c3e50">가격 파괴자</text>
+    <text x="630" y="348" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#7f8c8d">대학·스타트업 공급</text>
+    <text x="630" y="370" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#7f8c8d">≈$16,000</text>
+    <text x="630" y="395" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#27ae60" font-weight="bold">≈130cm · 35kg</text>
+  </g>
+
+  <text x="400" y="445" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50" font-weight="bold">"공장으로 걸어 들어오기 시작한" 첫 세대</text>
+  <text x="400" y="475" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#95a5a6">2026년 4월 기준 공개 정보 요약 — 일부 수치는 추정치</text>
+</svg>

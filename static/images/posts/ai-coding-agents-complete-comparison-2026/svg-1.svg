@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <rect width="800" height="500" fill="#f8f9fa"/>
+  <text x="400" y="38" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" font-weight="bold" fill="#2c3e50">AI 코딩 에이전트 2026 지형도</text>
+  <text x="400" y="60" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#7f8c8d">5개 주요 도구 — IDE부터 완전 자율 클라우드까지</text>
+
+  <line x1="80" y1="440" x2="720" y2="440" stroke="#bdc3c7" stroke-width="2"/>
+  <polygon points="720,440 712,436 712,444" fill="#bdc3c7"/>
+  <text x="100" y="460" font-family="Arial, sans-serif" font-size="12" fill="#7f8c8d">낮은 자율성 (보조)</text>
+  <text x="700" y="460" text-anchor="end" font-family="Arial, sans-serif" font-size="12" fill="#7f8c8d">높은 자율성 (위임)</text>
+
+  <!-- Cursor -->
+  <rect x="70" y="100" width="135" height="110" rx="10" fill="#ffffff" stroke="#3498db" stroke-width="2"/>
+  <rect x="70" y="100" width="135" height="28" rx="10" fill="#3498db"/>
+  <rect x="70" y="120" width="135" height="8" fill="#3498db"/>
+  <text x="137" y="119" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff">Cursor</text>
+  <text x="137" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">AI 네이티브</text>
+  <text x="137" y="166" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">VS Code 포크</text>
+  <text x="137" y="188" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#7f8c8d">모델 선택형</text>
+  <line x1="137" y1="210" x2="137" y2="430" stroke="#3498db" stroke-width="1" stroke-dasharray="3,3"/>
+
+  <!-- Windsurf -->
+  <rect x="225" y="100" width="135" height="110" rx="10" fill="#ffffff" stroke="#16a085" stroke-width="2"/>
+  <rect x="225" y="100" width="135" height="28" rx="10" fill="#16a085"/>
+  <rect x="225" y="120" width="135" height="8" fill="#16a085"/>
+  <text x="292" y="119" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff">Windsurf</text>
+  <text x="292" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">Cascade 에이전트</text>
+  <text x="292" y="166" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">기업용 강점</text>
+  <text x="292" y="188" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#7f8c8d">온프레미스</text>
+  <line x1="292" y1="210" x2="292" y2="430" stroke="#16a085" stroke-width="1" stroke-dasharray="3,3"/>
+
+  <!-- Cline -->
+  <rect x="380" y="100" width="135" height="110" rx="10" fill="#ffffff" stroke="#f39c12" stroke-width="2"/>
+  <rect x="380" y="100" width="135" height="28" rx="10" fill="#f39c12"/>
+  <rect x="380" y="120" width="135" height="8" fill="#f39c12"/>
+  <text x="447" y="119" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff">Cline</text>
+  <text x="447" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">오픈소스 확장</text>
+  <text x="447" y="166" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">BYO API 키</text>
+  <text x="447" y="188" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#7f8c8d">브라우저 자동화</text>
+  <line x1="447" y1="210" x2="447" y2="430" stroke="#f39c12" stroke-width="1" stroke-dasharray="3,3"/>
+
+  <!-- Claude Code -->
+  <rect x="535" y="100" width="135" height="110" rx="10" fill="#ffffff" stroke="#9b59b6" stroke-width="2"/>
+  <rect x="535" y="100" width="135" height="28" rx="10" fill="#9b59b6"/>
+  <rect x="535" y="120" width="135" height="8" fill="#9b59b6"/>
+  <text x="602" y="119" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff">Claude Code</text>
+  <text x="602" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">공식 CLI</text>
+  <text x="602" y="166" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">훅 · 서브에이전트</text>
+  <text x="602" y="188" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#7f8c8d">MCP 통합</text>
+  <line x1="602" y1="210" x2="602" y2="430" stroke="#9b59b6" stroke-width="1" stroke-dasharray="3,3"/>
+
+  <!-- Devin -->
+  <rect x="585" y="260" width="165" height="130" rx="10" fill="#ffffff" stroke="#e74c3c" stroke-width="2"/>
+  <rect x="585" y="260" width="165" height="28" rx="10" fill="#e74c3c"/>
+  <rect x="585" y="280" width="165" height="8" fill="#e74c3c"/>
+  <text x="667" y="279" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff">Devin</text>
+  <text x="667" y="312" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">클라우드 에이전트</text>
+  <text x="667" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">PR 자동 생성</text>
+  <text x="667" y="352" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#7f8c8d">비동기 위임</text>
+  <text x="667" y="374" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#e74c3c" font-weight="bold">최고 자율성</text>
+
+  <text x="400" y="490" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#95a5a6">2026년 4월 기준 — 도구별 주요 포지셔닝</text>
+</svg>

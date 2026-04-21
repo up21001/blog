@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <rect width="800" height="500" fill="#f8f9fa"/>
+  <text x="400" y="36" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" font-weight="bold" fill="#2c3e50">휴머노이드 로봇 스펙 비교</text>
+  <text x="400" y="58" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#7f8c8d">키 · 무게 · 자유도 · 가격</text>
+
+  <!-- Category header -->
+  <rect x="40" y="85" width="180" height="38" fill="#2c3e50"/>
+  <text x="60" y="109" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#ffffff">항목</text>
+
+  <rect x="220" y="85" width="190" height="38" fill="#2980b9"/>
+  <text x="315" y="109" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#ffffff">Figure 02</text>
+
+  <rect x="410" y="85" width="190" height="38" fill="#c0392b"/>
+  <text x="505" y="109" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#ffffff">Tesla Optimus</text>
+
+  <rect x="600" y="85" width="160" height="38" fill="#27ae60"/>
+  <text x="680" y="109" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#ffffff">Unitree G1</text>
+
+  <g font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">
+    <rect x="40" y="123" width="720" height="40" fill="#ffffff" stroke="#ecf0f1"/>
+    <text x="60" y="148" font-weight="bold">키</text>
+    <text x="315" y="148" text-anchor="middle">약 170 cm</text>
+    <text x="505" y="148" text-anchor="middle">약 173 cm</text>
+    <text x="680" y="148" text-anchor="middle">약 127-132 cm</text>
+
+    <rect x="40" y="163" width="720" height="40" fill="#f8f9fa" stroke="#ecf0f1"/>
+    <text x="60" y="188" font-weight="bold">무게</text>
+    <text x="315" y="188" text-anchor="middle">약 70 kg</text>
+    <text x="505" y="188" text-anchor="middle">약 57 kg</text>
+    <text x="680" y="188" text-anchor="middle">약 35 kg</text>
+
+    <rect x="40" y="203" width="720" height="40" fill="#ffffff" stroke="#ecf0f1"/>
+    <text x="60" y="228" font-weight="bold">자유도(DOF)</text>
+    <text x="315" y="228" text-anchor="middle">전신 40+</text>
+    <text x="505" y="228" text-anchor="middle">전신 28-30</text>
+    <text x="680" y="228" text-anchor="middle">전신 23-43</text>
+
+    <rect x="40" y="243" width="720" height="40" fill="#f8f9fa" stroke="#ecf0f1"/>
+    <text x="60" y="268" font-weight="bold">배터리 지속</text>
+    <text x="315" y="268" text-anchor="middle">5시간+</text>
+    <text x="505" y="268" text-anchor="middle">작업 기준 가변</text>
+    <text x="680" y="268" text-anchor="middle">약 2시간</text>
+
+    <rect x="40" y="283" width="720" height="40" fill="#ffffff" stroke="#ecf0f1"/>
+    <text x="60" y="308" font-weight="bold">AI 모델</text>
+    <text x="315" y="308" text-anchor="middle">자체 VLA "Helix"</text>
+    <text x="505" y="308" text-anchor="middle">자체 FSD 연장 계열</text>
+    <text x="680" y="308" text-anchor="middle">오픈 SDK · 외부 연결</text>
+
+    <rect x="40" y="323" width="720" height="40" fill="#f8f9fa" stroke="#ecf0f1"/>
+    <text x="60" y="348" font-weight="bold">주요 투입처</text>
+    <text x="315" y="348" text-anchor="middle">BMW · Mercedes</text>
+    <text x="505" y="348" text-anchor="middle">Tesla 자사 공장</text>
+    <text x="680" y="348" text-anchor="middle">대학 · 스타트업</text>
+
+    <rect x="40" y="363" width="720" height="40" fill="#ffffff" stroke="#ecf0f1"/>
+    <text x="60" y="388" font-weight="bold">가격 (공개/추정)</text>
+    <text x="315" y="388" text-anchor="middle" fill="#2980b9" font-weight="bold">비공개 · 리스 모델</text>
+    <text x="505" y="388" text-anchor="middle" fill="#c0392b" font-weight="bold">$20-30k 목표</text>
+    <text x="680" y="388" text-anchor="middle" fill="#27ae60" font-weight="bold">≈ $16,000</text>
+
+    <rect x="40" y="403" width="720" height="40" fill="#f8f9fa" stroke="#ecf0f1"/>
+    <text x="60" y="428" font-weight="bold">상업 성숙도</text>
+    <text x="315" y="428" text-anchor="middle">유료 파일럿 중</text>
+    <text x="505" y="428" text-anchor="middle">내부 투입 단계</text>
+    <text x="680" y="428" text-anchor="middle">일반 판매 진행</text>
+  </g>
+
+  <text x="400" y="480" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#95a5a6">공개 발표·추정치 기반 · 버전에 따라 변동</text>
+</svg>

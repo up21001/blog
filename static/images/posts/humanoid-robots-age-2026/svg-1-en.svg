@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <rect width="800" height="500" fill="#f8f9fa"/>
+  <text x="400" y="36" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" font-weight="bold" fill="#2c3e50">The Age of Humanoid Robots 2026</text>
+  <text x="400" y="58" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#7f8c8d">Figure 02 · Tesla Optimus · Unitree G1</text>
+
+  <g>
+    <rect x="70" y="100" width="200" height="310" rx="14" fill="#ffffff" stroke="#2980b9" stroke-width="2"/>
+    <rect x="70" y="100" width="200" height="55" rx="14" fill="#2980b9"/>
+    <rect x="70" y="138" width="200" height="17" fill="#2980b9"/>
+    <text x="170" y="132" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffffff">Figure 02</text>
+    <text x="170" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#d6eaf8">Figure AI · USA</text>
+
+    <circle cx="170" cy="190" r="16" fill="#2980b9"/>
+    <rect x="152" y="208" width="36" height="50" rx="5" fill="#2980b9"/>
+    <rect x="138" y="212" width="14" height="35" rx="4" fill="#2980b9"/>
+    <rect x="188" y="212" width="14" height="35" rx="4" fill="#2980b9"/>
+    <rect x="156" y="262" width="12" height="40" rx="3" fill="#2980b9"/>
+    <rect x="172" y="262" width="12" height="40" rx="3" fill="#2980b9"/>
+
+    <text x="170" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#2c3e50">First to paid pilots</text>
+    <text x="170" y="348" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#7f8c8d">BMW · Mercedes lines</text>
+    <text x="170" y="370" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#7f8c8d">VLA model "Helix"</text>
+    <text x="170" y="395" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#2980b9" font-weight="bold">≈170cm · 70kg</text>
+  </g>
+
+  <g>
+    <rect x="300" y="100" width="200" height="310" rx="14" fill="#ffffff" stroke="#c0392b" stroke-width="2"/>
+    <rect x="300" y="100" width="200" height="55" rx="14" fill="#c0392b"/>
+    <rect x="300" y="138" width="200" height="17" fill="#c0392b"/>
+    <text x="400" y="132" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffffff">Tesla Optimus</text>
+    <text x="400" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#fadbd8">Tesla · USA</text>
+
+    <circle cx="400" cy="190" r="16" fill="#c0392b"/>
+    <rect x="382" y="208" width="36" height="50" rx="5" fill="#c0392b"/>
+    <rect x="368" y="212" width="14" height="35" rx="4" fill="#c0392b"/>
+    <rect x="418" y="212" width="14" height="35" rx="4" fill="#c0392b"/>
+    <rect x="386" y="262" width="12" height="40" rx="3" fill="#c0392b"/>
+    <rect x="402" y="262" width="12" height="40" rx="3" fill="#c0392b"/>
+
+    <text x="400" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#2c3e50">Mass production target</text>
+    <text x="400" y="348" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#7f8c8d">In-house factory trial</text>
+    <text x="400" y="370" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#7f8c8d">Millions/yr goal</text>
+    <text x="400" y="395" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#c0392b" font-weight="bold">≈173cm · 57kg</text>
+  </g>
+
+  <g>
+    <rect x="530" y="100" width="200" height="310" rx="14" fill="#ffffff" stroke="#27ae60" stroke-width="2"/>
+    <rect x="530" y="100" width="200" height="55" rx="14" fill="#27ae60"/>
+    <rect x="530" y="138" width="200" height="17" fill="#27ae60"/>
+    <text x="630" y="132" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffffff">Unitree G1</text>
+    <text x="630" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#d5f5e3">Unitree · China</text>
+
+    <circle cx="630" cy="195" r="14" fill="#27ae60"/>
+    <rect x="614" y="210" width="32" height="45" rx="5" fill="#27ae60"/>
+    <rect x="602" y="214" width="12" height="32" rx="4" fill="#27ae60"/>
+    <rect x="646" y="214" width="12" height="32" rx="4" fill="#27ae60"/>
+    <rect x="618" y="259" width="10" height="37" rx="3" fill="#27ae60"/>
+    <rect x="632" y="259" width="10" height="37" rx="3" fill="#27ae60"/>
+
+    <text x="630" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#2c3e50">Price disruptor</text>
+    <text x="630" y="348" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#7f8c8d">Universities · startups</text>
+    <text x="630" y="370" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#7f8c8d">≈$16,000</text>
+    <text x="630" y="395" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#27ae60" font-weight="bold">≈130cm · 35kg</text>
+  </g>
+
+  <text x="400" y="445" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50" font-weight="bold">The first generation to actually walk into factories</text>
+  <text x="400" y="475" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#95a5a6">Public data as of April 2026 — some figures are estimates</text>
+</svg>
