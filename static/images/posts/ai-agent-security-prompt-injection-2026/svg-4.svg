@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <rect width="800" height="500" fill="#f8f9fa"/>
+  <text x="400" y="36" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" font-weight="bold" fill="#2c3e50">4계층 방어 아키텍처</text>
+  <text x="400" y="58" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#7f8c8d">단일 기법이 아닌 계층 조합이 원칙</text>
+
+  <!-- L1 Input -->
+  <rect x="50" y="90" width="700" height="80" rx="12" fill="#ebf5fb" stroke="#3498db" stroke-width="2"/>
+  <rect x="50" y="90" width="140" height="80" rx="12" fill="#3498db"/>
+  <rect x="175" y="90" width="15" height="80" fill="#3498db"/>
+  <text x="120" y="125" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff">① 입력</text>
+  <text x="120" y="148" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#ebf5fb">Input 계층</text>
+  <text x="210" y="115" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">• 외부 콘텐츠 = 데이터(지시 아님) 명시적 태깅</text>
+  <text x="210" y="134" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">• &lt;data&gt;...&lt;/data&gt; 구분 토큰 + 시스템 프롬프트 제약</text>
+  <text x="210" y="153" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">• 민감 소스 격리된 컨텍스트 윈도우에 분리</text>
+
+  <!-- L2 Processing -->
+  <rect x="50" y="180" width="700" height="80" rx="12" fill="#f4ecf7" stroke="#8e44ad" stroke-width="2"/>
+  <rect x="50" y="180" width="140" height="80" rx="12" fill="#8e44ad"/>
+  <rect x="175" y="180" width="15" height="80" fill="#8e44ad"/>
+  <text x="120" y="215" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff">② 처리</text>
+  <text x="120" y="238" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#f4ecf7">HITL 계층</text>
+  <text x="210" y="205" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">• 고위험 도구 인간 승인 필수 (결제·삭제·외부 전송)</text>
+  <text x="210" y="224" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">• 도구별 최소권한 · 키 분리</text>
+  <text x="210" y="243" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">• 도구 호출 예산·루프 상한선</text>
+
+  <!-- L3 Output -->
+  <rect x="50" y="270" width="700" height="80" rx="12" fill="#fef5e7" stroke="#e67e22" stroke-width="2"/>
+  <rect x="50" y="270" width="140" height="80" rx="12" fill="#e67e22"/>
+  <rect x="175" y="270" width="15" height="80" fill="#e67e22"/>
+  <text x="120" y="305" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff">③ 출력</text>
+  <text x="120" y="328" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#fef5e7">Sanitize 계층</text>
+  <text x="210" y="295" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">• 생성 코드·SQL·쉘은 샌드박스·정책 엔진(OPA) 경유</text>
+  <text x="210" y="314" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">• 민감 필드(API 키·이메일) 정규식·NER 마스킹</text>
+  <text x="210" y="333" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">• 출력 URL/이미지 호출 허용 리스트</text>
+
+  <!-- L4 Audit -->
+  <rect x="50" y="360" width="700" height="80" rx="12" fill="#fdecea" stroke="#c0392b" stroke-width="2"/>
+  <rect x="50" y="360" width="140" height="80" rx="12" fill="#c0392b"/>
+  <rect x="175" y="360" width="15" height="80" fill="#c0392b"/>
+  <text x="120" y="395" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff">④ 감사</text>
+  <text x="120" y="418" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#fdecea">Audit 계층</text>
+  <text x="210" y="385" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">• 모든 프롬프트·도구 호출·결과 세션 ID로 추적</text>
+  <text x="210" y="404" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">• 사후 포렌식 + 규제 대응 기반</text>
+  <text x="210" y="423" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">• 이상 패턴 탐지 (도구 호출량·권한 이스컬레이션)</text>
+
+  <text x="400" y="475" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#95a5a6">위에서 하나 뚫려도 아래 계층이 피해를 차단한다 (Defense in Depth)</text>
+</svg>

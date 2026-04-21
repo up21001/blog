@@ -1,0 +1,106 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <filter id="dropshadow" x="-20%" y="-20%" width="140%" height="140%">
+            <feGaussianBlur in="SourceAlpha" stdDeviation="3"/>
+            <feOffset dx="2" dy="2" result="shadow"/>
+            <feMerge>
+                <feMergeNode in="shadow"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+        <marker id="arrowheadBlue" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+            <polygon points="0 0, 8 3, 0 6" fill="#4A90D9"/>
+        </marker>
+        <marker id="arrowheadRed" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+            <polygon points="0 0, 8 3, 0 6" fill="#FF6B6B"/>
+        </marker>
+    </defs>
+
+    <style>
+        .title { font-family: "Arial, sans-serif"; font-size: 28px; font-weight: bold; fill: #333; text-anchor: middle; }
+        .component-box { fill: #4A90D9; stroke: #3A7BBF; stroke-width: 1; rx: 8; filter: url(#dropshadow); }
+        .defect-box { fill: #FF6B6B; stroke: #D9534F; stroke-width: 1; rx: 8; filter: url(#dropshadow); }
+        .impact-box { fill: #FF6B6B; stroke: #D9534F; stroke-width: 1; rx: 8; filter: url(#dropshadow); }
+        .label-text { font-family: "Arial, sans-serif"; font-size: 18px; fill: #fff; text-anchor: middle; dominant-baseline: middle; }
+        .arrow-label-text { font-family: "Arial, sans-serif"; font-size: 13px; fill: #333; text-anchor: middle; dominant-baseline: middle; }
+        .arrow-label-bg { fill: white; rx: 3; }
+        .arrow-blue { stroke: #4A90D9; stroke-width: 2; fill: none; marker-end: url(#arrowheadBlue); }
+        .arrow-red { stroke: #FF6B6B; stroke-width: 2; fill: none; marker-end: url(#arrowheadRed); }
+        .container-box { fill: #f0f0f0; stroke: #ccc; stroke-width: 1; rx: 10; }
+        .container-text { font-family: "Arial, sans-serif"; font-size: 20px; fill: #666; text-anchor: middle; font-weight: bold; }
+    </style>
+
+    <!-- Overall Title -->
+    <text x="400" y="40" class="title">오리온 우주선 주요 안전성 논란 부품 및 결함 분석</text>
+
+    <!-- Orion Spacecraft Container (Conceptual) -->
+    <rect x="50" y="80" width="700" height="480" class="container-box"/>
+    <text x="400" y="105" class="container-text">오리온 우주선</text>
+
+    <!-- Components, Defects, and Impacts -->
+
+    <!-- Row 1: Heat Shield -->
+    <rect x="80" y="140" width="180" height="100" class="component-box"/>
+    <text x="170" y="190" class="label-text">방열판</text>
+
+    <rect x="300" y="150" width="180" height="80" class="defect-box"/>
+    <text x="390" y="190" class="label-text">방열판 손상</text>
+
+    <rect x="520" y="140" width="200" height="100" class="impact-box"/>
+    <text x="620" y="180" class="label-text">재진입 시 과열,</text>
+    <text x="620" y="205" class="label-text">우주비행사 생명 위협</text>
+
+    <!-- Row 2: ECLSS -->
+    <rect x="80" y="280" width="180" height="100" class="component-box"/>
+    <text x="170" y="320" class="label-text">환경 제어 및</text>
+    <text x="170" y="345" class="label-text">생명 유지 장치</text>
+    <text x="170" y="370" class="label-text">(ECLSS)</text>
+
+    <rect x="300" y="290" width="180" height="80" class="defect-box"/>
+    <text x="390" y="330" class="label-text">ECLSS 밸브 결함</text>
+
+    <rect x="520" y="280" width="200" height="100" class="impact-box"/>
+    <text x="620" y="310" class="label-text">산소 공급 및</text>
+    <text x="620" y="335" class="label-text">이산화탄소 제거 실패,</text>
+    <text x="620" y="360" class="label-text">질식 위험</text>
+
+    <!-- Row 3: Emergency Batteries -->
+    <rect x="80" y="420" width="180" height="100" class="component-box"/>
+    <text x="170" y="470" class="label-text">비상용 배터리</text>
+
+    <rect x="300" y="430" width="180" height="80" class="defect-box"/>
+    <text x="390" y="470" class="label-text">비상 배터리 회로 문제</text>
+
+    <rect x="520" y="420" width="200" height="100" class="impact-box"/>
+    <text x="620" y="460" class="label-text">비상 전력 공급 중단,</text>
+    <text x="620" y="485" class="label-text">핵심 시스템 마비</text>
+
+    <!-- Arrows and their labels (labels first, then lines) -->
+
+    <!-- Row 1 Arrows -->
+    <rect x="260" y="175" width="32" height="30" class="arrow-label-bg"/>
+    <text x="276" y="190" class="arrow-label-text">포함</text>
+    <line x1="260" y1="190" x2="292" y2="190" class="arrow-blue"/>
+
+    <rect x="480" y="175" width="32" height="30" class="arrow-label-bg"/>
+    <text x="496" y="190" class="arrow-label-text">영향</text>
+    <line x1="480" y1="190" x2="512" y2="190" class="arrow-red"/>
+
+    <!-- Row 2 Arrows -->
+    <rect x="260" y="315" width="32" height="30" class="arrow-label-bg"/>
+    <text x="276" y="330" class="arrow-label-text">포함</text>
+    <line x1="260" y1="330" x2="292" y2="330" class="arrow-blue"/>
+
+    <rect x="480" y="315" width="32" height="30" class="arrow-label-bg"/>
+    <text x="496" y="330" class="arrow-label-text">영향</text>
+    <line x1="480" y1="330" x2="512" y2="330" class="arrow-red"/>
+
+    <!-- Row 3 Arrows -->
+    <rect x="260" y="455" width="32" height="30" class="arrow-label-bg"/>
+    <text x="276" y="470" class="arrow-label-text">포함</text>
+    <line x1="260" y1="470" x2="292" y2="470" class="arrow-blue"/>
+
+    <rect x="480" y="455" width="32" height="30" class="arrow-label-bg"/>
+    <text x="496" y="470" class="arrow-label-text">영향</text>
+    <line x1="480" y1="470" x2="512" y2="470" class="arrow-red"/>
+</svg>

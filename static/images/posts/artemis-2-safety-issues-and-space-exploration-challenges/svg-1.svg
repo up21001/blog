@@ -1,0 +1,167 @@
+<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#4A90D9" />
+      <stop offset="100%" style="stop-color:#50C878" />
+    </linearGradient>
+    <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#50C878" />
+      <stop offset="100%" style="stop-color:#6C5CE7" />
+    </linearGradient>
+    <linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#6C5CE7" />
+      <stop offset="100%" style="stop-color:#6C5CE7" />
+    </linearGradient>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#2D3748" />
+    </marker>
+  </defs>
+
+  <style>
+    .background { fill: #f8f9fa; }
+    .stage-box {
+      fill: #ffffff;
+      stroke: #e0e0e0;
+      stroke-width: 1;
+      filter: drop-shadow(2px 2px 3px rgba(0,0,0,0.1));
+    }
+    /* rx and ry moved to rect elements as attributes */
+    .stage-header { fill: url(#grad1); }
+    .stage-header-2 { fill: url(#grad2); }
+    .stage-header-3 { fill: url(#grad3); }
+
+    .stage-number {
+      font-family: "Arial, sans-serif";
+      font-size: 16px;
+      font-weight: bold;
+      fill: #ffffff;
+    }
+    .stage-title {
+      font-family: "Arial, sans-serif";
+      font-size: 10px;
+      font-weight: bold;
+      fill: #2D3748;
+      text-anchor: middle;
+    }
+    .stage-description {
+      font-family: "Arial, sans-serif";
+      font-size: 9px;
+      fill: #4A5568;
+      text-anchor: middle;
+    }
+    .arrow {
+      stroke: #2D3748;
+      stroke-width: 2;
+      fill: none;
+      marker-end: url(#arrowhead);
+    }
+    .arrow-label-bg {
+      fill: #ffffff;
+      stroke: #e0e0e0;
+      stroke-width: 0.5;
+    }
+    .arrow-label {
+      font-family: "Arial, sans-serif";
+      font-size: 11px;
+      fill: #2D3748;
+      text-anchor: middle;
+    }
+  </style>
+
+  <rect x="0" y="0" width="800" height="500" class="background"/>
+
+  <!-- Stage 1: 지구 발사 및 지구 궤도 진입 -->
+  <g class="stage" transform="translate(10, 190)">
+    <rect x="0" y="0" width="115" height="120" rx="10" ry="10" class="stage-box"/>
+    <rect x="0" y="0" width="115" height="40" rx="10" ry="10" class="stage-header"/>
+    <text x="10" y="27" class="stage-number">1</text>
+    <text x="57.5" y="58" class="stage-title">지구 발사 및</text>
+    <text x="57.5" y="70" class="stage-title">지구 궤도 진입</text>
+    <text x="57.5" y="88" class="stage-description">SLS 로켓 발사,</text>
+    <text x="57.5" y="99" class="stage-description">오리온 우주선 분리,</text>
+    <text x="57.5" y="110" class="stage-description">지구 저궤도 진입</text>
+  </g>
+
+  <!-- Stage 2: 고도 상승 및 시스템 점검 -->
+  <g class="stage" transform="translate(140, 190)">
+    <rect x="0" y="0" width="115" height="120" rx="10" ry="10" class="stage-box"/>
+    <rect x="0" y="0" width="115" height="40" rx="10" ry="10" class="stage-header"/>
+    <text x="10" y="27" class="stage-number">2</text>
+    <text x="57.5" y="58" class="stage-title">고도 상승 및</text>
+    <text x="57.5" y="70" class="stage-title">시스템 점검</text>
+    <text x="57.5" y="88" class="stage-description">지구 궤도 상승,</text>
+    <text x="57.5" y="99" class="stage-description">오리온 시스템 점검,</text>
+    <text x="57.5" y="110" class="stage-description">TLI 준비</text>
+  </g>
+
+  <!-- Stage 3: 달을 향한 천이 궤도 진입 -->
+  <g class="stage" transform="translate(270, 190)">
+    <rect x="0" y="0" width="115" height="120" rx="10" ry="10" class="stage-box"/>
+    <rect x="0" y="0" width="115" height="40" rx="10" ry="10" class="stage-header-2"/>
+    <text x="10" y="27" class="stage-number">3</text>
+    <text x="57.5" y="58" class="stage-title">달을 향한</text>
+    <text x="57.5" y="70" class="stage-title">천이 궤도 진입</text>
+    <text x="57.5" y="88" class="stage-description">ICPS 재점화,</text>
+    <text x="57.5" y="99" class="stage-description">달 전이 궤도 진입</text>
+  </g>
+
+  <!-- Stage 4: 달 이면 비행 -->
+  <g class="stage" transform="translate(400, 190)">
+    <rect x="0" y="0" width="115" height="120" rx="10" ry="10" class="stage-box"/>
+    <rect x="0" y="0" width="115" height="40" rx="10" ry="10" class="stage-header-2"/>
+    <text x="10" y="27" class="stage-number">4</text>
+    <text x="57.5" y="64" class="stage-title">달 이면 비행</text>
+    <text x="57.5" y="88" class="stage-description">달 중력 이용,</text>
+    <text x="57.5" y="99" class="stage-description">달 이면 통과,</text>
+    <text x="57.5" y="110" class="stage-description">지구 귀환 궤도 준비</text>
+  </g>
+
+  <!-- Stage 5: 지구 귀환 궤도 -->
+  <g class="stage" transform="translate(530, 190)">
+    <rect x="0" y="0" width="115" height="120" rx="10" ry="10" class="stage-box"/>
+    <rect x="0" y="0" width="115" height="40" rx="10" ry="10" class="stage-header-3"/>
+    <text x="10" y="27" class="stage-number">5</text>
+    <text x="57.5" y="64" class="stage-title">지구 귀환 궤도</text>
+    <text x="57.5" y="88" class="stage-description">달 중력 탈출,</text>
+    <text x="57.5" y="99" class="stage-description">지구를 향한</text>
+    <text x="57.5" y="110" class="stage-description">자유 귀환 궤도 비행</text>
+  </g>
+
+  <!-- Stage 6: 지구 대기권 재진입 및 스플래시다운 -->
+  <g class="stage" transform="translate(660, 190)">
+    <rect x="0" y="0" width="115" height="120" rx="10" ry="10" class="stage-box"/>
+    <rect x="0" y="0" width="115" height="40" rx="10" ry="10" class="stage-header-3"/>
+    <text x="10" y="27" class="stage-number">6</text>
+    <text x="57.5" y="58" class="stage-title">지구 대기권 재진입</text>
+    <text x="57.5" y="70" class="stage-title">및 스플래시다운</text>
+    <text x="57.5" y="88" class="stage-description">지구 대기권 재진입,</text>
+    <text x="57.5" y="99" class="stage-description">낙하산 전개,</text>
+    <text x="57.5" y="110" class="stage-description">해상 착수</text>
+  </g>
+
+  <!-- Arrows -->
+  <!-- Arrow 1-2 -->
+  <line x1="125" y1="250" x2="140" y2="250" class="arrow"/>
+  <rect x="125" y="235" width="15" height="30" class="arrow-label-bg"/>
+  <text x="132.5" y="255" class="arrow-label">분리</text>
+
+  <!-- Arrow 2-3 -->
+  <line x1="255" y1="250" x2="270" y2="250" class="arrow"/>
+  <rect x="255" y="235" width="15" height="30" class="arrow-label-bg"/>
+  <text x="262.5" y="255" class="arrow-label">점검</text>
+
+  <!-- Arrow 3-4 -->
+  <line x1="385" y1="250" x2="400" y2="250" class="arrow"/>
+  <rect x="385" y="235" width="15" height="30" class="arrow-label-bg"/>
+  <text x="392.5" y="255" class="arrow-label">이동</text>
+
+  <!-- Arrow 4-5 -->
+  <line x1="515" y1="250" x2="530" y2="250" class="arrow"/>
+  <rect x="515" y="235" width="15" height="30" class="arrow-label-bg"/>
+  <text x="522.5" y="255" class="arrow-label">회귀</text>
+
+  <!-- Arrow 5-6 -->
+  <line x1="645" y1="250" x2="660" y2="250" class="arrow"/>
+  <rect x="645" y="235" width="15" height="30" class="arrow-label-bg"/>
+  <text x="652.5" y="255" class="arrow-label">진입</text>
+</svg>

@@ -1,0 +1,81 @@
+<svg viewBox="0 0 800 700" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+  <style>
+    .node-rect {
+      rx: 8;
+      ry: 8;
+      stroke: #ccc;
+      stroke-width: 1;
+    }
+    .node-text {
+      font-size: 13px;
+      fill: #333;
+      text-anchor: middle;
+      dominant-baseline: central;
+    }
+    .node-text.bold {
+      font-weight: bold;
+    }
+    .level-1-fill { fill: #4A90D9; } /* Blue */
+    .level-2-fill { fill: #50C878; } /* Green */
+    .connector {
+      fill: none;
+      stroke: #666;
+      stroke-width: 2;
+    }
+    .background-rect {
+      fill: #f8f9fa; /* Light background */
+    }
+  </style>
+
+  <!-- Background rectangle for the entire viewbox -->
+  <rect x="0" y="0" width="800" height="700" class="background-rect"/>
+
+  <!-- Nodes -->
+
+  <!-- Level 1 (Root) -->
+  <rect id="node-root-rect" x="310" y="50" width="180" height="50" class="node-rect level-1-fill"/>
+  <text id="node-root-text" x="400" y="75" class="node-text bold">Artemis Program</text>
+
+  <!-- Level 2 Nodes -->
+  <!-- Node L2-1: 달 기지 건설 -->
+  <rect id="node-L2-1-rect" x="40" y="180" width="120" height="50" class="node-rect level-2-fill"/>
+  <text id="node-L2-1-text" x="100" y="205" class="node-text">Lunar Base Construction</text>
+
+  <!-- Node L2-2: 화성 유인 탐사 -->
+  <rect id="node-L2-2-rect" x="190" y="180" width="120" height="50" class="node-rect level-2-fill"/>
+  <text id="node-L2-2-text" x="250" y="205" class="node-text">Crewed Mars Exploration</text>
+
+  <!-- Node L2-3: 아르테미스 1호 (무인) -->
+  <rect id="node-L2-3-rect" x="340" y="180" width="120" height="50" class="node-rect level-2-fill"/>
+  <text id="node-L2-3-text" x="400" y="205" class="node-text">
+    <tspan x="400" dy="-7">Artemis 1</tspan>
+    <tspan x="400" dy="18">(Uncrewed)</tspan>
+  </text>
+
+  <!-- Node L2-4: 아르테미스 2호 (유인 달 궤도) -->
+  <rect id="node-L2-4-rect" x="490" y="180" width="120" height="50" class="node-rect level-2-fill"/>
+  <text id="node-L2-4-text" x="550" y="205" class="node-text">
+    <tspan x="550" dy="-7">Artemis 2</tspan>
+    <tspan x="550" dy="18">(Crewed Lunar Orbit)</tspan>
+  </text>
+
+  <!-- Node L2-5: 아르테미스 3호 (유인 달 착륙) -->
+  <rect id="node-L2-5-rect" x="640" y="180" width="120" height="50" class="node-rect level-2-fill"/>
+  <text id="node-L2-5-text" x="700" y="205" class="node-text">
+    <tspan x="700" dy="-7">Artemis 3</tspan>
+    <tspan x="700" dy="18">(Crewed Lunar Landing)</tspan>
+  </text>
+
+  <!-- Connectors -->
+  <!-- Root (400, 100) to L2-1 (100, 180) -->
+  <path d="M 400 100 L 400 140 L 100 140 L 100 180" class="connector"/>
+  <!-- Root (400, 100) to L2-2 (250, 180) -->
+  <path d="M 400 100 L 400 140 L 250 140 L 250 180" class="connector"/>
+  <!-- Root (400, 100) to L2-3 (400, 180) -->
+  <path d="M 400 100 L 400 180" class="connector"/>
+  <!-- Root (400, 100) to L2-4 (550, 180) -->
+  <path d="M 400 100 L 400 140 L 550 140 L 550 180" class="connector"/>
+  <!-- Root (400, 100) to L2-5 (700, 180) -->
+  <path d="M 400 100 L 400 140 L 700 140 L 700 180" class="connector"/>
+
+</svg>

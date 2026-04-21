@@ -1,0 +1,121 @@
+<svg viewBox="0 0 800 550" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .title-text {
+      font-family: "Arial, sans-serif";
+      font-size: 28px;
+      font-weight: bold;
+      fill: #ffffff;
+    }
+    .header-text {
+      font-family: "Arial, sans-serif";
+      font-size: 18px;
+      font-weight: bold;
+      fill: #ffffff;
+    }
+    .feature-label {
+      font-family: "Arial, sans-serif";
+      font-size: 16px;
+      font-weight: bold;
+      fill: #2D3748;
+    }
+    .cell-text {
+      font-family: "Arial, sans-serif";
+      font-size: 15px;
+      fill: #2D3748;
+    }
+    .conclusion-text {
+      font-family: "Arial, sans-serif";
+      font-size: 16px;
+      font-weight: bold;
+      fill: #FF6B6B; /* Red for emphasis on risk */
+    }
+    .column-header-bg-left {
+      fill: #4A90D9;
+    }
+    .column-header-bg-right {
+      fill: #50C878;
+      stroke: #FF6B6B; /* Highlight border for problematic column */
+      stroke-width: 3;
+    }
+    .row-bg-even {
+      fill: #f8f9fa;
+    }
+    .row-bg-odd {
+      fill: #ffffff;
+    }
+    .indicator-good {
+      fill: #50C878; /* Green */
+    }
+    .indicator-bad {
+      fill: #FF6B6B; /* Red */
+    }
+  </style>
+
+  <!-- Title Row -->
+  <rect x="0" y="0" width="800" height="60" fill="#2D3748"/>
+  <text x="400" y="38" text-anchor="middle" class="title-text">오리온 우주선 방열판 마모 비교</text>
+
+  <!-- Header Row -->
+  <rect x="0" y="60" width="800" height="50" fill="#e0e0e0"/> <!-- Background for the whole header row -->
+
+  <!-- Feature Name Header -->
+  <text x="120" y="90" text-anchor="middle" class="header-text" fill="#2D3748">비교 항목</text>
+
+  <!-- NASA Expectation Column Header -->
+  <rect x="240" y="60" width="280" height="50" class="column-header-bg-left"/>
+  <text x="380" y="90" text-anchor="middle" class="header-text">NASA 당초 예상</text>
+
+  <!-- Artemis 1 Result Column Header (Highlighted) -->
+  <rect x="520" y="60" width="280" height="50" class="column-header-bg-right"/>
+  <text x="660" y="90" text-anchor="middle" class="header-text">아르테미스 1호 실제 결과</text>
+
+  <!-- Feature Rows -->
+  <!-- Row 1: 마모 형태 -->
+  <g>
+    <rect x="0" y="110" width="800" height="100" class="row-bg-even"/>
+    <text x="120" y="160" text-anchor="middle" class="feature-label">마모 형태</text>
+
+    <!-- Column 1: NASA Expectation -->
+    <text x="380" y="150" text-anchor="middle" class="cell-text">균일</text>
+    <circle cx="380" cy="180" r="12" class="indicator-good"/>
+
+    <!-- Column 2: Artemis 1 Result -->
+    <text x="660" y="150" text-anchor="middle" class="cell-text">덩어리 이탈</text>
+    <circle cx="660" cy="180" r="12" class="indicator-bad"/>
+  </g>
+
+  <!-- Row 2: 마모 깊이 -->
+  <g>
+    <rect x="0" y="210" width="800" height="100" class="row-bg-odd"/>
+    <text x="120" y="260" text-anchor="middle" class="feature-label">마모 깊이</text>
+
+    <!-- Column 1: NASA Expectation -->
+    <text x="380" y="250" text-anchor="middle" class="cell-text">예상치 일치</text>
+    <circle cx="380" cy="280" r="12" class="indicator-good"/>
+
+    <!-- Column 2: Artemis 1 Result -->
+    <text x="660" y="250" text-anchor="middle" class="cell-text">깊은 균열</text>
+    <circle cx="660" cy="280" r="12" class="indicator-bad"/>
+  </g>
+
+  <!-- Row 3: 잔해물 발생 -->
+  <g>
+    <rect x="0" y="310" width="800" height="100" class="row-bg-even"/>
+    <text x="120" y="360" text-anchor="middle" class="feature-label">잔해물 발생</text>
+
+    <!-- Column 1: NASA Expectation -->
+    <text x="380" y="350" text-anchor="middle" class="cell-text">미세 입자</text>
+    <circle cx="380" cy="380" r="12" class="indicator-good"/>
+
+    <!-- Column 2: Artemis 1 Result -->
+    <text x="660" y="350" text-anchor="middle" class="cell-text">큰 파편</text>
+    <circle cx="660" cy="380" r="12" class="indicator-bad"/>
+  </g>
+
+  <!-- Risk Emphasis / Conclusion -->
+  <rect x="0" y="410" width="800" height="100" fill="#FF6B6B" opacity="0.1"/>
+  <text x="400" y="450" text-anchor="middle" class="conclusion-text">
+    <tspan x="400" dy="0">아르테미스 1호 결과는 당초 예상보다 심각한 마모와</tspan>
+    <tspan x="400" dy="25">큰 파편 발생으로 추가적인 위험성 검토가 필요함을 시사합니다.</tspan>
+  </text>
+</svg>

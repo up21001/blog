@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <rect width="800" height="500" fill="#f8f9fa"/>
+  <text x="400" y="36" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" font-weight="bold" fill="#2c3e50">BCI 확산 로드맵</text>
+  <text x="400" y="58" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#7f8c8d">의료 → 특수 업무 → 증강 — 현실적 경로</text>
+
+  <!-- Phase 1 -->
+  <rect x="50" y="100" width="220" height="340" rx="14" fill="#ffffff" stroke="#2980b9" stroke-width="2"/>
+  <rect x="50" y="100" width="220" height="55" rx="14" fill="#2980b9"/>
+  <rect x="50" y="138" width="220" height="17" fill="#2980b9"/>
+  <text x="160" y="125" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#ffffff">1단계 · 의료</text>
+  <text x="160" y="145" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#d6eaf8">~ 2030년 초</text>
+  <text x="160" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#2980b9">적응증 확장</text>
+  <text x="70" y="210" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">✓ 루게릭병(ALS)</text>
+  <text x="70" y="235" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">✓ 척수 손상</text>
+  <text x="70" y="260" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">✓ 뇌졸중 후유증</text>
+  <text x="70" y="285" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">✓ 심각한 간질</text>
+  <text x="70" y="310" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">✓ 시각·청각 장애</text>
+  <rect x="70" y="330" width="180" height="30" rx="6" fill="#ebf5fb" stroke="#2980b9" stroke-width="1"/>
+  <text x="160" y="350" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#1f618d">대상: 수천~수만 명</text>
+  <text x="160" y="385" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#2c3e50">현실성: 높음</text>
+  <text x="160" y="403" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#7f8c8d">이미 진행 중</text>
+  <text x="160" y="425" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#7f8c8d">FDA Breakthrough 지정</text>
+
+  <!-- Phase 2 -->
+  <rect x="290" y="100" width="220" height="340" rx="14" fill="#ffffff" stroke="#8e44ad" stroke-width="2"/>
+  <rect x="290" y="100" width="220" height="55" rx="14" fill="#8e44ad"/>
+  <rect x="290" y="138" width="220" height="17" fill="#8e44ad"/>
+  <text x="400" y="125" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#ffffff">2단계 · 특수</text>
+  <text x="400" y="145" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#f4ecf7">2030-2035 (추정)</text>
+  <text x="400" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#8e44ad">틈새 업무 영역</text>
+  <text x="310" y="210" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">○ 극한 환경 원격 작업</text>
+  <text x="310" y="235" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">○ 수중·우주 조종</text>
+  <text x="310" y="260" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">○ 산업 정밀 제어</text>
+  <text x="310" y="285" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">○ 특수 의료 진단</text>
+  <text x="310" y="310" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">○ 장기 외과 수술 보조</text>
+  <rect x="310" y="330" width="180" height="30" rx="6" fill="#f4ecf7" stroke="#8e44ad" stroke-width="1"/>
+  <text x="400" y="350" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#6c3483">대상: 수만~수십만 명</text>
+  <text x="400" y="385" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#2c3e50">현실성: 중간</text>
+  <text x="400" y="403" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#7f8c8d">규제·ROI 협상 필요</text>
+  <text x="400" y="425" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#7f8c8d">수술 위험 수용 검토</text>
+
+  <!-- Phase 3 -->
+  <rect x="530" y="100" width="220" height="340" rx="14" fill="#ffffff" stroke="#e67e22" stroke-width="2"/>
+  <rect x="530" y="100" width="220" height="55" rx="14" fill="#e67e22"/>
+  <rect x="530" y="138" width="220" height="17" fill="#e67e22"/>
+  <text x="640" y="125" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#ffffff">3단계 · 증강</text>
+  <text x="640" y="145" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#fef5e7">2035년+ (추정)</text>
+  <text x="640" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#e67e22">건강한 사용자</text>
+  <text x="550" y="210" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">? 타이핑 대체</text>
+  <text x="550" y="235" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">? 기계 직접 제어</text>
+  <text x="550" y="260" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">? 증강 메모리</text>
+  <text x="550" y="285" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">? 감각 확장</text>
+  <text x="550" y="310" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">? 뇌-뇌 통신</text>
+  <rect x="550" y="330" width="180" height="30" rx="6" fill="#fef5e7" stroke="#e67e22" stroke-width="1"/>
+  <text x="640" y="350" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#ba4a00">대상: 불확실</text>
+  <text x="640" y="385" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#2c3e50">현실성: 낮음</text>
+  <text x="640" y="403" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#7f8c8d">수술 위험 ≈ 0 필요</text>
+  <text x="640" y="425" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#7f8c8d">비침습 기술 성숙 전제</text>
+
+  <text x="400" y="480" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#95a5a6">일반 대중화는 최소 2030년대 후반으로 보는 의견이 다수</text>
+</svg>

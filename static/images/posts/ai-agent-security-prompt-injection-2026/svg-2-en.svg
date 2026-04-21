@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <rect width="800" height="500" fill="#f8f9fa"/>
+  <text x="400" y="36" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" font-weight="bold" fill="#2c3e50">AI Agent Attack Surface</text>
+  <text x="400" y="58" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#7f8c8d">Input · Tools · Output — threats by stage</text>
+
+  <defs>
+    <marker id="ar1en" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0,8 3,0 6" fill="#7f8c8d"/>
+    </marker>
+  </defs>
+
+  <rect x="40" y="100" width="220" height="300" rx="14" fill="#ffffff" stroke="#e74c3c" stroke-width="2"/>
+  <rect x="40" y="100" width="220" height="45" rx="14" fill="#e74c3c"/>
+  <rect x="40" y="130" width="220" height="15" fill="#e74c3c"/>
+  <text x="150" y="128" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#ffffff">① Input</text>
+  <text x="60" y="170" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#c0392b">Direct injection</text>
+  <text x="60" y="190" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">• "Ignore previous..."</text>
+  <text x="60" y="208" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">• Override system prompt</text>
+  <text x="60" y="240" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#c0392b">Indirect injection</text>
+  <text x="60" y="260" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">• PDF · resume · webpage</text>
+  <text x="60" y="278" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">• Hidden text · meta tags</text>
+  <text x="60" y="296" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">• Logs · commit messages</text>
+  <text x="60" y="330" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#c0392b">Auto triggers</text>
+  <text x="60" y="350" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">• Inbox summarization</text>
+  <text x="60" y="368" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">• Auto repo scanning</text>
+  <text x="60" y="386" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">• Upload processing</text>
+
+  <line x1="265" y1="250" x2="290" y2="250" stroke="#7f8c8d" stroke-width="1.5" marker-end="url(#ar1en)"/>
+
+  <rect x="290" y="100" width="220" height="300" rx="14" fill="#ffffff" stroke="#8e44ad" stroke-width="2"/>
+  <rect x="290" y="100" width="220" height="45" rx="14" fill="#8e44ad"/>
+  <rect x="290" y="130" width="220" height="15" fill="#8e44ad"/>
+  <text x="400" y="128" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#ffffff">② Tool Calls</text>
+  <text x="310" y="170" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#6c3483">Tool abuse</text>
+  <text x="310" y="190" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">• Disguised as legit</text>
+  <text x="310" y="208" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">• Forward entire inbox</text>
+  <text x="310" y="226" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">• Bulk DB queries</text>
+  <text x="310" y="250" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#6c3483">Privilege chain blowup</text>
+  <text x="310" y="270" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">• Pay + delete + send</text>
+  <text x="310" y="288" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">• All in one session</text>
+  <text x="310" y="310" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#6c3483">MCP server risk</text>
+  <text x="310" y="330" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">• Unverified servers</text>
+  <text x="310" y="348" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">• = arbitrary code exec</text>
+  <text x="310" y="376" font-family="Arial, sans-serif" font-size="11" fill="#7f8c8d">Least-privilege + approval</text>
+
+  <line x1="515" y1="250" x2="540" y2="250" stroke="#7f8c8d" stroke-width="1.5" marker-end="url(#ar1en)"/>
+
+  <rect x="540" y="100" width="220" height="300" rx="14" fill="#ffffff" stroke="#2980b9" stroke-width="2"/>
+  <rect x="540" y="100" width="220" height="45" rx="14" fill="#2980b9"/>
+  <rect x="540" y="130" width="220" height="15" fill="#2980b9"/>
+  <text x="650" y="128" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#ffffff">③ Output</text>
+  <text x="560" y="170" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#1f618d">Exfiltration</text>
+  <text x="560" y="190" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">• Verbatim prompt echo</text>
+  <text x="560" y="208" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">• Vector DB citations</text>
+  <text x="560" y="226" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">• API key leakage</text>
+  <text x="560" y="250" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#1f618d">Side channels</text>
+  <text x="560" y="270" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">• URL param payloads</text>
+  <text x="560" y="288" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">• Image-fetch piggyback</text>
+  <text x="560" y="310" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#1f618d">LLM → Shell chain</text>
+  <text x="560" y="330" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">• Generated code → eval()</text>
+  <text x="560" y="348" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">• Direct SQL / shell exec</text>
+  <text x="560" y="376" font-family="Arial, sans-serif" font-size="11" fill="#7f8c8d">Output = new attack input</text>
+
+  <text x="400" y="440" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#95a5a6">A miss at one stage becomes the next stage's attack surface</text>
+</svg>

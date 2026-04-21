@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <rect width="800" height="500" fill="#f8f9fa"/>
+  <text x="400" y="36" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" font-weight="bold" fill="#2c3e50">BCI 2026 — What's Possible Today</text>
+  <text x="400" y="58" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#7f8c8d">Without hype: what patients actually do</text>
+
+  <g>
+    <rect x="50" y="95" width="220" height="170" rx="14" fill="#ffffff" stroke="#2980b9" stroke-width="2"/>
+    <rect x="50" y="95" width="220" height="45" rx="14" fill="#2980b9"/>
+    <rect x="50" y="125" width="220" height="15" fill="#2980b9"/>
+    <text x="160" y="123" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#ffffff">🖱 Cursor Control</text>
+    <text x="160" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#2c3e50">Mouse by thought</text>
+    <text x="70" y="195" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">• Pointer move + click</text>
+    <text x="70" y="215" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">• Web browsing · simple games</text>
+    <text x="70" y="235" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">• Most stable capability</text>
+    <text x="160" y="255" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#7f8c8d">Maturity ●●●●●</text>
+  </g>
+
+  <g>
+    <rect x="290" y="95" width="220" height="170" rx="14" fill="#ffffff" stroke="#16a085" stroke-width="2"/>
+    <rect x="290" y="95" width="220" height="45" rx="14" fill="#16a085"/>
+    <rect x="290" y="125" width="220" height="15" fill="#16a085"/>
+    <text x="400" y="123" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#ffffff">⌨ Text Entry</text>
+    <text x="400" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#2c3e50">Tens of words/min</text>
+    <text x="310" y="195" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">• Replaces keyboard</text>
+    <text x="310" y="215" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">• Texting · email</text>
+    <text x="310" y="235" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">• Transformative for ALS patients</text>
+    <text x="400" y="255" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#7f8c8d">Maturity ●●●●○</text>
+  </g>
+
+  <g>
+    <rect x="530" y="95" width="220" height="170" rx="14" fill="#ffffff" stroke="#8e44ad" stroke-width="2"/>
+    <rect x="530" y="95" width="220" height="45" rx="14" fill="#8e44ad"/>
+    <rect x="530" y="125" width="220" height="15" fill="#8e44ad"/>
+    <text x="640" y="123" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#ffffff">🤖 Robot Arm</text>
+    <text x="640" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#2c3e50">Grasp external objects</text>
+    <text x="550" y="195" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">• Cups · feeding</text>
+    <text x="550" y="215" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">• Wheelchair direction</text>
+    <text x="550" y="235" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">• Not yet full independence</text>
+    <text x="640" y="255" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#7f8c8d">Maturity ●●●○○</text>
+  </g>
+
+  <g>
+    <rect x="170" y="290" width="220" height="170" rx="14" fill="#ffffff" stroke="#e67e22" stroke-width="2"/>
+    <rect x="170" y="290" width="220" height="45" rx="14" fill="#e67e22"/>
+    <rect x="170" y="320" width="220" height="15" fill="#e67e22"/>
+    <text x="280" y="318" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#ffffff">🗣 Speech Synthesis</text>
+    <text x="280" y="365" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#2c3e50">Brain signal → voice</text>
+    <text x="190" y="390" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">• For non-verbal patients</text>
+    <text x="190" y="410" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">• Reconstruct original timbre</text>
+    <text x="190" y="430" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">• Leap expected in 2-3 yrs</text>
+    <text x="280" y="450" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#7f8c8d">Maturity ●●●○○</text>
+  </g>
+
+  <g>
+    <rect x="410" y="290" width="220" height="170" rx="14" fill="#ffffff" stroke="#c0392b" stroke-width="2"/>
+    <rect x="410" y="290" width="220" height="45" rx="14" fill="#c0392b"/>
+    <rect x="410" y="320" width="220" height="15" fill="#c0392b"/>
+    <text x="520" y="318" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#ffffff">✨ Sensory Feedback</text>
+    <text x="520" y="365" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#2c3e50">Computer → brain (reverse)</text>
+    <text x="430" y="390" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">• Vision assistance studies</text>
+    <text x="430" y="410" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">• Pain / sensation modulation</text>
+    <text x="430" y="430" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">• Still limited early-stage</text>
+    <text x="520" y="450" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#7f8c8d">Maturity ●●○○○</text>
+  </g>
+
+  <text x="400" y="485" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#95a5a6">All five stay within medical indications — consumer-grade is the next phase</text>
+</svg>

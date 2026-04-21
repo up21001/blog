@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <rect width="800" height="500" fill="#f8f9fa"/>
+  <text x="400" y="36" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" font-weight="bold" fill="#2c3e50">BCI 주요 기업 비교</text>
+  <text x="400" y="58" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#7f8c8d">기술 방식 · 임상 단계 · 대표 성과</text>
+
+  <rect x="40" y="85" width="180" height="40" fill="#2c3e50"/>
+  <text x="60" y="110" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#ffffff">항목</text>
+
+  <rect x="220" y="85" width="190" height="40" fill="#2980b9"/>
+  <text x="315" y="110" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#ffffff">Neuralink</text>
+
+  <rect x="410" y="85" width="190" height="40" fill="#16a085"/>
+  <text x="505" y="110" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#ffffff">Synchron</text>
+
+  <rect x="600" y="85" width="160" height="40" fill="#8e44ad"/>
+  <text x="680" y="110" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#ffffff">Precision</text>
+
+  <g font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">
+    <rect x="40" y="125" width="720" height="40" fill="#ffffff" stroke="#ecf0f1"/>
+    <text x="60" y="149" font-weight="bold">방식</text>
+    <text x="315" y="149" text-anchor="middle">침습 · 피질 내</text>
+    <text x="505" y="149" text-anchor="middle">반침습 · 혈관내</text>
+    <text x="680" y="149" text-anchor="middle">표면 박막</text>
+
+    <rect x="40" y="165" width="720" height="40" fill="#f8f9fa" stroke="#ecf0f1"/>
+    <text x="60" y="189" font-weight="bold">전극 수</text>
+    <text x="315" y="189" text-anchor="middle">1,000+ (뉴런 수준)</text>
+    <text x="505" y="189" text-anchor="middle">16 (혈관 스텐트)</text>
+    <text x="680" y="189" text-anchor="middle">1,024 (표면)</text>
+
+    <rect x="40" y="205" width="720" height="40" fill="#ffffff" stroke="#ecf0f1"/>
+    <text x="60" y="229" font-weight="bold">수술 난이도</text>
+    <text x="315" y="229" text-anchor="middle">로봇 수술 필요</text>
+    <text x="505" y="229" text-anchor="middle">혈관 카테터 삽입</text>
+    <text x="680" y="229" text-anchor="middle">최소 절개</text>
+
+    <rect x="40" y="245" width="720" height="40" fill="#f8f9fa" stroke="#ecf0f1"/>
+    <text x="60" y="269" font-weight="bold">첫 인간 이식</text>
+    <text x="315" y="269" text-anchor="middle">2024년 1월</text>
+    <text x="505" y="269" text-anchor="middle">2019년 (호주)</text>
+    <text x="680" y="269" text-anchor="middle">2023년</text>
+
+    <rect x="40" y="285" width="720" height="40" fill="#ffffff" stroke="#ecf0f1"/>
+    <text x="60" y="309" font-weight="bold">임상 단계</text>
+    <text x="315" y="309" text-anchor="middle">확장 중</text>
+    <text x="505" y="309" text-anchor="middle">대규모 시험</text>
+    <text x="680" y="309" text-anchor="middle">FDA 승인 진행</text>
+
+    <rect x="40" y="325" width="720" height="40" fill="#f8f9fa" stroke="#ecf0f1"/>
+    <text x="60" y="349" font-weight="bold">대표 성과</text>
+    <text x="315" y="349" text-anchor="middle">체스·게임·커서</text>
+    <text x="505" y="349" text-anchor="middle">자택 사용·문자</text>
+    <text x="680" y="349" text-anchor="middle">고밀도 피질 매핑</text>
+
+    <rect x="40" y="365" width="720" height="40" fill="#ffffff" stroke="#ecf0f1"/>
+    <text x="60" y="389" font-weight="bold">알려진 이슈</text>
+    <text x="315" y="389" text-anchor="middle">실 후퇴 보고</text>
+    <text x="505" y="389" text-anchor="middle">해상도 낮음</text>
+    <text x="680" y="389" text-anchor="middle">비교적 신생</text>
+
+    <rect x="40" y="405" width="720" height="40" fill="#f8f9fa" stroke="#ecf0f1"/>
+    <text x="60" y="429" font-weight="bold">전략 강점</text>
+    <text x="315" y="429" text-anchor="middle" fill="#2980b9" font-weight="bold">최고 신호 품질</text>
+    <text x="505" y="429" text-anchor="middle" fill="#16a085" font-weight="bold">규제·확장성</text>
+    <text x="680" y="429" text-anchor="middle" fill="#8e44ad" font-weight="bold">안전 · 회수 가능</text>
+  </g>
+
+  <text x="400" y="480" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#95a5a6">공개 발표 및 언론 보도 기반 요약 — 일부는 추정</text>
+</svg>

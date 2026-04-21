@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <rect width="800" height="500" fill="#f8f9fa"/>
+  <text x="400" y="36" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" font-weight="bold" fill="#2c3e50">BCI 2026 — 현재 가능한 것</text>
+  <text x="400" y="58" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#7f8c8d">과장 없이, 환자가 실제로 수행하는 작업</text>
+
+  <g>
+    <rect x="50" y="95" width="220" height="170" rx="14" fill="#ffffff" stroke="#2980b9" stroke-width="2"/>
+    <rect x="50" y="95" width="220" height="45" rx="14" fill="#2980b9"/>
+    <rect x="50" y="125" width="220" height="15" fill="#2980b9"/>
+    <text x="160" y="123" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#ffffff">🖱 커서 제어</text>
+    <text x="160" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#2c3e50">생각만으로 마우스</text>
+    <text x="70" y="195" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">• 포인터 이동 + 클릭</text>
+    <text x="70" y="215" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">• 웹 서핑 · 간단 게임</text>
+    <text x="70" y="235" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">• 가장 안정적</text>
+    <text x="160" y="255" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#7f8c8d">성숙도 ●●●●●</text>
+  </g>
+
+  <g>
+    <rect x="290" y="95" width="220" height="170" rx="14" fill="#ffffff" stroke="#16a085" stroke-width="2"/>
+    <rect x="290" y="95" width="220" height="45" rx="14" fill="#16a085"/>
+    <rect x="290" y="125" width="220" height="15" fill="#16a085"/>
+    <text x="400" y="123" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#ffffff">⌨ 텍스트 입력</text>
+    <text x="400" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#2c3e50">분당 수십 단어</text>
+    <text x="310" y="195" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">• 자판 대체</text>
+    <text x="310" y="215" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">• 문자 · 이메일</text>
+    <text x="310" y="235" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">• 기존 입력 불가 환자에 혁명적</text>
+    <text x="400" y="255" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#7f8c8d">성숙도 ●●●●○</text>
+  </g>
+
+  <g>
+    <rect x="530" y="95" width="220" height="170" rx="14" fill="#ffffff" stroke="#8e44ad" stroke-width="2"/>
+    <rect x="530" y="95" width="220" height="45" rx="14" fill="#8e44ad"/>
+    <rect x="530" y="125" width="220" height="15" fill="#8e44ad"/>
+    <text x="640" y="123" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#ffffff">🤖 로봇팔 제어</text>
+    <text x="640" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#2c3e50">외부 팔로 물건 잡기</text>
+    <text x="550" y="195" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">• 컵 잡기 · 식사</text>
+    <text x="550" y="215" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">• 휠체어 방향 조정</text>
+    <text x="550" y="235" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">• 일상 자립에는 아직 부족</text>
+    <text x="640" y="255" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#7f8c8d">성숙도 ●●●○○</text>
+  </g>
+
+  <g>
+    <rect x="170" y="290" width="220" height="170" rx="14" fill="#ffffff" stroke="#e67e22" stroke-width="2"/>
+    <rect x="170" y="290" width="220" height="45" rx="14" fill="#e67e22"/>
+    <rect x="170" y="320" width="220" height="15" fill="#e67e22"/>
+    <text x="280" y="318" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#ffffff">🗣 음성 합성</text>
+    <text x="280" y="365" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#2c3e50">뇌 신호 → 목소리 재현</text>
+    <text x="190" y="390" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">• 발화 불가 환자 대상</text>
+    <text x="190" y="410" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">• 자신의 원래 음색 복원</text>
+    <text x="190" y="430" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">• 수년 내 도약 예상</text>
+    <text x="280" y="450" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#7f8c8d">성숙도 ●●●○○</text>
+  </g>
+
+  <g>
+    <rect x="410" y="290" width="220" height="170" rx="14" fill="#ffffff" stroke="#c0392b" stroke-width="2"/>
+    <rect x="410" y="290" width="220" height="45" rx="14" fill="#c0392b"/>
+    <rect x="410" y="320" width="220" height="15" fill="#c0392b"/>
+    <text x="520" y="318" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#ffffff">✨ 감각 자극</text>
+    <text x="520" y="365" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#2c3e50">컴퓨터 → 뇌 (역방향)</text>
+    <text x="430" y="390" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">• 시각 보조 연구</text>
+    <text x="430" y="410" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">• 통증·감각 조절</text>
+    <text x="430" y="430" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">• 아직 제한적 초기 단계</text>
+    <text x="520" y="450" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#7f8c8d">성숙도 ●●○○○</text>
+  </g>
+
+  <text x="400" y="485" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#95a5a6">다섯 영역 모두 "의료 적응증" 안에서 진행 중 — 일반 소비자용은 다음 단계</text>
+</svg>

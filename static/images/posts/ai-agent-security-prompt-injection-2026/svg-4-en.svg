@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <rect width="800" height="500" fill="#f8f9fa"/>
+  <text x="400" y="36" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" font-weight="bold" fill="#2c3e50">Four-Layer Defense Architecture</text>
+  <text x="400" y="58" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#7f8c8d">Stacked layers — not a single technique</text>
+
+  <rect x="50" y="90" width="700" height="80" rx="12" fill="#ebf5fb" stroke="#3498db" stroke-width="2"/>
+  <rect x="50" y="90" width="140" height="80" rx="12" fill="#3498db"/>
+  <rect x="175" y="90" width="15" height="80" fill="#3498db"/>
+  <text x="120" y="125" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff">① Input</text>
+  <text x="120" y="148" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#ebf5fb">Isolation</text>
+  <text x="210" y="115" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">• External content tagged as data (not instruction)</text>
+  <text x="210" y="134" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">• &lt;data&gt;...&lt;/data&gt; delimiters + strict system prompt</text>
+  <text x="210" y="153" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">• Sensitive sources in isolated context windows</text>
+
+  <rect x="50" y="180" width="700" height="80" rx="12" fill="#f4ecf7" stroke="#8e44ad" stroke-width="2"/>
+  <rect x="50" y="180" width="140" height="80" rx="12" fill="#8e44ad"/>
+  <rect x="175" y="180" width="15" height="80" fill="#8e44ad"/>
+  <text x="120" y="215" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff">② Processing</text>
+  <text x="120" y="238" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#f4ecf7">HITL</text>
+  <text x="210" y="205" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">• Human approval for high-risk tools (pay · delete · send)</text>
+  <text x="210" y="224" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">• Per-tool least privilege · separate keys</text>
+  <text x="210" y="243" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">• Tool-call budget + loop ceiling</text>
+
+  <rect x="50" y="270" width="700" height="80" rx="12" fill="#fef5e7" stroke="#e67e22" stroke-width="2"/>
+  <rect x="50" y="270" width="140" height="80" rx="12" fill="#e67e22"/>
+  <rect x="175" y="270" width="15" height="80" fill="#e67e22"/>
+  <text x="120" y="305" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff">③ Output</text>
+  <text x="120" y="328" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#fef5e7">Sanitize</text>
+  <text x="210" y="295" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">• Generated code/SQL/shell via sandbox + OPA policy</text>
+  <text x="210" y="314" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">• Regex + NER masking for secrets in output</text>
+  <text x="210" y="333" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">• Outbound URL / image-fetch allowlist</text>
+
+  <rect x="50" y="360" width="700" height="80" rx="12" fill="#fdecea" stroke="#c0392b" stroke-width="2"/>
+  <rect x="50" y="360" width="140" height="80" rx="12" fill="#c0392b"/>
+  <rect x="175" y="360" width="15" height="80" fill="#c0392b"/>
+  <text x="120" y="395" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff">④ Audit</text>
+  <text x="120" y="418" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#fdecea">Traceability</text>
+  <text x="210" y="385" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">• Session-ID tracked prompts / tool calls / results</text>
+  <text x="210" y="404" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">• Forensics ready + regulatory compliant</text>
+  <text x="210" y="423" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">• Anomaly detection for call-rate / privilege escalation</text>
+
+  <text x="400" y="475" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#95a5a6">If one layer is breached, the next stops the damage (Defense in Depth)</text>
+</svg>

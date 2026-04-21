@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <rect width="800" height="500" fill="#f8f9fa"/>
+  <text x="400" y="36" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" font-weight="bold" fill="#2c3e50">AI 에이전트 보안 지형도 2026</text>
+  <text x="400" y="58" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#7f8c8d">입력 · 처리 · 출력 · 공급망 — 네 면의 공격 표면</text>
+
+  <circle cx="400" cy="265" r="70" fill="#c0392b" stroke="#ffffff" stroke-width="4"/>
+  <text x="400" y="258" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#ffffff">AI 에이전트</text>
+  <text x="400" y="276" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#fadbd8">권한 집약체</text>
+
+  <g>
+    <circle cx="180" cy="150" r="55" fill="#ffffff" stroke="#e74c3c" stroke-width="2"/>
+    <text x="180" y="140" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#e74c3c">프롬프트</text>
+    <text x="180" y="158" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#e74c3c">인젝션</text>
+    <text x="180" y="176" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#7f8c8d">다이렉트·인다이렉트</text>
+  </g>
+
+  <g>
+    <circle cx="620" cy="150" r="55" fill="#ffffff" stroke="#8e44ad" stroke-width="2"/>
+    <text x="620" y="142" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#8e44ad">도구 오남용</text>
+    <text x="620" y="160" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#7f8c8d">Tool Abuse</text>
+    <text x="620" y="176" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#7f8c8d">합법 호출 위장</text>
+  </g>
+
+  <g>
+    <circle cx="160" cy="380" r="55" fill="#ffffff" stroke="#2980b9" stroke-width="2"/>
+    <text x="160" y="372" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#2980b9">데이터 유출</text>
+    <text x="160" y="390" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#7f8c8d">Exfiltration</text>
+    <text x="160" y="406" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#7f8c8d">5가지 경로</text>
+  </g>
+
+  <g>
+    <circle cx="640" cy="380" r="55" fill="#ffffff" stroke="#16a085" stroke-width="2"/>
+    <text x="640" y="372" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#16a085">공급망 공격</text>
+    <text x="640" y="390" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#7f8c8d">MCP · 플러그인</text>
+    <text x="640" y="406" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#7f8c8d">서드파티 모델</text>
+  </g>
+
+  <line x1="225" y1="180" x2="340" y2="235" stroke="#e74c3c" stroke-width="1.5" stroke-dasharray="5,3" opacity="0.55"/>
+  <line x1="575" y1="180" x2="460" y2="235" stroke="#8e44ad" stroke-width="1.5" stroke-dasharray="5,3" opacity="0.55"/>
+  <line x1="205" y1="350" x2="335" y2="295" stroke="#2980b9" stroke-width="1.5" stroke-dasharray="5,3" opacity="0.55"/>
+  <line x1="595" y1="350" x2="465" y2="295" stroke="#16a085" stroke-width="1.5" stroke-dasharray="5,3" opacity="0.55"/>
+
+  <text x="400" y="480" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#95a5a6">OWASP LLM Top 10 2025 — 프롬프트 인젝션은 여전히 1위 위협</text>
+</svg>

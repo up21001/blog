@@ -1,0 +1,167 @@
+<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#4A90D9" />
+      <stop offset="100%" style="stop-color:#50C878" />
+    </linearGradient>
+    <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#50C878" />
+      <stop offset="100%" style="stop-color:#6C5CE7" />
+    </linearGradient>
+    <linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#6C5CE7" />
+      <stop offset="100%" style="stop-color:#6C5CE7" />
+    </linearGradient>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#2D3748" />
+    </marker>
+  </defs>
+
+  <style>
+    .background { fill: #f8f9fa; }
+    .stage-box {
+      fill: #ffffff;
+      stroke: #e0e0e0;
+      stroke-width: 1;
+      filter: drop-shadow(2px 2px 3px rgba(0,0,0,0.1));
+    }
+    /* rx and ry moved to rect elements as attributes */
+    .stage-header { fill: url(#grad1); }
+    .stage-header-2 { fill: url(#grad2); }
+    .stage-header-3 { fill: url(#grad3); }
+
+    .stage-number {
+      font-family: "Arial, sans-serif";
+      font-size: 16px;
+      font-weight: bold;
+      fill: #ffffff;
+    }
+    .stage-title {
+      font-family: "Arial, sans-serif";
+      font-size: 10px;
+      font-weight: bold;
+      fill: #2D3748;
+      text-anchor: middle;
+    }
+    .stage-description {
+      font-family: "Arial, sans-serif";
+      font-size: 9px;
+      fill: #4A5568;
+      text-anchor: middle;
+    }
+    .arrow {
+      stroke: #2D3748;
+      stroke-width: 2;
+      fill: none;
+      marker-end: url(#arrowhead);
+    }
+    .arrow-label-bg {
+      fill: #ffffff;
+      stroke: #e0e0e0;
+      stroke-width: 0.5;
+    }
+    .arrow-label {
+      font-family: "Arial, sans-serif";
+      font-size: 11px;
+      fill: #2D3748;
+      text-anchor: middle;
+    }
+  </style>
+
+  <rect x="0" y="0" width="800" height="500" class="background"/>
+
+  <!-- Stage 1: Earth Launch and Earth Orbit Insertion -->
+  <g class="stage" transform="translate(10, 190)">
+    <rect x="0" y="0" width="115" height="120" rx="10" ry="10" class="stage-box"/>
+    <rect x="0" y="0" width="115" height="40" rx="10" ry="10" class="stage-header"/>
+    <text x="10" y="27" class="stage-number">1</text>
+    <text x="57.5" y="58" class="stage-title">Earth Launch and</text>
+    <text x="57.5" y="70" class="stage-title">Earth Orbit Insertion</text>
+    <text x="57.5" y="88" class="stage-description">SLS Rocket Launch,</text>
+    <text x="57.5" y="99" class="stage-description">Orion Spacecraft Separation,</text>
+    <text x="57.5" y="110" class="stage-description">Low Earth Orbit Insertion</text>
+  </g>
+
+  <!-- Stage 2: Altitude Ascent and System Check -->
+  <g class="stage" transform="translate(140, 190)">
+    <rect x="0" y="0" width="115" height="120" rx="10" ry="10" class="stage-box"/>
+    <rect x="0" y="0" width="115" height="40" rx="10" ry="10" class="stage-header"/>
+    <text x="10" y="27" class="stage-number">2</text>
+    <text x="57.5" y="58" class="stage-title">Altitude Ascent and</text>
+    <text x="57.5" y="70" class="stage-title">System Check</text>
+    <text x="57.5" y="88" class="stage-description">Earth Orbit Ascent,</text>
+    <text x="57.5" y="99" class="stage-description">Orion System Check,</text>
+    <text x="57.5" y="110" class="stage-description">TLI Preparation</text>
+  </g>
+
+  <!-- Stage 3: Trans-Lunar Injection -->
+  <g class="stage" transform="translate(270, 190)">
+    <rect x="0" y="0" width="115" height="120" rx="10" ry="10" class="stage-box"/>
+    <rect x="0" y="0" width="115" height="40" rx="10" ry="10" class="stage-header-2"/>
+    <text x="10" y="27" class="stage-number">3</text>
+    <text x="57.5" y="58" class="stage-title">Towards the Moon</text>
+    <text x="57.5" y="70" class="stage-title">Trans-Lunar Injection</text>
+    <text x="57.5" y="88" class="stage-description">ICPS Reignition,</text>
+    <text x="57.5" y="99" class="stage-description">Trans-Lunar Orbit Insertion</text>
+  </g>
+
+  <!-- Stage 4: Lunar Far Side Flyby -->
+  <g class="stage" transform="translate(400, 190)">
+    <rect x="0" y="0" width="115" height="120" rx="10" ry="10" class="stage-box"/>
+    <rect x="0" y="0" width="115" height="40" rx="10" ry="10" class="stage-header-2"/>
+    <text x="10" y="27" class="stage-number">4</text>
+    <text x="57.5" y="64" class="stage-title">Lunar Far Side Flyby</text>
+    <text x="57.5" y="88" class="stage-description">Utilizing Lunar Gravity,</text>
+    <text x="57.5" y="99" class="stage-description">Passing Lunar Far Side,</text>
+    <text x="57.5" y="110" class="stage-description">Earth Return Orbit Preparation</text>
+  </g>
+
+  <!-- Stage 5: Earth Return Orbit -->
+  <g class="stage" transform="translate(530, 190)">
+    <rect x="0" y="0" width="115" height="120" rx="10" ry="10" class="stage-box"/>
+    <rect x="0" y="0" width="115" height="40" rx="10" ry="10" class="stage-header-3"/>
+    <text x="10" y="27" class="stage-number">5</text>
+    <text x="57.5" y="64" class="stage-title">Earth Return Orbit</text>
+    <text x="57.5" y="88" class="stage-description">Lunar Gravity Escape,</text>
+    <text x="57.5" y="99" class="stage-description">Towards Earth</text>
+    <text x="57.5" y="110" class="stage-description">Free Return Trajectory Flight</text>
+  </g>
+
+  <!-- Stage 6: Earth Atmosphere Reentry and Splashdown -->
+  <g class="stage" transform="translate(660, 190)">
+    <rect x="0" y="0" width="115" height="120" rx="10" ry="10" class="stage-box"/>
+    <rect x="0" y="0" width="115" height="40" rx="10" ry="10" class="stage-header-3"/>
+    <text x="10" y="27" class="stage-number">6</text>
+    <text x="57.5" y="58" class="stage-title">Earth Atmosphere Reentry</text>
+    <text x="57.5" y="70" class="stage-title">and Splashdown</text>
+    <text x="57.5" y="88" class="stage-description">Earth Atmosphere Reentry,</text>
+    <text x="57.5" y="99" class="stage-description">Parachute Deployment,</text>
+    <text x="57.5" y="110" class="stage-description">Ocean Landing</text>
+  </g>
+
+  <!-- Arrows -->
+  <!-- Arrow 1-2 -->
+  <line x1="125" y1="250" x2="140" y2="250" class="arrow"/>
+  <rect x="125" y="235" width="15" height="30" class="arrow-label-bg"/>
+  <text x="132.5" y="255" class="arrow-label">Separation</text>
+
+  <!-- Arrow 2-3 -->
+  <line x1="255" y1="250" x2="270" y2="250" class="arrow"/>
+  <rect x="255" y="235" width="15" height="30" class="arrow-label-bg"/>
+  <text x="262.5" y="255" class="arrow-label">Check</text>
+
+  <!-- Arrow 3-4 -->
+  <line x1="385" y1="250" x2="400" y2="250" class="arrow"/>
+  <rect x="385" y="235" width="15" height="30" class="arrow-label-bg"/>
+  <text x="392.5" y="255" class="arrow-label">Transit</text>
+
+  <!-- Arrow 4-5 -->
+  <line x1="515" y1="250" x2="530" y2="250" class="arrow"/>
+  <rect x="515" y="235" width="15" height="30" class="arrow-label-bg"/>
+  <text x="522.5" y="255" class="arrow-label">Return</text>
+
+  <!-- Arrow 5-6 -->
+  <line x1="645" y1="250" x2="660" y2="250" class="arrow"/>
+  <rect x="645" y="235" width="15" height="30" class="arrow-label-bg"/>
+  <text x="652.5" y="255" class="arrow-label">Entry</text>
+</svg>

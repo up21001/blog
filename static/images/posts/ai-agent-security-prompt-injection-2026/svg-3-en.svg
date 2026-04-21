@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <rect width="800" height="500" fill="#f8f9fa"/>
+  <text x="400" y="36" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" font-weight="bold" fill="#2c3e50">OWASP LLM Top 10 (2025)</text>
+  <text x="400" y="58" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#7f8c8d">Highlighted rows are amplified by agent deployments</text>
+
+  <g font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">
+    <rect x="40" y="85" width="720" height="36" fill="#fdecea" stroke="#e74c3c" stroke-width="1.5"/>
+    <rect x="40" y="85" width="65" height="36" fill="#e74c3c"/>
+    <text x="72" y="109" text-anchor="middle" font-weight="bold" fill="#ffffff">LLM01</text>
+    <text x="120" y="109" font-weight="bold" fill="#c0392b">Prompt Injection</text>
+    <text x="370" y="109">Direct + indirect unified</text>
+    <text x="720" y="109" text-anchor="end" fill="#c0392b" font-weight="bold">Critical</text>
+
+    <rect x="40" y="121" width="720" height="36" fill="#ffffff" stroke="#ecf0f1"/>
+    <rect x="40" y="121" width="65" height="36" fill="#c0392b"/>
+    <text x="72" y="145" text-anchor="middle" font-weight="bold" fill="#ffffff">LLM02</text>
+    <text x="120" y="145" font-weight="bold">Sensitive Info Disclosure</text>
+    <text x="370" y="145">Chronic in large-corpus agents</text>
+    <text x="720" y="145" text-anchor="end" fill="#e67e22" font-weight="bold">High</text>
+
+    <rect x="40" y="157" width="720" height="36" fill="#f8f9fa" stroke="#ecf0f1"/>
+    <rect x="40" y="157" width="65" height="36" fill="#e67e22"/>
+    <text x="72" y="181" text-anchor="middle" font-weight="bold" fill="#ffffff">LLM03</text>
+    <text x="120" y="181" font-weight="bold">Supply-Chain Risk</text>
+    <text x="370" y="181">3rd-party model · LoRA · MCP · plugin</text>
+    <text x="720" y="181" text-anchor="end" fill="#e67e22" font-weight="bold">High</text>
+
+    <rect x="40" y="193" width="720" height="36" fill="#ffffff" stroke="#ecf0f1"/>
+    <rect x="40" y="193" width="65" height="36" fill="#f39c12"/>
+    <text x="72" y="217" text-anchor="middle" font-weight="bold" fill="#ffffff">LLM04</text>
+    <text x="120" y="217" font-weight="bold">Data/Model Poisoning</text>
+    <text x="370" y="217">RAG sources, fine-tuning corpora</text>
+    <text x="720" y="217" text-anchor="end" fill="#f39c12" font-weight="bold">Med</text>
+
+    <rect x="40" y="229" width="720" height="36" fill="#fdecea" stroke="#e74c3c" stroke-width="1.5"/>
+    <rect x="40" y="229" width="65" height="36" fill="#e74c3c"/>
+    <text x="72" y="253" text-anchor="middle" font-weight="bold" fill="#ffffff">LLM05</text>
+    <text x="120" y="253" font-weight="bold" fill="#c0392b">Improper Output Handling</text>
+    <text x="370" y="253">Output → eval/SQL/shell chain</text>
+    <text x="720" y="253" text-anchor="end" fill="#c0392b" font-weight="bold">Critical</text>
+
+    <rect x="40" y="265" width="720" height="36" fill="#fdecea" stroke="#e74c3c" stroke-width="1.5"/>
+    <rect x="40" y="265" width="65" height="36" fill="#e74c3c"/>
+    <text x="72" y="289" text-anchor="middle" font-weight="bold" fill="#ffffff">LLM06</text>
+    <text x="120" y="289" font-weight="bold" fill="#c0392b">Excessive Agency</text>
+    <text x="370" y="289">The classic least-privilege violation</text>
+    <text x="720" y="289" text-anchor="end" fill="#c0392b" font-weight="bold">Critical</text>
+
+    <rect x="40" y="301" width="720" height="36" fill="#ffffff" stroke="#ecf0f1"/>
+    <rect x="40" y="301" width="65" height="36" fill="#f39c12"/>
+    <text x="72" y="325" text-anchor="middle" font-weight="bold" fill="#ffffff">LLM07</text>
+    <text x="120" y="325" font-weight="bold">System Prompt Leakage</text>
+    <text x="370" y="325">Design prompts as non-secrets</text>
+    <text x="720" y="325" text-anchor="end" fill="#f39c12" font-weight="bold">Med</text>
+
+    <rect x="40" y="337" width="720" height="36" fill="#f8f9fa" stroke="#ecf0f1"/>
+    <rect x="40" y="337" width="65" height="36" fill="#f39c12"/>
+    <text x="72" y="361" text-anchor="middle" font-weight="bold" fill="#ffffff">LLM08</text>
+    <text x="120" y="361" font-weight="bold">Vector/Embedding Weaknesses</text>
+    <text x="370" y="361">RAG-specific attack vectors</text>
+    <text x="720" y="361" text-anchor="end" fill="#f39c12" font-weight="bold">Med</text>
+
+    <rect x="40" y="373" width="720" height="36" fill="#ffffff" stroke="#ecf0f1"/>
+    <rect x="40" y="373" width="65" height="36" fill="#95a5a6"/>
+    <text x="72" y="397" text-anchor="middle" font-weight="bold" fill="#ffffff">LLM09</text>
+    <text x="120" y="397" font-weight="bold">Over-reliance / Misinfo</text>
+    <text x="370" y="397">Unvalidated outputs used as truth</text>
+    <text x="720" y="397" text-anchor="end" fill="#95a5a6" font-weight="bold">Med</text>
+
+    <rect x="40" y="409" width="720" height="36" fill="#f8f9fa" stroke="#ecf0f1"/>
+    <rect x="40" y="409" width="65" height="36" fill="#95a5a6"/>
+    <text x="72" y="433" text-anchor="middle" font-weight="bold" fill="#ffffff">LLM10</text>
+    <text x="120" y="433" font-weight="bold">Unbounded Resource Consumption</text>
+    <text x="370" y="433">Token / tool-call loops out of control</text>
+    <text x="720" y="433" text-anchor="end" fill="#95a5a6" font-weight="bold">Med</text>
+  </g>
+
+  <text x="400" y="480" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#95a5a6">Red rows = severity amplified in agent deployments</text>
+</svg>

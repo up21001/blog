@@ -1,0 +1,68 @@
+<svg viewBox="0 0 800 1000" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+    <defs>
+        <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="#2C3E50" />
+        </marker>
+    </defs>
+
+    <!-- Title -->
+    <text x="400" y="50" font-size="32" font-weight="bold" text-anchor="middle" fill="#2C3E50">오리온 우주선 방열판 '에이브코트' 작동 원리</text>
+
+    <!-- Main Heat Shield Visual -->
+    <g transform="translate(100, 100)">
+        <!-- Curved Heat Shield Base (Structure) -->
+        <path d="M0 100 C150 120 450 120 600 100 L600 150 C450 170 150 170 0 150 Z" fill="#BDC3C7"/>
+        <!-- Curved Avcoat Layer -->
+        <path d="M0 50 C150 70 450 70 600 50 L600 100 C450 120 150 120 0 100 Z" fill="#E67E22"/>
+        
+        <!-- Heat Source (re-entry flames) -->
+        <path d="M0 150 Q150 190 300 150 T600 150" stroke="#E74C3C" stroke-width="10" fill="none"/>
+        <path d="M0 160 Q150 200 300 160 T600 160" stroke="#E67E22" stroke-width="8" fill="none"/>
+        <path d="M0 170 Q150 210 300 170 T600 170" stroke="#F39C12" stroke-width="6" fill="none"/>
+
+        <text x="300" y="30" font-size="22" font-weight="bold" text-anchor="middle" fill="#2C3E50">오리온 우주선 방열판</text>
+        <text x="300" y="75" font-size="20" font-weight="bold" text-anchor="middle" fill="#FFFFFF">에이브코트 (Avcoat)</text>
+        <text x="300" y="125" font-size="20" font-weight="bold" text-anchor="middle" fill="#FFFFFF">구조체</text>
+        <text x="300" y="200" font-size="20" font-weight="bold" text-anchor="middle" fill="#E74C3C">고열</text>
+    </g>
+
+    <!-- Step 1: High Heat Exposure -->
+    <rect x="40" y="300" width="720" height="140" fill="#F8F9F9" stroke="#BDC3C7" stroke-width="1" rx="10"/>
+    <!-- Icon for Step 1: Heat -->
+    <path d="M100 380 Q110 360 120 380 T140 380 T160 380 L130 410 Z" fill="#E74C3C"/>
+    <path d="M105 375 Q115 355 125 375 T145 375 L120 405 Z" fill="#E67E22"/>
+    <path d="M110 370 Q120 350 130 370 T150 370 L110 400 Z" fill="#F39C12"/>
+    <text x="200" y="330" font-size="24" font-weight="bold" fill="#2C3E50">1. 고열 노출</text>
+    <text x="200" y="370" font-size="18" fill="#555555">지구 대기권 재진입 시</text>
+    <text x="200" y="395" font-size="18" fill="#555555">극심한 고열 발생</text>
+
+    <!-- Step 2: Surface Charring and Vaporization -->
+    <rect x="40" y="490" width="720" height="140" fill="#F8F9F9" stroke="#BDC3C7" stroke-width="1" rx="10"/>
+    <!-- Icon for Step 2: Ablation -->
+    <rect x="100" y="570" width="60" height="40" fill="#BDC3C7"/>
+    <path d="M100 570 Q115 550 130 570 T160 570" fill="#E67E22"/>
+    <circle cx="170" cy="560" r="5" fill="#E74C3C"/>
+    <circle cx="180" cy="575" r="4" fill="#E67E22"/>
+    <circle cx="165" cy="585" r="3" fill="#F39C12"/>
+    <text x="200" y="520" font-size="24" font-weight="bold" fill="#2C3E50">2. 표면 탄화 및 기화</text>
+    <text x="200" y="560" font-size="18" fill="#555555">에이브코트 표면이 타들어가며(탄화)</text>
+    <text x="200" y="585" font-size="18" fill="#555555">기화되어 열을 흡수 및 방출</text>
+
+    <!-- Step 3: Heat Dissipation and Internal Protection -->
+    <rect x="40" y="680" width="720" height="140" fill="#F8F9F9" stroke="#BDC3C7" stroke-width="1" rx="10"/>
+    <!-- Icon for Step 3: Protection -->
+    <path d="M130 740 L90 760 L90 790 C90 805 130 810 130 790 C130 810 170 805 170 790 L170 760 Z" fill="#27AE60"/>
+    <rect x="115" y="765" width="30" height="20" fill="#ECF0F1"/>
+    <text x="200" y="710" font-size="24" font-weight="bold" fill="#2C3E50">3. 열 방출 및 내부 보호</text>
+    <text x="200" y="750" font-size="18" fill="#555555">기화된 가스가 외부로 방출되며</text>
+    <text x="200" y="775" font-size="18" fill="#555555">열을 분산, 우주선 내부 보호</text>
+
+    <!-- Summary -->
+    <rect x="40" y="870" width="720" height="80" fill="#E0F2F7" stroke="#3498DB" stroke-width="2" rx="10"/>
+    <text x="400" y="915" font-size="22" font-weight="bold" text-anchor="middle" fill="#2C3E50">핵심 원리: 자기 희생을 통한 우주선 내부 안전 확보</text>
+
+    <!-- Arrows connecting steps -->
+    <line x1="400" y1="440" x2="400" y2="490" stroke="#2C3E50" stroke-width="3" marker-end="url(#arrowhead)"/>
+    <line x1="400" y1="630" x2="400" y2="680" stroke="#2C3E50" stroke-width="3" marker-end="url(#arrowhead)"/>
+
+</svg>

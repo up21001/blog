@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <rect width="800" height="500" fill="#f8f9fa"/>
+  <text x="400" y="36" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" font-weight="bold" fill="#2c3e50">BCI Company Comparison</text>
+  <text x="400" y="58" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#7f8c8d">Approach · Clinical Stage · Milestones</text>
+
+  <rect x="40" y="85" width="180" height="40" fill="#2c3e50"/>
+  <text x="60" y="110" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#ffffff">Attribute</text>
+
+  <rect x="220" y="85" width="190" height="40" fill="#2980b9"/>
+  <text x="315" y="110" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#ffffff">Neuralink</text>
+
+  <rect x="410" y="85" width="190" height="40" fill="#16a085"/>
+  <text x="505" y="110" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#ffffff">Synchron</text>
+
+  <rect x="600" y="85" width="160" height="40" fill="#8e44ad"/>
+  <text x="680" y="110" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#ffffff">Precision</text>
+
+  <g font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">
+    <rect x="40" y="125" width="720" height="40" fill="#ffffff" stroke="#ecf0f1"/>
+    <text x="60" y="149" font-weight="bold">Approach</text>
+    <text x="315" y="149" text-anchor="middle">Invasive · intracortical</text>
+    <text x="505" y="149" text-anchor="middle">Endovascular</text>
+    <text x="680" y="149" text-anchor="middle">Surface film</text>
+
+    <rect x="40" y="165" width="720" height="40" fill="#f8f9fa" stroke="#ecf0f1"/>
+    <text x="60" y="189" font-weight="bold">Electrode count</text>
+    <text x="315" y="189" text-anchor="middle">1,000+ (single-neuron)</text>
+    <text x="505" y="189" text-anchor="middle">16 (stent-mounted)</text>
+    <text x="680" y="189" text-anchor="middle">1,024 (surface)</text>
+
+    <rect x="40" y="205" width="720" height="40" fill="#ffffff" stroke="#ecf0f1"/>
+    <text x="60" y="229" font-weight="bold">Surgical complexity</text>
+    <text x="315" y="229" text-anchor="middle">Robotic surgery</text>
+    <text x="505" y="229" text-anchor="middle">Vascular catheter</text>
+    <text x="680" y="229" text-anchor="middle">Minimal incision</text>
+
+    <rect x="40" y="245" width="720" height="40" fill="#f8f9fa" stroke="#ecf0f1"/>
+    <text x="60" y="269" font-weight="bold">First human implant</text>
+    <text x="315" y="269" text-anchor="middle">Jan 2024</text>
+    <text x="505" y="269" text-anchor="middle">2019 (Australia)</text>
+    <text x="680" y="269" text-anchor="middle">2023</text>
+
+    <rect x="40" y="285" width="720" height="40" fill="#ffffff" stroke="#ecf0f1"/>
+    <text x="60" y="309" font-weight="bold">Clinical stage</text>
+    <text x="315" y="309" text-anchor="middle">Expanding</text>
+    <text x="505" y="309" text-anchor="middle">Large-scale trial</text>
+    <text x="680" y="309" text-anchor="middle">FDA review</text>
+
+    <rect x="40" y="325" width="720" height="40" fill="#f8f9fa" stroke="#ecf0f1"/>
+    <text x="60" y="349" font-weight="bold">Landmark demos</text>
+    <text x="315" y="349" text-anchor="middle">Chess · games · cursor</text>
+    <text x="505" y="349" text-anchor="middle">Home use · text entry</text>
+    <text x="680" y="349" text-anchor="middle">Dense cortical mapping</text>
+
+    <rect x="40" y="365" width="720" height="40" fill="#ffffff" stroke="#ecf0f1"/>
+    <text x="60" y="389" font-weight="bold">Known issues</text>
+    <text x="315" y="389" text-anchor="middle">Thread retraction</text>
+    <text x="505" y="389" text-anchor="middle">Lower resolution</text>
+    <text x="680" y="389" text-anchor="middle">Relatively young</text>
+
+    <rect x="40" y="405" width="720" height="40" fill="#f8f9fa" stroke="#ecf0f1"/>
+    <text x="60" y="429" font-weight="bold">Strategic edge</text>
+    <text x="315" y="429" text-anchor="middle" fill="#2980b9" font-weight="bold">Highest signal quality</text>
+    <text x="505" y="429" text-anchor="middle" fill="#16a085" font-weight="bold">Regulatory · scaling</text>
+    <text x="680" y="429" text-anchor="middle" fill="#8e44ad" font-weight="bold">Safe · removable</text>
+  </g>
+
+  <text x="400" y="480" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#95a5a6">Compiled from public announcements and reporting — some figures estimated</text>
+</svg>
