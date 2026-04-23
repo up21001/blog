@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <rect width="800" height="500" fill="#f8f9fa"/>
+  <text x="400" y="40" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#2c3e50" text-anchor="middle">Standard LLM vs Reasoning Model</text>
+
+  <!-- Left column: Standard LLM -->
+  <rect x="60" y="65" width="300" height="40" rx="8" fill="#2980b9"/>
+  <text x="210" y="90" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">Standard LLM</text>
+
+  <rect x="80" y="120" width="260" height="50" rx="8" fill="#d6eaf8" stroke="#2980b9" stroke-width="2"/>
+  <text x="210" y="150" font-family="Arial, sans-serif" font-size="14" fill="#2c3e50" text-anchor="middle">Input</text>
+
+  <line x1="210" y1="170" x2="210" y2="200" stroke="#2980b9" stroke-width="2" marker-end="url(#arrowBlue)"/>
+
+  <rect x="80" y="200" width="260" height="60" rx="8" fill="#d6eaf8" stroke="#2980b9" stroke-width="2"/>
+  <text x="210" y="225" font-family="Arial, sans-serif" font-size="13" fill="#2c3e50" text-anchor="middle">Single Forward Pass</text>
+  <text x="210" y="248" font-family="Arial, sans-serif" font-size="12" fill="#5d6d7e" text-anchor="middle">(No intermediate steps)</text>
+
+  <line x1="210" y1="260" x2="210" y2="290" stroke="#2980b9" stroke-width="2" marker-end="url(#arrowBlue)"/>
+
+  <rect x="80" y="290" width="260" height="50" rx="8" fill="#d6eaf8" stroke="#2980b9" stroke-width="2"/>
+  <text x="210" y="320" font-family="Arial, sans-serif" font-size="14" fill="#2c3e50" text-anchor="middle">Output</text>
+
+  <!-- Traits -->
+  <rect x="80" y="365" width="75" height="30" rx="5" fill="#2980b9"/>
+  <text x="117" y="385" font-family="Arial, sans-serif" font-size="12" fill="#fff" text-anchor="middle">Fast</text>
+  <rect x="165" y="365" width="75" height="30" rx="5" fill="#2980b9"/>
+  <text x="202" y="385" font-family="Arial, sans-serif" font-size="12" fill="#fff" text-anchor="middle">Low cost</text>
+  <rect x="250" y="365" width="90" height="30" rx="5" fill="#2980b9"/>
+  <text x="295" y="385" font-family="Arial, sans-serif" font-size="12" fill="#fff" text-anchor="middle">Simple tasks</text>
+
+  <!-- Right column: Reasoning Model -->
+  <rect x="440" y="65" width="300" height="40" rx="8" fill="#8e44ad"/>
+  <text x="590" y="90" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">Reasoning Model</text>
+
+  <rect x="460" y="120" width="260" height="50" rx="8" fill="#e8d5f5" stroke="#8e44ad" stroke-width="2"/>
+  <text x="590" y="150" font-family="Arial, sans-serif" font-size="14" fill="#2c3e50" text-anchor="middle">Input</text>
+
+  <line x1="590" y1="170" x2="590" y2="195" stroke="#8e44ad" stroke-width="2" marker-end="url(#arrowPurple)"/>
+
+  <rect x="460" y="195" width="260" height="40" rx="8" fill="#e8d5f5" stroke="#8e44ad" stroke-width="2"/>
+  <text x="590" y="220" font-family="Arial, sans-serif" font-size="13" fill="#2c3e50" text-anchor="middle">Think Step 1</text>
+
+  <line x1="590" y1="235" x2="590" y2="255" stroke="#8e44ad" stroke-width="2" marker-end="url(#arrowPurple)"/>
+
+  <rect x="460" y="255" width="260" height="40" rx="8" fill="#e8d5f5" stroke="#8e44ad" stroke-width="2"/>
+  <text x="590" y="280" font-family="Arial, sans-serif" font-size="13" fill="#2c3e50" text-anchor="middle">Think Step 2</text>
+
+  <line x1="590" y1="295" x2="590" y2="315" stroke="#8e44ad" stroke-width="2" marker-end="url(#arrowPurple)"/>
+
+  <rect x="460" y="315" width="260" height="40" rx="8" fill="#e8d5f5" stroke="#8e44ad" stroke-width="2"/>
+  <text x="590" y="340" font-family="Arial, sans-serif" font-size="13" fill="#2c3e50" text-anchor="middle">Think Step N</text>
+
+  <line x1="590" y1="355" x2="590" y2="378" stroke="#8e44ad" stroke-width="2" marker-end="url(#arrowPurple)"/>
+
+  <rect x="460" y="378" width="260" height="40" rx="8" fill="#e8d5f5" stroke="#8e44ad" stroke-width="2"/>
+  <text x="590" y="403" font-family="Arial, sans-serif" font-size="14" fill="#2c3e50" text-anchor="middle">Output</text>
+
+  <!-- Traits -->
+  <rect x="460" y="435" width="75" height="30" rx="5" fill="#8e44ad"/>
+  <text x="497" y="455" font-family="Arial, sans-serif" font-size="12" fill="#fff" text-anchor="middle">Slower</text>
+  <rect x="545" y="435" width="85" height="30" rx="5" fill="#8e44ad"/>
+  <text x="587" y="455" font-family="Arial, sans-serif" font-size="12" fill="#fff" text-anchor="middle">Higher cost</text>
+  <rect x="640" y="435" width="80" height="30" rx="5" fill="#8e44ad"/>
+  <text x="680" y="455" font-family="Arial, sans-serif" font-size="11" fill="#fff" text-anchor="middle">Complex tasks</text>
+
+  <!-- Arrow markers -->
+  <defs>
+    <marker id="arrowBlue" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#2980b9"/>
+    </marker>
+    <marker id="arrowPurple" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#8e44ad"/>
+    </marker>
+  </defs>
+</svg>

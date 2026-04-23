@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <rect width="800" height="500" fill="#f8f9fa"/>
+  <text x="400" y="32" font-family="Arial, sans-serif" font-size="19" font-weight="bold" fill="#2c3e50" text-anchor="middle">Reasoning Model Cost · Speed · Performance Matrix</text>
+
+  <!-- Axes -->
+  <line x1="100" y1="400" x2="720" y2="400" stroke="#bdc3c7" stroke-width="2"/>
+  <polygon points="720,395 730,400 720,405" fill="#bdc3c7"/>
+  <text x="415" y="470" font-family="Arial, sans-serif" font-size="13" fill="#5d6d7e" text-anchor="middle">Speed: Fast ←————————→ Slow</text>
+  <text x="130" y="420" font-family="Arial, sans-serif" font-size="11" fill="#7f8c8d" text-anchor="middle">Fast</text>
+  <text x="690" y="420" font-family="Arial, sans-serif" font-size="11" fill="#7f8c8d" text-anchor="middle">Slow</text>
+
+  <line x1="100" y1="400" x2="100" y2="60" stroke="#bdc3c7" stroke-width="2"/>
+  <polygon points="95,60 100,50 105,60" fill="#bdc3c7"/>
+  <text x="30" y="230" font-family="Arial, sans-serif" font-size="13" fill="#5d6d7e" text-anchor="middle" transform="rotate(-90,30,230)">Performance</text>
+  <text x="90" y="395" font-family="Arial, sans-serif" font-size="11" fill="#7f8c8d" text-anchor="end">Low</text>
+  <text x="90" y="80" font-family="Arial, sans-serif" font-size="11" fill="#7f8c8d" text-anchor="end">High</text>
+
+  <!-- Grid lines -->
+  <line x1="100" y1="300" x2="720" y2="300" stroke="#ecf0f1" stroke-width="1" stroke-dasharray="4,4"/>
+  <line x1="100" y1="200" x2="720" y2="200" stroke="#ecf0f1" stroke-width="1" stroke-dasharray="4,4"/>
+  <line x1="100" y1="100" x2="720" y2="100" stroke="#ecf0f1" stroke-width="1" stroke-dasharray="4,4"/>
+  <line x1="260" y1="60" x2="260" y2="400" stroke="#ecf0f1" stroke-width="1" stroke-dasharray="4,4"/>
+  <line x1="420" y1="60" x2="420" y2="400" stroke="#ecf0f1" stroke-width="1" stroke-dasharray="4,4"/>
+  <line x1="580" y1="60" x2="580" y2="400" stroke="#ecf0f1" stroke-width="1" stroke-dasharray="4,4"/>
+
+  <!-- GPT-4.1 -->
+  <circle cx="155" cy="270" r="22" fill="#2980b9" opacity="0.82"/>
+  <text x="155" y="274" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#fff" text-anchor="middle">GPT-4.1</text>
+  <text x="155" y="308" font-family="Arial, sans-serif" font-size="10" fill="#2980b9" text-anchor="middle">Cheap</text>
+
+  <!-- Claude Sonnet 4.6 -->
+  <circle cx="200" cy="230" r="24" fill="#8e44ad" opacity="0.82"/>
+  <text x="200" y="227" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#fff" text-anchor="middle">Claude</text>
+  <text x="200" y="239" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#fff" text-anchor="middle">Sonnet 4.6</text>
+  <text x="200" y="270" font-family="Arial, sans-serif" font-size="10" fill="#8e44ad" text-anchor="middle">Cheap</text>
+
+  <!-- o4-mini -->
+  <circle cx="420" cy="150" r="36" fill="#27ae60" opacity="0.82"/>
+  <text x="420" y="147" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#fff" text-anchor="middle">o4-mini</text>
+  <text x="420" y="160" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#fff" text-anchor="middle">Mid cost</text>
+  <text x="420" y="198" font-family="Arial, sans-serif" font-size="10" fill="#27ae60" text-anchor="middle">Medium speed</text>
+
+  <!-- Gemini 2.5 Pro -->
+  <circle cx="470" cy="130" r="38" fill="#e67e22" opacity="0.82"/>
+  <text x="470" y="127" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#fff" text-anchor="middle">Gemini</text>
+  <text x="470" y="140" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#fff" text-anchor="middle">2.5 Pro</text>
+  <text x="470" y="183" font-family="Arial, sans-serif" font-size="10" fill="#e67e22" text-anchor="middle">Medium speed</text>
+
+  <!-- o3 -->
+  <circle cx="650" cy="90" r="52" fill="#e74c3c" opacity="0.82"/>
+  <text x="650" y="86" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#fff" text-anchor="middle">o3</text>
+  <text x="650" y="101" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#fff" text-anchor="middle">Expensive</text>
+  <text x="650" y="155" font-family="Arial, sans-serif" font-size="10" fill="#e74c3c" text-anchor="middle">Slow</text>
+
+  <!-- Legend note -->
+  <rect x="560" y="320" width="180" height="55" rx="6" fill="#fff" stroke="#bdc3c7" stroke-width="1"/>
+  <text x="650" y="340" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50" text-anchor="middle">Bubble size = Cost</text>
+  <circle cx="590" cy="360" r="8" fill="#e74c3c" opacity="0.8"/>
+  <text x="605" y="364" font-family="Arial, sans-serif" font-size="10" fill="#5d6d7e">High cost</text>
+  <circle cx="655" cy="360" r="5" fill="#2980b9" opacity="0.8"/>
+  <text x="668" y="364" font-family="Arial, sans-serif" font-size="10" fill="#5d6d7e">Low cost</text>
+</svg>

@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <rect width="800" height="500" fill="#f8f9fa"/>
+  <text x="400" y="35" font-family="Arial, sans-serif" font-size="17" font-weight="bold" fill="#2c3e50" text-anchor="middle">추론 모델이 강한 태스크 vs 일반 모델이 유리한 태스크</text>
+
+  <!-- Left header: Reasoning Model -->
+  <rect x="40" y="55" width="330" height="45" rx="8" fill="#8e44ad"/>
+  <text x="205" y="83" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">추론 모델 우세</text>
+
+  <!-- Right header: Standard Model -->
+  <rect x="430" y="55" width="330" height="45" rx="8" fill="#2980b9"/>
+  <text x="595" y="83" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">일반 모델 우세</text>
+
+  <!-- Left cards -->
+  <rect x="40" y="115" width="330" height="55" rx="8" fill="#f5eef8" stroke="#8e44ad" stroke-width="1.5"/>
+  <text x="75" y="138" font-family="Arial, sans-serif" font-size="20" fill="#8e44ad">🔢</text>
+  <text x="105" y="138" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2c3e50">수학·과학 풀이</text>
+  <text x="105" y="158" font-family="Arial, sans-serif" font-size="12" fill="#5d6d7e">복잡한 수식, 증명, 물리·화학 계산</text>
+
+  <rect x="40" y="180" width="330" height="55" rx="8" fill="#f5eef8" stroke="#8e44ad" stroke-width="1.5"/>
+  <text x="75" y="203" font-family="Arial, sans-serif" font-size="20" fill="#8e44ad">🐛</text>
+  <text x="105" y="203" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2c3e50">코드 디버깅</text>
+  <text x="105" y="223" font-family="Arial, sans-serif" font-size="12" fill="#5d6d7e">멀티파일 버그, 아키텍처 설계 결함</text>
+
+  <rect x="40" y="245" width="330" height="55" rx="8" fill="#f5eef8" stroke="#8e44ad" stroke-width="1.5"/>
+  <text x="75" y="268" font-family="Arial, sans-serif" font-size="20" fill="#8e44ad">⚖️</text>
+  <text x="105" y="268" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2c3e50">법률·의학 분석</text>
+  <text x="105" y="288" font-family="Arial, sans-serif" font-size="12" fill="#5d6d7e">판례 해석, 진단 추론, 규제 검토</text>
+
+  <rect x="40" y="310" width="330" height="55" rx="8" fill="#f5eef8" stroke="#8e44ad" stroke-width="1.5"/>
+  <text x="75" y="333" font-family="Arial, sans-serif" font-size="20" fill="#8e44ad">🗺️</text>
+  <text x="105" y="333" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2c3e50">복잡한 전략 계획</text>
+  <text x="105" y="353" font-family="Arial, sans-serif" font-size="12" fill="#5d6d7e">장기 프로젝트 계획, 리스크 분석</text>
+
+  <rect x="40" y="375" width="330" height="55" rx="8" fill="#f5eef8" stroke="#8e44ad" stroke-width="1.5"/>
+  <text x="75" y="398" font-family="Arial, sans-serif" font-size="20" fill="#8e44ad">📄</text>
+  <text x="105" y="398" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2c3e50">연구 논문 분석</text>
+  <text x="105" y="418" font-family="Arial, sans-serif" font-size="12" fill="#5d6d7e">논문 비판적 검토, 방법론 평가</text>
+
+  <!-- Right cards -->
+  <rect x="430" y="115" width="330" height="55" rx="8" fill="#d6eaf8" stroke="#2980b9" stroke-width="1.5"/>
+  <text x="465" y="138" font-family="Arial, sans-serif" font-size="20" fill="#2980b9">💬</text>
+  <text x="495" y="138" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2c3e50">빠른 채팅</text>
+  <text x="495" y="158" font-family="Arial, sans-serif" font-size="12" fill="#5d6d7e">Q&amp;A, 간단한 질문 답변, 일상 대화</text>
+
+  <rect x="430" y="180" width="330" height="55" rx="8" fill="#d6eaf8" stroke="#2980b9" stroke-width="1.5"/>
+  <text x="465" y="203" font-family="Arial, sans-serif" font-size="20" fill="#2980b9">🌐</text>
+  <text x="495" y="203" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2c3e50">번역</text>
+  <text x="495" y="223" font-family="Arial, sans-serif" font-size="12" fill="#5d6d7e">다국어 번역, 지역화, 현지화</text>
+
+  <rect x="430" y="245" width="330" height="55" rx="8" fill="#d6eaf8" stroke="#2980b9" stroke-width="1.5"/>
+  <text x="465" y="268" font-family="Arial, sans-serif" font-size="20" fill="#2980b9">📝</text>
+  <text x="495" y="268" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2c3e50">요약</text>
+  <text x="495" y="288" font-family="Arial, sans-serif" font-size="12" fill="#5d6d7e">문서·기사 요약, 핵심 추출</text>
+
+  <rect x="430" y="310" width="330" height="55" rx="8" fill="#d6eaf8" stroke="#2980b9" stroke-width="1.5"/>
+  <text x="465" y="333" font-family="Arial, sans-serif" font-size="20" fill="#2980b9">✍️</text>
+  <text x="495" y="333" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2c3e50">창의적 글쓰기</text>
+  <text x="495" y="353" font-family="Arial, sans-serif" font-size="12" fill="#5d6d7e">스토리텔링, 마케팅 카피, 블로그</text>
+
+  <rect x="430" y="375" width="330" height="55" rx="8" fill="#d6eaf8" stroke="#2980b9" stroke-width="1.5"/>
+  <text x="465" y="398" font-family="Arial, sans-serif" font-size="20" fill="#2980b9">⚡</text>
+  <text x="495" y="398" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2c3e50">실시간 서비스</text>
+  <text x="495" y="418" font-family="Arial, sans-serif" font-size="12" fill="#5d6d7e">챗봇, 실시간 추천, 자동 응답</text>
+
+  <!-- Divider -->
+  <line x1="400" y1="55" x2="400" y2="445" stroke="#bdc3c7" stroke-width="1.5" stroke-dasharray="6,4"/>
+</svg>

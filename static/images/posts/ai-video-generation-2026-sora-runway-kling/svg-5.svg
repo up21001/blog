@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="500" fill="#f8f9fa"/>
+  <text x="400" y="38" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#2c3e50" text-anchor="middle">AI 영상 생성 로드맵 2026–2028</text>
+  <line x1="60" y1="50" x2="740" y2="50" stroke="#dee2e6" stroke-width="1"/>
+
+  <!-- Timeline spine -->
+  <line x1="100" y1="230" x2="700" y2="230" stroke="#adb5bd" stroke-width="3"/>
+
+  <!-- Phase dots -->
+  <circle cx="200" cy="230" r="18" fill="#2980b9"/>
+  <text x="200" y="235" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle">지금</text>
+
+  <circle cx="440" cy="230" r="18" fill="#8e44ad"/>
+  <text x="440" y="235" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle">곧</text>
+
+  <circle cx="660" cy="230" r="18" fill="#e74c3c"/>
+  <text x="660" y="235" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle">미래</text>
+
+  <!-- Phase year labels -->
+  <text x="200" y="265" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2980b9" text-anchor="middle">2026 현재</text>
+  <text x="440" y="265" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#8e44ad" text-anchor="middle">2027 예상</text>
+  <text x="660" y="265" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#e74c3c" text-anchor="middle">2028 예상</text>
+
+  <!-- Phase 1: 2026 -->
+  <rect x="70" y="75" width="265" height="130" rx="10" fill="#ebf5fb" stroke="#2980b9" stroke-width="2"/>
+  <text x="202" y="100" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#2980b9" text-anchor="middle">텍스트→영상 품질 급성장</text>
+  <text x="85" y="122" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">• 최대 1~2분 영상 생성</text>
+  <text x="85" y="142" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">• 1080p/4K 기본 지원</text>
+  <text x="85" y="162" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">• 물리 법칙 이해 향상</text>
+  <text x="85" y="182" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">• 얼굴·객체 일관성 강화</text>
+  <!-- Arrow down to timeline -->
+  <line x1="202" y1="205" x2="200" y2="212" stroke="#2980b9" stroke-width="2" stroke-dasharray="3,3"/>
+
+  <!-- Phase 2: 2027 -->
+  <rect x="308" y="75" width="265" height="130" rx="10" fill="#f5eef8" stroke="#8e44ad" stroke-width="2"/>
+  <text x="440" y="100" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#8e44ad" text-anchor="middle">영상→영상 편집 자동화</text>
+  <text x="323" y="122" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">• 실시간 영상 생성 실현</text>
+  <text x="323" y="142" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">• AI 자동 편집·자막 생성</text>
+  <text x="323" y="162" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">• 다국어 더빙 자동화</text>
+  <text x="323" y="182" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">• 브랜드 템플릿 AI 적용</text>
+  <line x1="440" y1="205" x2="440" y2="212" stroke="#8e44ad" stroke-width="2" stroke-dasharray="3,3"/>
+
+  <!-- Phase 3: 2028 -->
+  <rect x="548" y="75" width="185" height="130" rx="10" fill="#fdf2f8" stroke="#e74c3c" stroke-width="2"/>
+  <text x="640" y="100" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#e74c3c" text-anchor="middle">완전 영화 자동 제작</text>
+  <text x="560" y="122" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">• 개인화 AI 감독 등장</text>
+  <text x="560" y="142" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">• 시나리오→완성 영화</text>
+  <text x="560" y="162" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">• 1인 영화 제작 가능</text>
+  <text x="560" y="182" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">• 홀로그램·XR 통합</text>
+  <line x1="660" y1="205" x2="660" y2="212" stroke="#e74c3c" stroke-width="2" stroke-dasharray="3,3"/>
+
+  <!-- Bottom milestones -->
+  <rect x="70" y="285" width="265" height="90" rx="8" fill="#ffffff" stroke="#dee2e6" stroke-width="1"/>
+  <text x="202" y="307" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#2980b9" text-anchor="middle">현재 주요 플랫폼</text>
+  <text x="85" y="327" font-family="Arial, sans-serif" font-size="11" fill="#7f8c8d">Sora / Runway Gen-4</text>
+  <text x="85" y="345" font-family="Arial, sans-serif" font-size="11" fill="#7f8c8d">Kling 2.0 / Pika 2.0</text>
+  <text x="85" y="363" font-family="Arial, sans-serif" font-size="11" fill="#7f8c8d">Stable Video / Luma Dream</text>
+
+  <rect x="308" y="285" width="265" height="90" rx="8" fill="#ffffff" stroke="#dee2e6" stroke-width="1"/>
+  <text x="440" y="307" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#8e44ad" text-anchor="middle">예상 발전 방향</text>
+  <text x="323" y="327" font-family="Arial, sans-serif" font-size="11" fill="#7f8c8d">실시간 협업 편집 도구</text>
+  <text x="323" y="345" font-family="Arial, sans-serif" font-size="11" fill="#7f8c8d">음악·효과음 자동 생성</text>
+  <text x="323" y="363" font-family="Arial, sans-serif" font-size="11" fill="#7f8c8d">개인 스타일 학습 모델</text>
+
+  <rect x="548" y="285" width="185" height="90" rx="8" fill="#ffffff" stroke="#dee2e6" stroke-width="1"/>
+  <text x="640" y="307" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#e74c3c" text-anchor="middle">장기 비전</text>
+  <text x="560" y="327" font-family="Arial, sans-serif" font-size="11" fill="#7f8c8d">AI 공동 창작 시대</text>
+  <text x="560" y="345" font-family="Arial, sans-serif" font-size="11" fill="#7f8c8d">저작권 프레임워크</text>
+  <text x="560" y="363" font-family="Arial, sans-serif" font-size="11" fill="#7f8c8d">영상 민주화 완성</text>
+
+  <text x="400" y="492" font-family="Arial, sans-serif" font-size="10" fill="#7f8c8d" text-anchor="middle">예측은 현재 트렌드 기반이며 실제 발전 속도는 달라질 수 있음</text>
+</svg>

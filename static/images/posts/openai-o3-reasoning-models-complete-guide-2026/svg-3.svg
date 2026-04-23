@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <marker id="arrowDown" markerWidth="10" markerHeight="7" refX="5" refY="7" orient="auto">
+      <polygon points="0 0, 10 0, 5 7" fill="#8e44ad"/>
+    </marker>
+  </defs>
+  <rect width="800" height="500" fill="#f8f9fa"/>
+  <text x="400" y="35" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#2c3e50" text-anchor="middle">Chain-of-Thought 작동 원리</text>
+
+  <!-- Input box -->
+  <rect x="275" y="55" width="250" height="44" rx="10" fill="#2980b9"/>
+  <text x="400" y="82" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">문제 입력 (Problem Input)</text>
+
+  <line x1="400" y1="99" x2="400" y2="118" stroke="#8e44ad" stroke-width="2" marker-end="url(#arrowDown)"/>
+
+  <!-- Internal reasoning begins -->
+  <rect x="250" y="118" width="300" height="38" rx="8" fill="#f0e6fa" stroke="#8e44ad" stroke-width="1.5"/>
+  <text x="400" y="142" font-family="Arial, sans-serif" font-size="13" fill="#6c3483" text-anchor="middle">내부 추론 시작 (Internal Reasoning Begins)</text>
+
+  <line x1="400" y1="156" x2="400" y2="173" stroke="#8e44ad" stroke-width="2" marker-end="url(#arrowDown)"/>
+
+  <!-- Step 1 -->
+  <rect x="230" y="173" width="340" height="44" rx="8" fill="#e8d5f5" stroke="#8e44ad" stroke-width="1.5"/>
+  <text x="400" y="192" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#6c3483" text-anchor="middle">Step 1: 문제 분해 (Decompose)</text>
+  <text x="400" y="209" font-family="Arial, sans-serif" font-size="11" fill="#7d3c98" text-anchor="middle">문제를 하위 목표로 나눔</text>
+
+  <line x1="400" y1="217" x2="400" y2="234" stroke="#8e44ad" stroke-width="2" marker-end="url(#arrowDown)"/>
+
+  <!-- Step 2 -->
+  <rect x="230" y="234" width="340" height="44" rx="8" fill="#e8d5f5" stroke="#8e44ad" stroke-width="1.5"/>
+  <text x="400" y="253" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#6c3483" text-anchor="middle">Step 2: 가설 수립 (Form Hypothesis)</text>
+  <text x="400" y="270" font-family="Arial, sans-serif" font-size="11" fill="#7d3c98" text-anchor="middle">각 하위 목표에 대한 접근 방법 수립</text>
+
+  <line x1="400" y1="278" x2="400" y2="295" stroke="#8e44ad" stroke-width="2" marker-end="url(#arrowDown)"/>
+
+  <!-- Step 3 -->
+  <rect x="230" y="295" width="340" height="44" rx="8" fill="#e8d5f5" stroke="#8e44ad" stroke-width="1.5"/>
+  <text x="400" y="314" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#6c3483" text-anchor="middle">Step 3: 검증 (Verify)</text>
+  <text x="400" y="331" font-family="Arial, sans-serif" font-size="11" fill="#7d3c98" text-anchor="middle">논리적 일관성·정확성 점검</text>
+
+  <line x1="400" y1="339" x2="400" y2="356" stroke="#8e44ad" stroke-width="2" marker-end="url(#arrowDown)"/>
+
+  <!-- Step 4 -->
+  <rect x="230" y="356" width="340" height="44" rx="8" fill="#e8d5f5" stroke="#8e44ad" stroke-width="1.5"/>
+  <text x="400" y="375" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#6c3483" text-anchor="middle">Step 4: 수정 반복 (Iterate &amp; Refine)</text>
+  <text x="400" y="392" font-family="Arial, sans-serif" font-size="11" fill="#7d3c98" text-anchor="middle">오류 발견 시 이전 단계로 되돌아가 수정</text>
+
+  <line x1="400" y1="400" x2="400" y2="416" stroke="#27ae60" stroke-width="2" marker-end="url(#arrowGreen)"/>
+
+  <!-- Final answer -->
+  <rect x="275" y="416" width="250" height="44" rx="10" fill="#27ae60"/>
+  <text x="400" y="443" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">최종 답변 (Final Answer)</text>
+
+  <!-- Note -->
+  <rect x="560" y="270" width="210" height="44" rx="6" fill="#fef9e7" stroke="#e67e22" stroke-width="1.5"/>
+  <text x="665" y="287" font-family="Arial, sans-serif" font-size="10" fill="#e67e22" text-anchor="middle">내부 '생각' 토큰은</text>
+  <text x="665" y="303" font-family="Arial, sans-serif" font-size="10" fill="#e67e22" text-anchor="middle">출력 토큰과 별도 과금</text>
+
+  <defs>
+    <marker id="arrowGreen" markerWidth="10" markerHeight="7" refX="5" refY="7" orient="auto">
+      <polygon points="0 0, 10 0, 5 7" fill="#27ae60"/>
+    </marker>
+  </defs>
+</svg>

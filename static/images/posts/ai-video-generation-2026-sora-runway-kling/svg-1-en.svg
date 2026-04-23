@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="500" fill="#f8f9fa"/>
+  <!-- Title -->
+  <text x="400" y="45" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#2c3e50" text-anchor="middle">AI Video Generation Market 2026</text>
+  <text x="400" y="70" font-family="Arial, sans-serif" font-size="14" fill="#7f8c8d" text-anchor="middle">4 Major Platforms at a Glance</text>
+  <line x1="100" y1="80" x2="700" y2="80" stroke="#dee2e6" stroke-width="1"/>
+
+  <!-- Sora Card (top-left) -->
+  <rect x="60" y="100" width="320" height="170" rx="12" fill="#ebf5fb" stroke="#2980b9" stroke-width="2"/>
+  <rect x="60" y="100" width="320" height="42" rx="12" fill="#2980b9"/>
+  <rect x="60" y="130" width="320" height="12" rx="0" fill="#2980b9"/>
+  <text x="220" y="127" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">Sora (OpenAI)</text>
+  <text x="80" y="165" font-family="Arial, sans-serif" font-size="13" fill="#2c3e50">• Text→Video, up to 20s</text>
+  <text x="80" y="187" font-family="Arial, sans-serif" font-size="13" fill="#2c3e50">• Resolution: up to 1080p</text>
+  <text x="80" y="209" font-family="Arial, sans-serif" font-size="13" fill="#2c3e50">• Physics-based simulation</text>
+  <text x="80" y="231" font-family="Arial, sans-serif" font-size="13" fill="#2c3e50">• Included in ChatGPT Plus/Pro</text>
+  <text x="80" y="253" font-family="Arial, sans-serif" font-size="13" fill="#2980b9" font-weight="bold">$20–$200/month</text>
+
+  <!-- Runway Card (top-right) -->
+  <rect x="420" y="100" width="320" height="170" rx="12" fill="#f5eef8" stroke="#8e44ad" stroke-width="2"/>
+  <rect x="420" y="100" width="320" height="42" rx="12" fill="#8e44ad"/>
+  <rect x="420" y="130" width="320" height="12" rx="0" fill="#8e44ad"/>
+  <text x="580" y="127" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">Runway Gen-4</text>
+  <text x="440" y="165" font-family="Arial, sans-serif" font-size="13" fill="#2c3e50">• Pro video editing focused</text>
+  <text x="440" y="187" font-family="Arial, sans-serif" font-size="13" fill="#2c3e50">• Resolution: up to 4K</text>
+  <text x="440" y="209" font-family="Arial, sans-serif" font-size="13" fill="#2c3e50">• Multimodal editing support</text>
+  <text x="440" y="231" font-family="Arial, sans-serif" font-size="13" fill="#2c3e50">• Strong video-to-video</text>
+  <text x="440" y="253" font-family="Arial, sans-serif" font-size="13" fill="#8e44ad" font-weight="bold">$15–$95/month</text>
+
+  <!-- Kling Card (bottom-left) -->
+  <rect x="60" y="295" width="320" height="170" rx="12" fill="#fef9e7" stroke="#e67e22" stroke-width="2"/>
+  <rect x="60" y="295" width="320" height="42" rx="12" fill="#e67e22"/>
+  <rect x="60" y="325" width="320" height="12" rx="0" fill="#e67e22"/>
+  <text x="220" y="322" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">Kling 2.0 (Kuaishou)</text>
+  <text x="80" y="360" font-family="Arial, sans-serif" font-size="13" fill="#2c3e50">• Asia-focused, photorealistic</text>
+  <text x="80" y="382" font-family="Arial, sans-serif" font-size="13" fill="#2c3e50">• Up to 2-minute videos</text>
+  <text x="80" y="404" font-family="Arial, sans-serif" font-size="13" fill="#2c3e50">• Excellent face consistency</text>
+  <text x="80" y="426" font-family="Arial, sans-serif" font-size="13" fill="#2c3e50">• Optimized for Asian content</text>
+  <text x="80" y="448" font-family="Arial, sans-serif" font-size="13" fill="#e67e22" font-weight="bold">$9–$66/month</text>
+
+  <!-- Pika Card (bottom-right) -->
+  <rect x="420" y="295" width="320" height="170" rx="12" fill="#eafaf1" stroke="#27ae60" stroke-width="2"/>
+  <rect x="420" y="295" width="320" height="42" rx="12" fill="#27ae60"/>
+  <rect x="420" y="325" width="320" height="12" rx="0" fill="#27ae60"/>
+  <text x="580" y="322" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">Pika 2.0</text>
+  <text x="440" y="360" font-family="Arial, sans-serif" font-size="13" fill="#2c3e50">• Fast generation &amp; easy editing</text>
+  <text x="440" y="382" font-family="Arial, sans-serif" font-size="13" fill="#2c3e50">• Beginner-friendly UI</text>
+  <text x="440" y="404" font-family="Arial, sans-serif" font-size="13" fill="#2c3e50">• Strong image-to-video</text>
+  <text x="440" y="426" font-family="Arial, sans-serif" font-size="13" fill="#2c3e50">• Social media format support</text>
+  <text x="440" y="448" font-family="Arial, sans-serif" font-size="13" fill="#27ae60" font-weight="bold">Free–$35/month</text>
+
+  <!-- Footer -->
+  <text x="400" y="490" font-family="Arial, sans-serif" font-size="11" fill="#7f8c8d" text-anchor="middle">As of April 2026</text>
+</svg>

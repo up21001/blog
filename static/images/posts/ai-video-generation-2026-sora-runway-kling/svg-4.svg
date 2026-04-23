@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="500" fill="#f8f9fa"/>
+  <text x="400" y="38" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#2c3e50" text-anchor="middle">품질 · 속도 · 비용 트레이드오프</text>
+  <line x1="60" y1="50" x2="740" y2="50" stroke="#dee2e6" stroke-width="1"/>
+
+  <!-- Scatter plot area -->
+  <!-- Axes -->
+  <line x1="120" y1="60" x2="120" y2="400" stroke="#adb5bd" stroke-width="2"/>
+  <line x1="120" y1="400" x2="720" y2="400" stroke="#adb5bd" stroke-width="2"/>
+
+  <!-- Y axis label (Quality) -->
+  <text x="30" y="235" font-family="Arial, sans-serif" font-size="13" fill="#2c3e50" font-weight="bold" transform="rotate(-90, 30, 235)">품질 (Quality)</text>
+  <text x="30" y="250" font-family="Arial, sans-serif" font-size="13" fill="#2c3e50" font-weight="bold" transform="rotate(-90, 30, 250)">▲</text>
+
+  <!-- X axis label (Speed) -->
+  <text x="400" y="440" font-family="Arial, sans-serif" font-size="13" fill="#2c3e50" font-weight="bold" text-anchor="middle">생성 속도 (Speed) →</text>
+
+  <!-- Y axis ticks -->
+  <text x="110" y="80" font-family="Arial, sans-serif" font-size="10" fill="#7f8c8d" text-anchor="end">높음</text>
+  <text x="110" y="230" font-family="Arial, sans-serif" font-size="10" fill="#7f8c8d" text-anchor="end">중간</text>
+  <text x="110" y="400" font-family="Arial, sans-serif" font-size="10" fill="#7f8c8d" text-anchor="end">낮음</text>
+
+  <!-- X axis ticks -->
+  <text x="120" y="420" font-family="Arial, sans-serif" font-size="10" fill="#7f8c8d" text-anchor="middle">느림</text>
+  <text x="420" y="420" font-family="Arial, sans-serif" font-size="10" fill="#7f8c8d" text-anchor="middle">보통</text>
+  <text x="720" y="420" font-family="Arial, sans-serif" font-size="10" fill="#7f8c8d" text-anchor="middle">빠름</text>
+
+  <!-- Grid lines -->
+  <line x1="120" y1="230" x2="720" y2="230" stroke="#dee2e6" stroke-width="1" stroke-dasharray="4,4"/>
+  <line x1="420" y1="60" x2="420" y2="400" stroke="#dee2e6" stroke-width="1" stroke-dasharray="4,4"/>
+
+  <!-- Sora bubble (high quality, slow, expensive → large bubble) -->
+  <!-- X=180 (slow), Y=90 (high quality), r=55 (expensive) -->
+  <circle cx="185" cy="100" r="55" fill="#2980b9" opacity="0.75"/>
+  <text x="185" y="96" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle">Sora</text>
+  <text x="185" y="113" font-family="Arial, sans-serif" font-size="10" fill="#fff" text-anchor="middle">$20~$200/월</text>
+
+  <!-- Runway bubble (balanced quality/speed, medium cost) -->
+  <!-- X=360 (medium), Y=145 (high-medium quality), r=42 -->
+  <circle cx="360" cy="155" r="42" fill="#8e44ad" opacity="0.75"/>
+  <text x="360" y="151" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#fff" text-anchor="middle">Runway</text>
+  <text x="360" y="167" font-family="Arial, sans-serif" font-size="10" fill="#fff" text-anchor="middle">$15~$95/월</text>
+
+  <!-- Kling bubble (good quality, fast, medium cost) -->
+  <!-- X=530 (fast), Y=170 (medium-high quality), r=38 -->
+  <circle cx="540" cy="175" r="38" fill="#e67e22" opacity="0.75"/>
+  <text x="540" y="171" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#fff" text-anchor="middle">Kling</text>
+  <text x="540" y="187" font-family="Arial, sans-serif" font-size="10" fill="#fff" text-anchor="middle">$9~$66/월</text>
+
+  <!-- Pika bubble (fast, cheap, moderate quality) -->
+  <!-- X=660 (very fast), Y=260 (moderate quality), r=28 (cheap) -->
+  <circle cx="660" cy="265" r="28" fill="#27ae60" opacity="0.75"/>
+  <text x="660" y="261" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#fff" text-anchor="middle">Pika</text>
+  <text x="660" y="277" font-family="Arial, sans-serif" font-size="10" fill="#fff" text-anchor="middle">무료~$35</text>
+
+  <!-- Legend note -->
+  <rect x="120" y="455" width="565" height="32" rx="6" fill="#ffffff" stroke="#dee2e6" stroke-width="1"/>
+  <text x="400" y="467" font-family="Arial, sans-serif" font-size="11" fill="#7f8c8d" text-anchor="middle">버블 크기 = 최고 요금제 비용 | 위로 갈수록 높은 품질 | 오른쪽으로 갈수록 빠른 생성</text>
+  <text x="400" y="481" font-family="Arial, sans-serif" font-size="10" fill="#adb5bd" text-anchor="middle">2026년 4월 기준 · 실제 성능은 프롬프트·설정에 따라 달라질 수 있음</text>
+</svg>

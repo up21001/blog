@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="500" fill="#f8f9fa"/>
+  <text x="400" y="38" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#2c3e50" text-anchor="middle">실무 활용 시나리오별 추천 도구</text>
+  <line x1="60" y1="50" x2="740" y2="50" stroke="#dee2e6" stroke-width="1"/>
+
+  <!-- Card 1: 마케팅 광고 -->
+  <rect x="55" y="65" width="210" height="110" rx="10" fill="#f5eef8" stroke="#8e44ad" stroke-width="2"/>
+  <rect x="55" y="65" width="210" height="36" rx="10" fill="#8e44ad"/>
+  <rect x="55" y="89" width="210" height="12" fill="#8e44ad"/>
+  <text x="160" y="88" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">마케팅 광고</text>
+  <text x="160" y="118" font-family="Arial, sans-serif" font-size="13" fill="#8e44ad" text-anchor="middle" font-weight="bold">→ Runway Gen-4</text>
+  <text x="160" y="137" font-family="Arial, sans-serif" font-size="11" fill="#7f8c8d" text-anchor="middle">4K 품질, 브랜드 일관성</text>
+  <text x="160" y="155" font-family="Arial, sans-serif" font-size="11" fill="#7f8c8d" text-anchor="middle">전문 편집 기능 강점</text>
+
+  <!-- Card 2: SNS 콘텐츠 -->
+  <rect x="295" y="65" width="210" height="110" rx="10" fill="#eafaf1" stroke="#27ae60" stroke-width="2"/>
+  <rect x="295" y="65" width="210" height="36" rx="10" fill="#27ae60"/>
+  <rect x="295" y="89" width="210" height="12" fill="#27ae60"/>
+  <text x="400" y="88" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">SNS 콘텐츠</text>
+  <text x="400" y="118" font-family="Arial, sans-serif" font-size="13" fill="#27ae60" text-anchor="middle" font-weight="bold">→ Pika 2.0</text>
+  <text x="400" y="137" font-family="Arial, sans-serif" font-size="11" fill="#7f8c8d" text-anchor="middle">빠른 생성, 숏폼 최적화</text>
+  <text x="400" y="155" font-family="Arial, sans-serif" font-size="11" fill="#7f8c8d" text-anchor="middle">Reels/TikTok 형식 지원</text>
+
+  <!-- Card 3: 영화·드라마 -->
+  <rect x="535" y="65" width="210" height="110" rx="10" fill="#ebf5fb" stroke="#2980b9" stroke-width="2"/>
+  <rect x="535" y="65" width="210" height="36" rx="10" fill="#2980b9"/>
+  <rect x="535" y="89" width="210" height="12" fill="#2980b9"/>
+  <text x="640" y="88" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">영화·드라마</text>
+  <text x="640" y="118" font-family="Arial, sans-serif" font-size="13" fill="#2980b9" text-anchor="middle" font-weight="bold">→ Sora</text>
+  <text x="640" y="137" font-family="Arial, sans-serif" font-size="11" fill="#7f8c8d" text-anchor="middle">물리 시뮬레이션, 고품질</text>
+  <text x="640" y="155" font-family="Arial, sans-serif" font-size="11" fill="#7f8c8d" text-anchor="middle">시네마틱 장면 연출</text>
+
+  <!-- Card 4: 교육 콘텐츠 -->
+  <rect x="55" y="200" width="210" height="110" rx="10" fill="#fef9e7" stroke="#e67e22" stroke-width="2"/>
+  <rect x="55" y="200" width="210" height="36" rx="10" fill="#e67e22"/>
+  <rect x="55" y="224" width="210" height="12" fill="#e67e22"/>
+  <text x="160" y="223" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">교육 콘텐츠</text>
+  <text x="160" y="253" font-family="Arial, sans-serif" font-size="13" fill="#e67e22" text-anchor="middle" font-weight="bold">→ Kling 2.0</text>
+  <text x="160" y="272" font-family="Arial, sans-serif" font-size="11" fill="#7f8c8d" text-anchor="middle">긴 영상, 자연스러운 연출</text>
+  <text x="160" y="290" font-family="Arial, sans-serif" font-size="11" fill="#7f8c8d" text-anchor="middle">아시아 언어 자막 지원</text>
+
+  <!-- Card 5: 제품 시연 -->
+  <rect x="295" y="200" width="210" height="110" rx="10" fill="#f5eef8" stroke="#8e44ad" stroke-width="2"/>
+  <rect x="295" y="200" width="210" height="36" rx="10" fill="#8e44ad"/>
+  <rect x="295" y="224" width="210" height="12" fill="#8e44ad"/>
+  <text x="400" y="223" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">제품 시연</text>
+  <text x="400" y="253" font-family="Arial, sans-serif" font-size="13" fill="#8e44ad" text-anchor="middle" font-weight="bold">→ Runway Gen-4</text>
+  <text x="400" y="272" font-family="Arial, sans-serif" font-size="11" fill="#7f8c8d" text-anchor="middle">정밀 편집, 브랜드 색상</text>
+  <text x="400" y="290" font-family="Arial, sans-serif" font-size="11" fill="#7f8c8d" text-anchor="middle">제품 클로즈업 최적화</text>
+
+  <!-- Card 6: 개인 창작 -->
+  <rect x="535" y="200" width="210" height="110" rx="10" fill="#eafaf1" stroke="#27ae60" stroke-width="2"/>
+  <rect x="535" y="200" width="210" height="36" rx="10" fill="#27ae60"/>
+  <rect x="535" y="224" width="210" height="12" fill="#27ae60"/>
+  <text x="640" y="223" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">개인 창작</text>
+  <text x="640" y="253" font-family="Arial, sans-serif" font-size="13" fill="#27ae60" text-anchor="middle" font-weight="bold">→ Pika / Kling</text>
+  <text x="640" y="272" font-family="Arial, sans-serif" font-size="11" fill="#7f8c8d" text-anchor="middle">무료/저가 플랜 활용</text>
+  <text x="640" y="290" font-family="Arial, sans-serif" font-size="11" fill="#7f8c8d" text-anchor="middle">쉬운 인터페이스</text>
+
+  <!-- Summary table -->
+  <rect x="55" y="328" width="690" height="140" rx="8" fill="#ffffff" stroke="#dee2e6" stroke-width="1"/>
+  <text x="400" y="350" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#2c3e50" text-anchor="middle">선택 가이드 요약</text>
+  <text x="75" y="372" font-family="Arial, sans-serif" font-size="12" fill="#2980b9">● 최고 품질 필요 시</text>
+  <text x="230" y="372" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">→ Sora (단, 비용 높음)</text>
+  <text x="75" y="392" font-family="Arial, sans-serif" font-size="12" fill="#8e44ad">● 전문 제작·편집</text>
+  <text x="230" y="392" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">→ Runway Gen-4</text>
+  <text x="75" y="412" font-family="Arial, sans-serif" font-size="12" fill="#e67e22">● 긴 영상·아시아 콘텐츠</text>
+  <text x="230" y="412" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">→ Kling 2.0</text>
+  <text x="75" y="432" font-family="Arial, sans-serif" font-size="12" fill="#27ae60">● 빠른 제작·SNS</text>
+  <text x="230" y="432" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">→ Pika 2.0 (무료 플랜 있음)</text>
+  <text x="400" y="458" font-family="Arial, sans-serif" font-size="10" fill="#7f8c8d" text-anchor="middle">2026년 4월 기준</text>
+</svg>
